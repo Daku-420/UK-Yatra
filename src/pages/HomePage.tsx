@@ -101,23 +101,32 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Video — YouTube cinematic autoplay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {/* YouTube iframe scaled to always cover the viewport at any aspect ratio */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
-            <iframe
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ width: '177.78vh', height: '56.25vw', minWidth: '100%', minHeight: '100%' }}
-              src="https://www.youtube.com/embed/oZI-se7oIsA?autoplay=1&mute=1&loop=1&playlist=oZI-se7oIsA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080"
-              title="Himalayan Hero Background"
-              allow="autoplay; encrypted-media"
-              frameBorder="0"
-            />
-          </div>
-          {/* Transparent blocker — intercepts all mouse events so YouTube's control bar never triggers */}
-          <div className="absolute inset-0" style={{ zIndex: 1 }} />
-          {/* Cinematic overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-[#F5F3EF]" style={{ zIndex: 2 }} />
-          <div className="absolute inset-0 bg-black/20" style={{ zIndex: 2 }} />
+          {/* iframe: pointer-events:none directly on it so YouTube never receives mouse events */}
+          <iframe
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              width: '177.78vh',
+              height: 'calc(56.25vw + 120px)', /* extra height pushes control bar below overflow:hidden */
+              minWidth: '100%',
+              minHeight: '100%',
+              pointerEvents: 'none',
+              userSelect: 'none',
+            }}
+            src="https://www.youtube.com/embed/oZI-se7oIsA?autoplay=1&mute=1&loop=1&playlist=oZI-se7oIsA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0&vq=hd1080"
+            title="Himalayan Hero Background"
+            allow="autoplay; encrypted-media"
+            frameBorder="0"
+          />
+          {/* Cinematic overlay — stronger at bottom to mask any load-flash from controls */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/25 to-[#F5F3EF]" />
+          <div className="absolute inset-0 bg-black/20" />
+          {/* Extra bottom mask — covers the YouTube control bar region entirely */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F5F3EF] to-transparent" />
         </div>
+
+        {/* Section-level mouse blocker: sits at z-[1], above background (z-0) but below content (z-10).
+            Any hover over the hero area is absorbed here — never reaches the iframe. */}
+        <div className="absolute inset-0 z-[1]" />
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-5xl mx-auto text-center mt-12 sm:mt-8">
