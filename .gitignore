@@ -25,6 +25,6 @@ dist-ssr
 *.sw?
 
 # Large binary assets — too big for GitHub (>100 MB)
-public/images/*.mp4
+# Block generic large videos but allow the small hero video
 public/images/*.mov
 public/images/*.webm
