@@ -103,7 +103,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
-            src="/images/WhatsApp Video 2026-09-11 at 10.07.04 PM (1).mp4"
+            src="/images/hero-bg.mp4"
             autoPlay
             muted
             loop
