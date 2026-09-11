@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="ukOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00" />
+      <stop offset="50%" stop-color="#FF5A1F" />
+      <stop offset="100%" stop-color="#E64000" />
+    </linearGradient>
+    <linearGradient id="yatraYellowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF000" />
+      <stop offset="100%" stop-color="#FFE000" />
+    </linearGradient>
+    <filter id="logoGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#FF5A1F" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Left Monogram (U Y K Highway Blend) -->
+  <g id="monogram" filter="url(#logoGlow)">
+    <path d="M 12 12 H 28 V 40 C 28 48 34 52 42 52 C 50 52 56 48 56 40 V 12 H 72 V 42 C 72 57 60 67 42 67 C 24 67 12 57 12 42 Z" fill="url(#ukOrangeGrad)" />
+    <path d="M 38 12 L 42 66 L 46 66 L 50 12 Z" fill="#080C11" opacity="0.95" />
+    <line x1="44" y1="18" x2="44" y2="25" stroke="#FF7A00" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="44" y1="32" x2="44" y2="40" stroke="#FF7A00" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="44" y1="47" x2="44" y2="56" stroke="#FF7A00" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 68 12 L 96 12 L 80 37 L 102 66 L 82 66 L 68 45 V 66 H 55 V 12 H 68 Z" fill="url(#ukOrangeGrad)" />
+  </g>
+
+  <!-- Right Wordmark: yatra.com -->
+  <g id="wordmark">
+    <text x="110" y="48" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="46" font-weight="900" letter-spacing="-1.5px" fill="url(#yatraYellowGrad)">
+      yatra.com
+    </text>
+    <path d="M 112 52 H 312 V 56 H 116 C 113 56 112 54 112 52 Z" fill="url(#yatraYellowGrad)" />
+  </g>
+
+  <!-- Tagline: Capture Unforgettable Memories ! -->
+  <text x="116" y="72" font-family="'Inter', -apple-system, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.2px" fill="#FFFFFF">
+    Capture Unforgettable Memories !
+  </text>
+</svg>

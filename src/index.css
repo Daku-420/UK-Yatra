@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0F172A;
+  --color-brand-card: #1E293B;
+  --color-brand-surface: #24334A;
+  --color-brand-muted: #334155;
+  --color-brand-orange: #FF5A1F;
+  --color-brand-orangeHover: #E44A12;
+  --color-brand-gold: #F59E0B;
+  --color-brand-goldLight: #FDE68A;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+}
+
+:root {
+  --color-brand-dark: #0F172A;
+  --color-brand-card: #1E293B;
+  --color-brand-surface: #24334A;
+  --color-brand-muted: #334155;
+  --color-brand-orange: #FF5A1F;
+  --color-brand-orangeHover: #E44A12;
+  --color-brand-gold: #F59E0B;
+  --color-brand-goldLight: #FDE68A;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #F5F3EF;
+    color: #1E293B;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    color: #0F172A;
+  }
+}
+
+/* Dark Frosted Glass (For Hero Overlays, Dark Badges, and Search Bars) */
+.glass-dark {
+  background: rgba(15, 23, 42, 0.88);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+}
+
+/* Light Card Surfaces on Warm Off-White Canvas */
+.glass-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E0D8;
+  box-shadow: 0 4px 20px -2px rgba(44, 34, 20, 0.05), 0 2px 8px -1px rgba(44, 34, 20, 0.02);
+  color: #1E293B;
+}
+
+/* Automatic contrast protection inside white cards */
+.glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6 {
+  color: #0F172A !important;
+}
+
+.glass-card p {
+  color: #334155 !important;
+}
+
+/* Cream Banner for Inner Page Hero Sections */
+.cream-banner {
+  background-color: #EAE6DF;
+  border: 1px solid #DCD6CC;
+  box-shadow: 0 4px 24px -2px rgba(44, 34, 20, 0.05);
+}
+
+.cream-banner h1, .cream-banner h2, .cream-banner h3 {
+  color: #0F172A !important;
+}
+
+.cream-banner p {
+  color: #334155 !important;
+}
+
+.glass-card strong {
+  color: #0F172A !important;
+}
+
+.glass-card label {
+  color: #334155 !important;
+}
+
+/* Sleek Midnight Slate Navy Header Matching Stats Card (#262937) */
+.glass-header {
+  background: rgba(38, 41, 55, 0.95);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+}
+
+/* Header Text Selection: Any text selected in the header turns vibrant brand orange */
+header ::selection,
+header *::selection,
+.glass-header ::selection,
+.glass-header *::selection {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  color: #FF5A1F !important;
+  text-shadow: none !important;
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 25px rgba(255, 90, 31, 0.4);
+}
+
+.top-contact-bar {
+  background-color: #FF5A1F !important;
+  background: linear-gradient(90deg, #FF5A1F 0%, #FF6525 50%, #E64A12 100%) !important;
+}
+
+.orange-gradient-btn {
+  background: linear-gradient(135deg, #FF5A1F 0%, #EA4A10 100%);
+  box-shadow: 0 4px 20px rgba(255, 90, 31, 0.35);
+  transition: all 0.3s ease;
+}
+
+.orange-gradient-btn:hover {
+  background: linear-gradient(135deg, #FF6F3A 0%, #FF5A1F 100%);
+  box-shadow: 0 6px 28px rgba(255, 90, 31, 0.55);
+  transform: translateY(-2px);
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(180deg, rgba(11,19,32,0.45) 0%, rgba(11,19,32,0.15) 40%, rgba(11,19,32,0.85) 100%);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A1F;
+}
+
+/* Subtle image zoom animation */
+.card-zoom-image {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .card-zoom-image {
+  transform: scale(1.08);
+}
