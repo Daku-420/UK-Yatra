@@ -99,19 +99,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* 1. CINEMATIC HERO SECTION */}
       {/* ============================================================ */}
       <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Video — Local 4K MP4 */}
+        {/* Background Video — YouTube cinematic autoplay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <video
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
-            src="/images/any4k.com-Uttarakhand_India_4K_Scenic_Peace_Relaxation_Video(1080p).mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          {/* Cinematic overlay: dark top for text legibility, fades to page colour */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-[#F5F3EF]"></div>
-          <div className="absolute inset-0 bg-black/20"></div>
+          {/* YouTube iframe scaled to always cover the viewport at any aspect ratio */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <iframe
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              style={{ width: '177.78vh', height: '56.25vw', minWidth: '100%', minHeight: '100%' }}
+              src="https://www.youtube.com/embed/oZI-se7oIsA?autoplay=1&mute=1&loop=1&playlist=oZI-se7oIsA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080"
+              title="Himalayan Hero Background"
+              allow="autoplay; encrypted-media"
+              frameBorder="0"
+            />
+          </div>
+          {/* Transparent blocker — intercepts all mouse events so YouTube's control bar never triggers */}
+          <div className="absolute inset-0" style={{ zIndex: 1 }} />
+          {/* Cinematic overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-[#F5F3EF]" style={{ zIndex: 2 }} />
+          <div className="absolute inset-0 bg-black/20" style={{ zIndex: 2 }} />
         </div>
 
         {/* Hero Content */}
