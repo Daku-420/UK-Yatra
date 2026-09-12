@@ -300,14 +300,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section id="explore-section" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Sanctuaries</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
               Explore <span className="text-brand-orange">Uttarakhand</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-300 max-w-xl">
+            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-medium">
               From peaceful valleys to high Himalayan trails, discover the places that make Uttarakhand unforgettable.
             </p>
           </div>
@@ -321,7 +321,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
                   selectedDestCategory === cat
                     ? 'bg-brand-orange text-white shadow-md shadow-brand-orange/30'
-                    : 'bg-brand-card text-slate-300 hover:bg-slate-700 hover:text-white border border-white/10 shadow-sm'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-[#DCD6CC] shadow-xs'
                 }`}
               >
                 {cat}
@@ -358,6 +358,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             title="Travel Your"
             highlightText="Way"
             subtitle="Whether you seek heart-pounding rapids, quiet village walks, sacred temples, or pristine snow peaks — we curate every detail."
+            light={true}
           />
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -405,14 +406,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
               <Flame className="w-3.5 h-3.5" />
               <span>Curated Packages</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
               Journeys Worth <span className="text-brand-orange">Taking</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-300 max-w-xl">
+            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-medium">
               Handcrafted itineraries with verified hill drivers, sanitised stays, priority darshan, and transparent pricing.
             </p>
           </div>
@@ -450,6 +451,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             title="Why Travel With"
             highlightText="UKYatra?"
             subtitle="We are native Himalayan travellers, mountaineers, and hospitality veterans committed to unforgettable experiences."
+            light={true}
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -711,14 +713,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Expeditions</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
               Walk Into The <span className="text-brand-orange">Himalayas</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-300 max-w-xl">
+            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-medium">
               From the winter snow slopes of Kedarkantha to the floral carpets of Valley of Flowers and Tungnath summit.
             </p>
           </div>
@@ -1005,6 +1007,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             title="Frequently Asked"
             highlightText="Questions"
             subtitle="Everything you need to know about planning, booking, and travelling in Uttarakhand."
+            light={true}
           />
 
           <div className="space-y-4">
