@@ -35,6 +35,8 @@ import { TrekCard } from '../components/TrekCard';
 import { ReviewCard } from '../components/ReviewCard';
 import { BlogCard } from '../components/BlogCard';
 import { InstagramIcon } from '../components/SocialIcons';
+import { RouteCircuitMap } from '../components/RouteCircuitMap';
+import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
 
 interface HomePageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -832,6 +834,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           </div>
         </div>
       </section>
+ 
+      {/* ============================================================ */}
+      {/* 8.5 INTERACTIVE ROUTE CIRCUIT & ELEVATION MAP */}
+      {/* ============================================================ */}
+      <RouteCircuitMap />
 
       {/* ============================================================ */}
       {/* 9. GOOGLE TRUST SECTION */}
@@ -996,6 +1003,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           ))}
         </div>
       </section>
+
+      {/* ============================================================ */}
+      {/* 11.5 HIMALAYAN PACKING CHECKLIST & ALTITUDE (AMS) SAFETY GUIDE */}
+      {/* ============================================================ */}
+      <PackingChecklistGuide />
 
       {/* ============================================================ */}
       {/* 12. FAQ SNIPPET SECTION */}
