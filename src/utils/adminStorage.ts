@@ -202,7 +202,7 @@ const INITIAL_SETTINGS: AdminSettings = {
   address: SITE_CONFIG.address,
   upiId: 'ukyatra@icici',
   activeSeason: 'Autumn & Char Dham Pilgrimage 2026',
-  adminPasswordHash: 'ukyatra2026'
+  adminPasswordHash: 'ukyatra321'
 };
 
 export const adminStorage = {
@@ -359,7 +359,12 @@ export const adminStorage = {
         localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(INITIAL_SETTINGS));
         return INITIAL_SETTINGS;
       }
-      return JSON.parse(stored);
+      const parsed = JSON.parse(stored);
+      if (parsed && (parsed.adminPasswordHash === 'ukyatra2026' || !parsed.adminPasswordHash)) {
+        parsed.adminPasswordHash = 'ukyatra321';
+        localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(parsed));
+      }
+      return parsed;
     } catch {
       return INITIAL_SETTINGS;
     }

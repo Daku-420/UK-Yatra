@@ -44,15 +44,15 @@ export const AdminAuthProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     const cleanId = identity.trim().toLowerCase();
     const cleanPass = pass.trim();
     const settings = adminStorage.getSettings();
-    const validPass = settings.adminPasswordHash || 'ukyatra2026';
+    const validPass = settings.adminPasswordHash || 'ukyatra321';
 
-    const isValidUser = cleanId === 'admin@ukyatra.com' || cleanId === 'admin';
+    const isValidUser = cleanId === 'ukyatra123' || cleanId === 'admin@ukyatra.com' || cleanId === 'admin';
     const isValidPass = cleanPass === validPass;
 
     if (isValidUser && isValidPass) {
       const adminUser: AdminUser = {
         name: 'Tushar (Lead Expedition Architect)',
-        email: 'admin@ukyatra.com',
+        email: 'ukyatra123@ukyatra.com',
         role: 'Master Administrator',
         avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80'
       };

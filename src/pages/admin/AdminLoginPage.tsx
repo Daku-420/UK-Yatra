@@ -28,8 +28,8 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   const handleDemoFill = () => {
-    setIdentity('admin@ukyatra.com');
-    setPassword('ukyatra2026');
+    setIdentity('ukyatra123');
+    setPassword('ukyatra321');
     setError(null);
   };
 
@@ -80,7 +80,7 @@ export const AdminLoginPage: React.FC = () => {
                   required
                   value={identity}
                   onChange={(e) => setIdentity(e.target.value)}
-                  placeholder="admin@ukyatra.com"
+                  placeholder="ukyatra123"
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/80 border border-slate-700/80 rounded-xl text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:bg-slate-800 transition-all"
                 />
               </div>
@@ -134,7 +134,7 @@ export const AdminLoginPage: React.FC = () => {
               </label>
 
               <span className="text-[11px] text-slate-500 font-mono">
-                Pass: ukyatra2026
+                Pass: ukyatra321
               </span>
             </div>
 
@@ -158,11 +158,11 @@ export const AdminLoginPage: React.FC = () => {
           <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 text-xs space-y-1">
             <div className="font-semibold text-white flex items-center gap-1.5 text-[11px] text-amber-400">
               <KeyRound className="w-3.5 h-3.5" />
-              <span>Default Administrator Access</span>
+              <span>Administrator Access Credentials</span>
             </div>
             <div className="font-mono text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2 pt-0.5">
-              <span>User: <strong className="text-slate-200">admin@ukyatra.com</strong></span>
-              <span>Pass: <strong className="text-slate-200">ukyatra2026</strong></span>
+              <span>User: <strong className="text-slate-200">ukyatra123</strong></span>
+              <span>Pass: <strong className="text-slate-200">ukyatra321</strong></span>
             </div>
           </div>
         </div>
