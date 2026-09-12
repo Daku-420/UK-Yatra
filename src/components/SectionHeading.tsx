@@ -25,14 +25,14 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           <span>{badge}</span>
         </div>
       )}
-      <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display tracking-tight leading-tight ${light ? 'text-white' : 'text-slate-900'}`}>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display tracking-tight leading-tight text-white">
         {title}{' '}
         {highlightText && (
           <span className="text-brand-orange">{highlightText}</span>
         )}
       </h2>
       {subtitle && (
-        <p className={`mt-3 text-sm sm:text-base leading-relaxed ${light ? 'text-slate-200' : 'text-slate-600'}`}>
+        <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-300">
           {subtitle}
         </p>
       )}

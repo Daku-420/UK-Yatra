@@ -7,6 +7,7 @@
   --color-brand-muted: #334155;
   --color-brand-orange: #FF5A1F;
   --color-brand-orangeHover: #E44A12;
+  --color-brand-orangeContrast: #C2410C;
   --color-brand-gold: #F59E0B;
   --color-brand-goldLight: #FDE68A;
 
@@ -21,6 +22,7 @@
   --color-brand-muted: #334155;
   --color-brand-orange: #FF5A1F;
   --color-brand-orangeHover: #E44A12;
+  --color-brand-orangeContrast: #C2410C;
   --color-brand-gold: #F59E0B;
   --color-brand-goldLight: #FDE68A;
 
@@ -30,12 +32,12 @@
 
 @layer base {
   html {
-    color-scheme: light;
+    color-scheme: dark;
   }
   
   body {
-    background-color: #F5F3EF;
-    color: #1E293B;
+    background-color: #0F172A;
+    color: #F8FAFC;
     min-height: 100vh;
     font-family: var(--font-sans);
   }
@@ -43,7 +45,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.025em;
-    color: #0F172A;
+    color: #FFFFFF;
   }
 }
 
@@ -52,49 +54,59 @@
   background: rgba(15, 23, 42, 0.88);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.45);
   color: #FFFFFF;
 }
 
-/* Light Card Surfaces on Warm Off-White Canvas */
+/* Existing Navy Card Surfaces */
 .glass-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E0D8;
-  box-shadow: 0 4px 20px -2px rgba(44, 34, 20, 0.05), 0 2px 8px -1px rgba(44, 34, 20, 0.02);
-  color: #1E293B;
+  background-color: #1E293B;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+  color: #F8FAFC;
 }
 
-/* Automatic contrast protection inside white cards */
+/* Contrast & typography protection inside navy cards */
 .glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6 {
-  color: #0F172A !important;
+  color: #FFFFFF !important;
 }
 
+/* Softer white/gray for secondary text on navy */
 .glass-card p {
-  color: #334155 !important;
+  color: #94A3B8 !important;
 }
 
-/* Cream Banner for Inner Page Hero Sections */
-.cream-banner {
-  background-color: #EAE6DF;
-  border: 1px solid #DCD6CC;
-  box-shadow: 0 4px 24px -2px rgba(44, 34, 20, 0.05);
+/* Navy Banner for Inner Page Hero Sections */
+.cream-banner, .navy-banner {
+  background-color: #131D31;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.35);
 }
 
-.cream-banner h1, .cream-banner h2, .cream-banner h3 {
-  color: #0F172A !important;
+.cream-banner h1, .cream-banner h2, .cream-banner h3,
+.navy-banner h1, .navy-banner h2, .navy-banner h3 {
+  color: #FFFFFF !important;
 }
 
-.cream-banner p {
-  color: #334155 !important;
+.cream-banner p, .navy-banner p {
+  color: #94A3B8 !important;
 }
 
 .glass-card strong {
-  color: #0F172A !important;
+  color: #FFFFFF !important;
 }
 
 .glass-card label {
-  color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+/* High-Contrast Accessible Orange Text on White / Light Backgrounds (WCAG AA > 4.5:1) */
+.text-orange-contrast,
+.bg-white .text-brand-orange,
+.bg-slate-50 .text-brand-orange,
+.bg-orange-50 .text-brand-orange {
+  color: #C2410C !important;
 }
 
 /* Sleek Midnight Slate Navy Header Matching Stats Card (#262937) */

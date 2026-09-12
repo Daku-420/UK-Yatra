@@ -53,15 +53,15 @@ export const ReviewsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="md:col-span-6 flex flex-col sm:flex-row items-center justify-end gap-6 bg-white p-6 rounded-3xl border border-[#DCD6CC] shadow-sm">
+          <div className="md:col-span-6 flex flex-col sm:flex-row items-center justify-end gap-6 bg-brand-card p-6 rounded-3xl border border-white/10 shadow-xl">
             <div className="text-center sm:text-left">
-              <div className="font-display font-extrabold text-5xl text-slate-900">4.9</div>
+              <div className="font-display font-extrabold text-5xl text-white">4.9</div>
               <div className="flex items-center gap-1 justify-center sm:justify-start my-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="text-xs text-slate-500">Based on 850+ reviews</span>
+              <span className="text-xs text-slate-400">Based on 850+ reviews</span>
             </div>
 
             <button
@@ -84,78 +84,78 @@ export const ReviewsPage: React.FC = () => {
 
       {/* Review Submission Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
-          <div className="relative w-full max-w-lg bg-white border border-[#DCD6CC] rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+          <div className="relative w-full max-w-lg bg-brand-card border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl">
             <button
               onClick={() => { setShowModal(false); setSubmitted(false); }}
-              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-                <h3 className="text-xl font-bold font-display text-slate-900">
+                <h3 className="text-xl font-bold font-display text-white">
                   Share Your UKYatra Experience
                 </h3>
 
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1">Your Name *</label>
+                  <label className="block text-slate-300 font-medium mb-1">Your Name *</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Ramesh Kumar"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-slate-700 font-medium mb-1">City / Location</label>
+                    <label className="block text-slate-300 font-medium mb-1">City / Location</label>
                     <input
                       type="text"
                       placeholder="e.g. Mumbai"
                       value={form.location}
                       onChange={(e) => setForm({ ...form, location: e.target.value })}
-                      className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                      className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                     />
                   </div>
                   <div>
-                    <label className="block text-slate-700 font-medium mb-1">Trip Rating</label>
+                    <label className="block text-slate-300 font-medium mb-1">Trip Rating</label>
                     <select
                       value={form.rating}
                       onChange={(e) => setForm({ ...form, rating: Number(e.target.value) })}
-                      className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                      className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                     >
-                      <option value="5">5 Stars (Excellent)</option>
-                      <option value="4">4 Stars (Good)</option>
-                      <option value="3">3 Stars (Average)</option>
+                      <option value="5" className="bg-slate-900 text-white">5 Stars (Excellent)</option>
+                      <option value="4" className="bg-slate-900 text-white">4 Stars (Good)</option>
+                      <option value="3" className="bg-slate-900 text-white">3 Stars (Average)</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1">Trip / Trek Taken</label>
+                  <label className="block text-slate-300 font-medium mb-1">Trip / Trek Taken</label>
                   <input
                     type="text"
                     placeholder="e.g. Complete Char Dham Yatra (10D/9N)"
                     value={form.tripTaken}
                     onChange={(e) => setForm({ ...form, tripTaken: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1">Your Review *</label>
+                  <label className="block text-slate-300 font-medium mb-1">Your Review *</label>
                   <textarea
                     rows={4}
                     required
                     placeholder="How was the driver, hotel, coordinator, and overall Himalayan experience?"
                     value={form.comment}
                     onChange={(e) => setForm({ ...form, comment: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl p-3 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl p-3 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   ></textarea>
                 </div>
 
@@ -171,14 +171,14 @@ export const ReviewsPage: React.FC = () => {
               </form>
             ) : (
               <div className="text-center py-6 space-y-4">
-                <CheckCircle className="w-12 h-12 text-emerald-600 mx-auto" />
-                <h4 className="text-xl font-bold font-display text-slate-900">Thank You for Your Review!</h4>
-                <p className="text-xs text-slate-600">
+                <CheckCircle className="w-12 h-12 text-emerald-400 mx-auto" />
+                <h4 className="text-xl font-bold font-display text-white">Thank You for Your Review!</h4>
+                <p className="text-xs text-slate-300">
                   Your feedback has been added to our guest showcase.
                 </p>
                 <button
                   onClick={() => { setShowModal(false); setSubmitted(false); }}
-                  className="px-6 py-2 rounded-xl bg-slate-100 text-slate-800 text-xs font-semibold hover:bg-slate-200 border border-[#DCD6CC]"
+                  className="px-6 py-2.5 rounded-xl bg-brand-card border border-white/15 text-white text-xs font-semibold hover:bg-slate-800"
                 >
                   Close
                 </button>

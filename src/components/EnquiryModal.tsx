@@ -45,12 +45,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white border border-[#DCD6CC] rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-lg bg-brand-card border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
           aria-label="Close"
         >
           <X className="w-5 h-5" />
@@ -62,115 +62,115 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               <Sparkles className="w-4 h-4" />
               <span>Plan Your Himalayan Journey</span>
             </div>
-            <h3 className="text-2xl font-bold font-display text-slate-900 mb-2">
+            <h3 className="text-2xl font-bold font-display text-white mb-2">
               Book Your Trip / Request Quote
             </h3>
-            <p className="text-xs text-slate-600 mb-6">
+            <p className="text-xs text-slate-300 mb-6">
               Share your trip preferences and our local Uttarakhand specialists will customize an itinerary with best available rates.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Your Full Name *</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Your Full Name *</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Rahul Sharma"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Phone / WhatsApp Number *</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Phone / WhatsApp Number *</label>
                   <input
                     type="tel"
                     required
                     placeholder="e.g. +91 9876543210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Email Address</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Email Address</label>
                   <input
                     type="email"
                     placeholder="e.g. rahul@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Preferred Destination</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Preferred Destination</label>
                   <select
                     value={formData.destination}
                     onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   >
                     {DESTINATIONS.map((dest) => (
-                      <option key={dest.id} value={dest.name}>
+                      <option key={dest.id} value={dest.name} className="bg-slate-900 text-white">
                         {dest.name} ({dest.category})
                       </option>
                     ))}
-                    <option value="Char Dham Circuit">Complete Char Dham Circuit</option>
-                    <option value="Custom Multi-City">Custom Multi-City</option>
+                    <option value="Char Dham Circuit" className="bg-slate-900 text-white">Complete Char Dham Circuit</option>
+                    <option value="Custom Multi-City" className="bg-slate-900 text-white">Custom Multi-City</option>
                   </select>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Approx Date</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Approx Date</label>
                   <input
                     type="date"
                     value={formData.travelDate}
                     onChange={(e) => setFormData({ ...formData, travelDate: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Travellers</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Travellers</label>
                   <select
                     value={formData.travellers}
                     onChange={(e) => setFormData({ ...formData, travellers: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   >
-                    <option value="1 (Solo)">1 (Solo)</option>
-                    <option value="2 (Couple)">2 (Couple)</option>
-                    <option value="3-5 (Small Family/Friends)">3-5 (Family/Friends)</option>
-                    <option value="6-12 (Group Tour)">6-12 (Group Tour)</option>
-                    <option value="12+ (Large Group/Corporate)">12+ (Large Group)</option>
+                    <option value="1 (Solo)" className="bg-slate-900 text-white">1 (Solo)</option>
+                    <option value="2 (Couple)" className="bg-slate-900 text-white">2 (Couple)</option>
+                    <option value="3-5 (Small Family/Friends)" className="bg-slate-900 text-white">3-5 (Family/Friends)</option>
+                    <option value="6-12 (Group Tour)" className="bg-slate-900 text-white">6-12 (Group Tour)</option>
+                    <option value="12+ (Large Group/Corporate)" className="bg-slate-900 text-white">12+ (Large Group)</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-slate-700 font-medium mb-1.5">Budget Preference</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">Budget Preference</label>
                   <select
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   >
-                    <option value="Budget / Backpacker">Budget / Essential</option>
-                    <option value="Standard / 3-Star">Standard / 3-Star</option>
-                    <option value="Deluxe / 4-Star">Deluxe / 4-Star</option>
-                    <option value="Luxury / 5-Star Resort">Luxury & Villas</option>
+                    <option value="Budget / Backpacker" className="bg-slate-900 text-white">Budget / Essential</option>
+                    <option value="Standard / 3-Star" className="bg-slate-900 text-white">Standard / 3-Star</option>
+                    <option value="Deluxe / 4-Star" className="bg-slate-900 text-white">Deluxe / 4-Star</option>
+                    <option value="Luxury / 5-Star Resort" className="bg-slate-900 text-white">Luxury & Villas</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="block text-slate-700 font-medium mb-1.5">Special Requirements / Message</label>
+                <label className="block text-slate-300 font-medium mb-1.5">Special Requirements / Message</label>
                 <textarea
                   rows={3}
                   placeholder="e.g. Need helicopter tickets for Kedarnath, wheelchair for elderly parent, river-facing resort in Rishikesh..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl p-3 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-slate-800/90 border border-white/15 rounded-xl p-3 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                 ></textarea>
               </div>
 
@@ -184,24 +184,24 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 </button>
               </div>
 
-              <div className="text-center text-[11px] text-slate-500">
+              <div className="text-center text-[11px] text-slate-400">
                 🔒 We respect your privacy. No spam. 100% free consultation.
               </div>
             </form>
           </div>
         ) : (
           <div className="text-center py-6 space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+            <div className="w-16 h-16 rounded-full bg-emerald-950/60 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/40">
               <CheckCircle className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 font-display">
+            <h3 className="text-2xl font-bold text-white font-display">
               Enquiry Received!
             </h3>
-            <p className="text-xs text-slate-700 max-w-sm mx-auto">
+            <p className="text-xs text-slate-300 max-w-sm mx-auto">
               Thank you, <strong className="text-brand-orange">{formData.name}</strong>! Our Himalayan trip coordinator has received your request for <strong>{formData.destination}</strong> and is preparing your personalized plan.
             </p>
 
-            <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#DCD6CC] text-xs text-slate-700 space-y-2">
+            <div className="p-4 rounded-2xl bg-slate-900/90 border border-white/10 text-xs text-slate-300 space-y-2">
               <p>⚡ <strong>Need an instant quote right now?</strong></p>
               <button
                 onClick={handleWhatsAppDirect}
@@ -218,7 +218,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   setSubmitted(false);
                   onClose();
                 }}
-                className="text-xs text-slate-500 hover:text-brand-orange underline"
+                className="text-xs text-slate-400 hover:text-brand-orange underline"
               >
                 Close Window
               </button>

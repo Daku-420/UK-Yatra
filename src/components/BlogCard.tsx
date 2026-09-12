@@ -9,7 +9,7 @@ interface BlogCardProps {
 
 export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   return (
-    <article className="group flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/80 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1.5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-xl">
+    <article className="group flex flex-col rounded-3xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-2xl">
       <div className="relative aspect-[16/10] w-full overflow-hidden">
         <img
           src={post.image}
@@ -17,16 +17,16 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           loading="lazy"
           className="w-full h-full object-cover card-zoom-image"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
 
-        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold bg-white/95 backdrop-blur-md text-brand-orange border border-orange-200 shadow-sm">
+        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold bg-slate-950/85 backdrop-blur-md text-brand-orange border border-brand-orange/30 shadow-md">
           {post.category}
         </div>
       </div>
 
-      <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+      <div className="p-5 flex-1 flex flex-col justify-between space-y-4 bg-brand-card">
         <div>
-          <div className="flex items-center gap-3 text-[11px] text-slate-500 mb-2">
+          <div className="flex items-center gap-3 text-[11px] text-slate-400 mb-2">
             <span className="flex items-center gap-1 font-medium">
               <Calendar className="w-3.5 h-3.5 text-brand-orange" />
               {post.date}
@@ -39,24 +39,24 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           </div>
 
           <Link to={`/blog/${post.slug}`}>
-            <h3 className="font-display font-bold text-base sm:text-lg text-slate-900 group-hover:text-brand-orange transition-colors line-clamp-2 leading-snug">
+            <h3 className="font-display font-bold text-base sm:text-lg text-white group-hover:text-brand-orange transition-colors line-clamp-2 leading-snug">
               {post.title}
             </h3>
           </Link>
 
-          <p className="mt-2 text-xs text-slate-600 line-clamp-2 leading-relaxed">
+          <p className="mt-2 text-xs text-slate-300 line-clamp-2 leading-relaxed">
             {post.excerpt}
           </p>
         </div>
 
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div className="pt-3 border-t border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
               src={post.author.avatar}
               alt={post.author.name}
-              className="w-6 h-6 rounded-full object-cover border border-slate-200"
+              className="w-6 h-6 rounded-full object-cover border border-white/15"
             />
-            <span className="text-[11px] text-slate-700 font-semibold">{post.author.name}</span>
+            <span className="text-[11px] text-slate-300 font-semibold">{post.author.name}</span>
           </div>
 
           <Link

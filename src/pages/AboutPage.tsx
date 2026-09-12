@@ -179,16 +179,16 @@ export const AboutPage: React.FC = () => {
       <Breadcrumbs items={[{ label: 'Who We Are (About Us)' }]} />
 
       {/* Hero Header */}
-      <div className="relative rounded-3xl overflow-hidden cream-banner p-8 sm:p-14 mb-16 shadow-sm">
+      <div className="relative rounded-3xl overflow-hidden cream-banner p-8 sm:p-14 mb-16 shadow-xl">
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider">
             <Mountain className="w-3.5 h-3.5" />
             <span>Who We Are</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-white leading-tight">
             Learn More - <span className="text-brand-orange">About UK Yatra</span>
           </h1>
-          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
             At UK Yatra, we provide the best travel services tailored to your needs. 
             Rooted in Haridwar, Uttarakhand since 2013, we combine deep local knowledge, passionate ground operations, and modern service standards to make every journey memorable.
           </p>
@@ -204,9 +204,9 @@ export const AboutPage: React.FC = () => {
               href={getWhatsAppUrl("Hi UK Yatra, I would like to know more about your services.")}
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3 rounded-xl bg-white border border-slate-300 font-display font-semibold text-xs text-slate-800 hover:bg-slate-50 transition-colors flex items-center gap-2 shadow-xs"
+              className="px-6 py-3 rounded-xl bg-brand-card border border-white/15 font-display font-semibold text-xs text-slate-200 hover:text-white hover:bg-slate-800 transition-colors flex items-center gap-2 shadow-sm"
             >
-              <WhatsAppIcon className="w-4 h-4 text-emerald-600 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 text-emerald-400 fill-current" />
               <span>WhatsApp Us</span>
             </a>
           </div>
@@ -215,32 +215,32 @@ export const AboutPage: React.FC = () => {
 
       {/* Mission, Vision & Values Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all space-y-3">
-          <div className="p-3 w-fit rounded-2xl bg-orange-50 text-brand-orange border border-orange-200">
+        <div className="bg-brand-card border border-white/10 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all space-y-3">
+          <div className="p-3 w-fit rounded-2xl bg-orange-500/10 text-brand-orange border border-orange-500/30">
             <Target className="w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold font-display text-slate-900">Our Mission</h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <h3 className="text-xl font-bold font-display text-white">Our Mission</h3>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
             To design and deliver safe, transparent, and customer-centric travel experiences through expert planning, operational excellence, and responsible tourism practices that consistently exceed expectations and build long-term traveller relationships.
           </p>
         </div>
 
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all space-y-3">
-          <div className="p-3 w-fit rounded-2xl bg-blue-50 text-blue-600 border border-blue-200">
+        <div className="bg-brand-card border border-white/10 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all space-y-3">
+          <div className="p-3 w-fit rounded-2xl bg-blue-500/10 text-blue-400 border border-blue-500/30">
             <Eye className="w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold font-display text-slate-900">Our Vision</h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <h3 className="text-xl font-bold font-display text-white">Our Vision</h3>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
             To become India’s most trusted travel brand by delivering spiritually enriching, culturally immersive, and seamlessly managed journeys that create lasting value for travellers, partners, and communities across every destination we serve.
           </p>
         </div>
 
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all space-y-3">
-          <div className="p-3 w-fit rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200">
+        <div className="bg-brand-card border border-white/10 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all space-y-3">
+          <div className="p-3 w-fit rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
             <Heart className="w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold font-display text-slate-900">Our Values</h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <h3 className="text-xl font-bold font-display text-white">Our Values</h3>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
             Customer trust, operational excellence, integrity, safety, cultural respect, and sustainability guide every decision, interaction, and journey, ensuring ethical growth, consistent quality, and meaningful experiences for all stakeholders.
           </p>
         </div>
@@ -249,11 +249,11 @@ export const AboutPage: React.FC = () => {
       {/* Leadership Messages: Founder & Co-Founder */}
       <div className="space-y-12 mb-20">
         {/* Founder Message - Seema Maindola */}
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-brand-card border border-white/10 rounded-3xl p-6 sm:p-10 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left">
               <div className="relative group">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-slate-200/80 bg-slate-100">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-800 ring-1 ring-white/15 bg-slate-900">
                   <img 
                     src="/images/Seema%20Maindola.jpg" 
                     alt="Seema Maindola - Founder & CEO of UK Yatra" 
@@ -265,20 +265,20 @@ export const AboutPage: React.FC = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <h4 className="text-xl font-bold font-display text-slate-900">Seema Maindola</h4>
+                <h4 className="text-xl font-bold font-display text-white">Seema Maindola</h4>
                 <p className="text-xs font-semibold text-brand-orange">Founder & CEO, UK Yatra</p>
-                <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Guiding brand vision, pilgrim hospitality & genuine Himalayan values</p>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">Guiding brand vision, pilgrim hospitality & genuine Himalayan values</p>
               </div>
             </div>
 
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase">
                 <span>Leadership Note</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+              <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
                 Message from the Founder & CEO
               </h3>
-              <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <div className="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 <p>
                   UK Yatra started with a simple idea and a lot of belief. From our roots in Uttarakhand, we’ve grown step by step into a travel brand that people trust. The journey hasn’t always been easy—it’s taken hard work, long days, and constant learning—but it’s been deeply rewarding. Most importantly, this journey has been built by Team UK Yatra. Nothing meaningful is ever created alone.
                 </p>
@@ -295,9 +295,9 @@ export const AboutPage: React.FC = () => {
                   Thank you for getting to know us. I hope this gives you a clearer picture of who we are and what we believe in. We look forward to traveling this path together and creating experiences that truly matter.
                 </p>
               </div>
-              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <div className="font-bold text-slate-900 text-sm">Seema Maindola</div>
+                  <div className="font-bold text-white text-sm">Seema Maindola</div>
                   <div className="text-xs text-brand-orange font-semibold">Founder & CEO, UK Yatra</div>
                 </div>
               </div>
@@ -306,36 +306,36 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Co-Founder Message - Ravi Maindola */}
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-brand-card border border-white/10 rounded-3xl p-6 sm:p-10 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left">
               <div className="relative group">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-slate-200/80 bg-slate-100">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-800 ring-1 ring-white/15 bg-slate-900">
                   <img 
                     src="/images/Ravi%20Maindola.jpg" 
                     alt="Ravi Maindola - Co-Founder & Director of UK Yatra" 
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">
                   Co-Founder & Director
                 </div>
               </div>
               <div className="mt-6">
-                <h4 className="text-xl font-bold font-display text-slate-900">Ravi Maindola</h4>
-                <p className="text-xs font-semibold text-blue-600">Co-Founder & Director, UK Yatra</p>
-                <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Directing ground operations, transport fleet & personalized trip execution</p>
+                <h4 className="text-xl font-bold font-display text-white">Ravi Maindola</h4>
+                <p className="text-xs font-semibold text-brand-orange">Co-Founder & Director, UK Yatra</p>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">Directing ground operations, transport fleet & personalized trip execution</p>
               </div>
             </div>
 
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-xs font-bold uppercase">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase">
                 <span>Director's Perspective</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+              <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
                 Message from the Co-Founder & Director
               </h3>
-              <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <div className="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 <p>
                   Thank you for taking the time to know UK Yatra a little better.
                 </p>
@@ -355,10 +355,10 @@ export const AboutPage: React.FC = () => {
                   Thank you for your interest and confidence in UK Yatra. We look forward to welcoming you, planning your next journey, and ensuring it becomes an experience you’ll remember fondly.
                 </p>
               </div>
-              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <div className="font-bold text-slate-900 text-sm">Ravi Maindola</div>
-                  <div className="text-xs text-blue-600 font-semibold">Co-Founder & Director, UK Yatra</div>
+                  <div className="font-bold text-white text-sm">Ravi Maindola</div>
+                  <div className="text-xs text-brand-orange font-semibold">Co-Founder & Director, UK Yatra</div>
                 </div>
               </div>
             </div>
@@ -370,24 +370,24 @@ export const AboutPage: React.FC = () => {
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Milestones</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-1">
             Our Growth Journey
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+          <p className="text-xs sm:text-sm text-slate-300 mt-2">
             From offline roots in Haridwar to over 43,250+ delighted travelers nationwide.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {milestones.map((m, idx) => (
-            <div key={idx} className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm relative overflow-hidden">
+            <div key={idx} className="bg-brand-card border border-white/10 rounded-3xl p-8 shadow-sm relative overflow-hidden">
               <div className="text-2xl font-extrabold font-display text-brand-orange mb-2">
                 {m.year}
               </div>
-              <h3 className="text-lg font-bold font-display text-slate-900 mb-2">
+              <h3 className="text-lg font-bold font-display text-white mb-2">
                 {m.title}
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed">
                 {m.desc}
               </p>
             </div>
@@ -399,10 +399,10 @@ export const AboutPage: React.FC = () => {
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">The UK Yatra Advantage</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-1">
             Why Choose Us
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+          <p className="text-xs sm:text-sm text-slate-300 mt-2">
             Discover what makes traveling with UK Yatra seamless, ethical, and trustworthy.
           </p>
         </div>
@@ -411,14 +411,14 @@ export const AboutPage: React.FC = () => {
           {whyChoosePoints.map((item, idx) => (
             <div 
               key={idx} 
-              className="bg-white border border-[#E2DDD5] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-brand-orange/40 transition-all flex flex-col justify-between"
+              className="bg-brand-card border border-white/10 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-brand-orange/40 hover:bg-slate-800/90 transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="mb-4">{item.icon}</div>
-                <h3 className="text-base font-bold font-display text-slate-900 mb-2">
+                <h3 className="text-base font-bold font-display text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-xs text-slate-300 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -430,29 +430,29 @@ export const AboutPage: React.FC = () => {
       {/* Trust & Certifications */}
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+          <h2 className="text-2xl sm:text-3xl font-bold font-display text-white">
             Certified & Recognized
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+          <p className="text-xs sm:text-sm text-slate-300 mt-2">
             Operating with full legal compliance, state registration, and industry certifications.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          <div className="bg-white rounded-3xl p-6 border border-[#E2DDD5] shadow-sm space-y-2">
-            <ShieldCheck className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
-            <h3 className="font-bold text-slate-900 text-sm">Uttarakhand Tourism</h3>
-            <p className="text-xs text-slate-600">Registered Tour Operator: {SITE_CONFIG.registrationNo}</p>
+          <div className="bg-brand-card rounded-3xl p-6 border border-white/10 shadow-sm space-y-2">
+            <ShieldCheck className="w-10 h-10 text-emerald-400 mx-auto mb-2" />
+            <h3 className="font-bold text-white text-sm">Uttarakhand Tourism</h3>
+            <p className="text-xs text-slate-300">Registered Tour Operator: {SITE_CONFIG.registrationNo}</p>
           </div>
-          <div className="bg-white rounded-3xl p-6 border border-[#E2DDD5] shadow-sm space-y-2">
+          <div className="bg-brand-card rounded-3xl p-6 border border-white/10 shadow-sm space-y-2">
             <Award className="w-10 h-10 text-brand-orange mx-auto mb-2" />
-            <h3 className="font-bold text-slate-900 text-sm">Government MSME</h3>
-            <p className="text-xs text-slate-600">Registered Enterprise: {SITE_CONFIG.msmeReg}</p>
+            <h3 className="font-bold text-white text-sm">Government MSME</h3>
+            <p className="text-xs text-slate-300">Registered Enterprise: {SITE_CONFIG.msmeReg}</p>
           </div>
-          <div className="bg-white rounded-3xl p-6 border border-[#E2DDD5] shadow-sm space-y-2">
-            <Users className="w-10 h-10 text-amber-600 mx-auto mb-2" />
-            <h3 className="font-bold text-slate-900 text-sm">GST Compliant</h3>
-            <p className="text-xs text-slate-600">GSTIN: {SITE_CONFIG.gstin}</p>
+          <div className="bg-brand-card rounded-3xl p-6 border border-white/10 shadow-sm space-y-2">
+            <Users className="w-10 h-10 text-amber-400 mx-auto mb-2" />
+            <h3 className="font-bold text-white text-sm">GST Compliant</h3>
+            <p className="text-xs text-slate-300">GSTIN: {SITE_CONFIG.gstin}</p>
           </div>
         </div>
       </div>
@@ -460,14 +460,14 @@ export const AboutPage: React.FC = () => {
       {/* Verified Google Guest Reviews */}
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold mb-2">
-            <Star className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold mb-2">
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             <span>Google Verified Reviews (150+ 5-Star Ratings)</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">
             What Our Travelers Say
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+          <p className="text-xs sm:text-sm text-slate-300 mt-2">
             Real guest feedback from Char Dham yatras, Tungnath treks, and customized tours.
           </p>
         </div>
@@ -475,15 +475,15 @@ export const AboutPage: React.FC = () => {
         {/* Moving Reviews 1-Line Slideshow */}
         <div className="relative w-full overflow-hidden py-4 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
           {/* Left and Right Edge Fade Gradients */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-[#F5F3EF] via-[#F5F3EF]/90 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-[#F5F3EF] via-[#F5F3EF]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-[#0F172A] via-[#0F172A]/90 to-transparent z-10" />
 
           {/* Continuous Infinite Moving Track */}
           <div className="animate-marquee-infinite flex gap-6">
             {[...googleReviews, ...googleReviews].map((rev, idx) => (
               <div 
                 key={idx} 
-                className="w-[300px] sm:w-[350px] shrink-0 bg-white border border-[#E2DDD5] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-brand-orange/40 transition-all flex flex-col justify-between select-none group"
+                className="w-[300px] sm:w-[350px] shrink-0 bg-brand-card border border-white/10 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-brand-orange/40 transition-all flex flex-col justify-between select-none group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -492,16 +492,16 @@ export const AboutPage: React.FC = () => {
                         <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
-                    <span className="text-[10px] text-emerald-700 font-bold bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">
                       Google Review
                     </span>
                   </div>
-                  <p className="text-xs text-slate-700 italic leading-relaxed line-clamp-4">
+                  <p className="text-xs text-slate-300 italic leading-relaxed line-clamp-4">
                     "{rev.review}"
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between mt-4">
-                  <span className="font-bold text-slate-900 text-xs">{rev.name}</span>
+                <div className="pt-3 border-t border-white/10 flex items-center justify-between mt-4">
+                  <span className="font-bold text-white text-xs">{rev.name}</span>
                   <span className="text-[10px] text-slate-400 font-medium">Verified Guest</span>
                 </div>
               </div>
@@ -509,8 +509,8 @@ export const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-3 text-[11px] text-slate-500 font-medium flex items-center justify-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+        <div className="text-center mt-3 text-[11px] text-slate-400 font-medium flex items-center justify-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>Continuous live slideshow • Hover to pause reading</span>
         </div>
       </div>
@@ -519,10 +519,10 @@ export const AboutPage: React.FC = () => {
       <div className="mb-20 max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Got Questions?</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-1">
             Frequently Asked Questions
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+          <p className="text-xs sm:text-sm text-slate-300 mt-2">
             Everything you need to know about UK Yatra and our tour services.
           </p>
         </div>
@@ -533,17 +533,17 @@ export const AboutPage: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="bg-white border border-[#E2DDD5] rounded-2xl overflow-hidden transition-all shadow-xs"
+                className="bg-brand-card border border-white/10 rounded-2xl overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-slate-900 text-xs sm:text-sm hover:text-brand-orange transition-colors cursor-pointer"
+                  className="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-white text-xs sm:text-sm hover:text-brand-orange transition-colors cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <div className="px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -554,22 +554,22 @@ export const AboutPage: React.FC = () => {
       </div>
 
       {/* Office & Direct Contact Section */}
-      <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl">
+      <div className="bg-brand-card border border-white/10 text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-3">
-            <span className="text-amber-400 text-xs font-bold uppercase tracking-wider">Registered Head Office</span>
+            <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Registered Head Office</span>
             <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
               Visit or Contact Team UK Yatra
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Shop No. A-7, First Floor, Ganpati Plaza Complex, Near DSVV, Haripur Kalan, Haridwar, Uttarakhand - 249205
             </p>
-            <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
-              <span className="flex items-center gap-1.5 font-semibold text-amber-300">
-                <Phone className="w-3.5 h-3.5" /> +91-7817955737 / +91-8191955737
+            <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-300">
+              <span className="flex items-center gap-1.5 font-semibold text-white">
+                <Phone className="w-3.5 h-3.5 text-brand-orange" /> +91-7817955737 / +91-8191955737
               </span>
               <span>•</span>
-              <span className="text-slate-300">Working Hours: Mon to Sun - 24*7</span>
+              <span className="text-slate-400">Working Hours: Mon to Sun - 24*7</span>
             </div>
           </div>
           <div className="lg:col-span-4 flex justify-start lg:justify-end">

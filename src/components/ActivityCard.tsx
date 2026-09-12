@@ -11,7 +11,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
   return (
     <Link
       to={`/activities/${activity.id}`}
-      className="group relative flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/80 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1.5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-xl"
+      className="group relative flex flex-col rounded-3xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-2xl"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <img
@@ -20,9 +20,9 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
           loading="lazy"
           className="w-full h-full object-cover card-zoom-image"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
 
-        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 backdrop-blur-md text-slate-800 border border-slate-200/80 shadow-sm">
+        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold bg-slate-950/80 backdrop-blur-md text-white border border-white/15 shadow-sm">
           {activity.category}
         </div>
 
@@ -42,19 +42,19 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
         </div>
       </div>
 
-      <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-        <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+      <div className="p-5 flex-1 flex flex-col justify-between space-y-4 bg-brand-card">
+        <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
           {activity.shortDesc}
         </p>
 
-        <div className="pt-3 border-t border-slate-100 space-y-2">
-          <div className="text-[11px] text-slate-700 font-medium">
-            <span className="text-slate-500 block text-[10px] uppercase font-bold tracking-wider">Top Spots</span>
+        <div className="pt-3 border-t border-white/10 space-y-2">
+          <div className="text-[11px] text-slate-300 font-medium">
+            <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Top Spots</span>
             <span className="line-clamp-1 font-medium">{activity.topLocations.join(' • ')}</span>
           </div>
 
-          <div className="flex items-center gap-1.5 text-[11px] text-emerald-700 font-semibold">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="flex items-center gap-1.5 text-[11px] text-brand-orange font-semibold">
+            <ShieldCheck className="w-3.5 h-3.5 text-brand-orange" />
             <span>Certified Instructors & Safety Gear</span>
           </div>
         </div>

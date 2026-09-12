@@ -61,21 +61,21 @@ export const WhyUsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
+    <div className="min-h-screen bg-brand-dark pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Why Choose UKYatra' }]} />
 
         {/* Hero */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>The UKYatra Difference</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
             Why Thousands of Travellers <br />
             <span className="text-brand-orange">Trust UKYatra</span>
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Himalayan travel is about safety, local knowledge, and authentic moments. Discover why UKYatra is rated 4.9★ by pilgrims, trekkers, and vacationers.
           </p>
         </div>
@@ -85,24 +85,24 @@ export const WhyUsPage: React.FC = () => {
           {pillars.map((pillar, idx) => (
             <div 
               key={idx} 
-              className="bg-white border border-[#E2DDD5] p-6 rounded-3xl hover:border-brand-orange/40 transition-all hover:translate-y-[-4px] shadow-sm hover:shadow-md"
+              className="bg-brand-card border border-white/10 p-6 rounded-3xl hover:border-brand-orange/40 hover:bg-slate-800/90 transition-all hover:translate-y-[-4px] shadow-sm hover:shadow-xl"
             >
               <div className="mb-4">{pillar.icon}</div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">{pillar.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{pillar.desc}</p>
+              <h3 className="text-base font-bold text-white mb-2">{pillar.title}</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">{pillar.desc}</p>
             </div>
           ))}
         </div>
 
         {/* Stats Grid */}
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 mb-20 shadow-md">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
+        <div className="bg-brand-card border border-white/10 rounded-3xl p-8 sm:p-12 mb-20 shadow-xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
             {SITE_CONFIG.stats.map((stat, idx) => (
               <div key={idx} className="py-2 md:py-0 px-2">
                 <div className="text-3xl sm:text-5xl font-display font-extrabold text-brand-orange mb-1">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm font-semibold text-slate-700">
+                <div className="text-xs sm:text-sm font-semibold text-slate-300">
                   {stat.label}
                 </div>
               </div>
