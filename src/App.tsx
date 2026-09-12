@@ -101,6 +101,7 @@ export function App() {
             
             {/* About & Contact */}
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             
             {/* Blog & Travel Stories */}

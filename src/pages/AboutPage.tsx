@@ -1,84 +1,386 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Mountain, 
-  Sparkles, 
+  Target, 
+  Eye, 
+  Heart, 
   ShieldCheck, 
   Users, 
-  Heart, 
   Award, 
-  Compass, 
-  MapPin, 
   CheckCircle2, 
-  MessageSquare 
+  Clock, 
+  MapPin, 
+  Sparkles, 
+  MessageSquare, 
+  ChevronDown, 
+  Compass, 
+  Globe2, 
+  TrendingUp, 
+  Star, 
+  Phone,
+  ArrowRight,
+  Leaf
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 
 export const AboutPage: React.FC = () => {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  const milestones = [
+    {
+      year: 'July 2013',
+      title: 'Our Humble Beginnings in Haridwar',
+      desc: 'UK Yatra began as a small offline operation in Haridwar, focusing on transportation and pilgrim assistance. With honesty, local knowledge, and dedication, we started serving travelers one journey at a time.'
+    },
+    {
+      year: 'Post-COVID Transformation',
+      title: 'Digital-First Pan-India Expansion',
+      desc: 'UK Yatra transformed into a digital-first brand, launching our website and social platforms. With 43,250+ satisfied guests, we expanded across India, bringing our trusted Uttarakhand expertise to a wider audience.'
+    },
+    {
+      year: '2025 – 2026',
+      title: 'Domestic & Curated Expeditions',
+      desc: 'UK Yatra expanded into domestic and international tours, offering 100+ curated packages across India. From spiritual yatras to leisure holidays, we deliver complete travel experiences with professionalism and scale.'
+    }
+  ];
+
+  const whyChoosePoints = [
+    {
+      icon: <Mountain className="w-7 h-7 text-brand-orange" />,
+      title: 'Expertise in Uttarakhand',
+      desc: 'Our team consists of locals who have a deep understanding and knowledge of the state, making us the perfect partner for exploring its hidden gems.'
+    },
+    {
+      icon: <ShieldCheck className="w-7 h-7 text-emerald-600" />,
+      title: 'Safety and Comfort',
+      desc: 'We prioritize the safety and comfort of our clients and ensure that all our tours adhere to high standards of hygiene and safety protocols.'
+    },
+    {
+      icon: <Users className="w-7 h-7 text-blue-600" />,
+      title: 'Experienced Guides',
+      desc: 'Our team of experienced guides ensures that you have a personalized and informative experience during your trip.'
+    },
+    {
+      icon: <Globe2 className="w-7 h-7 text-purple-600" />,
+      title: 'Range of Services',
+      desc: 'We offer a range of services, including transportation, accommodation, food, and activities, ensuring that all aspects of your trip are taken care of.'
+    },
+    {
+      icon: <Compass className="w-7 h-7 text-amber-500" />,
+      title: 'Customized Itineraries',
+      desc: "We understand that each traveler has unique preferences and interests. That's why we offer customized itineraries that cater to your individual needs and desires."
+    },
+    {
+      icon: <MapPin className="w-7 h-7 text-rose-500" />,
+      title: 'Local Connections',
+      desc: 'Our strong network of local vendors and partners ensures that you have an authentic and hassle-free experience during your trip.'
+    },
+    {
+      icon: <Award className="w-7 h-7 text-emerald-500" />,
+      title: 'Worth of Money',
+      desc: 'We offer competitive pricing without compromising on the quality of our services, making it accessible for all types of travelers.'
+    },
+    {
+      icon: <Leaf className="w-7 h-7 text-green-600" />,
+      title: 'Sustainable Tourism',
+      desc: 'We believe in sustainable tourism and work towards minimizing the negative impact of tourism on the environment and local communities.'
+    }
+  ];
+
+  const googleReviews = [
+    {
+      name: 'Nitesh Kesharwani',
+      review: 'It was a wonderful experience with UK Yatra. Everything was very well organized!',
+      rating: 5
+    },
+    {
+      name: 'Vaibhav Deshmukh',
+      review: 'Nice experience with UK YATRA well organised service, one of the best travel agency in UK. Had great time with them.',
+      rating: 5
+    },
+    {
+      name: 'Anurag Jakhmola',
+      review: 'We did a trip with Ukyatra, which was very comfortable. The stays at every place were amazing... Thank you, Ukyatra.',
+      rating: 5
+    },
+    {
+      name: 'Aditya-RWT-Short',
+      review: 'Hum Log Tungnath Chandrashila gaye the aur hmara pura package ukyatra ne bhaut ache se krvaya. Humein bilkul bhi dikkat nahi aai.',
+      rating: 5
+    },
+    {
+      name: 'Chandu Channdra',
+      review: 'Ukyatra provided outstanding service for our Char Dham Yatra. We are really impressed by the dedication.',
+      rating: 5
+    },
+    {
+      name: 'Gopal Gupta',
+      review: 'We had Chardham Yatra with UK Yatra by Heli service. We are thankful to UK Yatra to arrange such good arrangements, VIP Darshan and good hotels.',
+      rating: 5
+    },
+    {
+      name: 'Sanjay Pimoli',
+      review: 'Thank you so much for wonderful tour. Service is excellent. We enjoyed a lot during tour. Made unforgettable memories.',
+      rating: 5
+    },
+    {
+      name: 'Prakash Bhati',
+      review: 'It was a wonderful experience! The services were more than we expected. Special thanks to driver bhai and Shweta mam. All things well planned.',
+      rating: 5
+    }
+  ];
+
+  const faqs = [
+    {
+      q: 'Who is UK Yatra?',
+      a: 'UK Yatra is an Uttarakhand-based tour and travel company rooted in Haridwar, offering well-planned pilgrimage, leisure, domestic, international, and business travel solutions. We combine strong ground operations with professional planning to deliver reliable travel experiences.'
+    },
+    {
+      q: 'When was UK Yatra established?',
+      a: 'UK Yatra was established in 2013 and began as an offline travel service provider in Uttarakhand. Over the years, we have served 43,250+ guests and evolved into a digitally enabled, pan-India travel brand.'
+    },
+    {
+      q: 'What services does UK Yatra provide?',
+      a: 'UK Yatra provides end-to-end travel services including pilgrimage tours (Char Dham & Do Dham), domestic and international leisure holidays, B2B travel services, group tours, corporate offsites, trekking experiences, educational tours, hotel bookings, cab services, and fully customized itineraries.'
+    },
+    {
+      q: 'Does UK Yatra offer international tour packages?',
+      a: 'Yes, along with domestic tours across India, UK Yatra offers curated international tour packages. We plan leisure holidays, group tours, honeymoon trips, and customized international itineraries with verified partners.'
+    },
+    {
+      q: 'Does UK Yatra provide car rental and transportation services?',
+      a: 'Yes, we provide reliable cab and transportation services including sedans, SUVs, tempo travellers, and luxury Volvo buses for local sightseeing, outstation travel, airport transfers, pilgrimages, and group movements.'
+    },
+    {
+      q: 'Can UK Yatra assist with hotel and resort bookings?',
+      a: 'Yes, UK Yatra offers hotel and resort bookings across Uttarakhand, India, and select international destinations. We work with verified properties to ensure comfort, quality, and value for money.'
+    },
+    {
+      q: 'Can itineraries be customized?',
+      a: 'Absolutely. All our tours—domestic and international—can be customized based on your preferences, budget, travel dates, and comfort requirements. We design personalized itineraries for individuals, families, groups, and corporates.'
+    },
+    {
+      q: 'Who can travel with UK Yatra?',
+      a: 'UK Yatra caters to pilgrims, families, senior citizens, group travelers, honeymoon couples, students, corporate teams, and travel partners. Our services are designed for spiritual, leisure, business, and experiential travel needs.'
+    },
+    {
+      q: 'What makes UK Yatra different from other travel agencies?',
+      a: 'UK Yatra stands out for its strong ground operations, transparent communication, ethical practices, B2B support capabilities, personalized service, and commitment to reliability. We focus on long-term relationships, not one-time transactions.'
+    }
+  ];
+
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-      <Breadcrumbs items={[{ label: 'About Us' }]} />
+      <Breadcrumbs items={[{ label: 'Who We Are (About Us)' }]} />
 
       {/* Hero Header */}
-      <div className="relative rounded-3xl overflow-hidden cream-banner p-8 sm:p-14 mb-14 shadow-sm">
+      <div className="relative rounded-3xl overflow-hidden cream-banner p-8 sm:p-14 mb-16 shadow-sm">
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider">
             <Mountain className="w-3.5 h-3.5" />
-            <span>Rooted in the Himalayas</span>
+            <span>Who We Are</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 leading-tight">
-            We Are <span className="text-brand-orange">UKYatra</span>
+            Learn More - <span className="text-brand-orange">About UK Yatra</span>
           </h1>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
-            "Capture Unforgettable Moments!" Founded by native Garhwali and Kumaoni mountain explorers, UKYatra bridges authentic Himalayan heritage with modern safety, transparent pricing, and seamless travel execution.
+            At UK Yatra, we provide the best travel services tailored to your needs. 
+            Rooted in Haridwar, Uttarakhand since 2013, we combine deep local knowledge, passionate ground operations, and modern service standards to make every journey memorable.
+          </p>
+          <div className="pt-2 flex flex-wrap gap-4">
+            <a
+              href={`tel:${SITE_CONFIG.phone}`}
+              className="orange-gradient-btn px-6 py-3 rounded-xl font-display font-semibold text-xs text-white shadow-lg flex items-center gap-2"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call Us: {SITE_CONFIG.phone}</span>
+            </a>
+            <a
+              href={getWhatsAppUrl("Hi UK Yatra, I would like to know more about your services.")}
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-xl bg-white border border-slate-300 font-display font-semibold text-xs text-slate-800 hover:bg-slate-50 transition-colors flex items-center gap-2 shadow-xs"
+            >
+              <MessageSquare className="w-4 h-4 text-emerald-600" />
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Mission, Vision & Values Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all space-y-3">
+          <div className="p-3 w-fit rounded-2xl bg-orange-50 text-brand-orange border border-orange-200">
+            <Target className="w-6 h-6" />
+          </div>
+          <h3 className="text-xl font-bold font-display text-slate-900">Our Mission</h3>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            To design and deliver safe, transparent, and customer-centric travel experiences through expert planning, operational excellence, and responsible tourism practices that consistently exceed expectations and build long-term traveller relationships.
+          </p>
+        </div>
+
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all space-y-3">
+          <div className="p-3 w-fit rounded-2xl bg-blue-50 text-blue-600 border border-blue-200">
+            <Eye className="w-6 h-6" />
+          </div>
+          <h3 className="text-xl font-bold font-display text-slate-900">Our Vision</h3>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            To become India’s most trusted travel brand by delivering spiritually enriching, culturally immersive, and seamlessly managed journeys that create lasting value for travellers, partners, and communities across every destination we serve.
+          </p>
+        </div>
+
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all space-y-3">
+          <div className="p-3 w-fit rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200">
+            <Heart className="w-6 h-6" />
+          </div>
+          <h3 className="text-xl font-bold font-display text-slate-900">Our Values</h3>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Customer trust, operational excellence, integrity, safety, cultural respect, and sustainability guide every decision, interaction, and journey, ensuring ethical growth, consistent quality, and meaningful experiences for all stakeholders.
           </p>
         </div>
       </div>
 
-      {/* Story & Mission */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
-        <div className="lg:col-span-6 space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
-          <h2 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
-            Our Story & Commitment to Uttarakhand
-          </h2>
-          <p>
-            UKYatra was born out of a simple observation: too many travellers experience the magnificent Himalayas through rushed, generic, and uninspiring itineraries.
-          </p>
-          <p>
-            We set out to create a travel company where every driver is a seasoned mountain specialist, every guide is certified in Wilderness First Aid, and every stay—whether a riverside Swiss cottage in Shivpuri, an apple orchard retreat in Mukteshwar, or a high camp in Chopta—delivers genuine mountain warmth.
-          </p>
-          <div className="p-5 rounded-2xl bg-white border border-[#E2DDD5] shadow-sm space-y-2.5">
-            <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider">Our Core Pillars:</h4>
-            <div className="space-y-1.5 text-xs text-slate-700">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-brand-orange" />
-                <span>Zero Compromise on High-Altitude Safety</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-brand-orange" />
-                <span>100% Fair Wages for Local Guides, Porters & Drivers</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-brand-orange" />
-                <span>Leave No Trace & Eco-Sensitive Tourism</span>
-              </div>
+      {/* Leadership Messages: Founder & Co-Founder */}
+      <div className="space-y-12 mb-20">
+        {/* Founder Message */}
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 shadow-sm">
+          <div className="max-w-4xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase">
+              <span>Leadership Note</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+              Message from the Founder & CEO
+            </h3>
+            <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <p>
+                UK Yatra started with a simple idea and a lot of belief. From our roots in Uttarakhand, we’ve grown step by step into a travel brand that people trust. The journey hasn’t always been easy—it’s taken hard work, long days, and constant learning—but it’s been deeply rewarding. Most importantly, this journey has been built by Team UK Yatra. Nothing meaningful is ever created alone.
+              </p>
+              <p>
+                We don’t see ourselves as just a company. We see ourselves as a group of people working together with one goal—to create travel experiences that feel smooth, honest, and memorable. Team UK Yatra brings care, responsibility, and fresh thinking into everything we do. We respect each other’s strengths, learn from one another, and grow together.
+              </p>
+              <p>
+                As travel keeps changing, we continue to adapt—using better tools, listening to our guests, and improving how we work. Our focus is simple: to go beyond expectations and make every journey feel personal, comfortable, and worth remembering.
+              </p>
+              <p>
+                The trust our guests and partners place in us means everything. It comes from the effort, knowledge, and pride that Team UK Yatra puts into every trip. That passion is what defines us.
+              </p>
+              <p>
+                Thank you for getting to know us. I hope this gives you a clearer picture of who we are and what we believe in. We look forward to traveling this path together and creating experiences that truly matter.
+              </p>
+            </div>
+            <div className="pt-2">
+              <div className="font-bold text-slate-900 text-sm">Founder & CEO</div>
+              <div className="text-xs text-brand-orange font-semibold">UK Yatra</div>
             </div>
           </div>
         </div>
 
-        <div className="lg:col-span-6 relative">
-          <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
-            <img
-              src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop"
-              alt="Himalayan Mountain Expedition Team"
-              className="w-full h-full object-cover"
-            />
+        {/* Co-Founder Message */}
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 shadow-sm">
+          <div className="max-w-4xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-xs font-bold uppercase">
+              <span>Director's Perspective</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+              Message from the Co-Founder & Director
+            </h3>
+            <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <p>
+                Thank you for taking the time to know UK Yatra a little better.
+              </p>
+              <p>
+                Every day at UK Yatra begins with a simple question: How can we do this better for our guests? From planning routes to choosing the right stays, from coordinating logistics to offering on-ground support, our focus remains on the details that turn a trip into a smooth and enjoyable experience.
+              </p>
+              <p>
+                Working closely with Team UK Yatra, I see the effort that goes into every journey we design. Behind each itinerary is careful planning, local knowledge, and a genuine desire to deliver what we promise. We believe travel should feel stress-free, transparent, and well-supported—and that belief guides our daily decisions.
+              </p>
+              <p>
+                Being deeply connected to Uttarakhand gives us a strong foundation, but our outlook is always expanding. We constantly learn from our travelers, adapt to changing needs, and improve our processes to ensure consistency, safety, and comfort across all destinations we serve.
+              </p>
+              <p>
+                What matters most to us is trust. When guests choose UK Yatra, they place their time, comfort, and expectations in our hands. We take that responsibility seriously. It is our commitment to listen, respond, and stand by our guests at every step of their journey.
+              </p>
+              <p>
+                Thank you for your interest and confidence in UK Yatra. We look forward to welcoming you, planning your next journey, and ensuring it becomes an experience you’ll remember fondly.
+              </p>
+            </div>
+            <div className="pt-2">
+              <div className="font-bold text-slate-900 text-sm">Co-Founder & Director</div>
+              <div className="text-xs text-brand-orange font-semibold">UK Yatra</div>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Journey Timeline */}
+      <div className="mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Milestones</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
+            Our Growth Journey
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            From offline roots in Haridwar to over 43,250+ delighted travelers nationwide.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {milestones.map((m, idx) => (
+            <div key={idx} className="bg-white border border-[#E2DDD5] rounded-3xl p-8 shadow-sm relative overflow-hidden">
+              <div className="text-2xl font-extrabold font-display text-brand-orange mb-2">
+                {m.year}
+              </div>
+              <h3 className="text-lg font-bold font-display text-slate-900 mb-2">
+                {m.title}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {m.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Why Choose Us: 8 Pillars from the Official Website */}
+      <div className="mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">The UK Yatra Advantage</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
+            Why Choose Us
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            Discover what makes traveling with UK Yatra seamless, ethical, and trustworthy.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {whyChoosePoints.map((item, idx) => (
+            <div 
+              key={idx} 
+              className="bg-white border border-[#E2DDD5] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-brand-orange/40 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div className="mb-4">{item.icon}</div>
+                <h3 className="text-base font-bold font-display text-slate-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Trust & Certifications */}
-      <div className="mb-16">
+      <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
             Certified & Recognized
@@ -107,26 +409,115 @@ export const AboutPage: React.FC = () => {
         </div>
       </div>
 
-      {/* CTA Box */}
-      <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E2DDD5] text-center space-y-4 max-w-3xl mx-auto shadow-sm">
-        <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
-          Ready to Start Your Himalayan Story?
-        </h3>
-        <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-          Our travel specialists in Rishikesh and Dehradun are ready to design your dream journey.
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a
-            href={getWhatsAppUrl("Hi UKYatra, I'd like to plan a trip with your team.")}
-            target="_blank"
-            rel="noreferrer"
-            className="orange-gradient-btn px-8 py-3.5 rounded-xl font-display font-bold text-xs text-white shadow-xl flex items-center gap-2"
-          >
-            <MessageSquare className="w-4 h-4" />
-            <span>Chat With Our Team</span>
-          </a>
+      {/* Verified Google Guest Reviews */}
+      <div className="mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold mb-2">
+            <Star className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
+            <span>Google Verified Reviews (150+ 5-Star Ratings)</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+            What Our Travelers Say
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            Real guest feedback from Char Dham yatras, Tungnath treks, and customized tours.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {googleReviews.map((rev, idx) => (
+            <div key={idx} className="bg-white border border-[#E2DDD5] rounded-3xl p-6 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(rev.rating)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="text-xs text-slate-700 italic leading-relaxed mb-4">
+                  "{rev.review}"
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                <span className="font-bold text-slate-900 text-xs">{rev.name}</span>
+                <span className="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full">Google Review</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* General FAQs from official website */}
+      <div className="mb-20 max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Got Questions?</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            Everything you need to know about UK Yatra and our tour services.
+          </p>
+        </div>
+
+        <div className="space-y-3">
+          {faqs.map((faq, idx) => {
+            const isOpen = openFaqIndex === idx;
+            return (
+              <div 
+                key={idx}
+                className="bg-white border border-[#E2DDD5] rounded-2xl overflow-hidden transition-all shadow-xs"
+              >
+                <button
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-slate-900 text-xs sm:text-sm hover:text-brand-orange transition-colors cursor-pointer"
+                >
+                  <span>{faq.q}</span>
+                  <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+                </button>
+                {isOpen && (
+                  <div className="px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Office & Direct Contact Section */}
+      <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-8 space-y-3">
+            <span className="text-amber-400 text-xs font-bold uppercase tracking-wider">Registered Head Office</span>
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
+              Visit or Contact Team UK Yatra
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Shop No. A-7, First Floor, Ganpati Plaza Complex, Near DSVV, Haripur Kalan, Haridwar, Uttarakhand - 249205
+            </p>
+            <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
+              <span className="flex items-center gap-1.5 font-semibold text-amber-300">
+                <Phone className="w-3.5 h-3.5" /> +91-7817955737 / +91-8191955737
+              </span>
+              <span>•</span>
+              <span className="text-slate-300">Working Hours: Mon to Sun - 24*7</span>
+            </div>
+          </div>
+          <div className="lg:col-span-4 flex justify-start lg:justify-end">
+            <a
+              href={getWhatsAppUrl("Hi UK Yatra, I'd like to consult with your travel specialists.")}
+              target="_blank"
+              rel="noreferrer"
+              className="orange-gradient-btn px-6 py-3.5 rounded-xl font-display font-semibold text-xs text-white shadow-lg flex items-center gap-2"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Connect on WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default AboutPage;
