@@ -37,6 +37,7 @@ import { BlogCard } from '../components/BlogCard';
 import { InstagramIcon } from '../components/SocialIcons';
 import { RouteCircuitMap } from '../components/RouteCircuitMap';
 import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
+import { LiveWeatherWidget } from '../components/LiveWeatherWidget';
 
 interface HomePageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -295,6 +296,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           <ChevronDown className="w-3.5 h-3.5 text-brand-orange group-hover:translate-y-0.5 transition-transform" />
         </button>
       </section>
+
+      {/* ============================================================ */}
+      {/* 1.5 LIVE HIMALAYAN WEATHER & YATRA PORTAL STATUS */}
+      {/* ============================================================ */}
+      <LiveWeatherWidget />
 
       {/* ============================================================ */}
       {/* 2. DESTINATIONS DISCOVERY SECTION */}
