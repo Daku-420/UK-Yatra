@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Lock, Mail, Eye, EyeOff, ArrowRight, Sparkles, KeyRound, CheckCircle2, AlertCircle } from 'lucide-react';
+import { ShieldCheck, Lock, Mail, Eye, EyeOff, ArrowRight, AlertCircle } from 'lucide-react';
 import { useAdminAuth } from '../../context/AdminAuthContext';
 import { Logo } from '../../components/Logo';
 
@@ -25,12 +25,6 @@ export const AdminLoginPage: React.FC = () => {
         setError(res.error || 'Authentication failed.');
       }
     }, 400);
-  };
-
-  const handleDemoFill = () => {
-    setIdentity('ukyatra123');
-    setPassword('ukyatra321');
-    setError(null);
   };
 
   return (
@@ -80,26 +74,16 @@ export const AdminLoginPage: React.FC = () => {
                   required
                   value={identity}
                   onChange={(e) => setIdentity(e.target.value)}
-                  placeholder="ukyatra123"
+                  placeholder="Enter username or email"
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/80 border border-slate-700/80 rounded-xl text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:bg-slate-800 transition-all"
                 />
               </div>
             </div>
 
             <div>
-              <div className="flex items-center justify-between mb-1.5">
-                <label className="text-xs font-semibold text-slate-300">
-                  Access Passcode
-                </label>
-                <button
-                  type="button"
-                  onClick={handleDemoFill}
-                  className="text-[11px] font-semibold text-brand-orange hover:text-brand-orangeHover hover:underline flex items-center gap-1"
-                >
-                  <Sparkles className="w-3 h-3" />
-                  <span>Auto-fill Demo</span>
-                </button>
-              </div>
+              <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                Access Passcode
+              </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                   <Lock className="w-4 h-4" />
@@ -132,10 +116,6 @@ export const AdminLoginPage: React.FC = () => {
                 />
                 <span className="text-xs text-slate-300 font-medium">Keep me signed in</span>
               </label>
-
-              <span className="text-[11px] text-slate-500 font-mono">
-                Pass: ukyatra321
-              </span>
             </div>
 
             <button
@@ -153,18 +133,6 @@ export const AdminLoginPage: React.FC = () => {
               )}
             </button>
           </form>
-
-          {/* Quick Demo Credentials Help */}
-          <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 text-xs space-y-1">
-            <div className="font-semibold text-white flex items-center gap-1.5 text-[11px] text-amber-400">
-              <KeyRound className="w-3.5 h-3.5" />
-              <span>Administrator Access Credentials</span>
-            </div>
-            <div className="font-mono text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2 pt-0.5">
-              <span>User: <strong className="text-slate-200">ukyatra123</strong></span>
-              <span>Pass: <strong className="text-slate-200">ukyatra321</strong></span>
-            </div>
-          </div>
         </div>
 
         {/* Back Link */}
