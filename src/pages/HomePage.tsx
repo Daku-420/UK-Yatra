@@ -104,15 +104,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           <video
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
             src="/images/hero-bg.mp4"
+            poster="/images/hero-poster.jpg"
             autoPlay
             muted
             loop
             playsInline
             style={{ pointerEvents: 'none' }}
           />
-          {/* Cinematic overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-[#0F172A]" />
-          <div className="absolute inset-0 bg-black/20" />
+          {/* Cinematic overlay - tuned for crystal clarity while preserving text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/20 to-[#0F172A]" />
         </div>
 
         {/* Hero Content */}
