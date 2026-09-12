@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Compass, 
@@ -42,6 +42,39 @@ interface HomePageProps {
 
 export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
   const navigate = useNavigate();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Reliable autoplay & uninterrupted looping across all browsers
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.defaultMuted = true;
+    video.muted = true;
+
+    const startPlayback = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // If browser autoplay policy restricted playback, resume on first interaction
+          const handleFirstInteraction = () => {
+            if (videoRef.current) {
+              videoRef.current.play().catch(() => {});
+            }
+            window.removeEventListener('click', handleFirstInteraction);
+            window.removeEventListener('touchstart', handleFirstInteraction);
+            window.removeEventListener('scroll', handleFirstInteraction);
+          };
+          window.addEventListener('click', handleFirstInteraction, { once: true });
+          window.addEventListener('touchstart', handleFirstInteraction, { once: true });
+          window.addEventListener('scroll', handleFirstInteraction, { once: true });
+        });
+      }
+    };
+
+    startPlayback();
+  }, []);
+
   const [searchDestination, setSearchDestination] = useState('');
   const [searchCategory, setSearchCategory] = useState('All');
   const [searchMonth, setSearchMonth] = useState('Flexible');
@@ -102,6 +135,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Background Video — Local cinematic video */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
+            ref={videoRef}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
             src="/images/hero-bg.mp4"
             poster="/images/hero-poster.jpg"
@@ -109,6 +143,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             muted
             loop
             playsInline
+            onEnded={(e) => {
+              // Guaranteed continuous loop fallback across all browser engines
+              e.currentTarget.currentTime = 0;
+              e.currentTarget.play().catch(() => {});
+            }}
             style={{ pointerEvents: 'none' }}
           />
           {/* Cinematic overlay - tuned for crystal clarity while preserving text contrast */}
