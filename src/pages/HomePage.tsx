@@ -277,17 +277,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           </div>
         </div>
 
-        {/* Subtle Scroll Down Indicator Badge */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-white flex items-center gap-2 animate-bounce text-[11px] font-bold uppercase tracking-wider shadow-2xl pointer-events-none">
-          <span className="drop-shadow">Scroll To Discover</span>
-          <ChevronDown className="w-3.5 h-3.5 text-brand-orange" />
-        </div>
+        {/* Subtle Scroll Down Indicator Button */}
+        <button
+          type="button"
+          onClick={() => {
+            const nextSection = document.getElementById('explore-section');
+            if (nextSection) {
+              nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-slate-950/85 hover:bg-slate-900 backdrop-blur-md border border-white/20 hover:border-brand-orange/60 text-white flex items-center gap-2 animate-bounce text-[11px] font-bold uppercase tracking-wider shadow-2xl cursor-pointer z-20 group transition-all"
+          aria-label="Scroll to discover Uttarakhand"
+        >
+          <span className="drop-shadow group-hover:text-brand-orange transition-colors">Scroll To Discover</span>
+          <ChevronDown className="w-3.5 h-3.5 text-brand-orange group-hover:translate-y-0.5 transition-transform" />
+        </button>
       </section>
 
       {/* ============================================================ */}
       {/* 2. DESTINATIONS DISCOVERY SECTION */}
       {/* ============================================================ */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <section id="explore-section" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
