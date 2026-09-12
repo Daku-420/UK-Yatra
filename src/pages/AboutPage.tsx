@@ -248,71 +248,119 @@ export const AboutPage: React.FC = () => {
 
       {/* Leadership Messages: Founder & Co-Founder */}
       <div className="space-y-12 mb-20">
-        {/* Founder Message */}
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 shadow-sm">
-          <div className="max-w-4xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase">
-              <span>Leadership Note</span>
+        {/* Founder Message - Seema Maindola */}
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div className="relative group">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-slate-200/80 bg-slate-100">
+                  <img 
+                    src="/images/Seema%20Maindola.jpg" 
+                    alt="Seema Maindola - Founder & CEO of UK Yatra" 
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">
+                  Founder & CEO
+                </div>
+              </div>
+              <div className="mt-6">
+                <h4 className="text-xl font-bold font-display text-slate-900">Seema Maindola</h4>
+                <p className="text-xs font-semibold text-brand-orange">Founder & CEO, UK Yatra</p>
+                <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Guiding brand vision, pilgrim hospitality & genuine Himalayan values</p>
+              </div>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
-              Message from the Founder & CEO
-            </h3>
-            <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
-              <p>
-                UK Yatra started with a simple idea and a lot of belief. From our roots in Uttarakhand, we’ve grown step by step into a travel brand that people trust. The journey hasn’t always been easy—it’s taken hard work, long days, and constant learning—but it’s been deeply rewarding. Most importantly, this journey has been built by Team UK Yatra. Nothing meaningful is ever created alone.
-              </p>
-              <p>
-                We don’t see ourselves as just a company. We see ourselves as a group of people working together with one goal—to create travel experiences that feel smooth, honest, and memorable. Team UK Yatra brings care, responsibility, and fresh thinking into everything we do. We respect each other’s strengths, learn from one another, and grow together.
-              </p>
-              <p>
-                As travel keeps changing, we continue to adapt—using better tools, listening to our guests, and improving how we work. Our focus is simple: to go beyond expectations and make every journey feel personal, comfortable, and worth remembering.
-              </p>
-              <p>
-                The trust our guests and partners place in us means everything. It comes from the effort, knowledge, and pride that Team UK Yatra puts into every trip. That passion is what defines us.
-              </p>
-              <p>
-                Thank you for getting to know us. I hope this gives you a clearer picture of who we are and what we believe in. We look forward to traveling this path together and creating experiences that truly matter.
-              </p>
-            </div>
-            <div className="pt-2">
-              <div className="font-bold text-slate-900 text-sm">Founder & CEO</div>
-              <div className="text-xs text-brand-orange font-semibold">UK Yatra</div>
+
+            <div className="lg:col-span-8 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase">
+                <span>Leadership Note</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+                Message from the Founder & CEO
+              </h3>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <p>
+                  UK Yatra started with a simple idea and a lot of belief. From our roots in Uttarakhand, we’ve grown step by step into a travel brand that people trust. The journey hasn’t always been easy—it’s taken hard work, long days, and constant learning—but it’s been deeply rewarding. Most importantly, this journey has been built by Team UK Yatra. Nothing meaningful is ever created alone.
+                </p>
+                <p>
+                  We don’t see ourselves as just a company. We see ourselves as a group of people working together with one goal—to create travel experiences that feel smooth, honest, and memorable. Team UK Yatra brings care, responsibility, and fresh thinking into everything we do. We respect each other’s strengths, learn from one another, and grow together.
+                </p>
+                <p>
+                  As travel keeps changing, we continue to adapt—using better tools, listening to our guests, and improving how we work. Our focus is simple: to go beyond expectations and make every journey feel personal, comfortable, and worth remembering.
+                </p>
+                <p>
+                  The trust our guests and partners place in us means everything. It comes from the effort, knowledge, and pride that Team UK Yatra puts into every trip. That passion is what defines us.
+                </p>
+                <p>
+                  Thank you for getting to know us. I hope this gives you a clearer picture of who we are and what we believe in. We look forward to traveling this path together and creating experiences that truly matter.
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <div className="font-bold text-slate-900 text-sm">Seema Maindola</div>
+                  <div className="text-xs text-brand-orange font-semibold">Founder & CEO, UK Yatra</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Co-Founder Message */}
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 shadow-sm">
-          <div className="max-w-4xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-xs font-bold uppercase">
-              <span>Director's Perspective</span>
+        {/* Co-Founder Message - Ravi Maindola */}
+        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div className="relative group">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-slate-200/80 bg-slate-100">
+                  <img 
+                    src="/images/Ravi%20Maindola.jpg" 
+                    alt="Ravi Maindola - Co-Founder & Director of UK Yatra" 
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">
+                  Co-Founder & Director
+                </div>
+              </div>
+              <div className="mt-6">
+                <h4 className="text-xl font-bold font-display text-slate-900">Ravi Maindola</h4>
+                <p className="text-xs font-semibold text-blue-600">Co-Founder & Director, UK Yatra</p>
+                <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">Directing ground operations, transport fleet & personalized trip execution</p>
+              </div>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
-              Message from the Co-Founder & Director
-            </h3>
-            <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
-              <p>
-                Thank you for taking the time to know UK Yatra a little better.
-              </p>
-              <p>
-                Every day at UK Yatra begins with a simple question: How can we do this better for our guests? From planning routes to choosing the right stays, from coordinating logistics to offering on-ground support, our focus remains on the details that turn a trip into a smooth and enjoyable experience.
-              </p>
-              <p>
-                Working closely with Team UK Yatra, I see the effort that goes into every journey we design. Behind each itinerary is careful planning, local knowledge, and a genuine desire to deliver what we promise. We believe travel should feel stress-free, transparent, and well-supported—and that belief guides our daily decisions.
-              </p>
-              <p>
-                Being deeply connected to Uttarakhand gives us a strong foundation, but our outlook is always expanding. We constantly learn from our travelers, adapt to changing needs, and improve our processes to ensure consistency, safety, and comfort across all destinations we serve.
-              </p>
-              <p>
-                What matters most to us is trust. When guests choose UK Yatra, they place their time, comfort, and expectations in our hands. We take that responsibility seriously. It is our commitment to listen, respond, and stand by our guests at every step of their journey.
-              </p>
-              <p>
-                Thank you for your interest and confidence in UK Yatra. We look forward to welcoming you, planning your next journey, and ensuring it becomes an experience you’ll remember fondly.
-              </p>
-            </div>
-            <div className="pt-2">
-              <div className="font-bold text-slate-900 text-sm">Co-Founder & Director</div>
-              <div className="text-xs text-brand-orange font-semibold">UK Yatra</div>
+
+            <div className="lg:col-span-8 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-xs font-bold uppercase">
+                <span>Director's Perspective</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+                Message from the Co-Founder & Director
+              </h3>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <p>
+                  Thank you for taking the time to know UK Yatra a little better.
+                </p>
+                <p>
+                  Every day at UK Yatra begins with a simple question: How can we do this better for our guests? From planning routes to choosing the right stays, from coordinating logistics to offering on-ground support, our focus remains on the details that turn a trip into a smooth and enjoyable experience.
+                </p>
+                <p>
+                  Working closely with Team UK Yatra, I see the effort that goes into every journey we design. Behind each itinerary is careful planning, local knowledge, and a genuine desire to deliver what we promise. We believe travel should feel stress-free, transparent, and well-supported—and that belief guides our daily decisions.
+                </p>
+                <p>
+                  Being deeply connected to Uttarakhand gives us a strong foundation, but our outlook is always expanding. We constantly learn from our travelers, adapt to changing needs, and improve our processes to ensure consistency, safety, and comfort across all destinations we serve.
+                </p>
+                <p>
+                  What matters most to us is trust. When guests choose UK Yatra, they place their time, comfort, and expectations in our hands. We take that responsibility seriously. It is our commitment to listen, respond, and stand by our guests at every step of their journey.
+                </p>
+                <p>
+                  Thank you for your interest and confidence in UK Yatra. We look forward to welcoming you, planning your next journey, and ensuring it becomes an experience you’ll remember fondly.
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <div className="font-bold text-slate-900 text-sm">Ravi Maindola</div>
+                  <div className="text-xs text-blue-600 font-semibold">Co-Founder & Director, UK Yatra</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
