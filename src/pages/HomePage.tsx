@@ -158,12 +158,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-5xl mx-auto text-center mt-12 sm:mt-8">
-          {/* Top Tagline Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md text-xs sm:text-sm font-semibold text-brand-orange border border-brand-orange/30 shadow-2xl mb-6 animate-in fade-in slide-in-from-top-4 duration-500">
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>Uttarakhand’s Premier Travel & Himalayan Trekking Specialists</span>
-          </div>
-
           {/* Main Hero Headline */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.1] sm:leading-[1.15] max-w-4xl mx-auto uppercase drop-shadow-md">
             YOUR NEXT HIMALAYAN STORY STARTS HERE.
