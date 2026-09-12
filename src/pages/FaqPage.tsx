@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { HelpCircle, Search, ChevronDown, ChevronUp, MessageSquare, Phone } from 'lucide-react';
+import { HelpCircle, Search, ChevronDown, ChevronUp, Phone } from 'lucide-react';
 import { FAQS } from '../data/faqs';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const FaqPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -115,7 +116,7 @@ export const FaqPage: React.FC = () => {
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white px-5 py-2.5 rounded-xl font-semibold text-xs shadow-md"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
+            <WhatsAppIcon className="w-4 h-4 fill-current" />
             <span>Ask on WhatsApp</span>
           </a>
           <a

@@ -10,11 +10,11 @@ import {
   CheckCircle2, 
   Mountain, 
   Sparkles,
-  Phone,
-  MessageSquare
+  Phone
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const WhyUsPage: React.FC = () => {
   const pillars = [
@@ -131,7 +131,7 @@ export const WhyUsPage: React.FC = () => {
               rel="noreferrer"
               className="px-8 py-3.5 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 font-semibold flex items-center gap-2"
             >
-              <MessageSquare className="w-4 h-4" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Chat on WhatsApp</span>
             </a>
           </div>

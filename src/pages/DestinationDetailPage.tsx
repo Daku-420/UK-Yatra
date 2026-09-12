@@ -9,7 +9,6 @@ import {
   Train, 
   Car, 
   Check, 
-  MessageSquare, 
   Sparkles, 
   ArrowRight,
   ChevronLeft
@@ -20,6 +19,7 @@ import { TREKS } from '../data/treks';
 import { getDestinationWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface DestinationDetailPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -215,7 +215,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                   rel="noreferrer"
                   className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-xl font-semibold text-xs transition-all shadow-lg shadow-emerald-900/40"
                 >
-                  <MessageSquare className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Enquire on WhatsApp</span>
                 </a>
               </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Star, MapPin, Check, ArrowRight, MessageSquare } from 'lucide-react';
+import { Clock, Star, MapPin, Check, ArrowRight } from 'lucide-react';
 import { TourPackage } from '../types';
 import { getPackageWhatsAppUrl } from '../config/siteConfig';
 

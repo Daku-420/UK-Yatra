@@ -8,7 +8,6 @@ import {
   MapPin, 
   Check, 
   X, 
-  MessageSquare, 
   ShieldCheck, 
   ChevronLeft,
   ArrowRight
@@ -16,6 +15,7 @@ import {
 import { TREKS } from '../data/treks';
 import { getTrekWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface TrekDetailPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -210,7 +210,7 @@ export const TrekDetailPage: React.FC<TrekDetailPageProps> = ({ onOpenBookingMod
                   rel="noreferrer"
                   className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-semibold text-xs transition-all shadow-lg"
                 >
-                  <MessageSquare className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Ask Trek Leader on WhatsApp</span>
                 </a>
               </div>

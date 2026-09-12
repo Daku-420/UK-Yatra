@@ -10,7 +10,6 @@ import {
   CheckCircle2, 
   ArrowRight, 
   Phone, 
-  MessageSquare, 
   Send,
   Tent,
   Flame,
@@ -20,6 +19,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface SummerLearningPageProps {
   onOpenBookingModal?: (packageName?: string) => void;
@@ -171,7 +171,7 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
                 rel="noreferrer"
                 className="px-6 py-3 rounded-xl bg-white border border-slate-300 font-display font-semibold text-sm text-slate-800 hover:bg-slate-50 transition-colors inline-flex items-center gap-2 shadow-xs"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-600 fill-current" />
                 <span>Chat with Summer Camp Dean</span>
               </a>
             </div>
@@ -262,7 +262,7 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
                     className="p-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors"
                     aria-label="WhatsApp enquiry"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
                   </a>
                 </div>
               </div>

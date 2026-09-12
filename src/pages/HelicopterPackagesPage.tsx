@@ -7,7 +7,6 @@ import {
   MapPin, 
   CheckCircle2, 
   Phone, 
-  MessageSquare, 
   Info, 
   Calendar,
   Award,
@@ -17,6 +16,7 @@ import { SITE_CONFIG, getWhatsAppUrl, getPackageWhatsAppUrl } from '../config/si
 import { TOUR_PACKAGES } from '../data/packages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface HelicopterPackagesPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -82,7 +82,7 @@ export const HelicopterPackagesPage: React.FC<HelicopterPackagesPageProps> = ({ 
                 rel="noreferrer"
                 className="px-6 py-3.5 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 font-semibold flex items-center gap-2 transition-all"
               >
-                <MessageSquare className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>Instant WhatsApp Enquiry</span>
               </a>
             </div>

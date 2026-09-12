@@ -8,7 +8,6 @@ import {
   Award, 
   Sparkles, 
   Phone, 
-  MessageSquare, 
   CheckCircle2,
   Calendar,
   MapPin,
@@ -16,6 +15,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const GroupTravelPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -228,7 +228,7 @@ export const GroupTravelPage: React.FC = () => {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold text-xs hover:bg-emerald-100 transition-colors"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Forward Details to WhatsApp</span>
                 </a>
               </div>

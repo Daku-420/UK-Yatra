@@ -6,7 +6,6 @@ import {
   Users, 
   Clock, 
   CheckCircle2, 
-  MessageSquare, 
   Send, 
   ShieldCheck, 
   ArrowRight,
@@ -17,6 +16,7 @@ import {
 import { SITE_CONFIG, getCustomTripWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const CustomizedTripPage: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -436,7 +436,7 @@ export const CustomizedTripPage: React.FC = () => {
               onClick={handleWhatsAppForward}
               className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3.5 px-6 rounded-xl font-bold text-xs transition-all shadow-xl"
             >
-              <MessageSquare className="w-5 h-5 fill-current" />
+              <WhatsAppIcon className="w-5 h-5 fill-current" />
               <span>Send Trip Summary on WhatsApp</span>
             </button>
           </div>

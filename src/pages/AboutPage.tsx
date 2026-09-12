@@ -11,7 +11,6 @@ import {
   Clock, 
   MapPin, 
   Sparkles, 
-  MessageSquare, 
   ChevronDown, 
   Compass, 
   Globe2, 
@@ -23,6 +22,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const AboutPage: React.FC = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -206,7 +206,7 @@ export const AboutPage: React.FC = () => {
               rel="noreferrer"
               className="px-6 py-3 rounded-xl bg-white border border-slate-300 font-display font-semibold text-xs text-slate-800 hover:bg-slate-50 transition-colors flex items-center gap-2 shadow-xs"
             >
-              <MessageSquare className="w-4 h-4 text-emerald-600" />
+              <WhatsAppIcon className="w-4 h-4 text-emerald-600 fill-current" />
               <span>WhatsApp Us</span>
             </a>
           </div>
@@ -579,7 +579,7 @@ export const AboutPage: React.FC = () => {
               rel="noreferrer"
               className="orange-gradient-btn px-6 py-3.5 rounded-xl font-display font-semibold text-xs text-white shadow-lg flex items-center gap-2"
             >
-              <MessageSquare className="w-4 h-4" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Connect on WhatsApp</span>
             </a>
           </div>

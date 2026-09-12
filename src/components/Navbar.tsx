@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   Phone, 
   Mail, 
-  MessageSquare, 
   Menu, 
   X, 
   ShieldCheck,
@@ -14,7 +13,7 @@ import {
   Compass
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
-import { InstagramIcon, FacebookIcon, YoutubeIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 import { Logo } from './Logo';
 import { SearchBar } from './SearchBar';
 
@@ -284,11 +283,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               href={getWhatsAppUrl("Hi UKYatra, I would like to enquire about Uttarakhand trips.")}
               target="_blank"
               rel="noreferrer"
-              className="p-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 hover:bg-emerald-500/25 border border-emerald-500/30 transition-all hover:scale-105"
+              className="p-2.5 rounded-xl bg-[#25D366]/15 text-[#25D366] hover:bg-[#25D366]/25 border border-[#25D366]/35 transition-all hover:scale-105"
               aria-label="Quick WhatsApp"
               title="Chat on WhatsApp"
             >
-              <MessageSquare className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
             </a>
 
             <button
@@ -305,10 +304,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               href={getWhatsAppUrl("Hi UKYatra, I'd like to plan a trip.")}
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
+              className="p-2 rounded-lg bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/35"
               aria-label="WhatsApp"
             >
-              <MessageSquare className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

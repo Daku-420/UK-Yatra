@@ -14,13 +14,13 @@ import {
   HeartHandshake, 
   Clock, 
   CheckCircle2, 
-  MessageSquare, 
   ChevronDown,
   Flame,
   Sun,
   Send
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl, getCustomTripWhatsAppUrl } from '../config/siteConfig';
+import { WhatsAppIcon } from '../components/SocialIcons';
 import { DESTINATIONS } from '../data/destinations';
 import { TOUR_PACKAGES } from '../data/packages';
 import { TREKS } from '../data/treks';
@@ -515,7 +515,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-4 py-2 rounded-xl hover:bg-emerald-100/70"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Direct WhatsApp Chat</span>
                 </a>
               </div>
@@ -647,7 +647,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
                     rel="noreferrer"
                     className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-semibold text-xs shadow-lg hover:brightness-105"
                   >
-                    <MessageSquare className="w-4 h-4 fill-current" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
                     <span>Get Instant Draft on WhatsApp</span>
                   </a>
                 </div>

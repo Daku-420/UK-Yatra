@@ -5,14 +5,13 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  MessageSquare, 
   ShieldCheck, 
   Award, 
   Heart,
   ChevronRight
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
-import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from './SocialIcons';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
@@ -57,7 +56,7 @@ export const Footer: React.FC = () => {
               rel="noreferrer"
               className="orange-gradient-btn px-5 py-2.5 rounded-xl text-xs font-semibold text-white flex items-center gap-2 shadow-md"
             >
-              <MessageSquare className="w-4 h-4" />
+              <WhatsAppIcon className="w-4 h-4" />
               <span>Talk to an Expert</span>
             </a>
           </div>
@@ -246,7 +245,7 @@ export const Footer: React.FC = () => {
                 <a href={`tel:${SITE_CONFIG.phone}`} className="hover:text-brand-orange transition-colors">{SITE_CONFIG.phone}</a>
               </div>
               <div className="flex items-center gap-3">
-                <MessageSquare className="w-4 h-4 text-emerald-600 shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-600 shrink-0" />
                 <a href={getWhatsAppUrl()} target="_blank" rel="noreferrer" className="text-emerald-700 font-semibold hover:underline">
                   Chat on WhatsApp ({SITE_CONFIG.phone})
                 </a>

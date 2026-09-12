@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, MessageSquare, Phone, Send, Calendar, Users, MapPin, Sparkles } from 'lucide-react';
+import { X, CheckCircle, Phone, Send, Calendar, Users, MapPin, Sparkles } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
 import { TOUR_PACKAGES } from '../data/packages';
+import { WhatsAppIcon } from './SocialIcons';
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -206,7 +207,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 onClick={handleWhatsAppDirect}
                 className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-xl font-semibold transition-all shadow-lg"
               >
-                <MessageSquare className="w-4 h-4 fill-current" />
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>Connect on WhatsApp Now</span>
               </button>
             </div>

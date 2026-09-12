@@ -4,14 +4,13 @@ import {
   Mail, 
   MapPin, 
   Clock, 
-  MessageSquare, 
   Send, 
   CheckCircle2, 
   Sparkles
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon } from '../components/SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from '../components/SocialIcons';
 
 export const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -76,7 +75,7 @@ export const ContactPage: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-3.5">
-                <MessageSquare className="w-5 h-5 text-emerald-600 shrink-0" />
+                <WhatsAppIcon className="w-5 h-5 text-emerald-600 shrink-0 fill-current" />
                 <div>
                   <strong className="text-slate-900 block text-sm">Direct WhatsApp:</strong>
                   <a href={getWhatsAppUrl()} target="_blank" rel="noreferrer" className="text-emerald-600 font-medium hover:underline">
@@ -226,7 +225,7 @@ export const ContactPage: React.FC = () => {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-semibold text-xs shadow-lg"
                   >
-                    <MessageSquare className="w-4 h-4 fill-current" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
                     <span>Chat on WhatsApp Instantly</span>
                   </a>
                 </div>

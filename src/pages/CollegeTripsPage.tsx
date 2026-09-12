@@ -11,7 +11,6 @@ import {
   CheckCircle2, 
   ArrowRight, 
   Phone, 
-  MessageSquare, 
   Send,
   Compass,
   Tent,
@@ -19,6 +18,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface CollegeTripsPageProps {
   onOpenBookingModal?: (packageName?: string) => void;
@@ -168,7 +168,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
                 rel="noreferrer"
                 className="px-6 py-3 rounded-xl bg-white border border-slate-300 font-display font-semibold text-sm text-slate-800 hover:bg-slate-50 transition-colors inline-flex items-center gap-2 shadow-xs"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-600 fill-current" />
                 <span>Chat with Student Coordinator</span>
               </a>
             </div>
@@ -255,7 +255,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
                     className="p-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors"
                     aria-label="WhatsApp enquiry"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
                   </a>
                 </div>
               </div>

@@ -6,13 +6,13 @@ import {
   Calendar, 
   Clock, 
   AlertCircle, 
-  MessageSquare, 
   ArrowRight,
   ChevronLeft
 } from 'lucide-react';
 import { ACTIVITIES } from '../data/activities';
 import { getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface ActivityDetailPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -157,7 +157,7 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ onOpenBo
                   rel="noreferrer"
                   className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-semibold text-xs transition-all shadow-lg"
                 >
-                  <MessageSquare className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Inquire on WhatsApp</span>
                 </a>
               </div>

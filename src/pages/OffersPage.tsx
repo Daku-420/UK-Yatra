@@ -8,13 +8,13 @@ import {
   CheckCircle2, 
   Users, 
   Gift, 
-  MessageSquare,
   ArrowRight
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { TOUR_PACKAGES } from '../data/packages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface OffersPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -149,7 +149,7 @@ export const OffersPage: React.FC<OffersPageProps> = ({ onOpenBookingModal }) =>
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 font-semibold text-sm transition-all"
           >
-            <MessageSquare className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4 fill-current" />
             <span>Chat for Group Quotation</span>
           </a>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Phone, MessageSquare, Compass } from 'lucide-react';
+import { Phone, Compass } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
+import { WhatsAppIcon } from './SocialIcons';
 
 interface StickyMobileBarProps {
   onOpenBookingModal?: () => void;
@@ -23,7 +24,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({ onOpenBookingM
         rel="noreferrer"
         className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] text-white font-semibold text-xs active:bg-emerald-600 shadow-lg shadow-emerald-900/30"
       >
-        <MessageSquare className="w-4 h-4 fill-current" />
+        <WhatsAppIcon className="w-4 h-4 fill-current" />
         <span>WhatsApp</span>
       </a>
 

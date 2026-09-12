@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MessageSquare, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import { WhatsAppIcon } from './SocialIcons';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 
 export const WhatsAppButton: React.FC = () => {
@@ -25,7 +26,7 @@ export const WhatsAppButton: React.FC = () => {
             </div>
             <button 
               onClick={() => setIsOpen(false)}
-              className="text-slate-400 hover:text-slate-700 p-1"
+              className="text-slate-400 hover:text-slate-700 p-1 cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
@@ -41,7 +42,7 @@ export const WhatsAppButton: React.FC = () => {
             rel="noopener noreferrer"
             className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-2.5 px-4 rounded-xl font-semibold text-xs transition-all shadow-md"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
+            <WhatsAppIcon className="w-4 h-4" />
             <span>Start WhatsApp Chat</span>
           </a>
         </div>
@@ -56,12 +57,12 @@ export const WhatsAppButton: React.FC = () => {
         )}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative group w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 transition-all duration-300 hover:scale-110 active:scale-95"
+          className="relative group w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
           aria-label="Chat on WhatsApp"
         >
           <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-brand-orange border-2 border-brand-dark animate-ping"></span>
           <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-brand-orange border-2 border-brand-dark"></span>
-          <MessageSquare className="w-7 h-7 fill-current" />
+          <WhatsAppIcon className="w-7 h-7" />
         </button>
       </div>
     </div>

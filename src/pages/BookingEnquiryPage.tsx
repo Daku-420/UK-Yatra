@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   Send, 
   CheckCircle2, 
-  MessageSquare, 
   Phone, 
   Calendar, 
   Users, 
@@ -15,6 +14,7 @@ import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
 import { TOUR_PACKAGES } from '../data/packages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const BookingEnquiryPage: React.FC = () => {
   const [form, setForm] = useState({
@@ -204,7 +204,7 @@ export const BookingEnquiryPage: React.FC = () => {
               onClick={handleWhatsAppForward}
               className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3.5 px-6 rounded-xl font-bold text-xs transition-all shadow-xl"
             >
-              <MessageSquare className="w-5 h-5 fill-current" />
+              <WhatsAppIcon className="w-5 h-5 fill-current" />
               <span>Connect on WhatsApp Now</span>
             </button>
           </div>

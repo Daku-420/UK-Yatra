@@ -5,7 +5,6 @@ import {
   Clock, 
   User, 
   Tag, 
-  MessageSquare, 
   Sparkles, 
   ChevronLeft,
   ArrowRight
@@ -13,6 +12,7 @@ import {
 import { BLOG_POSTS } from '../data/blogs';
 import { getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const BlogDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -88,7 +88,7 @@ export const BlogDetailPage: React.FC = () => {
             rel="noreferrer"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100"
           >
-            <MessageSquare className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4 fill-current" />
             <span>Ask Author on WhatsApp</span>
           </a>
         </div>

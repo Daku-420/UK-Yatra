@@ -7,13 +7,13 @@ import {
   MapPin, 
   CheckCircle2, 
   Phone, 
-  MessageSquare, 
   Sparkles,
   Clock,
   ArrowRight
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
 
 interface CarRentalPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -165,7 +165,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                     rel="noreferrer"
                     className="px-4 py-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 font-semibold text-xs flex items-center gap-1.5 transition-colors"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
                     <span>WhatsApp Quote</span>
                   </a>
                 </div>
