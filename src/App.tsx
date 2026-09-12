@@ -14,6 +14,9 @@ import { DestinationsPage } from './pages/DestinationsPage';
 import { DestinationDetailPage } from './pages/DestinationDetailPage';
 import { ActivitiesPage } from './pages/ActivitiesPage';
 import { ActivityDetailPage } from './pages/ActivityDetailPage';
+import { CollegeTripsPage } from './pages/CollegeTripsPage';
+import { SchoolTripsPage } from './pages/SchoolTripsPage';
+import { SummerLearningPage } from './pages/SummerLearningPage';
 import { PackagesPage } from './pages/PackagesPage';
 import { PackageDetailPage } from './pages/PackageDetailPage';
 import { CustomizedTripPage } from './pages/CustomizedTripPage';
@@ -71,6 +74,16 @@ export function App() {
             {/* Activities & Experiences */}
             <Route path="/activities" element={<ActivitiesPage />} />
             <Route path="/activities/:id" element={<ActivityDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
+            
+            {/* Student, School & Youth Programmes */}
+            <Route path="/college-trips" element={<CollegeTripsPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/activities/college-trips" element={<CollegeTripsPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/school-trips" element={<SchoolTripsPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/activities/school-trips" element={<SchoolTripsPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/summer-learning-programmes" element={<SummerLearningPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/summer-learning" element={<SummerLearningPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/activities/summer-learning-programmes" element={<SummerLearningPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/activities/summer-learning" element={<SummerLearningPage onOpenBookingModal={handleOpenBookingModal} />} />
             
             {/* Tour Packages */}
             <Route path="/packages" element={<PackagesPage onOpenBookingModal={handleOpenBookingModal} />} />

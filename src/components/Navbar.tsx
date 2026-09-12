@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Phone, 
@@ -6,7 +6,12 @@ import {
   MessageSquare, 
   Menu, 
   X, 
-  ShieldCheck
+  ShieldCheck,
+  ChevronDown,
+  GraduationCap,
+  School,
+  SunMedium,
+  Compass
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from './SocialIcons';
@@ -20,6 +25,9 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activitiesOpen, setActivitiesOpen] = useState(false);
+  const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(true);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -34,16 +42,34 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setActivitiesOpen(false);
   }, [location.pathname]);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActivitiesOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true;
     if (path !== '/' && location.pathname.startsWith(path)) return true;
     return false;
   };
+
+  const isActivitiesActive = 
+    location.pathname.startsWith('/activities') || 
+    location.pathname.startsWith('/college-trips') || 
+    location.pathname.startsWith('/school-trips') || 
+    location.pathname.startsWith('/summer-learning');
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -97,10 +123,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3">
             <Link 
               to="/" 
-              className={`px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
+              className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
                 isActive('/') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -111,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <Link 
               to="/packages" 
-              className={`px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
+              className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
                 isActive('/packages') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -120,9 +146,113 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               Tour Packages
             </Link>
 
+            {/* Activities Dropdown Column */}
+            <div 
+              ref={dropdownRef}
+              className="relative"
+              onMouseEnter={() => setActivitiesOpen(true)}
+              onMouseLeave={() => setActivitiesOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setActivitiesOpen(!activitiesOpen)}
+                className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer ${
+                  isActivitiesActive || activitiesOpen
+                    ? 'text-brand-orange' 
+                    : 'text-white hover:text-brand-orange'
+                }`}
+                aria-expanded={activitiesOpen}
+                aria-haspopup="true"
+              >
+                <span>Activities</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activitiesOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
+              </button>
+
+              {/* Dropdown Menu */}
+              {activitiesOpen && (
+                <div className="absolute top-full left-0 mt-1 w-80 bg-[#1E2230]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div className="px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-slate-400 border-b border-white/10 mb-1 flex items-center justify-between">
+                    <span>Student & Youth Experiences</span>
+                    <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">New</span>
+                  </div>
+
+                  <Link
+                    to="/college-trips"
+                    onClick={() => setActivitiesOpen(false)}
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-orange-500/15 text-brand-orange border border-orange-500/25 group-hover:scale-105 transition-transform">
+                      <GraduationCap className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
+                        <span>College Trips</span>
+                        <span className="text-[9px] bg-brand-orange/20 text-brand-orange font-semibold px-1.5 py-0.2 rounded-sm">Hot</span>
+                      </div>
+                      <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                        Adventure treks, river rafting & student batch discounts
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/school-trips"
+                    onClick={() => setActivitiesOpen(false)}
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/25 group-hover:scale-105 transition-transform">
+                      <School className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+                        <span>School Trips</span>
+                        <span className="text-[9px] bg-emerald-500/20 text-emerald-300 font-semibold px-1.5 py-0.2 rounded-sm">1:8 Safe</span>
+                      </div>
+                      <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                        Curriculum-aligned STEM, ecology & safe excursions
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/summer-learning-programmes"
+                    onClick={() => setActivitiesOpen(false)}
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-amber-500/15 text-amber-400 border border-amber-500/25 group-hover:scale-105 transition-transform">
+                      <SunMedium className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                        <span>Summer Learning Programmes</span>
+                        <span className="text-[9px] bg-amber-500/20 text-amber-300 font-semibold px-1.5 py-0.2 rounded-sm">Camps</span>
+                      </div>
+                      <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                        Wilderness survival, astronomy & leadership bootcamps
+                      </p>
+                    </div>
+                  </Link>
+
+                  <div className="pt-1.5 mt-1 border-t border-white/10">
+                    <Link
+                      to="/activities"
+                      onClick={() => setActivitiesOpen(false)}
+                      className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-white/10 text-[11px] font-semibold text-slate-300 hover:text-white transition-colors"
+                    >
+                      <span className="flex items-center gap-2">
+                        <Compass className="w-3.5 h-3.5 text-brand-orange" />
+                        <span>View All Outdoor Activities</span>
+                      </span>
+                      <span className="text-brand-orange">→</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link 
               to="/about" 
-              className={`px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
+              className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
                 isActive('/about') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -133,7 +263,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <Link 
               to="/contact" 
-              className={`px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
+              className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
                 isActive('/contact') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -227,6 +357,74 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             >
               📦 Tour Packages
             </Link>
+
+            {/* Activities Mobile Collapsible */}
+            <div className="rounded-xl bg-white/5 border border-white/10 overflow-hidden my-1">
+              <button
+                type="button"
+                onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
+                className="w-full flex items-center justify-between px-4 py-3 text-base font-semibold text-white hover:text-brand-orange transition-colors"
+              >
+                <span className="flex items-center gap-2">
+                  <span>🧗</span>
+                  <span>Activities</span>
+                </span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileActivitiesOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+              </button>
+              {mobileActivitiesOpen && (
+                <div className="px-3 pb-3 space-y-1 bg-black/25 border-t border-white/10 pt-2">
+                  <Link 
+                    to="/college-trips" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                      isActive('/college-trips') 
+                        ? 'text-brand-orange bg-white/10' 
+                        : 'text-slate-200 hover:text-white'
+                    }`}
+                  >
+                    <GraduationCap className="w-4 h-4 text-brand-orange" />
+                    <span>College Trips</span>
+                  </Link>
+                  <Link 
+                    to="/school-trips" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                      isActive('/school-trips') 
+                        ? 'text-brand-orange bg-white/10' 
+                        : 'text-slate-200 hover:text-white'
+                    }`}
+                  >
+                    <School className="w-4 h-4 text-emerald-400" />
+                    <span>School Trips</span>
+                  </Link>
+                  <Link 
+                    to="/summer-learning-programmes" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                      isActive('/summer-learning') 
+                        ? 'text-brand-orange bg-white/10' 
+                        : 'text-slate-200 hover:text-white'
+                    }`}
+                  >
+                    <SunMedium className="w-4 h-4 text-amber-400" />
+                    <span>Summer Learning Programmes</span>
+                  </Link>
+                  <Link 
+                    to="/activities" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                      isActive('/activities') && !isActive('/college-trips') && !isActive('/school-trips') && !isActive('/summer-learning') 
+                        ? 'text-brand-orange bg-white/10' 
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    <Compass className="w-4 h-4 text-brand-orange" />
+                    <span>All Outdoor Activities</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link 
               to="/about" 
               onClick={() => setMobileMenuOpen(false)} 
