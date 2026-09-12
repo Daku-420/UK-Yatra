@@ -40,6 +40,7 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsPage } from './pages/TermsPage';
 import { CancellationPolicyPage } from './pages/CancellationPolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { RouteMapPage } from './pages/RouteMapPage';
 
 export function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
@@ -98,6 +99,10 @@ export function App() {
             
             {/* Char Dham & Spiritual */}
             <Route path="/spiritual" element={<SpiritualPage onOpenBookingModal={handleOpenBookingModal} />} />
+            
+            {/* Himalayan Route Circuits & Elevation Map */}
+            <Route path="/route-map" element={<RouteMapPage onOpenBookingModal={handleOpenBookingModal} />} />
+            <Route path="/circuit-map" element={<RouteMapPage onOpenBookingModal={handleOpenBookingModal} />} />
             
             {/* About & Contact */}
             <Route path="/about" element={<AboutPage />} />

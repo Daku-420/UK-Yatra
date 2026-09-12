@@ -250,6 +250,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </div>
 
             <Link 
+              to="/route-map" 
+              className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors flex items-center gap-1.5 ${
+                isActive('/route-map') 
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              <span>Route Map</span>
+              <span className="text-[9px] bg-brand-orange/20 text-brand-orange px-1.5 py-0.5 rounded font-bold">New</span>
+            </Link>
+
+            <Link 
               to="/about" 
               className={`px-3 xl:px-4 py-2 text-sm font-semibold rounded-xl transition-colors ${
                 isActive('/about') 
@@ -355,6 +367,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               }`}
             >
               📦 Tour Packages
+            </Link>
+            <Link 
+              to="/route-map" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+                isActive('/route-map') 
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              🗺️ Route Map & Weather
             </Link>
 
             {/* Activities Mobile Collapsible */}
