@@ -369,12 +369,15 @@ export const AboutPage: React.FC = () => {
       {/* Journey Timeline */}
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Milestones</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-1">
-            Our Growth Journey
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <TrendingUp className="w-3.5 h-3.5" />
+            <span>Milestones</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 mt-1">
+            Our Growth <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-500 to-orange-600">Journey</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-2">
-            From offline roots in Haridwar to over 43,250+ delighted travelers nationwide.
+          <p className="text-xs sm:text-sm text-slate-600 mt-3 max-w-xl mx-auto leading-relaxed">
+            From offline roots in Haridwar to over <span className="font-semibold text-brand-orange">43,250+ delighted travelers</span> nationwide.
           </p>
         </div>
 
@@ -398,11 +401,14 @@ export const AboutPage: React.FC = () => {
       {/* Why Choose Us: 8 Pillars from the Official Website */}
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">The UK Yatra Advantage</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-1">
-            Why Choose Us
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>The UK Yatra Advantage</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 mt-1">
+            Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-500 to-orange-600">Choose Us</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-2">
+          <p className="text-xs sm:text-sm text-slate-600 mt-3 max-w-xl mx-auto leading-relaxed">
             Discover what makes traveling with UK Yatra seamless, ethical, and trustworthy.
           </p>
         </div>
@@ -430,10 +436,14 @@ export const AboutPage: React.FC = () => {
       {/* Trust & Certifications */}
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold font-display text-white">
-            Certified & Recognized
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Official Recognition</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-slate-900 mt-1">
+            Certified & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-500 to-orange-600">Recognized</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-2">
+          <p className="text-xs sm:text-sm text-slate-600 mt-2">
             Operating with full legal compliance, state registration, and industry certifications.
           </p>
         </div>
@@ -460,14 +470,14 @@ export const AboutPage: React.FC = () => {
       {/* Verified Google Guest Reviews */}
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold mb-2">
-            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 border border-emerald-500/30 text-xs font-bold mb-2">
+            <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
             <span>Google Verified Reviews (150+ 5-Star Ratings)</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">
-            What Our Travelers Say
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 mt-1">
+            What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-500 to-orange-600">Travelers Say</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-2">
+          <p className="text-xs sm:text-sm text-slate-600 mt-3 max-w-xl mx-auto leading-relaxed">
             Real guest feedback from Char Dham yatras, Tungnath treks, and customized tours.
           </p>
         </div>
@@ -475,8 +485,8 @@ export const AboutPage: React.FC = () => {
         {/* Moving Reviews 1-Line Slideshow */}
         <div className="relative w-full overflow-hidden py-4 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
           {/* Left and Right Edge Fade Gradients */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/90 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-[#0F172A] via-[#0F172A]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-[#F5F3EF] via-[#F5F3EF]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-[#F5F3EF] via-[#F5F3EF]/90 to-transparent z-10" />
 
           {/* Continuous Infinite Moving Track */}
           <div className="animate-marquee-infinite flex gap-6">
@@ -509,8 +519,8 @@ export const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-3 text-[11px] text-slate-400 font-medium flex items-center justify-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+        <div className="text-center mt-3 text-[11px] text-slate-600 font-medium flex items-center justify-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span>Continuous live slideshow • Hover to pause reading</span>
         </div>
       </div>
@@ -518,11 +528,13 @@ export const AboutPage: React.FC = () => {
       {/* General FAQs from official website */}
       <div className="mb-20 max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Got Questions?</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-1">
-            Frequently Asked Questions
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <span>Got Questions?</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 mt-1">
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-500 to-orange-600">Questions</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-2">
+          <p className="text-xs sm:text-sm text-slate-600 mt-3 max-w-xl mx-auto leading-relaxed">
             Everything you need to know about UK Yatra and our tour services.
           </p>
         </div>
