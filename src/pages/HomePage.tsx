@@ -138,18 +138,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             ref={videoRef}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
             src="/images/hero-bg.mp4"
-            poster="/images/hero-poster.jpg"
             autoPlay
             muted
             loop
             playsInline
+            preload="auto"
             onEnded={(e) => {
               // Guaranteed continuous loop fallback across all browser engines
               e.currentTarget.currentTime = 0;
               e.currentTarget.play().catch(() => {});
             }}
             style={{ pointerEvents: 'none' }}
-          />
+          >
+            <source src="/images/hero-bg.mp4" type="video/mp4" />
+          </video>
           {/* Cinematic overlay - tuned for crystal clarity while preserving text contrast */}
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/20 to-[#0F172A]" />
         </div>

@@ -28,3 +28,4 @@ dist-ssr
 # Block generic large videos but allow the small hero video
 public/images/*.mov
 public/images/*.webm
+public/images/*(*)*.mp4
