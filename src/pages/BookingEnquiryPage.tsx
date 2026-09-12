@@ -16,6 +16,8 @@ import { TOUR_PACKAGES } from '../data/packages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
 
+import { adminStorage } from '../utils/adminStorage';
+
 export const BookingEnquiryPage: React.FC = () => {
   const [form, setForm] = useState({
     name: '',
@@ -33,6 +35,18 @@ export const BookingEnquiryPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    adminStorage.addBooking({
+      name: form.name,
+      phone: form.phone,
+      email: form.email,
+      destination: form.destination,
+      packageName: form.packageChoice,
+      travelDate: form.travelDate,
+      travellers: form.travellers,
+      budget: form.budget,
+      specialRequests: form.specialRequests,
+      source: 'Booking Page'
+    });
     setSubmitted(true);
   };
 

@@ -273,6 +273,9 @@ export const Footer: React.FC = () => {
             <Link to="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-slate-400 hover:text-white transition-colors">Terms & Conditions</Link>
             <Link to="/cancellation-policy" className="text-slate-400 hover:text-white transition-colors">Cancellation & Refund</Link>
+            <Link to="/admin" className="text-slate-500 hover:text-brand-orange transition-colors flex items-center gap-1">
+              <span>🔐 Staff Admin</span>
+            </Link>
           </div>
         </div>
       </div>

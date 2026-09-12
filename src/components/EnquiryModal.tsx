@@ -5,6 +5,8 @@ import { DESTINATIONS } from '../data/destinations';
 import { TOUR_PACKAGES } from '../data/packages';
 import { WhatsAppIcon } from './SocialIcons';
 
+import { adminStorage } from '../utils/adminStorage';
+
 interface EnquiryModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -36,6 +38,18 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    adminStorage.addBooking({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      destination: formData.destination,
+      packageName: formData.packageName,
+      travelDate: formData.travelDate,
+      travellers: formData.travellers,
+      budget: formData.budget,
+      specialRequests: formData.message,
+      source: 'Enquiry Modal'
+    });
     setSubmitted(true);
   };
 
