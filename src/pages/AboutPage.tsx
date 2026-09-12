@@ -472,25 +472,46 @@ export const AboutPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {googleReviews.map((rev, idx) => (
-            <div key={idx} className="bg-white border border-[#E2DDD5] rounded-3xl p-6 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(rev.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
+        {/* Moving Reviews 1-Line Slideshow */}
+        <div className="relative w-full overflow-hidden py-4 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+          {/* Left and Right Edge Fade Gradients */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-[#F5F3EF] via-[#F5F3EF]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-[#F5F3EF] via-[#F5F3EF]/90 to-transparent z-10" />
+
+          {/* Continuous Infinite Moving Track */}
+          <div className="animate-marquee-infinite flex gap-6">
+            {[...googleReviews, ...googleReviews].map((rev, idx) => (
+              <div 
+                key={idx} 
+                className="w-[300px] sm:w-[350px] shrink-0 bg-white border border-[#E2DDD5] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-brand-orange/40 transition-all flex flex-col justify-between select-none group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <span className="text-[10px] text-emerald-700 font-bold bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-full">
+                      Google Review
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-700 italic leading-relaxed line-clamp-4">
+                    "{rev.review}"
+                  </p>
                 </div>
-                <p className="text-xs text-slate-700 italic leading-relaxed mb-4">
-                  "{rev.review}"
-                </p>
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between mt-4">
+                  <span className="font-bold text-slate-900 text-xs">{rev.name}</span>
+                  <span className="text-[10px] text-slate-400 font-medium">Verified Guest</span>
+                </div>
               </div>
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="font-bold text-slate-900 text-xs">{rev.name}</span>
-                <span className="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full">Google Review</span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center mt-3 text-[11px] text-slate-500 font-medium flex items-center justify-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span>Continuous live slideshow • Hover to pause reading</span>
         </div>
       </div>
 

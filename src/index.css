@@ -175,3 +175,31 @@ header *::selection,
 .group:hover .card-zoom-image {
   transform: scale(1.08);
 }
+
+/* Infinite Moving Marquee / Slideshow */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-infinite {
+    animation: none;
+  }
+}
+
