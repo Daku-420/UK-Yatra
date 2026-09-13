@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { Sparkles, Search, Filter } from 'lucide-react';
-import { TOUR_PACKAGES } from '../data/packages';
+import { adminStorage } from '../utils/adminStorage';
 import { PackageCard } from '../components/PackageCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { WhatsAppIcon } from '../components/SocialIcons';
+import { getWhatsAppUrl } from '../config/siteConfig';
 
 interface PackagesPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -15,9 +17,10 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
 
   const categories = ['All', 'Spiritual', 'Adventure', 'Trekking', 'Hills & Valleys', 'Wildlife'];
   const durations = ['All', '2-3 Days', '4-5 Days', '6+ Days'];
+  const allPackages = adminStorage.getPackages();
 
   const filteredPackages = useMemo(() => {
-    return TOUR_PACKAGES.filter((pkg) => {
+    return allPackages.filter((pkg) => {
       const matchCat = selectedCategory === 'All' || pkg.category === selectedCategory;
       const matchSearch = pkg.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           pkg.destination.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -83,7 +86,34 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
       </div>
 
       {/* Packages Grid */}
-      {filteredPackages.length > 0 ? (
+      {allPackages.length === 0 ? (
+        <div className="text-center py-16 px-6 bg-white rounded-3xl border border-[#DCD6CC] shadow-sm max-w-2xl mx-auto space-y-4">
+          <div className="w-16 h-16 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center mx-auto border border-brand-orange/20">
+            <Sparkles className="w-8 h-8" />
+          </div>
+          <h3 className="text-2xl font-bold font-display text-slate-900">Custom Itineraries & Transparent Pricing</h3>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
+            Our 2026 seasonal packages and customized day-wise itineraries are currently being updated by our mountain architects. Connect directly with our team on WhatsApp for custom day-wise quotes and bespoke travel plans!
+          </p>
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={getWhatsAppUrl("Hi UKYatra, I would like to get custom itinerary options and pricing for Uttarakhand.")}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs shadow-lg hover:brightness-105"
+            >
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
+              <span>Get Custom Itinerary on WhatsApp</span>
+            </a>
+            <button
+              onClick={() => onOpenBookingModal()}
+              className="w-full sm:w-auto orange-gradient-btn px-6 py-3 rounded-xl font-display font-semibold text-xs text-white shadow-md"
+            >
+              <span>Enquire Online</span>
+            </button>
+          </div>
+        </div>
+      ) : filteredPackages.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPackages.map((pkg) => (
             <PackageCard

@@ -37,6 +37,7 @@ import { BlogCard } from '../components/BlogCard';
 import { InstagramIcon } from '../components/SocialIcons';
 import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
 import { LiveWeatherWidget } from '../components/LiveWeatherWidget';
+import { adminStorage } from '../utils/adminStorage';
 
 interface HomePageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -45,6 +46,7 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
   const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const activePackages = adminStorage.getPackages();
 
   // Reliable autoplay & uninterrupted looping across all browsers
   useEffect(() => {
@@ -434,15 +436,46 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {TOUR_PACKAGES.slice(0, 6).map((pkg) => (
-            <PackageCard
-              key={pkg.id}
-              tourPackage={pkg}
-              onOpenBookingModal={() => onOpenBookingModal(pkg.title)}
-            />
-          ))}
-        </div>
+        {activePackages.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {activePackages.slice(0, 6).map((pkg) => (
+              <PackageCard
+                key={pkg.id}
+                tourPackage={pkg}
+                onOpenBookingModal={() => onOpenBookingModal(pkg.title)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="p-8 sm:p-12 rounded-3xl bg-brand-card border border-white/10 text-center space-y-4 max-w-2xl mx-auto shadow-xl">
+            <div className="w-16 h-16 rounded-full bg-brand-orange/15 text-brand-orange flex items-center justify-center mx-auto border border-brand-orange/25">
+              <Sparkles className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-bold font-display text-white">
+              Handcrafted Custom Itineraries
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
+              Our 2026 seasonal packages and customized day-wise itineraries are currently being updated. Connect directly with our local destination architects on WhatsApp to receive a tailor-made day-by-day itinerary and transparent pricing.
+            </p>
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={getWhatsAppUrl("Hi UKYatra, I would like to get custom itinerary options and pricing for Uttarakhand.")}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs shadow-lg hover:brightness-105"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
+                <span>Get Itinerary & Quote on WhatsApp</span>
+              </a>
+              <button
+                onClick={() => onOpenBookingModal()}
+                className="w-full sm:w-auto orange-gradient-btn px-6 py-3 rounded-xl font-display font-semibold text-xs text-white shadow-md"
+              >
+                <span>Request Custom Plan</span>
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* ============================================================ */}

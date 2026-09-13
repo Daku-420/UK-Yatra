@@ -59,12 +59,15 @@ export const CATEGORY_STYLES: Record<SearchCategory, { label: string; badge: str
   admin:       { label: 'Staff Admin',      badge: 'bg-orange-500/20 text-orange-300 border-orange-500/30', icon: '🔐' },
 };
 
+import { adminStorage } from './adminStorage';
+
 // Build exhaustive site searchable corpus
 const buildComprehensiveSearchIndex = (): RawSearchDoc[] => {
   const docs: RawSearchDoc[] = [];
 
   // 1. TOUR PACKAGES (Title, overview, itinerary days, inclusions, exclusions, highlights)
-  TOUR_PACKAGES.forEach(pkg => {
+  const packages = adminStorage.getPackages();
+  packages.forEach(pkg => {
     const fields: { section: string; text: string }[] = [
       { section: 'Package Title', text: pkg.title },
       { section: 'Destination', text: pkg.destination },

@@ -82,8 +82,8 @@ export const TrekCard: React.FC<TrekCardProps> = ({ trek }) => {
         {/* Price & Action */}
         <div className="pt-3 border-t border-white/10 flex items-center justify-between">
           <div>
-            <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-medium">Starts at</span>
-            <span className="font-display font-bold text-lg text-white">{trek.startingPrice}</span>
+            <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-medium">Pricing</span>
+            <span className="font-display font-bold text-sm text-brand-orange">{trek.startingPrice}</span>
           </div>
 
           <Link

@@ -1,4 +1,5 @@
 import { TOUR_PACKAGES } from '../data/packages';
+import { TourPackage } from '../types';
 import { REVIEWS } from '../data/reviews';
 import { SITE_CONFIG } from '../config/siteConfig';
 
@@ -47,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages',
+  PACKAGES: 'ukyatra_admin_packages_v2',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -287,21 +288,38 @@ export const adminStorage = {
   },
 
   // --- TOUR PACKAGES ---
-  getPackages: () => {
+  getPackages: (): TourPackage[] => {
     try {
+      if (localStorage.getItem('ukyatra_admin_packages')) {
+        localStorage.removeItem('ukyatra_admin_packages');
+      }
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
         localStorage.setItem(STORAGE_KEYS.PACKAGES, JSON.stringify(TOUR_PACKAGES));
         return TOUR_PACKAGES;
       }
-      return JSON.parse(stored);
+      const parsed = JSON.parse(stored);
+      return Array.isArray(parsed) ? parsed : [];
     } catch {
       return TOUR_PACKAGES;
     }
   },
 
-  savePackages: (packages: typeof TOUR_PACKAGES) => {
+  savePackages: (packages: TourPackage[]) => {
     localStorage.setItem(STORAGE_KEYS.PACKAGES, JSON.stringify(packages));
+  },
+
+  addPackage: (pkg: TourPackage): TourPackage => {
+    const list = adminStorage.getPackages();
+    const updated = [pkg, ...list];
+    adminStorage.savePackages(updated);
+    return pkg;
+  },
+
+  deletePackage: (id: string): void => {
+    const list = adminStorage.getPackages();
+    const updated = list.filter(p => p.id !== id);
+    adminStorage.savePackages(updated);
   },
 
   // --- WEATHER ADVISORIES ---

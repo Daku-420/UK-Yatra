@@ -126,28 +126,48 @@ export const TrekDetailPage: React.FC<TrekDetailPageProps> = ({ onOpenBookingMod
             </div>
 
             {/* Itinerary */}
-            <div>
-              <h2 className="text-2xl font-bold font-display text-slate-900 mb-6">
-                Day-by-Day Trek Itinerary
-              </h2>
-              <div className="space-y-4">
-                {trek.itinerary.map((item) => (
-                  <div key={item.day} className="p-5 rounded-2xl bg-white border border-[#E2DDD5] shadow-xs space-y-2">
-                    <div className="flex items-center gap-3">
-                      <span className="w-8 h-8 rounded-xl bg-brand-orange/15 text-brand-orange flex items-center justify-center font-display font-bold text-xs">
-                        D{item.day}
-                      </span>
-                      <h3 className="font-display font-bold text-sm sm:text-base text-slate-900">
-                        {item.title}
-                      </h3>
+            {trek.itinerary && trek.itinerary.length > 0 ? (
+              <div>
+                <h2 className="text-2xl font-bold font-display text-slate-900 mb-6">
+                  Day-by-Day Trek Itinerary
+                </h2>
+                <div className="space-y-4">
+                  {trek.itinerary.map((item) => (
+                    <div key={item.day} className="p-5 rounded-2xl bg-white border border-[#E2DDD5] shadow-xs space-y-2">
+                      <div className="flex items-center gap-3">
+                        <span className="w-8 h-8 rounded-xl bg-brand-orange/15 text-brand-orange flex items-center justify-center font-display font-bold text-xs">
+                          D{item.day}
+                        </span>
+                        <h3 className="font-display font-bold text-sm sm:text-base text-slate-900">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="text-xs text-slate-700 leading-relaxed pl-11">
+                        {item.desc}
+                      </p>
                     </div>
-                    <p className="text-xs text-slate-700 leading-relaxed pl-11">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="p-8 rounded-3xl bg-white border border-[#E2DDD5] shadow-sm text-center space-y-3">
+                <h3 className="font-bold font-display text-slate-900 text-xl">Detailed Trail Itinerary & Batch Schedule</h3>
+                <p className="text-xs text-slate-600 max-w-lg mx-auto leading-relaxed">
+                  Every Himalayan trek itinerary is customized for current trail conditions, group fitness levels, and camping preferences. Chat directly with our certified trek coordinators on WhatsApp to get the day-wise itinerary, equipment checklist, and current batch availability.
+                </p>
+                <div className="pt-2">
+                  <a
+                    href={getTrekWhatsAppUrl(trek.name)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs shadow-lg hover:brightness-105"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
+                    <span>Get Detailed Trek Itinerary on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            )}
 
             {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -190,8 +210,8 @@ export const TrekDetailPage: React.FC<TrekDetailPageProps> = ({ onOpenBookingMod
                 <span className="text-[10px] uppercase font-bold tracking-wider text-brand-orange">
                   All-Inclusive Batch Cost
                 </span>
-                <div className="font-display font-extrabold text-3xl text-slate-900 mt-1">
-                  {trek.startingPrice} <span className="text-xs font-normal text-slate-500">/ trekker</span>
+                <div className="font-display font-extrabold text-2xl text-slate-900 mt-1">
+                  {trek.startingPrice} {trek.startingPrice !== 'Pricing on Request' && <span className="text-xs font-normal text-slate-500">/ trekker</span>}
                 </div>
               </div>
 

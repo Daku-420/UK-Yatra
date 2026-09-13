@@ -15,7 +15,7 @@ import {
   ArrowRight,
   ChevronLeft
 } from 'lucide-react';
-import { TOUR_PACKAGES } from '../data/packages';
+import { adminStorage } from '../utils/adminStorage';
 import { getPackageWhatsAppUrl, SITE_CONFIG } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -26,13 +26,51 @@ interface PackageDetailPageProps {
 
 export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBookingModal }) => {
   const { id } = useParams<{ id: string }>();
-  const tourPackage = TOUR_PACKAGES.find((p) => p.id === id) || TOUR_PACKAGES[0];
+  const packages = adminStorage.getPackages();
+  const tourPackage = packages.find((p) => p.id === id);
 
   const [openDay, setOpenDay] = useState<number | null>(1);
 
   const toggleDay = (dayNum: number) => {
     setOpenDay(openDay === dayNum ? null : dayNum);
   };
+
+  if (!tourPackage) {
+    return (
+      <div className="pt-32 pb-24 max-w-3xl mx-auto px-4 text-center">
+        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-10 shadow-2xl space-y-6">
+          <div className="w-16 h-16 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mx-auto text-brand-orange">
+            <Sparkles className="w-8 h-8" />
+          </div>
+          <div>
+            <h1 className="text-2xl sm:text-3xl font-bold font-display text-white mb-2">
+              Custom Itinerary On Demand
+            </h1>
+            <p className="text-sm text-slate-300 leading-relaxed max-w-lg mx-auto">
+              Looking for a personalized Himalayan tour? Our travel experts curate tailored itineraries with transparent pricing, verified stays, and trusted mountain drivers.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <a
+              href={getPackageWhatsAppUrl('Custom Uttarakhand Itinerary')}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition-all"
+            >
+              <WhatsAppIcon className="w-4 h-4 fill-white" />
+              <span>Get Custom Quote on WhatsApp</span>
+            </a>
+            <Link
+              to="/packages"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+            >
+              Browse Packages
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-24 pb-20">
@@ -135,58 +173,81 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                 </button>
               </div>
 
-              <div className="space-y-4">
-                {tourPackage.itinerary.map((item) => {
-                  const isExpanded = openDay === item.day;
-                  return (
-                    <div
-                      key={item.day}
-                      className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                        isExpanded
-                          ? 'bg-white border-brand-orange shadow-md'
-                          : 'bg-white border-[#E2DDD5] hover:border-slate-300 shadow-xs'
-                      }`}
-                    >
-                      <button
-                        onClick={() => toggleDay(item.day)}
-                        className="w-full text-left p-5 flex items-center justify-between gap-4 cursor-pointer"
+              {tourPackage.itinerary && tourPackage.itinerary.length > 0 ? (
+                <div className="space-y-4">
+                  {tourPackage.itinerary.map((item) => {
+                    const isExpanded = openDay === item.day;
+                    return (
+                      <div
+                        key={item.day}
+                        className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+                          isExpanded
+                            ? 'bg-white border-brand-orange shadow-md'
+                            : 'bg-white border-[#E2DDD5] hover:border-slate-300 shadow-xs'
+                        }`}
                       >
-                        <div className="flex items-center gap-3">
-                          <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-display font-bold text-xs shrink-0 ${
-                            isExpanded ? 'bg-brand-orange text-white' : 'bg-slate-100 text-slate-800'
-                          }`}>
-                            D{item.day}
-                          </span>
-                          <span className="font-display font-bold text-sm sm:text-base text-slate-900">
-                            {item.title}
-                          </span>
-                        </div>
-                        {isExpanded ? (
-                          <ChevronUp className="w-5 h-5 text-brand-orange shrink-0" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
-                        )}
-                      </button>
+                        <button
+                          onClick={() => toggleDay(item.day)}
+                          className="w-full text-left p-5 flex items-center justify-between gap-4 cursor-pointer"
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-display font-bold text-xs shrink-0 ${
+                              isExpanded ? 'bg-brand-orange text-white' : 'bg-slate-100 text-slate-800'
+                            }`}>
+                              D{item.day}
+                            </span>
+                            <span className="font-display font-bold text-sm sm:text-base text-slate-900">
+                              {item.title}
+                            </span>
+                          </div>
+                          {isExpanded ? (
+                            <ChevronUp className="w-5 h-5 text-brand-orange shrink-0" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
+                          )}
+                        </button>
 
-                      {isExpanded && (
-                        <div className="px-5 pb-5 pt-1 border-t border-slate-100 space-y-4 text-xs animate-in fade-in duration-150">
-                          <p className="text-slate-700 leading-relaxed">
-                            {item.description}
-                          </p>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-[11px] text-slate-700">
-                            <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5]">
-                              🏨 <strong>Stay:</strong> {item.stay}
-                            </div>
-                            <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5]">
-                              🍽️ <strong>Meals Included:</strong> {item.meals}
+                        {isExpanded && (
+                          <div className="px-5 pb-5 pt-1 border-t border-slate-100 space-y-4 text-xs animate-in fade-in duration-150">
+                            <p className="text-slate-700 leading-relaxed">
+                              {item.description}
+                            </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-[11px] text-slate-700">
+                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5]">
+                                🏨 <strong>Stay:</strong> {item.stay}
+                              </div>
+                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5]">
+                                🍽️ <strong>Meals Included:</strong> {item.meals}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="bg-white border border-[#E2DDD5] rounded-2xl p-6 sm:p-8 text-center space-y-4">
+                  <div className="w-12 h-12 rounded-full bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mx-auto text-brand-orange">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900">Customized Day-by-Day Route</h3>
+                    <p className="text-xs text-slate-600 mt-1 max-w-md mx-auto">
+                      This package is customized according to your arrival point, preferred stays, and group pace. Contact our local team on WhatsApp to get your detailed personalized itinerary PDF.
+                    </p>
+                  </div>
+                  <a
+                    href={getPackageWhatsAppUrl(tourPackage.title)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow transition-all"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 fill-white" />
+                    <span>Get Detailed PDF Itinerary</span>
+                  </a>
+                </div>
+              )}
             </div>
 
             {/* Inclusions & Exclusions */}

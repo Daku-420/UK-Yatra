@@ -68,6 +68,9 @@ export const AdminPortalPage: React.FC = () => {
   const [isEditPackageOpen, setIsEditPackageOpen] = useState(false);
   const [editingPackage, setEditingPackage] = useState<TourPackage | null>(null);
   const [isNewPackageOpen, setIsNewPackageOpen] = useState(false);
+  const [newItineraryDays, setNewItineraryDays] = useState<{ day: number; title: string; description: string; stay: string; meals: string }[]>([
+    { day: 1, title: 'Arrival & Scenic Mountain Drive', description: 'Scenic transfer to base destination; check-in and evening temple/valley walk.', stay: 'Deluxe Resort / Camp', meals: 'Dinner' }
+  ]);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Load data on mount & refresh
@@ -131,6 +134,14 @@ export const AdminPortalPage: React.FC = () => {
       setSelectedBooking(null);
       reloadData();
       showToast('Lead deleted');
+    }
+  };
+
+  const handleDeletePackage = (id: string, title: string) => {
+    if (window.confirm(`Are you sure you want to delete tour package "${title}"?`)) {
+      adminStorage.deletePackage(id);
+      reloadData();
+      showToast(`Package "${title}" deleted`);
     }
   };
 
@@ -722,58 +733,89 @@ export const AdminPortalPage: React.FC = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {packages.map(pkg => (
-                <div key={pkg.id} className="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
-                  <div>
-                    <div className="relative h-44 overflow-hidden">
-                      <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover" />
-                      <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-white border border-white/20">
-                        {pkg.duration}
-                      </div>
-                      <div className="absolute top-3 right-3 bg-brand-orange text-white px-2.5 py-1 rounded-full text-xs font-extrabold shadow">
-                        {pkg.startingPrice}
-                      </div>
-                    </div>
-
-                    <div className="p-5 space-y-2">
-                      <div className="text-[10px] uppercase font-bold text-brand-orange tracking-wider">
-                        {pkg.destination} • {pkg.category}
-                      </div>
-                      <h3 className="text-base font-bold text-white line-clamp-1">{pkg.title}</h3>
-                      <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{pkg.overview}</p>
-                    </div>
-                  </div>
-
-                  <div className="p-4 border-t border-slate-800/80 bg-slate-900/40 flex items-center justify-between gap-2">
-                    <span className="text-[11px] text-slate-400">
-                      ⭐ {pkg.rating} ({pkg.reviewsCount} reviews)
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setEditingPackage(pkg);
-                          setIsEditPackageOpen(true);
-                        }}
-                        className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-slate-700 transition-colors flex items-center gap-1"
-                      >
-                        <Edit3 className="w-3 h-3 text-brand-orange" />
-                        <span>Edit</span>
-                      </button>
-                      <Link
-                        to={`/packages/${pkg.id}`}
-                        target="_blank"
-                        className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
-                        title="View Public Page"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  </div>
+            {packages.length === 0 ? (
+              <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-10 sm:p-14 text-center max-w-2xl mx-auto space-y-5 shadow-xl">
+                <div className="w-16 h-16 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mx-auto text-brand-orange">
+                  <Package className="w-8 h-8" />
                 </div>
-              ))}
-            </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold font-display text-white">No Tour Packages Listed Yet</h3>
+                  <p className="text-xs text-slate-400 leading-relaxed max-w-md mx-auto">
+                    All system-generated itineraries and placeholder prices have been cleared. You have full control to add your verified itineraries with your custom pricing, hotel stays, and route schedules.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsNewPackageOpen(true)}
+                  className="orange-gradient-btn px-6 py-3 rounded-xl text-xs font-bold text-white shadow inline-flex items-center gap-2"
+                >
+                  <Plus className="w-4 h-4" />
+                  <span>Add Your First Tour Package</span>
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {packages.map(pkg => (
+                  <div key={pkg.id} className="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div>
+                      <div className="relative h-44 overflow-hidden">
+                        <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover" />
+                        <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-white border border-white/20">
+                          {pkg.duration}
+                        </div>
+                        <div className="absolute top-3 right-3 bg-brand-orange text-white px-2.5 py-1 rounded-full text-xs font-extrabold shadow">
+                          {pkg.startingPrice}
+                        </div>
+                      </div>
+
+                      <div className="p-5 space-y-2">
+                        <div className="text-[10px] uppercase font-bold text-brand-orange tracking-wider">
+                          {pkg.destination} • {pkg.category}
+                        </div>
+                        <h3 className="text-base font-bold text-white line-clamp-1">{pkg.title}</h3>
+                        <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{pkg.overview}</p>
+                      </div>
+                    </div>
+
+                    <div className="p-4 border-t border-slate-800/80 bg-slate-900/40 flex items-center justify-between gap-2">
+                      <span className="text-[11px] text-slate-400">
+                        ⭐ {pkg.rating} ({pkg.reviewsCount} reviews)
+                      </span>
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setEditingPackage(pkg);
+                            setIsEditPackageOpen(true);
+                          }}
+                          className="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-slate-700 transition-colors flex items-center gap-1"
+                          title="Edit Package"
+                        >
+                          <Edit3 className="w-3 h-3 text-brand-orange" />
+                          <span>Edit</span>
+                        </button>
+                        <Link
+                          to={`/packages/${pkg.id}`}
+                          target="_blank"
+                          className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+                          title="View Public Page"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => handleDeletePackage(pkg.id, pkg.title)}
+                          className="p-1.5 rounded-lg bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 transition-colors"
+                          title="Delete Package"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -1316,6 +1358,384 @@ export const AdminPortalPage: React.FC = () => {
               <div className="pt-3 flex justify-end gap-2">
                 <button type="button" onClick={() => setIsEditPackageOpen(false)} className="px-4 py-2 rounded-xl bg-slate-800 text-slate-300">Cancel</button>
                 <button type="submit" className="orange-gradient-btn px-5 py-2 rounded-xl font-bold text-white shadow">Save Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* --- MODAL 4: CREATE NEW TOUR PACKAGE & ITINERARY --- */}
+      {isNewPackageOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 w-full max-w-3xl shadow-2xl space-y-5 my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div>
+                <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                  <Package className="w-5 h-5 text-brand-orange" />
+                  <span>Create Tour Package & Itinerary</span>
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Add your verified tour package with customized pricing, hotel stays, and day-by-day route details.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsNewPackageOpen(false)}
+                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                const fd = new FormData(e.currentTarget);
+                const title = (fd.get('title') as string).trim();
+                const destination = (fd.get('destination') as string).trim();
+                const category = (fd.get('category') as string) || 'Pilgrimage';
+                const duration = (fd.get('duration') as string).trim() || `${newItineraryDays.length} Days`;
+                const daysCount = Number(fd.get('days')) || newItineraryDays.length || 1;
+                const startingPrice = (fd.get('startingPrice') as string).trim() || 'Pricing on Request';
+                const originalPrice = (fd.get('originalPrice') as string).trim() || undefined;
+                const bestSeason = (fd.get('bestSeason') as string).trim() || 'May to October';
+                const imageUrl = (fd.get('image') as string).trim() || 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80';
+                const overview = (fd.get('overview') as string).trim();
+                const highlightsStr = (fd.get('highlights') as string) || '';
+                const inclusionsStr = (fd.get('inclusions') as string) || '';
+                const exclusionsStr = (fd.get('exclusions') as string) || '';
+
+                const highlights = highlightsStr
+                  .split(/[,\n]/)
+                  .map(s => s.trim())
+                  .filter(Boolean);
+
+                const inclusions = inclusionsStr
+                  .split(/[,\n]/)
+                  .map(s => s.trim())
+                  .filter(Boolean);
+
+                const exclusions = exclusionsStr
+                  .split(/[,\n]/)
+                  .map(s => s.trim())
+                  .filter(Boolean);
+
+                const validItinerary = newItineraryDays.filter(d => d.title.trim());
+
+                const newPkg: TourPackage = {
+                  id: title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `pkg-${Date.now()}`,
+                  title,
+                  destination,
+                  category,
+                  duration,
+                  days: daysCount,
+                  startingPrice,
+                  originalPrice,
+                  bestSeason,
+                  image: imageUrl,
+                  rating: 4.9,
+                  reviewsCount: 1,
+                  overview,
+                  highlights: highlights.length > 0 ? highlights : ['Scenic Himalayan Route', 'Verified Mountain Stay', 'Expert Driver & Guide'],
+                  itinerary: validItinerary,
+                  inclusions: inclusions.length > 0 ? inclusions : ['Accommodation in verified hotels/camps', 'Daily Breakfast & Dinner', 'Dedicated Mountain Transport with Driver', 'Tolls, Parking & Fuel Charges'],
+                  exclusions: exclusions.length > 0 ? exclusions : ['Airfare / Train tickets to base hub', 'Helicopter / Pony / Palki tickets', 'Personal expenses & tips', 'Monument or temple VIP entry passes'],
+                  isFeatured: true
+                };
+
+                adminStorage.addPackage(newPkg);
+                reloadData();
+                setIsNewPackageOpen(false);
+                // Reset form state
+                setNewItineraryDays([
+                  { day: 1, title: 'Arrival & Scenic Mountain Drive', description: 'Scenic transfer to base destination; check-in and evening temple/valley walk.', stay: 'Deluxe Resort / Camp', meals: 'Dinner' }
+                ]);
+                showToast(`Tour Package "${newPkg.title}" published successfully!`);
+              }}
+              className="space-y-4 text-xs"
+            >
+              {/* Row 1: Title & Destination */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Package Title *</label>
+                  <input
+                    required
+                    name="title"
+                    type="text"
+                    placeholder="e.g. Kedarnath & Badrinath Do Dham Deluxe"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Destination / Region *</label>
+                  <input
+                    required
+                    name="destination"
+                    type="text"
+                    placeholder="e.g. Kedarnath & Badrinath"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+              </div>
+
+              {/* Row 2: Category, Duration, Days, Best Season */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Category</label>
+                  <select
+                    name="category"
+                    defaultValue="Pilgrimage"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  >
+                    <option value="Pilgrimage">Pilgrimage</option>
+                    <option value="Trek & Adventure">Trek & Adventure</option>
+                    <option value="Spiritual Circuit">Spiritual Circuit</option>
+                    <option value="Family & Leisure">Family & Leisure</option>
+                    <option value="Offbeat Uttarakhand">Offbeat Uttarakhand</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Duration Text *</label>
+                  <input
+                    required
+                    name="duration"
+                    type="text"
+                    defaultValue="5 Days / 4 Nights"
+                    placeholder="e.g. 5 Days / 4 Nights"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Days Count</label>
+                  <input
+                    name="days"
+                    type="number"
+                    min="1"
+                    max="30"
+                    defaultValue={newItineraryDays.length}
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Best Season</label>
+                  <input
+                    name="bestSeason"
+                    type="text"
+                    defaultValue="May – Oct"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+              </div>
+
+              {/* Row 3: Pricing & Cover Image */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Starting Price *</label>
+                  <input
+                    required
+                    name="startingPrice"
+                    type="text"
+                    placeholder="e.g. ₹18,500 / person or Pricing on Request"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Original Price (Strikeout)</label>
+                  <input
+                    name="originalPrice"
+                    type="text"
+                    placeholder="e.g. ₹22,000"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Cover Image URL</label>
+                  <input
+                    name="image"
+                    type="url"
+                    defaultValue="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange text-[11px]"
+                  />
+                </div>
+              </div>
+
+              {/* Overview Description */}
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1">Package Overview *</label>
+                <textarea
+                  required
+                  name="overview"
+                  rows={2}
+                  placeholder="Provide an overview of the journey, experiences, and highlights for travelers..."
+                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange resize-none"
+                />
+              </div>
+
+              {/* Highlights */}
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1">
+                  Key Highlights (comma-separated)
+                </label>
+                <input
+                  name="highlights"
+                  type="text"
+                  placeholder="VIP Darshan assistance, Scenic river confluences, Private Innova vehicle, Luxury cottages"
+                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
+                />
+              </div>
+
+              {/* Day-Wise Itinerary Builder */}
+              <div className="space-y-3 pt-2 border-t border-slate-800">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="font-bold text-white text-xs">Day-Wise Itinerary Plan</span>
+                    <p className="text-[11px] text-slate-400">Add detailed daily plans with night stay and meal details.</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const nextDay = newItineraryDays.length + 1;
+                      setNewItineraryDays([
+                        ...newItineraryDays,
+                        {
+                          day: nextDay,
+                          title: `Day ${nextDay} Exploration & Sightseeing`,
+                          description: 'Full day sightseeing, temple darshan, and scenic Himalayan vistas.',
+                          stay: 'Deluxe Hotel / Resort',
+                          meals: 'Breakfast & Dinner'
+                        }
+                      ]);
+                    }}
+                    className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-orange font-bold text-xs border border-slate-700 transition-colors flex items-center gap-1"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Add Day {newItineraryDays.length + 1}</span>
+                  </button>
+                </div>
+
+                <div className="space-y-3 max-h-60 overflow-y-auto pr-1">
+                  {newItineraryDays.map((item, index) => (
+                    <div key={index} className="p-3 bg-slate-800/70 border border-slate-700/80 rounded-2xl space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="px-2 py-0.5 rounded-md bg-brand-orange/20 text-brand-orange font-bold text-[10px] border border-brand-orange/30">
+                          Day {item.day}
+                        </span>
+                        {newItineraryDays.length > 1 && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const filtered = newItineraryDays
+                                .filter((_, i) => i !== index)
+                                .map((d, i) => ({ ...d, day: i + 1 }));
+                              setNewItineraryDays(filtered);
+                            }}
+                            className="text-slate-400 hover:text-rose-400 text-xs p-1"
+                            title="Remove Day"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        )}
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <div className="sm:col-span-1">
+                          <input
+                            type="text"
+                            value={item.title}
+                            onChange={e => {
+                              const copy = [...newItineraryDays];
+                              copy[index].title = e.target.value;
+                              setNewItineraryDays(copy);
+                            }}
+                            placeholder="Day title (e.g. Haridwar to Guptkashi)"
+                            className="w-full p-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-[11px] focus:outline-none focus:border-brand-orange"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="text"
+                            value={item.stay}
+                            onChange={e => {
+                              const copy = [...newItineraryDays];
+                              copy[index].stay = e.target.value;
+                              setNewItineraryDays(copy);
+                            }}
+                            placeholder="Night stay hotel/camp"
+                            className="w-full p-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-[11px] focus:outline-none focus:border-brand-orange"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="text"
+                            value={item.meals}
+                            onChange={e => {
+                              const copy = [...newItineraryDays];
+                              copy[index].meals = e.target.value;
+                              setNewItineraryDays(copy);
+                            }}
+                            placeholder="Meals (e.g. Dinner included)"
+                            className="w-full p-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-[11px] focus:outline-none focus:border-brand-orange"
+                          />
+                        </div>
+                      </div>
+
+                      <textarea
+                        rows={2}
+                        value={item.description}
+                        onChange={e => {
+                          const copy = [...newItineraryDays];
+                          copy[index].description = e.target.value;
+                          setNewItineraryDays(copy);
+                        }}
+                        placeholder="Day itinerary description (route, stops, elevation, experiences)..."
+                        className="w-full p-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-[11px] focus:outline-none focus:border-brand-orange resize-none"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Inclusions & Exclusions */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-800">
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">
+                    Inclusions (comma or line separated)
+                  </label>
+                  <textarea
+                    name="inclusions"
+                    rows={2}
+                    defaultValue="Deluxe hotel stays, Daily breakfast & dinner, Dedicated mountain vehicle with driver, All tolls & parking"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-[11px] focus:outline-none focus:border-brand-orange resize-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">
+                    Exclusions (comma or line separated)
+                  </label>
+                  <textarea
+                    name="exclusions"
+                    rows={2}
+                    defaultValue="Train/Air tickets, Helicopter tickets, Personal shopping & porter charges, Entry fees"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-[11px] focus:outline-none focus:border-brand-orange resize-none"
+                  />
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-3 border-t border-slate-800 flex justify-end gap-2.5">
+                <button
+                  type="button"
+                  onClick={() => setIsNewPackageOpen(false)}
+                  className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="orange-gradient-btn px-6 py-2 rounded-xl font-bold text-white shadow"
+                >
+                  Publish Package & Itinerary
+                </button>
               </div>
             </form>
           </div>
