@@ -49,9 +49,36 @@ export const TREKS: Trek[] = [
       'Rhododendron forests blooming in red & pink in spring'
     ],
     overview: 'A short but immensely rewarding trek that packs the drama of high Himalayan summits into an accessible 3-day journey. Ideal for beginners, families, and photographers.',
-    itinerary: [],
-    inclusions: ['Tent/Swiss cottage accommodation', 'All meals', 'Certified mountain guide', 'Permits & safety equipment'],
-    exclusions: ['Personal expenses', 'Pony costs']
+    itinerary: [
+      {
+        day: 1,
+        title: 'Haridwar to Chopta (via Devprayag & Rudraprayag)',
+        desc: 'Morning scenic drive from Haridwar along river confluences (Devprayag & Rudraprayag) reaching the alpine meadows of Chopta. Check-in to Swiss Camps, evening acclimatization walk with views of Chaukhamba peaks.',
+        stay: 'Deluxe Swiss Camps in Chopta',
+        meals: 'Dinner Included'
+      },
+      {
+        day: 2,
+        title: 'Chopta to Tungnath Temple (3,680m) & Chandrashila Peak (4,000m)',
+        desc: 'Early morning trek through rhododendron forests to the sacred Tungnath Temple, the highest Shiva temple in the world. Continue ascending to Chandrashila Peak for a majestic 360-degree panorama of Mt. Nanda Devi, Trishul, and Chaukhamba. Descend back to Chopta.',
+        stay: 'Deluxe Swiss Camps in Chopta',
+        meals: 'Breakfast & Dinner Included'
+      },
+      {
+        day: 3,
+        title: 'Chopta to Haridwar / Rishikesh Drop',
+        desc: 'Morning breakfast amidst serene mountain meadows. Drive back towards Rishikesh and Haridwar with halts at local craft bazaars and temple ghats.',
+        stay: 'Return Transfer / Onward Journey',
+        meals: 'Breakfast Included'
+      }
+    ],
+    inclusions: [
+      'Accommodation in comfortable Swiss Camps on consolidated bed-sharing model',
+      'Daily breakfast and hot dinner prepared by camp kitchen',
+      'Certified local mountain trek leader & guide',
+      'Private sanitized vehicle for transfers from Haridwar/Rishikesh'
+    ],
+    exclusions: ['Pony / horse charges', 'Personal porter services', 'Personal expenses & travel insurance']
   },
   {
     id: 'kuari-pass-trek',

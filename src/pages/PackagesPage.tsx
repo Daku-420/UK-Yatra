@@ -12,16 +12,26 @@ interface PackagesPageProps {
 
 export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedHub, setSelectedHub] = useState('All Hubs');
   const [selectedDuration, setSelectedDuration] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Spiritual', 'Adventure', 'Trekking', 'Hills & Valleys', 'Wildlife'];
-  const durations = ['All', '2-3 Days', '4-5 Days', '6+ Days'];
+  const categories = [
+    'All',
+    'Helicopter Yatra',
+    'Road & Heli Combo',
+    'Classic Overland Road',
+    'Fixed Departure Group',
+    'Leisure & Hill Station',
+    'Trek & Adventure'
+  ];
+  const hubs = ['All Hubs', 'Ex-Dehradun', 'Ex-Haridwar', 'Ex-Delhi'];
   const allPackages = adminStorage.getPackages();
 
   const filteredPackages = useMemo(() => {
     return allPackages.filter((pkg) => {
       const matchCat = selectedCategory === 'All' || pkg.category === selectedCategory;
+      const matchHub = selectedHub === 'All Hubs' || pkg.pickupDrop === selectedHub;
       const matchSearch = pkg.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           pkg.destination.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           pkg.overview.toLowerCase().includes(searchQuery.toLowerCase());
@@ -31,9 +41,9 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
       else if (selectedDuration === '4-5 Days') matchDuration = pkg.days >= 4 && pkg.days <= 5;
       else if (selectedDuration === '6+ Days') matchDuration = pkg.days >= 6;
 
-      return matchCat && matchSearch && matchDuration;
+      return matchCat && matchHub && matchSearch && matchDuration;
     });
-  }, [selectedCategory, selectedDuration, searchQuery]);
+  }, [selectedCategory, selectedHub, selectedDuration, searchQuery, allPackages]);
 
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
@@ -44,31 +54,52 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
         <div className="max-w-2xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Curated Himalayan Tours</span>
+            <span>Official UK Yatra Itinerary Catalog ({allPackages.length} Packages)</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 leading-tight">
             Uttarakhand <span className="text-brand-orange">Tour Packages</span>
           </h1>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-            All-inclusive holiday packages featuring private sanitized mountain transfers, certified hill drivers, comfortable hand-picked stays, and dedicated 24/7 on-trip coordination.
+            Explore authentic Himalayan pilgrimages, helicopter charters, overland road circuits, and alpine treks with downloadable day-wise PDF brochures and verified pricing.
           </p>
         </div>
       </div>
 
       {/* Filter Toolbar */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
-        <div className="relative w-full md:w-80">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-          <input
-            type="text"
-            placeholder="Search package (e.g. Kedarnath, Auli)..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white border border-[#DCD6CC] rounded-2xl pl-10 pr-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange shadow-sm"
-          />
+      <div className="space-y-4 mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="relative w-full md:w-80">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            <input
+              type="text"
+              placeholder="Search by dham, trek, or keyword..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-white border border-[#DCD6CC] rounded-2xl pl-10 pr-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange shadow-sm"
+            />
+          </div>
+
+          {/* Hub Filter */}
+          <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto">
+            <span className="text-xs font-bold text-slate-600 mr-1 hidden sm:inline">Hub:</span>
+            {hubs.map((hub) => (
+              <button
+                key={hub}
+                onClick={() => setSelectedHub(hub)}
+                className={`px-3 py-1 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+                  selectedHub === hub
+                    ? 'bg-emerald-700 text-white shadow-sm'
+                    : 'bg-white text-slate-700 hover:bg-slate-50 border border-[#DCD6CC]'
+                }`}
+              >
+                {hub}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+        {/* Category Filters */}
+        <div className="flex flex-wrap items-center gap-2">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -82,6 +113,9 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
               {cat}
             </button>
           ))}
+          <span className="text-xs text-slate-500 ml-auto font-medium py-1">
+            Showing {filteredPackages.length} of {allPackages.length} packages
+          </span>
         </div>
       </div>
 

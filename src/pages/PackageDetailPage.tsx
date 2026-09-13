@@ -13,7 +13,9 @@ import {
   ChevronDown, 
   ChevronUp, 
   ArrowRight,
-  ChevronLeft
+  ChevronLeft,
+  FileText,
+  Download
 } from 'lucide-react';
 import { adminStorage } from '../utils/adminStorage';
 import { getPackageWhatsAppUrl, SITE_CONFIG } from '../config/siteConfig';
@@ -96,6 +98,12 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white">
               {tourPackage.category}
             </span>
+            {tourPackage.pickupDrop && (
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600/90 backdrop-blur-md text-white border border-emerald-400/30 flex items-center gap-1">
+                <MapPin className="w-3.5 h-3.5" />
+                <span>{tourPackage.pickupDrop}</span>
+              </span>
+            )}
             <span className="px-3 py-1 rounded-full text-xs font-medium bg-brand-dark/80 backdrop-blur-md text-white border border-white/10 flex items-center gap-1">
               <Clock className="w-3.5 h-3.5 text-brand-orange" />
               <span>{tourPackage.duration}</span>
@@ -335,6 +343,17 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                   <Phone className="w-4 h-4 text-brand-orange" />
                   <span>Call Trip Coordinator</span>
                 </a>
+
+                {tourPackage.pdfBrochure && (
+                  <a
+                    href={tourPackage.pdfBrochure}
+                    download
+                    className="w-full flex items-center justify-center gap-2 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 py-3 rounded-xl font-bold text-xs transition-all shadow-xs"
+                  >
+                    <Download className="w-4 h-4 text-brand-orange" />
+                    <span>Download PDF Itinerary</span>
+                  </a>
+                )}
               </div>
 
               <div className="pt-4 border-t border-white/5 space-y-2 text-[11px] text-slate-400">

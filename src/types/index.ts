@@ -36,7 +36,7 @@ export interface TourPackage {
   duration: string;
   days: number;
   startingPrice: string;
-  originalPrice?: string;
+  originalPrice?: string | null;
   bestSeason: string;
   category: string;
   image: string;
@@ -55,6 +55,8 @@ export interface TourPackage {
   inclusions: string[];
   exclusions: string[];
   isFeatured?: boolean;
+  pdfBrochure?: string | null;
+  pickupDrop?: string;
 }
 
 export interface Trek {
@@ -72,7 +74,7 @@ export interface Trek {
   baseCamp: string;
   highlights: string[];
   overview: string;
-  itinerary: { day: number; title: string; desc: string }[];
+  itinerary: { day: number; title: string; desc: string; stay?: string; meals?: string }[];
   inclusions: string[];
   exclusions: string[];
 }

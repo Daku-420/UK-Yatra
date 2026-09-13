@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Star, MapPin, Check, ArrowRight } from 'lucide-react';
+import { Clock, Star, MapPin, Check, ArrowRight, FileText, Download } from 'lucide-react';
 import { TourPackage } from '../types';
 import { getPackageWhatsAppUrl } from '../config/siteConfig';
 
@@ -22,11 +22,16 @@ export const PackageCard: React.FC<PackageCardProps> = ({ tourPackage, onOpenBoo
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
 
-        {/* Rating Badge */}
+        {/* Hub Badge or Rating */}
         <div className="absolute top-4 left-4 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/15 text-xs font-semibold text-white">
-          <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-          <span>{tourPackage.rating}</span>
-          <span className="text-slate-300 text-[10px]">({tourPackage.reviewsCount})</span>
+          {tourPackage.pickupDrop ? (
+            <span className="text-emerald-300 font-bold">{tourPackage.pickupDrop}</span>
+          ) : (
+            <>
+              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+              <span>{tourPackage.rating}</span>
+            </>
+          )}
         </div>
 
         {/* Duration Badge */}
@@ -84,18 +89,29 @@ export const PackageCard: React.FC<PackageCardProps> = ({ tourPackage, onOpenBoo
             </span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="flex items-center gap-2">
             <Link
               to={`/packages/${tourPackage.id}`}
-              className="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-center text-xs font-semibold text-slate-200 border border-white/10 transition-colors flex items-center justify-center gap-1.5"
+              className="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-center text-xs font-semibold text-slate-200 border border-white/10 transition-colors flex items-center justify-center gap-1.5"
             >
               <span>View Details</span>
               <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
             </Link>
 
+            {tourPackage.pdfBrochure && (
+              <a
+                href={tourPackage.pdfBrochure}
+                download
+                className="p-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition-colors flex items-center justify-center shrink-0"
+                title="Download Official PDF Itinerary"
+              >
+                <Download className="w-4 h-4" />
+              </a>
+            )}
+
             <button
               onClick={() => onOpenBookingModal ? onOpenBookingModal(tourPackage.title) : window.open(getPackageWhatsAppUrl(tourPackage.title, tourPackage.duration), '_blank')}
-              className="w-full py-2.5 rounded-xl orange-gradient-btn text-center text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5"
+              className="flex-1 py-2.5 rounded-xl orange-gradient-btn text-center text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5"
             >
               <span>Get Quote</span>
             </button>

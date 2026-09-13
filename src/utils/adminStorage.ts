@@ -48,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages_v2',
+  PACKAGES: 'ukyatra_admin_packages_v3',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -292,6 +292,9 @@ export const adminStorage = {
     try {
       if (localStorage.getItem('ukyatra_admin_packages')) {
         localStorage.removeItem('ukyatra_admin_packages');
+      }
+      if (localStorage.getItem('ukyatra_admin_packages_v2')) {
+        localStorage.removeItem('ukyatra_admin_packages_v2');
       }
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
