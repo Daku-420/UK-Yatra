@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
-import { TOUR_PACKAGES } from '../data/packages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
 
@@ -119,12 +118,16 @@ export const BookingEnquiryPage: React.FC = () => {
                   onChange={(e) => setForm({ ...form, packageChoice: e.target.value })}
                   className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
                 >
-                  {TOUR_PACKAGES.map((pkg) => (
+                  <option value="Customized Multi-City Itinerary">Customized Multi-City Itinerary</option>
+                  <option value="Char Dham Pilgrimage Circuit">Complete Char Dham Pilgrimage Circuit</option>
+                  <option value="Do Dham (Kedarnath & Badrinath)">Do Dham (Kedarnath & Badrinath)</option>
+                  <option value="Helicopter Charter Yatra">Helicopter Charter Yatra</option>
+                  <option value="Himalayan Trekking & Camping">Himalayan Trekking & Camping</option>
+                  {adminStorage.getPackages().map((pkg) => (
                     <option key={pkg.id} value={pkg.title}>
                       {pkg.title} ({pkg.duration})
                     </option>
                   ))}
-                  <option value="Customized Itinerary">Customized Multi-City Itinerary</option>
                 </select>
               </div>
             </div>

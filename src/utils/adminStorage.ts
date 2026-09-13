@@ -48,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages_v3',
+  PACKAGES: 'ukyatra_admin_packages_custom',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -290,21 +290,18 @@ export const adminStorage = {
   // --- TOUR PACKAGES ---
   getPackages: (): TourPackage[] => {
     try {
-      if (localStorage.getItem('ukyatra_admin_packages')) {
-        localStorage.removeItem('ukyatra_admin_packages');
-      }
-      if (localStorage.getItem('ukyatra_admin_packages_v2')) {
-        localStorage.removeItem('ukyatra_admin_packages_v2');
-      }
+      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3'].forEach(k => {
+        if (localStorage.getItem(k)) localStorage.removeItem(k);
+      });
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
-        localStorage.setItem(STORAGE_KEYS.PACKAGES, JSON.stringify(TOUR_PACKAGES));
-        return TOUR_PACKAGES;
+        localStorage.setItem(STORAGE_KEYS.PACKAGES, JSON.stringify([]));
+        return [];
       }
       const parsed = JSON.parse(stored);
       return Array.isArray(parsed) ? parsed : [];
     } catch {
-      return TOUR_PACKAGES;
+      return [];
     }
   },
 

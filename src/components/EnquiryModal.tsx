@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { X, CheckCircle, Phone, Send, Calendar, Users, MapPin, Sparkles } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
-import { TOUR_PACKAGES } from '../data/packages';
 import { WhatsAppIcon } from './SocialIcons';
 
 import { adminStorage } from '../utils/adminStorage';

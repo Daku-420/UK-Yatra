@@ -1319,10 +1319,13 @@ export const AdminPortalPage: React.FC = () => {
                   if (p.id === editingPackage.id) {
                     return {
                       ...p,
-                      title: fd.get('title') as string,
-                      startingPrice: fd.get('startingPrice') as string,
-                      duration: fd.get('duration') as string,
-                      overview: fd.get('overview') as string
+                      title: (fd.get('title') as string).trim(),
+                      startingPrice: (fd.get('startingPrice') as string).trim(),
+                      duration: (fd.get('duration') as string).trim(),
+                      category: (fd.get('category') as string) || p.category,
+                      pickupDrop: (fd.get('pickupDrop') as string)?.trim() || undefined,
+                      pdfBrochure: (fd.get('pdfBrochure') as string)?.trim() || undefined,
+                      overview: (fd.get('overview') as string).trim()
                     };
                   }
                   return p;
@@ -1348,6 +1351,51 @@ export const AdminPortalPage: React.FC = () => {
                   <label className="block text-slate-300 font-medium mb-1">Duration (e.g. 5D / 4N)</label>
                   <input required name="duration" defaultValue={editingPackage.duration} className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange" />
                 </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-slate-300 font-medium mb-1">Category</label>
+                  <select
+                    name="category"
+                    defaultValue={editingPackage.category || 'Pilgrimage'}
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  >
+                    <option value="Pilgrimage">Pilgrimage</option>
+                    <option value="Helicopter Yatra">Helicopter Yatra</option>
+                    <option value="Road & Heli Combo">Road & Heli Combo</option>
+                    <option value="Classic Overland Road">Classic Overland Road</option>
+                    <option value="Fixed Departure Group">Fixed Departure Group</option>
+                    <option value="Leisure & Hill Station">Leisure & Hill Station</option>
+                    <option value="Trek & Adventure">Trek & Adventure</option>
+                    <option value="Spiritual Circuit">Spiritual Circuit</option>
+                    <option value="Offbeat Uttarakhand">Offbeat Uttarakhand</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-medium mb-1">Departure Hub (Pickup / Drop)</label>
+                  <select
+                    name="pickupDrop"
+                    defaultValue={editingPackage.pickupDrop || 'Ex-Dehradun'}
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  >
+                    <option value="Ex-Dehradun">Ex-Dehradun</option>
+                    <option value="Ex-Haridwar">Ex-Haridwar</option>
+                    <option value="Ex-Delhi">Ex-Delhi</option>
+                    <option value="Ex-Rishikesh">Ex-Rishikesh</option>
+                    <option value="Custom / Flexible">Custom / Flexible</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-slate-300 font-medium mb-1">PDF Brochure URL / File Path (Optional)</label>
+                <input
+                  name="pdfBrochure"
+                  defaultValue={editingPackage.pdfBrochure || ''}
+                  placeholder="e.g. /assets/itinerary/my-tour.pdf"
+                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange text-[11px]"
+                />
               </div>
 
               <div>
@@ -1394,6 +1442,8 @@ export const AdminPortalPage: React.FC = () => {
                 const title = (fd.get('title') as string).trim();
                 const destination = (fd.get('destination') as string).trim();
                 const category = (fd.get('category') as string) || 'Pilgrimage';
+                const pickupDrop = (fd.get('pickupDrop') as string)?.trim() || undefined;
+                const pdfBrochure = (fd.get('pdfBrochure') as string)?.trim() || undefined;
                 const duration = (fd.get('duration') as string).trim() || `${newItineraryDays.length} Days`;
                 const daysCount = Number(fd.get('days')) || newItineraryDays.length || 1;
                 const startingPrice = (fd.get('startingPrice') as string).trim() || 'Pricing on Request';
@@ -1427,6 +1477,8 @@ export const AdminPortalPage: React.FC = () => {
                   title,
                   destination,
                   category,
+                  pickupDrop,
+                  pdfBrochure,
                   duration,
                   days: daysCount,
                   startingPrice,
@@ -1478,7 +1530,7 @@ export const AdminPortalPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Row 2: Category, Duration, Days, Best Season */}
+              {/* Row 2: Category, Departure Hub, Duration, Best Season */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div>
                   <label className="block text-slate-300 font-semibold mb-1">Category</label>
@@ -1488,10 +1540,28 @@ export const AdminPortalPage: React.FC = () => {
                     className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
                   >
                     <option value="Pilgrimage">Pilgrimage</option>
+                    <option value="Helicopter Yatra">Helicopter Yatra</option>
+                    <option value="Road & Heli Combo">Road & Heli Combo</option>
+                    <option value="Classic Overland Road">Classic Overland Road</option>
+                    <option value="Fixed Departure Group">Fixed Departure Group</option>
+                    <option value="Leisure & Hill Station">Leisure & Hill Station</option>
                     <option value="Trek & Adventure">Trek & Adventure</option>
                     <option value="Spiritual Circuit">Spiritual Circuit</option>
-                    <option value="Family & Leisure">Family & Leisure</option>
                     <option value="Offbeat Uttarakhand">Offbeat Uttarakhand</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">Departure Hub</label>
+                  <select
+                    name="pickupDrop"
+                    defaultValue="Ex-Dehradun"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
+                  >
+                    <option value="Ex-Dehradun">Ex-Dehradun</option>
+                    <option value="Ex-Haridwar">Ex-Haridwar</option>
+                    <option value="Ex-Delhi">Ex-Delhi</option>
+                    <option value="Ex-Rishikesh">Ex-Rishikesh</option>
+                    <option value="Custom / Flexible">Custom / Flexible</option>
                   </select>
                 </div>
                 <div>
@@ -1506,17 +1576,6 @@ export const AdminPortalPage: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Days Count</label>
-                  <input
-                    name="days"
-                    type="number"
-                    min="1"
-                    max="30"
-                    defaultValue={newItineraryDays.length}
-                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-brand-orange"
-                  />
-                </div>
-                <div>
                   <label className="block text-slate-300 font-semibold mb-1">Best Season</label>
                   <input
                     name="bestSeason"
@@ -1527,8 +1586,8 @@ export const AdminPortalPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Row 3: Pricing & Cover Image */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {/* Row 3: Pricing, Original Price, Cover Image, PDF Brochure */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
                 <div>
                   <label className="block text-slate-300 font-semibold mb-1">Starting Price *</label>
                   <input
@@ -1554,6 +1613,15 @@ export const AdminPortalPage: React.FC = () => {
                     name="image"
                     type="url"
                     defaultValue="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80"
+                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange text-[11px]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 font-semibold mb-1">PDF Brochure (Optional)</label>
+                  <input
+                    name="pdfBrochure"
+                    type="text"
+                    placeholder="e.g. /assets/itinerary/my-brochure.pdf"
                     className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange text-[11px]"
                   />
                 </div>

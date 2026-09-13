@@ -71,11 +71,33 @@ export const TrekkingPage: React.FC = () => {
       </div>
 
       {/* Treks Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredTreks.map((trek) => (
-          <TrekCard key={trek.id} trek={trek} />
-        ))}
-      </div>
+      {filteredTreks.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredTreks.map((trek) => (
+            <TrekCard key={trek.id} trek={trek} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-16 px-6 bg-white rounded-3xl border border-[#DCD6CC] shadow-sm max-w-2xl mx-auto space-y-4">
+          <div className="w-16 h-16 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center mx-auto border border-brand-orange/20">
+            <Mountain className="w-8 h-8" />
+          </div>
+          <h3 className="text-2xl font-bold font-display text-slate-900">Custom Himalayan Trekking Expeditions</h3>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
+            Our high-altitude trekking schedules and alpine departure dates are tailored based on mountain weather and trail conditions. Chat with our certified mountaineering leads for personalized itineraries and gear support!
+          </p>
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="https://wa.me/919997126038?text=Hi%20UKYatra%2C%20I%20would%20like%20to%20inquire%20about%20custom%20Himalayan%20trekking%20expeditions."
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs shadow-lg hover:brightness-105"
+            >
+              <span>Consult Trek Leader on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* Trekking Safety Promise */}
       <div className="mt-16 bg-white rounded-3xl p-8 border border-[#E2DDD5] shadow-md grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

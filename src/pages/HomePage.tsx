@@ -774,11 +774,42 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {TREKS.slice(0, 3).map((trek) => (
-            <TrekCard key={trek.id} trek={trek} />
-          ))}
-        </div>
+        {TREKS.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {TREKS.slice(0, 3).map((trek) => (
+              <TrekCard key={trek.id} trek={trek} />
+            ))}
+          </div>
+        ) : (
+          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E2DDD5] text-center space-y-4 max-w-2xl mx-auto shadow-sm">
+            <div className="w-16 h-16 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center mx-auto border border-brand-orange/20">
+              <Mountain className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-bold font-display text-slate-900">
+              Custom Himalayan Trekking Expeditions
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto leading-relaxed">
+              Looking for a custom trek to Kedarkantha, Tungnath-Chandrashila, Valley of Flowers, or Har Ki Dun? Our certified mountaineering trek leaders craft personalized alpine itineraries with safety gear and camping.
+            </p>
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={getWhatsAppUrl("Hi UKYatra, I want to inquire about custom trekking itineraries and group batches.")}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs shadow-lg hover:brightness-105"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
+                <span>Enquire Trek on WhatsApp</span>
+              </a>
+              <button
+                onClick={() => onOpenBookingModal("Custom Trekking Expedition")}
+                className="w-full sm:w-auto orange-gradient-btn px-6 py-3 rounded-xl font-display font-semibold text-xs text-white shadow-md"
+              >
+                <span>Plan Custom Trek</span>
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* ============================================================ */}

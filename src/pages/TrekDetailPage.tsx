@@ -23,7 +23,44 @@ interface TrekDetailPageProps {
 
 export const TrekDetailPage: React.FC<TrekDetailPageProps> = ({ onOpenBookingModal }) => {
   const { id } = useParams<{ id: string }>();
-  const trek = TREKS.find((t) => t.id === id) || TREKS[0];
+  const trek = TREKS.find((t) => t.id === id);
+
+  if (!trek) {
+    return (
+      <div className="pt-32 pb-24 max-w-3xl mx-auto px-4 text-center">
+        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-10 shadow-2xl space-y-6">
+          <div className="w-16 h-16 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mx-auto text-brand-orange">
+            <Mountain className="w-8 h-8" />
+          </div>
+          <div>
+            <h1 className="text-2xl sm:text-3xl font-bold font-display text-white mb-2">
+              Custom Alpine Trek on Demand
+            </h1>
+            <p className="text-sm text-slate-300 leading-relaxed max-w-lg mx-auto">
+              Looking for a tailored high-altitude trek or customized Himalayan trail? Connect directly with our certified expedition leaders for route planning and mountain safety support.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <a
+              href={getTrekWhatsAppUrl('Custom Himalayan Trek')}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition-all"
+            >
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
+              <span>Inquire on WhatsApp</span>
+            </a>
+            <Link
+              to="/trekking"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-all inline-block"
+            >
+              Back to Trekking
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-24 pb-20">

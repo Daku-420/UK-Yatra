@@ -15,6 +15,7 @@ import { TOUR_PACKAGES } from '../data/packages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
 import { WhatsAppIcon } from '../components/SocialIcons';
+import { adminStorage } from '../utils/adminStorage';
 
 interface OffersPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -23,40 +24,40 @@ interface OffersPageProps {
 export const OffersPage: React.FC<OffersPageProps> = ({ onOpenBookingModal }) => {
   const deals = [
     {
-      badge: '30% OFF Early Bird',
-      title: 'Char Dham Yatra 2026 Advance Booking Offer',
-      desc: 'Lock in 2025 rates with verified premium hotel slots, confirmed VIP darshan slots, and zero surge pricing.',
-      code: 'CHARDHAM30',
-      validity: 'Valid until 30th April',
+      code: 'HELIYATRA2026',
+      badge: 'Charter Deal',
+      title: 'Flat ₹15,000 Off on Char Dham Helicopter Charters',
+      desc: 'Applicable on full-charter and group helicopter bookings confirmed 45+ days prior to departure date from Dehradun Sahastradhara.',
+      validity: 'Valid for bookings made this month',
+      targetPackage: 'Luxury Char Dham by Heli'
+    },
+    {
+      code: 'EARLYBIRD10',
+      badge: 'Early Bird',
+      title: '10% Instant Savings on Overland Char Dham Packages',
+      desc: 'Book your Innova Crysta / Tempo Traveller overland pilgrimage circuit and receive complimentary luxury hotel upgrades.',
+      validity: 'For travel departures across May–Oct',
       targetPackage: 'Complete Char Dham Yatra'
     },
     {
-      badge: 'Flat ₹3,000 OFF',
-      title: 'Group Booking Special (4+ Travellers)',
-      desc: 'Traveling with family or college friends? Get flat ₹3,000 instant discount on any private tempo/Innova package.',
-      code: 'GROUPYATRA',
-      validity: 'Active round the year',
-      targetPackage: 'Customized Group Tour'
+      code: 'TREKCORP15',
+      badge: 'Adventure Special',
+      title: '15% Off on College & Corporate Group Treks (8+ Trekkers)',
+      desc: 'Valid on Kedarkantha, Tungnath-Chandrashila, and Valley of Flowers summit expeditions including complete alpine camping gear.',
+      validity: 'Available across all batches',
+      targetPackage: 'Tungnath & Chandrashila Peak Trek'
     },
     {
-      badge: 'Free River Rafting Pass',
-      title: 'Rishikesh Weekend Camping & Adventure Deal',
-      desc: 'Book a 2N/3D Luxury Riverside camp and get 16 km Shivpuri River Rafting pass completely complimentary.',
-      code: 'RAFTFREE',
-      validity: 'Valid Sep to June',
-      targetPackage: 'Rishikesh Adrenaline Weekend'
-    },
-    {
-      badge: 'Free Helicopter Priority',
-      title: 'Senior Citizen Special Assistance Package',
-      desc: 'Special dedicated porter support, low-altitude acclimatization night, and priority darshan coordination.',
-      code: 'SENIORCARE',
-      validity: 'Active all season',
+      code: 'DEVOTION5',
+      badge: 'Senior Citizens',
+      title: 'Flat 5% Special Concession for Senior Citizens (60+ yrs)',
+      desc: 'Dedicated yatra assistants, comfortable pacing, and ground support included at no extra cost.',
+      validity: 'Always active',
       targetPackage: 'Kedarnath Divine Yatra'
     }
   ];
 
-  const featuredDealPackages = TOUR_PACKAGES.slice(0, 6);
+  const featuredDealPackages = adminStorage.getPackages().slice(0, 6);
 
   return (
     <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
@@ -124,15 +125,23 @@ export const OffersPage: React.FC<OffersPageProps> = ({ onOpenBookingModal }) =>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredDealPackages.map(pkg => (
-              <PackageCard 
-                key={pkg.id} 
-                tourPackage={pkg} 
-                onOpenBookingModal={() => onOpenBookingModal(pkg.title)} 
-              />
-            ))}
-          </div>
+          {featuredDealPackages.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredDealPackages.map(pkg => (
+                <PackageCard 
+                  key={pkg.id} 
+                  tourPackage={pkg} 
+                  onOpenBookingModal={() => onOpenBookingModal(pkg.title)} 
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 px-6 bg-white rounded-3xl border border-[#DCD6CC] shadow-sm max-w-xl mx-auto space-y-3">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Seasonal package deals are currently being updated by our coordinators. Mention any coupon code above on WhatsApp to claim your instant discount on any custom itinerary!
+              </p>
+            </div>
+          )}
         </div>
 
         {/* WhatsApp Claim Strip */}

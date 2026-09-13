@@ -13,7 +13,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl, getPackageWhatsAppUrl } from '../config/siteConfig';
-import { TOUR_PACKAGES } from '../data/packages';
+import { adminStorage } from '../utils/adminStorage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -25,9 +25,10 @@ interface HelicopterPackagesPageProps {
 export const HelicopterPackagesPage: React.FC<HelicopterPackagesPageProps> = ({ onOpenBookingModal }) => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
-  // Filter helicopter packages
-  const heliPackages = TOUR_PACKAGES.filter(p => 
-    p.id.includes('helicopter') || p.title.toLowerCase().includes('helicopter')
+  // Filter helicopter packages from dynamic storage
+  const allPackages = adminStorage.getPackages();
+  const heliPackages = allPackages.filter(p => 
+    p.category === 'Helicopter Yatra' || p.id.includes('helicopter') || p.title.toLowerCase().includes('helicopter')
   );
 
   const heliFaqs = [
@@ -138,15 +139,44 @@ export const HelicopterPackagesPage: React.FC<HelicopterPackagesPageProps> = ({ 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {heliPackages.map(pkg => (
-              <PackageCard 
-                key={pkg.id} 
-                tourPackage={pkg} 
-                onOpenBookingModal={() => onOpenBookingModal(pkg.title)} 
-              />
-            ))}
-          </div>
+          {heliPackages.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {heliPackages.map(pkg => (
+                <PackageCard 
+                  key={pkg.id} 
+                  tourPackage={pkg} 
+                  onOpenBookingModal={() => onOpenBookingModal(pkg.title)} 
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 px-6 bg-white rounded-3xl border border-[#DCD6CC] shadow-sm max-w-2xl mx-auto space-y-4">
+              <div className="w-16 h-16 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center mx-auto border border-brand-orange/20">
+                <Sparkles className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold font-display text-slate-900">Custom Helicopter Charter Quotation</h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
+                Private charter slots from Dehradun Sahastradhara Helipad for Char Dham & Do Dham are customized based on group size, aircraft availability, and passenger payload limits. Connect directly with our aviation desk for transparent quotes!
+              </p>
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href={getWhatsAppUrl("Hi UKYatra, I would like to enquire about helicopter charter availability and rates.")}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs shadow-lg hover:brightness-105"
+                >
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
+                  <span>Enquire Aviation Desk on WhatsApp</span>
+                </a>
+                <button
+                  onClick={() => onOpenBookingModal("Helicopter Charter Yatra")}
+                  className="w-full sm:w-auto orange-gradient-btn px-6 py-3 rounded-xl font-display font-semibold text-xs text-white shadow-md"
+                >
+                  <span>Request Custom Slot</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Heli FAQs */}

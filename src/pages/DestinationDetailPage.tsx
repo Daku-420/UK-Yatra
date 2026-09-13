@@ -14,7 +14,7 @@ import {
   ChevronLeft
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
-import { TOUR_PACKAGES } from '../data/packages';
+import { adminStorage } from '../utils/adminStorage';
 import { TREKS } from '../data/treks';
 import { getDestinationWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -31,8 +31,8 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
   const destination = DESTINATIONS.find((d) => d.id === id) || DESTINATIONS[0];
 
-  // Find matching packages
-  const relatedPackages = TOUR_PACKAGES.filter(
+  // Find matching packages from dynamic admin storage
+  const relatedPackages = adminStorage.getPackages().filter(
     (p) => p.destination.toLowerCase().includes(destination.name.toLowerCase()) || 
            destination.name.toLowerCase().includes(p.destination.toLowerCase())
   );
