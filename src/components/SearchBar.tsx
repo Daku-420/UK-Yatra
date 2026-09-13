@@ -123,8 +123,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onClose, autoFocus = false
           onChange={e => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.length >= 2 && setIsOpen(true)}
-          placeholder="Search anywhere (itinerary, temple, gear, advice)..."
-          className="flex-1 bg-transparent outline-none placeholder-slate-400 text-white text-xs sm:text-sm w-44 lg:w-64"
+          placeholder="Search destinations, treks..."
+          className="flex-1 bg-transparent outline-none placeholder-slate-400 text-white text-xs sm:text-sm w-28 sm:w-36 lg:w-40 xl:w-56 focus:w-48 xl:focus:w-64 transition-all duration-300"
           aria-label="Search site"
         />
         {query && (
