@@ -145,8 +145,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/car-rental" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-1.5">
-                  <ChevronRight className="w-3 h-3 text-brand-orange shrink-0" /> Taxi & Car Rental
+                <Link to="/book-vehicle" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-1.5">
+                  <ChevronRight className="w-3 h-3 text-brand-orange shrink-0" /> Book Your Vehicle / Taxi
                 </Link>
               </li>
               <li>

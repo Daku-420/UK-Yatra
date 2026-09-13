@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, CheckCircle, Phone, Send, Calendar, Users, MapPin, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, CheckCircle, Phone, Send, Calendar, Users, MapPin, Sparkles, Car } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
 import { WhatsAppIcon } from './SocialIcons';
@@ -33,7 +33,29 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
 
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      setFormData(prev => ({
+        ...prev,
+        destination: prefillDestination || prev.destination || 'Kedarnath',
+        packageName: prefillPackage || prev.packageName || ''
+      }));
+      setSubmitted(false);
+    }
+  }, [isOpen, prefillDestination, prefillPackage]);
+
   if (!isOpen) return null;
+
+  const isVehicleBooking = 
+    Boolean(formData.packageName && (
+      formData.packageName.toLowerCase().includes('taxi') ||
+      formData.packageName.toLowerCase().includes('vehicle') ||
+      formData.packageName.toLowerCase().includes('car') ||
+      formData.packageName.toLowerCase().includes('crysta') ||
+      formData.packageName.toLowerCase().includes('tempo') ||
+      formData.packageName.toLowerCase().includes('ertiga') ||
+      formData.packageName.toLowerCase().includes('urbania')
+    ));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,13 +69,15 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
       travellers: formData.travellers,
       budget: formData.budget,
       specialRequests: formData.message,
-      source: 'Enquiry Modal'
+      source: isVehicleBooking ? 'Vehicle Booking Modal' : 'Enquiry Modal'
     });
     setSubmitted(true);
   };
 
   const handleWhatsAppDirect = () => {
-    const text = `Hi UKYatra, I submitted a booking enquiry!\nName: ${formData.name}\nPhone: ${formData.phone}\nDestination: ${formData.destination}\nPackage: ${formData.packageName || 'Customized'}\nDate: ${formData.travelDate || 'Flexible'}\nTravellers: ${formData.travellers}\nBudget: ${formData.budget}`;
+    const text = isVehicleBooking
+      ? `Hi UKYatra, I want to book a vehicle / hill cab!\nName: ${formData.name}\nPhone: ${formData.phone}\nVehicle: ${formData.packageName || 'Innova Crysta / Taxi'}\nRoute/Destination: ${formData.destination}\nTravel Date: ${formData.travelDate || 'Flexible'}\nPassengers: ${formData.travellers}\nNotes: ${formData.message || 'None'}`
+      : `Hi UKYatra, I submitted a booking enquiry!\nName: ${formData.name}\nPhone: ${formData.phone}\nDestination: ${formData.destination}\nPackage: ${formData.packageName || 'Customized'}\nDate: ${formData.travelDate || 'Flexible'}\nTravellers: ${formData.travellers}\nBudget: ${formData.budget}`;
     window.open(getWhatsAppUrl(text), '_blank');
   };
 
@@ -72,14 +96,16 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         {!submitted ? (
           <div>
             <div className="flex items-center gap-2 text-brand-orange text-xs font-bold uppercase tracking-wider mb-1">
-              <Sparkles className="w-4 h-4" />
-              <span>Plan Your Himalayan Journey</span>
+              {isVehicleBooking ? <Car className="w-4 h-4" /> : <Sparkles className="w-4 h-4" />}
+              <span>{isVehicleBooking ? 'Book Your Vehicle & Hill Taxi' : 'Plan Your Himalayan Journey'}</span>
             </div>
             <h3 className="text-2xl font-bold font-display text-white mb-2">
-              Book Your Trip / Request Quote
+              {isVehicleBooking ? 'Reserve Your Mountain Vehicle' : 'Book Your Trip / Request Quote'}
             </h3>
             <p className="text-xs text-slate-300 mb-6">
-              Share your trip preferences and our local Uttarakhand specialists will customize an itinerary with best available rates.
+              {isVehicleBooking 
+                ? 'Travel safely with verified Himalayan drivers, clean sanitized cabs, and transparent rates.' 
+                : 'Share your trip preferences and our local Uttarakhand specialists will customize an itinerary with best available rates.'}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
@@ -120,7 +146,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-300 font-medium mb-1.5">Preferred Destination</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">
+                    {isVehicleBooking ? 'Destination / Hill Route' : 'Preferred Destination'}
+                  </label>
                   <select
                     value={formData.destination}
                     onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
@@ -131,15 +159,37 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                         {dest.name} ({dest.category})
                       </option>
                     ))}
+                    <option value="Kedarnath (Sonprayag Base)" className="bg-slate-900 text-white">Kedarnath (Sonprayag Base)</option>
+                    <option value="Badrinath & Mana Village" className="bg-slate-900 text-white">Badrinath & Mana Village</option>
                     <option value="Char Dham Circuit" className="bg-slate-900 text-white">Complete Char Dham Circuit</option>
+                    <option value="Dehradun Airport to Mussoorie / Rishikesh" className="bg-slate-900 text-white">Dehradun Airport Transfer</option>
                     <option value="Custom Multi-City" className="bg-slate-900 text-white">Custom Multi-City</option>
                   </select>
                 </div>
               </div>
 
+              {isVehicleBooking && (
+                <div>
+                  <label className="block text-slate-300 font-medium mb-1.5">Vehicle Fleet Choice</label>
+                  <select
+                    value={formData.packageName}
+                    onChange={(e) => setFormData({ ...formData, packageName: e.target.value })}
+                    className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange font-semibold text-brand-orange"
+                  >
+                    <option value="Taxi Rental - Toyota Innova Crysta (Luxury 6+1 / 7+1)">Toyota Innova Crysta (Luxury 6+1 / 7+1) - ₹4,500/day</option>
+                    <option value="Taxi Rental - Force Tempo Traveller (12 / 16 / 26 Seater)">Force Tempo Traveller (12 / 16 / 26 Seater) - ₹7,500/day</option>
+                    <option value="Taxi Rental - Maruti Suzuki Ertiga (Economy MUV)">Maruti Suzuki Ertiga (Economy 4-5 Pax) - ₹3,200/day</option>
+                    <option value="Taxi Rental - Force Urbania Ultra-Luxury Van">Force Urbania Ultra-Luxury Van (10-13 Pax) - ₹9,500/day</option>
+                    <option value="Taxi Rental - Sedan Cab (Dzire / Etios)">Swift Dzire / Etios Sedan - Airport & Plains</option>
+                  </select>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-slate-300 font-medium mb-1.5">Approx Date</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">
+                    {isVehicleBooking ? 'Pickup Date' : 'Approx Date'}
+                  </label>
                   <input
                     type="date"
                     value={formData.travelDate}
@@ -148,39 +198,60 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-300 font-medium mb-1.5">Travellers</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">
+                    {isVehicleBooking ? 'Passengers' : 'Travellers'}
+                  </label>
                   <select
                     value={formData.travellers}
                     onChange={(e) => setFormData({ ...formData, travellers: e.target.value })}
                     className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   >
-                    <option value="1 (Solo)" className="bg-slate-900 text-white">1 (Solo)</option>
-                    <option value="2 (Couple)" className="bg-slate-900 text-white">2 (Couple)</option>
-                    <option value="3-5 (Small Family/Friends)" className="bg-slate-900 text-white">3-5 (Family/Friends)</option>
-                    <option value="6-12 (Group Tour)" className="bg-slate-900 text-white">6-12 (Group Tour)</option>
-                    <option value="12+ (Large Group/Corporate)" className="bg-slate-900 text-white">12+ (Large Group)</option>
+                    <option value="1 (Solo)" className="bg-slate-900 text-white">1-2 Passengers</option>
+                    <option value="3-5 (Small Family/Friends)" className="bg-slate-900 text-white">3-5 Passengers</option>
+                    <option value="6-7 (Innova/SUV)" className="bg-slate-900 text-white">6-7 Passengers</option>
+                    <option value="8-12 (Tempo Traveller)" className="bg-slate-900 text-white">8-12 Passengers</option>
+                    <option value="13-26 (Large Group Coach)" className="bg-slate-900 text-white">13-26 Passengers</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-slate-300 font-medium mb-1.5">Budget Preference</label>
+                  <label className="block text-slate-300 font-medium mb-1.5">
+                    {isVehicleBooking ? 'Trip Type' : 'Budget Preference'}
+                  </label>
                   <select
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                     className="w-full bg-slate-800/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-white focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
                   >
-                    <option value="Budget / Backpacker" className="bg-slate-900 text-white">Budget / Essential</option>
-                    <option value="Standard / 3-Star" className="bg-slate-900 text-white">Standard / 3-Star</option>
-                    <option value="Deluxe / 4-Star" className="bg-slate-900 text-white">Deluxe / 4-Star</option>
-                    <option value="Luxury / 5-Star Resort" className="bg-slate-900 text-white">Luxury & Villas</option>
+                    {isVehicleBooking ? (
+                      <>
+                        <option value="Outstation Hill Tour" className="bg-slate-900 text-white">Multi-Day Hill Tour</option>
+                        <option value="Airport / Station One-Way" className="bg-slate-900 text-white">One-Way Drop / Transfer</option>
+                        <option value="Char Dham Full Yatra Circuit" className="bg-slate-900 text-white">Char Dham Full Circuit (10D)</option>
+                        <option value="Round Trip Local Sightseeing" className="bg-slate-900 text-white">Round Trip Sightseeing</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="Budget / Backpacker" className="bg-slate-900 text-white">Budget / Essential</option>
+                        <option value="Standard / 3-Star" className="bg-slate-900 text-white">Standard / 3-Star</option>
+                        <option value="Deluxe / 4-Star" className="bg-slate-900 text-white">Deluxe / 4-Star</option>
+                        <option value="Luxury / 5-Star Resort" className="bg-slate-900 text-white">Luxury & Villas</option>
+                      </>
+                    )}
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="block text-slate-300 font-medium mb-1.5">Special Requirements / Message</label>
+                <label className="block text-slate-300 font-medium mb-1.5">
+                  {isVehicleBooking ? 'Pickup Address & Special Requests' : 'Special Requirements / Message'}
+                </label>
                 <textarea
                   rows={3}
-                  placeholder="e.g. Need helicopter tickets for Kedarnath, wheelchair for elderly parent, river-facing resort in Rishikesh..."
+                  placeholder={
+                    isVehicleBooking
+                      ? "e.g. Flight arrives at Dehradun Airport at 11:30 AM, need roof carrier for 5 bags, child seat needed..."
+                      : "e.g. Need helicopter tickets for Kedarnath, wheelchair for elderly parent, river-facing resort in Rishikesh..."
+                  }
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-slate-800/90 border border-white/15 rounded-xl p-3 text-white placeholder:text-slate-400 focus:bg-slate-800 focus:outline-none focus:border-brand-orange"
@@ -192,8 +263,8 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   type="submit"
                   className="w-full orange-gradient-btn py-3.5 rounded-xl font-display font-semibold text-white shadow-lg flex items-center justify-center gap-2"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>Request Free Itinerary & Quote</span>
+                  {isVehicleBooking ? <Car className="w-4 h-4" /> : <Send className="w-4 h-4" />}
+                  <span>{isVehicleBooking ? 'Reserve Vehicle / Get Instant Quote' : 'Request Free Itinerary & Quote'}</span>
                 </button>
               </div>
 

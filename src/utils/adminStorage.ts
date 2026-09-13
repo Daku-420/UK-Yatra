@@ -19,7 +19,7 @@ export interface AdminBooking {
   status: BookingStatus;
   staffNotes?: string;
   createdAt: string;
-  source: 'Enquiry Modal' | 'Booking Page' | 'Custom Planner' | 'Contact Form' | 'Direct Admin Entry';
+  source: 'Enquiry Modal' | 'Booking Page' | 'Custom Planner' | 'Contact Form' | 'Direct Admin Entry' | 'Vehicle Booking Modal' | 'Car Rental Page Form';
   totalAmountEstimated?: number;
 }
 

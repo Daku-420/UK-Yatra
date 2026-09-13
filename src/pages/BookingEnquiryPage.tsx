@@ -123,6 +123,14 @@ export const BookingEnquiryPage: React.FC = () => {
                   <option value="Do Dham (Kedarnath & Badrinath)">Do Dham (Kedarnath & Badrinath)</option>
                   <option value="Helicopter Charter Yatra">Helicopter Charter Yatra</option>
                   <option value="Himalayan Trekking & Camping">Himalayan Trekking & Camping</option>
+                  <optgroup label="🚗 Vehicle & Taxi Rental Fleets">
+                    <option value="Vehicle: Toyota Innova Crysta (6+1 Luxury)">Vehicle: Toyota Innova Crysta (6+1 Luxury SUV)</option>
+                    <option value="Vehicle: Force Tempo Traveller (12/16/26 Seater)">Vehicle: Force Tempo Traveller (12/16/26 Seater)</option>
+                    <option value="Vehicle: Maruti Ertiga (4+1 Economy MUV)">Vehicle: Maruti Ertiga (4+1 Economy MUV)</option>
+                    <option value="Vehicle: Force Urbania (VIP Luxury Coach)">Vehicle: Force Urbania (VIP Luxury Coach)</option>
+                    <option value="Vehicle: Airport / Railway Station Transfer">Vehicle: Airport / Railway Station Transfer</option>
+                    <option value="Vehicle: Char Dham Circuit Cab (10 Days)">Vehicle: Char Dham Circuit Cab (10 Days)</option>
+                  </optgroup>
                   {adminStorage.getPackages().map((pkg) => (
                     <option key={pkg.id} value={pkg.title}>
                       {pkg.title} ({pkg.duration})

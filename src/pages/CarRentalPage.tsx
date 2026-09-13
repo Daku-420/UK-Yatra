@@ -14,6 +14,7 @@ import {
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
+import { adminStorage } from '../utils/adminStorage';
 
 interface CarRentalPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -78,25 +79,243 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
     { from: 'Delhi NCR', to: 'Rishikesh / Dehradun', time: '5 hrs (Expressway)', price: '₹4,800' }
   ];
 
+  const [bookingForm, setBookingForm] = useState({
+    name: '',
+    phone: '',
+    pickup: 'Dehradun Airport (Jolly Grant)',
+    drop: 'Rishikesh / Haridwar',
+    vehicle: 'Toyota Innova Crysta (Luxury 6+1 / 7+1)',
+    date: '',
+    passengers: '2-4 Passengers',
+    tripType: 'Multi-Day Hill Tour'
+  });
+  const [bookingSubmitted, setBookingSubmitted] = useState(false);
+
+  const handleBookingSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    adminStorage.addBooking({
+      name: bookingForm.name,
+      phone: bookingForm.phone,
+      email: '',
+      destination: `${bookingForm.pickup} to ${bookingForm.drop}`,
+      packageName: `Taxi Rental - ${bookingForm.vehicle}`,
+      travelDate: bookingForm.date,
+      travellers: bookingForm.passengers,
+      budget: bookingForm.tripType,
+      specialRequests: `Pickup: ${bookingForm.pickup}, Drop: ${bookingForm.drop}, Trip: ${bookingForm.tripType}`,
+      source: 'Car Rental Page Form'
+    });
+    setBookingSubmitted(true);
+  };
+
+  const handleWhatsAppInstant = () => {
+    const text = `Hi UKYatra, I would like to book a vehicle!\n*Name:* ${bookingForm.name || 'Traveler'}\n*Phone:* ${bookingForm.phone || 'Provided'}\n*Vehicle:* ${bookingForm.vehicle}\n*Pickup:* ${bookingForm.pickup}\n*Drop:* ${bookingForm.drop}\n*Date:* ${bookingForm.date || 'Flexible'}\n*Passengers:* ${bookingForm.passengers}\n*Trip Type:* ${bookingForm.tripType}`;
+    window.open(getWhatsAppUrl(text), '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: 'Car & Taxi Rentals' }]} />
+        <Breadcrumbs items={[{ label: 'Book Your Vehicle & Cab Rentals' }]} />
 
-        {/* Hero */}
-        <div className="relative rounded-3xl overflow-hidden mb-16 cream-banner p-8 sm:p-12 lg:p-16 shadow-sm">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4">
-              <Car className="w-3.5 h-3.5" />
-              <span>Sanitized Mountain Fleets</span>
+        {/* Hero & Quick Vehicle Booking Form Grid */}
+        <div className="relative rounded-3xl overflow-hidden mb-16 cream-banner p-6 sm:p-10 lg:p-12 shadow-sm border border-[#E2DDD5]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider">
+                <Car className="w-3.5 h-3.5" />
+                <span>Sanitized Himalayan Fleets & Hill Certified Drivers</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight">
+                Book Your Vehicle & <br />
+                <span className="text-brand-orange">Uttarakhand Hill Taxi</span>
+              </h1>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium max-w-xl">
+                Pre-book verified mountain SUVs, luxury tempo travellers, and sanitized cabs. 
+                Transparent per-day rates, seasoned hill drivers, 24/7 breakdown backup, and commercial permits for all Uttarakhand routes.
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                <div className="p-3 bg-white/80 rounded-2xl border border-slate-200 shadow-xs">
+                  <div className="text-brand-orange font-bold text-sm">₹3,200/day</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Starting Rates</div>
+                </div>
+                <div className="p-3 bg-white/80 rounded-2xl border border-slate-200 shadow-xs">
+                  <div className="text-emerald-600 font-bold text-sm">100% Hill Safe</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Verified Mountain Drivers</div>
+                </div>
+                <div className="p-3 bg-white/80 rounded-2xl border border-slate-200 shadow-xs col-span-2 sm:col-span-1">
+                  <div className="text-sky-600 font-bold text-sm">Zero Surcharge</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Transparent Pricing</div>
+                </div>
+              </div>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight">
-              Uttarakhand Car Rental & <br />
-              <span className="text-brand-orange">Hill Taxi Services</span>
-            </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-              Travel comfortably with verified, seasoned Himalayan hill drivers. Fixed transparent rates, zero hidden surcharges, and 24/7 on-road support.
-            </p>
+
+            {/* Right Quick Booking Card */}
+            <div className="lg:col-span-5 bg-white border border-brand-orange/30 rounded-3xl p-6 shadow-xl relative">
+              <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                  <div className="p-2 rounded-xl bg-orange-50 text-brand-orange">
+                    <Car className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold font-display text-slate-900 text-sm">Instant Vehicle Booking</h3>
+                    <p className="text-[11px] text-slate-500">Fixed Himalayan rates & live availability</p>
+                  </div>
+                </div>
+                <span className="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                  Live
+                </span>
+              </div>
+
+              {!bookingSubmitted ? (
+                <form onSubmit={handleBookingSubmit} className="space-y-3 text-xs">
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div>
+                      <label className="block text-slate-700 font-semibold mb-1">Pickup Location</label>
+                      <select
+                        value={bookingForm.pickup}
+                        onChange={(e) => setBookingForm({ ...bookingForm, pickup: e.target.value })}
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                      >
+                        <option value="Dehradun Airport (Jolly Grant)">Dehradun Airport</option>
+                        <option value="Haridwar Railway Station">Haridwar Station</option>
+                        <option value="Rishikesh">Rishikesh</option>
+                        <option value="Kathgodam / Haldwani">Kathgodam / Haldwani</option>
+                        <option value="Delhi NCR (Pickup)">Delhi NCR</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-slate-700 font-semibold mb-1">Destination</label>
+                      <select
+                        value={bookingForm.drop}
+                        onChange={(e) => setBookingForm({ ...bookingForm, drop: e.target.value })}
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                      >
+                        <option value="Kedarnath (Sonprayag)">Kedarnath Base</option>
+                        <option value="Badrinath & Joshimath">Badrinath & Joshimath</option>
+                        <option value="Complete Char Dham (10D)">Char Dham Circuit</option>
+                        <option value="Mussoorie Queen of Hills">Mussoorie</option>
+                        <option value="Nainital Lake Tour">Nainital</option>
+                        <option value="Auli & Chopta">Auli & Chopta</option>
+                        <option value="Jim Corbett National Park">Jim Corbett</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-700 font-semibold mb-1">Select Vehicle</label>
+                    <select
+                      value={bookingForm.vehicle}
+                      onChange={(e) => setBookingForm({ ...bookingForm, vehicle: e.target.value })}
+                      className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-900 font-medium focus:outline-none focus:border-brand-orange text-xs"
+                    >
+                      <option value="Toyota Innova Crysta (Luxury 6+1 / 7+1)">Toyota Innova Crysta (6+1 SUV) - ₹4,500/day</option>
+                      <option value="Force Tempo Traveller (12 / 16 / 26 Seater)">Force Tempo Traveller (12-26s) - ₹7,500/day</option>
+                      <option value="Maruti Suzuki Ertiga (Economy MUV)">Maruti Ertiga (4-5 Pax MUV) - ₹3,200/day</option>
+                      <option value="Force Urbania Ultra-Luxury Van">Force Urbania (10-13 Pax VIP) - ₹9,500/day</option>
+                    </select>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div>
+                      <label className="block text-slate-700 font-semibold mb-1">Travel Date</label>
+                      <input
+                        type="date"
+                        required
+                        value={bookingForm.date}
+                        onChange={(e) => setBookingForm({ ...bookingForm, date: e.target.value })}
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-slate-700 font-semibold mb-1">Passengers</label>
+                      <select
+                        value={bookingForm.passengers}
+                        onChange={(e) => setBookingForm({ ...bookingForm, passengers: e.target.value })}
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                      >
+                        <option value="1-2 Passengers">1-2 Passengers</option>
+                        <option value="3-5 Passengers">3-5 Passengers</option>
+                        <option value="6-7 Passengers">6-7 Passengers</option>
+                        <option value="8-12 Passengers">8-12 Passengers</option>
+                        <option value="12+ Passengers">12+ Passengers</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div>
+                      <label className="block text-slate-700 font-semibold mb-1">Your Name</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. Amit Kumar"
+                        value={bookingForm.name}
+                        onChange={(e) => setBookingForm({ ...bookingForm, name: e.target.value })}
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-orange text-xs"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-slate-700 font-semibold mb-1">Phone / WhatsApp</label>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="e.g. +91 9876543210"
+                        value={bookingForm.phone}
+                        onChange={(e) => setBookingForm({ ...bookingForm, phone: e.target.value })}
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-orange text-xs"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex flex-col gap-2">
+                    <button
+                      type="submit"
+                      className="w-full orange-gradient-btn py-2.5 rounded-xl font-display font-semibold text-xs text-white shadow-md flex items-center justify-center gap-1.5"
+                    >
+                      <Car className="w-3.5 h-3.5" />
+                      <span>Reserve This Vehicle</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleWhatsAppInstant}
+                      className="w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                      <span>Get Instant WhatsApp Quote</span>
+                    </button>
+                  </div>
+                </form>
+              ) : (
+                <div className="text-center py-6 space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-7 h-7" />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-base font-display">
+                    Booking Request Sent!
+                  </h4>
+                  <p className="text-xs text-slate-600">
+                    Thank you <strong>{bookingForm.name}</strong>! Our fleet manager is checking driver availability for your <strong>{bookingForm.vehicle}</strong> and will call you shortly.
+                  </p>
+                  <button
+                    onClick={handleWhatsAppInstant}
+                    className="w-full orange-gradient-btn py-2.5 rounded-xl font-semibold text-xs text-white shadow-md flex items-center justify-center gap-2"
+                  >
+                    <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                    <span>Speed Up on WhatsApp</span>
+                  </button>
+                  <button
+                    onClick={() => setBookingSubmitted(false)}
+                    className="text-[11px] text-slate-400 hover:text-brand-orange underline block mx-auto pt-1"
+                  >
+                    Book another vehicle
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

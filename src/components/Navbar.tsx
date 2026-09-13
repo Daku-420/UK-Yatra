@@ -10,7 +10,8 @@ import {
   GraduationCap,
   School,
   SunMedium,
-  Compass
+  Compass,
+  Car
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from './SocialIcons';
@@ -155,6 +156,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               }`}
             >
               Tour Packages
+            </Link>
+
+            <Link 
+              to="/book-vehicle" 
+              className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1.5 ${
+                isActive('/book-vehicle') || isActive('/car-rental')
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              <Car className="w-3.5 h-3.5 text-brand-orange" />
+              <span>Book Vehicle</span>
             </Link>
 
             {/* Activities Dropdown Column */}
@@ -378,6 +391,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               📦 Tour Packages
             </Link>
             <Link 
+              to="/book-vehicle" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+                isActive('/book-vehicle') || isActive('/car-rental')
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              🚗 Book Your Vehicle
+            </Link>
+            <Link 
               to="/admin" 
               onClick={() => setMobileMenuOpen(false)} 
               className="flex items-center justify-between px-4 py-3 rounded-xl text-base font-bold transition-all bg-gradient-to-r from-brand-orange/20 to-amber-500/20 text-brand-orange border border-brand-orange/40 my-1 shadow-md"
@@ -529,6 +553,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   }`}
                 >
                   ✨ Custom Trip
+                </Link>
+                <Link 
+                  to="/book-vehicle" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                    isActive('/book-vehicle') || isActive('/car-rental')
+                      ? 'text-brand-orange' 
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  🚗 Taxi & Cabs
                 </Link>
               </div>
             </div>

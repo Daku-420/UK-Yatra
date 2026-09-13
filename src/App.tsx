@@ -135,6 +135,8 @@ function AppInner() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/group-travel" element={<GroupTravelPage />} />
           <Route path="/car-rental" element={<CarRentalPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/book-vehicle" element={<CarRentalPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/vehicles" element={<CarRentalPage onOpenBookingModal={handleOpenBookingModal} />} />
           
           {/* Legal / Policy Pages */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
