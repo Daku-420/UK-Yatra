@@ -5,8 +5,6 @@ import { ACTIVITIES } from '../data/activities';
 import { SPIRITUAL_CIRCUITS } from '../data/spiritual';
 import { FAQS } from '../data/faqs';
 import { BLOG_POSTS } from '../data/blogs';
-import { CIRCUITS } from '../components/RouteCircuitMap';
-
 export type SearchCategory = 
   | 'package' 
   | 'destination' 
@@ -15,7 +13,7 @@ export type SearchCategory =
   | 'spiritual' 
   | 'faq' 
   | 'blog' 
-  | 'route-map';
+  | 'admin';
 
 export interface MatchOccurrence {
   sectionType: string; // e.g. "Itinerary (Day 3)", "Overview", "Inclusions", "FAQ Answer", "Top Attraction"
@@ -58,7 +56,7 @@ export const CATEGORY_STYLES: Record<SearchCategory, { label: string; badge: str
   spiritual:   { label: 'Sacred Dham',      badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', icon: '🕉️' },
   faq:         { label: 'FAQ & Advisory',   badge: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30', icon: '❓' },
   blog:        { label: 'Travel Guide',     badge: 'bg-teal-500/20 text-teal-300 border-teal-500/30',     icon: '📰' },
-  'route-map': { label: 'Circuit Map Stop', badge: 'bg-orange-500/20 text-orange-300 border-orange-500/30', icon: '🗺️' },
+  admin:       { label: 'Staff Admin',      badge: 'bg-orange-500/20 text-orange-300 border-orange-500/30', icon: '🔐' },
 };
 
 // Build exhaustive site searchable corpus
@@ -230,33 +228,12 @@ const buildComprehensiveSearchIndex = (): RawSearchDoc[] => {
     });
   });
 
-  // 8. HIMALAYAN ROUTE CIRCUITS & ELEVATION STOPS
-  CIRCUITS.forEach(circuit => {
-    circuit.stops.forEach(stop => {
-      const fields = [
-        { section: `Route Stop (${circuit.shortName})`, text: `${stop.name} (${stop.altitude})` },
-        { section: 'Scenic Highlight', text: stop.highlight },
-        { section: 'Night Stay Station', text: stop.stay },
-        { section: 'Mountain Guide Tip', text: stop.tip }
-      ];
-
-      docs.push({
-        id: stop.id,
-        title: `${stop.name} — ${circuit.shortName}`,
-        subtitle: `Altitude: ${stop.altitude} • Stay: ${stop.stay}`,
-        category: 'route-map',
-        url: '/route-map',
-        fields
-      });
-    });
-  });
-
-  // 9. ADMIN PORTAL
+  // 8. ADMIN PORTAL
   docs.push({
     id: 'admin-management-portal',
     title: 'UKYatra Executive Admin Portal',
     subtitle: 'Staff Login • Bookings CRM • Package Catalog • Weather Advisory Control',
-    category: 'route-map',
+    category: 'admin',
     url: '/admin',
     fields: [
       { section: 'Portal Title', text: 'Admin Portal Staff Login Dashboard CRM Bookings Leads' },
