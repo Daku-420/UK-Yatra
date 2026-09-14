@@ -97,8 +97,9 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ onOpenBo
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {activity.topLocations.map((loc, i) => (
-                  <div key={i} className="p-3.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] text-xs text-slate-800 font-medium">
-                    📍 {loc}
+                  <div key={i} className="p-3.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] text-xs text-slate-800 font-medium flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                    <span>{loc}</span>
                   </div>
                 ))}
               </div>

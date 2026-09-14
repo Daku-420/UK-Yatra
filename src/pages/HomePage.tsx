@@ -1245,21 +1245,26 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           {/* Trust stats column */}
           <div className="flex flex-col gap-6 max-w-md">
             {[
-              { icon: '🏔️', value: '43,250+', label: 'Happy Travellers', sub: 'Families, solo travellers & groups served' },
-              { icon: '✅', value: '4.7 / 5.0', label: 'Average Google Rating', sub: 'Verified ratings from real customers' },
-              { icon: '🎯', value: '8,500+', label: 'Trips Successfully Completed', sub: 'Across Uttarakhand, Himalayas & beyond' },
-            ].map(stat => (
-              <div key={stat.label} className="flex items-center gap-4 bg-brand-card rounded-2xl px-6 py-4 shadow-md border border-white/10">
-                <span className="text-3xl">{stat.icon}</span>
-                <div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-black text-white">{stat.value}</span>
+              { icon: Mountain, iconColor: 'text-sky-400 bg-sky-500/10 border-sky-500/20', value: '43,250+', label: 'Happy Travellers', sub: 'Families, solo travellers & groups served' },
+              { icon: CheckCircle2, iconColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20', value: '4.7 / 5.0', label: 'Average Google Rating', sub: 'Verified ratings from real customers' },
+              { icon: Award, iconColor: 'text-brand-orange bg-brand-orange/10 border-brand-orange/20', value: '8,500+', label: 'Trips Successfully Completed', sub: 'Across Uttarakhand, Himalayas & beyond' },
+            ].map(stat => {
+              const Icon = stat.icon;
+              return (
+                <div key={stat.label} className="flex items-center gap-4 bg-brand-card rounded-2xl px-6 py-4 shadow-md border border-white/10">
+                  <div className={`p-3 rounded-xl border ${stat.iconColor} shrink-0`}>
+                    <Icon className="w-6 h-6" />
                   </div>
-                  <p className="text-sm font-semibold text-slate-200">{stat.label}</p>
-                  <p className="text-xs text-slate-400">{stat.sub}</p>
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl font-black text-white">{stat.value}</span>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-200">{stat.label}</p>
+                    <p className="text-xs text-slate-400">{stat.sub}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

@@ -11,7 +11,13 @@ import {
   School,
   SunMedium,
   Compass,
-  Car
+  Car,
+  Home,
+  Package,
+  Info,
+  MapPin,
+  Footprints,
+  Sparkles
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from './SocialIcons';
@@ -371,35 +377,38 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             <Link 
               to="/" 
               onClick={() => setMobileMenuOpen(false)} 
-              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
                 isActive('/') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
               }`}
             >
-              🏔️ Home
+              <Home className="w-5 h-5 text-brand-orange shrink-0" />
+              <span>Home</span>
             </Link>
             <Link 
               to="/packages" 
               onClick={() => setMobileMenuOpen(false)} 
-              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
                 isActive('/packages') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
               }`}
             >
-              📦 Tour Packages
+              <Package className="w-5 h-5 text-brand-orange shrink-0" />
+              <span>Tour Packages</span>
             </Link>
             <Link 
               to="/book-vehicle" 
               onClick={() => setMobileMenuOpen(false)} 
-              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
                 isActive('/book-vehicle') || isActive('/car-rental')
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
               }`}
             >
-              🚗 Book Your Vehicle
+              <Car className="w-5 h-5 text-brand-orange shrink-0" />
+              <span>Book Your Vehicle</span>
             </Link>
             <Link 
               to="/admin" 
@@ -422,8 +431,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
                 className="w-full flex items-center justify-between px-4 py-3 text-base font-semibold text-white hover:text-brand-orange transition-colors"
               >
-                <span className="flex items-center gap-2">
-                  <span>🧗</span>
+                <span className="flex items-center gap-2.5">
+                  <Compass className="w-5 h-5 text-brand-orange shrink-0" />
                   <span>Activities</span>
                 </span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${mobileActivitiesOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
@@ -485,24 +494,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             <Link 
               to="/about" 
               onClick={() => setMobileMenuOpen(false)} 
-              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
                 isActive('/about') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
               }`}
             >
-              ℹ️ About Us
+              <Info className="w-5 h-5 text-brand-orange shrink-0" />
+              <span>About Us</span>
             </Link>
             <Link 
               to="/contact" 
               onClick={() => setMobileMenuOpen(false)} 
-              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
                 isActive('/contact') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
               }`}
             >
-              📞 Contact
+              <Phone className="w-5 h-5 text-brand-orange shrink-0" />
+              <span>Contact</span>
             </Link>
 
             <div className="pt-2 mt-2 border-t border-white/10">
@@ -513,57 +524,62 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 <Link 
                   to="/destinations" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     isActive('/destinations') 
                       ? 'text-brand-orange' 
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  📍 Destinations
+                  <MapPin className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Destinations</span>
                 </Link>
                 <Link 
                   to="/trekking" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     isActive('/trekking') 
                       ? 'text-brand-orange' 
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  🥾 Trekking
+                  <Footprints className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Trekking</span>
                 </Link>
                 <Link 
                   to="/spiritual" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     isActive('/spiritual') 
                       ? 'text-brand-orange' 
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  🕉️ Char Dham
+                  <Sparkles className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Char Dham</span>
                 </Link>
                 <Link 
                   to="/customized-trip" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     isActive('/customized-trip') 
                       ? 'text-brand-orange' 
                       : 'text-brand-orange/80 hover:text-brand-orange'
                   }`}
                 >
-                  ✨ Custom Trip
+                  <Sparkles className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Custom Trip</span>
                 </Link>
                 <Link 
                   to="/book-vehicle" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     isActive('/book-vehicle') || isActive('/car-rental')
                       ? 'text-brand-orange' 
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  🚗 Taxi & Cabs
+                  <Car className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Taxi & Cabs</span>
                 </Link>
               </div>
             </div>

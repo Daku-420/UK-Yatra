@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, CheckCircle, Quote } from 'lucide-react';
+import { Star, CheckCircle, Quote, MapPin } from 'lucide-react';
 import { Review } from '../types';
 
 interface ReviewCardProps {
@@ -25,8 +25,9 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
         </p>
 
         {/* Trip Tag */}
-        <div className="mt-4 inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-brand-orange/10 text-brand-orange border border-brand-orange/20">
-          📍 {review.tripTaken}
+        <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-brand-orange/10 text-brand-orange border border-brand-orange/20">
+          <MapPin className="w-3 h-3 text-brand-orange shrink-0" />
+          <span>{review.tripTaken}</span>
         </div>
       </div>
 

@@ -221,9 +221,18 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               </div>
 
               <div className="text-[11px] text-slate-400 pt-4 border-t border-white/5 space-y-2">
-                <p>✓ 100% Customized mountain itineraries</p>
-                <p>✓ Sanitised hill-certified vehicles</p>
-                <p>✓ Transparent quotes with zero hidden charges</p>
+                <p className="flex items-center gap-1.5">
+                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>100% Customized mountain itineraries</span>
+                </p>
+                <p className="flex items-center gap-1.5">
+                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Sanitised hill-certified vehicles</span>
+                </p>
+                <p className="flex items-center gap-1.5">
+                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Transparent quotes with zero hidden charges</span>
+                </p>
               </div>
             </div>
           </div>

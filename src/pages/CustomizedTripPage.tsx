@@ -11,7 +11,14 @@ import {
   ArrowRight,
   ArrowLeft,
   Mountain,
-  Heart
+  Heart,
+  Zap,
+  Snowflake,
+  Waves,
+  Compass,
+  Trees,
+  Tent,
+  Binoculars
 } from 'lucide-react';
 import { SITE_CONFIG, getCustomTripWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
@@ -182,29 +189,31 @@ export const CustomizedTripPage: React.FC = () => {
 
                 <div className="flex flex-wrap gap-2">
                   {[
-                    '🕉️ Spiritual / Pilgrimage',
-                    '⛷️ Snow & Winter Sports',
-                    '🌊 Adrenaline & Rafting',
-                    '🥾 Alpine Trekking',
-                    '🌿 Nature & Serenity',
-                    '🐅 Jungle & Wildlife',
-                    '💑 Romantic / Honeymoon',
-                    '👨‍👩‍👧‍👦 Family Vacation',
-                    '⛺ Riverside Glamping'
-                  ].map((theme) => {
-                    const isSelected = formData.themes.includes(theme);
+                    { label: 'Spiritual / Pilgrimage', icon: Sparkles },
+                    { label: 'Snow & Winter Sports', icon: Snowflake },
+                    { label: 'Adrenaline & Rafting', icon: Waves },
+                    { label: 'Alpine Trekking', icon: Compass },
+                    { label: 'Nature & Serenity', icon: Trees },
+                    { label: 'Jungle & Wildlife', icon: Binoculars },
+                    { label: 'Romantic / Honeymoon', icon: Heart },
+                    { label: 'Family Vacation', icon: Users },
+                    { label: 'Riverside Glamping', icon: Tent }
+                  ].map((themeItem) => {
+                    const isSelected = formData.themes.includes(themeItem.label);
+                    const Icon = themeItem.icon;
                     return (
                       <button
                         type="button"
-                        key={theme}
-                        onClick={() => toggleTheme(theme)}
-                        className={`px-4 py-2 rounded-full text-xs font-semibold border transition-all ${
+                        key={themeItem.label}
+                        onClick={() => toggleTheme(themeItem.label)}
+                        className={`px-4 py-2 rounded-full text-xs font-semibold border transition-all flex items-center gap-1.5 ${
                           isSelected
                             ? 'bg-brand-orange text-white border-brand-orange shadow-md'
                             : 'bg-[#F5F3EF] text-slate-800 border-[#DCD6CC] hover:border-brand-orange/50'
                         }`}
                       >
-                        {theme}
+                        <Icon className={`w-3.5 h-3.5 ${isSelected ? 'text-white' : 'text-brand-orange'}`} />
+                        <span>{themeItem.label}</span>
                       </button>
                     );
                   })}
@@ -429,8 +438,9 @@ export const CustomizedTripPage: React.FC = () => {
           </p>
 
           <div className="p-5 rounded-2xl bg-[#F5F3EF] border border-[#DCD6CC] text-xs text-slate-700 space-y-3">
-            <p className="font-semibold text-slate-900">
-              ⚡ Connect directly with our Senior Uttarakhand Destination Architect on WhatsApp:
+            <p className="font-semibold text-slate-900 flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-amber-500 shrink-0" />
+              <span>Connect directly with our Senior Uttarakhand Destination Architect on WhatsApp:</span>
             </p>
             <button
               onClick={handleWhatsAppForward}

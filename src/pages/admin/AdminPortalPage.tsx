@@ -293,7 +293,10 @@ export const AdminPortalPage: React.FC = () => {
               <ExternalLink className="w-3.5 h-3.5 text-brand-orange" />
               <span>Preview Live Website</span>
             </span>
-            <span className="text-[10px] text-slate-500 font-mono">Open ↗</span>
+            <span className="text-[10px] text-slate-500 font-mono flex items-center gap-0.5">
+              <span>Open</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </span>
           </Link>
 
           <div className="p-3 rounded-2xl bg-slate-800/40 border border-slate-800 flex items-center justify-between gap-3">
@@ -778,8 +781,9 @@ export const AdminPortalPage: React.FC = () => {
                     </div>
 
                     <div className="p-4 border-t border-slate-800/80 bg-slate-900/40 flex items-center justify-between gap-2">
-                      <span className="text-[11px] text-slate-400">
-                        ⭐ {pkg.rating} ({pkg.reviewsCount} reviews)
+                      <span className="text-[11px] text-slate-400 flex items-center gap-1">
+                        <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400 shrink-0" />
+                        <span>{pkg.rating} ({pkg.reviewsCount} reviews)</span>
                       </span>
                       <div className="flex items-center gap-1.5">
                         <button
@@ -928,8 +932,10 @@ export const AdminPortalPage: React.FC = () => {
                         <div className="text-[11px] text-slate-400">{rev.location} • {rev.tripTaken}</div>
                       </div>
                     </div>
-                    <div className="text-amber-400 font-bold text-xs">
-                      {'★'.repeat(rev.rating)}
+                    <div className="flex items-center gap-0.5 text-amber-400">
+                      {Array.from({ length: rev.rating }).map((_, idx) => (
+                        <Star key={idx} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                      ))}
                     </div>
                   </div>
 

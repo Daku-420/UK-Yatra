@@ -8,7 +8,9 @@ import {
   ShieldCheck, 
   Sparkles,
   MapPin,
-  Clock
+  Clock,
+  Lock,
+  Zap
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
@@ -123,7 +125,7 @@ export const BookingEnquiryPage: React.FC = () => {
                   <option value="Do Dham (Kedarnath & Badrinath)">Do Dham (Kedarnath & Badrinath)</option>
                   <option value="Helicopter Charter Yatra">Helicopter Charter Yatra</option>
                   <option value="Himalayan Trekking & Camping">Himalayan Trekking & Camping</option>
-                  <optgroup label="🚗 Vehicle & Taxi Rental Fleets">
+                  <optgroup label="Vehicle & Taxi Rental Fleets">
                     <option value="Vehicle: Toyota Innova Crysta (6+1 Luxury)">Vehicle: Toyota Innova Crysta (6+1 Luxury SUV)</option>
                     <option value="Vehicle: Force Tempo Traveller (12/16/26 Seater)">Vehicle: Force Tempo Traveller (12/16/26 Seater)</option>
                     <option value="Vehicle: Maruti Ertiga (4+1 Economy MUV)">Vehicle: Maruti Ertiga (4+1 Economy MUV)</option>
@@ -202,8 +204,9 @@ export const BookingEnquiryPage: React.FC = () => {
               </button>
             </div>
 
-            <div className="text-center text-[11px] text-slate-500">
-              🔒 No advance payment is charged right now. We provide free itinerary consultation.
+            <div className="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
+              <Lock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <span>No advance payment is charged right now. We provide free itinerary consultation.</span>
             </div>
           </form>
         </div>
@@ -222,8 +225,9 @@ export const BookingEnquiryPage: React.FC = () => {
           </p>
 
           <div className="p-5 rounded-2xl bg-[#F5F3EF] border border-[#DCD6CC] text-xs text-slate-700 space-y-3">
-            <p className="font-semibold text-slate-900">
-              ⚡ Need to confirm dates immediately or speak with our coordinator?
+            <p className="font-semibold text-slate-900 flex items-center justify-center gap-1.5">
+              <Zap className="w-4 h-4 text-brand-orange shrink-0" />
+              <span>Need to confirm dates immediately or speak with our coordinator?</span>
             </p>
             <button
               onClick={handleWhatsAppForward}

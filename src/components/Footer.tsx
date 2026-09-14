@@ -8,7 +8,8 @@ import {
   ShieldCheck, 
   Award, 
   Heart,
-  ChevronRight
+  ChevronRight,
+  Lock
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from './SocialIcons';
@@ -63,7 +64,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Main Footer Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 xl:gap-8 py-12">
           {/* Quick Links */}
           <div className="col-span-1">
             <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">
@@ -218,7 +219,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-2">
+          <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">
               Get In Touch
             </h4>
@@ -274,7 +275,8 @@ export const Footer: React.FC = () => {
             <Link to="/terms" className="text-slate-400 hover:text-white transition-colors">Terms & Conditions</Link>
             <Link to="/cancellation-policy" className="text-slate-400 hover:text-white transition-colors">Cancellation & Refund</Link>
             <Link to="/admin" className="text-slate-500 hover:text-brand-orange transition-colors flex items-center gap-1">
-              <span>🔐 Staff Admin</span>
+              <Lock className="w-3 h-3 text-slate-500 shrink-0" />
+              <span>Staff Admin</span>
             </Link>
           </div>
         </div>

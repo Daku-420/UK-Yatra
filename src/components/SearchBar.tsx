@@ -177,18 +177,19 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onClose, autoFocus = false
               {availableCategories.map(cat => {
                 const count = allResults.filter(r => r.category === cat).length;
                 const meta = CATEGORY_STYLES[cat];
+                const Icon = meta.icon;
                 return (
                   <button
                     key={cat}
                     type="button"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-2.5 py-1 rounded-lg font-semibold transition-colors shrink-0 flex items-center gap-1 ${
+                    className={`px-2.5 py-1 rounded-lg font-semibold transition-colors shrink-0 flex items-center gap-1.5 ${
                       selectedCategory === cat
                         ? "bg-brand-orange text-white shadow-sm"
                         : "bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700"
                     }`}
                   >
-                    <span>{meta.icon}</span>
+                    <Icon className="w-3.5 h-3.5 shrink-0" />
                     <span>{meta.label}</span>
                     <span className="text-[10px] opacity-75">({count})</span>
                   </button>
@@ -201,6 +202,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onClose, autoFocus = false
           <div className="overflow-y-auto divide-y divide-slate-800/80 p-2 space-y-1">
             {filteredResults.map((result, idx) => {
               const meta = CATEGORY_STYLES[result.category];
+              const Icon = meta.icon;
               const isFocused = idx === activeIndex;
 
               return (
@@ -217,7 +219,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onClose, autoFocus = false
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border ${result.categoryColor}`}>
-                          <span>{meta.icon}</span>
+                          <Icon className="w-3 h-3 shrink-0" />
                           <span>{result.categoryLabel}</span>
                         </span>
                         <span className="text-[11px] text-slate-400 truncate">

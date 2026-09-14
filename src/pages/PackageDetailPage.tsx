@@ -15,7 +15,9 @@ import {
   ArrowRight,
   ChevronLeft,
   FileText,
-  Download
+  Download,
+  Building2,
+  Utensils
 } from 'lucide-react';
 import { adminStorage } from '../utils/adminStorage';
 import { getPackageWhatsAppUrl, SITE_CONFIG } from '../config/siteConfig';
@@ -221,11 +223,13 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                               {item.description}
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-[11px] text-slate-700">
-                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5]">
-                                🏨 <strong>Stay:</strong> {item.stay}
+                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] flex items-center gap-1.5">
+                                <Building2 className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                                <span><strong>Stay:</strong> {item.stay}</span>
                               </div>
-                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5]">
-                                🍽️ <strong>Meals Included:</strong> {item.meals}
+                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] flex items-center gap-1.5">
+                                <Utensils className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                                <span><strong>Meals Included:</strong> {item.meals}</span>
                               </div>
                             </div>
                           </div>
@@ -312,8 +316,9 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                   )}
                   <span className="text-xs text-slate-600">/ person</span>
                 </div>
-                <p className="text-[11px] text-emerald-700 font-medium mt-1">
-                  ✓ Price matching & customizable inclusions
+                <p className="text-[11px] text-emerald-700 font-medium mt-1 flex items-center gap-1">
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span>Price matching & customizable inclusions</span>
                 </p>
               </div>
 

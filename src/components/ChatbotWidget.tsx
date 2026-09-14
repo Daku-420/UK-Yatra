@@ -16,7 +16,12 @@ import {
   Compass,
   Mountain,
   ShieldCheck,
-  CheckCircle
+  CheckCircle,
+  Sun,
+  Footprints,
+  Car,
+  MessageSquare,
+  type LucideIcon
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 
@@ -27,6 +32,7 @@ interface Message {
   timestamp: string;
   options?: Array<{
     label: string;
+    icon?: LucideIcon;
     action?: () => void;
     link?: string;
     isWhatsApp?: boolean;
@@ -54,15 +60,15 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
       {
         id: 'welcome-1',
         sender: 'bot',
-        text: `Namaste! 🙏 Welcome to ** UKYatra **.I am your Himalayan AI Travel Assistant.\n\nI can help you with Char Dham guidelines, Kedarnath helicopter tickets, trekking routes, customized quotes, and taxi rentals.How may I assist you today ? `,
+        text: `Namaste! Welcome to **UKYatra**. I am your Himalayan AI Travel Assistant.\n\nI can help you with Char Dham guidelines, Kedarnath helicopter tickets, trekking routes, customized quotes, and taxi rentals. How may I assist you today?`,
         timestamp: welcomeTime,
         options: [
-          { label: '🕉️ Char Dham Dates & Registration', action: () => handleSendQuery('Char Dham Dates & Registration') },
-          { label: '🚁 Helicopter Packages & Rates', action: () => handleSendQuery('Helicopter Packages & Rates') },
-          { label: '☀️ Best Season to Visit', action: () => handleSendQuery('Best Season to Visit') },
-          { label: '🥾 Top Winter & Summer Treks', action: () => handleSendQuery('Top Treks') },
-          { label: '🚗 Car Rental & Taxi Rates', action: () => handleSendQuery('Car Rental & Taxi') },
-          { label: '💬 Talk to Human Expert', isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I was chatting with your AI assistant and would like to talk to a travel specialist directly.' },
+          { label: 'Char Dham Dates & Registration', icon: Sparkles, action: () => handleSendQuery('Char Dham Dates & Registration') },
+          { label: 'Helicopter Packages & Rates', icon: Compass, action: () => handleSendQuery('Helicopter Packages & Rates') },
+          { label: 'Best Season to Visit', icon: Sun, action: () => handleSendQuery('Best Season to Visit') },
+          { label: 'Top Winter & Summer Treks', icon: Footprints, action: () => handleSendQuery('Top Treks') },
+          { label: 'Car Rental & Taxi Rates', icon: Car, action: () => handleSendQuery('Car Rental & Taxi') },
+          { label: 'Talk to Human Expert', icon: MessageSquare, isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I was chatting with your AI assistant and would like to talk to a travel specialist directly.' },
         ]
       }
     ]);
@@ -104,7 +110,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
       if (q.includes('heli') || q.includes('helicopter') || q.includes('chopper') || q.includes('fly')) {
         return {
           sender: 'bot',
-          text: `** Kedarnath & Char Dham Helicopter Services:**\n\n🚁 ** Char Dham by Helicopter(5N / 6D) **: Ex - Dehradun(Sahastradhara).Includes VIP darshans, 5 - star / luxury stays, and ground transfers.\n\n🚁 ** Do Dham Heli(3N / 4D) **: Covering Kedarnath & Badrinath.\n\n🚁 ** Kedarnath Same - Day Heli **: Return to Dehradun on the same day.\n\n🚁 ** Shuttle Helipads **: Phata, Guptkashi, and Sirsi operate 8 - minute shuttle flights directly to Kedarnath Helipad.\n\n⚠️ * Strict 5kg luggage limit per guest in soft duffel bags.* `,
+          text: `** Kedarnath & Char Dham Helicopter Services:**\n\n• ** Char Dham by Helicopter(5N / 6D) **: Ex - Dehradun(Sahastradhara).Includes VIP darshans, 5 - star / luxury stays, and ground transfers.\n\n• ** Do Dham Heli(3N / 4D) **: Covering Kedarnath & Badrinath.\n\n• ** Kedarnath Same - Day Heli **: Return to Dehradun on the same day.\n\n• ** Shuttle Helipads **: Phata, Guptkashi, and Sirsi operate 8 - minute shuttle flights directly to Kedarnath Helipad.\n\nNote: * Strict 5kg luggage limit per guest in soft duffel bags.* `,
           options: [
             { label: 'View Helicopter Packages', link: '/helicopter-packages' },
             { label: 'Reserve Heli Seats', action: () => onOpenBookingModal?.('Char Dham Helicopter Charter') },
@@ -141,7 +147,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
     if (q.includes('best time') || q.includes('weather') || q.includes('season') || q.includes('when to visit') || q.includes('month') || q.includes('snow') || q.includes('snowfall') || q.includes('winter') || q.includes('monsoon')) {
       return {
         sender: 'bot',
-        text: `** Uttarakhand Travel Calendar & Best Seasons:**\n\n🌸 ** Spring & Summer(March - June) **: \n• Perfect for Char Dham, Rishikesh rafting, Mussoorie & Nainital lake retreats.\n• Daytime temps: 15°C - 28°C.\n\n🌿 ** Monsoon(July - August) **: \n• Famous for ** Valley of Flowers ** in full bloom!\n• Rain - soaked hills; travel with trusted mountain drivers.\n\n🍂 ** Autumn(September - November) **: \n• Crystal - clear Himalayan views & pristine skies.Ideal for high - altitude trekking and photography.\n\n❄️ ** Winter(December - February) **: \n• Heavy snow in Auli(skiing paradise), Kedarkantha snow trek, and Chopta.Temperatures dip to - 5°C to 10°C.`,
+        text: `** Uttarakhand Travel Calendar & Best Seasons:**\n\n• ** Spring & Summer(March - June) **: \n• Perfect for Char Dham, Rishikesh rafting, Mussoorie & Nainital lake retreats.\n• Daytime temps: 15°C - 28°C.\n\n• ** Monsoon(July - August) **: \n• Famous for ** Valley of Flowers ** in full bloom!\n• Rain - soaked hills; travel with trusted mountain drivers.\n\n• ** Autumn(September - November) **: \n• Crystal - clear Himalayan views & pristine skies.Ideal for high - altitude trekking and photography.\n\n• ** Winter(December - February) **: \n• Heavy snow in Auli(skiing paradise), Kedarkantha snow trek, and Chopta.Temperatures dip to - 5°C to 10°C.`,
         options: [
           { label: 'Plan Trip by Month', link: '/packages' },
           { label: 'Check Seasonal Offers', link: '/offers' },
@@ -154,7 +160,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
     if (q.includes('trek') || q.includes('trekking') || q.includes('kedarkantha') || q.includes('chopta') || q.includes('tungnath') || q.includes('chandrashila') || q.includes('valley of flowers') || q.includes('kuari pass') || q.includes('dayara bugyal') || q.includes('har ki dun')) {
       return {
         sender: 'bot',
-        text: `** Premier Himalayan Treks with UKYatra:**\n\n🏔️ ** Kedarkantha Winter Trek(12, 500 ft) **: India's favorite snow trek. Perfect for beginners and families.\n\n🕉️ **Chopta Tungnath & Chandrashila (13,100 ft)**: The highest Shiva shrine on earth with 360° views of Nanda Devi & Trishul.\n\n🌸 **Valley of Flowers & Hemkund Sahib**: UNESCO World Heritage alpine meadow with over 500 wildflower species (July-Sept).\n\n❄️ **Kuari Pass & Dayara Bugyal**: Majestic meadow treks offering unobstructed views of Mt. Nanda Devi.\n\n*All treks include certified mountaineering guides, safety gear, high-altitude oxygen cylinders & warm dining tents.*`,
+        text: `** Premier Himalayan Treks with UKYatra:**\n\n• ** Kedarkantha Winter Trek(12, 500 ft) **: India's favorite snow trek. Perfect for beginners and families.\n\n• **Chopta Tungnath & Chandrashila (13,100 ft)**: The highest Shiva shrine on earth with 360° views of Nanda Devi & Trishul.\n\n• **Valley of Flowers & Hemkund Sahib**: UNESCO World Heritage alpine meadow with over 500 wildflower species (July-Sept).\n\n• **Kuari Pass & Dayara Bugyal**: Majestic meadow treks offering unobstructed views of Mt. Nanda Devi.\n\n*All treks include certified mountaineering guides, safety gear, high-altitude oxygen cylinders & warm dining tents.*`,
 options: [
   { label: 'Browse Trekking Expeditions', link: '/trekking' },
   { label: 'Kedarkantha Trek Details', link: '/trekking/kedarkantha-winter-trek' },
@@ -167,7 +173,7 @@ options: [
 if (q.includes('rafting') || q.includes('adventure') || q.includes('bungee') || q.includes('camping') || q.includes('rishikesh') || q.includes('safari') || q.includes('corbett') || q.includes('auli') || q.includes('skiing')) {
   return {
     sender: 'bot',
-    text: `**Adventure & Wildlife Experiences in Uttarakhand:**\n\n🌊 **Rishikesh River Rafting**: 16 km (Shivpuri) or 24 km (Marine Drive) Class III/IV rapids with certified river guides.\n\n🦅 **Bungee Jumping**: India's highest 83-meter platform in Mohan Chatti, Rishikesh.\n\n🐅 **Jim Corbett National Park Safari**: Open Jeep 4x4 safaris in Bijrani, Dhikala & Jhirna zones for Royal Bengal Tiger spotting.\n\n⛷️ **Auli Skiing**: World-class ski slopes accessible via South Asia's longest ropeway cable car.\n\n*All activities follow stringent Ministry of Tourism safety norms.*`,
+    text: `**Adventure & Wildlife Experiences in Uttarakhand:**\n\n• **Rishikesh River Rafting**: 16 km (Shivpuri) or 24 km (Marine Drive) Class III/IV rapids with certified river guides.\n\n• **Bungee Jumping**: India's highest 83-meter platform in Mohan Chatti, Rishikesh.\n\n• **Jim Corbett National Park Safari**: Open Jeep 4x4 safaris in Bijrani, Dhikala & Jhirna zones for Royal Bengal Tiger spotting.\n\n• **Auli Skiing**: World-class ski slopes accessible via South Asia's longest ropeway cable car.\n\n*All activities follow stringent Ministry of Tourism safety norms.*`,
     options: [
       { label: 'View Adventure Activities', link: '/activities' },
       { label: 'Rafting Guidelines', link: '/activities/river-rafting' },
@@ -180,7 +186,7 @@ if (q.includes('rafting') || q.includes('adventure') || q.includes('bungee') || 
 if (q.includes('taxi') || q.includes('cab') || q.includes('car') || q.includes('rental') || q.includes('innova') || q.includes('tempo') || q.includes('driver') || q.includes('fleet') || q.includes('transport')) {
   return {
     sender: 'bot',
-    text: `**UKYatra Hill-Certified Fleet & Taxi Services:**\n\n🚗 **Available Vehicles**:\n• **Toyota Innova Crysta / Hycross**: Luxury & comfort for hill roads.\n• **Maruti Ertiga / Dzire**: Affordable family travel.\n• **Tempo Traveller (12/17/26 Seater)**: Perfect for group & family yatras.\n• **Force Urbania**: Ultra-luxury executive touring.\n\n🛡️ **Highlights**:\n• Verified mountain drivers with minimum 7+ years of hill driving experience.\n• Clean, sanitized vehicles with GPS tracking.\n• Pickups available from Dehradun Airport (Jolly Grant), Haridwar, Rishikesh, and Delhi.`,
+    text: `**UKYatra Hill-Certified Fleet & Taxi Services:**\n\n **Available Vehicles**:\n• **Toyota Innova Crysta / Hycross**: Luxury & comfort for hill roads.\n• **Maruti Ertiga / Dzire**: Affordable family travel.\n• **Tempo Traveller (12/17/26 Seater)**: Perfect for group & family yatras.\n• **Force Urbania**: Ultra-luxury executive touring.\n\n **Highlights**:\n• Verified mountain drivers with minimum 7+ years of hill driving experience.\n• Clean, sanitized vehicles with GPS tracking.\n• Pickups available from Dehradun Airport (Jolly Grant), Haridwar, Rishikesh, and Delhi.`,
     options: [
       { label: 'Explore Car Rentals', link: '/car-rental' },
       { label: 'Get Taxi Quote', action: () => onOpenBookingModal?.('Car / Taxi Rental Enquiry') },
@@ -193,7 +199,7 @@ if (q.includes('taxi') || q.includes('cab') || q.includes('car') || q.includes('
 if (q.includes('cost') || q.includes('price') || q.includes('pricing') || q.includes('rate') || q.includes('how much') || q.includes('budget') || q.includes('discount') || q.includes('offer') || q.includes('custom') || q.includes('customize')) {
   return {
     sender: 'bot',
-    text: `**Customized Packages & Pricing:**\n\nEvery journey with UKYatra is tailored to your travel dates, vehicle preference, and hotel category (Standard, Deluxe, Luxury):\n\n• **Weekend Escapes**: Starting from ₹7,499 per person\n• **Winter Treks**: Starting from ₹8,999 per person (all meals & gear)\n• **Char Dham by Road**: Starting from ₹28,500 per person (10N/11D)\n• **Char Dham by Helicopter**: Luxury charter pricing on request\n\n💡 *We offer a 5% Early Bird discount and special concessions for groups of 6+ travellers!*`,
+    text: `**Customized Packages & Pricing:**\n\nEvery journey with UKYatra is tailored to your travel dates, vehicle preference, and hotel category (Standard, Deluxe, Luxury):\n\n• **Weekend Escapes**: Starting from ₹7,499 per person\n• **Winter Treks**: Starting from ₹8,999 per person (all meals & gear)\n• **Char Dham by Road**: Starting from ₹28,500 per person (10N/11D)\n• **Char Dham by Helicopter**: Luxury charter pricing on request\n\n *We offer a 5% Early Bird discount and special concessions for groups of 6+ travellers!*`,
     options: [
       { label: '3-Step Trip Planner', link: '/customized-trip' },
       { label: 'View Active Offers', link: '/offers' },
@@ -219,7 +225,7 @@ if (q.includes('cancel') || q.includes('refund') || q.includes('reschedule') || 
 if (q.includes('human') || q.includes('agent') || q.includes('person') || q.includes('expert') || q.includes('talk') || q.includes('speak') || q.includes('call') || q.includes('phone') || q.includes('whatsapp') || q.includes('contact') || q.includes('office') || q.includes('help')) {
   return {
     sender: 'bot',
-    text: `**Connect Directly with Our Uttarakhand Specialists:**\n\n📞 **Helpline**: [${SITE_CONFIG.phone}](tel:${SITE_CONFIG.phone})\n💬 **WhatsApp Desk**: ${SITE_CONFIG.whatsappNumber} (Instant Reply)\n📧 **Email**: ${SITE_CONFIG.email}\n📍 **Base Camp**: Tapovan, Rishikesh & Jolly Grant, Dehradun\n⏰ **Operating Hours**: Mon - Sun: 8:00 AM - 10:00 PM IST (24/7 on-trip emergency assistance)`,
+    text: `**Connect Directly with Our Uttarakhand Specialists:**\n\n• **Helpline**: [${SITE_CONFIG.phone}](tel:${SITE_CONFIG.phone})\n• **WhatsApp Desk**: ${SITE_CONFIG.whatsappNumber} (Instant Reply)\n• **Email**: ${SITE_CONFIG.email}\n• **Base Camp**: Tapovan, Rishikesh & Jolly Grant, Dehradun\n• **Operating Hours**: Mon - Sun: 8:00 AM - 10:00 PM IST (24/7 on-trip emergency assistance)`,
     options: [
       { label: 'Chat on WhatsApp Now', isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I would like to speak directly with an Uttarakhand travel expert.' },
       { label: 'Request Priority Callback', action: () => onOpenBookingModal?.('Direct Callback Request') },
@@ -232,13 +238,13 @@ if (q.includes('human') || q.includes('agent') || q.includes('person') || q.incl
 if (q.includes('hi') || q.includes('hello') || q.includes('hey') || q.includes('namaste') || q.includes('pranam') || q.includes('good morning') || q.includes('good afternoon') || q.includes('good evening')) {
   return {
     sender: 'bot',
-    text: `Namaste! 🙏 Glad you are here. Whether you're planning a sacred Char Dham pilgrimage, an exhilarating winter trek, or a peaceful hill station retreat, I'm here to guide you.\n\nWhat would you like to explore today?`,
+    text: `Namaste! Glad you are here. Whether you're planning a sacred Char Dham pilgrimage, an exhilarating winter trek, or a peaceful hill station retreat, I'm here to guide you.\n\nWhat would you like to explore today?`,
     options: [
-      { label: '🕉️ Char Dham Packages', link: '/spiritual' },
-      { label: '🚁 Helicopter Charters', link: '/helicopter-packages' },
-      { label: '🥾 Alpine Treks', link: '/trekking' },
-      { label: '📝 Plan Custom Trip', link: '/customized-trip' },
-      { label: '💬 WhatsApp Us', isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I want to discuss customized travel plans for Uttarakhand.' }
+      { label: 'Char Dham Packages', icon: Sparkles, link: '/spiritual' },
+      { label: 'Helicopter Charters', icon: Compass, link: '/helicopter-packages' },
+      { label: 'Alpine Treks', icon: Footprints, link: '/trekking' },
+      { label: 'Plan Custom Trip', icon: Sparkles, link: '/customized-trip' },
+      { label: 'WhatsApp Us', icon: MessageSquare, isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I want to discuss customized travel plans for Uttarakhand.' }
     ]
   };
 }
@@ -248,11 +254,11 @@ return {
   sender: 'bot',
   text: `Thank you for your question! Here is what I can quickly assist you with:\n\n• **Char Dham Yatra**: Shrines, registration, routes, and VIP helicopter charters.\n• **Trekking**: Kedarkantha, Tungnath, Kuari Pass, Valley of Flowers.\n• **Custom Trips**: Tailored itineraries for families, couples, and groups.\n• **Taxi & Rentals**: Verified mountain drivers and airport transfers.\n\nYou can also click below to chat directly with our senior travel planner on WhatsApp!`,
   options: [
-    { label: '🕉️ Char Dham Yatra', link: '/spiritual' },
-    { label: '🚁 Helicopter Packages', link: '/helicopter-packages' },
-    { label: '🥾 Popular Treks', link: '/trekking' },
-    { label: '📝 Custom Trip Planner', link: '/customized-trip' },
-    { label: '💬 Talk to Human on WhatsApp', isWhatsApp: true, whatsAppMsg: `Hi UKYatra, I have a question: "${query}". Please assist me.` }
+    { label: 'Char Dham Yatra', icon: Sparkles, link: '/spiritual' },
+    { label: 'Helicopter Packages', icon: Compass, link: '/helicopter-packages' },
+    { label: 'Popular Treks', icon: Footprints, link: '/trekking' },
+    { label: 'Custom Trip Planner', icon: Sparkles, link: '/customized-trip' },
+    { label: 'Talk to Human on WhatsApp', icon: MessageSquare, isWhatsApp: true, whatsAppMsg: `Hi UKYatra, I have a question: "${query}". Please assist me.` }
   ]
 };
   };
@@ -294,14 +300,14 @@ const handleResetChat = () => {
     {
       id: `welcome-${Date.now()}`,
       sender: 'bot',
-      text: `Chat reset. Namaste! 🙏 How can I help you explore Devbhoomi Uttarakhand today?`,
+      text: `Chat reset. Namaste! How can I help you explore Devbhoomi Uttarakhand today?`,
       timestamp: welcomeTime,
       options: [
-        { label: '🕉️ Char Dham Dates & Registration', action: () => handleSendQuery('Char Dham Dates & Registration') },
-        { label: '🚁 Helicopter Packages & Rates', action: () => handleSendQuery('Helicopter Packages & Rates') },
-        { label: '☀️ Best Season to Visit', action: () => handleSendQuery('Best Season to Visit') },
-        { label: '🥾 Top Winter & Summer Treks', action: () => handleSendQuery('Top Treks') },
-        { label: '💬 Talk to Human on WhatsApp', isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I would like to speak with a human travel advisor.' }
+        { label: 'Char Dham Dates & Registration', icon: Sparkles, action: () => handleSendQuery('Char Dham Dates & Registration') },
+        { label: 'Helicopter Packages & Rates', icon: Compass, action: () => handleSendQuery('Helicopter Packages & Rates') },
+        { label: 'Best Season to Visit', icon: Sun, action: () => handleSendQuery('Best Season to Visit') },
+        { label: 'Top Winter & Summer Treks', icon: Footprints, action: () => handleSendQuery('Top Treks') },
+        { label: 'Talk to Human on WhatsApp', icon: MessageSquare, isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I would like to speak with a human travel advisor.' }
       ]
     }
   ]);
@@ -399,6 +405,8 @@ const handleResetChat = () => {
                   {msg.options && msg.options.length > 0 && (
                     <div className="mt-2.5 flex flex-wrap gap-1.5 w-full">
                       {msg.options.map((opt, idx) => {
+                        const OptIcon = opt.icon;
+
                         if (opt.isWhatsApp) {
                           return (
                             <a
@@ -406,8 +414,9 @@ const handleResetChat = () => {
                               href={getWhatsAppUrl(opt.whatsAppMsg || "Hi UKYatra, I'd like more information.")}
                               target="_blank"
                               rel="noreferrer"
-                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300/80 text-[11px] font-semibold transition-all shadow-xs"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300/80 text-[11px] font-semibold transition-all shadow-xs"
                             >
+                              {OptIcon && <OptIcon className="w-3.5 h-3.5 shrink-0 text-emerald-600" />}
                               <span>{opt.label}</span>
                               <ExternalLink className="w-3 h-3" />
                             </a>
@@ -420,8 +429,9 @@ const handleResetChat = () => {
                               key={idx}
                               to={opt.link}
                               onClick={() => setIsOpen(false)}
-                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#FF5A1F] text-slate-700 hover:text-white border border-slate-200/90 text-[11px] font-medium transition-all shadow-xs"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#FF5A1F] text-slate-700 hover:text-white border border-slate-200/90 text-[11px] font-medium transition-all shadow-xs"
                             >
+                              {OptIcon && <OptIcon className="w-3.5 h-3.5 shrink-0 text-brand-orange" />}
                               <span>{opt.label}</span>
                               <ChevronRight className="w-3 h-3" />
                             </Link>
@@ -432,8 +442,9 @@ const handleResetChat = () => {
                           <button
                             key={idx}
                             onClick={opt.action}
-                            className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#FF5A1F] text-slate-700 hover:text-white border border-slate-200/90 text-[11px] font-medium transition-all shadow-xs"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#FF5A1F] text-slate-700 hover:text-white border border-slate-200/90 text-[11px] font-medium transition-all shadow-xs"
                           >
+                            {OptIcon && <OptIcon className="w-3.5 h-3.5 shrink-0 text-brand-orange" />}
                             <span>{opt.label}</span>
                           </button>
                         );
@@ -476,33 +487,38 @@ const handleResetChat = () => {
           <div className="px-3 py-2 bg-white border-t border-slate-100 flex items-center gap-1.5 overflow-x-auto hide-scrollbar text-[11px]">
             <button
               onClick={() => handleSendQuery('Char Dham Dates')}
-              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors"
+              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
-              🕉️ Char Dham
+              <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>Char Dham</span>
             </button>
             <button
               onClick={() => handleSendQuery('Helicopter Packages')}
-              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors"
+              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
-              🚁 Helicopter
+              <Compass className="w-3.5 h-3.5 text-sky-500 shrink-0" />
+              <span>Helicopter</span>
             </button>
             <button
               onClick={() => handleSendQuery('Best Treks')}
-              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors"
+              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
-              🥾 Treks
+              <Footprints className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+              <span>Treks</span>
             </button>
             <button
               onClick={() => handleSendQuery('Taxi Rates')}
-              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors"
+              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
-              🚗 Taxi Rental
+              <Car className="w-3.5 h-3.5 text-slate-600 shrink-0" />
+              <span>Taxi Rental</span>
             </button>
             <button
               onClick={() => handleSendQuery('Talk to human agent')}
-              className="px-2.5 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300/80 whitespace-nowrap font-semibold"
+              className="px-2.5 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300/80 whitespace-nowrap font-semibold flex items-center gap-1.5"
             >
-              💬 Human Support
+              <MessageSquare className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span>Human Support</span>
             </button>
           </div>
 

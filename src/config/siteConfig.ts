@@ -40,7 +40,7 @@ export const SITE_CONFIG = {
     { label: "Trips Curated", value: "8,500+" },
     { label: "Happy Travellers", value: "43,250+" },
     { label: "Verified Local Guides", value: "45+" },
-    { label: "Average Google Rating", value: "4.7 ★" },
+    { label: "Average Google Rating", value: "4.7 / 5.0" },
   ]
 };
 

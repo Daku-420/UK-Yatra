@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, CheckCircle, Phone, Send, Calendar, Users, MapPin, Sparkles, Car } from 'lucide-react';
+import { X, CheckCircle, Phone, Send, Calendar, Users, MapPin, Sparkles, Car, Lock, Zap } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
 import { WhatsAppIcon } from './SocialIcons';
@@ -268,8 +268,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 </button>
               </div>
 
-              <div className="text-center text-[11px] text-slate-400">
-                🔒 We respect your privacy. No spam. 100% free consultation.
+              <div className="text-center text-[11px] text-slate-400 flex items-center justify-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <span>We respect your privacy. No spam. 100% free consultation.</span>
               </div>
             </form>
           </div>
@@ -286,7 +287,10 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
             </p>
 
             <div className="p-4 rounded-2xl bg-slate-900/90 border border-white/10 text-xs text-slate-300 space-y-2">
-              <p>⚡ <strong>Need an instant quote right now?</strong></p>
+              <p className="flex items-center justify-center gap-1.5">
+                <Zap className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                <strong>Need an instant quote right now?</strong>
+              </p>
               <button
                 onClick={handleWhatsAppDirect}
                 className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-xl font-semibold transition-all shadow-lg"

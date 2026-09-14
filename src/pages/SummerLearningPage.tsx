@@ -15,7 +15,8 @@ import {
   Flame,
   Calendar,
   Zap,
-  Users
+  Users,
+  Check
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -287,21 +288,30 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
               <span className="text-amber-400 font-bold uppercase tracking-wider text-[11px]">Batch A • Early Summer</span>
               <h4 className="text-base font-bold text-white mt-1 mb-2">May 18 – May 24</h4>
               <p className="text-slate-400 leading-relaxed text-[11px]">Best for schools with early summer vacation breaks. Kanatal & Rishikesh centres.</p>
-              <div className="mt-4 inline-block text-emerald-400 font-semibold text-[11px]">✓ Registrations Open (12 seats left)</div>
+              <div className="mt-4 inline-flex items-center gap-1 text-emerald-400 font-semibold text-[11px]">
+                <Check className="w-3.5 h-3.5" />
+                <span>Registrations Open (12 seats left)</span>
+              </div>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
               <span className="text-amber-400 font-bold uppercase tracking-wider text-[11px]">Batch B • Peak Summer</span>
               <h4 className="text-base font-bold text-white mt-1 mb-2">June 02 – June 08</h4>
               <p className="text-slate-400 leading-relaxed text-[11px]">Ideal mountain climate in high Chopta & Benital Dark Sky Astro-Village.</p>
-              <div className="mt-4 inline-block text-amber-300 font-semibold text-[11px]">⚡ Fast Filling (6 seats left)</div>
+              <div className="mt-4 inline-flex items-center gap-1 text-amber-300 font-semibold text-[11px]">
+                <Zap className="w-3.5 h-3.5" />
+                <span>Fast Filling (6 seats left)</span>
+              </div>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
               <span className="text-amber-400 font-bold uppercase tracking-wider text-[11px]">Batch C • Mid Summer</span>
               <h4 className="text-base font-bold text-white mt-1 mb-2">June 16 – June 22</h4>
               <p className="text-slate-400 leading-relaxed text-[11px]">Alpine wildflower blooms, glaciology fieldwork & river navigation camp.</p>
-              <div className="mt-4 inline-block text-emerald-400 font-semibold text-[11px]">✓ Registrations Open (14 seats left)</div>
+              <div className="mt-4 inline-flex items-center gap-1 text-emerald-400 font-semibold text-[11px]">
+                <Check className="w-3.5 h-3.5" />
+                <span>Registrations Open (14 seats left)</span>
+              </div>
             </div>
           </div>
         </div>

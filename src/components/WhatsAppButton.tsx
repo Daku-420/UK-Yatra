@@ -33,7 +33,7 @@ export const WhatsAppButton: React.FC = () => {
           </div>
 
           <p className="text-xs text-slate-600 my-3 leading-relaxed">
-            Namaste! 🙏 Need help planning your Uttarakhand tour, trek, or Char Dham Yatra? Chat directly with our local travel experts.
+            Namaste! Need help planning your Uttarakhand tour, trek, or Char Dham Yatra? Chat directly with our local travel experts.
           </p>
 
           <a

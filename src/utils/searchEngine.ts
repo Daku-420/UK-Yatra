@@ -48,15 +48,27 @@ interface RawSearchDoc {
   }[];
 }
 
-export const CATEGORY_STYLES: Record<SearchCategory, { label: string; badge: string; icon: string }> = {
-  package:     { label: 'Tour Package',     badge: 'bg-amber-500/20 text-amber-300 border-amber-500/30', icon: '📦' },
-  destination: { label: 'Destination',      badge: 'bg-sky-500/20 text-sky-300 border-sky-500/30',       icon: '📍' },
-  trek:        { label: 'Trek & Trail',     badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30', icon: '🥾' },
-  activity:    { label: 'Outdoor Activity', badge: 'bg-pink-500/20 text-pink-300 border-pink-500/30',    icon: '🧗' },
-  spiritual:   { label: 'Sacred Dham',      badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', icon: '🕉️' },
-  faq:         { label: 'FAQ & Advisory',   badge: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30', icon: '❓' },
-  blog:        { label: 'Travel Guide',     badge: 'bg-teal-500/20 text-teal-300 border-teal-500/30',     icon: '📰' },
-  admin:       { label: 'Staff Admin',      badge: 'bg-orange-500/20 text-orange-300 border-orange-500/30', icon: '🔐' },
+import { 
+  LucideIcon, 
+  Package, 
+  MapPin, 
+  Footprints, 
+  Compass, 
+  Sparkles, 
+  HelpCircle, 
+  Newspaper, 
+  Lock 
+} from 'lucide-react';
+
+export const CATEGORY_STYLES: Record<SearchCategory, { label: string; badge: string; icon: LucideIcon }> = {
+  package:     { label: 'Tour Package',     badge: 'bg-amber-500/20 text-amber-300 border-amber-500/30', icon: Package },
+  destination: { label: 'Destination',      badge: 'bg-sky-500/20 text-sky-300 border-sky-500/30',       icon: MapPin },
+  trek:        { label: 'Trek & Trail',     badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30', icon: Footprints },
+  activity:    { label: 'Outdoor Activity', badge: 'bg-pink-500/20 text-pink-300 border-pink-500/30',    icon: Compass },
+  spiritual:   { label: 'Sacred Dham',      badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', icon: Sparkles },
+  faq:         { label: 'FAQ & Advisory',   badge: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30', icon: HelpCircle },
+  blog:        { label: 'Travel Guide',     badge: 'bg-teal-500/20 text-teal-300 border-teal-500/30',     icon: Newspaper },
+  admin:       { label: 'Staff Admin',      badge: 'bg-orange-500/20 text-orange-300 border-orange-500/30', icon: Lock },
 };
 
 import { adminStorage } from './adminStorage';

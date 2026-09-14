@@ -8,7 +8,8 @@ import {
   Check, 
   Phone, 
   ArrowRight,
-  Info
+  Info,
+  Mountain
 } from 'lucide-react';
 import { SPIRITUAL_CIRCUITS } from '../data/spiritual';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
@@ -56,7 +57,7 @@ export const SpiritualPage: React.FC<SpiritualPageProps> = ({ onOpenBookingModal
                 : 'bg-white text-slate-700 hover:bg-amber-50 hover:text-amber-800 border border-[#E2DDD5] shadow-xs'
             }`}
           >
-            <span>🕉️</span>
+            <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
             <span>{circuit.name}</span>
           </button>
         ))}
@@ -105,8 +106,14 @@ export const SpiritualPage: React.FC<SpiritualPageProps> = ({ onOpenBookingModal
                       {shrine.significance}
                     </p>
                     <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600 font-medium">
-                      <span>📍 {shrine.district}</span>
-                      <span>⛰️ {shrine.altitude}</span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3 h-3 text-brand-orange shrink-0" />
+                        <span>{shrine.district}</span>
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Mountain className="w-3 h-3 text-brand-orange shrink-0" />
+                        <span>{shrine.altitude}</span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -175,9 +182,18 @@ export const SpiritualPage: React.FC<SpiritualPageProps> = ({ onOpenBookingModal
             </div>
 
             <div className="pt-4 border-t border-white/5 space-y-2 text-[11px] text-slate-400">
-              <p>✓ Biometric registration support included</p>
-              <p>✓ Oxygen cylinders in all hill vehicles</p>
-              <p>✓ Helicopter slot coordination for Kedarnath</p>
+              <p className="flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Biometric registration support included</span>
+              </p>
+              <p className="flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Oxygen cylinders in all hill vehicles</span>
+              </p>
+              <p className="flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Helicopter slot coordination for Kedarnath</span>
+              </p>
             </div>
           </div>
         </div>

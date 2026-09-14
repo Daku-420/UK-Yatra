@@ -222,7 +222,7 @@ export const PackingChecklistGuide: React.FC = () => {
 
   const copyToClipboard = () => {
     const text = CHECKLIST_DATA.map((item) => {
-      const isDone = checkedIds[item.id] ? '✅' : '⬜';
+      const isDone = checkedIds[item.id] ? '[x]' : '[ ]';
       return `${isDone} ${item.name} (${item.desc})`;
     }).join('\n');
 
@@ -291,7 +291,16 @@ export const PackingChecklistGuide: React.FC = () => {
               />
             </div>
             <div className="flex justify-between items-center mt-2 text-[11px] text-slate-500">
-              <span>{progressPercent === 100 ? '🎉 Fully packed and trail ready!' : 'Check items as you pack into your rucksack.'}</span>
+              <span className="flex items-center gap-1">
+                {progressPercent === 100 ? (
+                  <>
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span className="text-emerald-700 font-semibold">Fully packed and trail ready!</span>
+                  </>
+                ) : (
+                  <span>Check items as you pack into your rucksack.</span>
+                )}
+              </span>
               <div className="flex gap-2">
                 <button 
                   onClick={handleCheckAll} 

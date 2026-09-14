@@ -76,7 +76,7 @@ export const WhyUsPage: React.FC = () => {
             <span className="text-brand-orange">Trust UKYatra</span>
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Himalayan travel is about safety, local knowledge, and authentic moments. Discover why UKYatra is rated 4.9★ by pilgrims, trekkers, and vacationers.
+            Himalayan travel is about safety, local knowledge, and authentic moments. Discover why UKYatra is rated 4.9/5 by pilgrims, trekkers, and vacationers.
           </p>
         </div>
 
