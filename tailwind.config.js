@@ -9,9 +9,9 @@ export default {
       colors: {
         brand: {
           dark: '#000044',
-          card: '#08084d',
-          surface: '#0e0e5a',
-          muted: '#18186e',
+          card: '#000044',
+          surface: '#000044',
+          muted: '#000044',
           orange: '#FF5A1F',
           orangeHover: '#E44A12',
           gold: '#F59E0B',

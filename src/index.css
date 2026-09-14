@@ -2,9 +2,9 @@
 
 @theme {
   --color-brand-dark: #000044;
-  --color-brand-card: #08084d;
-  --color-brand-surface: #0e0e5a;
-  --color-brand-muted: #18186e;
+  --color-brand-card: #000044;
+  --color-brand-surface: #000044;
+  --color-brand-muted: #000044;
   --color-brand-orange: #FF5A1F;
   --color-brand-orangeHover: #E44A12;
   --color-brand-orangeContrast: #C2410C;
@@ -17,9 +17,9 @@
 
 :root {
   --color-brand-dark: #000044;
-  --color-brand-card: #08084d;
-  --color-brand-surface: #0e0e5a;
-  --color-brand-muted: #18186e;
+  --color-brand-card: #000044;
+  --color-brand-surface: #000044;
+  --color-brand-muted: #000044;
   --color-brand-orange: #FF5A1F;
   --color-brand-orangeHover: #E44A12;
   --color-brand-orangeContrast: #C2410C;
@@ -51,7 +51,7 @@
 
 /* Dark Frosted Glass (For Hero Overlays, Dark Badges, and Search Bars) */
 .glass-dark {
-  background: rgba(0, 0, 68, 0.88);
+  background: rgba(0, 0, 68, 0.95);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -61,7 +61,7 @@
 
 /* Existing Navy Card Surfaces */
 .glass-card {
-  background-color: #08084d;
+  background-color: #000044;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
   color: #F8FAFC;

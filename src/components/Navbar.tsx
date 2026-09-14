@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
               {/* Dropdown Menu */}
               {activitiesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-[#1E2230]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 mt-1 w-80 bg-[#000044]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-slate-400 border-b border-white/10 mb-1 flex items-center justify-between">
                     <span>Student & Youth Experiences</span>
                     <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">New</span>
