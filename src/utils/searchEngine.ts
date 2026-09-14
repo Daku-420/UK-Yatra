@@ -12,8 +12,7 @@ export type SearchCategory =
   | 'activity' 
   | 'spiritual' 
   | 'faq' 
-  | 'blog' 
-  | 'admin';
+  | 'blog';
 
 export interface MatchOccurrence {
   sectionType: string; // e.g. "Itinerary (Day 3)", "Overview", "Inclusions", "FAQ Answer", "Top Attraction"
@@ -56,8 +55,7 @@ import {
   Compass, 
   Sparkles, 
   HelpCircle, 
-  Newspaper, 
-  Lock 
+  Newspaper 
 } from 'lucide-react';
 
 export const CATEGORY_STYLES: Record<SearchCategory, { label: string; badge: string; icon: LucideIcon }> = {
@@ -67,8 +65,7 @@ export const CATEGORY_STYLES: Record<SearchCategory, { label: string; badge: str
   activity:    { label: 'Outdoor Activity', badge: 'bg-pink-500/20 text-pink-300 border-pink-500/30',    icon: Compass },
   spiritual:   { label: 'Sacred Dham',      badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', icon: Sparkles },
   faq:         { label: 'FAQ & Advisory',   badge: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30', icon: HelpCircle },
-  blog:        { label: 'Travel Guide',     badge: 'bg-teal-500/20 text-teal-300 border-teal-500/30',     icon: Newspaper },
-  admin:       { label: 'Staff Admin',      badge: 'bg-orange-500/20 text-orange-300 border-orange-500/30', icon: Lock },
+  blog:        { label: 'Travel Guide',     badge: 'bg-teal-500/20 text-teal-300 border-teal-500/30',     icon: Newspaper }
 };
 
 import { adminStorage } from './adminStorage';
