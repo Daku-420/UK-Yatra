@@ -485,16 +485,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* 3. POPULAR EXPERIENCES ("Travel Your Way") */}
       {/* ============================================================ */}
       <section className="py-24 relative overflow-hidden border-y border-white/10">
-        {/* Scenic Himalayan Mountain Background */}
+        {/* Scenic Mountains and River Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"
-            alt="Majestic Himalayan Peaks"
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop"
+            alt="Mountains and River Valley"
             className="w-full h-full object-cover object-center"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000044]/95 via-[#000044]/82 to-[#000044]/95" />
-          <div className="absolute inset-0 bg-[#000044]/30 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -617,20 +616,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 4.5 BOOK YOUR VEHICLE / FLEET SHOWCASE */}
       {/* ============================================================ */}
-      <section className="py-24 relative overflow-hidden border-y border-white/10">
-        {/* Scenic Himalayan Mountain Pass Road Background */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop"
-            alt="Himalayan Mountain Pass Road"
-            className="w-full h-full object-cover object-center"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000044]/95 via-[#000044]/85 to-[#000044]/95" />
-          <div className="absolute inset-0 bg-[#000044]/30 backdrop-blur-[1px]" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-950/60 border-y border-white/10 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
@@ -797,16 +784,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* 5. WHY TRAVEL WITH UKYatra (Trust & Credibility) */}
       {/* ============================================================ */}
       <section className="py-24 relative overflow-hidden border-y border-white/10">
-        {/* Scenic Starry Alpine Peaks Background */}
+        {/* Scenic Mountains and River Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop"
-            alt="Himalayan Alpine Night"
+            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
+            alt="Misty Mountain Peaks and River"
             className="w-full h-full object-cover object-center"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000044]/95 via-[#000044]/85 to-[#000044]/95" />
-          <div className="absolute inset-0 bg-[#000044]/30 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1139,20 +1125,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 8. SPIRITUAL / CHAR DHAM SPOTLIGHT ("Journeys With Meaning") */}
       {/* ============================================================ */}
-      <section className="py-24 relative overflow-hidden border-y border-amber-500/20">
-        {/* Sacred Himalayan Golden Dawn Background */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071&auto=format&fit=crop"
-            alt="Sacred Himalayan Golden Dawn"
-            className="w-full h-full object-cover object-center"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000044]/95 via-[#000044]/85 to-[#000044]/95" />
-          <div className="absolute inset-0 bg-[#000044]/30 backdrop-blur-[1px]" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-amber-950/20 via-slate-900 to-slate-950 border-y border-amber-500/20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
@@ -1340,16 +1314,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* 10. INSTAGRAM & SOCIAL PROOF ("Follow Our Journey") */}
       {/* ============================================================ */}
       <section className="py-20 relative overflow-hidden border-t border-white/10">
-        {/* Scenic Himalayan Alpine Valley Background */}
+        {/* Scenic Mountains and River Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop"
-            alt="Himalayan Valley Landscape"
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop"
+            alt="Pristine Mountain Lake and River"
             className="w-full h-full object-cover object-center"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000044]/95 via-[#000044]/85 to-[#000044]/95" />
-          <div className="absolute inset-0 bg-[#000044]/30 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1430,20 +1403,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 12. FAQ SNIPPET SECTION */}
       {/* ============================================================ */}
-      <section className="py-24 relative overflow-hidden border-t border-white/10">
-        {/* Scenic Misty Himalayan Pine Woods Background */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=2076&auto=format&fit=crop"
-            alt="Misty Mountain Pine Woods"
-            className="w-full h-full object-cover object-center"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000044]/95 via-[#000044]/88 to-[#000044]/95" />
-          <div className="absolute inset-0 bg-[#000044]/30 backdrop-blur-[1px]" />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-950/60 border-t border-white/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Got Questions?"
             title="Frequently Asked"

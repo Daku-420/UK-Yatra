@@ -149,7 +149,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-4 rounded-2xl bg-[#000044] border border-[#E2DDD5] space-y-2">
+                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] space-y-2">
                   <div className="flex items-center gap-2 text-brand-orange font-bold">
                     <Plane className="w-4 h-4" />
                     <span>By Air</span>
@@ -157,7 +157,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                   <p className="text-slate-700 leading-relaxed">{destination.howToReach.byAir}</p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#000044] border border-[#E2DDD5] space-y-2">
+                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] space-y-2">
                   <div className="flex items-center gap-2 text-brand-orange font-bold">
                     <Train className="w-4 h-4" />
                     <span>By Train</span>
@@ -165,7 +165,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                   <p className="text-slate-700 leading-relaxed">{destination.howToReach.byTrain}</p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#000044] border border-[#E2DDD5] space-y-2">
+                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] space-y-2">
                   <div className="flex items-center gap-2 text-brand-orange font-bold">
                     <Car className="w-4 h-4" />
                     <span>By Road</span>
@@ -192,7 +192,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               </div>
 
               {destination.startingPrice && (
-                <div className="p-4 rounded-2xl bg-[#000044] border border-[#E2DDD5]">
+                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5]">
                   <span className="text-[10px] text-slate-500 block uppercase font-medium">Curated Packages From</span>
                   <div className="font-display font-extrabold text-2xl text-slate-900">
                     {destination.startingPrice} <span className="text-xs font-normal text-slate-500">/ person</span>

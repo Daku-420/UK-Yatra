@@ -20,7 +20,7 @@ export const CancellationPolicyPage: React.FC = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse border border-slate-200 rounded-2xl overflow-hidden text-xs">
               <thead>
-                <tr className="bg-[#000044] text-slate-900 font-bold">
+                <tr className="bg-[#F5F3EF] text-slate-900 font-bold">
                   <th className="p-3.5 border-b border-slate-200">Cancellation Notice Period</th>
                   <th className="p-3.5 border-b border-slate-200">Refund / Deduction Policy</th>
                 </tr>

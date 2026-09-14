@@ -51,7 +51,7 @@ export const HelicopterPackagesPage: React.FC<HelicopterPackagesPageProps> = ({ 
   ];
 
   return (
-    <div className="min-h-screen bg-[#000044] pt-28 pb-20">
+    <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Helicopter Packages' }]} />
 
@@ -189,7 +189,7 @@ export const HelicopterPackagesPage: React.FC<HelicopterPackagesPageProps> = ({ 
             {heliFaqs.map((faq, idx) => (
               <div 
                 key={idx} 
-                className="border border-[#E2DDD5] rounded-2xl overflow-hidden bg-[#000044] transition-colors"
+                className="border border-[#E2DDD5] rounded-2xl overflow-hidden bg-[#F5F3EF] transition-colors"
               >
                 <button
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}

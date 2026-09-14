@@ -114,7 +114,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
   };
 
   return (
-    <div className="min-h-screen bg-[#000044] pt-28 pb-20">
+    <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Book Your Vehicle & Cab Rentals' }]} />
 
@@ -177,7 +177,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                       <select
                         value={bookingForm.pickup}
                         onChange={(e) => setBookingForm({ ...bookingForm, pickup: e.target.value })}
-                        className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
                       >
                         <option value="Dehradun Airport (Jolly Grant)">Dehradun Airport</option>
                         <option value="Haridwar Railway Station">Haridwar Station</option>
@@ -192,7 +192,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                       <select
                         value={bookingForm.drop}
                         onChange={(e) => setBookingForm({ ...bookingForm, drop: e.target.value })}
-                        className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
                       >
                         <option value="Kedarnath (Sonprayag)">Kedarnath Base</option>
                         <option value="Badrinath & Joshimath">Badrinath & Joshimath</option>
@@ -210,7 +210,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                     <select
                       value={bookingForm.vehicle}
                       onChange={(e) => setBookingForm({ ...bookingForm, vehicle: e.target.value })}
-                      className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-900 font-medium focus:outline-none focus:border-brand-orange text-xs"
+                      className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-900 font-medium focus:outline-none focus:border-brand-orange text-xs"
                     >
                       <option value="Toyota Innova Crysta (Luxury 6+1 / 7+1)">Toyota Innova Crysta (6+1 SUV) - ₹4,500/day</option>
                       <option value="Force Tempo Traveller (12 / 16 / 26 Seater)">Force Tempo Traveller (12-26s) - ₹7,500/day</option>
@@ -227,7 +227,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                         required
                         value={bookingForm.date}
                         onChange={(e) => setBookingForm({ ...bookingForm, date: e.target.value })}
-                        className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
                       />
                     </div>
                     <div>
@@ -235,7 +235,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                       <select
                         value={bookingForm.passengers}
                         onChange={(e) => setBookingForm({ ...bookingForm, passengers: e.target.value })}
-                        className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 focus:outline-none focus:border-brand-orange text-xs"
                       >
                         <option value="1-2 Passengers">1-2 Passengers</option>
                         <option value="3-5 Passengers">3-5 Passengers</option>
@@ -255,7 +255,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                         placeholder="e.g. Amit Kumar"
                         value={bookingForm.name}
                         onChange={(e) => setBookingForm({ ...bookingForm, name: e.target.value })}
-                        className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-orange text-xs"
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-orange text-xs"
                       />
                     </div>
                     <div>
@@ -266,7 +266,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                         placeholder="e.g. +91 9876543210"
                         value={bookingForm.phone}
                         onChange={(e) => setBookingForm({ ...bookingForm, phone: e.target.value })}
-                        className="w-full bg-[#000044] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-orange text-xs"
+                        className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-orange text-xs"
                       />
                     </div>
                   </div>
@@ -339,7 +339,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                     <span className="px-3 py-1 rounded-full bg-orange-50 text-brand-orange text-[11px] font-bold uppercase border border-orange-200/80">
                       {vehicle.tag}
                     </span>
-                    <span className="text-sm font-bold text-slate-800 bg-[#000044] border border-[#E2DDD5] px-3 py-1 rounded-full">
+                    <span className="text-sm font-bold text-slate-800 bg-[#F5F3EF] border border-[#E2DDD5] px-3 py-1 rounded-full">
                       {vehicle.rate}
                     </span>
                   </div>
@@ -415,7 +415,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 {popularRoutes.map((route, idx) => (
-                  <tr key={idx} className="hover:bg-[#000044]/60 transition-colors">
+                  <tr key={idx} className="hover:bg-[#F5F3EF]/60 transition-colors">
                     <td className="py-3.5 font-medium text-slate-900">{route.from}</td>
                     <td className="py-3.5 font-medium text-brand-orange">{route.to}</td>
                     <td className="py-3.5 text-slate-600">{route.time}</td>
@@ -425,7 +425,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                         href={getWhatsAppUrl(`Hi UKYatra, I want to book a taxi from ${route.from} to ${route.to}.`)}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#000044] hover:bg-brand-orange text-slate-800 hover:text-white border border-[#E2DDD5] text-[11px] font-semibold transition-colors"
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#F5F3EF] hover:bg-brand-orange text-slate-800 hover:text-white border border-[#E2DDD5] text-[11px] font-semibold transition-colors"
                       >
                         <span>Book Taxi</span>
                         <ArrowRight className="w-3 h-3" />

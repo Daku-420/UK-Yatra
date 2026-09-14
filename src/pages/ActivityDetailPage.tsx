@@ -82,7 +82,7 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ onOpenBo
               </p>
 
               {activity.ageLimit && (
-                <div className="mt-6 p-4 rounded-2xl bg-[#000044] border border-[#E2DDD5] flex items-center gap-3 text-xs text-slate-700">
+                <div className="mt-6 p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] flex items-center gap-3 text-xs text-slate-700">
                   <AlertCircle className="w-5 h-5 text-brand-orange shrink-0" />
                   <span><strong>Eligibility / Age Limit:</strong> {activity.ageLimit}</span>
                 </div>
@@ -97,7 +97,7 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ onOpenBo
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {activity.topLocations.map((loc, i) => (
-                  <div key={i} className="p-3.5 rounded-xl bg-[#000044] border border-[#E2DDD5] text-xs text-slate-800 font-medium flex items-center gap-1.5">
+                  <div key={i} className="p-3.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] text-xs text-slate-800 font-medium flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                     <span>{loc}</span>
                   </div>
@@ -135,7 +135,7 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ onOpenBo
               </div>
 
               {activity.startingPrice && (
-                <div className="p-4 rounded-2xl bg-[#000044] border border-[#E2DDD5]">
+                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5]">
                   <span className="text-[10px] text-slate-500 block uppercase font-medium">Price Estimate</span>
                   <div className="font-display font-extrabold text-2xl text-slate-900">
                     {activity.startingPrice}
