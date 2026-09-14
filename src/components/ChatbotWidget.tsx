@@ -21,6 +21,7 @@ import {
   Footprints,
   Car,
   MessageSquare,
+  GripVertical,
   type LucideIcon
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
@@ -52,6 +53,128 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
   const [messages, setMessages] = useState<Message[]>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Movable Floating Button State
+  const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragRef = useRef<{
+    startX: number;
+    startY: number;
+    origX: number;
+    origY: number;
+    moved: boolean;
+  }>({ startX: 0, startY: 0, origX: 0, origY: 0, moved: false });
+
+  // Initialize position on mount
+  useEffect(() => {
+    const initX = Math.max(16, window.innerWidth - (window.innerWidth < 640 ? 76 : 96));
+    const initY = Math.max(16, window.innerHeight - (window.innerWidth < 768 ? 140 : 100));
+    setPosition({ x: initX, y: initY });
+
+    const handleResize = () => {
+      setPosition((prev) => {
+        if (!prev) return null;
+        const clampedX = Math.min(Math.max(16, prev.x), window.innerWidth - 76);
+        const clampedY = Math.min(Math.max(16, prev.y), window.innerHeight - 80);
+        return { x: clampedX, y: clampedY };
+      });
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    if (e.button !== 0) return;
+    const btn = e.currentTarget as HTMLElement;
+    btn.setPointerCapture?.(e.pointerId);
+
+    const curX = position ? position.x : window.innerWidth - 90;
+    const curY = position ? position.y : window.innerHeight - 100;
+
+    dragRef.current = {
+      startX: e.clientX,
+      startY: e.clientY,
+      origX: curX,
+      origY: curY,
+      moved: false,
+    };
+    setIsDragging(true);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+    const dx = e.clientX - dragRef.current.startX;
+    const dy = e.clientY - dragRef.current.startY;
+
+    if (Math.hypot(dx, dy) > 5) {
+      dragRef.current.moved = true;
+    }
+
+    const nextX = dragRef.current.origX + dx;
+    const nextY = dragRef.current.origY + dy;
+
+    // Keep within visible viewport
+    const clampedX = Math.min(Math.max(12, nextX), window.innerWidth - 72);
+    const clampedY = Math.min(Math.max(12, nextY), window.innerHeight - 76);
+
+    setPosition({ x: clampedX, y: clampedY });
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    try {
+      (e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId);
+    } catch {}
+
+    // Only toggle chat open if it was a click (not a drag)
+    if (!dragRef.current.moved) {
+      setIsOpen((prev) => !prev);
+    }
+  };
+
+  const getWindowPositionStyle = (): React.CSSProperties => {
+    if (typeof window === 'undefined' || !position) {
+      return { bottom: '80px', right: '16px' };
+    }
+
+    if (window.innerWidth < 640) {
+      return {
+        bottom: '80px',
+        left: '16px',
+        right: '16px',
+      };
+    }
+
+    const popupWidth = 410;
+    const popupHeight = 540;
+
+    let left: number | undefined = undefined;
+    let right: number | undefined = undefined;
+
+    if (position.x < window.innerWidth / 2) {
+      left = Math.min(Math.max(16, position.x), window.innerWidth - popupWidth - 16);
+    } else {
+      right = Math.min(Math.max(16, window.innerWidth - (position.x + 56)), window.innerWidth - popupWidth - 16);
+    }
+
+    let top: number | undefined = undefined;
+    let bottom: number | undefined = undefined;
+
+    if (position.y < popupHeight + 30) {
+      top = Math.min(position.y + 64, window.innerHeight - popupHeight - 16);
+    } else {
+      bottom = Math.min(Math.max(16, window.innerHeight - position.y + 8), window.innerHeight - popupHeight - 16);
+    }
+
+    const style: React.CSSProperties = {};
+    if (left !== undefined) style.left = `${left}px`;
+    if (right !== undefined) style.right = `${right}px`;
+    if (top !== undefined) style.top = `${top}px`;
+    if (bottom !== undefined) style.bottom = `${bottom}px`;
+
+    return style;
+  };
 
   // Initial welcome message
   useEffect(() => {
@@ -314,12 +437,15 @@ const handleResetChat = () => {
 };
 
   return (
-    <div className="fixed bottom-20 md:bottom-8 right-4 md:right-8 z-50 flex flex-col items-end">
+    <>
       {/* ============================================================ */}
       {/* 1. CHATBOT POPUP WINDOW */}
       {/* ============================================================ */}
       {isOpen && (
-        <div className="mb-3 w-[calc(100vw-32px)] sm:w-[380px] md:w-[410px] h-[540px] max-h-[75vh] sm:max-h-[600px] flex flex-col rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
+        <div 
+          style={getWindowPositionStyle()}
+          className="fixed z-50 w-[calc(100vw-32px)] sm:w-[380px] md:w-[410px] h-[540px] max-h-[75vh] sm:max-h-[600px] flex flex-col rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] overflow-hidden animate-in slide-in-from-bottom-5 duration-300"
+        >
           {/* Header */}
           <div className="px-4 py-3.5 bg-gradient-to-r from-[#FF5A1F] via-[#FF6A2A] to-[#E64A12] text-white flex items-center justify-between shadow-sm">
             <div className="flex items-center gap-2.5">
@@ -551,48 +677,70 @@ const handleResetChat = () => {
       )}
 
       {/* ============================================================ */}
-      {/* 2. FLOATING LAUNCHER BUTTON & TOOLTIP */}
+      {/* 2. MOVABLE FLOATING LAUNCHER BUTTON & TOOLTIP */}
       {/* ============================================================ */}
-      <div className="flex items-center gap-3">
-        {!isOpen && (
+      <div
+        style={position ? { left: `${position.x}px`, top: `${position.y}px` } : undefined}
+        className={`fixed z-50 select-none touch-none ${
+          !position ? 'bottom-20 md:bottom-8 right-4 md:right-8' : ''
+        } flex items-center ${
+          position && position.x < 320 ? 'flex-row' : 'flex-row-reverse'
+        } gap-3`}
+      >
+        <div className="relative flex items-center">
+          <button
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+            title="Drag to move anywhere, click to chat with AI"
+            className={`relative group w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-150 ${
+              isDragging
+                ? 'cursor-grabbing scale-105 shadow-brand-orange/60'
+                : 'cursor-grab hover:scale-110 active:scale-95'
+            } ${
+              isOpen
+                ? 'bg-slate-800 text-white border border-slate-700'
+                : 'bg-gradient-to-r from-[#FF5A1F] via-[#FF6A2A] to-[#E64A12] text-white shadow-brand-orange/40'
+            }`}
+            aria-label={isOpen ? "Close travel assistant chat" : "Open travel assistant chat"}
+          >
+            {isOpen ? (
+              <X className="w-6 h-6 pointer-events-none" />
+            ) : (
+              <>
+                <div className="relative pointer-events-none">
+                  <Bot className="w-7 h-7" />
+                  <Sparkles className="w-3.5 h-3.5 text-yellow-200 absolute -top-1 -right-1 animate-pulse" />
+                </div>
+
+                {/* Subtle drag grip indicator on hover */}
+                <div className="absolute -left-1 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-80 transition-opacity pointer-events-none">
+                  <GripVertical className="w-3.5 h-3.5 text-white/90" />
+                </div>
+
+                {/* Unread indicator */}
+                {hasUnread && (
+                  <span className="absolute top-0 right-0 flex h-3.5 w-3.5 pointer-events-none">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
+                  </span>
+                )}
+              </>
+            )}
+          </button>
+        </div>
+
+        {!isOpen && !isDragging && (
           <div
             onClick={() => setIsOpen(true)}
-            className="cursor-pointer hidden sm:flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 py-2 px-3.5 rounded-full text-xs shadow-xl transition-all duration-300 hover:scale-105"
+            className="cursor-pointer hidden sm:flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 py-2 px-3.5 rounded-full text-xs shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
           >
             <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
             <span>Have travel queries? <strong className="text-brand-orange">Chat with AI</strong></span>
           </div>
         )}
-
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={`relative group w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 ${
-            isOpen
-              ? 'bg-slate-800 text-white border border-slate-700'
-              : 'bg-gradient-to-r from-[#FF5A1F] via-[#FF6A2A] to-[#E64A12] text-white shadow-brand-orange/40'
-          }`}
-          aria-label={isOpen ? "Close travel assistant chat" : "Open travel assistant chat"}
-        >
-          {isOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <>
-              <div className="relative">
-                <Bot className="w-7 h-7" />
-                <Sparkles className="w-3.5 h-3.5 text-yellow-200 absolute -top-1 -right-1 animate-pulse" />
-              </div>
-
-              {/* Unread indicator */}
-              {hasUnread && (
-                <span className="absolute top-0 right-0 flex h-3.5 w-3.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
-                </span>
-              )}
-            </>
-          )}
-        </button>
       </div>
-    </div>
+    </>
   );
 };

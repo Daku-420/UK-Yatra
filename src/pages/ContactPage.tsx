@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from '../components/SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from '../components/SocialIcons';
 
 export const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -114,9 +114,6 @@ export const ContactPage: React.FC = () => {
               </a>
               <a href={SITE_CONFIG.social.youtube} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#F5F3EF] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="YouTube">
                 <YoutubeIcon className="w-5 h-5" />
-              </a>
-              <a href={SITE_CONFIG.social.twitter} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#F5F3EF] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="Twitter">
-                <TwitterIcon className="w-5 h-5" />
               </a>
             </div>
           </div>

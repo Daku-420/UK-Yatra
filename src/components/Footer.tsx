@@ -12,7 +12,7 @@ import {
   Lock
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
-import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
@@ -256,9 +256,6 @@ export const Footer: React.FC = () => {
                 </a>
                 <a href={SITE_CONFIG.social.youtube} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-lg bg-brand-card border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-orange hover:border-brand-orange transition-all shadow-xs" aria-label="YouTube">
                   <YoutubeIcon className="w-4.5 h-4.5" />
-                </a>
-                <a href={SITE_CONFIG.social.twitter} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-lg bg-brand-card border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-orange hover:border-brand-orange transition-all shadow-xs" aria-label="Twitter">
-                  <TwitterIcon className="w-4.5 h-4.5" />
                 </a>
               </div>
             </div>

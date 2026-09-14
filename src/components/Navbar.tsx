@@ -20,7 +20,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
-import { InstagramIcon, FacebookIcon, YoutubeIcon, TwitterIcon, WhatsAppIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 import { Logo } from './Logo';
 import { SearchBar } from './SearchBar';
 
@@ -115,9 +115,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </a>
             <a href={SITE_CONFIG.social.youtube} target="_blank" rel="noreferrer" className="p-1 rounded-md hover:bg-white/20 text-white transition-colors" aria-label="YouTube">
               <YoutubeIcon className="w-3.5 h-3.5" />
-            </a>
-            <a href={SITE_CONFIG.social.twitter} target="_blank" rel="noreferrer" className="p-1 rounded-md hover:bg-white/20 text-white transition-colors" aria-label="Twitter">
-              <TwitterIcon className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>
