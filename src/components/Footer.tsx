@@ -8,8 +8,7 @@ import {
   ShieldCheck, 
   Award, 
   Heart,
-  ChevronRight,
-  Lock
+  ChevronRight
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
@@ -271,10 +270,6 @@ export const Footer: React.FC = () => {
             <Link to="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-slate-400 hover:text-white transition-colors">Terms & Conditions</Link>
             <Link to="/cancellation-policy" className="text-slate-400 hover:text-white transition-colors">Cancellation & Refund</Link>
-            <Link to="/admin" className="text-slate-500 hover:text-brand-orange transition-colors flex items-center gap-1">
-              <Lock className="w-3 h-3 text-slate-500 shrink-0" />
-              <span>Staff Admin</span>
-            </Link>
           </div>
         </div>
       </div>

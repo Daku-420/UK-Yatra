@@ -389,19 +389,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <Car className="w-5 h-5 text-brand-orange shrink-0" />
               <span>Book Your Vehicle</span>
             </Link>
-            <Link 
-              to="/admin" 
-              onClick={() => setMobileMenuOpen(false)} 
-              className="flex items-center justify-between px-4 py-3 rounded-xl text-base font-bold transition-all bg-gradient-to-r from-brand-orange/20 to-amber-500/20 text-brand-orange border border-brand-orange/40 my-1 shadow-md"
-            >
-              <span className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-brand-orange" />
-                <span>Admin Portal</span>
-              </span>
-              <span className="text-[10px] uppercase tracking-wider bg-brand-orange text-white px-2 py-0.5 rounded-full font-bold">
-                Staff Login
-              </span>
-            </Link>
 
             {/* Activities Mobile Collapsible */}
             <div className="rounded-xl bg-white/5 border border-white/10 overflow-hidden my-1">
@@ -581,14 +568,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <Phone className="w-4 h-4 text-brand-orange" />
               <span>Call Expert: {SITE_CONFIG.phone}</span>
             </a>
-            <Link
-              to="/admin"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs transition-colors"
-            >
-              <ShieldCheck className="w-4 h-4 text-brand-orange" />
-              <span>Staff / Management Admin Portal</span>
-            </Link>
           </div>
         </div>
       )}

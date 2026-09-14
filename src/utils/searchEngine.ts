@@ -243,19 +243,6 @@ const buildComprehensiveSearchIndex = (): RawSearchDoc[] => {
     });
   });
 
-  // 8. ADMIN PORTAL
-  docs.push({
-    id: 'admin-management-portal',
-    title: 'UKYatra Executive Admin Portal',
-    subtitle: 'Staff Login • Bookings CRM • Package Catalog • Weather Advisory Control',
-    category: 'admin',
-    url: '/admin',
-    fields: [
-      { section: 'Portal Title', text: 'Admin Portal Staff Login Dashboard CRM Bookings Leads' },
-      { section: 'Executive Tools', text: 'Manage customer bookings, helicopter tokens, package pricing, weather advisories, and system settings' }
-    ]
-  });
-
   return docs;
 };
 
