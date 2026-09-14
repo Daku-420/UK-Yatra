@@ -616,8 +616,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 4.5 BOOK YOUR VEHICLE / FLEET SHOWCASE */}
       {/* ============================================================ */}
-      <section className="py-20 bg-slate-950/60 border-y border-white/10 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 relative overflow-hidden border-y border-white/10">
+        {/* Scenic Mountains and River Valley Road Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop"
+            alt="Mountains and River Valley Road"
+            className="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/85" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
@@ -1125,8 +1136,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 8. SPIRITUAL / CHAR DHAM SPOTLIGHT ("Journeys With Meaning") */}
       {/* ============================================================ */}
-      <section className="py-20 bg-gradient-to-br from-amber-950/20 via-slate-900 to-slate-950 border-y border-amber-500/20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 relative overflow-hidden border-y border-amber-500/20">
+        {/* Sacred Mountains and River Valley Dawn Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071&auto=format&fit=crop"
+            alt="Sacred Himalayan Mountains and River Valley"
+            className="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/85" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
@@ -1403,8 +1425,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 12. FAQ SNIPPET SECTION */}
       {/* ============================================================ */}
-      <section className="py-20 bg-slate-950/60 border-t border-white/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 relative overflow-hidden border-t border-white/10">
+        {/* Scenic Alpine Mountain River Valley Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
+            alt="Misty Mountains and River"
+            className="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/85" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Got Questions?"
             title="Frequently Asked"
