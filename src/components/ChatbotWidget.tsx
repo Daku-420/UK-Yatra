@@ -54,29 +54,47 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Movable Floating Button State
-  const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
+  // Movable Floating Button & Widget State
+  const [dragOffset, setDragOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
-  const dragRef = useRef<{
+  const containerRef = useRef<HTMLDivElement>(null);
+  const dragStartRef = useRef<{
     startX: number;
     startY: number;
-    origX: number;
-    origY: number;
-    moved: boolean;
-  }>({ startX: 0, startY: 0, origX: 0, origY: 0, moved: false });
+    origOffsetX: number;
+    origOffsetY: number;
+    baseLeft: number;
+    baseTop: number;
+    width: number;
+    height: number;
+    hasMoved: boolean;
+  }>({
+    startX: 0,
+    startY: 0,
+    origOffsetX: 0,
+    origOffsetY: 0,
+    baseLeft: 0,
+    baseTop: 0,
+    width: 0,
+    height: 0,
+    hasMoved: false,
+  });
 
-  // Initialize position on mount
+  // Re-clamp on window resize if moved
   useEffect(() => {
-    const initX = Math.max(16, window.innerWidth - (window.innerWidth < 640 ? 76 : 96));
-    const initY = Math.max(16, window.innerHeight - (window.innerWidth < 768 ? 140 : 100));
-    setPosition({ x: initX, y: initY });
-
     const handleResize = () => {
-      setPosition((prev) => {
-        if (!prev) return null;
-        const clampedX = Math.min(Math.max(16, prev.x), window.innerWidth - 76);
-        const clampedY = Math.min(Math.max(16, prev.y), window.innerHeight - 80);
-        return { x: clampedX, y: clampedY };
+      setDragOffset((prev) => {
+        if (prev.x === 0 && prev.y === 0) return prev;
+        const rect = containerRef.current?.getBoundingClientRect();
+        if (!rect) return prev;
+        let adjX = 0;
+        let adjY = 0;
+        if (rect.right > window.innerWidth - 12) adjX = window.innerWidth - 12 - rect.right;
+        if (rect.left < 12) adjX = 12 - rect.left;
+        if (rect.bottom > window.innerHeight - 12) adjY = window.innerHeight - 12 - rect.bottom;
+        if (rect.top < 12) adjY = 12 - rect.top;
+        if (adjX === 0 && adjY === 0) return prev;
+        return { x: prev.x + adjX, y: prev.y + adjY };
       });
     };
     window.addEventListener('resize', handleResize);
@@ -85,95 +103,73 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
 
   const handlePointerDown = (e: React.PointerEvent) => {
     if (e.button !== 0) return;
-    const btn = e.currentTarget as HTMLElement;
-    btn.setPointerCapture?.(e.pointerId);
+    const target = e.currentTarget as HTMLElement;
+    target.setPointerCapture?.(e.pointerId);
 
-    const curX = position ? position.x : window.innerWidth - 90;
-    const curY = position ? position.y : window.innerHeight - 100;
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
 
-    dragRef.current = {
+    dragStartRef.current = {
       startX: e.clientX,
       startY: e.clientY,
-      origX: curX,
-      origY: curY,
-      moved: false,
+      origOffsetX: dragOffset.x,
+      origOffsetY: dragOffset.y,
+      baseLeft: rect.left,
+      baseTop: rect.top,
+      width: rect.width,
+      height: rect.height,
+      hasMoved: false,
     };
     setIsDragging(true);
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDragging) return;
-    const dx = e.clientX - dragRef.current.startX;
-    const dy = e.clientY - dragRef.current.startY;
+    const dx = e.clientX - dragStartRef.current.startX;
+    const dy = e.clientY - dragStartRef.current.startY;
 
-    if (Math.hypot(dx, dy) > 5) {
-      dragRef.current.moved = true;
+    if (Math.hypot(dx, dy) > 4) {
+      dragStartRef.current.hasMoved = true;
     }
 
-    const nextX = dragRef.current.origX + dx;
-    const nextY = dragRef.current.origY + dy;
+    const intendedLeft = dragStartRef.current.baseLeft + dx;
+    const intendedTop = dragStartRef.current.baseTop + dy;
 
-    // Keep within visible viewport
-    const clampedX = Math.min(Math.max(12, nextX), window.innerWidth - 72);
-    const clampedY = Math.min(Math.max(12, nextY), window.innerHeight - 76);
+    const margin = 12;
+    const maxLeft = Math.max(margin, window.innerWidth - dragStartRef.current.width - margin);
+    const maxTop = Math.max(margin, window.innerHeight - dragStartRef.current.height - margin);
 
-    setPosition({ x: clampedX, y: clampedY });
+    const clampedLeft = Math.min(Math.max(margin, intendedLeft), maxLeft);
+    const clampedTop = Math.min(Math.max(margin, intendedTop), maxTop);
+
+    const effectiveDx = clampedLeft - dragStartRef.current.baseLeft;
+    const effectiveDy = clampedTop - dragStartRef.current.baseTop;
+
+    setDragOffset({
+      x: dragStartRef.current.origOffsetX + effectiveDx,
+      y: dragStartRef.current.origOffsetY + effectiveDy,
+    });
   };
 
-  const handlePointerUp = (e: React.PointerEvent) => {
+  const handleButtonPointerUp = (e: React.PointerEvent) => {
     if (!isDragging) return;
     setIsDragging(false);
     try {
       (e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId);
     } catch {}
 
-    // Only toggle chat open if it was a click (not a drag)
-    if (!dragRef.current.moved) {
+    // Only toggle chat window if it was a click/tap (not dragged)
+    if (!dragStartRef.current.hasMoved) {
       setIsOpen((prev) => !prev);
     }
   };
 
-  const getWindowPositionStyle = (): React.CSSProperties => {
-    if (typeof window === 'undefined' || !position) {
-      return { bottom: '80px', right: '16px' };
-    }
-
-    if (window.innerWidth < 640) {
-      return {
-        bottom: '80px',
-        left: '16px',
-        right: '16px',
-      };
-    }
-
-    const popupWidth = 410;
-    const popupHeight = 540;
-
-    let left: number | undefined = undefined;
-    let right: number | undefined = undefined;
-
-    if (position.x < window.innerWidth / 2) {
-      left = Math.min(Math.max(16, position.x), window.innerWidth - popupWidth - 16);
-    } else {
-      right = Math.min(Math.max(16, window.innerWidth - (position.x + 56)), window.innerWidth - popupWidth - 16);
-    }
-
-    let top: number | undefined = undefined;
-    let bottom: number | undefined = undefined;
-
-    if (position.y < popupHeight + 30) {
-      top = Math.min(position.y + 64, window.innerHeight - popupHeight - 16);
-    } else {
-      bottom = Math.min(Math.max(16, window.innerHeight - position.y + 8), window.innerHeight - popupHeight - 16);
-    }
-
-    const style: React.CSSProperties = {};
-    if (left !== undefined) style.left = `${left}px`;
-    if (right !== undefined) style.right = `${right}px`;
-    if (top !== undefined) style.top = `${top}px`;
-    if (bottom !== undefined) style.bottom = `${bottom}px`;
-
-    return style;
+  const handleHeaderPointerUp = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    try {
+      (e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId);
+    } catch {}
   };
 
   // Initial welcome message
@@ -437,18 +433,30 @@ const handleResetChat = () => {
 };
 
   return (
-    <>
+    <div
+      ref={containerRef}
+      style={{
+        transform: `translate3d(${dragOffset.x}px, ${dragOffset.y}px, 0)`,
+      }}
+      className="fixed bottom-20 md:bottom-8 right-4 md:right-8 z-50 flex flex-col items-end pointer-events-none select-none"
+    >
       {/* ============================================================ */}
       {/* 1. CHATBOT POPUP WINDOW */}
       {/* ============================================================ */}
       {isOpen && (
         <div 
-          style={getWindowPositionStyle()}
-          className="fixed z-50 w-[calc(100vw-32px)] sm:w-[380px] md:w-[410px] h-[540px] max-h-[75vh] sm:max-h-[600px] flex flex-col rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] overflow-hidden animate-in slide-in-from-bottom-5 duration-300"
+          className="pointer-events-auto mb-3 w-[calc(100vw-32px)] sm:w-[380px] md:w-[410px] h-[540px] max-h-[75vh] sm:max-h-[600px] flex flex-col rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] overflow-hidden animate-in slide-in-from-bottom-5 duration-300"
         >
-          {/* Header */}
-          <div className="px-4 py-3.5 bg-gradient-to-r from-[#FF5A1F] via-[#FF6A2A] to-[#E64A12] text-white flex items-center justify-between shadow-sm">
-            <div className="flex items-center gap-2.5">
+          {/* Header - Drag anywhere on header to move */}
+          <div
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handleHeaderPointerUp}
+            onPointerCancel={handleHeaderPointerUp}
+            title="Drag here to move the chat window"
+            className="cursor-grab active:cursor-grabbing px-4 py-3.5 bg-gradient-to-r from-[#FF5A1F] via-[#FF6A2A] to-[#E64A12] text-white flex items-center justify-between shadow-sm touch-none"
+          >
+            <div className="flex items-center gap-2.5 pointer-events-none">
               <div className="relative">
                 <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center shadow-md">
                   <Bot className="w-5 h-5" />
@@ -468,12 +476,13 @@ const handleResetChat = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 pointer-events-auto">
               {/* WhatsApp direct connect */}
               <a
                 href={getWhatsAppUrl("Hi UKYatra, I am contacting you from your website's AI Chatbot.")}
                 target="_blank"
                 rel="noreferrer"
+                onPointerDown={(e) => e.stopPropagation()}
                 title="Chat with human agent on WhatsApp"
                 className="p-2 rounded-xl text-white/90 hover:text-white hover:bg-white/20 transition-colors"
                 aria-label="Connect via WhatsApp"
@@ -484,6 +493,7 @@ const handleResetChat = () => {
               {/* Reset chat */}
               <button
                 onClick={handleResetChat}
+                onPointerDown={(e) => e.stopPropagation()}
                 title="Reset conversation"
                 className="p-2 rounded-xl text-white/90 hover:text-white hover:bg-white/20 transition-colors"
                 aria-label="Reset chat"
@@ -494,6 +504,7 @@ const handleResetChat = () => {
               {/* Close button */}
               <button
                 onClick={() => setIsOpen(false)}
+                onPointerDown={(e) => e.stopPropagation()}
                 title="Close chat"
                 className="p-2 rounded-xl text-white/90 hover:text-white hover:bg-white/20 transition-colors"
                 aria-label="Close chat"
@@ -518,16 +529,16 @@ const handleResetChat = () => {
 
                 <div className={`max-w-[85%] flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
                   <div
-                    className={`rounded-2xl px-3.5 py-2.5 shadow-sm leading-relaxed whitespace-pre-line ${
+                    className={`p-3.5 rounded-2xl leading-relaxed ${
                       msg.sender === 'user'
-                        ? 'bg-gradient-to-r from-[#FF5A1F] to-[#E64A12] text-white rounded-tr-none font-medium'
-                        : 'bg-white border border-slate-200/90 text-slate-800 rounded-tl-none font-normal'
+                        ? 'bg-gradient-to-r from-[#FF5A1F] to-[#E64A12] text-white rounded-tr-none shadow-md shadow-brand-orange/20 font-medium'
+                        : 'bg-white border border-slate-200 text-slate-800 rounded-tl-none shadow-xs font-normal'
                     }`}
                   >
-                    {msg.text}
+                    <p className="whitespace-pre-line text-xs">{msg.text}</p>
                   </div>
 
-                  {/* Contextual Action Chips / Links attached to message */}
+                  {/* Bot Interactive Options/Actions */}
                   {msg.options && msg.options.length > 0 && (
                     <div className="mt-2.5 flex flex-wrap gap-1.5 w-full">
                       {msg.options.map((opt, idx) => {
@@ -537,14 +548,14 @@ const handleResetChat = () => {
                           return (
                             <a
                               key={idx}
-                              href={getWhatsAppUrl(opt.whatsAppMsg || "Hi UKYatra, I'd like more information.")}
+                              href={getWhatsAppUrl(opt.whatsAppMsg || 'Hi UKYatra')}
                               target="_blank"
                               rel="noreferrer"
-                              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300/80 text-[11px] font-semibold transition-all shadow-xs"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-medium transition-all shadow-xs"
                             >
-                              {OptIcon && <OptIcon className="w-3.5 h-3.5 shrink-0 text-emerald-600" />}
+                              <MessageSquare className="w-3.5 h-3.5 shrink-0" />
                               <span>{opt.label}</span>
-                              <ExternalLink className="w-3 h-3" />
+                              <ExternalLink className="w-2.5 h-2.5 opacity-80" />
                             </a>
                           );
                         }
@@ -555,11 +566,11 @@ const handleResetChat = () => {
                               key={idx}
                               to={opt.link}
                               onClick={() => setIsOpen(false)}
-                              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#FF5A1F] text-slate-700 hover:text-white border border-slate-200/90 text-[11px] font-medium transition-all shadow-xs"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-orange-50 text-slate-700 hover:text-brand-orange border border-slate-200 hover:border-orange-200 text-[11px] font-medium transition-all shadow-xs"
                             >
                               {OptIcon && <OptIcon className="w-3.5 h-3.5 shrink-0 text-brand-orange" />}
                               <span>{opt.label}</span>
-                              <ChevronRight className="w-3 h-3" />
+                              <ChevronRight className="w-3 h-3 text-slate-400" />
                             </Link>
                           );
                         }
@@ -568,7 +579,7 @@ const handleResetChat = () => {
                           <button
                             key={idx}
                             onClick={opt.action}
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#FF5A1F] text-slate-700 hover:text-white border border-slate-200/90 text-[11px] font-medium transition-all shadow-xs"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-orange-50 text-slate-700 hover:text-brand-orange border border-slate-200 hover:border-orange-200 text-[11px] font-medium transition-all shadow-xs"
                           >
                             {OptIcon && <OptIcon className="w-3.5 h-3.5 shrink-0 text-brand-orange" />}
                             <span>{opt.label}</span>
@@ -598,35 +609,34 @@ const handleResetChat = () => {
                   <Bot className="w-3.5 h-3.5" />
                 </div>
                 <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-none px-3.5 py-2.5 text-slate-600 flex items-center gap-1.5 shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-bounce"></span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-bounce [animation-delay:0.15s]"></span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-bounce [animation-delay:0.3s]"></span>
-                  <span className="text-[10px] ml-1 text-slate-500 font-medium">UKYatra AI is typing...</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-bounce" style={{ animationDelay: '300ms' }} />
+                  <span className="text-[11px] text-slate-600 font-medium ml-1">UKYatra AI is thinking...</span>
                 </div>
               </div>
             )}
-
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Quick Suggestions Bar */}
-          <div className="px-3 py-2 bg-white border-t border-slate-100 flex items-center gap-1.5 overflow-x-auto hide-scrollbar text-[11px]">
+          {/* Quick Category Chips */}
+          <div className="px-3 py-2 bg-white border-t border-slate-200 flex items-center gap-1.5 overflow-x-auto text-[11px] scrollbar-none">
             <button
               onClick={() => handleSendQuery('Char Dham Dates')}
-              className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
+              className="px-2.5 py-1 rounded-full bg-orange-50 hover:bg-orange-100 text-brand-orange border border-orange-200 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <Sparkles className="w-3.5 h-3.5 text-brand-orange shrink-0" />
               <span>Char Dham</span>
             </button>
             <button
-              onClick={() => handleSendQuery('Helicopter Packages')}
+              onClick={() => handleSendQuery('Helicopter rates')}
               className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
-              <Compass className="w-3.5 h-3.5 text-sky-500 shrink-0" />
-              <span>Helicopter</span>
+              <Compass className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+              <span>Heli Yatra</span>
             </button>
             <button
-              onClick={() => handleSendQuery('Best Treks')}
+              onClick={() => handleSendQuery('Best Treks in Uttarakhand')}
               className="px-2.5 py-1 rounded-full bg-slate-100 hover:bg-orange-50 hover:text-brand-orange hover:border-orange-200 text-slate-700 border border-slate-200/80 whitespace-nowrap font-medium transition-colors flex items-center gap-1.5"
             >
               <Footprints className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
@@ -679,22 +689,25 @@ const handleResetChat = () => {
       {/* ============================================================ */}
       {/* 2. MOVABLE FLOATING LAUNCHER BUTTON & TOOLTIP */}
       {/* ============================================================ */}
-      <div
-        style={position ? { left: `${position.x}px`, top: `${position.y}px` } : undefined}
-        className={`fixed z-50 select-none touch-none ${
-          !position ? 'bottom-20 md:bottom-8 right-4 md:right-8' : ''
-        } flex items-center ${
-          position && position.x < 320 ? 'flex-row' : 'flex-row-reverse'
-        } gap-3`}
-      >
+      <div className="pointer-events-auto flex items-center gap-3">
+        {!isOpen && !isDragging && (
+          <div
+            onClick={() => setIsOpen(true)}
+            className="cursor-pointer hidden sm:flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 py-2 px-3.5 rounded-full text-xs shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
+            <span>Have travel queries? <strong className="text-brand-orange">Chat with AI</strong></span>
+          </div>
+        )}
+
         <div className="relative flex items-center">
           <button
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
-            onPointerUp={handlePointerUp}
-            onPointerCancel={handlePointerUp}
-            title="Drag to move anywhere, click to chat with AI"
-            className={`relative group w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-150 ${
+            onPointerUp={handleButtonPointerUp}
+            onPointerCancel={handleButtonPointerUp}
+            title="Drag anywhere to move, click to chat with AI"
+            className={`relative group w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-150 touch-none ${
               isDragging
                 ? 'cursor-grabbing scale-105 shadow-brand-orange/60'
                 : 'cursor-grab hover:scale-110 active:scale-95'
@@ -730,17 +743,7 @@ const handleResetChat = () => {
             )}
           </button>
         </div>
-
-        {!isOpen && !isDragging && (
-          <div
-            onClick={() => setIsOpen(true)}
-            className="cursor-pointer hidden sm:flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 py-2 px-3.5 rounded-full text-xs shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
-            <span>Have travel queries? <strong className="text-brand-orange">Chat with AI</strong></span>
-          </div>
-        )}
       </div>
-    </>
+    </div>
   );
 };
