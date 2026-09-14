@@ -223,11 +223,11 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                               {item.description}
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-[11px] text-slate-700">
-                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] flex items-center gap-1.5">
+                              <div className="p-2.5 rounded-xl bg-[#000044] border border-[#E2DDD5] flex items-center gap-1.5">
                                 <Building2 className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                                 <span><strong>Stay:</strong> {item.stay}</span>
                               </div>
-                              <div className="p-2.5 rounded-xl bg-[#F5F3EF] border border-[#E2DDD5] flex items-center gap-1.5">
+                              <div className="p-2.5 rounded-xl bg-[#000044] border border-[#E2DDD5] flex items-center gap-1.5">
                                 <Utensils className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                                 <span><strong>Meals Included:</strong> {item.meals}</span>
                               </div>

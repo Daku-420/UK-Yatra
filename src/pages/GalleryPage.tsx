@@ -131,7 +131,7 @@ export const GalleryPage: React.FC = () => {
     : galleryItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
+    <div className="min-h-screen bg-[#000044] pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Photo & Video Gallery' }]} />
 

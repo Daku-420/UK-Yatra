@@ -73,7 +73,7 @@ function AppInner() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F5F3EF] text-slate-800 selection:bg-brand-orange selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#000044] text-slate-100 selection:bg-brand-orange selection:text-white">
       {/* Sticky Global Navigation */}
       <Navbar onOpenBookingModal={() => handleOpenBookingModal()} />
 

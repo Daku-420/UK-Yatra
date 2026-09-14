@@ -60,7 +60,7 @@ export const OffersPage: React.FC<OffersPageProps> = ({ onOpenBookingModal }) =>
   const featuredDealPackages = adminStorage.getPackages().slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
+    <div className="min-h-screen bg-[#000044] pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Special Offers & Deals' }]} />
 
@@ -99,7 +99,7 @@ export const OffersPage: React.FC<OffersPageProps> = ({ onOpenBookingModal }) =>
               </div>
 
               <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-2 bg-[#F5F3EF] border border-dashed border-brand-orange/40 px-3.5 py-1.5 rounded-xl">
+                <div className="flex items-center gap-2 bg-[#000044] border border-dashed border-brand-orange/40 px-3.5 py-1.5 rounded-xl">
                   <Tag className="w-3.5 h-3.5 text-brand-orange" />
                   <span className="text-xs font-mono font-bold text-slate-900">{deal.code}</span>
                 </div>

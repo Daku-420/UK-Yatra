@@ -86,7 +86,7 @@ export const BookingEnquiryPage: React.FC = () => {
                   placeholder="e.g. Vikram Malhotra"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
                 />
               </div>
               <div>
@@ -97,7 +97,7 @@ export const BookingEnquiryPage: React.FC = () => {
                   placeholder="e.g. +91 9876543210"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
                 />
               </div>
             </div>
@@ -110,7 +110,7 @@ export const BookingEnquiryPage: React.FC = () => {
                   placeholder="e.g. vikram@example.com"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
                 />
               </div>
               <div>
@@ -118,7 +118,7 @@ export const BookingEnquiryPage: React.FC = () => {
                 <select
                   value={form.packageChoice}
                   onChange={(e) => setForm({ ...form, packageChoice: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
                 >
                   <option value="Customized Multi-City Itinerary">Customized Multi-City Itinerary</option>
                   <option value="Char Dham Pilgrimage Circuit">Complete Char Dham Pilgrimage Circuit</option>
@@ -149,7 +149,7 @@ export const BookingEnquiryPage: React.FC = () => {
                   type="date"
                   value={form.travelDate}
                   onChange={(e) => setForm({ ...form, travelDate: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
                 />
               </div>
 
@@ -158,7 +158,7 @@ export const BookingEnquiryPage: React.FC = () => {
                 <select
                   value={form.travellers}
                   onChange={(e) => setForm({ ...form, travellers: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
                 >
                   <option value="1 Solo">1 Solo</option>
                   <option value="2 Couple / Duo">2 Couple / Duo</option>
@@ -173,7 +173,7 @@ export const BookingEnquiryPage: React.FC = () => {
                 <select
                   value={form.budget}
                   onChange={(e) => setForm({ ...form, budget: e.target.value })}
-                  className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
+                  className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl px-3.5 py-2.5 text-slate-900 focus:bg-white focus:outline-none focus:border-brand-orange"
                 >
                   <option value="Standard (3-Star)">Standard (3-Star)</option>
                   <option value="Deluxe (4-Star / Boutique)">Deluxe (4-Star / Boutique)</option>
@@ -190,7 +190,7 @@ export const BookingEnquiryPage: React.FC = () => {
                 placeholder="e.g. Senior citizen parents with knee problems, require ground floor rooms, helicopter tickets, pickup from Jolly Grant airport..."
                 value={form.specialRequests}
                 onChange={(e) => setForm({ ...form, specialRequests: e.target.value })}
-                className="w-full bg-[#F5F3EF] border border-[#DCD6CC] rounded-xl p-3 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
+                className="w-full bg-[#000044] border border-[#DCD6CC] rounded-xl p-3 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-brand-orange"
               ></textarea>
             </div>
 
@@ -224,7 +224,7 @@ export const BookingEnquiryPage: React.FC = () => {
             Thank you, <strong className="text-brand-orange">{form.name}</strong>! We have registered your reservation request for <strong>{form.packageChoice}</strong> ({form.travellers} Travellers).
           </p>
 
-          <div className="p-5 rounded-2xl bg-[#F5F3EF] border border-[#DCD6CC] text-xs text-slate-700 space-y-3">
+          <div className="p-5 rounded-2xl bg-[#000044] border border-[#DCD6CC] text-xs text-slate-700 space-y-3">
             <p className="font-semibold text-slate-900 flex items-center justify-center gap-1.5">
               <Zap className="w-4 h-4 text-brand-orange shrink-0" />
               <span>Need to confirm dates immediately or speak with our coordinator?</span>

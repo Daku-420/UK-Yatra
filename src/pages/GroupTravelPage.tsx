@@ -59,7 +59,7 @@ export const GroupTravelPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
+    <div className="min-h-screen bg-[#000044] pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Corporate & Group Travel' }]} />
 
@@ -127,7 +127,7 @@ export const GroupTravelPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-7 bg-[#F5F3EF] border border-[#E2DDD5] rounded-2xl p-6 sm:p-8">
+          <div className="lg:col-span-7 bg-[#000044] border border-[#E2DDD5] rounded-2xl p-6 sm:p-8">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4 text-xs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

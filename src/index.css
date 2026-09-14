@@ -77,9 +77,12 @@
   color: #94A3B8 !important;
 }
 
-/* Navy Banner for Inner Page Hero Sections */
+/* Navy Banner for Inner Page Hero Sections with Himalayan Scenery */
 .cream-banner, .navy-banner {
   background-color: #000044;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 68, 0.92), rgba(0, 0, 68, 0.84)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.35);
 }

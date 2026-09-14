@@ -106,13 +106,13 @@ export const ContactPage: React.FC = () => {
           <div className="bg-white rounded-3xl p-6 border border-[#E2DDD5] shadow-sm">
             <h3 className="font-display font-bold text-sm text-slate-900 mb-3">Connect on Social</h3>
             <div className="flex items-center gap-3">
-              <a href={SITE_CONFIG.social.instagram} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#F5F3EF] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="Instagram">
+              <a href={SITE_CONFIG.social.instagram} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#000044] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="Instagram">
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#F5F3EF] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="Facebook">
+              <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#000044] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="Facebook">
                 <FacebookIcon className="w-5 h-5" />
               </a>
-              <a href={SITE_CONFIG.social.youtube} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#F5F3EF] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="YouTube">
+              <a href={SITE_CONFIG.social.youtube} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-[#000044] hover:bg-brand-orange text-slate-700 hover:text-white transition-all shadow-sm" aria-label="YouTube">
                 <YoutubeIcon className="w-5 h-5" />
               </a>
             </div>
