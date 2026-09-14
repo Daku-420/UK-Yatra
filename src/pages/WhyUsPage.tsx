@@ -111,7 +111,7 @@ export const WhyUsPage: React.FC = () => {
         </div>
 
         {/* CTA Card */}
-        <div className="text-center bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 max-w-4xl mx-auto shadow-2xl">
+        <div className="text-center bg-[#000044] border border-white/10 rounded-3xl p-8 sm:p-12 max-w-4xl mx-auto shadow-2xl">
           <h2 className="text-2xl sm:text-3xl font-bold font-display text-white mb-3">
             Ready to Plan Your Safe & Memorable Himalayan Holiday?
           </h2>

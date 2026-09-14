@@ -170,7 +170,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             <source src="/images/hero-bg.mp4" type="video/mp4" />
           </video>
           {/* Cinematic overlay - tuned for crystal clarity while preserving text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/20 to-[#0F172A]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/20 to-[#000044]" />
         </div>
 
         {/* Hero Content */}
@@ -605,7 +605,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       {/* ============================================================ */}
       {/* 4.5 BOOK YOUR VEHICLE / FLEET SHOWCASE */}
       {/* ============================================================ */}
-      <section className="py-20 bg-slate-900/60 border-y border-white/10 relative">
+      <section className="py-20 bg-[#000044] border-y border-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
@@ -900,7 +900,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             </div>
 
             {/* Right Interactive Form */}
-            <div className="lg:col-span-7 bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-white/10 shadow-xl">
+            <div className="lg:col-span-7 bg-[#000044] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-xl">
               {!customSubmitted ? (
                 <form onSubmit={handleCustomSubmit} className="space-y-4 text-xs">
                   <h3 className="font-display font-bold text-lg text-white mb-2 flex items-center justify-between">

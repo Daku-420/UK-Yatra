@@ -42,7 +42,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
   if (!tourPackage) {
     return (
       <div className="pt-32 pb-24 max-w-3xl mx-auto px-4 text-center">
-        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-10 shadow-2xl space-y-6">
+        <div className="bg-[#000044] border border-white/10 rounded-3xl p-10 shadow-2xl space-y-6">
           <div className="w-16 h-16 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mx-auto text-brand-orange">
             <Sparkles className="w-8 h-8" />
           </div>

@@ -360,9 +360,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
         </div>
       </nav>
 
-      {/* Mobile Drawer Menu - Midnight Slate Navy Matching Stats Card */}
+      {/* Mobile Drawer Menu - Midnight Slate Navy Matching #000044 */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[90px] bottom-0 bg-[#262937]/98 backdrop-blur-2xl border-t border-white/10 z-40 overflow-y-auto p-5 animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[90px] bottom-0 bg-[#000044]/98 backdrop-blur-2xl border-t border-white/10 z-40 overflow-y-auto p-5 animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
           <div className="space-y-2">
             <div className="pb-3 mb-2 border-b border-white/10 px-2 flex items-center justify-between">
               <Logo size="sm" />

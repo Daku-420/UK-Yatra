@@ -170,7 +170,7 @@ export const AdminPortalPage: React.FC = () => {
       )}
 
       {/* --- SIDEBAR NAVIGATION --- */}
-      <aside className="w-full md:w-64 bg-[#0F172A] border-r border-slate-800/80 flex flex-col justify-between shrink-0">
+      <aside className="w-full md:w-64 bg-[#000044] border-r border-slate-800/80 flex flex-col justify-between shrink-0">
         <div>
           {/* Brand Header */}
           <div className="p-5 border-b border-slate-800 flex items-center justify-between">

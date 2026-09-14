@@ -8,10 +8,10 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: '#080C11',
-          card: '#101721',
-          surface: '#17202D',
-          muted: '#253245',
+          dark: '#000044',
+          card: '#08084d',
+          surface: '#0e0e5a',
+          muted: '#18186e',
           orange: '#FF5A1F',
           orangeHover: '#E44A12',
           gold: '#F59E0B',

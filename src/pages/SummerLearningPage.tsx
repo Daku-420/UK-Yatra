@@ -272,7 +272,7 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
         </div>
 
         {/* Batch Calendar Schedule */}
-        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-20 shadow-xl">
+        <div className="bg-[#000044] text-white rounded-3xl p-8 sm:p-12 mb-20 shadow-xl border border-white/10">
           <div className="max-w-3xl mb-8">
             <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Summer Schedule</span>
             <h3 className="text-2xl sm:text-3xl font-bold font-display text-white mt-1 mb-2">
