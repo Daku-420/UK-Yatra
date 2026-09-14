@@ -29,3 +29,7 @@ dist-ssr
 public/images/*.mov
 public/images/*.webm
 public/images/*(*)*.mp4
+# Office & temp files
+~$*
+*.tmp
+*.docx

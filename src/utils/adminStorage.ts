@@ -250,13 +250,17 @@ export const adminStorage = {
       });
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
-        localStorage.setItem(STORAGE_KEYS.PACKAGES, JSON.stringify([]));
-        return [];
+        return TOUR_PACKAGES;
       }
       const parsed = JSON.parse(stored);
-      return Array.isArray(parsed) ? parsed : [];
+      if (!Array.isArray(parsed) || parsed.length === 0) {
+        return TOUR_PACKAGES;
+      }
+      const storedIds = new Set(parsed.map((p: TourPackage) => p.id));
+      const unincluded = TOUR_PACKAGES.filter(p => !storedIds.has(p.id));
+      return [...parsed, ...unincluded];
     } catch {
-      return [];
+      return TOUR_PACKAGES;
     }
   },
 
