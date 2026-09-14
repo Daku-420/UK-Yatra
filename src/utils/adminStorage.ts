@@ -257,8 +257,6 @@ export const adminStorage = {
 
   exportBookingsCSV: (): void => {
     const bookings = adminStorage.getBookings();
-    if (!bookings.length) return;
-
     const headers = ['Booking ID', 'Date', 'Customer Name', 'Phone', 'Email', 'Destination', 'Package', 'Travel Date', 'Travellers', 'Budget', 'Status', 'Estimated Revenue (INR)', 'Special Notes', 'Staff Remarks'];
     const rows = bookings.map(b => [
       b.id,
@@ -282,6 +280,24 @@ export const adminStorage = {
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
     link.setAttribute('download', `UKYatra_Leads_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  },
+
+  exportAllDataJSON: (): void => {
+    const data = {
+      exportedAt: new Date().toISOString(),
+      bookings: adminStorage.getBookings(),
+      packages: adminStorage.getPackages(),
+      reviews: adminStorage.getReviews(),
+      weather: adminStorage.getWeather(),
+      settings: adminStorage.getSettings(),
+    };
+    const jsonStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data, null, 2));
+    const link = document.createElement('a');
+    link.setAttribute('href', jsonStr);
+    link.setAttribute('download', `UKYatra_Full_Data_Backup_${new Date().toISOString().slice(0, 10)}.json`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

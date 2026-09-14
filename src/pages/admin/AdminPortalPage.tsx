@@ -24,7 +24,6 @@ import {
   Edit3, 
   Trash2, 
   Save, 
-  RotateCcw, 
   Sparkles, 
   ChevronRight, 
   ArrowUpRight, 
@@ -1034,36 +1033,36 @@ export const AdminPortalPage: React.FC = () => {
               </div>
             </form>
 
-            {/* System Actions & Reset */}
+            {/* Data Export & Download */}
             <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
               <h3 className="text-base font-bold text-white border-b border-slate-800 pb-3">
-                Data Maintenance & Reset
+                Data Export & Download
               </h3>
               <p className="text-xs text-slate-400">
-                You can export a full backup of all leads or reset demo sample records anytime.
+                Download and export all customer leads, booking records, and inquiries at once.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <button
                   type="button"
-                  onClick={() => adminStorage.exportBookingsCSV()}
-                  className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white border border-slate-700 transition-colors flex items-center gap-1.5"
+                  onClick={() => {
+                    adminStorage.exportBookingsCSV();
+                    showToast('Leads CSV downloaded successfully');
+                  }}
+                  className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white border border-slate-700 transition-colors flex items-center gap-2"
                 >
                   <Download className="w-4 h-4 text-brand-orange" />
-                  <span>Download Leads CSV</span>
+                  <span>Download Leads (CSV)</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => {
-                    if (window.confirm('Reset all demo data to factory defaults?')) {
-                      adminStorage.resetAllDemoData();
-                      reloadData();
-                      showToast('Demo data reset to factory state');
-                    }
+                    adminStorage.exportAllDataJSON();
+                    showToast('Complete backup (JSON) downloaded successfully');
                   }}
-                  className="px-4 py-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-xs font-semibold text-rose-300 border border-rose-500/30 transition-colors flex items-center gap-1.5"
+                  className="px-4 py-2.5 rounded-xl bg-slate-850 hover:bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700 transition-colors flex items-center gap-2"
                 >
-                  <RotateCcw className="w-4 h-4 text-rose-400" />
-                  <span>Reset Demo Data</span>
+                  <Download className="w-4 h-4 text-emerald-400" />
+                  <span>Download All Data (JSON)</span>
                 </button>
               </div>
             </div>
