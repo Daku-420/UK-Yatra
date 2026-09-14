@@ -434,51 +434,59 @@ export const AdminPortalPage: React.FC = () => {
                 </div>
 
                 <div className="divide-y divide-slate-800/80">
-                  {bookings.slice(0, 5).map(lead => (
-                    <div
-                      key={lead.id}
-                      onClick={() => {
-                        setSelectedBooking(lead);
-                        setActiveTab('bookings');
-                      }}
-                      className="py-3.5 flex items-center justify-between gap-4 hover:bg-slate-800/40 p-2 rounded-xl transition-colors cursor-pointer group"
-                    >
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors truncate">
-                            {lead.name}
-                          </span>
-                          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                            lead.status === 'Confirmed' ? 'bg-emerald-500/20 text-emerald-300' :
-                            lead.status === 'Pending' ? 'bg-amber-500/20 text-amber-300' :
-                            lead.status === 'Contacted' ? 'bg-blue-500/20 text-blue-300' :
-                            'bg-slate-700 text-slate-300'
-                          }`}>
-                            {lead.status}
-                          </span>
-                        </div>
-                        <div className="text-xs text-slate-400 truncate mt-0.5">
-                          {lead.destination} • {lead.travellers} • {lead.travelDate || 'Flexible dates'}
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2 shrink-0">
-                        <a
-                          href={getWhatsAppUrl(`Hi ${lead.name}, regarding your UKYatra enquiry (${lead.id}) for ${lead.destination}...`)}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={e => e.stopPropagation()}
-                          className="p-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 transition-colors"
-                          title="Message on WhatsApp"
-                        >
-                          <WhatsAppIcon className="w-3.5 h-3.5 fill-emerald-400" />
-                        </a>
-                        <span className="text-slate-500 group-hover:text-slate-300">
-                          <ChevronRight className="w-4 h-4" />
-                        </span>
-                      </div>
+                  {bookings.length === 0 ? (
+                    <div className="py-10 text-center text-slate-400">
+                      <Users className="w-8 h-8 mx-auto mb-2 text-slate-600" />
+                      <p className="font-semibold text-sm text-slate-300">No customer enquiries yet</p>
+                      <p className="text-xs text-slate-500 mt-1">Real incoming bookings and enquiries from the website will appear here.</p>
                     </div>
-                  ))}
+                  ) : (
+                    bookings.slice(0, 5).map(lead => (
+                      <div
+                        key={lead.id}
+                        onClick={() => {
+                          setSelectedBooking(lead);
+                          setActiveTab('bookings');
+                        }}
+                        className="py-3.5 flex items-center justify-between gap-4 hover:bg-slate-800/40 p-2 rounded-xl transition-colors cursor-pointer group"
+                      >
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors truncate">
+                              {lead.name}
+                            </span>
+                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                              lead.status === 'Confirmed' ? 'bg-emerald-500/20 text-emerald-300' :
+                              lead.status === 'Pending' ? 'bg-amber-500/20 text-amber-300' :
+                              lead.status === 'Contacted' ? 'bg-blue-500/20 text-blue-300' :
+                              'bg-slate-700 text-slate-300'
+                            }`}>
+                              {lead.status}
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-400 truncate mt-0.5">
+                            {lead.destination} • {lead.travellers} • {lead.travelDate || 'Flexible dates'}
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 shrink-0">
+                          <a
+                            href={getWhatsAppUrl(`Hi ${lead.name}, regarding your UKYatra enquiry (${lead.id}) for ${lead.destination}...`)}
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={e => e.stopPropagation()}
+                            className="p-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 transition-colors"
+                            title="Message on WhatsApp"
+                          >
+                            <WhatsAppIcon className="w-3.5 h-3.5 fill-emerald-400" />
+                          </a>
+                          <span className="text-slate-500 group-hover:text-slate-300">
+                            <ChevronRight className="w-4 h-4" />
+                          </span>
+                        </div>
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
 
@@ -621,8 +629,8 @@ export const AdminPortalPage: React.FC = () => {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-800/60">
-                    {bookings
-                      .filter(b => {
+                    {(() => {
+                      const filtered = bookings.filter(b => {
                         const matchStatus = statusFilter === 'All' || b.status === statusFilter;
                         const matchSearch = !bookingSearch || 
                           b.name.toLowerCase().includes(bookingSearch.toLowerCase()) ||
@@ -630,8 +638,25 @@ export const AdminPortalPage: React.FC = () => {
                           b.destination.toLowerCase().includes(bookingSearch.toLowerCase()) ||
                           (b.packageName || '').toLowerCase().includes(bookingSearch.toLowerCase());
                         return matchStatus && matchSearch;
-                      })
-                      .map(lead => (
+                      });
+
+                      if (filtered.length === 0) {
+                        return (
+                          <tr>
+                            <td colSpan={6} className="py-16 text-center text-slate-400">
+                              <Users className="w-10 h-10 mx-auto mb-3 text-slate-600 opacity-60" />
+                              <p className="font-bold text-sm text-slate-200">No Leads Found</p>
+                              <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
+                                {bookingSearch || statusFilter !== 'All' 
+                                  ? 'No records match your current search or status filter criteria.' 
+                                  : 'Real traveler inquiries submitted through the website forms will appear here.'}
+                              </p>
+                            </td>
+                          </tr>
+                        );
+                      }
+
+                      return filtered.map(lead => (
                         <tr
                           key={lead.id}
                           onClick={() => setSelectedBooking(lead)}
@@ -704,7 +729,8 @@ export const AdminPortalPage: React.FC = () => {
                             </div>
                           </td>
                         </tr>
-                      ))}
+                      ));
+                    })()}
                   </tbody>
                 </table>
               </div>
@@ -1063,6 +1089,20 @@ export const AdminPortalPage: React.FC = () => {
                 >
                   <Download className="w-4 h-4 text-emerald-400" />
                   <span>Download All Data (JSON)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (window.confirm('Are you sure you want to clear all leads? This permanently removes leads and starts with a clean empty list. It will NOT restore any demo records.')) {
+                      adminStorage.clearAllBookings();
+                      reloadData();
+                      showToast('All leads cleared');
+                    }
+                  }}
+                  className="px-4 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-xs font-semibold text-rose-400 border border-rose-500/30 transition-colors flex items-center gap-2 sm:ml-auto"
+                >
+                  <Trash2 className="w-4 h-4" />
+                  <span>Clear All Leads</span>
                 </button>
               </div>
             </div>

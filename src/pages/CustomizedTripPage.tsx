@@ -23,6 +23,7 @@ import {
 import { SITE_CONFIG, getCustomTripWhatsAppUrl } from '../config/siteConfig';
 import { DESTINATIONS } from '../data/destinations';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { adminStorage } from '../utils/adminStorage';
 import { WhatsAppIcon } from '../components/SocialIcons';
 
 export const CustomizedTripPage: React.FC = () => {
@@ -82,6 +83,18 @@ export const CustomizedTripPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    adminStorage.addBooking({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      destination: formData.destinations.join(', ') || 'Custom Uttarakhand Itinerary',
+      packageName: `Custom Itinerary (${formData.tripDuration})`,
+      travelDate: formData.approxDate || formData.travelMonth || 'Flexible',
+      travellers: `${formData.travellerCount} Persons (${formData.travellersType})`,
+      budget: formData.stayPreference,
+      specialRequests: `City: ${formData.city || 'N/A'}. Themes: ${formData.themes.join(', ')}. Notes: ${formData.specialNotes || 'None'}`,
+      source: 'Custom Planner'
+    });
     setSubmitted(true);
   };
 

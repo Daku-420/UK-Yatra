@@ -55,94 +55,15 @@ const STORAGE_KEYS = {
   AUTH: 'ukyatra_admin_auth'
 };
 
-// Seed realistic initial bookings
-const INITIAL_BOOKINGS: AdminBooking[] = [
-  {
-    id: 'UKY-8492',
-    name: 'Vikram & Ananya Singhania',
-    phone: '+91 98201 54321',
-    email: 'vikram.singhania@gmail.com',
-    destination: 'Kedarnath & Badrinath',
-    packageName: 'Kedarnath Divine Yatra & Valley Escape',
-    travelDate: '2026-10-12',
-    travellers: '4 Adults',
-    budget: 'Luxury (4-Star / Helicopter)',
-    specialRequests: 'Elderly parents travelling; need VIP Darshan assistance and helicopter shuttle from Phata.',
-    status: 'Confirmed',
-    staffNotes: 'Helicopter tickets booked via GMVN Sersi slot. Token advance ₹40,000 received.',
-    createdAt: '2026-09-11T14:32:00.000Z',
-    source: 'Booking Page',
-    totalAmountEstimated: 125000
-  },
-  {
-    id: 'UKY-8488',
-    name: 'Dr. Priya Nambiar',
-    phone: '+91 94470 12890',
-    email: 'priya.nambiar@apollo.org',
-    destination: 'Full Char Dham Circuit',
-    packageName: 'Sacred Char Dham Classic Circuit',
-    travelDate: '2026-10-20',
-    travellers: '2 Adults',
-    budget: 'Deluxe (Cottages)',
-    specialRequests: 'Doctor group interested in medical backup and private Innova Crysta for full 10-day circuit.',
-    status: 'Contacted',
-    staffNotes: 'Quotation sent on WhatsApp. Waiting for route confirmation via Rishikesh departure.',
-    createdAt: '2026-09-12T09:15:00.000Z',
-    source: 'Enquiry Modal',
-    totalAmountEstimated: 98000
-  },
-  {
-    id: 'UKY-8475',
-    name: 'Rohan Deshmukh & Friends',
-    phone: '+91 97654 32198',
-    email: 'rohan.desh@techm.com',
-    destination: 'Chopta Tungnath & Chandrashila',
-    packageName: 'Chopta Tungnath & Chandrashila Alpine Trek',
-    travelDate: '2026-10-02',
-    travellers: '6 Youths',
-    budget: 'Adventure / Camps',
-    specialRequests: 'College reunion trek; need dome tents at Deoriatal and alpine guide for Chandrashila sunrise.',
-    status: 'Pending',
-    staffNotes: 'Fresh lead from Instagram campaign. Requires group discount breakdown.',
-    createdAt: '2026-09-12T18:45:00.000Z',
-    source: 'Custom Planner',
-    totalAmountEstimated: 54000
-  },
-  {
-    id: 'UKY-8461',
-    name: 'Suresh Chandra Sharma',
-    phone: '+91 98112 34567',
-    email: 'scsharma.advocate@delhibar.in',
-    destination: 'Yamunotri & Gangotri',
-    packageName: 'Do Dham Sacred Pilgrimage',
-    travelDate: '2026-10-25',
-    travellers: '3 Adults',
-    budget: 'Standard',
-    specialRequests: 'Pickup required from Dehradun Airport (Jolly Grant) with Hindi speaking driver.',
-    status: 'Completed',
-    staffNotes: 'Trip concluded successfully. Client left 5-star review.',
-    createdAt: '2026-09-08T11:20:00.000Z',
-    source: 'Enquiry Modal',
-    totalAmountEstimated: 68000
-  },
-  {
-    id: 'UKY-8453',
-    name: 'Aakash Mehra',
-    phone: '+91 99887 76655',
-    email: 'aakash.m@startup.co',
-    destination: 'Valley of Flowers & Hemkund',
-    packageName: 'Valley of Flowers UNESCO Floral Sanctuary Trek',
-    travelDate: '2026-09-28',
-    travellers: '2 Trekkers',
-    budget: 'Standard',
-    specialRequests: 'Looking for botanical flora guide and pony assistance if needed.',
-    status: 'Cancelled',
-    staffNotes: 'Cancelled due to client work emergency. Deposit credit note issued for next season.',
-    createdAt: '2026-09-05T16:10:00.000Z',
-    source: 'Booking Page',
-    totalAmountEstimated: 38000
-  }
-];
+// Known demo booking IDs to permanently purge from storage
+const DEMO_BOOKING_IDS = new Set([
+  'UKY-8492',
+  'UKY-8488',
+  'UKY-8475',
+  'UKY-8461',
+  'UKY-8453'
+]);
+
 
 // Seed initial weather advisories
 const INITIAL_WEATHER: AdminWeatherAdvisory[] = [
@@ -210,16 +131,34 @@ export const adminStorage = {
   // --- BOOKINGS & LEADS ---
   getBookings: (): AdminBooking[] => {
     try {
+      ['ukyatra_admin_bookings_v1', 'ukyatra_admin_bookings_legacy'].forEach(k => {
+        if (localStorage.getItem(k)) localStorage.removeItem(k);
+      });
       const stored = localStorage.getItem(STORAGE_KEYS.BOOKINGS);
       if (!stored) {
-        localStorage.setItem(STORAGE_KEYS.BOOKINGS, JSON.stringify(INITIAL_BOOKINGS));
-        return INITIAL_BOOKINGS;
+        localStorage.setItem(STORAGE_KEYS.BOOKINGS, JSON.stringify([]));
+        return [];
       }
-      return JSON.parse(stored);
+      const parsed = JSON.parse(stored);
+      if (!Array.isArray(parsed)) {
+        localStorage.setItem(STORAGE_KEYS.BOOKINGS, JSON.stringify([]));
+        return [];
+      }
+      // Purge any lingering demo/system-generated test bookings
+      const clean = parsed.filter(b => b && b.id && !DEMO_BOOKING_IDS.has(b.id));
+      if (clean.length !== parsed.length) {
+        localStorage.setItem(STORAGE_KEYS.BOOKINGS, JSON.stringify(clean));
+      }
+      return clean;
     } catch {
-      return INITIAL_BOOKINGS;
+      return [];
     }
   },
+
+  clearAllBookings: (): void => {
+    localStorage.setItem(STORAGE_KEYS.BOOKINGS, JSON.stringify([]));
+  },
+
 
   addBooking: (booking: Omit<AdminBooking, 'id' | 'createdAt' | 'status'>): AdminBooking => {
     const bookings = adminStorage.getBookings();
@@ -410,10 +349,7 @@ export const adminStorage = {
 
   // --- RESET DEMO DATA ---
   resetAllDemoData: (): void => {
-    localStorage.removeItem(STORAGE_KEYS.BOOKINGS);
-    localStorage.removeItem(STORAGE_KEYS.PACKAGES);
-    localStorage.removeItem(STORAGE_KEYS.WEATHER);
-    localStorage.removeItem(STORAGE_KEYS.REVIEWS);
-    localStorage.removeItem(STORAGE_KEYS.SETTINGS);
+    localStorage.setItem(STORAGE_KEYS.BOOKINGS, JSON.stringify([]));
+    localStorage.setItem(STORAGE_KEYS.PACKAGES, JSON.stringify([]));
   }
 };

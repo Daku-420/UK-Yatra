@@ -12,6 +12,8 @@ import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from '../components/SocialIcons';
 
+import { adminStorage } from '../utils/adminStorage';
+
 export const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -25,6 +27,18 @@ export const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    adminStorage.addBooking({
+      name: formState.name,
+      phone: formState.phone,
+      email: formState.email,
+      destination: formState.subject || 'General Uttarakhand Inquiry',
+      packageName: formState.subject || 'Contact Page Message',
+      travelDate: 'Flexible',
+      travellers: '1 Inquiry',
+      budget: 'Standard',
+      specialRequests: formState.message,
+      source: 'Contact Form'
+    });
     setSubmitted(true);
   };
 
