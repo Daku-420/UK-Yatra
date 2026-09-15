@@ -215,3 +215,24 @@ header *::selection,
   }
 }
 
+/* Mobile-Specific UX Enhancements */
+@media (max-width: 640px) {
+  /* Prevent iOS Safari auto-zoom on input focus */
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Momentum scrolling on iOS */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Tap highlight optimization */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+

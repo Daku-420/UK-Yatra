@@ -7,7 +7,7 @@ export const WhatsAppButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-20 md:bottom-8 left-4 md:left-8 z-40 flex flex-col items-start">
+    <div className="hidden md:flex fixed bottom-8 left-8 z-40 flex-col items-start">
       {/* Floating Popup Bubble */}
       {isOpen && (
         <div className="mb-3 w-72 sm:w-80 bg-white border border-[#DCD6CC] rounded-2xl p-4 shadow-2xl animate-in slide-in-from-bottom-3 duration-200">
