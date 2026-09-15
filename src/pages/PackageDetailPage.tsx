@@ -303,22 +303,24 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             <div className="sticky top-28 bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-lg space-y-6">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-wider text-brand-orange">
-                  All-Inclusive Price
+                  Tariff & Quotation
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
-                  <span className="font-display font-extrabold text-3xl text-slate-900">
-                    {tourPackage.startingPrice}
+                  <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                    {tourPackage.startingPrice || 'Pricing on Request'}
                   </span>
-                  {tourPackage.originalPrice && (
-                    <span className="text-sm text-slate-400 line-through">
-                      {tourPackage.originalPrice}
-                    </span>
+                  {tourPackage.originalPrice && !tourPackage.startingPrice?.includes('Request') && (
+                    <>
+                      <span className="text-sm text-slate-400 line-through">
+                        {tourPackage.originalPrice}
+                      </span>
+                      <span className="text-xs text-slate-600">/ person</span>
+                    </>
                   )}
-                  <span className="text-xs text-slate-600">/ person</span>
                 </div>
-                <p className="text-[11px] text-emerald-700 font-medium mt-1 flex items-center gap-1">
+                <p className="text-[11px] text-emerald-700 font-medium mt-1.5 flex items-center gap-1">
                   <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span>Price matching & customizable inclusions</span>
+                  <span>Custom quotes tailored to group size, dates & helicopter slots</span>
                 </p>
               </div>
 

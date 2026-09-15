@@ -48,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages_v4',
+  PACKAGES: 'ukyatra_admin_packages_v5',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -245,27 +245,34 @@ export const adminStorage = {
   // --- TOUR PACKAGES ---
   getPackages: (): TourPackage[] => {
     try {
-      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom'].forEach(k => {
+      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom', 'ukyatra_admin_packages_v4'].forEach(k => {
         if (localStorage.getItem(k)) localStorage.removeItem(k);
       });
-      const sanitizeTitle = (t: string) => t.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim();
+      const sanitizePkg = (p: TourPackage): TourPackage => ({
+        ...p,
+        title: p.title.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim(),
+        startingPrice: p.startingPrice && !p.startingPrice.includes('₹') ? p.startingPrice : 'Pricing on Request',
+        originalPrice: null
+      });
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
-        return TOUR_PACKAGES.map(p => ({ ...p, title: sanitizeTitle(p.title) }));
+        return TOUR_PACKAGES.map(sanitizePkg);
       }
       const parsed = JSON.parse(stored);
       if (!Array.isArray(parsed) || parsed.length === 0) {
-        return TOUR_PACKAGES.map(p => ({ ...p, title: sanitizeTitle(p.title) }));
+        return TOUR_PACKAGES.map(sanitizePkg);
       }
       const storedIds = new Set(parsed.map((p: TourPackage) => p.id));
       const unincluded = TOUR_PACKAGES.filter(p => !storedIds.has(p.id));
-      return [...parsed, ...unincluded].map(p => ({
-        ...p,
-        title: sanitizeTitle(p.title)
-      }));
+      return [...parsed, ...unincluded].map(sanitizePkg);
     } catch {
-      const sanitizeTitle = (t: string) => t.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim();
-      return TOUR_PACKAGES.map(p => ({ ...p, title: sanitizeTitle(p.title) }));
+      const sanitizePkg = (p: TourPackage): TourPackage => ({
+        ...p,
+        title: p.title.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim(),
+        startingPrice: 'Pricing on Request',
+        originalPrice: null
+      });
+      return TOUR_PACKAGES.map(sanitizePkg);
     }
   },
 
