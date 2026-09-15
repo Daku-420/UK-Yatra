@@ -9,7 +9,7 @@ import { TourPackage } from '../types';
 export const TOUR_PACKAGES: TourPackage[] = [
   {
     "id": "uky-heli-01-luxury-char-dham-by-heli-ex-dehradun-5n-6d-2026",
-    "title": "Luxury Char Dham Yatra by Helicopter (5N/6D) – Ex-Dehradun",
+    "title": "Luxury Char Dham Yatra by Helicopter (5N/6D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "5 Nights / 6 Days",
     "days": 6,
@@ -29,7 +29,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "highlights": [
       "VIP priority temple darshan at sacred Himalayan shrines",
       "Spectacular aerial views of snow-clad Garhwal Himalayan peaks",
-      "Complete VIP ground handling and escort at Ex-Dehradun and helipads",
+      "Complete VIP ground handling and escort at Dehradun and helipads",
       "Luxury stays and premium curated dining throughout the yatra",
       "Time-efficient itinerary ideal for seniors and busy professionals"
     ],
@@ -101,7 +101,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-heli-02-do-dham-by-heli-ex-dehradun-3n-4d-2026",
-    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (Luxury 3N/4D) – Ex-Dehradun",
+    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (Luxury 3N/4D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "3 Nights / 4 Days",
     "days": 4,
@@ -121,7 +121,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "highlights": [
       "VIP priority temple darshan at sacred Himalayan shrines",
       "Spectacular aerial views of snow-clad Garhwal Himalayan peaks",
-      "Complete VIP ground handling and escort at Ex-Dehradun and helipads",
+      "Complete VIP ground handling and escort at Dehradun and helipads",
       "Luxury stays and premium curated dining throughout the yatra",
       "Time-efficient itinerary ideal for seniors and busy professionals"
     ],
@@ -179,7 +179,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-heli-03-do-dham-by-heli-ex-dehradun-same-day-2026",
-    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (Luxury Same Day) – Ex-Dehradun",
+    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (Luxury Same Day)",
     "destination": "Kedarnath & Badrinath",
     "duration": "Same Day VIP Return (1 Day)",
     "days": 1,
@@ -199,14 +199,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "highlights": [
       "VIP priority temple darshan at sacred Himalayan shrines",
       "Spectacular aerial views of snow-clad Garhwal Himalayan peaks",
-      "Complete VIP ground handling and escort at Ex-Dehradun and helipads",
+      "Complete VIP ground handling and escort at Dehradun and helipads",
       "Luxury stays and premium curated dining throughout the yatra",
       "Time-efficient itinerary ideal for seniors and busy professionals"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Same Day VIP Helicopter Pilgrimage: Ex-Dehradun – Kedarnath – Badrinath – Ex-Dehradun",
+        "title": "Same Day VIP Helicopter Pilgrimage: Dehradun – Kedarnath – Badrinath – Dehradun",
         "description": "UK Yatra is a premier Uttarakhand-based tour and travel company with proven expertise in operating and managing Do Dham Yatra by Helicopter, covering the sacred shrines of Kedarnath and Badrinath. With years of hands-on experience in helicopter pilgrimage operations, UK Yatra has built a strong reputation as a trusted and preferred partner for high-reliability Himalayan yatra services. “UK” stands for Uttarakhand, the spiritual heart of the Himalayas while “Yatra” signifies a purposeful and transformative journey. Supported by a robust local operational network, professional ground teams at each helipad and shrine, and deep domain knowledge of helicopter logistics, UK Yatra ensures safe, time-efficient, transparent, and well-coordinated Do Dham helicopter journeys. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra operates with complete regulatory integrity. Our customer-first approach, ethical practices, and realistic itinerary planning deliver comfort, clarity, and spiritual fulfillment, making every Do Dham helicopter yatra a seamless and memorable experience. KEDARNATH: Set in the beautiful Mandakini valley, cupped by lofty peaks, the majestic Kedarnath temple stands on a glacial terrace, remnant of an ancient glacier – long since melted. This is Lord Shiv's territory – and the region is a living testimony to his adventures and exploits. The temple is believed to have been built by the pandavs, protagonists of the Mahabharata, as a tribute to Lord Shiva having forgiven them for fratricide after an exciting chase through the Himalayas. The journey to Kedarnath – The most significant of the 12 Jyotirlingas located in different parts of India -- is to relive these ancient tales and legends, and to become one with God. Dedicated staﬀ at both places for all coordination and comfortable Darshan. We have included every little detail, comfort & charge applicable from Dehradun Helipad to back Dehradun Helipad that you will encounter on your Do Dham Yatra. After booking with us you are ready to move on a journey of a lifetime.",
         "stay": "Same Day Return (No Night Stay Required)",
         "meals": "In-Flight Breakfast & Festive Lunch Included"
@@ -236,7 +236,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-heli-04-do-dham-by-mi17-ex-dehradun-3n-4d-2026",
-    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (MI-17 VIP 3N/4D) – Ex-Dehradun",
+    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (MI-17 VIP 3N/4D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "3 Nights / 4 Days",
     "days": 4,
@@ -256,7 +256,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "highlights": [
       "VIP priority temple darshan at sacred Himalayan shrines",
       "Spectacular aerial views of snow-clad Garhwal Himalayan peaks",
-      "Complete VIP ground handling and escort at Ex-Dehradun and helipads",
+      "Complete VIP ground handling and escort at Dehradun and helipads",
       "Luxury stays and premium curated dining throughout the yatra",
       "Time-efficient itinerary ideal for seniors and busy professionals"
     ],
@@ -314,7 +314,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-heli-05-do-dham-by-mi17-ex-dehradun-same-day-2026",
-    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (MI-17 VIP Same Day) – Ex-Dehradun",
+    "title": "Do Dham (Kedarnath & Badrinath) by Helicopter (MI-17 VIP Same Day)",
     "destination": "Kedarnath & Badrinath",
     "duration": "Same Day VIP Return (1 Day)",
     "days": 1,
@@ -334,14 +334,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "highlights": [
       "VIP priority temple darshan at sacred Himalayan shrines",
       "Spectacular aerial views of snow-clad Garhwal Himalayan peaks",
-      "Complete VIP ground handling and escort at Ex-Dehradun and helipads",
+      "Complete VIP ground handling and escort at Dehradun and helipads",
       "Luxury stays and premium curated dining throughout the yatra",
       "Time-efficient itinerary ideal for seniors and busy professionals"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Same Day VIP Helicopter Pilgrimage: Ex-Dehradun – Kedarnath – Badrinath – Ex-Dehradun",
+        "title": "Same Day VIP Helicopter Pilgrimage: Dehradun – Kedarnath – Badrinath – Dehradun",
         "description": "UK Yatra is a premier Uttarakhand-based tour and travel company with proven expertise in operating and managing Do Dham Yatra by Helicopter, covering the sacred shrines of Kedarnath and Badrinath. Building on our extensive experience in helicopter pilgrimage operations, we are now coming up with a more premium, safer, and highly convenient Do Dham Yatra by Helicopter using a Twin Engine Helicopter (MI-17) designed to elevate safety standards, passenger comfort, and operational reliability in the challenging Himalayan terrain. Over the years, UK Yatra has established itself as a trusted and preferred partner for high-reliability Himalayan yatra services. “UK” represents Uttarakhand, the spiritual heart of the Himalayas, while “Yatra” signifies a purposeful and transformative journey. Backed by a strong local operational network, professional ground teams deployed at every helipad and shrine, and deep domain expertise in helicopter logistics, UK Yatra ensures safe, time-efficient, transparent, and well-coordinated Do Dham helicopter journeys. Certified with Uttarakhand Tourism, GST registered, MSME registered, and fully compliant with the Shop & Establishment Act, UK Yatra operates with complete regulatory integrity. Our customer-first approach, ethical operating practices, and realistic itinerary planning deliver comfort, clarity, and spiritual fulfillment, making every Do Dham helicopter yatra. Now enhanced with MI-17 twin-engine capability; a seamless, secure, and memorable experience. KEDARNATH: Set in the beautiful Mandakini valley, cupped by lofty peaks, the majestic Kedarnath temple stands on a glacial terrace, remnant of an ancient glacier – long since melted. This is Lord Shiv's territory – and the region is a living testimony to his adventures and exploits. The temple is believed to have been built by the pandavs, protagonists of the Mahabharata, as a tribute to Lord Shiva having forgiven them for fratricide after an exciting chase through the Himalayas. The journey to Kedarnath – The most significant of the 12 Jyotirlingas located in different parts of India -- is to relive these ancient tales and legends, and to become one with God.",
         "stay": "Same Day Return (No Night Stay Required)",
         "meals": "In-Flight Breakfast & Festive Lunch Included"
@@ -371,7 +371,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-01-chardham-by-road-heli-ex-delhi-09n-10d",
-    "title": "Char Dham Yatra by Road & Heli Shuttle (9N/10D) – Ex-Delhi",
+    "title": "Char Dham Yatra by Road & Heli Shuttle (9N/10D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "9 Nights / 10 Days",
     "days": 10,
@@ -491,7 +491,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-02-chardham-by-road-heli-ex-delhi-10n-11d",
-    "title": "Char Dham Yatra by Road & Heli Shuttle (10N/11D) – Ex-Delhi",
+    "title": "Char Dham Yatra by Road & Heli Shuttle (10N/11D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "10 Nights / 11 Days",
     "days": 11,
@@ -618,7 +618,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-03-dodham-by-road-heli-ex-delhi-05n-06d",
-    "title": "Do Dham Yatra by Road & Heli Shuttle (5N/6D) – Ex-Delhi",
+    "title": "Do Dham Yatra by Road & Heli Shuttle (5N/6D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "5 Nights / 6 Days",
     "days": 6,
@@ -710,7 +710,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-04-dodham-by-road-heli-ex-delhi-06n-07d",
-    "title": "Do Dham Yatra by Road & Heli Shuttle (6N/7D) – Ex-Delhi",
+    "title": "Do Dham Yatra by Road & Heli Shuttle (6N/7D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "6 Nights / 7 Days",
     "days": 7,
@@ -809,7 +809,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-01-chardham-by-road-heli-ex-haridwar-08n-09d",
-    "title": "Char Dham Yatra by Road & Heli Shuttle (8N/9D) – Ex-Haridwar",
+    "title": "Char Dham Yatra by Road & Heli Shuttle (8N/9D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "8 Nights / 9 Days",
     "days": 9,
@@ -922,7 +922,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-02-chardham-by-road-heli-ex-haridwar-09n-10d",
-    "title": "Char Dham Yatra by Road & Heli Shuttle (9N/10D) – Ex-Haridwar",
+    "title": "Char Dham Yatra by Road & Heli Shuttle (9N/10D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "9 Nights / 10 Days",
     "days": 10,
@@ -1042,7 +1042,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-03-dodham-by-road-heli-ex-haridwar-04n-05d",
-    "title": "Do Dham Yatra by Road & Heli Shuttle (4N/5D) – Ex-Haridwar",
+    "title": "Do Dham Yatra by Road & Heli Shuttle (4N/5D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "4 Nights / 5 Days",
     "days": 5,
@@ -1127,7 +1127,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-roadheli-04-dodham-by-road-heli-ex-haridwar-05n-06d",
-    "title": "Do Dham Yatra by Road & Heli Shuttle (5N/6D) – Ex-Haridwar",
+    "title": "Do Dham Yatra by Road & Heli Shuttle (5N/6D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "5 Nights / 6 Days",
     "days": 6,
@@ -1219,7 +1219,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-road-01-chardham-by-road-ex-delhi-10n-11d",
-    "title": "Char Dham Yatra by Overland Road (10N/11D) – Ex-Delhi",
+    "title": "Char Dham Yatra by Overland Road (10N/11D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "10 Nights / 11 Days",
     "days": 11,
@@ -1241,7 +1241,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Delhi"
+      "Complete ground support from start to finish from Delhi"
     ],
     "itinerary": [
       {
@@ -1346,7 +1346,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-road-02-chardham-by-road-ex-delhi-11n-12d",
-    "title": "Char Dham Yatra by Overland Road (11N/12D) – Ex-Delhi",
+    "title": "Char Dham Yatra by Overland Road (11N/12D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "11 Nights / 12 Days",
     "days": 12,
@@ -1368,7 +1368,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Delhi"
+      "Complete ground support from start to finish from Delhi"
     ],
     "itinerary": [
       {
@@ -1480,7 +1480,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-road-03-dodham-by-road-ex-delhi-06n-07d",
-    "title": "Do Dham Yatra by Overland Road (6N/7D) – Ex-Delhi",
+    "title": "Do Dham Yatra by Overland Road (6N/7D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "6 Nights / 7 Days",
     "days": 7,
@@ -1502,7 +1502,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Delhi"
+      "Complete ground support from start to finish from Delhi"
     ],
     "itinerary": [
       {
@@ -1579,7 +1579,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-road-04-dodham-by-road-ex-delhi-07n-08d",
-    "title": "Do Dham Yatra by Overland Road (7N/8D) – Ex-Delhi",
+    "title": "Do Dham Yatra by Overland Road (7N/8D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "7 Nights / 8 Days",
     "days": 8,
@@ -1601,7 +1601,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Delhi"
+      "Complete ground support from start to finish from Delhi"
     ],
     "itinerary": [
       {
@@ -1685,7 +1685,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-road-01-chardham-by-road-ex-haridwar-09n-10d",
-    "title": "Char Dham Yatra by Overland Road (9N/10D) – Ex-Haridwar",
+    "title": "Char Dham Yatra by Overland Road (9N/10D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "9 Nights / 10 Days",
     "days": 10,
@@ -1707,7 +1707,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Haridwar"
+      "Complete ground support from start to finish from Haridwar"
     ],
     "itinerary": [
       {
@@ -1805,7 +1805,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-road-02-dodham-by-road-haridwar-05n-06d",
-    "title": "Do Dham Yatra by Overland Road (5N/6D) – Ex-Haridwar",
+    "title": "Do Dham Yatra by Overland Road (5N/6D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "5 Nights / 6 Days",
     "days": 6,
@@ -1827,7 +1827,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Haridwar"
+      "Complete ground support from start to finish from Haridwar"
     ],
     "itinerary": [
       {
@@ -1897,7 +1897,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-group-01-chardham-by-road-ex-haridwar-09n-10d",
-    "title": "Char Dham Fixed Departure Group Tour (9N/10D) – Ex-Haridwar",
+    "title": "Char Dham Fixed Departure Group Tour (9N/10D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "9 Nights / 10 Days",
     "days": 10,
@@ -1919,7 +1919,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Haridwar"
+      "Complete ground support from start to finish from Haridwar"
     ],
     "itinerary": [
       {
@@ -2017,7 +2017,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-group-02-dodham-by-road-haridwar-05n-06d",
-    "title": "Do Dham Fixed Departure Group Tour (5N/6D) – Ex-Haridwar",
+    "title": "Do Dham Fixed Departure Group Tour (5N/6D)",
     "destination": "Kedarnath & Badrinath",
     "duration": "5 Nights / 6 Days",
     "days": 6,
@@ -2039,7 +2039,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Scenic drive through the holy Panch Prayags of the Alaknanda & Mandakini rivers",
       "Comfortable twin/triple sharing mountain accommodations with delicious pure veg meals",
       "Dedicated local fleet with experienced drivers familiar with mountain terrain",
-      "Complete ground support from start to finish from Ex-Haridwar"
+      "Complete ground support from start to finish from Haridwar"
     ],
     "itinerary": [
       {
@@ -2109,7 +2109,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-leisure-haridwar-rishikesh-dehradun-mussoorie-3n-4d",
-    "title": "Haridwar Rishikesh Dehradun Mussoorie Leisure Tour (3N/4D) – Ex-Haridwar",
+    "title": "Haridwar Rishikesh Dehradun Mussoorie Leisure Tour (3N/4D)",
     "destination": "Haridwar, Rishikesh, Dehradun & Mussoorie",
     "duration": "3 Nights / 4 Days",
     "days": 4,
@@ -2187,7 +2187,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-leisure-haridwar-rishikesh-dehradun-mussoorie-7n-8d",
-    "title": "Haridwar Rishikesh Dehradun Mussoorie Leisure Tour (7N/8D) – Ex-Haridwar",
+    "title": "Haridwar Rishikesh Dehradun Mussoorie Leisure Tour (7N/8D)",
     "destination": "Haridwar, Rishikesh, Dehradun & Mussoorie",
     "duration": "7 Nights / 8 Days",
     "days": 8,
@@ -2293,7 +2293,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-trek-09-tungnath-by-road-ex-haridwar",
-    "title": "Chopta Tungnath & Chandrashila Trek (2N/3D) – Ex-Haridwar",
+    "title": "Chopta Tungnath & Chandrashila Trek (2N/3D)",
     "destination": "Chopta, Tungnath & Chandrashila",
     "duration": "2 Nights / 3 Days",
     "days": 3,
@@ -2360,7 +2360,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-trek-10-teendham-by-road-ex-haridwar-7n-08d-copy",
-    "title": "Teen Dham (Gangotri, Kedarnath & Badrinath) by Road (7N/8D) – Ex-Haridwar",
+    "title": "Teen Dham (Gangotri, Kedarnath & Badrinath) by Road (7N/8D)",
     "destination": "Yamunotri, Gangotri, Kedarnath & Badrinath",
     "duration": "7 Nights / 8 Days",
     "days": 8,
@@ -2463,7 +2463,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-trek-10-tungnath-by-road-ex-haridwar-delhi",
-    "title": "Chopta Tungnath & Chandrashila Trek (2N/3D) – Ex-Delhi",
+    "title": "Chopta Tungnath & Chandrashila Trek (2N/3D)",
     "destination": "Chopta, Tungnath & Chandrashila",
     "duration": "2 Nights / 3 Days",
     "days": 4,
@@ -2537,7 +2537,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
   },
   {
     "id": "uky-trek-09-auli-by-road-ex-delhi-uk-yatra-4n5d",
-    "title": "Char Dham Yatra with Auli & Chopta Excursion (9N/10D) – Ex-Delhi",
+    "title": "Char Dham Yatra with Auli & Chopta Excursion (9N/10D)",
     "destination": "Chopta, Tungnath & Chandrashila",
     "duration": "4 Nights / 5 Days",
     "days": 10,

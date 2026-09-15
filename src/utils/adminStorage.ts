@@ -48,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages_custom',
+  PACKAGES: 'ukyatra_admin_packages_v4',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -245,22 +245,27 @@ export const adminStorage = {
   // --- TOUR PACKAGES ---
   getPackages: (): TourPackage[] => {
     try {
-      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3'].forEach(k => {
+      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom'].forEach(k => {
         if (localStorage.getItem(k)) localStorage.removeItem(k);
       });
+      const sanitizeTitle = (t: string) => t.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim();
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
-        return TOUR_PACKAGES;
+        return TOUR_PACKAGES.map(p => ({ ...p, title: sanitizeTitle(p.title) }));
       }
       const parsed = JSON.parse(stored);
       if (!Array.isArray(parsed) || parsed.length === 0) {
-        return TOUR_PACKAGES;
+        return TOUR_PACKAGES.map(p => ({ ...p, title: sanitizeTitle(p.title) }));
       }
       const storedIds = new Set(parsed.map((p: TourPackage) => p.id));
       const unincluded = TOUR_PACKAGES.filter(p => !storedIds.has(p.id));
-      return [...parsed, ...unincluded];
+      return [...parsed, ...unincluded].map(p => ({
+        ...p,
+        title: sanitizeTitle(p.title)
+      }));
     } catch {
-      return TOUR_PACKAGES;
+      const sanitizeTitle = (t: string) => t.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim();
+      return TOUR_PACKAGES.map(p => ({ ...p, title: sanitizeTitle(p.title) }));
     }
   },
 
