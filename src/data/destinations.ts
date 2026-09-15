@@ -8,9 +8,12 @@ export const DESTINATIONS: Destination[] = [
     category: 'Spiritual',
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Set at an altitude of 3,584 metres against the magnificent Kedar dome, Kedarnath is the most revered shrine of Lord Shiva in the Garhwal Himalayas. A divine journey of faith, endurance, and unmatched alpine beauty.',
     highlights: ['Kedarnath Temple (1200+ yrs old)', 'Bhairavnath Temple viewpoint', 'Vasuki Tal glacial trek', 'Helicopter and pony trail options'],
@@ -39,8 +42,11 @@ export const DESTINATIONS: Destination[] = [
     category: 'Adventure',
     image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1599827552599-ea9a7ff9d479?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1599827552599-ea9a7ff9d479?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Where the holy Ganges surges down the Shivalik foothills, Rishikesh bridges serene spirituality with high-adrenaline sports like white-water rafting, bungee jumping, riverside luxury camping, and evening Ganga Aarti.',
     highlights: ['White water rafting (Grade III & IV)', 'Triveni Ghat Ganga Aarti', 'Beatles Ashram & Tapovan', 'India’s highest Bungee Jump (83m)'],
@@ -68,8 +74,11 @@ export const DESTINATIONS: Destination[] = [
     category: 'Adventure',
     image: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Surrounded by pine and oak forests with front-row views of Nanda Devi, Kamet, and Mana Parvat, Auli is the ultimate winter wonderland for skiing, snowboarding, and highest cable car rides.',
     highlights: ['Auli Ropeway (Longest in Asia, 4 km)', 'Artificial Lake with reflections', 'Nanda Devi 360° Panorama', 'Gorson Bugyal Snow Trek'],
@@ -98,7 +107,11 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'An untouched alpine meadow nestled within Kedarnath Wildlife Sanctuary. Chopta is the base for Tungnath (highest Shiva temple on earth) and the dramatic Chandrashila summit.',
     highlights: ['Tungnath Temple (3,680m)', 'Chandrashila Peak (4,000m)', 'Deoria Tal Reflection Lake', 'Lush Rhododendron Forests'],
@@ -126,7 +139,10 @@ export const DESTINATIONS: Destination[] = [
     category: 'Weekend Escapes',
     image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Perched overlooking the Doon Valley and Shivalik range, Mussoorie charms travellers with misty colonial promenades, cascading waterfalls, quaint bakeries, and romantic Himalayan winterline sunsets.',
     highlights: ['Mall Road & Camel’s Back Road', 'Kempty Falls & George Everest House', 'Lal Tibba highest viewpoint', 'Dhanaulti Eco Park day trip'],
@@ -154,7 +170,10 @@ export const DESTINATIONS: Destination[] = [
     category: 'Hills & Valleys',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Set around the emerald pear-shaped Naini Lake, this legendary hill resort combines boating, colonial architecture, vibrant Tibetan markets, and panoramic viewpoints over the Kumaon Himalayas.',
     highlights: ['Naini Lake Yachting & Boating', 'Naina Devi Temple (Shaktipeeth)', 'Snow View Point & Ropeway', 'Bhimtal & Pangot Birding trails'],
@@ -182,7 +201,10 @@ export const DESTINATIONS: Destination[] = [
     category: 'Wildlife',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'A botanical wonderland hidden in Chamoli district where over 500 species of wild Himalayan flowers carpet the valley floor against cascading streams and towering snow-capped peaks.',
     highlights: ['UNESCO World Heritage National Park', 'Hemkund Sahib high altitude Sikh shrine (4,329m)', 'Endemic flora: Blue Poppy, Brahma Kamal', 'Pushpawati River meadows'],
@@ -211,7 +233,10 @@ export const DESTINATIONS: Destination[] = [
     category: 'Wildlife',
     image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Spread over 520 square kilometres in Nainital and Pauri Garhwal districts, Corbett is the premier wilderness for Royal Bengal Tigers, Asiatic Elephants, and diverse Himalayan birdlife along the Ramganga River.',
     highlights: ['Dhikala & Bijrani Open Jeep Safari', 'Luxury Jungle River Resorts', 'Corbett Waterfalls & Heritage Museum', 'Over 600 Bird Species'],
@@ -239,7 +264,10 @@ export const DESTINATIONS: Destination[] = [
     category: 'Spiritual',
     image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'One of the four sacred Char Dham shrines of India, Badrinath stands majestically along the Alaknanda River under the shadow of the pyramid-shaped Nilkantha peak.',
     highlights: ['Badrinath Temple & Tapt Kund', 'Mana Village (First Indian Village on Tibet border)', 'Vasudhara Falls (122m cascade)', 'Nilkantha Peak sunrise view'],
@@ -267,7 +295,10 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop'
     ],
     description: 'Perched on the rim of Goriganga river valley in Pithoragarh, Munsiyari provides unhindered vistas of the iconic five snow peaks of Panchachuli and serves as gateway to Milam & Ralam glaciers.',
     highlights: ['Panchachuli 5 Peaks View', 'Birthi Waterfalls (126m)', 'Milam & Ralam Glacier trails', 'Khaliya Top Snow Trek'],
@@ -294,7 +325,12 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Asia’s Largest Dam Reservoir & Water Adventure Hub',
     category: 'Adventure',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-    gallery: ['https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'],
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop'
+    ],
     description: 'A massive turquoise reservoir surrounded by terraced green hills. Tehri has transformed into Uttarakhand’s ultimate lake destination with jet-skiing, speedboats, houseboats, and flyboarding.',
     highlights: ['Tehri Dam (Asia’s tallest)', 'Floating Houseboats & Water sports', 'Jet Skiing & Banana rides', 'Panoramic Dobra-Chanti suspension bridge'],
     bestTime: 'October to May',
@@ -319,7 +355,12 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Quiet Cantonment Charm, Pine Woods & Colonial Serenity',
     category: 'Weekend Escapes',
     image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
-    gallery: ['https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop'],
+    gallery: [
+      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop'
+    ],
     description: 'Founded as a British military cantonment and home to the Garhwal Rifles, Lansdowne is an unspoilt hill station filled with thick blue pine forests, heritage churches, and peaceful forest walks.',
     highlights: ['Tip-in-Top viewpoint', 'Bhulla Tal Lake', 'Garhwal Rifles War Memorial', 'St. John’s Colonial Church'],
     bestTime: 'Round the year (Except heavy monsoon)',
