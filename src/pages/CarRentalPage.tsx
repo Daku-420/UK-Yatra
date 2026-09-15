@@ -45,7 +45,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹18 / km',
       badge: 'Most Popular',
       desc: 'Reclining captain seats, dual AC & mountain heating, roof carrier, hill certified driver. Prime choice for Char Dham.',
-      image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/innova-crysta.jpg'
     },
     {
       id: 'innova-hycross',
@@ -58,7 +58,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹22 / km',
       badge: 'Eco Premium',
       desc: 'Ultra-silent hybrid engine, Ottoman lounge seating, panoramic sunroof, superior ride comfort on winding hills.',
-      image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/innova-hycross.jpg'
     },
     {
       id: 'maruti-ertiga',
@@ -71,7 +71,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹14 / km',
       badge: 'Economical Family',
       desc: 'Comfortable 3-row seating, high fuel mileage, clean sanitized interiors, ideal for budget family trips.',
-      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/maruti-ertiga.jpg'
     },
     {
       id: 'kia-carens',
@@ -84,7 +84,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹15 / km',
       badge: 'Modern Comfort',
       desc: 'Ventilated seats, individual AC vents for all 3 rows, sky roof, hill-start assist and premium suspension.',
-      image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/kia-carens.jpg'
     },
     {
       id: 'toyota-fortuner',
@@ -97,7 +97,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹35 / km',
       badge: 'VIP 4x4 Off-Road',
       desc: 'High ground clearance, unstoppable 4x4 power for snow ghats, rugged stance, VIP mountain convoy status.',
-      image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/toyota-fortuner.jpg'
     },
     {
       id: 'mahindra-scorpio-thar',
@@ -110,7 +110,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹20 / km',
       badge: 'Trek & Adventure',
       desc: 'Built for high altitude mountain passes, rough terrain, Chopta-Tungnath, Mana Pass, and rugged trails.',
-      image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/mahindra-scorpio-thar.jpg'
     },
 
     // --- SEDANS & HATCHBACKS ---
@@ -125,7 +125,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹11 / km',
       badge: 'Best Seller Sedan',
       desc: 'Smooth highway cruise, spacious legroom, climate control, perfect for airport transfers & Dehradun/Haridwar.',
-      image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/maruti-dzire.jpg'
     },
     {
       id: 'toyota-etios-aura',
@@ -138,7 +138,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹12 / km',
       badge: 'Budget Executive',
       desc: 'Generous luggage boot, comfortable seating for long ghat drives, seasoned mountain-certified driver.',
-      image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/toyota-etios-aura.jpg'
     },
     {
       id: 'maruti-swift-wagonr',
@@ -151,7 +151,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹10 / km',
       badge: 'Economy Choice',
       desc: 'Pocket-friendly city & hill tours, nimble mountain handling, easy parking in Mussoorie & Nainital.',
-      image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/maruti-swift-wagonr.jpg'
     },
 
     // --- TEMPO TRAVELLERS ---
@@ -166,7 +166,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹24 / km',
       badge: 'Best for Groups',
       desc: '2x1 pushback luxury seats, high clearance suspension, LCD screen, commercial hill permit certified.',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/tempo-traveller-12-26.jpg'
     },
     {
       id: 'tempo-traveller-maharaja',
@@ -179,7 +179,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹28 / km',
       badge: 'Maharaja Class',
       desc: '1x1 plush maharaja recliner sofas, ambient mood lighting, USB for every seat, ice box and music setup.',
-      image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/tempo-traveller-maharaja.jpg'
     },
     {
       id: 'force-urbania',
@@ -192,7 +192,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹32 / km',
       badge: 'Executive VIP',
       desc: 'Aircraft style luxury seating, panoramic tinted windows, individual USB charging, air suspension.',
-      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/force-urbania.jpg'
     },
 
     // --- LUXURY & VIP ---
@@ -207,7 +207,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹75 / km',
       badge: 'Ultra Luxury',
       desc: 'First-class airline lounge seating, heated massage recliners, dual sunroof, presidential luxury.',
-      image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/toyota-vellfire.jpg'
     },
     {
       id: 'kia-carnival',
@@ -220,7 +220,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹30 / km',
       badge: 'VIP Limousine',
       desc: 'Generous stand-up headroom, VIP captain recliners, smart dual electric doors, quiet cabin insulation.',
-      image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/kia-carnival.jpg'
     },
     {
       id: 'mercedes-benz',
@@ -233,7 +233,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹55 / km',
       badge: 'Royal Luxury',
       desc: 'World-class comfort, elite presence for destination weddings, luxury corporate retreats, and dignitaries.',
-      image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/mercedes-benz.jpg'
     },
 
     // --- BUSES & COACHES ---
@@ -248,7 +248,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹42 / km',
       badge: 'Group Pilgrimage',
       desc: '2x2 pushback seats, dedicated roof carrier, microphone & sound system, commercial hill permit.',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/mini-bus-27.jpg'
     },
     {
       id: 'volvo-bus-45-52',
@@ -261,7 +261,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       perKm: '₹55 / km',
       badge: 'Yatra Delegation',
       desc: 'Large yatra samitis, school & corporate tours, underbelly luggage decks, air suspension for smooth travel.',
-      image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=600&auto=format&fit=crop'
+      image: '/images/vehicles/volvo-bus-45-52.jpg'
     }
   ];
 
