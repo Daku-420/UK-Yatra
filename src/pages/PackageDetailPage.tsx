@@ -79,7 +79,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
   return (
     <div className="pt-24 pb-20">
       {/* Hero Header */}
-      <div className="relative h-[60vh] min-h-[440px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="relative h-[44vh] min-h-[340px] sm:h-[60vh] sm:min-h-[440px] w-full flex items-end pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <img
           src={tourPackage.image}
           alt={tourPackage.title}
@@ -90,14 +90,14 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <Link
             to="/packages"
-            className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-brand-dark/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 mb-4 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-brand-dark/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 mb-3 sm:mb-4 transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Back to All Packages</span>
           </Link>
 
-          <div className="flex flex-wrap items-center gap-3 mb-3">
-            <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2.5 sm:mb-3">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white">
               {tourPackage.category}
             </span>
             {tourPackage.pickupDrop && (
@@ -116,7 +116,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-white tracking-tight max-w-3xl">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight max-w-3xl leading-tight">
             {tourPackage.title}
           </h1>
           <div className="mt-2 flex items-center gap-2 text-xs sm:text-sm text-slate-300 font-medium">

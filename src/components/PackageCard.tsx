@@ -89,20 +89,20 @@ export const PackageCard: React.FC<PackageCardProps> = ({ tourPackage, onOpenBoo
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <Link
               to={`/packages/${tourPackage.id}`}
-              className="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-center text-xs font-semibold text-slate-200 border border-white/10 transition-colors flex items-center justify-center gap-1.5"
+              className="flex-1 py-2.5 px-2 rounded-xl bg-white/5 hover:bg-white/10 text-center text-[11px] sm:text-xs font-semibold text-slate-200 border border-white/10 transition-colors flex items-center justify-center gap-1 whitespace-nowrap"
             >
               <span>View Details</span>
-              <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             </Link>
 
             {tourPackage.pdfBrochure && (
               <a
                 href={tourPackage.pdfBrochure}
                 download
-                className="p-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition-colors flex items-center justify-center shrink-0"
+                className="p-2 sm:p-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition-colors flex items-center justify-center shrink-0"
                 title="Download Official PDF Itinerary"
               >
                 <Download className="w-4 h-4" />
@@ -111,7 +111,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({ tourPackage, onOpenBoo
 
             <button
               onClick={() => onOpenBookingModal ? onOpenBookingModal(tourPackage.title) : window.open(getPackageWhatsAppUrl(tourPackage.title, tourPackage.duration), '_blank')}
-              className="flex-1 py-2.5 rounded-xl orange-gradient-btn text-center text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5"
+              className="flex-1 py-2.5 px-2 rounded-xl orange-gradient-btn text-center text-[11px] sm:text-xs font-semibold text-white transition-all flex items-center justify-center gap-1 whitespace-nowrap cursor-pointer active:scale-[0.98]"
             >
               <span>Get Quote</span>
             </button>

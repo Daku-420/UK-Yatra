@@ -78,7 +78,7 @@ function AppInner() {
       <Navbar onOpenBookingModal={() => handleOpenBookingModal()} />
 
       {/* Dynamic Route Pages */}
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         <Routes>
           <Route path="/" element={<HomePage onOpenBookingModal={handleOpenBookingModal} />} />
           
