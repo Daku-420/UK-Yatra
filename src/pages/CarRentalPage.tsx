@@ -23,50 +23,50 @@ interface CarRentalPageProps {
 export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal }) => {
   const [selectedRoute, setSelectedRoute] = useState('All');
 
-  const fleet = [
+  const vehicleShowcase = [
     {
       id: 'innova-crysta',
-      name: 'Toyota Innova Crysta (Luxury 6+1 / 7+1)',
-      category: 'Premium SUV',
-      capacity: '6 - 7 Passengers',
+      name: 'Toyota Innova Crysta',
+      sub: 'Luxury 6+1 / 7+1 SUV',
+      capacity: '6-7 Seater',
       luggage: '4 Large Bags',
       rate: 'From ₹4,500 / day',
-      tag: 'Most Popular for Families',
-      features: ['Rear AC with individual vents', 'Reclining captain seats', 'Emergency hill first-aid kit', 'Carrier for luggage', 'Experienced hill driver'],
-      image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800&auto=format&fit=crop'
+      badge: 'Most Popular',
+      desc: 'Reclining captain seats, dual AC & mountain heating, roof carrier, hill certified driver.',
+      image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'tempo-traveller',
-      name: 'Force Tempo Traveller (12 / 16 / 26 Seater)',
-      category: 'Mini Coach',
-      capacity: '12 - 26 Passengers',
+      name: 'Force Tempo Traveller',
+      sub: '12 / 16 / 26 Seater Coach',
+      capacity: '12-26 Seater',
       luggage: '12+ Bags',
       rate: 'From ₹7,500 / day',
-      tag: 'Best for Groups & Yatris',
-      features: ['2x1 Pushback luxury seats', 'High-altitude heating & AC', 'LCD screen with sound system', 'Spacious aisle & boot space', 'Commercial hill permit'],
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop'
+      badge: 'Best for Groups',
+      desc: '2x1 pushback luxury seats, high clearance suspension, LCD screen, hill permit certified.',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'maruti-ertiga',
-      name: 'Maruti Suzuki Ertiga (Economy MUV)',
-      category: 'Budget MUV',
-      capacity: '4 - 5 Passengers',
-      luggage: '2 - 3 Bags',
+      name: 'Maruti Suzuki Ertiga',
+      sub: 'Economy 4+1 MUV',
+      capacity: '4-5 Seater',
+      luggage: '2-3 Bags',
       rate: 'From ₹3,200 / day',
-      tag: 'Economical Family Choice',
-      features: ['Comfortable 3-row seating', 'AC & Music system', 'High fuel efficiency', 'Clean sanitized interiors', 'Punctual pickup'],
-      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop'
+      badge: 'Economical Family',
+      desc: 'Comfortable 3-row seating, high fuel mileage, clean interiors, ideal for budget family trips.',
+      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'force-urbania',
-      name: 'Force Urbania Ultra-Luxury Van',
-      category: 'VIP Luxury Coach',
-      capacity: '10 - 13 Passengers',
+      name: 'Force Urbania Van',
+      sub: 'VIP Luxury 10-13 Seater',
+      capacity: '10-13 Seater',
       luggage: '8+ Bags',
       rate: 'From ₹9,500 / day',
-      tag: 'Executive VIP Luxury',
-      features: ['Aircraft style seating & ambient lighting', 'Panoramic tinted windows', 'Individual USB ports for each seat', 'Air suspension for smooth ghats', 'Uniformed driver'],
-      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop'
+      badge: 'Executive VIP',
+      desc: 'Aircraft style luxury seating, panoramic tinted windows, individual USB charging, air suspension.',
+      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop'
     }
   ];
 
@@ -318,83 +318,144 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Vehicle Fleet Grid */}
-        <div className="mb-20">
-          <div className="mb-10">
-            <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Our Maintained Fleet</span>
-            <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-slate-900 mt-1">
-              Choose Your Vehicle
-            </h2>
+      {/* ============================================================ */}
+      {/* BOOK YOUR VEHICLE / FLEET SHOWCASE */}
+      {/* ============================================================ */}
+      <section className="py-24 relative overflow-hidden border-y border-white/10 mb-16">
+        {/* Scenic Mountains and River Valley Road Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop"
+            alt="Mountains and River Valley Road"
+            className="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/85" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+                <Car className="w-3.5 h-3.5" />
+                <span>Sanitized Himalayan Fleets</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+                Book Your <span className="text-brand-orange">Vehicle</span>
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-slate-300 max-w-xl font-medium">
+                Clean, sanitized SUVs and mini coaches with verified hill drivers for Char Dham, airport transfers, and outstation tours.
+              </p>
+            </div>
+
+            <a
+              href="#fare-chart"
+              className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:underline cursor-pointer"
+            >
+              <span>View Full Fleet & Fixed Fare Chart</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {fleet.map(vehicle => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {vehicleShowcase.map((v) => (
               <div 
-                key={vehicle.id}
-                className="bg-white border border-[#E2DDD5] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-orange/40 transition-all flex flex-col justify-between"
+                key={v.id}
+                className="bg-brand-card border border-white/10 hover:border-brand-orange/40 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="p-6 sm:p-8">
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                    <span className="px-3 py-1 rounded-full bg-orange-50 text-brand-orange text-[11px] font-bold uppercase border border-orange-200/80">
-                      {vehicle.tag}
+                <div>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-800">
+                    <img
+                      src={v.image}
+                      alt={v.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+                    <span className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-brand-orange text-white font-bold text-[10px] uppercase shadow-md">
+                      {v.badge}
                     </span>
-                    <span className="text-sm font-bold text-slate-800 bg-[#F5F3EF] border border-[#E2DDD5] px-3 py-1 rounded-full">
-                      {vehicle.rate}
+                    <span className="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/15">
+                      {v.rate}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold font-display text-slate-900 mb-2">{vehicle.name}</h3>
+                  <div className="p-5">
+                    <h3 className="font-display font-bold text-base text-white group-hover:text-brand-orange transition-colors">
+                      {v.name}
+                    </h3>
+                    <p className="text-[11px] text-brand-orange/90 font-medium mb-3">
+                      {v.sub}
+                    </p>
 
-                  <div className="flex items-center gap-6 text-xs text-slate-600 py-3 border-y border-slate-100 my-4">
-                    <div className="flex items-center gap-1.5">
-                      <Users className="w-4 h-4 text-brand-orange" />
-                      <span>{vehicle.capacity}</span>
+                    <div className="flex items-center gap-3 text-[11px] text-slate-300 py-2 border-y border-white/10 mb-3">
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3.5 h-3.5 text-brand-orange" />
+                        <span>{v.capacity}</span>
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>Hill Driver</span>
+                      </span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                      <span>Hill Certified</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="w-4 h-4 text-sky-600" />
-                      <span>24/7 Available</span>
-                    </div>
-                  </div>
 
-                  <div className="space-y-2 mb-6">
-                    {vehicle.features.map((feat, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
+                    <p className="text-[11px] text-slate-400 leading-relaxed line-clamp-2">
+                      {v.desc}
+                    </p>
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-8 pt-0 flex flex-wrap gap-3">
+                <div className="p-5 pt-0 space-y-2">
                   <button
-                    onClick={() => onOpenBookingModal(`Taxi Rental - ${vehicle.name}`)}
-                    className="flex-1 orange-gradient-btn py-3 rounded-xl font-display font-semibold text-xs text-white text-center shadow-lg"
+                    onClick={() => onOpenBookingModal(`Taxi Rental - ${v.name}`)}
+                    className="w-full orange-gradient-btn py-2.5 rounded-xl font-display font-semibold text-xs text-white text-center shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
                   >
-                    Book This Vehicle
+                    <Car className="w-3.5 h-3.5" />
+                    <span>Book This Vehicle</span>
                   </button>
                   <a
-                    href={getWhatsAppUrl(`Hi UKYatra, I want to rent ${vehicle.name} for my Uttarakhand journey.`)}
+                    href={getWhatsAppUrl(`Hi UKYatra, I would like to book or inquire about ${v.name} taxi rental.`)}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 font-semibold text-xs flex items-center gap-1.5 transition-colors"
+                    className="w-full py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 text-center font-semibold text-[11px] flex items-center justify-center gap-1.5 transition-colors"
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-current" />
+                    <WhatsAppIcon className="w-3.5 h-3.5 fill-current text-emerald-400" />
                     <span>WhatsApp Quote</span>
                   </a>
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
+          <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 border border-brand-orange/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-xl bg-brand-orange/20 text-brand-orange shrink-0">
+                <Car className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-white font-display">
+                  Need an Outstation Cab or Complete 10-Day Char Dham Vehicle?
+                </h4>
+                <p className="text-xs text-slate-300">
+                  We provide dedicated mountain vehicles with permit, driver allowance, and toll estimates included.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#fare-chart"
+              className="orange-gradient-btn px-6 py-2.5 rounded-xl text-xs font-bold text-white whitespace-nowrap shadow-lg shrink-0 cursor-pointer"
+            >
+              Explore Fleet & Fares
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Popular Inter-city Fixed Fare Table */}
-        <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 mb-16 shadow-sm">
+        <div id="fare-chart" className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 mb-16 shadow-sm scroll-mt-24">
           <h2 className="text-2xl font-bold font-display text-slate-900 mb-2">
             Popular Uttarakhand Taxi Routes & Approx Fares
           </h2>
