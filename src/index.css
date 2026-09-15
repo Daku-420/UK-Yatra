@@ -225,9 +225,9 @@ header *::selection,
   }
 }
 
-/* Momentum scrolling on touch devices */
+/* Smooth scrolling on touch devices */
 .touch-scroll {
-  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   scroll-behavior: smooth;
 }
 
