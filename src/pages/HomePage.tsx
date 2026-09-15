@@ -174,22 +174,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-5xl mx-auto text-center mt-6 sm:mt-8">
+        <div className="relative z-10 max-w-5xl mx-auto text-center mt-12 sm:mt-8">
           {/* Main Hero Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.15] max-w-4xl mx-auto uppercase drop-shadow-md">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.1] sm:leading-[1.15] max-w-4xl mx-auto uppercase drop-shadow-md">
             YOUR NEXT HIMALAYAN STORY STARTS HERE.
           </h1>
 
           {/* Supporting Text */}
-          <p className="mt-4 sm:mt-6 text-sm sm:text-lg md:text-xl text-slate-200 font-normal max-w-3xl mx-auto leading-relaxed drop-shadow px-2">
+          <p className="mt-6 text-base sm:text-xl text-slate-200 font-normal max-w-3xl mx-auto leading-relaxed drop-shadow">
             Explore Uttarakhand through unforgettable journeys, hidden Himalayan escapes, spiritual trails, adventure experiences, and thoughtfully planned trips.
           </p>
 
           {/* Action CTAs */}
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/destinations"
-              className="w-full sm:w-auto orange-gradient-btn px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-display font-bold text-sm sm:text-base text-white shadow-2xl flex items-center justify-center gap-2.5 active:scale-[0.98] transition-all"
+              className="orange-gradient-btn px-8 py-4 rounded-2xl font-display font-bold text-base text-white shadow-2xl flex items-center gap-2.5"
             >
               <Compass className="w-5 h-5" />
               <span>Explore Uttarakhand</span>
@@ -197,7 +197,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
 
             <Link
               to="/customized-trip"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-900 text-white border border-white/20 font-display font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-[0.98] flex items-center justify-center gap-2 drop-shadow-md"
+              className="px-8 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-900 text-white border border-white/20 font-display font-semibold text-base transition-all hover:scale-105 flex items-center gap-2 drop-shadow-md"
             >
               <span>Plan My Trip</span>
               <ArrowRight className="w-5 h-5 text-brand-orange" />
@@ -205,13 +205,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           </div>
 
           {/* Floating Search & Discovery Bar - High-Contrast Dark Frosted Glass */}
-          <div className="mt-8 sm:mt-16 max-w-4xl mx-auto bg-slate-950/85 backdrop-blur-xl rounded-3xl p-3.5 sm:p-5 border border-white/20 shadow-2xl">
+          <div className="mt-12 sm:mt-16 max-w-4xl mx-auto bg-slate-950/85 backdrop-blur-xl rounded-3xl p-4 sm:p-5 border border-white/20 shadow-2xl">
             {/* Search Mode Tabs */}
-            <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-white/10 overflow-x-auto scrollbar-none">
+            <div className="flex items-center justify-center gap-2 mb-4 pb-3 border-b border-white/10">
               <button
                 type="button"
                 onClick={() => setHeroBookingTab('packages')}
-                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 sm:gap-2 whitespace-nowrap cursor-pointer ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                   heroBookingTab === 'packages'
                     ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/30'
                     : 'bg-white/10 hover:bg-white/15 text-slate-300 hover:text-white'
@@ -223,14 +223,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <button
                 type="button"
                 onClick={() => setHeroBookingTab('vehicles')}
-                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 sm:gap-2 whitespace-nowrap cursor-pointer ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                   heroBookingTab === 'vehicles'
                     ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/30'
                     : 'bg-white/10 hover:bg-white/15 text-slate-300 hover:text-white'
                 }`}
               >
                 <Car className="w-3.5 h-3.5" />
-                <span>Book Vehicle / Cab</span>
+                <span>Book Your Vehicle / Cab</span>
               </button>
             </div>
 

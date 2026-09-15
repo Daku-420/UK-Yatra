@@ -54,18 +54,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     setActivitiesOpen(false);
   }, [location.pathname]);
 
-  // Lock body scrolling when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [mobileMenuOpen]);
-
   // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -353,7 +341,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
       {/* Mobile Drawer Menu - Midnight Slate Navy Matching #000044 */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[88px] h-[calc(100dvh-60px)] md:h-[calc(100dvh-88px)] bg-[#000044]/98 backdrop-blur-2xl border-t border-white/10 z-50 overflow-y-auto p-5 pb-[calc(6.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[90px] bottom-0 bg-[#000044]/98 backdrop-blur-2xl border-t border-white/10 z-40 overflow-y-auto p-5 animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
           <div className="space-y-2">
             <div className="pb-3 mb-2 border-b border-white/10 px-2 flex items-center justify-between">
               <Logo size="sm" />
