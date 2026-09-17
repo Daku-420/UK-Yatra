@@ -57,14 +57,6 @@ export interface TourPackage {
   isFeatured?: boolean;
   pdfBrochure?: string | null;
   pickupDrop?: string;
-  slug?: string;
-  seoTitle?: string;
-  seoDescription?: string;
-  routeInfo?: string;
-  suitableFor?: string[];
-  packingList?: string[];
-  packingNotes?: string[];
-  faqs?: { question: string; answer: string }[];
 }
 
 export interface Trek {

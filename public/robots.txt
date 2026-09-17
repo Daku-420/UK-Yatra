@@ -1,8 +1,0 @@
-# Robots.txt for UK Yatra (https://uk-yatra.vercel.app/)
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /admin/*
-Disallow: /api/
-
-Sitemap: https://uk-yatra.vercel.app/sitemap.xml

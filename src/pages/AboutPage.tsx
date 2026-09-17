@@ -23,8 +23,6 @@ import {
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
-import { SEOHead } from '../components/SEOHead';
-import { getBreadcrumbSchema, getTravelAgencySchema } from '../utils/seoSchemas';
 
 export const AboutPage: React.FC = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -176,22 +174,8 @@ export const AboutPage: React.FC = () => {
     }
   ];
 
-  const aboutJsonLd = [
-    getTravelAgencySchema(),
-    getBreadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'About Us', url: '/about' }
-    ])
-  ];
-
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-      <SEOHead
-        title="About UK Yatra | Registered Uttarakhand Tour Operator & Travel Agency"
-        description="Learn about UK Yatra, an authentic Uttarakhand-based travel agency headquartered in Dehradun. Discover our mountain heritage, verified registrations, and trusted yatra services."
-        canonicalPath="/about"
-        jsonLd={aboutJsonLd}
-      />
       <Breadcrumbs items={[{ label: 'Who We Are (About Us)' }]} />
 
       {/* Hero Header */}

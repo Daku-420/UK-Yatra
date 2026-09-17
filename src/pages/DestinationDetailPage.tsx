@@ -25,8 +25,6 @@ import { getDestinationWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
 import { WhatsAppIcon } from '../components/SocialIcons';
-import { SEOHead } from '../components/SEOHead';
-import { getBreadcrumbSchema } from '../utils/seoSchemas';
 
 interface DestinationDetailPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -111,61 +109,8 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
            destination.name.toLowerCase().includes(p.destination.toLowerCase())
   );
 
-  const DESTINATION_SEO: Record<string, { title: string; desc: string }> = {
-    kedarnath: {
-      title: 'Kedarnath Tourism, Darshan Guide & Tour Packages | UK Yatra',
-      desc: 'Plan your sacred pilgrimage to Kedarnath Dham with UK Yatra. Discover opening dates, trek details, helicopter booking, temple history, and verified tour packages.'
-    },
-    chopta: {
-      title: 'Chopta Tungnath Travel Guide & Trek Packages | UK Yatra',
-      desc: 'Explore Chopta, the Mini Switzerland of Uttarakhand. Book Tungnath Chandrashila trek packages, Deoriatal camping, and verified mountain vehicle transfers.'
-    },
-    auli: {
-      title: 'Auli Tour Packages & Skiing Holiday Guide | UK Yatra',
-      desc: 'Experience India’s ski capital with UK Yatra. Book Auli tour packages with Asia’s longest ropeway, snow activities, Gorson Bugyal trek, and views of Nanda Devi.'
-    },
-    rishikesh: {
-      title: 'Rishikesh Tour Packages, Rafting & Camping Retreats | UK Yatra',
-      desc: 'Experience Rishikesh with UK Yatra. White water river rafting, luxury riverside camping, Triveni Ghat evening Ganga Aarti, and adventure getaways.'
-    },
-    mussoorie: {
-      title: 'Mussoorie Tour Packages & Queen of Hills Guide | UK Yatra',
-      desc: 'Book relaxing Mussoorie holiday packages with UK Yatra. Explore Mall Road, Kempty Falls, George Everest Peak, and scenic Shivalik valley views.'
-    },
-    nainital: {
-      title: 'Nainital Tour Packages & Kumaon Lake Tour Guide | UK Yatra',
-      desc: 'Discover Nainital with UK Yatra. Book holiday packages covering Naini Lake boating, Naina Devi Temple, Bhimtal, and Kumaon hill station tours.'
-    },
-    'valley-of-flowers': {
-      title: 'Valley of Flowers Trek Package & Blooming Guide | UK Yatra',
-      desc: 'Trek into the UNESCO World Heritage Valley of Flowers with UK Yatra. Discover peak blooming dates, Hemkund Sahib pilgrimage, permits, and base camp stays.'
-    },
-    badrinath: {
-      title: 'Badrinath Dham Tour Packages & Darshan Guide | UK Yatra',
-      desc: 'Plan your pilgrimage to Sri Badrinath Temple with UK Yatra. Explore Mana village, Tapt Kund, Swarna Aarti, and verified overland travel packages.'
-    }
-  };
-
-  const seoInfo = DESTINATION_SEO[destination.id] || {
-    title: `${destination.name} Travel Guide & Tour Packages | UK Yatra`,
-    desc: `Explore ${destination.name} with UK Yatra. Discover attractions, best time to visit, how to reach, and verified Uttarakhand holiday packages.`
-  };
-
-  const jsonLd = getBreadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Destinations', url: '/destinations' },
-    { name: destination.name, url: `/destinations/${destination.id}` }
-  ]);
-
   return (
     <div className="pt-24 pb-20">
-      <SEOHead
-        title={seoInfo.title}
-        description={seoInfo.desc}
-        canonicalPath={`/destinations/${destination.id}`}
-        ogImage={destination.image}
-        jsonLd={jsonLd}
-      />
       {/* Immersive Destination Hero with Interactive Slider */}
       <div 
         className="relative h-[70vh] min-h-[520px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none"

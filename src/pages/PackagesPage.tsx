@@ -5,8 +5,6 @@ import { PackageCard } from '../components/PackageCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
 import { getWhatsAppUrl } from '../config/siteConfig';
-import { SEOHead } from '../components/SEOHead';
-import { getBreadcrumbSchema } from '../utils/seoSchemas';
 
 interface PackagesPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -47,19 +45,8 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
     });
   }, [selectedCategory, selectedHub, selectedDuration, searchQuery, allPackages]);
 
-  const breadcrumbsSchema = getBreadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Tour Packages', url: '/packages' }
-  ]);
-
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-      <SEOHead
-        title="Uttarakhand Tour Packages 2026 | Kedarnath, Char Dham & Trek Packages | UK Yatra"
-        description="Browse certified Uttarakhand tour packages by UK Yatra. Book Kedarnath Yatra, Char Dham, Chopta Tungnath Chandrashila trek, Auli snow tours & custom itineraries from Delhi, Dehradun & Haridwar."
-        canonicalUrl="/packages"
-        schema={breadcrumbsSchema}
-      />
       <Breadcrumbs items={[{ label: 'Tour Packages' }]} />
 
       {/* Header */}
