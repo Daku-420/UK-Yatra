@@ -2,9 +2,10 @@
 // Edit here to update brand information across the entire website.
 
 export const SITE_CONFIG = {
-  name: "UKYatra",
+  name: "UK Yatra",
   legalName: "UKYatra Adventures & Holidays Private Limited",
   tagline: "Capture Unforgettable Moments!",
+  siteUrl: "https://uk-yatra.vercel.app",
   establishedYear: 2018,
   
   // Contact details (From live UKYatra.com)
@@ -35,12 +36,12 @@ export const SITE_CONFIG = {
     twitter: "https://x.com/UKYatradotcom",
   },
 
-  // Trust statistics
+  // Verified Business Trust Indicators
   stats: [
-    { label: "Trips Curated", value: "8,500+" },
-    { label: "Happy Travellers", value: "43,250+" },
-    { label: "Verified Local Guides", value: "45+" },
-    { label: "Average Google Rating", value: "4.7 / 5.0" },
+    { label: "Tourism Reg No.", value: "UK-TOUR-55737" },
+    { label: "GST Registered", value: "05AAACU5573R1Z4" },
+    { label: "MSME Certified", value: "UDYAM-UK-05" },
+    { label: "Ground Transit Hubs", value: "Dehradun & Haridwar" },
   ]
 };
 

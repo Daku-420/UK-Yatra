@@ -1,4 +1,5 @@
 import { TourPackage } from '../types';
+import { ADDITIONAL_SEO_PACKAGES } from './packageSlugs';
 
 /**
  * Official UK Yatra Tour Packages & Day-Wise Itineraries Catalog
@@ -7,6 +8,7 @@ import { TourPackage } from '../types';
  * Fixed Departure Group Yatras, Leisure Tours, and Alpine Treks.
  */
 export const TOUR_PACKAGES: TourPackage[] = [
+  ...ADDITIONAL_SEO_PACKAGES,
   {
     "id": "uky-heli-01-luxury-char-dham-by-heli-ex-dehradun-5n-6d-2026",
     "title": "Luxury Char Dham Yatra by Helicopter (5N/6D)",

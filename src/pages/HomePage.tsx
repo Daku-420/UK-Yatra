@@ -39,6 +39,8 @@ import { InstagramIcon } from '../components/SocialIcons';
 import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
 import { LiveWeatherWidget } from '../components/LiveWeatherWidget';
 import { adminStorage } from '../utils/adminStorage';
+import { SEOHead } from '../components/SEOHead';
+import { getTravelAgencySchema, getWebSiteSchema } from '../utils/seoSchemas';
 
 interface HomePageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -143,8 +145,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
     { id: 'lansdowne', name: 'Lansdowne' },
   ];
 
+  const homeJsonLd = [getTravelAgencySchema(), getWebSiteSchema()];
+
   return (
     <div className="flex flex-col min-h-screen">
+      <SEOHead
+        title="Uttarakhand Tour Packages & Travel Agency | UK Yatra"
+        description="Explore Uttarakhand with UK Yatra. Book Kedarnath, Char Dham, Chopta, Auli, Rishikesh and custom Uttarakhand tour packages with local travel support."
+        canonicalPath="/"
+        jsonLd={homeJsonLd}
+      />
       {/* ============================================================ */}
       {/* 1. CINEMATIC HERO SECTION */}
       {/* ============================================================ */}
@@ -176,13 +186,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Hero Content */}
         <div className="relative z-10 max-w-5xl mx-auto text-center mt-6 sm:mt-8">
           {/* Main Hero Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.15] max-w-4xl mx-auto uppercase drop-shadow-md">
-            YOUR NEXT HIMALAYAN STORY STARTS HERE.
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.12] max-w-5xl mx-auto drop-shadow-md">
+            Uttarakhand Tour Packages & Local Travel Agency
           </h1>
 
           {/* Supporting Text */}
           <p className="mt-4 sm:mt-6 text-sm sm:text-lg md:text-xl text-slate-200 font-normal max-w-3xl mx-auto leading-relaxed drop-shadow px-2">
-            Explore Uttarakhand through unforgettable journeys, hidden Himalayan escapes, spiritual trails, adventure experiences, and thoughtfully planned trips.
+            Explore Uttarakhand with UK Yatra. Book Kedarnath, Char Dham, Chopta, Auli, Rishikesh and custom Himalayan tour packages with local travel support from Delhi, Dehradun & Haridwar.
           </p>
 
           {/* Action CTAs */}
@@ -1153,6 +1163,129 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             <span>Read Our Reviews on Google</span>
             <svg className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </a>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 9B. LOCAL SEO & UTTARAKHAND OPERATIONAL HUBS */}
+      {/* ============================================================ */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full border-t border-[#E2DDD5]/60">
+        <SectionHeading
+          badge="Local Presence & Verified Registrations"
+          title="Uttarakhand Travel Agency &"
+          highlightText="Ground Operational Hubs"
+          subtitle="Operating directly out of Dehradun, Haridwar & Rishikesh with registered commercial mountain vehicles and native Garhwali guides."
+        />
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Dehradun Hub */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-sm hover:shadow-md transition-all space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center text-brand-orange">
+              <MapPin className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold font-display text-slate-900">Dehradun Head Office</h3>
+              <p className="text-xs text-brand-orange font-semibold mt-0.5">Capital Operations & Heli Transfers</p>
+            </div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Shop No. A-7, First Floor, Ganpati Plaza Complex, Birla Farm, Haripur Kalan, Dehradun 249205. Branch near Jolly Grant Airport.
+            </p>
+            <div className="pt-2 border-t border-slate-100 text-xs text-slate-700 space-y-1">
+              <p>• Sahastradhara Char Dham Helipad Transfers</p>
+              <p>• Mussoorie & Dhanaulti Private Cabs</p>
+              <p>• Phone: <a href="tel:+917817955737" className="font-bold text-slate-900 hover:text-brand-orange">+91 78179 55737</a></p>
+            </div>
+          </div>
+
+          {/* Haridwar & Rishikesh Gateways */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-sm hover:shadow-md transition-all space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700">
+              <Compass className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold font-display text-slate-900">Haridwar & Rishikesh Hubs</h3>
+              <p className="text-xs text-emerald-700 font-semibold mt-0.5">Pilgrimage & Trek Trailheads</p>
+            </div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Ground coordination for overland Char Dham, Kedarnath, Chopta Tungnath & Valley of Flowers departures starting from Haridwar Junction and Rishikesh.
+            </p>
+            <div className="pt-2 border-t border-slate-100 text-xs text-slate-700 space-y-1">
+              <p>• Haridwar Railway Station Pickup & Drop</p>
+              <p>• Doorstep pickup available from Delhi NCR & Noida</p>
+              <p>• Tapovan Adventure & Rafting Desk</p>
+            </div>
+          </div>
+
+          {/* Government Compliance */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-sm hover:shadow-md transition-all space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold font-display text-slate-900">Verified Credentials</h3>
+              <p className="text-xs text-amber-700 font-semibold mt-0.5">100% Uttarakhand Registered</p>
+            </div>
+            <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
+              <div className="flex justify-between py-1 border-b border-slate-100">
+                <span className="font-medium text-slate-500">UTDB Reg:</span>
+                <span className="font-bold text-slate-900">{SITE_CONFIG.registrationNo}</span>
+              </div>
+              <div className="flex justify-between py-1 border-b border-slate-100">
+                <span className="font-medium text-slate-500">GSTIN:</span>
+                <span className="font-bold text-slate-900">{SITE_CONFIG.gstin}</span>
+              </div>
+              <div className="flex justify-between py-1">
+                <span className="font-medium text-slate-500">MSME:</span>
+                <span className="font-bold text-slate-900">{SITE_CONFIG.msmeReg}</span>
+              </div>
+            </div>
+            <div className="pt-2">
+              <a
+                href="https://share.google/jPXqc3m8R3eYrwjKU"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:underline"
+              >
+                <span>View Google Business Listing</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Vernacular Search / Hindi Keywords Hub */}
+        <div className="mt-12 p-6 sm:p-8 rounded-3xl cream-banner border border-[#E2DDD5] shadow-xs">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="w-4 h-4 text-brand-orange" />
+            <h3 className="text-sm font-bold font-display uppercase tracking-wider text-slate-800">
+              हमारी मुख्य यात्रा सेवाएं (Popular Uttarakhand Circuits)
+            </h3>
+          </div>
+          <p className="text-xs text-slate-600 mb-4">
+            हरिद्वार, देहरादून और दिल्ली से सीधे उत्तराखंड के प्रमुख तीर्थ स्थलों और ट्रैकिंग मार्गों के लिए प्रमाणित टूर पैकेज:
+          </p>
+          <div className="flex flex-wrap gap-2.5">
+            {[
+              { name: 'केदारनाथ यात्रा पैकेज', to: '/packages/kedarnath-yatra-package' },
+              { name: 'चार धाम यात्रा पैकेज (हरिद्वार/दिल्ली)', to: '/packages/char-dham-yatra-package' },
+              { name: 'दो धाम (केदारनाथ - बद्रीनाथ)', to: '/packages/do-dham-yatra-package' },
+              { name: 'चोपता तुंगनाथ चंद्रशिला ट्रेक', to: '/packages/chopta-tungnath-chandrashila' },
+              { name: 'औली स्नो एवं स्कीइंग पैकेज', to: '/packages/auli-tour-package' },
+              { name: 'फूलों की घाटी (Valley of Flowers)', to: '/packages/valley-of-flowers-trek' },
+              { name: 'मसूरी एवं देहरादून टूर', to: '/packages/mussoorie-tour-package' },
+              { name: 'नैनीताल झील दर्शन', to: '/packages/nainital-tour-package' },
+              { name: 'ऋषिकेश रिवर राफ्टिंग ट्रिप', to: '/packages/rishikesh-tour-package' },
+              { name: 'उत्तराखंड ट्रिप खर्च गाइड', to: '/travel-guides/uttarakhand-trip-cost' },
+            ].map((item, idx) => (
+              <Link
+                key={idx}
+                to={item.to}
+                className="px-3.5 py-1.5 rounded-full bg-white hover:bg-brand-orange hover:text-white text-slate-800 text-xs font-semibold border border-[#E2DDD5] shadow-xs transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

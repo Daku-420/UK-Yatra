@@ -1,10 +1,23 @@
 import React from 'react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SITE_CONFIG } from '../config/siteConfig';
+import { SEOHead } from '../components/SEOHead';
+import { getBreadcrumbSchema } from '../utils/seoSchemas';
 
 export const PrivacyPolicyPage: React.FC = () => {
+  const breadcrumbsSchema = getBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Privacy Policy', url: '/privacy-policy' }
+  ]);
+
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+      <SEOHead
+        title="Privacy Policy | UK Yatra Uttarakhand Travel Agency"
+        description="Review the official privacy and data protection policy of UK Yatra regarding traveler information, Char Dham biometric registrations, and permit processing."
+        canonicalUrl="/privacy-policy"
+        schema={breadcrumbsSchema}
+      />
       <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
 
       <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E2DDD5] shadow-md space-y-8 text-xs sm:text-sm text-slate-700 leading-relaxed">

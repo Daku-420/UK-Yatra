@@ -11,6 +11,8 @@ import {
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from '../components/SocialIcons';
+import { SEOHead } from '../components/SEOHead';
+import { getTravelAgencySchema, getBreadcrumbSchema } from '../utils/seoSchemas';
 
 import { adminStorage } from '../utils/adminStorage';
 
@@ -42,8 +44,22 @@ export const ContactPage: React.FC = () => {
     setSubmitted(true);
   };
 
+  const contactJsonLd = [
+    getTravelAgencySchema(),
+    getBreadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Contact Us', url: '/contact' }
+    ])
+  ];
+
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <SEOHead
+        title="Contact UK Yatra | Travel Agency in Dehradun & Uttarakhand Support"
+        description="Contact UK Yatra travel agency in Dehradun. Get in touch for Kedarnath Yatra, Char Dham pilgrimage, Chopta trekking, and custom Uttarakhand tour bookings."
+        canonicalPath="/contact"
+        jsonLd={contactJsonLd}
+      />
       <Breadcrumbs items={[{ label: 'Contact Us' }]} />
 
       {/* Header Banner */}
