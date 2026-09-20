@@ -74,6 +74,51 @@ const PACKAGE_ALIASES: Record<string, string> = {
   'panch-kedar': 'panch-kedar'
 };
 
+// Helpers to format quick spec cards cleanly without truncation or container overflow
+const getConciseAccommodation = (val?: string) => {
+  if (!val) return 'Verified 3-Star Stays';
+  if (val.includes('Riverside Boutique Resort')) return 'Riverside Boutique Resort';
+  if (val.includes('Valley-view Boutique Hotel')) return 'Boutique Hill Resort';
+  if (val.includes('Luxury Alpine Camp')) return 'Luxury Alpine Camp';
+  if (val.includes('Corbett luxury resort') || val.includes('Wildlife Resort') || val.includes('Wilderness Resort')) return 'Wildlife Safari Resort';
+  if (val.includes('Heritage Hotel')) return 'Heritage Hill Hotel';
+  if (val.includes('Orchard Lodge') || val.includes('Fruit Orchard')) return 'Himalayan Orchard Lodge';
+  if (val.includes('Homestay')) return 'Traditional Homestay';
+  if (val.includes('Camp')) return 'Alpine Wilderness Camp';
+  if (val.includes('3-Star') || val.includes('3-star')) return 'Premium 3-Star Stays';
+  if (val.includes('/')) return val.split('/')[0].trim();
+  if (val.length > 28) return val.substring(0, 26) + '...';
+  return val;
+};
+
+const getConciseTransport = (val?: string) => {
+  if (!val) return 'Private Hill Cab';
+  if (val.includes('Dedicated Private AC') || val.includes('Private AC')) return 'Private AC Sedan / SUV';
+  if (val.includes('Non-AC Hill Cab') || val.includes('Non-AC')) return 'Private Hill Cab';
+  if (val.includes('4x4 Open Gypsy') || val.includes('Gypsy')) return '4x4 Safari Gypsy';
+  if (val.includes('Helicopter')) return 'VIP Helicopter Shuttle';
+  if (val.includes('Coach')) return 'Private AC Mini Coach';
+  if (val.includes('(')) return val.split('(')[0].trim();
+  if (val.length > 25) return val.substring(0, 23) + '...';
+  return val;
+};
+
+const getConciseMealPlan = (val?: string) => {
+  if (!val) return 'Breakfast & Dinner (MAP)';
+  const lower = val.toLowerCase();
+  if (lower.includes('buffet breakfast & chef-curated dinner') || lower.includes('breakfast & dinner') || lower.includes('map')) {
+    return 'Breakfast & Dinner (MAP)';
+  }
+  if (lower.includes('all meals') || lower.includes('ap plan')) {
+    return 'All Meals Included (AP)';
+  }
+  if (lower.includes('breakfast included') || lower.includes('daily breakfast') || lower.includes('cp plan')) {
+    return 'Daily Breakfast (CP)';
+  }
+  if (val.includes('(')) return val.split('(')[0].trim();
+  return val;
+};
+
 export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBookingModal }) => {
   const { id } = useParams<{ id: string }>();
   const packages = adminStorage.getPackages();
@@ -212,11 +257,11 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                 <span>{tourPackage.difficulty}</span>
               </span>
             )}
-            <span className="px-3 py-1 rounded-full text-xs font-medium bg-brand-dark/80 backdrop-blur-md text-white border border-white/10 flex items-center gap-1">
+            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-brand-orange" />
               <span>{tourPackage.duration}</span>
             </span>
-            <span className="px-3 py-1 rounded-full text-xs font-medium bg-brand-dark/80 backdrop-blur-md text-white border border-white/10 flex items-center gap-1">
+            <span className="px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold backdrop-blur-xs flex items-center gap-1">
               <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
               <span>{tourPackage.rating} ({tourPackage.reviewsCount} reviews)</span>
             </span>
@@ -256,47 +301,64 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
         />
 
         {/* Quick Specs Strip */}
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 p-4 bg-white rounded-2xl border border-[#E2DDD5] shadow-xs text-xs text-slate-700">
-          <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#F5F3EF]">
-            <MapPin className="w-4 h-4 text-brand-orange shrink-0" />
-            <div>
-              <div className="text-[10px] text-slate-500 uppercase font-bold">Starting Point</div>
-              <div className="font-semibold text-slate-900 truncate">{tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3 p-4 bg-white rounded-2xl border border-[#E2DDD5] shadow-xs text-xs text-slate-700">
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F6F2] border border-[#EBE6DC] hover:border-slate-300 transition-colors min-w-0" title={tourPackage.startPoint || 'Haridwar / Dehradun'}>
+            <div className="p-1.5 rounded-lg bg-white text-brand-orange shrink-0 mt-0.5 border border-slate-100 shadow-2xs">
+              <MapPin className="w-3.5 h-3.5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Starting Point</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
             </div>
           </div>
-          <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#F5F3EF]">
-            <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
-            <div>
-              <div className="text-[10px] text-slate-500 uppercase font-bold">Ending Point</div>
-              <div className="font-semibold text-slate-900 truncate">{tourPackage.endPoint || 'Haridwar / Dehradun'}</div>
+
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F6F2] border border-[#EBE6DC] hover:border-slate-300 transition-colors min-w-0" title={tourPackage.endPoint || tourPackage.startPoint || 'Haridwar / Dehradun'}>
+            <div className="p-1.5 rounded-lg bg-white text-emerald-600 shrink-0 mt-0.5 border border-slate-100 shadow-2xs">
+              <MapPin className="w-3.5 h-3.5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Ending Point</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{tourPackage.endPoint || tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
             </div>
           </div>
-          <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#F5F3EF]">
-            <Clock className="w-4 h-4 text-blue-600 shrink-0" />
-            <div>
-              <div className="text-[10px] text-slate-500 uppercase font-bold">Duration</div>
-              <div className="font-semibold text-slate-900">{tourPackage.duration}</div>
+
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F6F2] border border-[#EBE6DC] hover:border-slate-300 transition-colors min-w-0" title={tourPackage.duration}>
+            <div className="p-1.5 rounded-lg bg-white text-blue-600 shrink-0 mt-0.5 border border-slate-100 shadow-2xs">
+              <Clock className="w-3.5 h-3.5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Duration</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{tourPackage.duration}</div>
             </div>
           </div>
-          <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#F5F3EF]">
-            <Building2 className="w-4 h-4 text-amber-600 shrink-0" />
-            <div>
-              <div className="text-[10px] text-slate-500 uppercase font-bold">Stay Standard</div>
-              <div className="font-semibold text-slate-900 truncate">{tourPackage.accommodationType || 'Verified 3-Star Stays'}</div>
+
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F6F2] border border-[#EBE6DC] hover:border-slate-300 transition-colors min-w-0" title={tourPackage.accommodationType || 'Verified 3-Star Stays'}>
+            <div className="p-1.5 rounded-lg bg-white text-amber-600 shrink-0 mt-0.5 border border-slate-100 shadow-2xs">
+              <Building2 className="w-3.5 h-3.5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Stay Standard</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{getConciseAccommodation(tourPackage.accommodationType)}</div>
             </div>
           </div>
-          <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#F5F3EF]">
-            <Car className="w-4 h-4 text-purple-600 shrink-0" />
-            <div>
-              <div className="text-[10px] text-slate-500 uppercase font-bold">Transport</div>
-              <div className="font-semibold text-slate-900 truncate">{tourPackage.transportationType || 'Dedicated Private Cab'}</div>
+
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F6F2] border border-[#EBE6DC] hover:border-slate-300 transition-colors min-w-0" title={tourPackage.transportationType || 'Dedicated Private Cab'}>
+            <div className="p-1.5 rounded-lg bg-white text-purple-600 shrink-0 mt-0.5 border border-slate-100 shadow-2xs">
+              <Car className="w-3.5 h-3.5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Transport</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{getConciseTransport(tourPackage.transportationType)}</div>
             </div>
           </div>
-          <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#F5F3EF]">
-            <Utensils className="w-4 h-4 text-emerald-600 shrink-0" />
-            <div>
-              <div className="text-[10px] text-slate-500 uppercase font-bold">Meal Plan</div>
-              <div className="font-semibold text-slate-900 truncate">{tourPackage.mealPlan || 'Breakfast & Dinner (MAP)'}</div>
+
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F6F2] border border-[#EBE6DC] hover:border-slate-300 transition-colors min-w-0" title={tourPackage.mealPlan || 'Breakfast & Dinner (MAP)'}>
+            <div className="p-1.5 rounded-lg bg-white text-emerald-600 shrink-0 mt-0.5 border border-slate-100 shadow-2xs">
+              <Utensils className="w-3.5 h-3.5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Meal Plan</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{getConciseMealPlan(tourPackage.mealPlan)}</div>
             </div>
           </div>
         </div>
