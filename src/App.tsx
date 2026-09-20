@@ -103,6 +103,8 @@ function AppInner() {
           {/* Tour Packages */}
           <Route path="/packages" element={<PackagesPage onOpenBookingModal={handleOpenBookingModal} />} />
           <Route path="/packages/:id" element={<PackageDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/tours" element={<PackagesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/tours/:id" element={<PackageDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           
           {/* Customized Trip Planner */}
           <Route path="/customized-trip" element={<CustomizedTripPage />} />

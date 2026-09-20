@@ -48,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages_v5',
+  PACKAGES: 'ukyatra_admin_packages_v6',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -245,7 +245,7 @@ export const adminStorage = {
   // --- TOUR PACKAGES ---
   getPackages: (): TourPackage[] => {
     try {
-      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom', 'ukyatra_admin_packages_v4'].forEach(k => {
+      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom', 'ukyatra_admin_packages_v4', 'ukyatra_admin_packages_v5'].forEach(k => {
         if (localStorage.getItem(k)) localStorage.removeItem(k);
       });
       const sanitizePkg = (p: TourPackage): TourPackage => ({

@@ -17,12 +17,16 @@ import {
   Info,
   MapPin,
   Footprints,
-  Sparkles
+  Sparkles,
+  Trees,
+  ArrowRight,
+  Mountain
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 import { Logo } from './Logo';
 import { SearchBar } from './SearchBar';
+import { FEATURED_PACKAGES, TOUR_CATEGORIES } from '../data/navigationTours';
 
 interface NavbarProps {
   onOpenBookingModal?: () => void;
@@ -33,7 +37,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
   const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(true);
+  const [packagesDropdownOpen, setPackagesDropdownOpen] = useState(false);
+  const [mobilePackagesOpen, setMobilePackagesOpen] = useState(false);
+  const [mobileCategoryOpen, setMobileCategoryOpen] = useState<string | null>('popular-uttarakhand');
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const packagesDropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -52,6 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setActivitiesOpen(false);
+    setPackagesDropdownOpen(false);
   }, [location.pathname]);
 
   // Lock body scrolling when mobile menu is open
@@ -66,11 +75,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     };
   }, [mobileMenuOpen]);
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActivitiesOpen(false);
+      }
+      if (packagesDropdownRef.current && !packagesDropdownRef.current.contains(event.target as Node)) {
+        setPackagesDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -82,6 +94,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     if (path !== '/' && location.pathname.startsWith(path)) return true;
     return false;
   };
+
+  const isPackagesActive = 
+    location.pathname.startsWith('/packages') || 
+    location.pathname.startsWith('/tours');
 
   const isActivitiesActive = 
     location.pathname.startsWith('/activities') || 
@@ -153,16 +169,150 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               Home
             </Link>
 
-            <Link 
-              to="/packages" 
-              className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
-                isActive('/packages') 
-                  ? 'text-brand-orange' 
-                  : 'text-white hover:text-brand-orange'
-              }`}
+            {/* Tour Packages Dropdown */}
+            <div 
+              ref={packagesDropdownRef}
+              className="relative"
+              onMouseEnter={() => setPackagesDropdownOpen(true)}
+              onMouseLeave={() => setPackagesDropdownOpen(false)}
             >
-              Tour Packages
-            </Link>
+              <button
+                type="button"
+                onClick={() => setPackagesDropdownOpen(!packagesDropdownOpen)}
+                className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
+                  isPackagesActive || packagesDropdownOpen
+                    ? 'text-brand-orange' 
+                    : 'text-white hover:text-brand-orange'
+                }`}
+                aria-expanded={packagesDropdownOpen}
+                aria-haspopup="true"
+              >
+                <span>Tour Packages</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${packagesDropdownOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
+              </button>
+
+              {/* Dropdown Menu Panel */}
+              {packagesDropdownOpen && (
+                <div 
+                  className="absolute top-full -left-12 xl:-left-6 mt-1 w-[880px] xl:w-[940px] max-w-[calc(100vw-2.5rem)] bg-[#00003c]/98 backdrop-blur-2xl border border-white/15 rounded-3xl shadow-2xl p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-white"
+                  style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
+                >
+                  {/* 1. Featured & Popular Destinations Section */}
+                  <div className="pb-4 mb-4 border-b border-white/10">
+                    <div className="flex items-center justify-between mb-2.5">
+                      <div className="flex items-center gap-2">
+                        <span className="p-1 rounded-md bg-brand-orange/20 text-brand-orange">
+                          <Sparkles className="w-3.5 h-3.5" />
+                        </span>
+                        <span className="text-xs uppercase font-extrabold tracking-wider text-slate-200">
+                          Featured & Popular Packages
+                        </span>
+                      </div>
+                      <Link
+                        to="/packages"
+                        onClick={() => setPackagesDropdownOpen(false)}
+                        className="text-[11px] font-semibold text-brand-orange hover:text-amber-300 transition-colors flex items-center gap-1"
+                      >
+                        <span>View All Tours</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                      {FEATURED_PACKAGES.map((item) => (
+                        <Link
+                          key={item.slug}
+                          to={item.path}
+                          onClick={() => setPackagesDropdownOpen(false)}
+                          className="group/feat flex flex-col p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-orange/50 transition-all text-left"
+                        >
+                          <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden mb-1.5 bg-black/40">
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="w-full h-full object-cover group-hover/feat:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                            {item.badge && (
+                              <span className="absolute top-1 right-1 text-[8px] font-bold px-1.5 py-0.2 rounded bg-brand-orange text-white shadow-xs">
+                                {item.badge}
+                              </span>
+                            )}
+                            <span className="absolute bottom-1 left-1 text-[8px] font-semibold px-1 rounded bg-black/75 text-white backdrop-blur-xs">
+                              {item.duration}
+                            </span>
+                          </div>
+                          <div className="text-xs font-bold text-white group-hover/feat:text-brand-orange transition-colors truncate">
+                            {item.name}
+                          </div>
+                          <div className="text-[10px] text-slate-400 truncate mt-0.5">
+                            {item.subtitle}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 2. Six Tour Categories Grid (3 Columns) */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pb-4">
+                    {TOUR_CATEGORIES.map((category) => (
+                      <div key={category.id} className="space-y-2">
+                        <div className="flex items-center gap-2 pb-1 border-b border-white/10">
+                          <span className="text-brand-orange">
+                            {category.id === 'popular-uttarakhand' && <SunMedium className="w-4 h-4" />}
+                            {category.id === 'trekking-adventure' && <Footprints className="w-4 h-4" />}
+                            {category.id === 'spiritual-char-dham' && <Sparkles className="w-4 h-4" />}
+                            {category.id === 'kumaon' && <Compass className="w-4 h-4" />}
+                            {category.id === 'offbeat-uttarakhand' && <MapPin className="w-4 h-4" />}
+                            {category.id === 'wildlife-nature' && <Trees className="w-4 h-4" />}
+                          </span>
+                          <h3 className="text-xs uppercase font-extrabold tracking-wider text-slate-200">
+                            {category.name}
+                          </h3>
+                        </div>
+                        <ul className="space-y-0.5">
+                          {category.items.map((item) => (
+                            <li key={item.slug}>
+                              <Link
+                                to={item.path}
+                                onClick={() => setPackagesDropdownOpen(false)}
+                                className="group flex items-center justify-between py-1 px-1.5 rounded-lg text-xs text-slate-300 hover:text-brand-orange hover:bg-white/5 transition-colors"
+                              >
+                                <span className="flex items-center gap-1.5 truncate">
+                                  <span className="w-1 h-1 rounded-full bg-slate-500 group-hover:bg-brand-orange transition-colors shrink-0"></span>
+                                  <span className="truncate">{item.name}</span>
+                                </span>
+                                {item.duration && (
+                                  <span className="text-[10px] text-slate-400 group-hover:text-slate-300 font-mono ml-2 shrink-0">
+                                    {item.duration}
+                                  </span>
+                                )}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* 3. Bottom Footer Bar */}
+                  <div className="pt-3 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                    <div className="text-slate-300 flex items-center gap-2 text-[11px]">
+                      <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span>Uttarakhand Tourism Certified Partner • 100% Customized Itineraries</span>
+                    </div>
+                    <Link
+                      to="/packages"
+                      onClick={() => setPackagesDropdownOpen(false)}
+                      className="px-4 py-1.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-bold text-xs shadow-md shadow-brand-orange/20 flex items-center gap-1.5 transition-colors"
+                    >
+                      <span>VIEW ALL TOURS</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link 
               to="/book-vehicle" 
@@ -377,18 +527,110 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <Home className="w-5 h-5 text-brand-orange shrink-0" />
               <span>Home</span>
             </Link>
-            <Link 
-              to="/packages" 
-              onClick={() => setMobileMenuOpen(false)} 
-              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
-                isActive('/packages') 
-                  ? 'text-brand-orange' 
-                  : 'text-white hover:text-brand-orange'
-              }`}
-            >
-              <Package className="w-5 h-5 text-brand-orange shrink-0" />
-              <span>Tour Packages</span>
-            </Link>
+            {/* Tour Packages Mobile Accordion */}
+            <div className="rounded-xl bg-white/5 border border-white/10 overflow-hidden my-1">
+              <button
+                type="button"
+                onClick={() => setMobilePackagesOpen(!mobilePackagesOpen)}
+                className="w-full flex items-center justify-between px-4 py-3 text-base font-semibold text-white hover:text-brand-orange transition-colors cursor-pointer"
+                aria-expanded={mobilePackagesOpen}
+              >
+                <span className="flex items-center gap-2.5">
+                  <Package className="w-5 h-5 text-brand-orange shrink-0" />
+                  <span>Tour Packages</span>
+                </span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePackagesOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+              </button>
+
+              {mobilePackagesOpen && (
+                <div className="px-3 pb-3 space-y-3 bg-black/35 border-t border-white/10 pt-3">
+                  {/* Featured Quick Cards */}
+                  <div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-brand-orange mb-2 flex items-center gap-1.5">
+                      <Sparkles className="w-3 h-3" />
+                      <span>Featured Packages</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {FEATURED_PACKAGES.map((feat) => (
+                        <Link
+                          key={feat.slug}
+                          to={feat.path}
+                          onClick={() => { setMobilePackagesOpen(false); setMobileMenuOpen(false); }}
+                          className="flex items-center gap-2 p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-left group"
+                        >
+                          <img src={feat.image} alt={feat.name} className="w-9 h-9 rounded-md object-cover shrink-0" />
+                          <div className="min-w-0">
+                            <div className="text-xs font-semibold text-white group-hover:text-brand-orange truncate">{feat.name}</div>
+                            <div className="text-[10px] text-slate-400">{feat.duration}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 6 Category Sub-accordions */}
+                  <div className="space-y-1.5 pt-1">
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-slate-400 mb-1">
+                      Destinations & Circuits
+                    </div>
+                    {TOUR_CATEGORIES.map((category) => {
+                      const isCatOpen = mobileCategoryOpen === category.id;
+                      return (
+                        <div key={category.id} className="rounded-lg bg-white/5 border border-white/5 overflow-hidden">
+                          <button
+                            type="button"
+                            onClick={() => setMobileCategoryOpen(isCatOpen ? null : category.id)}
+                            className="w-full flex items-center justify-between p-2.5 text-xs font-semibold text-slate-200 hover:text-white cursor-pointer"
+                          >
+                            <span className="flex items-center gap-1.5">
+                              <span className="text-brand-orange text-xs">
+                                {category.id === 'popular-uttarakhand' && '☀️'}
+                                {category.id === 'trekking-adventure' && '🥾'}
+                                {category.id === 'spiritual-char-dham' && '✨'}
+                                {category.id === 'kumaon' && '🧭'}
+                                {category.id === 'offbeat-uttarakhand' && '📍'}
+                                {category.id === 'wildlife-nature' && '🌲'}
+                              </span>
+                              <span>{category.name}</span>
+                            </span>
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCatOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+                          </button>
+                          {isCatOpen && (
+                            <div className="px-3 pb-2.5 pt-1 space-y-1 bg-black/20 border-t border-white/5">
+                              {category.items.map((item) => (
+                                <Link
+                                  key={item.slug}
+                                  to={item.path}
+                                  onClick={() => { setMobilePackagesOpen(false); setMobileMenuOpen(false); }}
+                                  className="flex items-center justify-between py-1.5 px-2 rounded text-xs text-slate-300 hover:text-brand-orange hover:bg-white/5 transition-colors"
+                                >
+                                  <span className="truncate">{item.name}</span>
+                                  {item.duration && (
+                                    <span className="text-[10px] text-slate-400 font-mono ml-2 shrink-0">{item.duration}</span>
+                                  )}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* View All Tours Link */}
+                  <div className="pt-2 border-t border-white/10">
+                    <Link
+                      to="/packages"
+                      onClick={() => { setMobilePackagesOpen(false); setMobileMenuOpen(false); }}
+                      className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white text-xs font-bold transition-colors"
+                    >
+                      <span>VIEW ALL TOUR PACKAGES</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
             <Link 
               to="/book-vehicle" 
               onClick={() => setMobileMenuOpen(false)} 

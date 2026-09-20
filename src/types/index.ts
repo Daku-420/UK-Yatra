@@ -57,6 +57,19 @@ export interface TourPackage {
   isFeatured?: boolean;
   pdfBrochure?: string | null;
   pickupDrop?: string;
+  // Enhanced package detail specifications
+  startPoint?: string;
+  endPoint?: string;
+  difficulty?: 'Easy' | 'Moderate' | 'Challenging' | 'Difficult' | string;
+  accommodationType?: string;
+  transportationType?: string;
+  mealPlan?: string;
+  thingsToCarry?: string[];
+  importantInfo?: string[];
+  bestTimeToVisit?: string;
+  routeSummary?: string[];
+  faqs?: { question: string; answer: string }[];
+  cancellationPolicy?: string[];
 }
 
 export interface Trek {
