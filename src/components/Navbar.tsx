@@ -194,27 +194,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               {/* Dropdown Menu Panel */}
               {packagesDropdownOpen && (
                 <div 
-                  className="absolute top-full -left-12 xl:-left-6 mt-1.5 w-[880px] xl:w-[940px] max-w-[calc(100vw-2.5rem)] bg-[#FDFBF7] border border-[#E8E2D8] rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)] p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-slate-800 ring-1 ring-black/5"
+                  className="absolute top-full -left-12 xl:-left-6 mt-1.5 w-[900px] xl:w-[960px] max-w-[calc(100vw-2.5rem)] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] p-5.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-slate-900 ring-1 ring-black/10"
                   style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
                 >
                   {/* 1. Featured & Popular Destinations Section */}
-                  <div className="pb-4 mb-4 border-b border-[#E8E2D8]">
-                    <div className="flex items-center justify-between mb-2.5">
+                  <div className="pb-4 mb-4 border-b border-[#E2D9CB]">
+                    <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <span className="p-1 rounded-md bg-orange-100 text-brand-orange border border-orange-200/80">
-                          <Sparkles className="w-3.5 h-3.5" />
+                        <span className="p-1.5 rounded-lg bg-orange-100 text-brand-orange border border-orange-200">
+                          <Sparkles className="w-4 h-4" />
                         </span>
-                        <span className="text-xs uppercase font-extrabold tracking-wider text-slate-800">
+                        <span className="text-xs uppercase font-black tracking-wider text-slate-950">
                           Featured & Popular Packages
                         </span>
                       </div>
                       <Link
                         to="/packages"
                         onClick={() => setPackagesDropdownOpen(false)}
-                        className="text-[11px] font-bold text-brand-orange hover:text-orange-700 transition-colors flex items-center gap-1"
+                        className="text-xs font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center gap-1"
                       >
                         <span>View All Tours</span>
-                        <ArrowRight className="w-3 h-3" />
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
 
@@ -224,9 +224,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           key={item.slug}
                           to={item.path}
                           onClick={() => setPackagesDropdownOpen(false)}
-                          className="group/feat flex flex-col p-2 rounded-xl bg-white hover:bg-[#FAF7F2] border border-[#E8E2D8] hover:border-brand-orange/60 shadow-xs hover:shadow-md transition-all text-left"
+                          className="group/feat flex flex-col p-2.5 rounded-xl bg-white hover:bg-orange-50/40 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left"
                         >
-                          <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden mb-1.5 bg-[#EFEAE2]">
+                          <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden mb-2 bg-[#EFEAE2]">
                             <img
                               src={item.image}
                               alt={item.name}
@@ -239,18 +239,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               }}
                             />
                             {item.badge && (
-                              <span className="absolute top-1 right-1 text-[8px] font-extrabold px-1.5 py-0.5 rounded bg-brand-orange text-white shadow-xs">
+                              <span className="absolute top-1 right-1 text-[9px] font-black px-1.5 py-0.5 rounded bg-brand-orange text-white shadow-xs">
                                 {item.badge}
                               </span>
                             )}
-                            <span className="absolute bottom-1 left-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-slate-900/85 text-white backdrop-blur-xs">
+                            <span className="absolute bottom-1 left-1 text-[9px] font-black px-1.5 py-0.5 rounded bg-slate-950/90 text-white backdrop-blur-xs">
                               {item.duration}
                             </span>
                           </div>
-                          <div className="text-xs font-bold text-slate-900 group-hover/feat:text-brand-orange transition-colors truncate">
+                          <div className="text-[13px] font-black text-slate-950 group-hover/feat:text-brand-orange transition-colors truncate leading-tight">
                             {item.name}
                           </div>
-                          <div className="text-[10px] text-slate-500 font-medium truncate mt-0.5">
+                          <div className="text-[11px] text-slate-700 font-semibold truncate mt-1">
                             {item.subtitle}
                           </div>
                         </Link>
@@ -262,16 +262,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pb-4">
                     {TOUR_CATEGORIES.map((category) => (
                       <div key={category.id} className="space-y-2">
-                        <div className="flex items-center gap-2 pb-1.5 border-b border-[#E8E2D8]">
-                          <span className="text-brand-orange">
-                            {category.id === 'popular-uttarakhand' && <SunMedium className="w-4 h-4" />}
-                            {category.id === 'trekking-adventure' && <Footprints className="w-4 h-4" />}
-                            {category.id === 'spiritual-char-dham' && <Sparkles className="w-4 h-4" />}
-                            {category.id === 'kumaon' && <Compass className="w-4 h-4" />}
-                            {category.id === 'offbeat-uttarakhand' && <MapPin className="w-4 h-4" />}
-                            {category.id === 'wildlife-nature' && <Trees className="w-4 h-4" />}
+                        <div className="flex items-center gap-2 pb-1.5 border-b border-[#E2D9CB]">
+                          <span className="text-brand-orange p-1 rounded-md bg-orange-100/70 border border-orange-200/60">
+                            {category.id === 'popular-uttarakhand' && <SunMedium className="w-3.5 h-3.5" />}
+                            {category.id === 'trekking-adventure' && <Footprints className="w-3.5 h-3.5" />}
+                            {category.id === 'spiritual-char-dham' && <Sparkles className="w-3.5 h-3.5" />}
+                            {category.id === 'kumaon' && <Compass className="w-3.5 h-3.5" />}
+                            {category.id === 'offbeat-uttarakhand' && <MapPin className="w-3.5 h-3.5" />}
+                            {category.id === 'wildlife-nature' && <Trees className="w-3.5 h-3.5" />}
                           </span>
-                          <h3 className="text-xs uppercase font-black tracking-wider text-slate-900">
+                          <h3 className="text-xs uppercase font-black tracking-wider text-slate-950">
                             {category.name}
                           </h3>
                         </div>
@@ -281,14 +281,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               <Link
                                 to={item.path}
                                 onClick={() => setPackagesDropdownOpen(false)}
-                                className="group flex items-center justify-between py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-brand-orange hover:bg-[#F2ECE1] transition-colors"
+                                className="group flex items-center justify-between py-1.5 px-2 rounded-lg text-xs hover:bg-[#EFE8DC] transition-colors"
                               >
                                 <span className="flex items-center gap-1.5 truncate">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8C0B2] group-hover:bg-brand-orange transition-colors shrink-0"></span>
-                                  <span className="truncate font-medium group-hover:font-semibold text-slate-800 group-hover:text-brand-orange">{item.name}</span>
+                                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange/60 group-hover:bg-brand-orange transition-colors shrink-0"></span>
+                                  <span className="truncate font-bold text-slate-950 group-hover:text-brand-orange text-[12.5px] leading-tight">{item.name}</span>
                                 </span>
                                 {item.duration && (
-                                  <span className="text-[10px] text-slate-500 group-hover:text-brand-orange font-mono ml-2 shrink-0 bg-[#F2ECE1] group-hover:bg-white px-1.5 py-0.5 rounded border border-[#E5DFD5]">
+                                  <span className="text-[11px] font-extrabold text-slate-900 group-hover:text-brand-orange font-mono ml-2 shrink-0 bg-white group-hover:bg-orange-50 px-2 py-0.5 rounded-md border border-slate-300 group-hover:border-orange-300 shadow-2xs">
                                     {item.duration}
                                   </span>
                                 )}
@@ -301,15 +301,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   </div>
 
                   {/* 3. Bottom Footer Bar */}
-                  <div className="pt-3.5 border-t border-[#E8E2D8] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-[#F4EFE6] -mx-5 -mb-5 px-5 py-3 rounded-b-3xl">
-                    <div className="text-slate-700 flex items-center gap-2 text-[11px] font-semibold">
+                  <div className="pt-3.5 border-t border-[#E2D9CB] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-[#F4EFE6] -mx-5.5 -mb-5.5 px-5.5 py-3 rounded-b-3xl">
+                    <div className="text-slate-950 flex items-center gap-2 text-xs font-black">
                       <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Uttarakhand Tourism Certified Partner • 100% Customized Itineraries</span>
                     </div>
                     <Link
                       to="/packages"
                       onClick={() => setPackagesDropdownOpen(false)}
-                      className="px-4 py-2 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-bold text-xs shadow-md shadow-brand-orange/20 flex items-center gap-1.5 transition-all hover:scale-[1.02]"
+                      className="px-5 py-2 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-black text-xs shadow-md shadow-brand-orange/25 flex items-center gap-1.5 transition-all hover:scale-[1.02]"
                     >
                       <span>VIEW ALL TOURS</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -548,10 +548,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               </button>
 
               {mobilePackagesOpen && (
-                <div className="px-3 pb-3 space-y-3 bg-[#FAF7F2] border-t border-[#E8E2D8] pt-3 text-slate-800 rounded-b-xl">
+                <div className="px-3 pb-3 space-y-3 bg-[#FFFDF9] border-t border-[#E2D9CB] pt-3 text-slate-900 rounded-b-xl">
                   {/* Featured Quick Cards */}
                   <div>
-                    <div className="text-[10px] uppercase font-bold tracking-wider text-brand-orange mb-2 flex items-center gap-1.5">
+                    <div className="text-[10px] uppercase font-black tracking-wider text-brand-orange mb-2 flex items-center gap-1.5">
                       <Sparkles className="w-3 h-3" />
                       <span>Featured Packages</span>
                     </div>
@@ -561,12 +561,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           key={feat.slug}
                           to={feat.path}
                           onClick={() => { setMobilePackagesOpen(false); setMobileMenuOpen(false); }}
-                          className="flex items-center gap-2 p-2 rounded-lg bg-white hover:bg-orange-50 border border-[#E8E2D8] text-left group shadow-2xs transition-colors"
+                          className="flex items-center gap-2 p-2 rounded-lg bg-white hover:bg-orange-50 border border-[#DDD5C7] text-left group shadow-xs transition-colors"
                         >
                           <img 
                             src={feat.image} 
                             alt={feat.name} 
-                            className="w-9 h-9 rounded-md object-cover shrink-0" 
+                            className="w-10 h-10 rounded-md object-cover shrink-0" 
                             onError={(e) => {
                               const target = e.currentTarget as HTMLImageElement;
                               target.onerror = null;
@@ -574,8 +574,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             }}
                           />
                           <div className="min-w-0">
-                            <div className="text-xs font-semibold text-slate-900 group-hover:text-brand-orange truncate">{feat.name}</div>
-                            <div className="text-[10px] text-slate-500 font-medium">{feat.duration}</div>
+                            <div className="text-xs font-black text-slate-950 group-hover:text-brand-orange truncate">{feat.name}</div>
+                            <div className="text-[11px] text-slate-700 font-bold">{feat.duration}</div>
                           </div>
                         </Link>
                       ))}
@@ -584,17 +584,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
                   {/* 6 Category Sub-accordions */}
                   <div className="space-y-1.5 pt-1">
-                    <div className="text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-1">
+                    <div className="text-[11px] uppercase font-black tracking-wider text-slate-700 mb-1">
                       Destinations & Circuits
                     </div>
                     {TOUR_CATEGORIES.map((category) => {
                       const isCatOpen = mobileCategoryOpen === category.id;
                       return (
-                        <div key={category.id} className="rounded-lg bg-white border border-[#E8E2D8] overflow-hidden shadow-2xs">
+                        <div key={category.id} className="rounded-lg bg-white border border-[#DDD5C7] overflow-hidden shadow-xs">
                           <button
                             type="button"
                             onClick={() => setMobileCategoryOpen(isCatOpen ? null : category.id)}
-                            className="w-full flex items-center justify-between p-2.5 text-xs font-bold text-slate-800 hover:text-brand-orange cursor-pointer"
+                            className="w-full flex items-center justify-between p-2.5 text-xs font-black text-slate-950 hover:text-brand-orange cursor-pointer"
                           >
                             <span className="flex items-center gap-1.5">
                               <span className="text-brand-orange text-xs">
@@ -607,20 +607,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               </span>
                               <span>{category.name}</span>
                             </span>
-                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCatOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCatOpen ? 'rotate-180 text-brand-orange' : 'text-slate-500'}`} />
                           </button>
                           {isCatOpen && (
-                            <div className="px-3 pb-2.5 pt-1 space-y-1 bg-[#FDFBF7] border-t border-[#E8E2D8]">
+                            <div className="px-3 pb-2.5 pt-1 space-y-1 bg-[#F9F6F0] border-t border-[#DDD5C7]">
                               {category.items.map((item) => (
                                 <Link
                                   key={item.slug}
                                   to={item.path}
                                   onClick={() => { setMobilePackagesOpen(false); setMobileMenuOpen(false); }}
-                                  className="flex items-center justify-between py-1.5 px-2 rounded text-xs text-slate-700 hover:text-brand-orange hover:bg-orange-50 transition-colors"
+                                  className="flex items-center justify-between py-1.5 px-2 rounded text-xs text-slate-950 font-bold hover:text-brand-orange hover:bg-orange-50 transition-colors"
                                 >
                                   <span className="truncate">{item.name}</span>
                                   {item.duration && (
-                                    <span className="text-[10px] text-slate-500 font-mono ml-2 shrink-0 bg-slate-100 px-1 py-0.5 rounded">{item.duration}</span>
+                                    <span className="text-[11px] text-slate-900 font-black font-mono ml-2 shrink-0 bg-white border border-slate-300 px-1.5 py-0.5 rounded">{item.duration}</span>
                                   )}
                                 </Link>
                               ))}
@@ -632,11 +632,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   </div>
 
                   {/* View All Tours Link */}
-                  <div className="pt-2 border-t border-[#E8E2D8]">
+                  <div className="pt-2 border-t border-[#E2D9CB]">
                     <Link
                       to="/packages"
                       onClick={() => { setMobilePackagesOpen(false); setMobileMenuOpen(false); }}
-                      className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white text-xs font-bold transition-colors shadow-sm"
+                      className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white text-xs font-black transition-colors shadow-sm"
                     >
                       <span>VIEW ALL TOUR PACKAGES</span>
                       <ArrowRight className="w-4 h-4" />
