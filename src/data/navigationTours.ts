@@ -69,7 +69,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/mussoorie-dhanaulti',
     duration: '3N/4D',
     badge: 'Weekend',
-    image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df8?q=80&w=400&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop'
   },
   {
     name: 'Nainital',
@@ -78,7 +78,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/nainital-bhimtal-sattal',
     duration: '3N/4D',
     badge: 'Family Fav',
-    image: 'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=400&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop'
   }
 ];
 
