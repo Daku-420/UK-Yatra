@@ -107,21 +107,6 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     ]
   },
   {
-    id: 'Cycling & Biking',
-    name: 'Cycling & Biking',
-    icon: '🚵',
-    tagline: 'Winding Mountain Passes & Ridges',
-    description: 'Pedal through high-altitude deodar forests, conquer switchbacks with e-bikes, or cruise legendary Himalayan motorbike circuits.',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000&auto=format&fit=crop',
-    examples: [
-      'Mountain Biking',
-      'Himalayan Cycling',
-      'E-bike Tours',
-      'Off-road Cycling',
-      'Himalayan Motorbike Experiences'
-    ]
-  },
-  {
     id: 'Wildlife & Nature',
     name: 'Wildlife & Nature',
     icon: '🐾',
@@ -834,62 +819,6 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     isFeatured: false
   },
   {
-    id: 'mountain-biking-himalayan-cycling',
-    title: 'Himalayan Mountain Biking & Cycling',
-    category: 'Cycling & Biking',
-    location: 'Mussoorie to Dhanaulti & Rishikesh, Uttarakhand',
-    destination: 'Mussoorie',
-    difficulty: 'Moderate',
-    duration: '1 Day',
-    durationDetails: '1 Day (or multi-day trails)',
-    season: ['Spring', 'Summer', 'Autumn'],
-    bestSeason: 'March to June & September to December',
-    startingPrice: '₹1,800',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop',
-      '/images/destinations/mussoorie/photo-1.jpg',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop'
-    ],
-    shortDesc: 'Pedal through high-altitude deodar forests, winding mountain roads, and exhilarating off-road downhill trails.',
-    fullDesc: 'Experience the crisp mountain air and panoramic Himalayan views on two wheels. Ride premium multi-gear hydraulic disc-brake mountain bikes (MTBs) or electric assist bikes along scenic ridge roads connecting Mussoorie, Landour, and Dhanaulti. Escorted by a lead cyclist and backup support vehicle, conquer exhilarating downhill sections, pine-scented turns, and rustic Himalayan hamlets.',
-    topLocations: ['Mussoorie - Dhanaulti Ridge (30 km)', 'Landour Infinity Trail', 'Rishikesh to Neelkanth loop', 'Bhimtal to Sattal lakes'],
-    highlights: [
-      'Ride premium Scott / Trek hydraulic disc-brake mountain bikes',
-      'Support vehicle equipped with spares, tools, water, and first aid follows behind',
-      'Crisp alpine cycling through dense deodar, oak, and rhododendron canopies',
-      'Scenic chai stops at village viewpoints overlooking the Doon Valley and snow peaks'
-    ],
-    whatsIncluded: [
-      'Rental of premium mountain bike and safety helmet',
-      'Experienced lead cyclist and mechanic support vehicle',
-      'Refreshment stops with energy bars, fresh fruits, and hydration',
-      'Mechanical backup and bike repair support on trail'
-    ],
-    whatsExcluded: [
-      'Personal riding gloves or padded cycling shorts',
-      'Hotel pickup outside central rendezvous points'
-    ],
-    safetyInfo: [
-      'Bikes thoroughly tuned and brake pads inspected before each tour',
-      'Backup support vehicle ready to carry exhausted riders at any point on the route',
-      'High-visibility neon vests and safety helmets mandatory'
-    ],
-    thingsToCarry: [
-      'Sport shoes with stiff soles and breathable sports clothing',
-      'Small daypack or hydration bag',
-      'Cycling gloves and polarized sunglasses'
-    ],
-    bestTimeToVisit: 'March to June offers mild weather and blooming forests. September to November provides cool autumn breezes and crystal clear panoramic mountain views.',
-    faqs: [
-      {
-        question: 'How difficult is the mountain biking route?',
-        answer: 'We customize routes to your skill level. The popular Mussoorie to Dhanaulti route is predominantly scenic rolling and downhill gradient, with our support vehicle available to assist on steep uphill stretches.'
-      }
-    ],
-    isFeatured: false
-  },
-  {
     id: 'har-ki-dun-trek',
     title: 'Har Ki Dun Ancient Valley Trek',
     category: 'Trekking',
@@ -1269,65 +1198,6 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
       {
         question: 'Do I need professional birding experience to enjoy Pangot?',
         answer: 'Not at all! Our naturalist guides are passionate about introducing beginners to the joy of bird observation and call identification.'
-      }
-    ],
-    isFeatured: false
-  },
-  {
-    id: 'himalayan-motorbike-tour',
-    title: 'Himalayan Motorbike Circuit Adventure',
-    category: 'Cycling & Biking',
-    location: 'Rishikesh – Chopta – Auli – Mana Circuit',
-    destination: 'Other',
-    difficulty: 'Difficult',
-    duration: '7+ Days',
-    durationDetails: '7 Days / 6 Nights',
-    season: ['Spring', 'Summer', 'Autumn'],
-    bestSeason: 'May to June & September to November',
-    startingPrice: '₹24,999',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop',
-      '/images/destinations/chopta/photo-1.jpg',
-      '/images/destinations/auli/photo-1.jpg'
-    ],
-    shortDesc: 'Ride Royal Enfield Himalayan bikes through high-altitude switchbacks, river valleys, and the last Indian village at Mana.',
-    fullDesc: 'Conquer the legendary mountain highways of Devbhoomi Uttarakhand. Starting from Rishikesh, ride along the Alaknanda and Mandakini river gorges, climb the sweeping bends to Chopta meadows, cross the high passes to Joshimath and Auli, and ride up to Mana—the last Indian village on the Indo-Tibetan border. Escorted by a lead rider, mechanical support vehicle, and luggage truck.',
-    topLocations: ['Rishikesh Gateway', 'Devprayag Confluence', 'Chopta Pass', 'Auli Ridgeway', 'Mana Village'],
-    highlights: [
-      'Ride Royal Enfield Himalayan 450cc adventure motorcycles',
-      'Support vehicle with spare parts, backup motorcycle, tools, and luggage carried behind',
-      'Experienced road captain leading the convoy with two-way radio comms',
-      'Stay in premium mountain lodges, riverside camps, and boutique alpine resorts'
-    ],
-    whatsIncluded: [
-      'Royal Enfield Himalayan motorcycle rental for entire tour',
-      'Fuel for the entire predetermined route',
-      '6 nights accommodation with daily breakfast and dinner',
-      'Lead road captain and certified mechanic with tools/spare parts',
-      'Backup support utility vehicle for baggage and emergency recovery'
-    ],
-    whatsExcluded: [
-      'Refundable security deposit for motorcycle',
-      'Riding gear (helmet, jacket, riding pants, knee guards—rental available)',
-      'Personal insurance'
-    ],
-    safetyInfo: [
-      'Mandatory pre-ride briefing and mechanical check every morning',
-      'All riders must hold a valid permanent motorcycle driving license',
-      'Support vehicle equipped with comprehensive first aid and oxygen'
-    ],
-    thingsToCarry: [
-      'Valid original Motorcycle Driving License',
-      'Armored riding jacket, riding gloves, and knee protectors',
-      'Full-face DOT/ECE certified helmet',
-      'Rain suit and waterproof boots'
-    ],
-    bestTimeToVisit: 'May to June offers snow-cleared roads and pleasant temperatures. September to October brings sparkling clear autumn skies and golden valley foliage.',
-    faqs: [
-      {
-        question: 'Can pillion riders join the motorcycle tour?',
-        answer: 'Yes! Pillion riders are welcome to join on the motorcycle or travel comfortably inside the accompanying backup vehicle.'
       }
     ],
     isFeatured: false

@@ -99,7 +99,6 @@ export type OutdoorCategory =
   | 'Camping & Nature' 
   | 'Snow Adventures' 
   | 'Climbing & Rappelling' 
-  | 'Cycling & Biking' 
   | 'Wildlife & Nature';
 
 export type ActivityDifficulty = 'Easy' | 'Moderate' | 'Difficult';

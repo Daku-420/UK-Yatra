@@ -75,7 +75,6 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
     'Camping & Nature',
     'Snow Adventures',
     'Climbing & Rappelling',
-    'Cycling & Biking',
     'Wildlife & Nature'
   ];
 
