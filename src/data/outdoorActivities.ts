@@ -82,7 +82,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     icon: '❄️',
     tagline: 'Powder Slopes & Frozen Wonderlands',
     description: 'Carve powdery runs on India’s top ski resort in Auli, sledge down virgin slopes, and pitch camps amidst snow-covered conifer ridges.',
-    image: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1000&auto=format&fit=crop',
+    image: '/assets/onkelglocke-snowboard-5968576.jpg',
     examples: [
       'Skiing in Auli',
       'Snow Trekking',
@@ -353,12 +353,12 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Late December to March',
     startingPrice: '₹8,500',
     maxAltitude: '10,010 ft (3,050 m)',
-    image: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/onkelglocke-snowboard-5968576.jpg',
     gallery: [
+      '/assets/onkelglocke-snowboard-5968576.jpg',
       'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
     ],
     shortDesc: 'Glide down powdery slopes on India’s premier ski slopes directly facing the majesty of Nanda Devi.',
     fullDesc: 'Nestled between 2,500 and 3,050 metres in the Chamoli Himalayas, Auli provides international-standard ski slopes with panoramic views of Mount Nanda Devi, Kamet, and Mana Parvat. Whether you are stepping onto skis for the very first time or carving technical turns down Gorson Bugyal slopes, our National Institute of Mountaineering (NIM) certified instructors guide you through snow ploughs, stem turns, and parallel carving.',
