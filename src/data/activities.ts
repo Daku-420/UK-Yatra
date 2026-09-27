@@ -60,7 +60,7 @@ export const ACTIVITIES: Activity[] = [
     id: 'auli-skiing-snowboarding',
     title: 'Skiing & Snowboarding in Auli',
     category: 'Snow Sports',
-    image: '/assets/onkelglocke-snowboard-5968576.jpg',
+    image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
     shortDesc: 'Glide down powdery slopes on India’s premier ski destination with Nanda Devi views.',
     fullDesc: 'Auli boasts slope gradients of 10° to 20° surrounded by ancient conifer forests. Learn skiing from National Institute of Mountaineering certified instructors or carve the backcountry slopes on modern snowboards.',
     topLocations: ['Auli Ski Slopes (Joshimath)', 'Gorson Bugyal Backcountry'],

@@ -17,7 +17,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     icon: '🥾',
     tagline: 'High Alpine Trails & Sacred Summits',
     description: 'Traverse whispering pine forests, rolling alpine meadows (bugyals), and cross mountain passes overlooking 7,000m+ Himalayan giants.',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1000&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/TREKKING.jpg',
     examples: [
       'Kedarkantha Trek',
       'Valley of Flowers Trek',
@@ -35,7 +35,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     icon: '🌊',
     tagline: 'Turbulent Glacial Rapids & Cascades',
     description: 'Feel the raw fury of the holy Ganga and Tons rivers with Grade III-IV rapids, cliff jumps, and technical white-water kayaking.',
-    image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1000&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
     examples: [
       'River Rafting',
       'Kayaking',
@@ -50,7 +50,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     icon: '🪂',
     tagline: 'Sheer Gravity & Adrenaline Surges',
     description: 'Leap off fixed cantilever platforms 83m above rocky gorges, zipline across the holy Ganges, or soar with thermal updrafts on a paraglider.',
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1000&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
     examples: [
       'Bungee Jumping',
       'Giant Swing',
@@ -65,7 +65,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     icon: '🏕️',
     tagline: 'Under Million-Star Himalayan Skies',
     description: 'Immerse in nature with luxury riverside Swiss camps, alpine meadow pitches, crackling bonfires, and zero light-pollution stargazing.',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
     examples: [
       'Riverside Camping',
       'Forest Camping',
@@ -82,7 +82,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     icon: '❄️',
     tagline: 'Powder Slopes & Frozen Wonderlands',
     description: 'Carve powdery runs on India’s top ski resort in Auli, sledge down virgin slopes, and pitch camps amidst snow-covered conifer ridges.',
-    image: '/assets/onkelglocke-snowboard-5968576.jpg',
+    image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
     examples: [
       'Skiing in Auli',
       'Snow Trekking',
@@ -338,9 +338,9 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Late December to March',
     startingPrice: '₹8,500',
     maxAltitude: '10,010 ft (3,050 m)',
-    image: '/assets/onkelglocke-snowboard-5968576.jpg',
+    image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
     gallery: [
-      '/assets/onkelglocke-snowboard-5968576.jpg',
+      '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
       'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
