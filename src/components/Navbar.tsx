@@ -100,6 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     location.pathname.startsWith('/tours');
 
   const isActivitiesActive = 
+    location.pathname.startsWith('/outdoor-activities') ||
     location.pathname.startsWith('/activities') || 
     location.pathname.startsWith('/college-trips') || 
     location.pathname.startsWith('/school-trips') || 
@@ -355,10 +356,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
               {/* Dropdown Menu */}
               {activitiesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-[#000044]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 mt-1 w-84 bg-[#000044]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  {/* Outdoor Activities - Featured Dropdown Item */}
+                  <Link
+                    to="/outdoor-activities"
+                    onClick={() => setActivitiesOpen(false)}
+                    className="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-orange-500/20 to-orange-600/10 hover:from-orange-500/30 hover:to-orange-600/20 border border-brand-orange/40 text-white transition-all group mb-2 shadow-sm"
+                  >
+                    <div className="flex items-start gap-2.5 min-w-0">
+                      <div className="p-2 rounded-lg bg-brand-orange text-white shadow-md shadow-brand-orange/30 group-hover:scale-105 transition-transform shrink-0">
+                        <Mountain className="w-4 h-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
+                          <span>Outdoor Activities</span>
+                          <span className="text-[9px] bg-brand-orange text-white font-extrabold px-1.5 py-0.2 rounded-sm shadow-xs">Featured</span>
+                        </div>
+                        <p className="text-[11px] text-slate-300 leading-snug mt-0.5 truncate">
+                          Trekking, rafting, camping, skiing & sports
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-brand-orange font-bold text-sm ml-2 group-hover:translate-x-1 transition-transform shrink-0">→</span>
+                  </Link>
+
                   <div className="px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-slate-400 border-b border-white/10 mb-1 flex items-center justify-between">
                     <span>Student & Youth Experiences</span>
-                    <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">New</span>
+                    <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">Popular</span>
                   </div>
 
                   <Link
@@ -672,7 +696,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 <ChevronDown className={`w-4 h-4 transition-transform ${mobileActivitiesOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
               </button>
               {mobileActivitiesOpen && (
-                <div className="px-3 pb-3 space-y-1 bg-black/25 border-t border-white/10 pt-2">
+                <div className="px-3 pb-3 space-y-1.5 bg-black/25 border-t border-white/10 pt-2.5">
+                  <Link 
+                    to="/outdoor-activities" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                      isActive('/outdoor-activities') 
+                        ? 'text-brand-orange bg-brand-orange/20 border border-brand-orange/40 shadow-xs' 
+                        : 'text-white hover:text-brand-orange bg-white/10 border border-brand-orange/30'
+                    }`}
+                  >
+                    <span className="flex items-center gap-2.5">
+                      <Mountain className="w-4 h-4 text-brand-orange" />
+                      <span>Outdoor Activities</span>
+                    </span>
+                    <span className="text-brand-orange font-bold text-xs">→</span>
+                  </Link>
+
                   <Link 
                     to="/college-trips" 
                     onClick={() => setMobileMenuOpen(false)} 

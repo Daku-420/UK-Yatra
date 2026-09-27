@@ -86,6 +86,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/outdoor-activities" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
+                  <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> Outdoor Activities
+                </Link>
+              </li>
+              <li>
                 <Link to="/why-us" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
                   <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> Why Choose Us
                 </Link>

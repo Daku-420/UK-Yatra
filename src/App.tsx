@@ -18,6 +18,8 @@ import { DestinationsPage } from './pages/DestinationsPage';
 import { DestinationDetailPage } from './pages/DestinationDetailPage';
 import { ActivitiesPage } from './pages/ActivitiesPage';
 import { ActivityDetailPage } from './pages/ActivityDetailPage';
+import { OutdoorActivitiesPage } from './pages/OutdoorActivitiesPage';
+import { OutdoorActivityDetailPage } from './pages/OutdoorActivityDetailPage';
 import { CollegeTripsPage } from './pages/CollegeTripsPage';
 import { SchoolTripsPage } from './pages/SchoolTripsPage';
 import { SummerLearningPage } from './pages/SummerLearningPage';
@@ -86,9 +88,13 @@ function AppInner() {
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/destinations/:id" element={<DestinationDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           
+          {/* Outdoor Activities in Uttarakhand */}
+          <Route path="/outdoor-activities" element={<OutdoorActivitiesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/outdoor-activities/:id" element={<OutdoorActivityDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
+
           {/* Activities & Experiences */}
-          <Route path="/activities" element={<ActivitiesPage />} />
-          <Route path="/activities/:id" element={<ActivityDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/activities" element={<OutdoorActivitiesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/activities/:id" element={<OutdoorActivityDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           
           {/* Student, School & Youth Programmes */}
           <Route path="/college-trips" element={<CollegeTripsPage onOpenBookingModal={handleOpenBookingModal} />} />

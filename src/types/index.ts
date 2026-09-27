@@ -92,6 +92,20 @@ export interface Trek {
   exclusions: string[];
 }
 
+export type OutdoorCategory = 
+  | 'Trekking' 
+  | 'Water Adventures' 
+  | 'Adventure Sports' 
+  | 'Camping & Nature' 
+  | 'Snow Adventures' 
+  | 'Climbing & Rappelling' 
+  | 'Cycling & Biking' 
+  | 'Wildlife & Nature';
+
+export type ActivityDifficulty = 'Easy' | 'Moderate' | 'Difficult';
+export type ActivityDuration = 'Half Day' | '1 Day' | '2–3 Days' | '4–6 Days' | '7+ Days';
+export type ActivitySeason = 'Spring' | 'Summer' | 'Monsoon' | 'Autumn' | 'Winter';
+
 export interface Activity {
   id: string;
   title: string;
@@ -105,6 +119,38 @@ export interface Activity {
   ageLimit?: string;
   safetyInfo: string[];
   startingPrice?: string;
+  // Extended fields for Outdoor Activities
+  location?: string;
+  destination?: string;
+  duration?: ActivityDuration | string;
+  durationDetails?: string;
+  season?: ActivitySeason[] | string[];
+  maxAltitude?: string;
+  highlights?: string[];
+  whatsIncluded?: string[];
+  whatsExcluded?: string[];
+  thingsToCarry?: string[];
+  bestTimeToVisit?: string;
+  gallery?: string[];
+  faqs?: { question: string; answer: string }[];
+  isFeatured?: boolean;
+}
+
+export interface OutdoorActivity extends Activity {
+  category: OutdoorCategory | string;
+  location: string;
+  destination: string;
+  difficulty: ActivityDifficulty | string;
+  duration: ActivityDuration | string;
+  durationDetails?: string;
+  season: ActivitySeason[] | string[];
+  highlights: string[];
+  whatsIncluded: string[];
+  whatsExcluded: string[];
+  thingsToCarry: string[];
+  bestTimeToVisit: string;
+  gallery: string[];
+  faqs: { question: string; answer: string }[];
 }
 
 export interface Review {
