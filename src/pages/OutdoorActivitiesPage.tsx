@@ -342,12 +342,13 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
                     : 'border-[#E2DDD5] hover:border-brand-orange/40'
                 }`}
               >
-                {/* Category Image Header */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#EFEAE2]">
+                {/* Category Image Header - Adjusted Aspect Ratio & Smart Framing */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#EFEAE2]">
                   <img
                     src={cat.image}
                     alt={cat.name}
                     loading="lazy"
+                    style={{ objectPosition: cat.imagePosition || 'center' }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
@@ -355,17 +356,17 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
                       target.src = 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
 
                   <div className="absolute top-3 left-3 text-2xl p-2 rounded-2xl bg-white/90 backdrop-blur-md shadow-sm">
                     {cat.icon}
                   </div>
 
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <h3 className="text-lg font-bold font-display leading-tight group-hover:text-brand-orange transition-colors">
+                    <h3 className="text-lg font-bold font-display leading-tight group-hover:text-brand-orange transition-colors drop-shadow-md">
                       {cat.name}
                     </h3>
-                    <p className="text-[11px] text-slate-200 line-clamp-1 font-medium mt-0.5">
+                    <p className="text-[11px] text-slate-200 line-clamp-1 font-medium mt-0.5 drop-shadow-xs">
                       {cat.tagline}
                     </p>
                   </div>
@@ -449,6 +450,7 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
                     src={activity.image}
                     alt={activity.title}
                     loading="lazy"
+                    style={{ objectPosition: activity.imagePosition || 'center' }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
@@ -460,10 +462,6 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
                   
                   <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-orange text-white">
                     {activity.category}
-                  </div>
-
-                  <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-950/80 backdrop-blur-md text-white border border-white/20">
-                    From {activity.startingPrice}
                   </div>
 
                   <div className="absolute bottom-3 left-3 right-3">

@@ -7,6 +7,7 @@ export interface OutdoorCategoryItem {
   tagline: string;
   description: string;
   image: string;
+  imagePosition?: string;
   examples: string[];
 }
 
@@ -18,6 +19,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'High Alpine Trails & Sacred Summits',
     description: 'Traverse whispering pine forests, rolling alpine meadows (bugyals), and cross mountain passes overlooking 7,000m+ Himalayan giants.',
     image: '/assets/OUTDOOR ACTIVITIES/TREKKING.jpg',
+    imagePosition: 'center 80%',
     examples: [
       'Kedarkantha Trek',
       'Valley of Flowers Trek',
@@ -36,6 +38,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'Turbulent Glacial Rapids & Cascades',
     description: 'Feel the raw fury of the holy Ganga and Tons rivers with Grade III-IV rapids, cliff jumps, and technical white-water kayaking.',
     image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
+    imagePosition: 'center 85%',
     examples: [
       'River Rafting',
       'Kayaking',
@@ -51,6 +54,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'Sheer Gravity & Adrenaline Surges',
     description: 'Leap off fixed cantilever platforms 83m above rocky gorges, zipline across the holy Ganges, or soar with thermal updrafts on a paraglider.',
     image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
+    imagePosition: '55% 40%',
     examples: [
       'Bungee Jumping',
       'Giant Swing',
@@ -66,6 +70,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'Under Million-Star Himalayan Skies',
     description: 'Immerse in nature with luxury riverside Swiss camps, alpine meadow pitches, crackling bonfires, and zero light-pollution stargazing.',
     image: '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
+    imagePosition: 'center 85%',
     examples: [
       'Riverside Camping',
       'Forest Camping',
@@ -83,6 +88,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'Powder Slopes & Frozen Wonderlands',
     description: 'Carve powdery runs on India’s top ski resort in Auli, sledge down virgin slopes, and pitch camps amidst snow-covered conifer ridges.',
     image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
+    imagePosition: 'center 50%',
     examples: [
       'Skiing in Auli',
       'Snow Trekking',
@@ -99,6 +105,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'Natural Granite & Thundering Waterfalls',
     description: 'Test your nerve and balance against natural Himalayan rock faces, overhangs, and vertical cascades under the watchful eye of certified mountaineers.',
     image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1000&auto=format&fit=crop',
+    imagePosition: 'center 35%',
     examples: [
       'Rock Climbing',
       'Rappelling',
@@ -113,6 +120,7 @@ export const OUTDOOR_CATEGORIES: OutdoorCategoryItem[] = [
     tagline: 'Tiger Territory & Himalayan Flora',
     description: 'Track the Royal Bengal Tiger in Jim Corbett, spot elusive Himalayan monals, and wander through lush UNESCO biosphere reserves.',
     image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1000&auto=format&fit=crop',
+    imagePosition: 'center 40%',
     examples: [
       'Jungle Safari',
       'Bird Watching',
@@ -195,8 +203,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'December to April (Peak Winter Snow)',
     startingPrice: '₹9,499',
     maxAltitude: '12,500 ft (3,810 m)',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/TREKKING.jpg',
+    imagePosition: 'center 80%',
     gallery: [
+      '/assets/OUTDOOR ACTIVITIES/TREKKING.jpg',
       'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
@@ -270,8 +280,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Late September to June',
     startingPrice: '₹1,200',
-    image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
+    imagePosition: 'center 85%',
     gallery: [
+      '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
       'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
@@ -339,6 +351,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     startingPrice: '₹8,500',
     maxAltitude: '10,010 ft (3,050 m)',
     image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
+    imagePosition: 'center 50%',
     gallery: [
       '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
       'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
@@ -538,8 +551,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'September to June',
     startingPrice: '₹2,499',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
+    imagePosition: 'center 85%',
     gallery: [
+      '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
@@ -604,8 +619,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year (Except monsoon July-August)',
     startingPrice: '₹3,750',
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
+    imagePosition: '55% 40%',
     gallery: [
+      '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop',

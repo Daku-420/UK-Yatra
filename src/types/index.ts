@@ -110,6 +110,7 @@ export interface Activity {
   title: string;
   category: string;
   image: string;
+  imagePosition?: string;
   shortDesc: string;
   fullDesc: string;
   topLocations: string[];

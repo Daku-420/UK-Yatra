@@ -141,7 +141,8 @@ export const OutdoorActivityDetailPage: React.FC<OutdoorActivityDetailPageProps>
         <img
           src={activity.image}
           alt={activity.title}
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-90 animate-in fade-in duration-700"
+          style={{ objectPosition: activity.imagePosition || 'center' }}
+          className="absolute inset-0 w-full h-full object-cover brightness-90 animate-in fade-in duration-700"
           onError={(e) => {
             const target = e.currentTarget as HTMLImageElement;
             target.onerror = null;
@@ -486,19 +487,17 @@ export const OutdoorActivityDetailPage: React.FC<OutdoorActivityDetailPageProps>
                 </div>
               </div>
 
-              {/* Price Estimate Card */}
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-[#F5F3EF] to-[#EFECE6] border border-[#E0DBD2]">
-                <span className="text-[10px] uppercase font-bold text-slate-500 block tracking-wider">
-                  Starting Price
-                </span>
-                <div className="flex items-baseline gap-2 mt-1">
-                  <span className="text-3xl font-extrabold font-display text-brand-orange">
-                    {activity.startingPrice || '₹On Request'}
-                  </span>
-                  <span className="text-xs text-slate-600 font-medium">/ person</span>
+              {/* Custom Quote on Request Reassurance Card */}
+              <div className="p-5 rounded-2xl bg-gradient-to-br from-[#F5F3EF] to-[#EFECE6] border border-[#E0DBD2] space-y-1.5">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-brand-orange uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Custom Quote on Request</span>
                 </div>
-                <p className="text-[11px] text-slate-500 mt-1">
-                  Includes certified gear, guides, and safety supervision.
+                <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                  Tailored package quotes provided based on group size, batch dates & customization.
+                </p>
+                <p className="text-[11px] text-slate-500">
+                  Includes certified gear, verified local guides, permits & safety supervision.
                 </p>
               </div>
 

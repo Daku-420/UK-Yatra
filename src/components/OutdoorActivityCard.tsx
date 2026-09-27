@@ -31,6 +31,7 @@ export const OutdoorActivityCard: React.FC<OutdoorActivityCardProps> = ({
           src={activity.image}
           alt={activity.title}
           loading="lazy"
+          style={{ objectPosition: activity.imagePosition || 'center' }}
           className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           onError={(e) => {
             const target = e.currentTarget as HTMLImageElement;
@@ -53,13 +54,6 @@ export const OutdoorActivityCard: React.FC<OutdoorActivityCardProps> = ({
             </span>
           )}
         </div>
-
-        {/* Starting Price Pill */}
-        {activity.startingPrice && (
-          <div className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-[11px] font-black bg-white/95 text-slate-900 shadow-md backdrop-blur-xs border border-white/80">
-            From <span className="text-brand-orange">{activity.startingPrice}</span>
-          </div>
-        )}
 
         {/* Altitude Pill if available */}
         {activity.maxAltitude && (
@@ -125,22 +119,13 @@ export const OutdoorActivityCard: React.FC<OutdoorActivityCardProps> = ({
           </div>
         </div>
 
-        {/* Card Footer: Price & Explore Button */}
-        <div className="pt-3 border-t border-[#EAE5DC] flex items-center justify-between gap-3">
-          <div>
-            <span className="text-[10px] text-slate-500 uppercase font-bold tracking-wider block">
-              Starting from
-            </span>
-            <span className="text-base font-extrabold font-display text-slate-900 text-brand-orange">
-              {activity.startingPrice || '₹On Request'}
-            </span>
-          </div>
-
+        {/* Card Footer: Explore Button */}
+        <div className="pt-3 border-t border-[#EAE5DC]">
           <Link
             to={detailUrl}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#000044] hover:bg-brand-orange text-white text-xs font-bold transition-all shadow-sm hover:shadow-md hover:scale-[1.02] cursor-pointer"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#000044] hover:bg-brand-orange text-white text-xs font-bold transition-all shadow-sm hover:shadow-md hover:scale-[1.01] cursor-pointer"
           >
-            <span>Explore Activity</span>
+            <span>Explore Activity Details</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
