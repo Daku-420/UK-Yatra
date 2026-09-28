@@ -33,7 +33,7 @@ import { ReviewCard } from '../components/ReviewCard';
 import { BlogCard } from '../components/BlogCard';
 import { InstagramIcon } from '../components/SocialIcons';
 import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
-import { LiveWeatherWidget } from '../components/LiveWeatherWidget';
+import { UttarakhandMap } from '../components/UttarakhandMap';
 import { adminStorage } from '../utils/adminStorage';
 
 interface HomePageProps {
@@ -195,9 +195,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       </section>
 
       {/* ============================================================ */}
-      {/* 1.5 LIVE HIMALAYAN WEATHER & YATRA PORTAL STATUS */}
+      {/* 1.5 EXPLORE UTTARAKHAND BY DISTRICT MAP */}
       {/* ============================================================ */}
-      <LiveWeatherWidget />
+      <UttarakhandMap onOpenBookingModal={onOpenBookingModal} />
 
       {/* ============================================================ */}
       {/* 2. DESTINATIONS DISCOVERY SECTION */}
