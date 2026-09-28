@@ -195,7 +195,52 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState<string | null>('popular-uttarakhand');
   const dropdownRef = useRef<HTMLDivElement>(null);
   const packagesDropdownRef = useRef<HTMLDivElement>(null);
+  const closeActivitiesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const closePackagesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
+
+  const handleActivitiesEnter = () => {
+    if (closeActivitiesTimeoutRef.current) {
+      clearTimeout(closeActivitiesTimeoutRef.current);
+      closeActivitiesTimeoutRef.current = null;
+    }
+    setActivitiesOpen(true);
+  };
+
+  const handleActivitiesLeave = () => {
+    if (closeActivitiesTimeoutRef.current) {
+      clearTimeout(closeActivitiesTimeoutRef.current);
+    }
+    closeActivitiesTimeoutRef.current = setTimeout(() => {
+      setActivitiesOpen(false);
+      setActiveSubmenu(null);
+    }, 250);
+  };
+
+  const handlePackagesEnter = () => {
+    if (closePackagesTimeoutRef.current) {
+      clearTimeout(closePackagesTimeoutRef.current);
+      closePackagesTimeoutRef.current = null;
+    }
+    setPackagesDropdownOpen(true);
+  };
+
+  const handlePackagesLeave = () => {
+    if (closePackagesTimeoutRef.current) {
+      clearTimeout(closePackagesTimeoutRef.current);
+    }
+    closePackagesTimeoutRef.current = setTimeout(() => {
+      setPackagesDropdownOpen(false);
+    }, 250);
+  };
+
+  const handleSubmenuEnter = (type: 'outdoor' | 'educational') => {
+    if (closeActivitiesTimeoutRef.current) {
+      clearTimeout(closeActivitiesTimeoutRef.current);
+      closeActivitiesTimeoutRef.current = null;
+    }
+    setActiveSubmenu(type);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -209,13 +254,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menus on route change
+  // Close menus on route change or unmount
   useEffect(() => {
+    if (closeActivitiesTimeoutRef.current) clearTimeout(closeActivitiesTimeoutRef.current);
+    if (closePackagesTimeoutRef.current) clearTimeout(closePackagesTimeoutRef.current);
     setMobileMenuOpen(false);
     setActivitiesOpen(false);
     setActiveSubmenu(null);
     setPackagesDropdownOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    return () => {
+      if (closeActivitiesTimeoutRef.current) clearTimeout(closeActivitiesTimeoutRef.current);
+      if (closePackagesTimeoutRef.current) clearTimeout(closePackagesTimeoutRef.current);
+    };
+  }, []);
 
   // Lock body scrolling when mobile menu is open
   useEffect(() => {
@@ -330,8 +384,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             <div 
               ref={packagesDropdownRef}
               className="relative"
-              onMouseEnter={() => setPackagesDropdownOpen(true)}
-              onMouseLeave={() => setPackagesDropdownOpen(false)}
+              onMouseEnter={handlePackagesEnter}
+              onMouseLeave={handlePackagesLeave}
             >
               <button
                 type="button"
@@ -348,12 +402,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${packagesDropdownOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
               </button>
 
-              {/* Dropdown Menu Panel */}
+              {/* Dropdown Menu Panel with seamless hover bridge */}
               {packagesDropdownOpen && (
                 <div 
-                  className="absolute top-full -left-12 xl:-left-6 mt-1.5 w-[900px] xl:w-[960px] max-w-[calc(100vw-2.5rem)] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] p-5.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-slate-900 ring-1 ring-black/10"
-                  style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
+                  className="absolute top-full -left-12 xl:-left-6 pt-2 z-50 animate-in fade-in duration-150"
+                  onMouseEnter={handlePackagesEnter}
+                  onMouseLeave={handlePackagesLeave}
                 >
+                  <div 
+                    className="w-[900px] xl:w-[960px] max-w-[calc(100vw-2.5rem)] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] p-5.5 text-slate-900 ring-1 ring-black/10"
+                    style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
+                  >
                   {/* 1. Featured & Popular Destinations Section */}
                   <div className="pb-4 mb-4 border-b border-[#E2D9CB]">
                     <div className="flex items-center justify-between mb-3">
@@ -473,6 +532,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </Link>
                   </div>
                 </div>
+                </div>
               )}
             </div>
 
@@ -492,11 +552,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             <div 
               ref={dropdownRef}
               className="relative"
-              onMouseEnter={() => setActivitiesOpen(true)}
-              onMouseLeave={() => {
-                setActivitiesOpen(false);
-                setActiveSubmenu(null);
-              }}
+              onMouseEnter={handleActivitiesEnter}
+              onMouseLeave={handleActivitiesLeave}
             >
               <button
                 type="button"
@@ -513,9 +570,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activitiesOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
               </button>
 
-              {/* Dropdown Menu Container (Side-by-Side Flex on Hover) */}
+              {/* Dropdown Menu Container (Side-by-Side Flex on Hover with seamless bridge) */}
               {activitiesOpen && (
-                <div className="absolute top-full left-0 mt-1 flex items-start z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div 
+                  className="absolute top-full left-0 pt-2 flex items-start z-50 animate-in fade-in duration-150"
+                  onMouseEnter={handleActivitiesEnter}
+                  onMouseLeave={handleActivitiesLeave}
+                >
                   {/* Left Column: Sub-headings */}
                   <div className="w-80 bg-[#000044]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2.5 space-y-2 shrink-0">
                     <div className="px-2 pt-1 pb-0.5 text-[10px] uppercase font-bold tracking-wider text-slate-400 flex items-center justify-between">
@@ -525,7 +586,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
                     {/* Outdoor Activities Subheading */}
                     <div
-                      onMouseEnter={() => setActiveSubmenu('outdoor')}
+                      onMouseEnter={() => handleSubmenuEnter('outdoor')}
                       className="relative"
                     >
                       <Link
@@ -560,7 +621,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
                     {/* Educational Programmes Subheading */}
                     <div
-                      onMouseEnter={() => setActiveSubmenu('educational')}
+                      onMouseEnter={() => handleSubmenuEnter('educational')}
                       className="relative"
                     >
                       <Link
@@ -594,11 +655,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </div>
                   </div>
 
-                  {/* Right Flyout Panel: Shows what is inside hovered sub-heading */}
+                  {/* Right Flyout Panel: Shows what is inside hovered sub-heading with safety bridge */}
                   {activeSubmenu === 'outdoor' && (
                     <div 
-                      className="ml-2 w-[480px] bg-[#000044]/98 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-3.5 animate-in fade-in slide-in-from-left-2 duration-150 text-white"
-                      onMouseEnter={() => setActiveSubmenu('outdoor')}
+                      className="relative ml-2 w-[480px] bg-[#000044]/98 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-3.5 animate-in fade-in duration-150 text-white before:content-[''] before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3"
+                      onMouseEnter={() => handleSubmenuEnter('outdoor')}
+                      onMouseLeave={handleActivitiesLeave}
                     >
                       <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
                         <div className="flex items-center gap-2">
@@ -673,8 +735,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
                   {activeSubmenu === 'educational' && (
                     <div 
-                      className="ml-2 w-[520px] bg-[#000044]/98 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-3.5 animate-in fade-in slide-in-from-left-2 duration-150 text-white"
-                      onMouseEnter={() => setActiveSubmenu('educational')}
+                      className="relative ml-2 w-[520px] bg-[#000044]/98 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-3.5 animate-in fade-in duration-150 text-white before:content-[''] before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3"
+                      onMouseEnter={() => handleSubmenuEnter('educational')}
+                      onMouseLeave={handleActivitiesLeave}
                     >
                       <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
                         <div className="flex items-center gap-2">
