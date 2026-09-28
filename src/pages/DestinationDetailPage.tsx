@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { 
   MapPin, 
   Calendar, 
@@ -14,18 +14,32 @@ import {
   ChevronLeft,
   ChevronRight,
   Camera,
-  Eye,
   Maximize2,
-  X
+  X,
+  Thermometer,
+  Compass,
+  HelpCircle,
+  Star,
+  ShieldCheck,
+  ChevronDown,
+  ChevronUp,
+  Send,
+  Sun,
+  CloudRain,
+  Snowflake,
+  Heart,
+  Luggage,
+  Users,
+  Award
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 import { DESTINATION_MEGA_NAV } from '../data/navigationDestinations';
 import { adminStorage } from '../utils/adminStorage';
-import { TREKS } from '../data/treks';
-import { getDestinationWhatsAppUrl } from '../config/siteConfig';
+import { getDestinationWhatsAppUrl, SITE_CONFIG } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
 import { WhatsAppIcon } from '../components/SocialIcons';
+import { getDestinationExtraData } from '../data/destinationDetailData';
 
 interface DestinationDetailPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -33,13 +47,12 @@ interface DestinationDetailPageProps {
 
 export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ onOpenBookingModal }) => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
 
-  const destination = React.useMemo(() => {
+  // Find destination from standard list or navigation mega nav fallback
+  const destination = useMemo(() => {
     const found = DESTINATIONS.find((d) => d.id === id);
     if (found) return found;
 
-    // Check if it's in our mega nav
     let navItemName = id ? id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Destination';
     let navCategory = 'Hills & Valleys';
     for (const group of DESTINATION_MEGA_NAV) {
@@ -65,10 +78,10 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
       ],
       description: `Explore ${navItemName}, one of Uttarakhand's most captivating destinations. Experience authentic Himalayan hospitality, crisp alpine air, scenic panoramas, and customized travel itineraries curated by UK Yatra specialists.`,
       highlights: [
-        'Panoramic Himalayan viewpoints',
-        'Scenic nature and heritage walking trails',
-        'Authentic mountain culture & local traditions',
-        'Peaceful and serene alpine ambiance'
+        'Panoramic Himalayan viewpoints overlooking eternal snow peaks',
+        'Scenic nature and heritage walking trails amidst pines and deodars',
+        'Authentic mountain culture & warm Kumaoni/Garhwali hospitality',
+        'Peaceful and serene alpine ambiance ideal for rejuvenation'
       ],
       bestTime: 'Round the year (Best: March to June & Sept to Nov)',
       altitude: '1,800 m - 3,200 m',
@@ -76,32 +89,57 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
       startingPrice: '₹5,999',
       isPopular: true,
       topAttractions: [
-        { name: `${navItemName} Scenic Ridge`, desc: 'Breathtaking viewpoints overlooking snow-clad peaks and misty valleys.' },
-        { name: 'Heritage Hamlet & Temple', desc: 'Ancient stone architecture, sacred shrines, and timeless village traditions.' },
-        { name: 'Forest Nature Trails', desc: 'Enchanting paths lined with pine, oak, and rhododendron trees.' }
+        { name: `${navItemName} Scenic Ridge`, desc: 'Breathtaking viewpoints overlooking snow-clad peaks and misty pine valleys.' },
+        { name: 'Heritage Hamlet & Sacred Shrine', desc: 'Ancient stone architecture, spiritual shrines, and timeless mountain traditions.' },
+        { name: 'Forest Nature Trails', desc: 'Enchanting paths lined with pine, oak, and blooming rhododendron trees.' }
       ],
       howToReach: {
-        byAir: 'Nearest airport is Jolly Grant Airport, Dehradun or Pantnagar Airport.',
+        byAir: 'Nearest airport is Jolly Grant Airport (Dehradun) or Pantnagar Airport.',
         byTrain: 'Nearest major railheads are Haridwar, Rishikesh, Dehradun, or Kathgodam.',
         byRoad: 'Well-connected by scenic state highways and mountain roads with taxi services.'
       }
     };
   }, [id]);
 
+  // Comprehensive 14-section dynamic data
+  const extraData = useMemo(() => {
+    return getDestinationExtraData(
+      destination.id,
+      destination.name,
+      destination.category,
+      destination.altitude,
+      destination.idealDuration,
+      destination.bestTime
+    );
+  }, [destination]);
+
   const galleryImages = (destination.gallery && destination.gallery.length > 0)
     ? destination.gallery
     : [destination.image];
 
+  // UI state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [activeItineraryTab, setActiveItineraryTab] = useState<string>(extraData.itineraries[0]?.id || '');
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-  // Reset image index when switching destinations
+  // Quick inquiry form state
+  const [inquiryName, setInquiryName] = useState('');
+  const [inquiryPhone, setInquiryPhone] = useState('');
+  const [inquiryMonth, setInquiryMonth] = useState('');
+  const [inquiryTravelers, setInquiryTravelers] = useState('2 Travelers');
+  const [inquirySubmitted, setInquirySubmitted] = useState(false);
+
+  // Sync active itinerary when destination changes
   useEffect(() => {
     setCurrentImageIndex(0);
     setIsLightboxOpen(false);
-  }, [id]);
+    if (extraData.itineraries.length > 0) {
+      setActiveItineraryTab(extraData.itineraries[0].id);
+    }
+  }, [id, extraData]);
 
   // Keyboard navigation for slider and lightbox
   useEffect(() => {
@@ -119,7 +157,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isLightboxOpen, galleryImages.length]);
 
-  // Gentle auto-slide every 5 seconds if user isn't hovering and lightbox is closed
+  // Gentle auto-slide every 5 seconds if not hovered & lightbox closed
   useEffect(() => {
     if (isHovered || isLightboxOpen || galleryImages.length <= 1) return;
     const interval = setInterval(() => {
@@ -138,7 +176,6 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
     setCurrentImageIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
   };
 
-  // Mobile touch swipe handling
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
   };
@@ -155,23 +192,47 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
     setTouchStartX(null);
   };
 
-  // Find matching packages from dynamic admin storage
-  const relatedPackages = adminStorage.getPackages().filter(
+  // Live packages inventory matching destination
+  const allPackages = adminStorage.getPackages();
+  const matchedPackages = allPackages.filter(
     (p) => p.destination.toLowerCase().includes(destination.name.toLowerCase()) || 
            destination.name.toLowerCase().includes(p.destination.toLowerCase())
   );
+  const displayPackages = matchedPackages.length > 0 ? matchedPackages : allPackages.slice(0, 3);
+
+  // Handle bottom lead inquiry form submission
+  const handleInquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!inquiryName.trim() || !inquiryPhone.trim()) return;
+
+    // Send direct WhatsApp inquiry with structured parameters
+    const text = encodeURIComponent(
+      `Hello UK Yatra! I am planning a trip to ${destination.name}.\n\n` +
+      `*Name:* ${inquiryName}\n` +
+      `*Phone:* ${inquiryPhone}\n` +
+      `*Tentative Travel Month:* ${inquiryMonth || 'Flexible'}\n` +
+      `*Group Size:* ${inquiryTravelers}\n\n` +
+      `Please share customized itinerary options and cost quotation.`
+    );
+    window.open(`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${text}`, '_blank');
+    setInquirySubmitted(true);
+  };
+
+  const activeItinerary = extraData.itineraries.find(i => i.id === activeItineraryTab) || extraData.itineraries[0];
 
   return (
-    <div className="pt-24 pb-20">
-      {/* Immersive Destination Hero with Interactive Slider */}
-      <div 
-        className="relative h-[70vh] min-h-[520px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none"
+    <div className="pt-24 pb-20 bg-[#FFFDF9] min-h-screen text-slate-800">
+      {/* ========================================================
+          SECTION 1: HERO WITH DESTINATION NAME AND CTA
+         ======================================================== */}
+      <section 
+        className="relative h-[72vh] min-h-[540px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Background Images with Fade/Slide Transitions */}
+        {/* Background Images with Transitions */}
         {galleryImages.map((imgUrl, idx) => (
           <div
             key={idx}
@@ -188,35 +249,33 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           </div>
         ))}
 
-        {/* Gradient Overlays for High Legibility */}
+        {/* Cinematic Gradient Overlays */}
         <div className="absolute inset-0 bg-hero-gradient z-[1] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/50 z-[1] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/40 z-[1] pointer-events-none" />
 
-        {/* Left Arrow Slide Button */}
+        {/* Hero Slider Navigation Arrows */}
         {galleryImages.length > 1 && (
-          <button
-            type="button"
-            onClick={handlePrev}
-            aria-label="Previous image"
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/45 hover:bg-brand-orange text-white border border-white/20 hover:border-brand-orange flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer group"
-          >
-            <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={handlePrev}
+              aria-label="Previous image"
+              className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/50 hover:bg-brand-orange text-white border border-white/20 hover:border-brand-orange flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer group"
+            >
+              <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              aria-label="Next image"
+              className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/50 hover:bg-brand-orange text-white border border-white/20 hover:border-brand-orange flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer group"
+            >
+              <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
+            </button>
+          </>
         )}
 
-        {/* Right Arrow Slide Button */}
-        {galleryImages.length > 1 && (
-          <button
-            type="button"
-            onClick={handleNext}
-            aria-label="Next image"
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/45 hover:bg-brand-orange text-white border border-white/20 hover:border-brand-orange flex items-center justify-center backdrop-blur-md transition-all hover:scale-110 active:scale-95 shadow-2xl cursor-pointer group"
-          >
-            <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
-          </button>
-        )}
-
-        {/* Top-Right Photo Counter Pill & Fullscreen Trigger */}
+        {/* Top-Right Photo Pill & Fullscreen Lightbox Button */}
         {galleryImages.length > 1 && (
           <div className="absolute top-6 right-4 sm:right-8 z-20 flex items-center gap-2">
             <button
@@ -226,7 +285,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                 setIsLightboxOpen(true);
               }}
               className="px-3.5 py-1.5 rounded-full bg-black/60 hover:bg-black/85 backdrop-blur-md text-white border border-white/15 hover:border-brand-orange text-xs font-semibold flex items-center gap-2 shadow-lg transition-all cursor-pointer group"
-              title="Click to view full photo gallery"
+              title="Click to view photo gallery"
             >
               <Camera className="w-3.5 h-3.5 text-brand-orange group-hover:scale-110 transition-transform" />
               <span>Photo {currentImageIndex + 1} of {galleryImages.length}</span>
@@ -235,70 +294,73 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           </div>
         )}
 
-        {/* Bottom Left Content & Interactive Indicator Controls */}
+        {/* Hero Bottom Content & CTAs */}
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <Link
             to="/destinations"
-            className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-brand-dark/70 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 mb-4 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 mb-4 transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>Back to All Destinations</span>
+            <span>Explore All Uttarakhand Destinations</span>
           </Link>
 
-          <div className="flex flex-wrap items-center gap-3 mb-3">
-            <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white">
+          <div className="flex flex-wrap items-center gap-2.5 mb-3">
+            <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-orange text-white shadow-md">
               {destination.category}
             </span>
             {destination.altitude && (
-              <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-brand-dark/80 backdrop-blur-md text-slate-200 border border-white/10 flex items-center gap-1">
+              <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-slate-200 border border-white/15 flex items-center gap-1.5">
                 <Mountain className="w-3.5 h-3.5 text-brand-orange" />
                 <span>{destination.altitude}</span>
               </span>
             )}
-            <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-brand-dark/80 backdrop-blur-md text-slate-200 border border-white/10 flex items-center gap-1">
+            <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-slate-200 border border-white/15 flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-brand-orange" />
               <span>{destination.idealDuration}</span>
             </span>
+            <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-amber-300 border border-white/15 flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-amber-400" />
+              <span>{destination.bestTime}</span>
+            </span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-            <div>
-              <h1 className="text-4xl sm:text-6xl font-extrabold font-display text-white tracking-tight">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div className="max-w-3xl">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display text-white tracking-tight drop-shadow-md">
                 {destination.name}
               </h1>
-              <p className="mt-2 text-base sm:text-lg text-slate-200 font-normal max-w-2xl drop-shadow">
+              <p className="mt-2 text-base sm:text-lg text-slate-200 font-normal leading-relaxed drop-shadow">
                 {destination.tagline}
               </p>
             </div>
 
-            {/* Thumbnail Preview Strip / Indicators on Hero Bottom */}
-            {galleryImages.length > 1 && (
-              <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md p-2 rounded-2xl border border-white/15 overflow-x-auto max-w-full no-scrollbar">
-                {galleryImages.map((img, thumbIdx) => (
-                  <button
-                    key={thumbIdx}
-                    type="button"
-                    onClick={() => setCurrentImageIndex(thumbIdx)}
-                    className={`relative w-12 h-10 sm:w-16 sm:h-12 rounded-xl overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${
-                      thumbIdx === currentImageIndex
-                        ? 'border-brand-orange scale-105 ring-2 ring-brand-orange/40 shadow-lg'
-                        : 'border-white/30 opacity-60 hover:opacity-100 hover:border-white'
-                    }`}
-                  >
-                    <img
-                      src={img}
-                      alt={`Thumbnail ${thumbIdx + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
+            {/* Hero CTAs */}
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <button
+                type="button"
+                onClick={() => onOpenBookingModal(destination.name)}
+                className="orange-gradient-btn px-6 py-3.5 rounded-xl font-display font-bold text-xs sm:text-sm text-white shadow-xl flex items-center gap-2 hover:scale-[1.02] transition-transform cursor-pointer"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Plan My {destination.name} Trip</span>
+              </button>
+
+              <a
+                href={getDestinationWhatsAppUrl(destination.name)}
+                target="_blank"
+                rel="noreferrer"
+                className="px-5 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-white/15 hover:bg-[#25D366] text-white border border-white/20 backdrop-blur-md flex items-center gap-2 transition-all shadow-lg cursor-pointer"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-current text-[#25D366] hover:text-white" />
+                <span>Chat with Expert</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <Breadcrumbs
           items={[
             { label: 'Destinations', to: '/destinations' },
@@ -306,147 +368,566 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           ]}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-6">
-          {/* Main Left Content */}
-          <div className="lg:col-span-8 space-y-10">
-            {/* Overview */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
-              <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 mb-4 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-brand-orange" />
-                <span>About {destination.name}</span>
-              </h2>
-              <p className="text-sm text-slate-700 leading-relaxed">
-                {destination.description}
-              </p>
+        {/* ========================================================
+            SECTION 2: QUICK FACTS (At-a-glance strip)
+           ======================================================== */}
+        <section className="mt-8 bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+          <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F0EBE1]">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-xl bg-brand-orange/15 text-brand-orange flex items-center justify-center font-bold">
+                <Compass className="w-4 h-4" />
+              </div>
+              <div>
+                <h2 className="text-lg sm:text-xl font-bold font-display text-slate-900">
+                  Quick Facts & Travel Essentials
+                </h2>
+                <p className="text-xs text-slate-500">Key metrics at a glance for planning your journey</p>
+              </div>
+            </div>
+            <span className="hidden sm:inline-flex px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              Verified Himalayan Travel Data
+            </span>
+          </div>
 
-              <div className="mt-6 pt-6 border-t border-slate-100">
-                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">
-                  Key Highlights:
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {destination.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-slate-700">
-                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>{h}</span>
-                    </div>
-                  ))}
-                </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Altitude</span>
+              <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
+                <Mountain className="w-4 h-4 text-brand-orange shrink-0" />
+                <span>{extraData.quickFacts.altitude}</span>
               </div>
             </div>
 
-            {/* Dedicated Destination Photo Gallery Grid */}
-            {galleryImages.length > 1 && (
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md space-y-5">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <div>
-                    <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
-                      <Camera className="w-5 h-5 text-brand-orange" />
-                      <span>{destination.name} Photo Gallery</span>
-                    </h2>
-                    <p className="text-xs text-slate-500 mt-1">
-                      Browse all {galleryImages.length} authentic views, shrines, and landscapes. Click any image to view in fullscreen.
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setIsLightboxOpen(true)}
-                    className="inline-flex items-center gap-1.5 self-start text-xs font-semibold text-brand-orange bg-brand-orange/10 hover:bg-brand-orange hover:text-white px-3.5 py-1.5 rounded-full transition-colors cursor-pointer"
-                  >
-                    <Maximize2 className="w-3.5 h-3.5" />
-                    <span>View Fullscreen Slider</span>
-                  </button>
-                </div>
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Ideal Duration</span>
+              <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
+                <Clock className="w-4 h-4 text-brand-orange shrink-0" />
+                <span>{extraData.quickFacts.duration}</span>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-                  {galleryImages.map((img, idx) => (
-                    <div
-                      key={idx}
-                      onClick={() => {
-                        setCurrentImageIndex(idx);
-                        setIsLightboxOpen(true);
-                      }}
-                      className={`group relative aspect-4/3 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 ${
-                        idx === currentImageIndex
-                          ? 'border-brand-orange ring-2 ring-brand-orange/40 shadow-md'
-                          : 'border-slate-200 hover:border-brand-orange hover:shadow-lg hover:-translate-y-0.5'
-                      }`}
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Best Season</span>
+              <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
+                <Calendar className="w-4 h-4 text-brand-orange shrink-0" />
+                <span>{extraData.quickFacts.bestSeason}</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Weather / Avg Temp</span>
+              <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
+                <Thermometer className="w-4 h-4 text-brand-orange shrink-0" />
+                <span>{extraData.quickFacts.avgTemp}</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Nearest Airport</span>
+              <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
+                <Plane className="w-4 h-4 text-brand-orange shrink-0" />
+                <span className="truncate">{extraData.quickFacts.nearestAirport}</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Nearest Railhead</span>
+              <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
+                <Train className="w-4 h-4 text-brand-orange shrink-0" />
+                <span className="truncate">{extraData.quickFacts.nearestRailhead}</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Himalayan Region</span>
+              <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
+                <MapPin className="w-4 h-4 text-brand-orange shrink-0" />
+                <span>{extraData.quickFacts.region}</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Travel Vibe</span>
+              <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
+                <Heart className="w-4 h-4 text-brand-orange shrink-0" />
+                <span className="truncate">{extraData.quickFacts.travelVibe}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2-Column Core Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-10">
+          {/* Main Left Content Stream */}
+          <div className="lg:col-span-8 space-y-12">
+            
+            {/* ========================================================
+                SECTION 3: DESTINATION OVERVIEW
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 mb-4 flex items-center gap-2.5">
+                <Sparkles className="w-5 h-5 text-brand-orange" />
+                <span>About {destination.name}</span>
+              </h2>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                {destination.description}
+              </p>
+
+              {/* Photo Strip inside Overview */}
+              {galleryImages.length > 1 && (
+                <div className="mt-6 pt-6 border-t border-slate-100">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                      Scenic Glimpse ({galleryImages.length} Images)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setIsLightboxOpen(true)}
+                      className="text-xs font-semibold text-brand-orange hover:underline flex items-center gap-1"
                     >
-                      <img
-                        src={img}
-                        alt={`${destination.name} - Photo ${idx + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-3">
-                        <span className="text-xs text-white font-medium">Photo {idx + 1}</span>
-                        <div className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
-                          <Maximize2 className="w-3.5 h-3.5" />
-                        </div>
+                      <Camera className="w-3.5 h-3.5" />
+                      <span>View Gallery</span>
+                    </button>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    {galleryImages.slice(0, 3).map((img, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => {
+                          setCurrentImageIndex(idx);
+                          setIsLightboxOpen(true);
+                        }}
+                        className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer border border-slate-200 hover:border-brand-orange"
+                      >
+                        <img src={img} alt={`${destination.name} view`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                       </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+
+            {/* ========================================================
+                SECTION 4: TOP HIGHLIGHTS
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="flex items-center gap-2 mb-6">
+                <Award className="w-5 h-5 text-brand-orange" />
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900">
+                  Top Highlights of {destination.name}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                {destination.highlights.map((h, i) => (
+                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5 font-bold" />
                     </div>
-                  ))}
+                    <span className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed">{h}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* ========================================================
+                SECTION 5: PLACES TO VISIT (Top Attractions)
+               ======================================================== */}
+            <section>
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-brand-orange" />
+                    <span>Places to Visit in {destination.name}</span>
+                  </h2>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Must-see landmarks, heritage viewpoints, and spiritual shrines
+                  </p>
                 </div>
               </div>
-            )}
 
-            {/* Top Attractions Grid */}
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 mb-6">
-                Top Attractions in {destination.name}
-              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {destination.topAttractions.map((att, i) => (
-                  <div key={i} className="p-5 rounded-2xl bg-white border border-[#E2DDD5] shadow-xs space-y-2">
-                    <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-brand-orange/15 text-brand-orange flex items-center justify-center font-bold text-xs">
+                  <div key={i} className="p-5 rounded-2xl bg-white border border-[#E2DDD5] shadow-sm hover:shadow-md hover:border-brand-orange transition-all space-y-2">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-7 h-7 rounded-xl bg-brand-orange/15 text-brand-orange flex items-center justify-center font-bold text-xs">
                         {i + 1}
                       </span>
-                      <h3 className="font-display font-bold text-sm text-slate-900">{att.name}</h3>
+                      <h3 className="font-display font-bold text-sm sm:text-base text-slate-900">{att.name}</h3>
                     </div>
-                    <p className="text-xs text-slate-600 leading-relaxed pl-8">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-9">
                       {att.desc}
                     </p>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
 
-            {/* How To Reach */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md space-y-6">
-              <h2 className="text-xl font-bold font-display text-slate-900 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-brand-orange" />
-                <span>How to Reach {destination.name}</span>
-              </h2>
+            {/* ========================================================
+                SECTION 6: THINGS TO DO / ACTIVITIES
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                  <Luggage className="w-5 h-5 text-brand-orange" />
+                  <span>Things to Do & Experiences in {destination.name}</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Immersive activities curated by local mountain experts
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {extraData.activities.map((act, idx) => (
+                  <div key={idx} className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9] flex flex-col justify-between hover:border-brand-orange/60 transition-colors">
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-orange/10 text-brand-orange">
+                          {act.category}
+                        </span>
+                        <span className="text-[11px] font-medium text-slate-400 flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          <span>{act.duration}</span>
+                        </span>
+                      </div>
+                      <h3 className="text-sm font-bold text-slate-900 mb-1">
+                        {act.title}
+                      </h3>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        {act.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* ========================================================
+                SECTION 7: BEST TIME TO VISIT (Seasonality Guide)
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-brand-orange" />
+                  <span>Best Time to Visit {destination.name}</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Seasonal climate breakdown, temperature ranges, and crowd trends
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {extraData.seasons.map((season, idx) => (
+                  <div
+                    key={idx}
+                    className={`p-5 rounded-2xl border transition-all ${
+                      season.isPopular 
+                        ? 'bg-[#FFF9F2] border-brand-orange/40 shadow-xs' 
+                        : 'bg-[#FAF8F5] border-[#EAE4D9]'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-display font-bold text-base text-slate-900 flex items-center gap-1.5">
+                        {season.season === 'Summer' && <Sun className="w-4 h-4 text-amber-500" />}
+                        {season.season === 'Monsoon' && <CloudRain className="w-4 h-4 text-blue-500" />}
+                        {(season.season === 'Winter' || season.season === 'Autumn') && <Snowflake className="w-4 h-4 text-cyan-500" />}
+                        <span>{season.season}</span>
+                      </span>
+                      {season.isPopular && (
+                        <span className="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-brand-orange text-white">
+                          Peak
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="text-xs font-semibold text-slate-600 mb-1">{season.months}</div>
+                    <div className="text-xs text-brand-orange font-bold mb-3">{season.temp}</div>
+                    
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                      {season.desc}
+                    </p>
+
+                    <span className="inline-block px-2.5 py-1 rounded-lg text-[10px] font-medium bg-white border border-[#EAE4D9] text-slate-700">
+                      {season.tag}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* ========================================================
+                SECTION 8: HOW TO REACH
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md space-y-6">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-brand-orange" />
+                  <span>How to Reach {destination.name}</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Air, rail, and road transit routes connecting major hubs
+                </p>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] space-y-2">
-                  <div className="flex items-center gap-2 text-brand-orange font-bold">
+                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9] space-y-2">
+                  <div className="flex items-center gap-2 text-brand-orange font-bold text-sm">
                     <Plane className="w-4 h-4" />
                     <span>By Air</span>
                   </div>
-                  <p className="text-slate-700 leading-relaxed">{destination.howToReach.byAir}</p>
+                  <p className="text-slate-700 leading-relaxed font-normal">{destination.howToReach.byAir}</p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] space-y-2">
-                  <div className="flex items-center gap-2 text-brand-orange font-bold">
+                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9] space-y-2">
+                  <div className="flex items-center gap-2 text-brand-orange font-bold text-sm">
                     <Train className="w-4 h-4" />
                     <span>By Train</span>
                   </div>
-                  <p className="text-slate-700 leading-relaxed">{destination.howToReach.byTrain}</p>
+                  <p className="text-slate-700 leading-relaxed font-normal">{destination.howToReach.byTrain}</p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5] space-y-2">
-                  <div className="flex items-center gap-2 text-brand-orange font-bold">
+                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9] space-y-2">
+                  <div className="flex items-center gap-2 text-brand-orange font-bold text-sm">
                     <Car className="w-4 h-4" />
                     <span>By Road</span>
                   </div>
-                  <p className="text-slate-700 leading-relaxed">{destination.howToReach.byRoad}</p>
+                  <p className="text-slate-700 leading-relaxed font-normal">{destination.howToReach.byRoad}</p>
                 </div>
               </div>
-            </div>
+            </section>
+
+            {/* ========================================================
+                SECTION 9: SUGGESTED ITINERARIES (Tabbed)
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-brand-orange" />
+                    <span>Suggested Itineraries for {destination.name}</span>
+                  </h2>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Day-wise plans crafted by mountain travel planners
+                  </p>
+                </div>
+
+                {/* Tab Switchers */}
+                <div className="flex items-center gap-2 bg-[#F5F3EF] p-1.5 rounded-2xl border border-[#EAE4D9] overflow-x-auto">
+                  {extraData.itineraries.map((itin) => (
+                    <button
+                      key={itin.id}
+                      type="button"
+                      onClick={() => setActiveItineraryTab(itin.id)}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+                        activeItineraryTab === itin.id
+                          ? 'bg-brand-orange text-white shadow-sm'
+                          : 'text-slate-600 hover:text-slate-900'
+                      }`}
+                    >
+                      {itin.duration}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {activeItinerary && (
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+                    <div>
+                      <h3 className="font-display font-bold text-base text-slate-900">{activeItinerary.title}</h3>
+                      <p className="text-xs text-slate-500 mt-0.5">Recommended for: <strong className="text-slate-700">{activeItinerary.idealFor}</strong></p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => onOpenBookingModal(`${destination.name} - ${activeItinerary.title}`)}
+                      className="px-4 py-2 rounded-xl bg-brand-orange text-white text-xs font-bold shadow-md hover:bg-brand-orange/90 transition-colors shrink-0"
+                    >
+                      Customise Plan
+                    </button>
+                  </div>
+
+                  {/* Day-by-Day Timeline */}
+                  <div className="space-y-4 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-[#EAE4D9]">
+                    {activeItinerary.days.map((d) => (
+                      <div key={d.day} className="relative pl-10">
+                        <div className="absolute left-2 top-1.5 -translate-x-1/2 w-6 h-6 rounded-full bg-brand-orange text-white text-xs font-bold flex items-center justify-center ring-4 ring-white shadow-sm">
+                          {d.day}
+                        </div>
+                        <div className="p-4 rounded-2xl bg-white border border-[#EAE4D9] shadow-xs space-y-2">
+                          <h4 className="font-display font-bold text-sm text-slate-900">
+                            Day {d.day}: {d.title}
+                          </h4>
+                          <ul className="space-y-1">
+                            {d.highlights.map((h, hIdx) => (
+                              <li key={hIdx} className="text-xs text-slate-600 flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-brand-orange shrink-0" />
+                                <span>{h}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+
+            {/* ========================================================
+                SECTION 11: NEARBY DESTINATIONS / EXCURSIONS
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                  <Compass className="w-5 h-5 text-brand-orange" />
+                  <span>Nearby Destinations & Excursions from {destination.name}</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Combine your journey with neighboring mountain towns and sacred sights
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {extraData.nearby.map((place, idx) => (
+                  <Link
+                    key={idx}
+                    to={place.path}
+                    className="group rounded-2xl overflow-hidden bg-[#FAF8F5] border border-[#EAE4D9] hover:border-brand-orange hover:shadow-md transition-all flex flex-col"
+                  >
+                    <div className="relative aspect-16/10 overflow-hidden">
+                      <img
+                        src={place.image}
+                        alt={place.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-black/70 text-white backdrop-blur-md">
+                        {place.distance}
+                      </span>
+                    </div>
+                    <div className="p-4 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-orange transition-colors">
+                          {place.name}
+                        </h3>
+                        <p className="text-xs text-slate-600 mt-1 line-clamp-2">
+                          {place.desc}
+                        </p>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-orange mt-3">
+                        <span>Explore</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            {/* ========================================================
+                SECTION 12: FAQS (Expandable Accordion)
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                  <HelpCircle className="w-5 h-5 text-brand-orange" />
+                  <span>Frequently Asked Questions about {destination.name}</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Answers to permit, route, ATM, network, and packing queries
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                {extraData.faqs.map((faq, fIdx) => {
+                  const isOpen = openFaqIndex === fIdx;
+                  return (
+                    <div
+                      key={fIdx}
+                      className="rounded-2xl border border-[#EAE4D9] overflow-hidden bg-[#FAF8F5] transition-colors"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setOpenFaqIndex(isOpen ? null : fIdx)}
+                        className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-bold text-sm text-slate-900 hover:text-brand-orange transition-colors cursor-pointer"
+                      >
+                        <span>{faq.question}</span>
+                        {isOpen ? (
+                          <ChevronUp className="w-4 h-4 text-brand-orange shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                        )}
+                      </button>
+                      {isOpen && (
+                        <div className="px-4 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-[#F0EBE1] pt-3">
+                          {faq.answer}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* ========================================================
+                SECTION 13: REVIEWS & VISITOR EXPERIENCES
+               ======================================================== */}
+            <section className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-md">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2">
+                    <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
+                    <span>Traveler Reviews & Experiences</span>
+                  </h2>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Verified guest feedback from UK Yatra journeys
+                  </p>
+                </div>
+                <div className="flex items-center gap-1.5 bg-[#FAF8F5] px-3.5 py-1.5 rounded-full border border-[#EAE4D9]">
+                  <div className="flex items-center text-amber-500">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-xs font-bold text-slate-800">4.9 / 5.0</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {extraData.reviews.map((rev) => (
+                  <div key={rev.id} className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9] space-y-3 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <div className="flex items-center text-amber-500">
+                          {[...Array(rev.rating)].map((_, i) => (
+                            <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                          ))}
+                        </div>
+                        <span className="text-[10px] font-semibold text-slate-400">{rev.date}</span>
+                      </div>
+                      <p className="text-xs text-slate-700 leading-relaxed italic">
+                        "{rev.review}"
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#EAE4D9] flex items-center justify-between text-xs">
+                      <div>
+                        <strong className="text-slate-900 font-bold block">{rev.author}</strong>
+                        <span className="text-[11px] text-slate-500">{rev.location}</span>
+                      </div>
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800">
+                        {rev.tripType}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
           </div>
 
-          {/* Right Sticky Booking & Query Card */}
+          {/* ========================================================
+              RIGHT STICKY CARD (Desktop Planning & Direct Inquiry)
+             ======================================================== */}
           <div className="lg:col-span-4 space-y-6">
             <div className="sticky top-28 bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-lg space-y-6">
               <div>
@@ -457,12 +938,12 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                   Visit {destination.name}
                 </h3>
                 <p className="text-xs text-slate-600 mt-1">
-                  Best time to visit: <strong className="text-slate-800">{destination.bestTime}</strong>
+                  Ideal Season: <strong className="text-slate-800">{destination.bestTime}</strong>
                 </p>
               </div>
 
               {destination.startingPrice && (
-                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5]">
+                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
                   <span className="text-[10px] text-slate-500 block uppercase font-medium">Curated Packages From</span>
                   <div className="font-display font-extrabold text-2xl text-slate-900">
                     {destination.startingPrice} <span className="text-xs font-normal text-slate-500">/ person</span>
@@ -472,8 +953,9 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
               <div className="space-y-3">
                 <button
+                  type="button"
                   onClick={() => onOpenBookingModal(destination.name)}
-                  className="w-full orange-gradient-btn py-3.5 rounded-xl font-display font-bold text-xs text-white shadow-xl flex items-center justify-center gap-2"
+                  className="w-full orange-gradient-btn py-3.5 rounded-xl font-display font-bold text-xs text-white shadow-xl flex items-center justify-center gap-2 hover:scale-[1.01] transition-transform cursor-pointer"
                 >
                   <span>Request Custom Itinerary</span>
                   <ArrowRight className="w-4 h-4" />
@@ -483,48 +965,191 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                   href={getDestinationWhatsAppUrl(destination.name)}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-xl font-semibold text-xs transition-all shadow-lg shadow-emerald-900/40"
+                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3.5 rounded-xl font-semibold text-xs transition-all shadow-md cursor-pointer"
                 >
                   <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Enquire on WhatsApp</span>
                 </a>
               </div>
 
-              <div className="text-[11px] text-slate-400 pt-4 border-t border-white/5 space-y-2">
-                <p className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <div className="text-[11px] text-slate-600 pt-4 border-t border-[#F0EBE1] space-y-2.5">
+                <p className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>100% Customized mountain itineraries</span>
                 </p>
-                <p className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Sanitised hill-certified vehicles</span>
+                <p className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Verified hill-certified drivers & cabs</span>
                 </p>
-                <p className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Transparent quotes with zero hidden charges</span>
+                <p className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Transparent quotes with zero hidden fees</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Related Tour Packages */}
-        {relatedPackages.length > 0 && (
-          <div className="mt-20 pt-12 border-t border-slate-200">
-            <h2 className="text-2xl sm:text-3xl font-bold font-display text-slate-900 mb-8">
-              Featured Tour Packages for {destination.name}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedPackages.map((pkg) => (
-                <PackageCard
-                  key={pkg.id}
-                  tourPackage={pkg}
-                  onOpenBookingModal={() => onOpenBookingModal(pkg.title)}
-                />
-              ))}
+        {/* ========================================================
+            SECTION 10: TOUR PACKAGES (Live matching packages)
+           ======================================================== */}
+        <section className="mt-20 pt-12 border-t border-[#EAE4D9]">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div>
+              <span className="text-xs uppercase font-bold tracking-wider text-brand-orange">
+                Ready-To-Book Itineraries
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold font-display text-slate-900 mt-1">
+                Featured Tour Packages for {destination.name}
+              </h2>
             </div>
+            <Link
+              to="/packages"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:underline self-start"
+            >
+              <span>View All 20+ Tour Packages</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-        )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {displayPackages.map((pkg) => (
+              <PackageCard
+                key={pkg.id}
+                tourPackage={pkg}
+                onOpenBookingModal={() => onOpenBookingModal(pkg.title)}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* ========================================================
+            SECTION 14: INQUIRY FORM / FINAL CTA
+           ======================================================== */}
+        <section className="mt-20 rounded-3xl bg-gradient-to-br from-slate-900 via-brand-dark to-slate-900 text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          {/* Subtle decorative circles */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-orange/5 rounded-full blur-2xl pointer-events-none" />
+
+          <div className="relative z-10 max-w-4xl mx-auto text-center mb-8">
+            <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-orange text-white inline-block mb-3">
+              Fast Response Guaranteed
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight">
+              Ready to Explore {destination.name}?
+            </h2>
+            <p className="mt-2 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+              Tell us your preferred dates and travelers. Our local mountain travel specialists will curate a personalized day-wise plan with fair pricing within 30 minutes.
+            </p>
+          </div>
+
+          {inquirySubmitted ? (
+            <div className="max-w-xl mx-auto p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-center space-y-3">
+              <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center font-bold">
+                <Check className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold">Inquiry Sent Successfully!</h3>
+              <p className="text-xs text-slate-300">
+                Our destination manager is reviewing your travel requirements and will connect with your quote shortly.
+              </p>
+              <button
+                type="button"
+                onClick={() => setInquirySubmitted(false)}
+                className="text-xs text-brand-orange hover:underline pt-2 block mx-auto"
+              >
+                Send Another Request
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleInquirySubmit} className="relative z-10 max-w-3xl mx-auto space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                <div>
+                  <label className="block text-[11px] font-medium text-slate-300 mb-1">Your Full Name</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Rahul Sharma"
+                    value={inquiryName}
+                    onChange={(e) => setInquiryName(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-hidden focus:border-brand-orange transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-medium text-slate-300 mb-1">WhatsApp / Phone</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+91 98765 43210"
+                    value={inquiryPhone}
+                    onChange={(e) => setInquiryPhone(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-hidden focus:border-brand-orange transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-medium text-slate-300 mb-1">Travel Month</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Next Month / May"
+                    value={inquiryMonth}
+                    onChange={(e) => setInquiryMonth(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-hidden focus:border-brand-orange transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-medium text-slate-300 mb-1">No. of Travelers</label>
+                  <select
+                    value={inquiryTravelers}
+                    onChange={(e) => setInquiryTravelers(e.target.value)}
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-white/20 text-white text-xs focus:outline-hidden focus:border-brand-orange transition-colors"
+                  >
+                    <option value="Solo Traveler">Solo Traveler</option>
+                    <option value="2 Travelers (Couple)">2 Travelers (Couple)</option>
+                    <option value="3 - 5 Travelers (Family)">3 - 5 Travelers (Family)</option>
+                    <option value="6+ Travelers (Group)">6+ Travelers (Group)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto orange-gradient-btn px-8 py-3.5 rounded-xl font-display font-bold text-xs sm:text-sm text-white shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform cursor-pointer"
+                >
+                  <Send className="w-4 h-4" />
+                  <span>Get Free Customized Itinerary</span>
+                </button>
+
+                <a
+                  href={getDestinationWhatsAppUrl(destination.name)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
+                >
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
+                  <span>Direct WhatsApp Chat</span>
+                </a>
+              </div>
+            </form>
+          )}
+
+          <div className="relative z-10 mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-[11px] text-slate-400">
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>Zero cancellation fee support on select plans</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Users className="w-4 h-4 text-emerald-400" />
+              <span>12,000+ Happy Pilgrims & Mountain Travelers</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Award className="w-4 h-4 text-emerald-400" />
+              <span>Government Registered Tour Operators</span>
+            </span>
+          </div>
+        </section>
       </div>
 
       {/* Fullscreen Photo Lightbox Modal */}
@@ -541,7 +1166,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-brand-orange animate-pulse" />
               <div>
-                <h3 className="font-display font-bold text-lg text-white">{destination.name} Dham</h3>
+                <h3 className="font-display font-bold text-lg text-white">{destination.name}</h3>
                 <p className="text-xs text-slate-400">
                   Photo {currentImageIndex + 1} of {galleryImages.length} • Use Arrow Keys or Swipe to Navigate
                 </p>
