@@ -1,10 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { 
   Compass, 
-  MapPin, 
-  Calendar, 
-  Search, 
   ArrowRight, 
   ShieldCheck, 
   Award, 
@@ -17,8 +14,7 @@ import {
   ChevronDown,
   Flame,
   Sun,
-  Send,
-  Car
+  Send
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl, getCustomTripWhatsAppUrl } from '../config/siteConfig';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -45,7 +41,6 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
-  const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
   const activePackages = adminStorage.getPackages();
 
@@ -80,9 +75,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
     startPlayback();
   }, []);
 
-  const [searchDestination, setSearchDestination] = useState('');
-  const [searchCategory, setSearchCategory] = useState('All');
-  const [searchMonth, setSearchMonth] = useState('Flexible');
   const [selectedDestCategory, setSelectedDestCategory] = useState('All');
 
   // Interactive quick customized trip teaser state
@@ -96,29 +88,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
   });
   const [customSubmitted, setCustomSubmitted] = useState(false);
 
-  const handleHeroSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchDestination) {
-      navigate(`/destinations/${searchDestination}`);
-    } else if (searchCategory !== 'All') {
-      navigate(`/destinations?category=${encodeURIComponent(searchCategory)}`);
-    } else {
-      navigate('/destinations');
-    }
-  };
-
-  // Hero booking tab switcher state: Holiday Packages vs Book Your Vehicle
-  const [heroBookingTab, setHeroBookingTab] = useState<'packages' | 'vehicles'>('packages');
-  const [heroVehiclePickup, setHeroVehiclePickup] = useState('Dehradun Airport (Jolly Grant)');
-  const [heroVehicleDrop, setHeroVehicleDrop] = useState('Kedarnath Base (Sonprayag)');
-  const [heroVehicleType, setHeroVehicleType] = useState('Toyota Innova Crysta (Luxury 6+1)');
-  const [heroVehicleDate, setHeroVehicleDate] = useState('');
-
-  const handleHeroVehicleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onOpenBookingModal(`Taxi Rental - ${heroVehicleType} (${heroVehiclePickup} to ${heroVehicleDrop})`);
-  };
-
   const handleCustomSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setCustomSubmitted(true);
@@ -127,21 +96,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
   const filteredDestinations = selectedDestCategory === 'All' 
     ? DESTINATIONS.slice(0, 8) 
     : DESTINATIONS.filter(d => d.category === selectedDestCategory);
-
-  const heroDestinations = [
-    { id: 'kedarnath', name: 'Kedarnath' },
-    { id: 'rishikesh', name: 'Rishikesh' },
-    { id: 'auli', name: 'Auli' },
-    { id: 'chopta', name: 'Chopta' },
-    { id: 'nainital', name: 'Nainital' },
-    { id: 'mussoorie', name: 'Mussoorie' },
-    { id: 'valley-of-flowers', name: 'Valley of Flowers' },
-    { id: 'jim-corbett', name: 'Jim Corbett' },
-    { id: 'badrinath', name: 'Badrinath' },
-    { id: 'munsiyari', name: 'Munsiyari' },
-    { id: 'tehri', name: 'Tehri Lake' },
-    { id: 'lansdowne', name: 'Lansdowne' },
-  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -204,192 +158,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             </Link>
           </div>
 
-          {/* Floating Search & Discovery Bar - High-Contrast Dark Frosted Glass */}
-          <div className="mt-8 sm:mt-16 max-w-4xl mx-auto bg-slate-950/85 backdrop-blur-xl rounded-3xl p-3.5 sm:p-5 border border-white/20 shadow-2xl">
-            {/* Search Mode Tabs */}
-            <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-white/10 overflow-x-auto scrollbar-none">
-              <button
-                type="button"
-                onClick={() => setHeroBookingTab('packages')}
-                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 sm:gap-2 whitespace-nowrap cursor-pointer ${
-                  heroBookingTab === 'packages'
-                    ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/30'
-                    : 'bg-white/10 hover:bg-white/15 text-slate-300 hover:text-white'
-                }`}
-              >
-                <Compass className="w-3.5 h-3.5" />
-                <span>Tour Packages</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setHeroBookingTab('vehicles')}
-                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 sm:gap-2 whitespace-nowrap cursor-pointer ${
-                  heroBookingTab === 'vehicles'
-                    ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/30'
-                    : 'bg-white/10 hover:bg-white/15 text-slate-300 hover:text-white'
-                }`}
-              >
-                <Car className="w-3.5 h-3.5" />
-                <span>Book Vehicle / Cab</span>
-              </button>
-            </div>
-
-            {heroBookingTab === 'packages' ? (
-              <form onSubmit={handleHeroSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
-                {/* Destination Dropdown */}
-                <div className="p-2.5 rounded-2xl bg-white/10 border border-white/15">
-                  <label className="text-[10px] uppercase font-bold tracking-wider text-brand-orange flex items-center gap-1 mb-1">
-                    <MapPin className="w-3 h-3" />
-                    <span>Where to?</span>
-                  </label>
-                  <select
-                    value={searchDestination}
-                    onChange={(e) => setSearchDestination(e.target.value)}
-                    className="w-full bg-transparent text-xs font-semibold text-white focus:outline-none cursor-pointer"
-                  >
-                    <option value="" className="bg-slate-900 text-slate-300">Choose Destination</option>
-                    {heroDestinations.map(d => (
-                      <option key={d.id} value={d.id} className="bg-slate-900 text-white">{d.name}</option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Category Dropdown */}
-                <div className="p-2.5 rounded-2xl bg-white/10 border border-white/15">
-                  <label className="text-[10px] uppercase font-bold tracking-wider text-brand-orange flex items-center gap-1 mb-1">
-                    <Compass className="w-3 h-3" />
-                    <span>Experience Type</span>
-                  </label>
-                  <select
-                    value={searchCategory}
-                    onChange={(e) => setSearchCategory(e.target.value)}
-                    className="w-full bg-transparent text-xs font-semibold text-white focus:outline-none cursor-pointer"
-                  >
-                    <option value="All" className="bg-slate-900 text-slate-300">All Travel Styles</option>
-                    <option value="Spiritual" className="bg-slate-900 text-white">Spiritual & Char Dham</option>
-                    <option value="Adventure" className="bg-slate-900 text-white">Adventure & Rafting</option>
-                    <option value="Trekking" className="bg-slate-900 text-white">Alpine Trekking</option>
-                    <option value="Hills & Valleys" className="bg-slate-900 text-white">Hills & Lakes</option>
-                    <option value="Wildlife" className="bg-slate-900 text-white">Wildlife Safari</option>
-                    <option value="Weekend Escapes" className="bg-slate-900 text-white">Weekend Escapes</option>
-                  </select>
-                </div>
-
-                {/* Month */}
-                <div className="p-2.5 rounded-2xl bg-white/10 border border-white/15">
-                  <label className="text-[10px] uppercase font-bold tracking-wider text-brand-orange flex items-center gap-1 mb-1">
-                    <Calendar className="w-3 h-3" />
-                    <span>Travel Month</span>
-                  </label>
-                  <select
-                    value={searchMonth}
-                    onChange={(e) => setSearchMonth(e.target.value)}
-                    className="w-full bg-transparent text-xs font-semibold text-white focus:outline-none cursor-pointer"
-                  >
-                    <option value="Flexible" className="bg-slate-900 text-white">Any Month / Flexible</option>
-                    <option value="Mar-Apr" className="bg-slate-900 text-white">March - April (Spring)</option>
-                    <option value="May-Jun" className="bg-slate-900 text-white">May - June (Char Dham/Summer)</option>
-                    <option value="Jul-Aug" className="bg-slate-900 text-white">July - August (Flowers Bloom)</option>
-                    <option value="Sep-Nov" className="bg-slate-900 text-white">September - November (Clear Peaks)</option>
-                    <option value="Dec-Feb" className="bg-slate-900 text-white">December - February (Winter Snow)</option>
-                  </select>
-                </div>
-
-                {/* Search Button */}
-                <button
-                  type="submit"
-                  className="orange-gradient-btn rounded-2xl py-3 px-6 font-display font-bold text-sm text-white flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/30 self-center h-full min-h-[48px] cursor-pointer"
-                >
-                  <Search className="w-4 h-4" />
-                  <span>Explore Now</span>
-                </button>
-              </form>
-            ) : (
-              <div>
-                <form onSubmit={handleHeroVehicleSubmit} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
-                  {/* Pickup Location */}
-                  <div className="p-2.5 rounded-2xl bg-white/10 border border-white/15">
-                    <label className="text-[10px] uppercase font-bold tracking-wider text-brand-orange flex items-center gap-1 mb-1">
-                      <MapPin className="w-3 h-3" />
-                      <span>Pickup Point</span>
-                    </label>
-                    <select
-                      value={heroVehiclePickup}
-                      onChange={(e) => setHeroVehiclePickup(e.target.value)}
-                      className="w-full bg-transparent text-xs font-semibold text-white focus:outline-none cursor-pointer"
-                    >
-                      <option value="Dehradun Airport (Jolly Grant)" className="bg-slate-900 text-white">Dehradun Airport</option>
-                      <option value="Haridwar Railway Station" className="bg-slate-900 text-white">Haridwar Station</option>
-                      <option value="Rishikesh" className="bg-slate-900 text-white">Rishikesh</option>
-                      <option value="Kathgodam / Haldwani" className="bg-slate-900 text-white">Kathgodam / Haldwani</option>
-                      <option value="Delhi NCR" className="bg-slate-900 text-white">Delhi NCR</option>
-                    </select>
-                  </div>
-
-                  {/* Destination Drop */}
-                  <div className="p-2.5 rounded-2xl bg-white/10 border border-white/15">
-                    <label className="text-[10px] uppercase font-bold tracking-wider text-brand-orange flex items-center gap-1 mb-1">
-                      <Compass className="w-3 h-3" />
-                      <span>Destination Route</span>
-                    </label>
-                    <select
-                      value={heroVehicleDrop}
-                      onChange={(e) => setHeroVehicleDrop(e.target.value)}
-                      className="w-full bg-transparent text-xs font-semibold text-white focus:outline-none cursor-pointer"
-                    >
-                      <option value="Kedarnath Base (Sonprayag)" className="bg-slate-900 text-white">Kedarnath (Sonprayag Base)</option>
-                      <option value="Badrinath & Joshimath" className="bg-slate-900 text-white">Badrinath & Joshimath</option>
-                      <option value="Char Dham Complete Circuit (10D)" className="bg-slate-900 text-white">Char Dham Full Circuit (10D)</option>
-                      <option value="Mussoorie Queen of Hills" className="bg-slate-900 text-white">Mussoorie Hills</option>
-                      <option value="Nainital Lake District" className="bg-slate-900 text-white">Nainital Lakes</option>
-                      <option value="Auli & Chopta High Alps" className="bg-slate-900 text-white">Auli & Chopta</option>
-                      <option value="Jim Corbett Safari" className="bg-slate-900 text-white">Jim Corbett</option>
-                    </select>
-                  </div>
-
-                  {/* Vehicle Model */}
-                  <div className="p-2.5 rounded-2xl bg-white/10 border border-white/15">
-                    <label className="text-[10px] uppercase font-bold tracking-wider text-brand-orange flex items-center gap-1 mb-1">
-                      <Car className="w-3 h-3" />
-                      <span>Choose Vehicle</span>
-                    </label>
-                    <select
-                      value={heroVehicleType}
-                      onChange={(e) => setHeroVehicleType(e.target.value)}
-                      className="w-full bg-transparent text-xs font-semibold text-white focus:outline-none cursor-pointer"
-                    >
-                      <option value="Toyota Innova Crysta (Luxury 6+1)" className="bg-slate-900 text-white">Innova Crysta (6+1 SUV)</option>
-                      <option value="Force Tempo Traveller (12/16/26s)" className="bg-slate-900 text-white">Tempo Traveller (12-26s)</option>
-                      <option value="Maruti Suzuki Ertiga (Economy MUV)" className="bg-slate-900 text-white">Maruti Ertiga (4-5 Pax)</option>
-                      <option value="Force Urbania (VIP Luxury Van)" className="bg-slate-900 text-white">Force Urbania (VIP Van)</option>
-                    </select>
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="orange-gradient-btn rounded-2xl py-3 px-6 font-display font-bold text-sm text-white flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/30 self-center h-full min-h-[48px] cursor-pointer"
-                  >
-                    <Car className="w-4 h-4" />
-                    <span>Book Vehicle</span>
-                  </button>
-                </form>
-
-                <div className="mt-3 pt-2.5 border-t border-white/10 flex flex-wrap items-center justify-between text-[11px] text-slate-300">
-                  <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Verified Hill Permit Drivers • 24/7 Breakdown Assistance • Zero Surcharges</span>
-                  </span>
-                  <Link to="/book-vehicle" className="text-brand-orange hover:underline font-semibold">
-                    View Fleet & Fare Chart →
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
-
           {/* Quick stats counter with frosted glass container for crystal clear legibility */}
-          <div className="mt-8 max-w-4xl mx-auto bg-slate-950/80 backdrop-blur-xl rounded-2xl p-4 sm:p-5 border border-white/15 shadow-2xl">
+          <div className="mt-8 sm:mt-12 max-w-4xl mx-auto bg-slate-950/80 backdrop-blur-xl rounded-2xl p-4 sm:p-5 border border-white/15 shadow-2xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
               {SITE_CONFIG.stats.map((stat, i) => (
                 <div key={i} className="px-3 py-1">
