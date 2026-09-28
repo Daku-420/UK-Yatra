@@ -21,7 +21,7 @@ export const WhyUsPage: React.FC = () => {
     {
       icon: <Mountain className="w-8 h-8 text-brand-orange" />,
       title: '100% Born & Based in Uttarakhand',
-      desc: 'We are locals of the Garhwal and Kumaon Himalayas. We do not operate via remote call centers — our coordinators, guides, and drivers live in Rishikesh, Dehradun, and hill valleys.'
+      desc: 'We are locals of the Garhwal and Kumaon Himalayas. We do not operate via remote call centers, our coordinators, guides, and drivers live in Rishikesh, Dehradun, and hill valleys.'
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-emerald-400" />,

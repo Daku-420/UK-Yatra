@@ -162,7 +162,7 @@ export const AboutPage: React.FC = () => {
     },
     {
       q: 'Can itineraries be customized?',
-      a: 'Absolutely. All our tours—domestic and international—can be customized based on your preferences, budget, travel dates, and comfort requirements. We design personalized itineraries for individuals, families, groups, and corporates.'
+      a: 'Absolutely. All our tours, domestic and international, can be customized based on your preferences, budget, travel dates, and comfort requirements. We design personalized itineraries for individuals, families, groups, and corporates.'
     },
     {
       q: 'Who can travel with UK Yatra?',
@@ -280,13 +280,13 @@ export const AboutPage: React.FC = () => {
               </h3>
               <div className="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 <p>
-                  UK Yatra started with a simple idea and a lot of belief. From our roots in Uttarakhand, we’ve grown step by step into a travel brand that people trust. The journey hasn’t always been easy—it’s taken hard work, long days, and constant learning—but it’s been deeply rewarding. Most importantly, this journey has been built by Team UK Yatra. Nothing meaningful is ever created alone.
+                  UK Yatra started with a simple idea and a lot of belief. From our roots in Uttarakhand, we’ve grown step by step into a travel brand that people trust. The journey hasn’t always been easy, it’s taken hard work, long days, and constant learning, but it’s been deeply rewarding. Most importantly, this journey has been built by Team UK Yatra. Nothing meaningful is ever created alone.
                 </p>
                 <p>
-                  We don’t see ourselves as just a company. We see ourselves as a group of people working together with one goal—to create travel experiences that feel smooth, honest, and memorable. Team UK Yatra brings care, responsibility, and fresh thinking into everything we do. We respect each other’s strengths, learn from one another, and grow together.
+                  We don’t see ourselves as just a company. We see ourselves as a group of people working together with one goal: to create travel experiences that feel smooth, honest, and memorable. Team UK Yatra brings care, responsibility, and fresh thinking into everything we do. We respect each other’s strengths, learn from one another, and grow together.
                 </p>
                 <p>
-                  As travel keeps changing, we continue to adapt—using better tools, listening to our guests, and improving how we work. Our focus is simple: to go beyond expectations and make every journey feel personal, comfortable, and worth remembering.
+                  As travel keeps changing, we continue to adapt using better tools, listening to our guests, and improving how we work. Our focus is simple: to go beyond expectations and make every journey feel personal, comfortable, and worth remembering.
                 </p>
                 <p>
                   The trust our guests and partners place in us means everything. It comes from the effort, knowledge, and pride that Team UK Yatra puts into every trip. That passion is what defines us.
@@ -343,7 +343,7 @@ export const AboutPage: React.FC = () => {
                   Every day at UK Yatra begins with a simple question: How can we do this better for our guests? From planning routes to choosing the right stays, from coordinating logistics to offering on-ground support, our focus remains on the details that turn a trip into a smooth and enjoyable experience.
                 </p>
                 <p>
-                  Working closely with Team UK Yatra, I see the effort that goes into every journey we design. Behind each itinerary is careful planning, local knowledge, and a genuine desire to deliver what we promise. We believe travel should feel stress-free, transparent, and well-supported—and that belief guides our daily decisions.
+                  Working closely with Team UK Yatra, I see the effort that goes into every journey we design. Behind each itinerary is careful planning, local knowledge, and a genuine desire to deliver what we promise. We believe travel should feel stress-free, transparent, and well-supported, and that belief guides our daily decisions.
                 </p>
                 <p>
                   Being deeply connected to Uttarakhand gives us a strong foundation, but our outlook is always expanding. We constantly learn from our travelers, adapt to changing needs, and improve our processes to ensure consistency, safety, and comfort across all destinations we serve.
