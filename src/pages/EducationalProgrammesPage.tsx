@@ -141,7 +141,7 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
     },
     {
       q: 'Can itineraries be customized for our school or college curriculum?',
-      a: 'Yes, absolutely. We work closely with school principals, department heads, and college student councils to tailor every module, whether you require botanical field study, geology seminars, renewable energy visits, or pure outdoor adventure.'
+      a: 'Yes, absolutely. We work closely with school principals, department heads, and college student councils to tailor every module—whether you require botanical field study, geology seminars, renewable energy visits, or pure outdoor adventure.'
     },
     {
       q: 'What is the ideal group size and batch booking window?',

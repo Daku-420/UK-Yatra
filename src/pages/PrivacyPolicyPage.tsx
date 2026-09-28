@@ -8,17 +8,12 @@ export const PrivacyPolicyPage: React.FC = () => {
       <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
 
       <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E2DDD5] shadow-md space-y-8 text-xs sm:text-sm text-slate-700 leading-relaxed">
-        <div>
-          <span className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold mb-3 border border-amber-300">
-            DRAFT FOR REVIEW
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900">
-            Privacy Policy - DRAFT FOR REVIEW
-          </h1>
-          <p className="text-slate-500 font-medium mt-1">
-            Last Updated: January 01, 2026
-          </p>
-        </div>
+        <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900">
+          Privacy Policy
+        </h1>
+        <p className="text-slate-500 font-medium">
+          Last Updated: January 01, 2026
+        </p>
 
         <section className="space-y-3">
           <h2 className="text-lg font-bold font-display text-slate-900">1. Information We Collect</h2>

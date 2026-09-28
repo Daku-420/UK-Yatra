@@ -17,6 +17,7 @@ import {
   Info,
   MapPin,
   Footprints,
+  Sparkles,
   Trees,
   ArrowRight,
   Mountain,
@@ -55,7 +56,7 @@ const OUTDOOR_NAV_ITEMS = [
     subtitle: 'Auli Powder Slopes with Nanda Devi Views',
     tag: 'Auli Slopes',
     path: '/outdoor-activities/auli-skiing-snowboarding',
-    icon: Mountain
+    icon: Sparkles
   },
   {
     id: 'bungee-jumping',
@@ -95,7 +96,7 @@ const OUTDOOR_NAV_ITEMS = [
     subtitle: 'Har Ki Pauri & Triveni Ghat River Prayers',
     tag: 'Spiritual Trail',
     path: '/outdoor-activities/ganga-aarti-spiritual',
-    icon: SunMedium
+    icon: Sparkles
   }
 ];
 
@@ -595,8 +596,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   <div className="pb-4 mb-4 border-b border-[#E2D9CB]">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <span className="p-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200">
-                          <Mountain className="w-4 h-4" />
+                        <span className="p-1.5 rounded-lg bg-orange-100 text-brand-orange border border-orange-200">
+                          <Sparkles className="w-4 h-4" />
                         </span>
                         <span className="text-xs uppercase font-black tracking-wider text-slate-950">
                           Featured & Popular Packages
@@ -660,7 +661,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           <span className="text-brand-orange p-1 rounded-md bg-orange-100/70 border border-orange-200/60">
                             {category.id === 'popular-uttarakhand' && <SunMedium className="w-3.5 h-3.5" />}
                             {category.id === 'trekking-adventure' && <Footprints className="w-3.5 h-3.5" />}
-                            {category.id === 'spiritual-char-dham' && <Mountain className="w-3.5 h-3.5" />}
+                            {category.id === 'spiritual-char-dham' && <Sparkles className="w-3.5 h-3.5" />}
                             {category.id === 'kumaon' && <Compass className="w-3.5 h-3.5" />}
                             {category.id === 'offbeat-uttarakhand' && <MapPin className="w-3.5 h-3.5" />}
                             {category.id === 'wildlife-nature' && <Trees className="w-3.5 h-3.5" />}
@@ -1051,9 +1052,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <button
               onClick={onOpenBookingModal}
-              className="forest-btn px-4 xl:px-5 py-2 xl:py-2.5 rounded-xl font-display font-semibold text-xs xl:text-sm text-white flex items-center gap-2 shadow-sm whitespace-nowrap shrink-0 cursor-pointer"
+              className="orange-gradient-btn px-4 xl:px-5 py-2 xl:py-2.5 rounded-xl font-display font-semibold text-xs xl:text-sm text-white flex items-center gap-2 shadow-lg shadow-brand-orange/20 whitespace-nowrap shrink-0"
             >
-              <span>Plan My Trip</span>
+              <span>Book Your Trip</span>
             </button>
           </div>
 
@@ -1079,9 +1080,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
         </div>
       </nav>
 
-      {/* Mobile Drawer Menu - Himalayan Forest Green */}
+      {/* Mobile Drawer Menu - Midnight Slate Navy Matching #000044 */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[88px] h-[calc(100dvh-60px)] md:h-[calc(100dvh-88px)] bg-[#14281D]/98 backdrop-blur-2xl border-t border-white/10 z-50 overflow-y-auto p-5 pb-[calc(6.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[88px] h-[calc(100dvh-60px)] md:h-[calc(100dvh-88px)] bg-[#000044]/98 backdrop-blur-2xl border-t border-white/10 z-50 overflow-y-auto p-5 pb-[calc(6.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
           <div className="space-y-2">
             <div className="pb-3 mb-2 border-b border-white/10 px-2 flex items-center justify-between">
               <Logo size="sm" />
@@ -1224,7 +1225,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   {/* Featured Quick Cards */}
                   <div>
                     <div className="text-[10px] uppercase font-black tracking-wider text-brand-orange mb-2 flex items-center gap-1.5">
-                      <Compass className="w-3 h-3" />
+                      <Sparkles className="w-3 h-3" />
                       <span>Featured Packages</span>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -1268,7 +1269,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             onClick={() => setMobileCategoryOpen(isCatOpen ? null : category.id)}
                             className="w-full flex items-center justify-between p-2.5 text-xs font-black text-slate-950 hover:text-brand-orange cursor-pointer"
                           >
-                            <span className="flex items-center gap-1.5 font-bold">
+                            <span className="flex items-center gap-1.5">
+                              <span className="text-brand-orange text-xs">
+                                {category.id === 'popular-uttarakhand' && '☀️'}
+                                {category.id === 'trekking-adventure' && '🥾'}
+                                {category.id === 'spiritual-char-dham' && '✨'}
+                                {category.id === 'kumaon' && '🧭'}
+                                {category.id === 'offbeat-uttarakhand' && '📍'}
+                                {category.id === 'wildlife-nature' && '🌲'}
+                              </span>
                               <span>{category.name}</span>
                             </span>
                             <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCatOpen ? 'rotate-180 text-brand-orange' : 'text-slate-500'}`} />
@@ -1506,7 +1515,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  <Mountain className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <Sparkles className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                   <span>Char Dham</span>
                 </Link>
                 <Link 
@@ -1518,7 +1527,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       : 'text-brand-orange/80 hover:text-brand-orange'
                   }`}
                 >
-                  <Compass className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <Sparkles className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                   <span>Custom Trip</span>
                 </Link>
                 <Link 
@@ -1543,9 +1552,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 setMobileMenuOpen(false);
                 if (onOpenBookingModal) onOpenBookingModal();
               }}
-              className="w-full forest-btn py-3.5 rounded-xl font-display font-semibold text-center text-white shadow-md cursor-pointer"
+              className="w-full orange-gradient-btn py-3.5 rounded-xl font-display font-semibold text-center text-white shadow-lg"
             >
-              Plan My Trip
+              Book Your Trip Now
             </button>
             <a
               href={`tel:${SITE_CONFIG.phone}`}

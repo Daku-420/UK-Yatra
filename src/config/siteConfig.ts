@@ -52,7 +52,7 @@ export const getWhatsAppUrl = (message?: string): string => {
 };
 
 export const getPackageWhatsAppUrl = (packageName: string, duration?: string): string => {
-  const msg = `Hi UK Yatra, I am interested in the ${packageName} itinerary. Please share more details.`;
+  const msg = `Hi UKYatra, I am interested in booking/getting a quote for the "${packageName}" (${duration || 'custom duration'}) package. Please share details and best availability.`;
   return getWhatsAppUrl(msg);
 };
 
