@@ -47,7 +47,7 @@ export const DESTINATION_NAV_CATEGORIES: DestinationNavCategory[] = [
     name: 'Hill Stations',
     slug: 'hill-stations',
     path: '/destinations/hill-stations',
-    description: "Discover scenic mountain towns and hill retreats.",
+    description: 'Scenic mountain towns & peaceful hill retreats',
     tag: 'Mountain Towns',
     icon: Mountain
   },
@@ -56,25 +56,34 @@ export const DESTINATION_NAV_CATEGORIES: DestinationNavCategory[] = [
     name: 'Spiritual Destinations',
     slug: 'spiritual-destinations',
     path: '/destinations/spiritual-destinations',
-    description: 'Explore sacred temples, pilgrimage sites and spiritual towns.',
+    description: 'Sacred temples, pilgrimage sites & holy shrines',
     tag: 'Holy Shrines',
     icon: Sparkles
   },
   {
-    id: 'lakes-waterfalls',
-    name: 'Lakes & Waterfalls',
-    slug: 'lakes-waterfalls',
-    path: '/destinations/lakes-waterfalls',
-    description: 'Explore serene mountain lakes and cascading waterfalls.',
-    tag: 'Glacial Waters',
-    icon: Waves
+    id: 'nature-escapes',
+    name: 'Nature Escapes',
+    slug: 'nature-escapes',
+    path: '/destinations/nature-escapes',
+    description: 'Alpine valleys, meadows & scenic landscapes',
+    tag: 'Valleys & Flora',
+    icon: Trees
+  },
+  {
+    id: 'wildlife-national-parks',
+    name: 'Wildlife & National Parks',
+    slug: 'wildlife-national-parks',
+    path: '/destinations/wildlife-national-parks',
+    description: 'Wildlife sanctuaries & Himalayan biodiversity',
+    tag: 'Tiger Reserves',
+    icon: Compass
   },
   {
     id: 'villages-hidden-gems',
     name: 'Villages & Hidden Gems',
     slug: 'villages-hidden-gems',
     path: '/destinations/villages-hidden-gems',
-    description: 'Discover peaceful Himalayan villages and offbeat destinations.',
+    description: 'Peaceful Himalayan hamlets & offbeat escapes',
     tag: 'Offbeat Culture',
     icon: MapPin
   }
@@ -528,11 +537,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   onMouseLeave={handleDestinationsLeave}
                 >
                   <div 
-                    className="w-[360px] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] p-2.5 text-slate-900 ring-1 ring-black/10"
+                    className="w-[380px] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] p-2.5 text-slate-900 ring-1 ring-black/10"
                     style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
                   >
                     {/* Header bar */}
-                    <div className="px-3 py-2 mb-1 flex items-center justify-between border-b border-[#E2D9CB]">
+                    <div className="px-3 py-2 mb-1.5 flex items-center justify-between border-b border-[#E2D9CB]">
                       <div className="flex items-center gap-1.5">
                         <MapPin className="w-3.5 h-3.5 text-brand-orange" />
                         <span className="text-[11px] font-black uppercase tracking-wider text-slate-900">
@@ -551,7 +560,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       </Link>
                     </div>
 
-                    {/* Vertical list of 4 destination categories */}
+                    {/* Vertical list of 5 destination categories */}
                     <div className="space-y-1">
                       {DESTINATION_NAV_CATEGORIES.map((cat) => {
                         const IconComponent = cat.icon;
@@ -582,24 +591,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           </Link>
                         );
                       })}
-                    </div>
-
-                    {/* Bottom strip */}
-                    <div className="pt-2 mt-2 border-t border-[#E2D9CB]">
-                      <Link
-                        to="/destinations"
-                        onClick={(e) => {
-                          handleNavigate('/destinations', e);
-                          setDestinationsDropdownOpen(false);
-                        }}
-                        className="w-full py-2.5 px-3 rounded-xl bg-[#F4EFE6] hover:bg-brand-orange text-slate-800 hover:text-white font-black text-xs flex items-center justify-between transition-all group/all cursor-pointer shadow-2xs"
-                      >
-                        <div className="flex items-center gap-2">
-                          <Compass className="w-4 h-4 text-brand-orange group-hover/all:text-white transition-colors" />
-                          <span>EXPLORE ALL 20+ DESTINATIONS</span>
-                        </div>
-                        <ArrowRight className="w-3.5 h-3.5 text-brand-orange group-hover/all:text-white group-hover/all:translate-x-0.5 transition-all" />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -1174,7 +1165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   <div className="flex items-center justify-between px-1 mb-1">
                     <span className="text-[10px] uppercase font-black tracking-wider text-brand-orange flex items-center gap-1">
                       <Compass className="w-3.5 h-3.5" />
-                      <span>4 Travel Categories</span>
+                      <span>5 Travel Categories</span>
                     </span>
                     <Link
                       to="/destinations"
@@ -1224,19 +1215,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       );
                     })}
                   </div>
-
-                  <Link
-                    to="/destinations"
-                    onClick={(e) => {
-                      handleNavigate('/destinations', e);
-                      setMobileDestinationsOpen(false);
-                      setMobileMenuOpen(false);
-                    }}
-                    className="w-full mt-2 py-2 px-3 rounded-lg bg-orange-50 hover:bg-brand-orange text-brand-orange hover:text-white border border-orange-200 hover:border-brand-orange font-black text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                  >
-                    <span>EXPLORE ALL 20+ DESTINATIONS</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
                 </div>
               )}
             </div>
