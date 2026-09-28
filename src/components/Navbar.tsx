@@ -31,6 +31,73 @@ import { Logo } from './Logo';
 import { SearchBar } from './SearchBar';
 import { FEATURED_PACKAGES, TOUR_CATEGORIES } from '../data/navigationTours';
 
+export interface DestinationNavCategory {
+  id: string;
+  name: string;
+  slug: string;
+  path: string;
+  description: string;
+  tag: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+export const DESTINATION_NAV_CATEGORIES: DestinationNavCategory[] = [
+  {
+    id: 'hill-stations',
+    name: 'Hill Stations',
+    slug: 'hill-stations',
+    path: '/destinations/hill-stations',
+    description: "Discover Uttarakhand's scenic mountain towns and hill retreats.",
+    tag: 'Mountain Towns',
+    icon: Mountain
+  },
+  {
+    id: 'spiritual-destinations',
+    name: 'Spiritual Destinations',
+    slug: 'spiritual-destinations',
+    path: '/destinations/spiritual-destinations',
+    description: 'Explore sacred temples, pilgrimage sites and spiritual towns.',
+    tag: 'Holy Shrines',
+    icon: Sparkles
+  },
+  {
+    id: 'nature-escapes',
+    name: 'Nature Escapes',
+    slug: 'nature-escapes',
+    path: '/destinations/nature-escapes',
+    description: 'Experience Himalayan valleys, meadows, forests and scenic landscapes.',
+    tag: 'Valleys & Flora',
+    icon: Trees
+  },
+  {
+    id: 'wildlife-national-parks',
+    name: 'Wildlife & National Parks',
+    slug: 'wildlife-national-parks',
+    path: '/destinations/wildlife-national-parks',
+    description: 'Discover wildlife sanctuaries, national parks and Himalayan biodiversity.',
+    tag: 'Tiger Reserves',
+    icon: Compass
+  },
+  {
+    id: 'lakes-waterfalls',
+    name: 'Lakes & Waterfalls',
+    slug: 'lakes-waterfalls',
+    path: '/destinations/lakes-waterfalls',
+    description: 'Explore serene mountain lakes, waterfalls and natural escapes.',
+    tag: 'Glacial Waters',
+    icon: Waves
+  },
+  {
+    id: 'villages-hidden-gems',
+    name: 'Villages & Hidden Gems',
+    slug: 'villages-hidden-gems',
+    path: '/destinations/villages-hidden-gems',
+    description: 'Discover peaceful Himalayan villages and offbeat destinations.',
+    tag: 'Offbeat Culture',
+    icon: MapPin
+  }
+];
+
 const OUTDOOR_NAV_ITEMS = [
   {
     id: 'river-rafting',
@@ -180,6 +247,8 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [destinationsDropdownOpen, setDestinationsDropdownOpen] = useState(false);
+  const [mobileDestinationsOpen, setMobileDestinationsOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<'outdoor' | 'educational' | null>(null);
   const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(true);
@@ -187,8 +256,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [packagesDropdownOpen, setPackagesDropdownOpen] = useState(false);
   const [mobilePackagesOpen, setMobilePackagesOpen] = useState(false);
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState<string | null>('popular-uttarakhand');
+  const destinationsDropdownRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const packagesDropdownRef = useRef<HTMLDivElement>(null);
+  const closeDestinationsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closeActivitiesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closePackagesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
@@ -199,6 +270,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       e.preventDefault();
       e.stopPropagation();
     }
+    if (closeDestinationsTimeoutRef.current) {
+      clearTimeout(closeDestinationsTimeoutRef.current);
+      closeDestinationsTimeoutRef.current = null;
+    }
     if (closeActivitiesTimeoutRef.current) {
       clearTimeout(closeActivitiesTimeoutRef.current);
       closeActivitiesTimeoutRef.current = null;
@@ -207,12 +282,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       clearTimeout(closePackagesTimeoutRef.current);
       closePackagesTimeoutRef.current = null;
     }
+    setDestinationsDropdownOpen(false);
     setActivitiesOpen(false);
     setActiveSubmenu(null);
     setPackagesDropdownOpen(false);
     setMobileMenuOpen(false);
     navigate(path);
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  };
+
+  const handleDestinationsEnter = () => {
+    if (closeDestinationsTimeoutRef.current) {
+      clearTimeout(closeDestinationsTimeoutRef.current);
+      closeDestinationsTimeoutRef.current = null;
+    }
+    setDestinationsDropdownOpen(true);
+  };
+
+  const handleDestinationsLeave = () => {
+    if (closeDestinationsTimeoutRef.current) {
+      clearTimeout(closeDestinationsTimeoutRef.current);
+    }
+    closeDestinationsTimeoutRef.current = setTimeout(() => {
+      setDestinationsDropdownOpen(false);
+    }, 250);
   };
 
   const handleActivitiesEnter = () => {
@@ -272,9 +365,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
   // Close menus on route change or unmount
   useEffect(() => {
+    if (closeDestinationsTimeoutRef.current) clearTimeout(closeDestinationsTimeoutRef.current);
     if (closeActivitiesTimeoutRef.current) clearTimeout(closeActivitiesTimeoutRef.current);
     if (closePackagesTimeoutRef.current) clearTimeout(closePackagesTimeoutRef.current);
     setMobileMenuOpen(false);
+    setDestinationsDropdownOpen(false);
     setActivitiesOpen(false);
     setActiveSubmenu(null);
     setPackagesDropdownOpen(false);
@@ -282,6 +377,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
   useEffect(() => {
     return () => {
+      if (closeDestinationsTimeoutRef.current) clearTimeout(closeDestinationsTimeoutRef.current);
       if (closeActivitiesTimeoutRef.current) clearTimeout(closeActivitiesTimeoutRef.current);
       if (closePackagesTimeoutRef.current) clearTimeout(closePackagesTimeoutRef.current);
     };
@@ -302,6 +398,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      if (destinationsDropdownRef.current && !destinationsDropdownRef.current.contains(event.target as Node)) {
+        setDestinationsDropdownOpen(false);
+      }
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActivitiesOpen(false);
       }
@@ -318,6 +417,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     if (path !== '/' && location.pathname.startsWith(path)) return true;
     return false;
   };
+
+  const isDestinationsActive = location.pathname.startsWith('/destinations');
 
   const isPackagesActive = 
     location.pathname.startsWith('/packages') || 
@@ -376,18 +477,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       </div>
 
       {/* Main Sticky Navigation - Consistent Dark Frosted Header Across All Pages */}
-      <nav className="glass-header py-3 shadow-xl border-b border-white/10 px-4 sm:px-6 lg:px-8 xl:px-10 transition-all duration-300">
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-3 xl:gap-6">
+      <nav className="glass-header py-3 shadow-xl border-b border-white/10 px-3 sm:px-5 lg:px-6 xl:px-8 transition-all duration-300">
+        <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-2 xl:gap-4">
           {/* Official UK Yatra Brand Logo */}
           <Link to="/" className="flex items-center group py-0.5 shrink-0 mr-1 xl:mr-2">
             <Logo size="md" className="group-hover:scale-[1.02] transition-transform drop-shadow-md" />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
             <Link 
               to="/" 
-              className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
+              className={`px-2.5 xl:px-3 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -395,6 +496,153 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             >
               Home
             </Link>
+
+            {/* Destinations Dropdown */}
+            <div 
+              ref={destinationsDropdownRef}
+              className="relative"
+              onMouseEnter={handleDestinationsEnter}
+              onMouseLeave={handleDestinationsLeave}
+            >
+              <div className="flex items-center">
+                <Link
+                  to="/destinations"
+                  onClick={(e) => {
+                    handleNavigate('/destinations', e);
+                    setDestinationsDropdownOpen(false);
+                  }}
+                  className={`pl-2.5 xl:pl-3 pr-1 py-2 text-sm font-semibold rounded-l-xl whitespace-nowrap transition-colors cursor-pointer ${
+                    isDestinationsActive || destinationsDropdownOpen
+                      ? 'text-brand-orange' 
+                      : 'text-white hover:text-brand-orange'
+                  }`}
+                >
+                  Destinations
+                </Link>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setDestinationsDropdownOpen(!destinationsDropdownOpen);
+                  }}
+                  className={`pr-2 xl:pr-2.5 pl-0.5 py-2 text-sm font-semibold rounded-r-xl transition-colors flex items-center cursor-pointer ${
+                    isDestinationsActive || destinationsDropdownOpen
+                      ? 'text-brand-orange' 
+                      : 'text-white hover:text-brand-orange'
+                  }`}
+                  aria-expanded={destinationsDropdownOpen}
+                  aria-label="Toggle destinations menu"
+                  aria-haspopup="true"
+                >
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${destinationsDropdownOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
+                </button>
+              </div>
+
+              {/* Dropdown Menu Panel with seamless hover bridge */}
+              {destinationsDropdownOpen && (
+                <div 
+                  className="absolute top-full -left-6 xl:left-0 pt-2 z-50 animate-in fade-in duration-150"
+                  onMouseEnter={handleDestinationsEnter}
+                  onMouseLeave={handleDestinationsLeave}
+                >
+                  <div 
+                    className="w-[840px] xl:w-[880px] max-w-[calc(100vw-2.5rem)] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] p-5 text-slate-900 ring-1 ring-black/10"
+                    style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
+                  >
+                    {/* Header bar */}
+                    <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E2D9CB]">
+                      <div className="flex items-center gap-2">
+                        <span className="p-1.5 rounded-lg bg-orange-100 text-brand-orange border border-orange-200">
+                          <MapPin className="w-4 h-4" />
+                        </span>
+                        <div>
+                          <span className="text-xs uppercase font-black tracking-wider text-slate-950 block">
+                            Explore Uttarakhand Destinations
+                          </span>
+                          <span className="text-[11px] text-slate-500 font-medium">
+                            Choose by travel vibe, mountain scenery & sacred circuits
+                          </span>
+                        </div>
+                      </div>
+                      <Link
+                        to="/destinations"
+                        onClick={(e) => {
+                          handleNavigate('/destinations', e);
+                          setDestinationsDropdownOpen(false);
+                        }}
+                        className="px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-brand-orange text-brand-orange hover:text-white border border-orange-200 hover:border-brand-orange font-black text-xs flex items-center gap-1.5 transition-all shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
+                      >
+                        <span>View All Destinations</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+
+                    {/* 6 Category Cards in a clean 3-column x 2-row layout */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                      {DESTINATION_NAV_CATEGORIES.map((cat) => {
+                        const IconComponent = cat.icon;
+                        return (
+                          <Link
+                            key={cat.slug}
+                            to={cat.path}
+                            onClick={(e) => {
+                              handleNavigate(cat.path, e);
+                              setDestinationsDropdownOpen(false);
+                            }}
+                            className="group flex flex-col justify-between p-3.5 rounded-2xl bg-white hover:bg-orange-50/60 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left cursor-pointer"
+                          >
+                            <div>
+                              <div className="flex items-center justify-between gap-2 mb-2">
+                                <div className="flex items-center gap-2.5 min-w-0">
+                                  <span className="w-8 h-8 rounded-xl bg-[#F8F5EE] group-hover:bg-orange-100 text-brand-orange border border-[#E2D9CB] group-hover:border-orange-300 flex items-center justify-center shrink-0 transition-colors">
+                                    <IconComponent className="w-4 h-4" />
+                                  </span>
+                                  <span className="font-extrabold text-[13.5px] text-slate-900 group-hover:text-brand-orange transition-colors truncate">
+                                    {cat.name}
+                                  </span>
+                                </div>
+                                <span className="text-[9.5px] font-bold px-2 py-0.5 rounded-full bg-[#F4EFE6] text-slate-700 border border-[#E2D9CB] shrink-0">
+                                  {cat.tag}
+                                </span>
+                              </div>
+                              <p className="text-[11.5px] text-slate-600 line-clamp-2 leading-relaxed">
+                                {cat.description}
+                              </p>
+                            </div>
+
+                            <div className="flex items-center justify-between pt-2.5 mt-2.5 border-t border-slate-100 text-xs font-bold text-brand-orange group-hover:translate-x-0.5 transition-transform">
+                              <span className="text-[11px] font-semibold text-slate-500 group-hover:text-slate-700">Explore Guides</span>
+                              <span className="flex items-center gap-1 text-[11.5px]">
+                                Discover <ChevronRight className="w-3.5 h-3.5" />
+                              </span>
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+
+                    {/* Bottom strip */}
+                    <div className="pt-3 mt-3.5 border-t border-[#E2D9CB] flex items-center justify-between text-xs bg-[#F4EFE6] -mx-5 -mb-5 px-5 py-3 rounded-b-3xl">
+                      <div className="text-slate-800 text-xs font-bold flex items-center gap-2">
+                        <Compass className="w-4 h-4 text-brand-orange shrink-0" />
+                        <span>Curated by local Himalayan travel specialists</span>
+                      </div>
+                      <Link
+                        to="/destinations"
+                        onClick={(e) => {
+                          handleNavigate('/destinations', e);
+                          setDestinationsDropdownOpen(false);
+                        }}
+                        className="text-xs font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center gap-1 cursor-pointer"
+                      >
+                        <span>EXPLORE ALL 20+ DESTINATIONS</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Tour Packages Dropdown */}
             <div 
@@ -943,6 +1191,94 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <Home className="w-5 h-5 text-brand-orange shrink-0" />
               <span>Home</span>
             </Link>
+
+            {/* Destinations Mobile Accordion */}
+            <div className="rounded-xl bg-white/5 border border-white/10 overflow-hidden my-1">
+              <button
+                type="button"
+                onClick={() => setMobileDestinationsOpen(!mobileDestinationsOpen)}
+                className="w-full flex items-center justify-between px-4 py-3 text-base font-semibold text-white hover:text-brand-orange transition-colors cursor-pointer"
+                aria-expanded={mobileDestinationsOpen}
+              >
+                <span className="flex items-center gap-2.5">
+                  <MapPin className="w-5 h-5 text-brand-orange shrink-0" />
+                  <span>Destinations</span>
+                </span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileDestinationsOpen ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+              </button>
+
+              {mobileDestinationsOpen && (
+                <div className="px-3 pb-3 space-y-2.5 bg-[#FFFDF9] border-t border-[#E2D9CB] pt-3 text-slate-900 rounded-b-xl">
+                  <div className="flex items-center justify-between px-1 mb-1">
+                    <span className="text-[10px] uppercase font-black tracking-wider text-brand-orange flex items-center gap-1">
+                      <Compass className="w-3.5 h-3.5" />
+                      <span>6 Travel Categories</span>
+                    </span>
+                    <Link
+                      to="/destinations"
+                      onClick={(e) => {
+                        handleNavigate('/destinations', e);
+                        setMobileDestinationsOpen(false);
+                        setMobileMenuOpen(false);
+                      }}
+                      className="text-[11px] font-black text-brand-orange hover:underline flex items-center gap-0.5"
+                    >
+                      <span>View All</span>
+                      <ChevronRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {DESTINATION_NAV_CATEGORIES.map((cat) => {
+                      const IconComponent = cat.icon;
+                      return (
+                        <Link
+                          key={cat.slug}
+                          to={cat.path}
+                          onClick={(e) => {
+                            handleNavigate(cat.path, e);
+                            setMobileDestinationsOpen(false);
+                            setMobileMenuOpen(false);
+                          }}
+                          className="flex items-start gap-2.5 p-2.5 rounded-xl bg-white hover:bg-orange-50 border border-[#DDD5C7] text-left group shadow-xs transition-colors"
+                        >
+                          <span className="w-8 h-8 rounded-lg bg-[#F8F5EE] group-hover:bg-orange-100 text-brand-orange border border-[#E2D9CB] flex items-center justify-center shrink-0 mt-0.5">
+                            <IconComponent className="w-4 h-4" />
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center justify-between gap-1">
+                              <span className="text-xs font-black text-slate-950 group-hover:text-brand-orange truncate">
+                                {cat.name}
+                              </span>
+                              <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-[#F4EFE6] text-slate-600 shrink-0">
+                                {cat.tag}
+                              </span>
+                            </div>
+                            <p className="text-[10.5px] text-slate-500 line-clamp-1 mt-0.5">
+                              {cat.description}
+                            </p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+
+                  <Link
+                    to="/destinations"
+                    onClick={(e) => {
+                      handleNavigate('/destinations', e);
+                      setMobileDestinationsOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full mt-2 py-2 px-3 rounded-lg bg-orange-50 hover:bg-brand-orange text-brand-orange hover:text-white border border-orange-200 hover:border-brand-orange font-black text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                  >
+                    <span>EXPLORE ALL 20+ DESTINATIONS</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              )}
+            </div>
+
             {/* Tour Packages Mobile Accordion */}
             <div className="rounded-xl bg-white/5 border border-white/10 overflow-hidden my-1">
               <button

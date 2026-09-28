@@ -86,8 +86,14 @@ function AppInner() {
         <Routes>
           <Route path="/" element={<HomePage onOpenBookingModal={handleOpenBookingModal} />} />
           
-          {/* Destinations */}
+          {/* Destinations Hub & 6 SEO Category Routes */}
           <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/destinations/hill-stations" element={<DestinationsPage initialCategorySlug="hill-stations" />} />
+          <Route path="/destinations/spiritual-destinations" element={<DestinationsPage initialCategorySlug="spiritual-destinations" />} />
+          <Route path="/destinations/nature-escapes" element={<DestinationsPage initialCategorySlug="nature-escapes" />} />
+          <Route path="/destinations/wildlife-national-parks" element={<DestinationsPage initialCategorySlug="wildlife-national-parks" />} />
+          <Route path="/destinations/lakes-waterfalls" element={<DestinationsPage initialCategorySlug="lakes-waterfalls" />} />
+          <Route path="/destinations/villages-hidden-gems" element={<DestinationsPage initialCategorySlug="villages-hidden-gems" />} />
           <Route path="/destinations/:id" element={<DestinationDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           
           {/* Outdoor Activities in Uttarakhand */}
