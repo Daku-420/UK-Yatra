@@ -47,7 +47,7 @@ export const DESTINATION_NAV_CATEGORIES: DestinationNavCategory[] = [
     name: 'Hill Stations',
     slug: 'hill-stations',
     path: '/destinations/hill-stations',
-    description: "Discover Uttarakhand's scenic mountain towns and hill retreats.",
+    description: "Discover scenic mountain towns and hill retreats.",
     tag: 'Mountain Towns',
     icon: Mountain
   },
@@ -61,29 +61,11 @@ export const DESTINATION_NAV_CATEGORIES: DestinationNavCategory[] = [
     icon: Sparkles
   },
   {
-    id: 'nature-escapes',
-    name: 'Nature Escapes',
-    slug: 'nature-escapes',
-    path: '/destinations/nature-escapes',
-    description: 'Experience Himalayan valleys, meadows, forests and scenic landscapes.',
-    tag: 'Valleys & Flora',
-    icon: Trees
-  },
-  {
-    id: 'wildlife-national-parks',
-    name: 'Wildlife & National Parks',
-    slug: 'wildlife-national-parks',
-    path: '/destinations/wildlife-national-parks',
-    description: 'Discover wildlife sanctuaries, national parks and Himalayan biodiversity.',
-    tag: 'Tiger Reserves',
-    icon: Compass
-  },
-  {
     id: 'lakes-waterfalls',
     name: 'Lakes & Waterfalls',
     slug: 'lakes-waterfalls',
     path: '/destinations/lakes-waterfalls',
-    description: 'Explore serene mountain lakes, waterfalls and natural escapes.',
+    description: 'Explore serene mountain lakes and cascading waterfalls.',
     tag: 'Glacial Waters',
     icon: Waves
   },
@@ -541,28 +523,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               {/* Dropdown Menu Panel with seamless hover bridge */}
               {destinationsDropdownOpen && (
                 <div 
-                  className="absolute top-full -left-6 xl:left-0 pt-2 z-50 animate-in fade-in duration-150"
+                  className="absolute top-full left-0 pt-2 z-50 animate-in fade-in duration-150"
                   onMouseEnter={handleDestinationsEnter}
                   onMouseLeave={handleDestinationsLeave}
                 >
                   <div 
-                    className="w-[840px] xl:w-[880px] max-w-[calc(100vw-2.5rem)] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] p-5 text-slate-900 ring-1 ring-black/10"
+                    className="w-[360px] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] p-2.5 text-slate-900 ring-1 ring-black/10"
                     style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
                   >
                     {/* Header bar */}
-                    <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E2D9CB]">
-                      <div className="flex items-center gap-2">
-                        <span className="p-1.5 rounded-lg bg-orange-100 text-brand-orange border border-orange-200">
-                          <MapPin className="w-4 h-4" />
+                    <div className="px-3 py-2 mb-1 flex items-center justify-between border-b border-[#E2D9CB]">
+                      <div className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-brand-orange" />
+                        <span className="text-[11px] font-black uppercase tracking-wider text-slate-900">
+                          Uttarakhand Destinations
                         </span>
-                        <div>
-                          <span className="text-xs uppercase font-black tracking-wider text-slate-950 block">
-                            Explore Uttarakhand Destinations
-                          </span>
-                          <span className="text-[11px] text-slate-500 font-medium">
-                            Choose by travel vibe, mountain scenery & sacred circuits
-                          </span>
-                        </div>
                       </div>
                       <Link
                         to="/destinations"
@@ -570,15 +545,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           handleNavigate('/destinations', e);
                           setDestinationsDropdownOpen(false);
                         }}
-                        className="px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-brand-orange text-brand-orange hover:text-white border border-orange-200 hover:border-brand-orange font-black text-xs flex items-center gap-1.5 transition-all shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
+                        className="text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors cursor-pointer"
                       >
-                        <span>View All Destinations</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
+                        View All
                       </Link>
                     </div>
 
-                    {/* 6 Category Cards in a clean 3-column x 2-row layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {/* Vertical list of 4 destination categories */}
+                    <div className="space-y-1">
                       {DESTINATION_NAV_CATEGORIES.map((cat) => {
                         const IconComponent = cat.icon;
                         return (
@@ -589,32 +563,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               handleNavigate(cat.path, e);
                               setDestinationsDropdownOpen(false);
                             }}
-                            className="group flex flex-col justify-between p-3.5 rounded-2xl bg-white hover:bg-orange-50/60 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left cursor-pointer"
+                            className="group flex items-start gap-3 p-2.5 rounded-xl bg-white hover:bg-orange-50/80 border border-[#EBE3D6] hover:border-brand-orange/80 shadow-2xs hover:shadow-xs transition-all text-left cursor-pointer"
                           >
-                            <div>
-                              <div className="flex items-center justify-between gap-2 mb-2">
-                                <div className="flex items-center gap-2.5 min-w-0">
-                                  <span className="w-8 h-8 rounded-xl bg-[#F8F5EE] group-hover:bg-orange-100 text-brand-orange border border-[#E2D9CB] group-hover:border-orange-300 flex items-center justify-center shrink-0 transition-colors">
-                                    <IconComponent className="w-4 h-4" />
-                                  </span>
-                                  <span className="font-extrabold text-[13.5px] text-slate-900 group-hover:text-brand-orange transition-colors truncate">
-                                    {cat.name}
-                                  </span>
-                                </div>
-                                <span className="text-[9.5px] font-bold px-2 py-0.5 rounded-full bg-[#F4EFE6] text-slate-700 border border-[#E2D9CB] shrink-0">
-                                  {cat.tag}
+                            <span className="w-9 h-9 rounded-xl bg-[#F8F5EE] group-hover:bg-brand-orange text-brand-orange group-hover:text-white border border-[#E2D9CB] group-hover:border-brand-orange flex items-center justify-center shrink-0 mt-0.5 transition-colors shadow-2xs">
+                              <IconComponent className="w-4 h-4" />
+                            </span>
+                            <div className="min-w-0 flex-1">
+                              <div className="flex items-center justify-between gap-1">
+                                <span className="font-extrabold text-[13.5px] text-slate-900 group-hover:text-brand-orange transition-colors">
+                                  {cat.name}
                                 </span>
+                                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brand-orange group-hover:translate-x-0.5 transition-all shrink-0" />
                               </div>
-                              <p className="text-[11.5px] text-slate-600 line-clamp-2 leading-relaxed">
+                              <p className="text-[11px] text-slate-600 line-clamp-1 mt-0.5">
                                 {cat.description}
                               </p>
-                            </div>
-
-                            <div className="flex items-center justify-between pt-2.5 mt-2.5 border-t border-slate-100 text-xs font-bold text-brand-orange group-hover:translate-x-0.5 transition-transform">
-                              <span className="text-[11px] font-semibold text-slate-500 group-hover:text-slate-700">Explore Guides</span>
-                              <span className="flex items-center gap-1 text-[11.5px]">
-                                Discover <ChevronRight className="w-3.5 h-3.5" />
-                              </span>
                             </div>
                           </Link>
                         );
@@ -622,21 +585,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </div>
 
                     {/* Bottom strip */}
-                    <div className="pt-3 mt-3.5 border-t border-[#E2D9CB] flex items-center justify-between text-xs bg-[#F4EFE6] -mx-5 -mb-5 px-5 py-3 rounded-b-3xl">
-                      <div className="text-slate-800 text-xs font-bold flex items-center gap-2">
-                        <Compass className="w-4 h-4 text-brand-orange shrink-0" />
-                        <span>Curated by local Himalayan travel specialists</span>
-                      </div>
+                    <div className="pt-2 mt-2 border-t border-[#E2D9CB]">
                       <Link
                         to="/destinations"
                         onClick={(e) => {
                           handleNavigate('/destinations', e);
                           setDestinationsDropdownOpen(false);
                         }}
-                        className="text-xs font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center gap-1 cursor-pointer"
+                        className="w-full py-2.5 px-3 rounded-xl bg-[#F4EFE6] hover:bg-brand-orange text-slate-800 hover:text-white font-black text-xs flex items-center justify-between transition-all group/all cursor-pointer shadow-2xs"
                       >
-                        <span>EXPLORE ALL 20+ DESTINATIONS</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
+                        <div className="flex items-center gap-2">
+                          <Compass className="w-4 h-4 text-brand-orange group-hover/all:text-white transition-colors" />
+                          <span>EXPLORE ALL 20+ DESTINATIONS</span>
+                        </div>
+                        <ArrowRight className="w-3.5 h-3.5 text-brand-orange group-hover/all:text-white group-hover/all:translate-x-0.5 transition-all" />
                       </Link>
                     </div>
                   </div>
@@ -1212,7 +1174,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   <div className="flex items-center justify-between px-1 mb-1">
                     <span className="text-[10px] uppercase font-black tracking-wider text-brand-orange flex items-center gap-1">
                       <Compass className="w-3.5 h-3.5" />
-                      <span>6 Travel Categories</span>
+                      <span>4 Travel Categories</span>
                     </span>
                     <Link
                       to="/destinations"
@@ -1228,7 +1190,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </Link>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex flex-col space-y-1.5">
                     {DESTINATION_NAV_CATEGORIES.map((cat) => {
                       const IconComponent = cat.icon;
                       return (

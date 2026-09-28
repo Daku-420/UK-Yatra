@@ -78,8 +78,6 @@ const CATEGORY_KEYS = [
   'all',
   'hill-stations',
   'spiritual-destinations',
-  'nature-escapes',
-  'wildlife-national-parks',
   'lakes-waterfalls',
   'villages-hidden-gems'
 ];
