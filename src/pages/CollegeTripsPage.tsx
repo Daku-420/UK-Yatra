@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   GraduationCap, 
   Sparkles, 
@@ -238,6 +239,13 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
                         </div>
                       ))}
                     </div>
+                    <Link
+                      to={`/educational-programmes/${trip.id === 'rishikesh-rafting-camping' ? 'rishikesh-college-rafting' : trip.id === 'kedarkantha-winter-snow' ? 'kedarkantha-college-summit' : 'rishikesh-college-rafting'}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:text-orange-700 transition-colors"
+                    >
+                      <span>View Full Expedition & Day Schedule</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
 

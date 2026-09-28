@@ -24,6 +24,7 @@ import { CollegeTripsPage } from './pages/CollegeTripsPage';
 import { SchoolTripsPage } from './pages/SchoolTripsPage';
 import { SummerLearningPage } from './pages/SummerLearningPage';
 import { EducationalProgrammesPage } from './pages/EducationalProgrammesPage';
+import { EducationalProgrammeDetailPage } from './pages/EducationalProgrammeDetailPage';
 import { PackagesPage } from './pages/PackagesPage';
 import { PackageDetailPage } from './pages/PackageDetailPage';
 import { CustomizedTripPage } from './pages/CustomizedTripPage';
@@ -99,8 +100,11 @@ function AppInner() {
           
           {/* Student, School & Educational Programmes */}
           <Route path="/educational-programmes" element={<EducationalProgrammesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/educational-programmes/:id" element={<EducationalProgrammeDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           <Route path="/educational-programs" element={<EducationalProgrammesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/educational-programs/:id" element={<EducationalProgrammeDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           <Route path="/activities/educational-programmes" element={<EducationalProgrammesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/activities/educational-programmes/:id" element={<EducationalProgrammeDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           <Route path="/college-trips" element={<CollegeTripsPage onOpenBookingModal={handleOpenBookingModal} />} />
           <Route path="/activities/college-trips" element={<CollegeTripsPage onOpenBookingModal={handleOpenBookingModal} />} />
           <Route path="/school-trips" element={<SchoolTripsPage onOpenBookingModal={handleOpenBookingModal} />} />

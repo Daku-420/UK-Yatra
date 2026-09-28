@@ -382,15 +382,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     <span className="text-brand-orange font-bold text-sm ml-2 group-hover:translate-x-1 transition-transform shrink-0">→</span>
                   </Link>
 
-                  <div className="px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-slate-400 border-b border-white/10 mb-1 flex items-center justify-between">
-                    <Link
-                      to="/educational-programmes"
-                      onClick={() => setActivitiesOpen(false)}
-                      className="flex items-center gap-1.5 text-white/90 hover:text-brand-orange transition-colors"
-                    >
-                      <GraduationCap className="w-3.5 h-3.5 text-brand-orange" />
-                      <span>Educational Programmes</span>
-                    </Link>
+                  {/* Educational Programmes - Featured Dropdown Item (Just like Outdoor Activities) */}
+                  <Link
+                    to="/educational-programmes"
+                    onClick={() => setActivitiesOpen(false)}
+                    className="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-blue-600/20 to-indigo-600/10 hover:from-blue-600/30 hover:to-indigo-600/20 border border-indigo-400/40 text-white transition-all group mb-2 shadow-sm"
+                  >
+                    <div className="flex items-start gap-2.5 min-w-0">
+                      <div className="p-2 rounded-lg bg-indigo-600 text-white shadow-md shadow-indigo-600/30 group-hover:scale-105 transition-transform shrink-0">
+                        <GraduationCap className="w-4 h-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
+                          <span>Educational Programmes</span>
+                          <span className="text-[9px] bg-emerald-500 text-white font-extrabold px-1.5 py-0.2 rounded-sm shadow-xs">1:8 Safe</span>
+                        </div>
+                        <p className="text-[11px] text-slate-300 leading-snug mt-0.5 truncate">
+                          School excursions, college treks & summer camps
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-brand-orange font-bold text-sm ml-2 group-hover:translate-x-1 transition-transform shrink-0">→</span>
+                  </Link>
+
+                  <div className="px-3 py-1 text-[10px] uppercase font-bold tracking-wider text-slate-400 border-b border-white/10 mb-1 flex items-center justify-between">
+                    <span>Programmes & Field Trips</span>
                     <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">Popular</span>
                   </div>
 
@@ -733,15 +749,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     <span className="text-brand-orange font-bold text-xs">→</span>
                   </Link>
 
-                  <div className="pt-2 pb-1 px-3 border-t border-white/10 flex items-center justify-between text-[10px] uppercase font-bold tracking-wider text-slate-400">
-                    <Link
-                      to="/educational-programmes"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="hover:text-brand-orange transition-colors flex items-center gap-1.5"
-                    >
-                      <GraduationCap className="w-3.5 h-3.5 text-brand-orange" />
+                  <Link 
+                    to="/educational-programmes" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                      isActive('/educational-programme') || isActive('/educational-program') 
+                        ? 'text-brand-orange bg-brand-orange/20 border border-brand-orange/40 shadow-xs' 
+                        : 'text-white hover:text-brand-orange bg-white/10 border border-indigo-400/30'
+                    }`}
+                  >
+                    <span className="flex items-center gap-2.5">
+                      <GraduationCap className="w-4 h-4 text-brand-orange" />
                       <span>Educational Programmes</span>
-                    </Link>
+                    </span>
+                    <span className="text-brand-orange font-bold text-xs">→</span>
+                  </Link>
+
+                  <div className="pt-2 pb-1 px-3 border-t border-white/10 flex items-center justify-between text-[10px] uppercase font-bold tracking-wider text-slate-400">
+                    <span>Programmes & Field Trips</span>
                     <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">Popular</span>
                   </div>
 

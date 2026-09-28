@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   GraduationCap, 
@@ -13,11 +13,16 @@ import {
   Compass, 
   MapPin, 
   BookOpen, 
+  Clock,
+  Search,
+  SlidersHorizontal,
   Send,
   HelpCircle,
   FileCheck,
-  HeartHandshake
+  HeartHandshake,
+  Filter
 } from 'lucide-react';
+import { EDUCATIONAL_PROGRAMMES, EDUCATIONAL_TRACKS, EducationalProgramme } from '../data/educationalProgrammes';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -37,13 +42,19 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
     }
     metaDesc.setAttribute(
       'content',
-      'Explore Uttarakhand educational programmes: curriculum-aligned school excursions, college adventure treks, and summer learning camps with 1:8 safety ratio and certified instructors.'
+      'Discover Uttarakhand educational programmes: curriculum-aligned school excursions, college adventure treks, and summer learning camps with 1:8 safety ratio and certified instructors.'
     );
 
     return () => {
       document.title = 'UK Yatra | Uttarakhand Travel & Tour Packages';
     };
   }, []);
+
+  // Filter States
+  const [selectedTrack, setSelectedTrack] = useState<string>('All');
+  const [selectedDomain, setSelectedDomain] = useState<string>('All');
+  const [selectedDuration, setSelectedDuration] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   const [formData, setFormData] = useState({
     institutionName: '',
@@ -64,89 +75,62 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
     window.open(getWhatsAppUrl(whatsappMsg), '_blank');
   };
 
-  const programmes = [
-    {
-      id: 'school-trips',
-      title: 'School Trips & Field Excursions',
-      subtitle: 'Curriculum-Aligned STEM, Ecology & Heritage Tours',
-      badge: '1:8 Safety Ratio',
-      badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-      icon: School,
-      iconBg: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-      link: '/school-trips',
-      image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
-      description: 'Carefully supervised experiential learning tours designed for Classes 5 to 12. Covers environmental studies at FRI Dehradun, earth sciences at Wadia Geology, biodiversity in Jim Corbett, and heritage walks.',
-      highlights: [
-        'Forest Research Institute (FRI) & Robber’s Cave field studies',
-        'Wadia Institute of Himalayan Geology earth science tour',
-        'Jim Corbett wildlife safari & riverbed conservation workshop',
-        'Tehri Dam engineering & clean renewable energy module',
-        'Strict 1:8 teacher-to-student chaperone ratio & 24/7 security'
-      ],
-      ctaText: 'Explore School Trips'
-    },
-    {
-      id: 'college-trips',
-      title: 'College Trips & Adventure Treks',
-      subtitle: 'Student Treks, White-Water Rafting & Campus Discounts',
-      badge: 'Hot Group Deals',
-      badgeColor: 'bg-orange-500/20 text-brand-orange border-orange-500/30',
-      icon: GraduationCap,
-      iconBg: 'bg-orange-500/20 text-brand-orange border-orange-500/30',
-      link: '/college-trips',
-      image: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80',
-      description: 'High-energy, unforgettable youth expeditions crafted for universities and student societies. From snow treks to Kedarkantha and Chopta to thrilling white-water rafting in Rishikesh with group savings.',
-      highlights: [
-        'Kedarkantha (12,500 ft) & Tungnath-Chandrashila summit treks',
-        'Rishikesh 16km/26km Grade III-IV river rafting & cliff jumping',
-        'Riverside camping with bonfire, music & stargazing sessions',
-        'Industrial & geology study visits with certification',
-        'Special bulk student discounts & customized college batch dates'
-      ],
-      ctaText: 'Explore College Trips'
-    },
-    {
-      id: 'summer-learning',
-      title: 'Summer Learning Programmes',
-      subtitle: 'Wilderness Survival, Astronomy & Leadership Bootcamps',
-      badge: 'Summer Camps',
-      badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-      icon: SunMedium,
-      iconBg: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
-      link: '/summer-learning-programmes',
-      image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80',
-      description: 'Transformative outdoor bootcamps designed to build life skills, self-reliance, and scientific curiosity. From friction fire making and alpine shelters to dark-sky astrophotography under crystal skies.',
-      highlights: [
-        'Wilderness survival, compass navigation & alpine bushcraft',
-        'Benital Dark Sky stargazing with high-powered telescopes',
-        'Himalayan flora & medicinal herbs identification workshops',
-        'Confidence-building ropes course, rappelling & team challenges',
-        'Official certificates of completion & skill badges'
-      ],
-      ctaText: 'Explore Summer Programmes'
-    }
-  ];
+  // Filtered Programmes Logic
+  const filteredProgrammes = useMemo(() => {
+    return EDUCATIONAL_PROGRAMMES.filter((p) => {
+      // Track filter
+      if (selectedTrack !== 'All' && p.track !== selectedTrack) {
+        return false;
+      }
+      // Domain filter
+      if (selectedDomain !== 'All' && p.domain !== selectedDomain) {
+        return false;
+      }
+      // Duration filter
+      if (selectedDuration === '2–3 Days' && p.durationDays > 3) {
+        return false;
+      }
+      if (selectedDuration === '4–5 Days' && (p.durationDays < 4 || p.durationDays > 5)) {
+        return false;
+      }
+      if (selectedDuration === '6+ Days' && p.durationDays < 6) {
+        return false;
+      }
+      // Search query
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        const matchesTitle = p.title.toLowerCase().includes(q);
+        const matchesLocation = p.location.toLowerCase().includes(q);
+        const matchesDesc = p.shortDesc.toLowerCase().includes(q);
+        const matchesDomain = p.domain.toLowerCase().includes(q);
+        if (!matchesTitle && !matchesLocation && !matchesDesc && !matchesDomain) {
+          return false;
+        }
+      }
+      return true;
+    });
+  }, [selectedTrack, selectedDomain, selectedDuration, searchQuery]);
 
   const safetyFeatures = [
     {
       icon: ShieldCheck,
-      title: '1:8 Chaperone & Instructor Ratio',
-      description: 'Every 8 students are accompanied by dedicated certified instructors and trained camp coordinators.'
+      title: '1:8 Chaperone & Staff Ratio',
+      description: 'Every 8 students are escorted by dedicated certified instructors and trained camp coordinators.'
     },
     {
       icon: Award,
-      title: 'Certified Mountain & First Aid Staff',
-      description: 'Guides trained at NIM (Nehru Institute of Mountaineering) and certified in Wilderness First Aid & CPR.'
+      title: 'NIM Certified Mountain Guides',
+      description: 'Instructors trained at Nehru Institute of Mountaineering with active Wilderness First Aid & CPR certifications.'
     },
     {
       icon: FileCheck,
-      title: 'Verified Transport & Safe Stays',
-      description: 'GPS-enabled sanitized vehicles with hill-permit certified drivers and vetted resorts with separate boy/girl wings.'
+      title: 'Board Compliance & NOC Dossier',
+      description: 'Complete documentation for CBSE/ICSE/IB schools: Risk assessment, sanitization fitness, and driver police verifications.'
     },
     {
       icon: HeartHandshake,
-      title: 'Curriculum & NEP 2020 Aligned',
-      description: 'Workshops tailored to school CBSE/ICSE/IB curricula and UGC collegiate learning outcomes.'
+      title: 'Hygienic Pure Veg Dining',
+      description: '100% sanitized kitchen dining with nutritionist-approved student-friendly meals and mineral water.'
     }
   ];
 
@@ -194,11 +178,11 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
 
           <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
-              href="#programmes-grid"
+              href="#programmes-directory"
               className="orange-gradient-btn px-6 sm:px-8 py-3.5 rounded-xl font-display font-bold text-sm text-white shadow-xl shadow-brand-orange/25 flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
               <GraduationCap className="w-4 h-4" />
-              <span>Explore All Tracks</span>
+              <span>Browse All Programmes ({EDUCATIONAL_PROGRAMMES.length})</span>
             </a>
 
             <a
@@ -208,7 +192,7 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
               className="px-6 sm:px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 font-display font-semibold text-sm transition-all flex items-center gap-2"
             >
               <WhatsAppIcon className="w-4 h-4" />
-              <span>Talk to Education Head</span>
+              <span>Talk to Education Coordinator</span>
             </a>
           </div>
 
@@ -230,91 +214,286 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
         </div>
       </section>
 
-      {/* 3 Core Educational Tracks */}
-      <section id="programmes-grid" className="mb-20 scroll-mt-28">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+      {/* 3 Core Educational Tracks Overview Cards */}
+      <section className="mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange uppercase tracking-wider mb-2">
             <Compass className="w-4 h-4" />
-            <span>Select Your Track</span>
+            <span>Structured Pathways</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight">
-            Curated Educational Pathways
+            Choose Your Educational Track
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-2">
-            Choose from comprehensive school excursions, exciting college adventure treks, or immersive summer camps.
+            Click on a pathway below to view focused guides or scroll down to explore all individual programmes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {programmes.map((prog) => {
-            const Icon = prog.icon;
-            return (
-              <div 
-                key={prog.id}
-                className="group flex flex-col justify-between rounded-3xl bg-white border border-[#E2DDD5] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden text-left"
-              >
-                <div>
-                  {/* Image header */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
-                    <img 
-                      src={prog.image} 
-                      alt={prog.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
-                    
-                    <span className={`absolute top-3 right-3 text-[11px] font-bold px-2.5 py-1 rounded-full border backdrop-blur-md ${prog.badgeColor}`}>
-                      {prog.badge}
-                    </span>
-
-                    <div className="absolute bottom-3 left-4 right-4 text-white">
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className={`p-1.5 rounded-lg border backdrop-blur-md ${prog.iconBg}`}>
-                          <Icon className="w-4 h-4" />
-                        </div>
-                        <span className="text-xs font-bold text-slate-200">{prog.subtitle}</span>
-                      </div>
-                      <h3 className="text-xl font-bold font-display text-white group-hover:text-brand-orange transition-colors">
-                        {prog.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  {/* Body */}
-                  <div className="p-6 space-y-4">
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      {prog.description}
-                    </p>
-
-                    <div className="space-y-2 pt-2 border-t border-slate-100">
-                      <span className="text-[11px] uppercase font-bold text-slate-400 tracking-wider block">
-                        Core Learning Modules
-                      </span>
-                      {prog.highlights.map((h, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs text-slate-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                          <span>{h}</span>
-                        </div>
-                      ))}
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {EDUCATIONAL_TRACKS.map((track) => (
+            <div
+              key={track.id}
+              className="group flex flex-col justify-between rounded-3xl bg-white border border-[#E2DDD5] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden text-left"
+            >
+              <div>
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
+                  <img
+                    src={track.image}
+                    alt={track.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
+                  <span className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full bg-slate-950/80 text-white backdrop-blur-md border border-white/20">
+                    {track.badge}
+                  </span>
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <span className="text-[11px] font-bold text-slate-300 block">{track.audience}</span>
+                    <h3 className="text-xl font-bold font-display text-white group-hover:text-brand-orange transition-colors">
+                      {track.name}
+                    </h3>
                   </div>
                 </div>
 
-                {/* Footer Action */}
-                <div className="p-6 pt-0">
-                  <Link
-                    to={prog.link}
-                    className="w-full py-3 px-5 rounded-xl bg-[#000044] hover:bg-brand-orange text-white text-xs font-bold font-display flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-lg"
-                  >
-                    <span>{prog.ctaText}</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                <div className="p-5 space-y-3">
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {track.description}
+                  </p>
                 </div>
               </div>
-            );
-          })}
+
+              <div className="p-5 pt-0 flex gap-2">
+                <Link
+                  to={track.link}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-[#000044] hover:bg-brand-orange text-white text-xs font-bold font-display flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  <span>Explore {track.name}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedTrack(track.name as any);
+                    document.getElementById('programmes-directory')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="py-2.5 px-3 rounded-xl bg-orange-50 hover:bg-orange-100 text-brand-orange border border-orange-200 text-xs font-bold cursor-pointer transition-colors"
+                  title={`Filter by ${track.name}`}
+                >
+                  Filter
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
+      </section>
+
+      {/* Comprehensive Programmes Directory (Like Outdoor Activities) */}
+      <section id="programmes-directory" className="mb-20 scroll-mt-28">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange uppercase tracking-wider mb-2">
+              <SlidersHorizontal className="w-4 h-4" />
+              <span>Programme Directory</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight">
+              All Educational Programmes & Circuits
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-1">
+              Showing {filteredProgrammes.length} of {EDUCATIONAL_PROGRAMMES.length} curriculum-aligned Himalayan journeys.
+            </p>
+          </div>
+
+          {/* Quick Search Input */}
+          <div className="relative w-full md:w-72">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <input
+              type="text"
+              placeholder="Search programmes or subjects..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs focus:outline-none focus:border-brand-orange shadow-2xs"
+            />
+          </div>
+        </div>
+
+        {/* Filter Toolbar */}
+        <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm mb-8 space-y-3">
+          {/* Track Filters */}
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="text-xs font-bold text-slate-400 mr-2 flex items-center gap-1">
+              <Filter className="w-3.5 h-3.5" /> Track:
+            </span>
+            {['All', 'School Trips', 'College Trips', 'Summer Learning Programmes'].map((track) => (
+              <button
+                key={track}
+                type="button"
+                onClick={() => setSelectedTrack(track)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                  selectedTrack === track
+                    ? 'bg-brand-orange text-white shadow-sm'
+                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                }`}
+              >
+                {track}
+              </button>
+            ))}
+          </div>
+
+          {/* Domain & Duration Filters */}
+          <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center gap-4 text-xs">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-slate-500">Domain:</span>
+              <select
+                value={selectedDomain}
+                onChange={(e) => setSelectedDomain(e.target.value)}
+                className="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 font-medium text-slate-700 focus:outline-none focus:border-brand-orange cursor-pointer"
+              >
+                <option value="All">All Domains</option>
+                <option value="STEM & Sciences">STEM & Sciences</option>
+                <option value="Wildlife & Ecology">Wildlife & Ecology</option>
+                <option value="Adventure & Mountaineering">Adventure & Mountaineering</option>
+                <option value="Leadership & Survival">Leadership & Survival</option>
+              </select>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-slate-500">Duration:</span>
+              <select
+                value={selectedDuration}
+                onChange={(e) => setSelectedDuration(e.target.value)}
+                className="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 font-medium text-slate-700 focus:outline-none focus:border-brand-orange cursor-pointer"
+              >
+                <option value="All">Any Duration</option>
+                <option value="2–3 Days">2–3 Days</option>
+                <option value="4–5 Days">4–5 Days</option>
+                <option value="6+ Days">6+ Days</option>
+              </select>
+            </div>
+
+            {(selectedTrack !== 'All' || selectedDomain !== 'All' || selectedDuration !== 'All' || searchQuery !== '') && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedTrack('All');
+                  setSelectedDomain('All');
+                  setSelectedDuration('All');
+                  setSearchQuery('');
+                }}
+                className="text-brand-orange hover:underline font-bold ml-auto cursor-pointer"
+              >
+                Clear All Filters
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Programmes Grid (Multi-Page Content Cards) */}
+        {filteredProgrammes.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProgrammes.map((prog) => {
+              const TrackBadgeIcon = prog.track === 'School Trips' ? School : prog.track === 'College Trips' ? GraduationCap : SunMedium;
+              return (
+                <div
+                  key={prog.id}
+                  className="group flex flex-col justify-between bg-white rounded-3xl border border-[#E2DDD5] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 text-left"
+                >
+                  <div>
+                    {/* Card Photo Header */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
+                      <img
+                        src={prog.image}
+                        alt={prog.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
+
+                      <span className={`absolute top-3 right-3 text-[10px] font-bold px-2.5 py-0.5 rounded-full border backdrop-blur-md ${prog.badgeColor}`}>
+                        {prog.badge}
+                      </span>
+
+                      <div className="absolute bottom-3 left-4 right-4 text-white">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 mb-0.5">
+                          <TrackBadgeIcon className="w-3.5 h-3.5 text-brand-orange" />
+                          <span>{prog.track}</span>
+                          <span>•</span>
+                          <span>{prog.duration}</span>
+                        </div>
+                        <h3 className="text-lg font-bold font-display text-white group-hover:text-brand-orange transition-colors line-clamp-1">
+                          {prog.title}
+                        </h3>
+                      </div>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="p-5 space-y-3">
+                      <div className="flex items-center justify-between text-xs text-slate-500">
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-3.5 h-3.5 text-brand-orange" />
+                          <span>{prog.location}</span>
+                        </span>
+                        <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                          {prog.supervisionRatio}
+                        </span>
+                      </div>
+
+                      <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                        {prog.shortDesc}
+                      </p>
+
+                      <div className="pt-2 border-t border-slate-100 space-y-1.5">
+                        <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
+                          Key Field Learning
+                        </span>
+                        {prog.learningOutcomes.slice(0, 2).map((item, i) => (
+                          <div key={i} className="flex items-start gap-1.5 text-xs text-slate-700">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                            <span className="line-clamp-1">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card Bottom CTA */}
+                  <div className="p-5 pt-0 border-t border-slate-100 flex items-center justify-between mt-2">
+                    <div>
+                      <span className="text-[10px] text-slate-400 font-semibold block">Estimated Fare</span>
+                      <span className="text-base font-extrabold font-display text-slate-900">
+                        {prog.startingPrice} <span className="text-[10px] text-slate-500 font-normal">/ student</span>
+                      </span>
+                    </div>
+
+                    <Link
+                      to={`/educational-programmes/${prog.id}`}
+                      className="py-2.5 px-4 rounded-xl bg-[#000044] hover:bg-brand-orange text-white text-xs font-bold font-display flex items-center gap-1.5 shadow-sm transition-all"
+                    >
+                      <span>Full Itinerary</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="p-12 text-center bg-white rounded-3xl border border-slate-200 space-y-3">
+            <GraduationCap className="w-10 h-10 text-brand-orange mx-auto" />
+            <h3 className="text-lg font-bold text-slate-900">No matching programmes found</h3>
+            <p className="text-xs text-slate-500">Try adjusting your track or domain filters.</p>
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedTrack('All');
+                setSelectedDomain('All');
+                setSelectedDuration('All');
+                setSearchQuery('');
+              }}
+              className="px-4 py-2 rounded-xl bg-brand-orange text-white text-xs font-bold"
+            >
+              Reset Filters
+            </button>
+          </div>
+        )}
       </section>
 
       {/* Safety & Academic Rigor Section */}
@@ -352,7 +531,7 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
         </div>
       </section>
 
-      {/* Institutional Booking Inquiry Form */}
+      {/* Institutional Proposal Request Form */}
       <section className="mb-20 rounded-3xl bg-gradient-to-br from-[#000044] to-[#0A0D2C] text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5 space-y-4">

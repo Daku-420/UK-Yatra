@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   School, 
   Sparkles, 
@@ -239,6 +240,13 @@ export const SchoolTripsPage: React.FC<SchoolTripsPageProps> = ({ onOpenBookingM
                         </div>
                       ))}
                     </div>
+                    <Link
+                      to={`/educational-programmes/${tour.id}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:text-orange-700 transition-colors"
+                    >
+                      <span>View Day-by-Day Itinerary & Syllabus</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   SunMedium, 
   Sparkles, 
@@ -246,6 +247,13 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
                         </div>
                       ))}
                     </div>
+                    <Link
+                      to={`/educational-programmes/${prog.id}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:text-orange-700 transition-colors"
+                    >
+                      <span>View Camp Syllabus & Day-by-Day Modules</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
 
