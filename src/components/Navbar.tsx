@@ -36,7 +36,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'river-rafting',
     title: 'River Rafting',
     subtitle: 'Rishikesh Ganga Rapids (Grade III-IV)',
-    price: '₹1,000',
+    tag: 'Grade III-IV',
     path: '/outdoor-activities/river-rafting',
     icon: Waves
   },
@@ -44,7 +44,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'himalayan-trekking',
     title: 'Himalayan Trekking',
     subtitle: 'Kedarkantha, Valley of Flowers, Kuari Pass',
-    price: '₹5,499',
+    tag: 'High Altitude',
     path: '/outdoor-activities/himalayan-trekking',
     icon: Mountain
   },
@@ -52,7 +52,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'auli-skiing-snowboarding',
     title: 'Skiing & Snowboarding',
     subtitle: 'Auli Powder Slopes with Nanda Devi Views',
-    price: '₹3,000',
+    tag: 'Auli Slopes',
     path: '/outdoor-activities/auli-skiing-snowboarding',
     icon: Sparkles
   },
@@ -60,7 +60,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'bungee-jumping',
     title: 'Bungee & Giant Swing',
     subtitle: 'India’s Highest 83m Jump (Mohan Chatti)',
-    price: '₹3,550',
+    tag: '83m Jump',
     path: '/outdoor-activities/bungee-jumping',
     icon: Footprints
   },
@@ -68,7 +68,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'wildlife-jeep-safari',
     title: 'Wildlife Jeep Safari',
     subtitle: 'Jim Corbett & Rajaji National Parks',
-    price: '₹4,500',
+    tag: 'Tiger Reserve',
     path: '/outdoor-activities/wildlife-jeep-safari',
     icon: Trees
   },
@@ -76,7 +76,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'paragliding-fly',
     title: 'Tandem Paragliding',
     subtitle: 'Bhimtal & Naukuchiatal High Flights',
-    price: '₹1,800',
+    tag: 'Aero Flight',
     path: '/outdoor-activities/paragliding-fly',
     icon: Compass
   },
@@ -84,7 +84,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'riverside-luxury-camping',
     title: 'Riverside Glamping',
     subtitle: 'Shivpuri, Kanatal & Chopta Meadows',
-    price: '₹1,800',
+    tag: 'Luxury Tents',
     path: '/outdoor-activities/riverside-luxury-camping',
     icon: Tent
   },
@@ -92,7 +92,7 @@ const OUTDOOR_NAV_ITEMS = [
     id: 'ganga-aarti-spiritual',
     title: 'Ganga Aarti Trails',
     subtitle: 'Har Ki Pauri & Triveni Ghat River Prayers',
-    price: 'Free',
+    tag: 'Spiritual Trail',
     path: '/outdoor-activities/ganga-aarti-spiritual',
     icon: Sparkles
   }
@@ -110,16 +110,14 @@ const EDUCATIONAL_NAV_TRACKS = [
       {
         id: 'valley-of-flowers-botany',
         title: 'Valley of Flowers Botanical Expedition',
-        duration: '5D/4N',
-        price: '₹10,500',
+        duration: '5 Days / 4 Nights',
         focus: 'Botany & High-Altitude Ecology',
         path: '/educational-programmes/valley-of-flowers-botany'
       },
       {
         id: 'jim-corbett-wildlife-ecology',
         title: 'Jim Corbett Wildlife & Conservation Camp',
-        duration: '4D/3N',
-        price: '₹8,900',
+        duration: '4 Days / 3 Nights',
         focus: 'Biodiversity & Conservation',
         path: '/educational-programmes/jim-corbett-wildlife-ecology'
       }
@@ -136,16 +134,14 @@ const EDUCATIONAL_NAV_TRACKS = [
       {
         id: 'kuari-pass-geology',
         title: 'Kuari Pass Alpine Geology Trek',
-        duration: '6D/5N',
-        price: '₹8,499',
+        duration: '6 Days / 5 Nights',
         focus: 'Alpine Geology & Glaciology',
         path: '/educational-programmes/kuari-pass-geology'
       },
       {
         id: 'rishikesh-whitewater-leadership',
         title: 'Rishikesh White Water & Alpine Leadership',
-        duration: '4D/3N',
-        price: '₹6,999',
+        duration: '4 Days / 3 Nights',
         focus: 'Leadership & River Dynamics',
         path: '/educational-programmes/rishikesh-whitewater-leadership'
       }
@@ -162,16 +158,14 @@ const EDUCATIONAL_NAV_TRACKS = [
       {
         id: 'himalayan-astro-camp',
         title: 'Himalayan Astro-Camp & Stargazing',
-        duration: '5D/4N',
-        price: '₹12,800',
+        duration: '5 Days / 4 Nights',
         focus: 'Astronomy & Astrophotography',
         path: '/educational-programmes/himalayan-astro-camp'
       },
       {
         id: 'himalayan-wilderness-survival',
         title: 'Wilderness Survival & Alpine Navigation',
-        duration: '6D/5N',
-        price: '₹11,500',
+        duration: '6 Days / 5 Nights',
         focus: 'Bushcraft & Alpine Survival',
         path: '/educational-programmes/himalayan-wilderness-survival'
       }
@@ -577,11 +571,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   onMouseEnter={handleActivitiesEnter}
                   onMouseLeave={handleActivitiesLeave}
                 >
-                  {/* Left Column: Sub-headings */}
-                  <div className="w-80 bg-[#000044]/98 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl p-2.5 space-y-2 shrink-0">
-                    <div className="px-2 pt-1 pb-0.5 text-[10px] uppercase font-bold tracking-wider text-slate-400 flex items-center justify-between">
+                  {/* Left Column: Sub-headings in Light Cream Theme */}
+                  <div className="w-80 bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] ring-1 ring-black/10 p-3 space-y-2.5 shrink-0 text-slate-900">
+                    <div className="px-2 pt-0.5 pb-1 text-[10px] uppercase font-black tracking-wider text-slate-500 flex items-center justify-between border-b border-[#E2D9CB]">
                       <span>Explore Activities</span>
-                      <span className="text-[9px] text-slate-400">Hover to View</span>
+                      <span className="text-[9px] text-brand-orange font-bold">Hover to Preview</span>
                     </div>
 
                     {/* Outdoor Activities Subheading */}
@@ -595,27 +589,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           setActivitiesOpen(false);
                           setActiveSubmenu(null);
                         }}
-                        className={`flex items-center justify-between p-3 rounded-xl border text-white transition-all group shadow-sm ${
+                        className={`flex items-center justify-between p-3 rounded-2xl border transition-all group shadow-xs ${
                           activeSubmenu === 'outdoor'
-                            ? 'bg-gradient-to-r from-orange-500/35 to-orange-600/25 border-brand-orange ring-1 ring-brand-orange/50 shadow-md'
-                            : 'bg-gradient-to-r from-orange-500/20 to-orange-600/10 hover:from-orange-500/30 hover:to-orange-600/20 border-brand-orange/40'
+                            ? 'bg-orange-50/80 border-brand-orange ring-2 ring-brand-orange/30 shadow-md'
+                            : 'bg-white hover:bg-orange-50/50 border-[#DDD5C7] hover:border-brand-orange'
                         }`}
                       >
                         <div className="flex items-start gap-2.5 min-w-0">
-                          <div className="p-2 rounded-lg bg-brand-orange text-white shadow-md shadow-brand-orange/30 group-hover:scale-105 transition-transform shrink-0">
+                          <div className="p-2 rounded-xl bg-brand-orange text-white shadow-md shadow-brand-orange/25 group-hover:scale-105 transition-transform shrink-0">
                             <Mountain className="w-4 h-4" />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
+                            <div className="text-xs font-black text-slate-950 group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
                               <span>Outdoor Activities</span>
                               <span className="text-[9px] bg-brand-orange text-white font-extrabold px-1.5 py-0.2 rounded-sm shadow-xs">Featured</span>
                             </div>
-                            <p className="text-[11px] text-slate-300 leading-snug mt-0.5 truncate">
+                            <p className="text-[11px] text-slate-600 font-medium leading-snug mt-0.5 truncate">
                               Trekking, rafting, camping, skiing & sports
                             </p>
                           </div>
                         </div>
-                        <ChevronRight className={`w-4 h-4 text-brand-orange transition-transform shrink-0 ml-1.5 ${activeSubmenu === 'outdoor' ? 'translate-x-1' : ''}`} />
+                        <ChevronRight className={`w-4 h-4 text-brand-orange transition-transform shrink-0 ml-1.5 ${activeSubmenu === 'outdoor' ? 'translate-x-1 font-bold' : ''}`} />
                       </Link>
                     </div>
 
@@ -630,58 +624,58 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           setActivitiesOpen(false);
                           setActiveSubmenu(null);
                         }}
-                        className={`flex items-center justify-between p-3 rounded-xl border text-white transition-all group shadow-sm ${
+                        className={`flex items-center justify-between p-3 rounded-2xl border transition-all group shadow-xs ${
                           activeSubmenu === 'educational'
-                            ? 'bg-gradient-to-r from-blue-600/35 to-indigo-600/25 border-indigo-400 ring-1 ring-indigo-400/50 shadow-md'
-                            : 'bg-gradient-to-r from-blue-600/20 to-indigo-600/10 hover:from-blue-600/30 hover:to-indigo-600/20 border-indigo-400/40'
+                            ? 'bg-indigo-50/80 border-indigo-600 ring-2 ring-indigo-500/30 shadow-md'
+                            : 'bg-white hover:bg-indigo-50/40 border-[#DDD5C7] hover:border-indigo-500'
                         }`}
                       >
                         <div className="flex items-start gap-2.5 min-w-0">
-                          <div className="p-2 rounded-lg bg-indigo-600 text-white shadow-md shadow-indigo-600/30 group-hover:scale-105 transition-transform shrink-0">
+                          <div className="p-2 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-600/25 group-hover:scale-105 transition-transform shrink-0">
                             <GraduationCap className="w-4 h-4" />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
+                            <div className="text-xs font-black text-slate-950 group-hover:text-indigo-600 transition-colors flex items-center gap-1.5">
                               <span>Educational Programmes</span>
-                              <span className="text-[9px] bg-emerald-500 text-white font-extrabold px-1.5 py-0.2 rounded-sm shadow-xs">1:8 Safe</span>
+                              <span className="text-[9px] bg-emerald-600 text-white font-extrabold px-1.5 py-0.2 rounded-sm shadow-xs">1:8 Safe</span>
                             </div>
-                            <p className="text-[11px] text-slate-300 leading-snug mt-0.5 truncate">
+                            <p className="text-[11px] text-slate-600 font-medium leading-snug mt-0.5 truncate">
                               School excursions, college treks & summer camps
                             </p>
                           </div>
                         </div>
-                        <ChevronRight className={`w-4 h-4 text-brand-orange transition-transform shrink-0 ml-1.5 ${activeSubmenu === 'educational' ? 'translate-x-1' : ''}`} />
+                        <ChevronRight className={`w-4 h-4 text-indigo-600 transition-transform shrink-0 ml-1.5 ${activeSubmenu === 'educational' ? 'translate-x-1 font-bold' : ''}`} />
                       </Link>
                     </div>
                   </div>
 
-                  {/* Right Flyout Panel: Shows what is inside hovered sub-heading with safety bridge */}
+                  {/* Right Flyout Panel: Outdoor Activities (Light Cream Luxury Theme) */}
                   {activeSubmenu === 'outdoor' && (
                     <div 
-                      className="relative ml-2 w-[480px] bg-[#000044]/98 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-3.5 animate-in fade-in duration-150 text-white before:content-[''] before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3"
+                      className="relative ml-2 w-[520px] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] ring-1 ring-black/10 p-5 text-slate-900 before:content-[''] before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3"
                       onMouseEnter={() => handleSubmenuEnter('outdoor')}
                       onMouseLeave={handleActivitiesLeave}
                     >
-                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
+                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E2D9CB]">
                         <div className="flex items-center gap-2">
-                          <div className="p-1 rounded-md bg-orange-500/20 text-brand-orange">
+                          <div className="p-1.5 rounded-lg bg-orange-100 text-brand-orange border border-orange-200">
                             <Mountain className="w-4 h-4" />
                           </div>
                           <div>
-                            <h4 className="text-xs font-black uppercase tracking-wider text-white">
+                            <h4 className="text-xs font-black uppercase tracking-wider text-slate-950">
                               Outdoor Activities & Sports
                             </h4>
-                            <p className="text-[10px] text-slate-300">
+                            <p className="text-[11px] text-slate-600 font-medium">
                               Instant access to Uttarakhand's top mountain, river & snow adventures
                             </p>
                           </div>
                         </div>
-                        <span className="text-[9px] font-black px-2 py-0.5 rounded-full bg-brand-orange text-white">
+                        <span className="text-[9px] font-black px-2 py-0.5 rounded-full bg-brand-orange text-white shadow-xs">
                           8 Activities
                         </span>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-1.5 max-h-[380px] overflow-y-auto pr-1 hide-scrollbar">
+                      <div className="grid grid-cols-2 gap-2 max-h-[380px] overflow-y-auto pr-1 hide-scrollbar">
                         {OUTDOOR_NAV_ITEMS.map((item) => {
                           const IconComp = item.icon;
                           return (
@@ -692,89 +686,97 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                 setActivitiesOpen(false);
                                 setActiveSubmenu(null);
                               }}
-                              className="group/item flex flex-col justify-between p-2 rounded-xl bg-white/5 hover:bg-white/12 border border-white/10 hover:border-brand-orange/60 transition-all text-left"
+                              className="group/item flex flex-col justify-between p-2.5 rounded-xl bg-white hover:bg-orange-50/60 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left"
                             >
-                              <div className="flex items-start gap-2">
-                                <div className="p-1.5 rounded-lg bg-white/10 text-brand-orange group-hover/item:scale-110 group-hover/item:bg-brand-orange group-hover/item:text-white transition-all shrink-0 mt-0.5">
+                              <div className="flex items-start gap-2.5">
+                                <div className="p-1.5 rounded-lg bg-orange-50 border border-orange-200/60 text-brand-orange group-hover/item:scale-105 group-hover/item:bg-brand-orange group-hover/item:text-white transition-all shrink-0 mt-0.5">
                                   <IconComp className="w-3.5 h-3.5" />
                                 </div>
                                 <div className="min-w-0">
-                                  <div className="text-[11px] font-bold text-white group-hover/item:text-brand-orange transition-colors truncate">
+                                  <div className="text-[12px] font-bold text-slate-900 group-hover/item:text-brand-orange transition-colors truncate">
                                     {item.title}
                                   </div>
-                                  <div className="text-[9.5px] text-slate-300 line-clamp-1 leading-tight">
+                                  <div className="text-[10px] text-slate-500 font-medium line-clamp-1 leading-tight mt-0.5">
                                     {item.subtitle}
                                   </div>
                                 </div>
                               </div>
-                              <div className="mt-1.5 flex items-center justify-between text-[9.5px] pt-1 border-t border-white/5">
-                                <span className="text-brand-orange font-bold">{item.price}</span>
-                                <span className="text-[9px] text-slate-400 group-hover/item:text-white group-hover/item:translate-x-0.5 transition-transform">Explore →</span>
+                              <div className="mt-2 flex items-center justify-between text-[10px] pt-1.5 border-t border-slate-100">
+                                <span className="font-semibold text-slate-500 bg-[#F4EFE6] px-1.5 py-0.5 rounded text-[9.5px]">{item.tag}</span>
+                                <span className="text-brand-orange font-bold group-hover/item:translate-x-0.5 transition-transform flex items-center gap-0.5">
+                                  Explore <ChevronRight className="w-3 h-3" />
+                                </span>
                               </div>
                             </Link>
                           );
                         })}
                       </div>
 
-                      <div className="pt-2.5 mt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
-                        <span className="text-slate-400 text-[10px]">Certified safety gear & guides included</span>
+                      <div className="pt-3 mt-3 border-t border-[#E2D9CB] flex items-center justify-between text-xs bg-[#F4EFE6] -mx-5 -mb-5 px-5 py-3 rounded-b-3xl">
+                        <div className="text-slate-800 text-xs font-bold flex items-center gap-1.5">
+                          <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                          <span>Certified Safety Gear & Mountain Guides Included</span>
+                        </div>
                         <Link
                           to="/outdoor-activities"
                           onClick={() => {
                             setActivitiesOpen(false);
                             setActiveSubmenu(null);
                           }}
-                          className="font-bold text-brand-orange hover:text-orange-400 transition-colors flex items-center gap-1"
+                          className="px-4 py-1.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-black text-xs shadow-md shadow-brand-orange/20 flex items-center gap-1 transition-all hover:scale-[1.02]"
                         >
-                          <span>View Full Catalog</span>
+                          <span>VIEW ALL</span>
                           <ArrowRight className="w-3 h-3" />
                         </Link>
                       </div>
                     </div>
                   )}
 
+                  {/* Right Flyout Panel: Educational Programmes (Light Cream Luxury Theme) */}
                   {activeSubmenu === 'educational' && (
                     <div 
-                      className="relative ml-2 w-[520px] bg-[#000044]/98 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-3.5 animate-in fade-in duration-150 text-white before:content-[''] before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3"
+                      className="relative ml-2 w-[540px] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] ring-1 ring-black/10 p-5 text-slate-900 before:content-[''] before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3"
                       onMouseEnter={() => handleSubmenuEnter('educational')}
                       onMouseLeave={handleActivitiesLeave}
                     >
-                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
+                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E2D9CB]">
                         <div className="flex items-center gap-2">
-                          <div className="p-1 rounded-md bg-indigo-500/20 text-indigo-400">
+                          <div className="p-1.5 rounded-lg bg-indigo-100 text-indigo-700 border border-indigo-200">
                             <GraduationCap className="w-4 h-4" />
                           </div>
                           <div>
-                            <h4 className="text-xs font-black uppercase tracking-wider text-white">
+                            <h4 className="text-xs font-black uppercase tracking-wider text-slate-950">
                               Educational Programmes & Field Trips
                             </h4>
-                            <p className="text-[10px] text-slate-300">
+                            <p className="text-[11px] text-slate-600 font-medium">
                               Curriculum-aligned STEM, ecology, college summits & student camps
                             </p>
                           </div>
                         </div>
-                        <span className="text-[9px] font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+                        <span className="text-[9px] font-black px-2 py-0.5 rounded-full bg-emerald-600 text-white shadow-xs">
                           1:8 Safe Ratio
                         </span>
                       </div>
 
-                      <div className="space-y-2 max-h-[400px] overflow-y-auto pr-1 hide-scrollbar">
+                      <div className="space-y-2.5 max-h-[400px] overflow-y-auto pr-1 hide-scrollbar">
                         {EDUCATIONAL_NAV_TRACKS.map((track) => {
                           const TrackIcon = track.icon;
                           return (
-                            <div key={track.id} className="p-2.5 rounded-xl bg-white/5 border border-white/10">
-                              <div className="flex items-center justify-between mb-1.5">
+                            <div key={track.id} className="p-3 rounded-2xl bg-[#FBF8F2] border border-[#E2D9CB]">
+                              <div className="flex items-center justify-between mb-2">
                                 <Link
                                   to={track.path}
                                   onClick={() => {
                                     setActivitiesOpen(false);
                                     setActiveSubmenu(null);
                                   }}
-                                  className="flex items-center gap-1.5 group/trk text-xs font-bold text-white hover:text-brand-orange transition-colors"
+                                  className="flex items-center gap-2 group/trk text-xs font-black text-slate-950 hover:text-brand-orange transition-colors"
                                 >
-                                  <TrackIcon className="w-3.5 h-3.5 text-brand-orange" />
+                                  <span className="p-1 rounded-md bg-white border border-[#DDD5C7] text-brand-orange">
+                                    <TrackIcon className="w-3.5 h-3.5" />
+                                  </span>
                                   <span>{track.name}</span>
-                                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-white/10 text-slate-300 font-semibold">{track.badge}</span>
+                                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-white border border-[#DDD5C7] text-slate-700 font-bold">{track.badge}</span>
                                 </Link>
                                 <Link
                                   to={track.path}
@@ -782,13 +784,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                     setActivitiesOpen(false);
                                     setActiveSubmenu(null);
                                   }}
-                                  className="text-[10px] text-brand-orange hover:underline font-semibold"
+                                  className="text-[11px] text-brand-orange hover:text-orange-700 font-bold flex items-center gap-0.5"
                                 >
-                                  All Trips →
+                                  <span>All Trips</span>
+                                  <ChevronRight className="w-3 h-3" />
                                 </Link>
                               </div>
 
-                              <div className="grid grid-cols-2 gap-1.5">
+                              <div className="grid grid-cols-2 gap-2">
                                 {track.programs.map((prog) => (
                                   <Link
                                     key={prog.id}
@@ -797,19 +800,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                       setActivitiesOpen(false);
                                       setActiveSubmenu(null);
                                     }}
-                                    className="p-1.5 rounded-lg bg-black/30 hover:bg-white/10 border border-white/5 hover:border-indigo-400/50 transition-all text-left group/prog flex flex-col justify-between"
+                                    className="p-2.5 rounded-xl bg-white hover:bg-orange-50/50 border border-[#DDD5C7] hover:border-brand-orange transition-all text-left group/prog flex flex-col justify-between shadow-xs hover:shadow-md"
                                   >
                                     <div>
-                                      <div className="text-[10.5px] font-semibold text-white group-hover/prog:text-brand-orange line-clamp-1">
+                                      <div className="text-[11.5px] font-bold text-slate-950 group-hover/prog:text-brand-orange line-clamp-1">
                                         {prog.title}
                                       </div>
-                                      <div className="text-[9px] text-slate-400 line-clamp-1 mt-0.5">
+                                      <div className="text-[10px] text-slate-500 font-medium line-clamp-1 mt-0.5">
                                         {prog.focus}
                                       </div>
                                     </div>
-                                    <div className="flex items-center justify-between mt-1 text-[9px] text-slate-300">
-                                      <span className="text-emerald-400 font-bold">{prog.price}</span>
-                                      <span className="text-slate-400">{prog.duration}</span>
+                                    <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-slate-100 text-[10px]">
+                                      <span className="font-semibold text-slate-600 bg-[#F4EFE6] px-1.5 py-0.5 rounded text-[9.5px]">{prog.duration}</span>
+                                      <span className="text-brand-orange font-bold flex items-center gap-0.5">
+                                        Details <ChevronRight className="w-3 h-3" />
+                                      </span>
                                     </div>
                                   </Link>
                                 ))}
@@ -819,17 +824,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                         })}
                       </div>
 
-                      <div className="pt-2.5 mt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
-                        <span className="text-slate-400 text-[10px]">Institutional booking & custom quotes available</span>
+                      <div className="pt-3 mt-3 border-t border-[#E2D9CB] flex items-center justify-between text-xs bg-[#F4EFE6] -mx-5 -mb-5 px-5 py-3 rounded-b-3xl">
+                        <div className="text-slate-800 text-xs font-bold flex items-center gap-1.5">
+                          <ShieldCheck className="w-4 h-4 text-indigo-600 shrink-0" />
+                          <span>Institutional Proposals & Custom Dates Available</span>
+                        </div>
                         <Link
                           to="/educational-programmes"
                           onClick={() => {
                             setActivitiesOpen(false);
                             setActiveSubmenu(null);
                           }}
-                          className="font-bold text-brand-orange hover:text-orange-400 transition-colors flex items-center gap-1"
+                          className="px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-md shadow-indigo-600/20 flex items-center gap-1 transition-all hover:scale-[1.02]"
                         >
-                          <span>Explore All Programmes Hub</span>
+                          <span>PROGRAMMES HUB</span>
                           <ArrowRight className="w-3 h-3" />
                         </Link>
                       </div>
@@ -1109,7 +1117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               className="flex items-center justify-between py-1.5 px-2 rounded-lg text-[11px] text-slate-300 hover:text-white hover:bg-white/10"
                             >
                               <span className="truncate pr-2">{item.title}</span>
-                              <span className="text-brand-orange text-[10px] font-semibold shrink-0">{item.price}</span>
+                              <span className="text-brand-orange text-[10px] font-semibold shrink-0">Explore →</span>
                             </Link>
                           ))}
                           <Link
@@ -1164,7 +1172,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                   className="flex items-center justify-between py-1 px-2 rounded text-[10.5px] text-slate-300 hover:text-white hover:bg-white/10"
                                 >
                                   <span className="truncate pr-2">{prog.title}</span>
-                                  <span className="text-emerald-400 text-[9.5px] shrink-0">{prog.price}</span>
+                                  <span className="text-slate-400 text-[9.5px] shrink-0">{prog.duration}</span>
                                 </Link>
                               ))}
                             </div>
