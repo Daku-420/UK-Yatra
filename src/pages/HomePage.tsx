@@ -131,7 +131,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         <div className="relative z-10 max-w-5xl mx-auto text-center mt-6 sm:mt-8">
           {/* Main Hero Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.15] max-w-4xl mx-auto uppercase drop-shadow-md">
-            YOUR NEXT HIMALAYAN STORY STARTS HERE.
+            FIND PEACE. FIND THE REAL YOU.
           </h1>
 
           {/* Supporting Text */}
