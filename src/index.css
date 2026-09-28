@@ -144,12 +144,14 @@
 
 .glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6,
 .bg-brand-card h1, .bg-brand-card h2, .bg-brand-card h3, .bg-brand-card h4, .bg-brand-card h5, .bg-brand-card h6,
+[class*="bg-[#000044]"] h1, [class*="bg-[#000044]"] h2, [class*="bg-[#000044]"] h3, [class*="bg-[#000044]"] h4,
 .navy-banner h1, .navy-banner h2, .navy-banner h3 {
   color: #FFFFFF !important;
 }
 
 .glass-card p,
 .bg-brand-card p,
+[class*="bg-[#000044]"] p,
 .navy-banner p {
   color: #E2E8F0 !important;
 }

@@ -127,27 +127,27 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         className="relative w-full max-w-[580px] bg-[#FAF8F5] rounded-3xl shadow-2xl overflow-hidden border border-[#E5DECE] max-h-[92vh] flex flex-col animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Dark Navy Header matching screenshot */}
-        <div className="bg-[#0B1528] px-6 py-5 text-white relative border-b border-white/10 shrink-0">
+        {/* Top Midnight Royal Navy Header matching website theme */}
+        <div className="bg-[#000044] px-6 py-5 sm:py-6 text-white relative border-b border-white/10 shrink-0">
           <button
             type="button"
             onClick={onClose}
-            className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-slate-300 hover:text-white transition-colors cursor-pointer"
+            className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-brand-orange border border-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-all cursor-pointer shadow-sm"
             aria-label="Close"
           >
             <X className="w-4 h-4" />
           </button>
 
           <div className="pr-10">
-            <div className="flex items-center gap-1.5 text-amber-400 text-[11px] font-bold uppercase tracking-wider mb-1">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-[11px] font-bold uppercase tracking-wider mb-2">
+              <Sparkles className="w-3.5 h-3.5 text-brand-orange" />
               <span>DIRECT BOOKING SUPPORT</span>
             </div>
-            <h2 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug line-clamp-1">
-              Enquire: {formData.packageName || 'Char Dham Yatra by Helicopter'}
+            <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug line-clamp-1 drop-shadow-sm">
+              Enquire: {formData.packageName || 'Customized Uttarakhand Trip'}
             </h2>
-            <p className="text-xs text-slate-300 mt-1 font-normal leading-relaxed">
-              Fill details below to send your enquiry directly via WhatsApp to +91 93899 44590.
+            <p className="text-xs sm:text-sm text-slate-200 mt-1 font-normal leading-relaxed">
+              Fill details below to send your enquiry directly via WhatsApp to <strong className="text-white font-semibold">+91 93899 44590</strong>.
             </p>
           </div>
         </div>
@@ -158,13 +158,13 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Select Package */}
               <div>
-                <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                   SELECT PACKAGE *
                 </label>
                 <select
                   value={formData.packageName}
                   onChange={(e) => setFormData({ ...formData, packageName: e.target.value })}
-                  className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors cursor-pointer"
+                  className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors cursor-pointer"
                 >
                   {packageOptions.map((pkg, idx) => (
                     <option key={idx} value={pkg}>
@@ -177,7 +177,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               {/* Full Name & Phone Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                  <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                     FULL NAME *
                   </label>
                   <input
@@ -186,12 +186,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     placeholder="Your Full Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors"
+                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                  <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                     PHONE / WHATSAPP *
                   </label>
                   <input
@@ -200,7 +200,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors"
+                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors"
                   />
                 </div>
               </div>
@@ -208,7 +208,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               {/* Email & Travel Mode Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                  <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                     EMAIL ADDRESS
                   </label>
                   <input
@@ -216,18 +216,18 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors"
+                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                  <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                     TRAVEL MODE
                   </label>
                   <select
                     value={formData.travelMode}
                     onChange={(e) => setFormData({ ...formData, travelMode: e.target.value })}
-                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors cursor-pointer"
+                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors cursor-pointer"
                   >
                     <option value="🚁 Helicopter VIP">🚁 Helicopter VIP</option>
                     <option value="🚗 Private Cab / Sedan">🚗 Private Cab / Sedan</option>
@@ -242,13 +242,13 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               {/* Pilgrims & Travel Date Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                  <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                     NUMBER OF PILGRIMS
                   </label>
                   <select
                     value={formData.travellers}
                     onChange={(e) => setFormData({ ...formData, travellers: e.target.value })}
-                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors cursor-pointer"
+                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors cursor-pointer"
                   >
                     <option value="1 Person">1 Person</option>
                     <option value="2 Persons">2 Persons</option>
@@ -259,21 +259,21 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                  <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                     PREFERRED TRAVEL DATE
                   </label>
                   <input
                     type="date"
                     value={formData.travelDate}
                     onChange={(e) => setFormData({ ...formData, travelDate: e.target.value })}
-                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors"
+                    className="w-full bg-white border border-[#D5CDBC] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 font-semibold focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors"
                   />
                 </div>
               </div>
 
               {/* Special Requests / Message */}
               <div>
-                <label className="block text-[11px] uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
+                <label className="block text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-900 mb-1.5">
                   SPECIAL REQUESTS / MESSAGE
                 </label>
                 <textarea
@@ -281,25 +281,25 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   placeholder="Mention any senior citizen assistance, hotel preferences, or dietary requirements..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-white border border-[#D5CDBC] rounded-xl p-3 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 shadow-2xs transition-colors resize-none"
+                  className="w-full bg-white border border-[#D5CDBC] rounded-xl p-3 text-xs sm:text-sm text-slate-900 font-medium placeholder:text-slate-500 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 shadow-xs transition-colors resize-none"
                 />
               </div>
 
-              {/* Submit Button Matching Screenshot */}
-              <div className="pt-1">
+              {/* Submit Button with Signature Brand Orange Gradient */}
+              <div className="pt-1.5">
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#B47610] via-[#A86C0B] to-[#965E08] hover:from-[#C58414] hover:to-[#A86C0B] text-white py-3.5 px-4 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-amber-900/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+                  className="w-full orange-gradient-btn text-white py-3.5 sm:py-4 px-6 rounded-2xl font-display font-bold text-sm sm:text-base shadow-xl shadow-brand-orange/25 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
                 >
-                  <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
+                  <WhatsAppIcon className="w-5 h-5 fill-current shrink-0" />
                   <span>Send Enquiry via WhatsApp →</span>
                 </button>
               </div>
 
               {/* Trust Badge at Bottom */}
-              <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-700 font-semibold pt-1">
-                <Shield className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                <span>Direct WhatsApp enquiry to +91 93899 44590</span>
+              <div className="flex items-center justify-center gap-1.5 text-xs text-slate-700 font-semibold pt-1">
+                <Shield className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Direct WhatsApp enquiry to <strong className="text-slate-900">+91 93899 44590</strong></span>
               </div>
             </form>
           ) : (
