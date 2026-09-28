@@ -682,23 +682,24 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
 
       {/* Main Grid: Clean Vector Map + District Showcase */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Column: Clean Minimalist Vector Map Box (Style of User Reference Image) */}
-        <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-7 border border-[#DDD5C7] shadow-sm relative overflow-hidden flex flex-col justify-between">
+        {/* Left Column: Dark Forest Green Map Panel — Himalayan Brand Identity */}
+        <div className="lg:col-span-7 bg-[#14281D] rounded-3xl p-5 sm:p-7 border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/30 via-transparent to-transparent pointer-events-none"></div>
           {/* Top Bar: Live Status & Legend */}
-          <div className="flex flex-wrap items-center justify-between gap-3 relative z-10 pb-4 border-b border-[#E8E2D5] text-xs">
+          <div className="flex flex-wrap items-center justify-between gap-3 relative z-10 pb-4 border-b border-white/10 text-xs">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-[#1C1F1D] font-bold text-sm">Uttarakhand Vector Map</span>
-              <span className="text-[#5A625D] text-[11px] hidden sm:inline">| Click any district to explore</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="text-white font-bold text-sm">Uttarakhand Map</span>
+              <span className="text-slate-300 text-[11px] hidden sm:inline">| Click to select district</span>
             </div>
-            <div className="flex items-center gap-3 text-[11px] text-[#5A625D]">
+            <div className="flex items-center gap-3 text-[11px] text-slate-200">
               <span className="flex items-center gap-1.5">
-                <span className="w-3 h-3 rounded-sm bg-[#78827C]"></span>
-                <span>Districts</span>
+                <span className="w-2.5 h-2.5 rounded-sm bg-[#2D5A42]"></span>
+                <span>Garhwal</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-3 h-3 rounded-sm bg-[#EDE8DF] border border-[#C2BAAB]"></span>
-                <span>Selected</span>
+                <span className="w-2.5 h-2.5 rounded-sm bg-[#3E5C49]"></span>
+                <span>Kumaon</span>
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#B66236]"></span>
@@ -720,23 +721,23 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
                   const isSelected = selectedDistrictId === district.id;
                   const isHovered = hoveredDistrictId === district.id;
 
-                  // Styling matching the user's reference vector map:
-                  // Base: solid neutral slate grey (#78827C)
-                  // Hover: lighter active slate (#909A94)
-                  // Selected: highlighted clean light tone (#EDE8DF or #F3EFE6) exactly like the highlighted state in the reference image!
+                  // Himalayan Forest Green dark theme fills:
+                  // Selected: warm cedar earth (#B66236 highlight)
+                  // Hovered: brighter forest green
+                  // Base: deep forest green tones for Garhwal vs Kumaon
                   const fillColor = isSelected
-                    ? '#EDE8DF'
+                    ? '#B66236'
                     : isHovered
-                      ? '#909A94'
-                      : '#78827C';
+                      ? '#2D6B4A'
+                      : district.division === 'Garhwal' ? '#2D5A42' : '#3E5C49';
 
                   return (
                     <path
                       key={district.id}
                       d={district.svgPath}
                       fill={fillColor}
-                      stroke="#FFFFFF"
-                      strokeWidth={isSelected ? '2.5' : '1.8'}
+                      stroke="rgba(255,255,255,0.35)"
+                      strokeWidth={isSelected ? '2.5' : '1.5'}
                       strokeLinejoin="round"
                       strokeLinecap="round"
                       className="transition-colors duration-200 cursor-pointer"
@@ -759,16 +760,12 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
                         x={district.centerCoordinates.x}
                         y={district.centerCoordinates.y}
                         textAnchor="middle"
-                        className={`font-display text-[13px] sm:text-[15px] font-extrabold tracking-wide transition-all ${
+                        className={`font-display text-[12px] sm:text-[14px] font-extrabold tracking-wide transition-all ${
                           isSelected
-                            ? 'fill-[#14281D] font-black'
+                            ? 'fill-white font-black'
                             : 'fill-white'
                         }`}
-                        style={{
-                          textShadow: isSelected
-                            ? '0 1px 2px rgba(255,255,255,0.8)'
-                            : '0 1px 3px rgba(0,0,0,0.6)'
-                        }}
+                        style={{ textShadow: '0 1px 3px rgba(0,0,0,0.9)' }}
                       >
                         {district.name}
                       </text>
@@ -776,8 +773,8 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
                         x={district.centerCoordinates.x}
                         y={district.centerCoordinates.y + 16}
                         textAnchor="middle"
-                        className={`text-[10px] uppercase tracking-wider font-bold ${
-                          isSelected ? 'fill-[#B66236]' : 'fill-[#E8ECE9]'
+                        className={`text-[9px] uppercase tracking-wider font-semibold ${
+                          isSelected ? 'fill-[#E0A985]' : 'fill-slate-300'
                         }`}
                       >
                         {district.destinations.length} Places
@@ -829,9 +826,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
                       <text
                         x="9"
                         y="3.5"
-                        className={`text-[9.5px] font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${
-                          isSelectedDistrict ? 'fill-[#14281D] font-black' : 'fill-white'
-                        } group-hover:fill-[#B66236]`}
+                        className={`text-[9.5px] font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors fill-white group-hover:fill-amber-300`}
                       >
                         {pin.name}
                       </text>
@@ -865,10 +860,10 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
           </div>
 
           {/* Quick District Selector Carousel Pills on Bottom of Map Box */}
-          <div className="pt-3 border-t border-[#E8E2D5] relative z-10">
-            <div className="text-[11px] uppercase font-bold tracking-wider text-[#5A625D] mb-2 flex items-center justify-between">
+          <div className="pt-3 border-t border-white/10 relative z-10">
+            <div className="text-[11px] uppercase font-bold tracking-wider text-slate-400 mb-2 flex items-center justify-between">
               <span>Quick District Jump:</span>
-              <span className="text-[#1E3A2B] font-bold">13 Districts Available</span>
+              <span className="text-[#E0A985] font-bold">13 Districts Available</span>
             </div>
             <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto hide-scrollbar">
               {filteredDistricts.map((d) => (
@@ -877,8 +872,8 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({ 
                   onClick={() => handleSelectDistrict(d.id)}
                   className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                     selectedDistrictId === d.id
-                      ? 'bg-[#1E3A2B] text-white shadow-xs'
-                      : 'bg-[#F7F5F0] hover:bg-[#EAE6DD] text-[#2C312E] border border-[#DDD5C7]'
+                      ? 'bg-[#1E3A2B] text-white shadow-md border border-emerald-500/40'
+                      : 'bg-white/10 hover:bg-white/20 text-slate-200 border border-white/10'
                   }`}
                 >
                   {d.name}
