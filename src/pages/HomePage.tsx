@@ -150,13 +150,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <span>Explore Uttarakhand</span>
             </Link>
 
-            <Link
-              to="/customized-trip"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-900 text-white border border-white/20 font-display font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-[0.98] flex items-center justify-center gap-2 drop-shadow-md"
+            <button
+              type="button"
+              onClick={() => onOpenBookingModal("Customized Uttarakhand Trip")}
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-900 text-white border border-white/20 font-display font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-[0.98] flex items-center justify-center gap-2 drop-shadow-md cursor-pointer"
             >
               <span>Plan My Trip</span>
               <ArrowRight className="w-5 h-5 text-brand-orange" />
-            </Link>
+            </button>
           </div>
 
           {/* Quick stats counter with frosted glass container for crystal clear legibility */}
