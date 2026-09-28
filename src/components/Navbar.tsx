@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   ChevronDown,
   GraduationCap,
-  School,
   SunMedium,
   Compass,
   Car,
@@ -386,7 +385,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   <Link
                     to="/educational-programmes"
                     onClick={() => setActivitiesOpen(false)}
-                    className="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-blue-600/20 to-indigo-600/10 hover:from-blue-600/30 hover:to-indigo-600/20 border border-indigo-400/40 text-white transition-all group mb-2 shadow-sm"
+                    className="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-blue-600/20 to-indigo-600/10 hover:from-blue-600/30 hover:to-indigo-600/20 border border-indigo-400/40 text-white transition-all group shadow-sm"
                   >
                     <div className="flex items-start gap-2.5 min-w-0">
                       <div className="p-2 rounded-lg bg-indigo-600 text-white shadow-md shadow-indigo-600/30 group-hover:scale-105 transition-transform shrink-0">
@@ -404,93 +403,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </div>
                     <span className="text-brand-orange font-bold text-sm ml-2 group-hover:translate-x-1 transition-transform shrink-0">→</span>
                   </Link>
-
-                  <div className="px-3 py-1 text-[10px] uppercase font-bold tracking-wider text-slate-400 border-b border-white/10 mb-1 flex items-center justify-between">
-                    <span>Programmes & Field Trips</span>
-                    <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">Popular</span>
-                  </div>
-
-                  <Link
-                    to="/school-trips"
-                    onClick={() => setActivitiesOpen(false)}
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/25 group-hover:scale-105 transition-transform">
-                      <School className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
-                        <span>School Trips</span>
-                        <span className="text-[9px] bg-emerald-500/20 text-emerald-300 font-semibold px-1.5 py-0.2 rounded-sm">1:8 Safe</span>
-                      </div>
-                      <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
-                        Curriculum-aligned STEM, ecology & safe excursions
-                      </p>
-                    </div>
-                  </Link>
-
-                  <Link
-                    to="/college-trips"
-                    onClick={() => setActivitiesOpen(false)}
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-orange-500/15 text-brand-orange border border-orange-500/25 group-hover:scale-105 transition-transform">
-                      <GraduationCap className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-white group-hover:text-brand-orange transition-colors flex items-center gap-1.5">
-                        <span>College Trips</span>
-                        <span className="text-[9px] bg-brand-orange/20 text-brand-orange font-semibold px-1.5 py-0.2 rounded-sm">Hot</span>
-                      </div>
-                      <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
-                        Adventure treks, river rafting & student batch discounts
-                      </p>
-                    </div>
-                  </Link>
-
-                  <Link
-                    to="/summer-learning-programmes"
-                    onClick={() => setActivitiesOpen(false)}
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-amber-500/15 text-amber-400 border border-amber-500/25 group-hover:scale-105 transition-transform">
-                      <SunMedium className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
-                        <span>Summer Learning Programmes</span>
-                        <span className="text-[9px] bg-amber-500/20 text-amber-300 font-semibold px-1.5 py-0.2 rounded-sm">Camps</span>
-                      </div>
-                      <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
-                        Wilderness survival, astronomy & leadership bootcamps
-                      </p>
-                    </div>
-                  </Link>
-
-                  <div className="pt-1.5 mt-1 border-t border-white/10 flex flex-col gap-0.5">
-                    <Link
-                      to="/educational-programmes"
-                      onClick={() => setActivitiesOpen(false)}
-                      className="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-white/10 text-[11px] font-semibold text-slate-300 hover:text-white transition-colors"
-                    >
-                      <span className="flex items-center gap-2">
-                        <GraduationCap className="w-3.5 h-3.5 text-brand-orange" />
-                        <span>All Educational Programmes</span>
-                      </span>
-                      <span className="text-brand-orange">→</span>
-                    </Link>
-                    <Link
-                      to="/outdoor-activities"
-                      onClick={() => setActivitiesOpen(false)}
-                      className="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-white/10 text-[11px] font-semibold text-slate-300 hover:text-white transition-colors"
-                    >
-                      <span className="flex items-center gap-2">
-                        <Compass className="w-3.5 h-3.5 text-brand-orange" />
-                        <span>View All Outdoor Activities</span>
-                      </span>
-                      <span className="text-brand-orange">→</span>
-                    </Link>
-                  </div>
                 </div>
               )}
             </div>
@@ -763,76 +675,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       <span>Educational Programmes</span>
                     </span>
                     <span className="text-brand-orange font-bold text-xs">→</span>
-                  </Link>
-
-                  <div className="pt-2 pb-1 px-3 border-t border-white/10 flex items-center justify-between text-[10px] uppercase font-bold tracking-wider text-slate-400">
-                    <span>Programmes & Field Trips</span>
-                    <span className="text-[9px] text-brand-orange bg-brand-orange/15 px-1.5 py-0.5 rounded font-bold">Popular</span>
-                  </div>
-
-                  <Link 
-                    to="/school-trips" 
-                    onClick={() => setMobileMenuOpen(false)} 
-                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-                      isActive('/school-trips') 
-                        ? 'text-brand-orange bg-white/10' 
-                        : 'text-slate-200 hover:text-white'
-                    }`}
-                  >
-                    <School className="w-4 h-4 text-emerald-400" />
-                    <span>School Trips</span>
-                  </Link>
-
-                  <Link 
-                    to="/college-trips" 
-                    onClick={() => setMobileMenuOpen(false)} 
-                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-                      isActive('/college-trips') 
-                        ? 'text-brand-orange bg-white/10' 
-                        : 'text-slate-200 hover:text-white'
-                    }`}
-                  >
-                    <GraduationCap className="w-4 h-4 text-brand-orange" />
-                    <span>College Trips</span>
-                  </Link>
-
-                  <Link 
-                    to="/summer-learning-programmes" 
-                    onClick={() => setMobileMenuOpen(false)} 
-                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-                      isActive('/summer-learning') 
-                        ? 'text-brand-orange bg-white/10' 
-                        : 'text-slate-200 hover:text-white'
-                    }`}
-                  >
-                    <SunMedium className="w-4 h-4 text-amber-400" />
-                    <span>Summer Learning Programmes</span>
-                  </Link>
-
-                  <Link 
-                    to="/educational-programmes" 
-                    onClick={() => setMobileMenuOpen(false)} 
-                    className={`flex items-center justify-between px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                      isActive('/educational-programme') || isActive('/educational-program')
-                        ? 'text-brand-orange bg-white/10' 
-                        : 'text-brand-orange hover:text-white'
-                    }`}
-                  >
-                    <span>View All Educational Programmes</span>
-                    <span>→</span>
-                  </Link>
-
-                  <Link 
-                    to="/activities" 
-                    onClick={() => setMobileMenuOpen(false)} 
-                    className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors border-t border-white/10 mt-1 pt-2 ${
-                      isActive('/activities') && !isActive('/college-trips') && !isActive('/school-trips') && !isActive('/summer-learning') && !isActive('/educational')
-                        ? 'text-brand-orange bg-white/10' 
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    <Compass className="w-4 h-4 text-brand-orange" />
-                    <span>All Outdoor Activities</span>
                   </Link>
                 </div>
               )}
