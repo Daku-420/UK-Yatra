@@ -640,26 +640,26 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
     <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-3">
-          <Compass className="w-3.5 h-3.5 animate-spin-slow" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E3A2B]/10 border border-[#1E3A2B]/20 text-[#1E3A2B] text-xs font-bold uppercase tracking-wider mb-3">
+          <Compass className="w-3.5 h-3.5 animate-spin-slow text-[#1E3A2B]" />
           <span>Interactive Uttarakhand Geographic Guide</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
-          Explore by <span className="text-brand-orange">Districts & Locations</span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[#1C1F1D] tracking-tight">
+          Explore by <span className="text-[#1E3A2B]">Districts & Locations</span>
         </h2>
-        <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+        <p className="mt-3 text-xs sm:text-sm text-[#5A625D] leading-relaxed font-normal">
           Click any of Uttarakhand's 13 districts or prominent Himalayan pilgrimage & adventure hotspots on the map to explore the destinations, altitudes, and itineraries in that region.
         </p>
 
         {/* Division Filter Tabs */}
-        <div className="inline-flex items-center p-1 bg-white rounded-2xl border border-[#D5CDBC] shadow-xs mt-6 gap-1">
+        <div className="inline-flex items-center p-1 bg-white rounded-2xl border border-[#DDD5C7] shadow-xs mt-6 gap-1">
           <button
             type="button"
             onClick={() => setActiveDivisionFilter('All')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeDivisionFilter === 'All'
-                ? 'bg-brand-orange text-white shadow-md'
-                : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
+                ? 'bg-[#1E3A2B] text-white shadow-xs'
+                : 'text-[#2C312E] hover:text-[#1C1F1D] hover:bg-[#F0EDE6]'
             }`}
           >
             All 13 Districts
@@ -669,8 +669,8 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
             onClick={() => setActiveDivisionFilter('Garhwal')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeDivisionFilter === 'Garhwal'
-                ? 'bg-brand-orange text-white shadow-md'
-                : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
+                ? 'bg-[#1E3A2B] text-white shadow-xs'
+                : 'text-[#2C312E] hover:text-[#1C1F1D] hover:bg-[#F0EDE6]'
             }`}
           >
             Garhwal Division (7)
@@ -680,8 +680,8 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
             onClick={() => setActiveDivisionFilter('Kumaon')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeDivisionFilter === 'Kumaon'
-                ? 'bg-brand-orange text-white shadow-md'
-                : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
+                ? 'bg-[#1E3A2B] text-white shadow-xs'
+                : 'text-[#2C312E] hover:text-[#1C1F1D] hover:bg-[#F0EDE6]'
             }`}
           >
             Kumaon Division (6)
@@ -692,28 +692,28 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
       {/* Main Grid: Interactive Map + District Showcase */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Interactive Map Box */}
-        <div className="lg:col-span-7 bg-[#000044] rounded-3xl p-5 sm:p-7 border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-[#14281D] rounded-3xl p-5 sm:p-7 border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-between">
           {/* Subtle Himalayan topographic contours in background */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/25 via-transparent to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/30 via-transparent to-transparent pointer-events-none"></div>
 
           {/* Map Controls & Status Badge */}
           <div className="flex flex-wrap items-center justify-between gap-3 relative z-10 pb-4 border-b border-white/10 text-xs">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="text-white font-bold">Uttarakhand Map Explorer</span>
-              <span className="text-slate-400 text-[11px] hidden sm:inline">| Click to select district</span>
+              <span className="text-slate-300 text-[11px] hidden sm:inline">| Click to select district</span>
             </div>
-            <div className="flex items-center gap-3 text-[11px] text-slate-300">
+            <div className="flex items-center gap-3 text-[11px] text-slate-200">
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-sm bg-blue-500/80"></span>
+                <span className="w-2.5 h-2.5 rounded-sm bg-[#2D5A42]"></span>
                 <span>Garhwal</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-sm bg-amber-500/80"></span>
+                <span className="w-2.5 h-2.5 rounded-sm bg-[#3E5C49]"></span>
                 <span>Kumaon</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-orange"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-[#B66236]"></span>
                 <span>Hotspots</span>
               </span>
             </div>
@@ -733,16 +733,16 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                   <feComposite in="SourceGraphic" in2="blur" operator="over" />
                 </filter>
                 <linearGradient id="garhwalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#1E3A8A" stopOpacity="0.75" />
-                  <stop offset="100%" stopColor="#0F2454" stopOpacity="0.85" />
+                  <stop offset="0%" stopColor="#254D38" stopOpacity="0.85" />
+                  <stop offset="100%" stopColor="#163223" stopOpacity="0.95" />
                 </linearGradient>
                 <linearGradient id="kumaonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#92400E" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="#451A03" stopOpacity="0.8" />
+                  <stop offset="0%" stopColor="#2C4E3A" stopOpacity="0.85" />
+                  <stop offset="100%" stopColor="#193325" stopOpacity="0.95" />
                 </linearGradient>
                 <linearGradient id="activeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FF5A1F" stopOpacity="0.9" />
-                  <stop offset="100%" stopColor="#C2410C" stopOpacity="0.95" />
+                  <stop offset="0%" stopColor="#B66236" stopOpacity="0.95" />
+                  <stop offset="100%" stopColor="#8A421E" stopOpacity="0.98" />
                 </linearGradient>
               </defs>
 
@@ -761,10 +761,10 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                         isSelected 
                           ? 'url(#activeGrad)' 
                           : isHovered
-                            ? (isGarhwal ? '#2563EB' : '#D97706')
+                            ? (isGarhwal ? '#2F6649' : '#3D6149')
                             : (isGarhwal ? 'url(#garhwalGrad)' : 'url(#kumaonGrad)')
                       }
-                      stroke={isSelected ? '#FFFFFF' : '#94A3B8'}
+                      stroke={isSelected ? '#FFFFFF' : '#4E715B'}
                       strokeWidth={isSelected ? '3' : '1.5'}
                       strokeDasharray={isSelected ? 'none' : 'none'}
                       className="transition-all duration-300 cursor-pointer filter hover:drop-shadow-lg"
@@ -799,7 +799,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                         y={district.centerCoordinates.y + 14}
                         textAnchor="middle"
                         className={`text-[9px] uppercase tracking-wider font-semibold ${
-                          isSelected ? 'fill-amber-200' : 'fill-slate-300 opacity-75'
+                          isSelected ? 'fill-amber-200' : 'fill-emerald-100 opacity-75'
                         }`}
                       >
                         {district.destinations.length} Key Places
@@ -828,14 +828,14 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                       {(isSelectedDistrict || isHovered) && (
                         <circle
                           r="12"
-                          className="fill-brand-orange/40 animate-ping"
+                          className="fill-[#B66236]/40 animate-ping"
                         />
                       )}
 
                       {/* Outer Ring */}
                       <circle
                         r="7"
-                        fill={pin.isCharDham ? '#FF5A1F' : (isSelectedDistrict ? '#FF5A1F' : '#F59E0B')}
+                        fill={pin.isCharDham ? '#B66236' : (isSelectedDistrict ? '#B66236' : '#C49746')}
                         stroke="#FFFFFF"
                         strokeWidth="2"
                         className="transition-transform group-hover:scale-125"
@@ -851,7 +851,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                       <text
                         x="10"
                         y="4"
-                        className="text-[10px] font-bold fill-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] opacity-95 group-hover:fill-brand-orange group-hover:font-extrabold transition-colors"
+                        className="text-[10px] font-bold fill-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] opacity-95 group-hover:fill-amber-300 group-hover:font-extrabold transition-colors"
                       >
                         {pin.name}
                       </text>
@@ -864,13 +864,13 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
             {/* Hover Tooltip Popup if a hotspot pin is hovered */}
             {hoveredHotspot && (
               <div 
-                className="absolute z-30 bg-slate-900/95 backdrop-blur-md text-white px-3 py-2 rounded-xl border border-brand-orange/50 shadow-2xl text-xs pointer-events-none transform -translate-x-1/2 -translate-y-full mb-3 animate-in fade-in zoom-in-95 duration-150"
+                className="absolute z-30 bg-[#14281D]/95 backdrop-blur-md text-white px-3 py-2 rounded-xl border border-[#B66236]/50 shadow-2xl text-xs pointer-events-none transform -translate-x-1/2 -translate-y-full mb-3 animate-in fade-in zoom-in-95 duration-150"
                 style={{
                   left: `${(hoveredHotspot.x / 1000) * 100}%`,
                   top: `${(hoveredHotspot.y / 680) * 100}%`
                 }}
               >
-                <div className="font-extrabold text-brand-orange flex items-center gap-1.5">
+                <div className="font-extrabold text-[#E0A985] flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>{hoveredHotspot.name}</span>
                 </div>
@@ -888,7 +888,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
           <div className="pt-3 border-t border-white/10 relative z-10">
             <div className="text-[11px] uppercase font-bold tracking-wider text-slate-400 mb-2 flex items-center justify-between">
               <span>Quick District Jump:</span>
-              <span className="text-brand-orange font-bold">13 Districts Available</span>
+              <span className="text-[#E0A985] font-bold">13 Districts Available</span>
             </div>
             <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto hide-scrollbar">
               {filteredDistricts.map((d) => (
@@ -897,7 +897,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                   onClick={() => handleSelectDistrict(d.id)}
                   className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                     selectedDistrictId === d.id
-                      ? 'bg-brand-orange text-white shadow-md'
+                      ? 'bg-[#1E3A2B] text-white shadow-md border border-emerald-500/40'
                       : 'bg-white/10 hover:bg-white/20 text-slate-200 border border-white/10'
                   }`}
                 >
@@ -911,53 +911,53 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
         {/* Right Column: Active District Showcase & Destinations List */}
         <div id="district-details-panel" className="lg:col-span-5 space-y-5">
           {/* District Header Overview Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-[#D5CDBC] shadow-lg relative overflow-hidden">
+          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-[#DDD5C7] shadow-sm relative overflow-hidden">
             <div className="flex items-start justify-between gap-3 mb-2">
               <div>
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 ${
                   selectedDistrict.division === 'Garhwal'
-                    ? 'bg-blue-100 text-blue-800 border border-blue-200'
-                    : 'bg-amber-100 text-amber-900 border border-amber-200'
+                    ? 'bg-emerald-50 text-[#1E3A2B] border border-emerald-200'
+                    : 'bg-amber-50 text-amber-900 border border-amber-200'
                 }`}>
                   {selectedDistrict.division} Division
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-slate-900">
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#1C1F1D]">
                   {selectedDistrict.name} District
                 </h3>
               </div>
               <div className="text-right">
-                <span className="text-[11px] text-slate-500 uppercase font-bold tracking-wider block">Headquarters</span>
-                <span className="font-bold text-slate-900 text-sm">{selectedDistrict.headquarters}</span>
+                <span className="text-[11px] text-[#5A625D] uppercase font-bold tracking-wider block">Headquarters</span>
+                <span className="font-bold text-[#1C1F1D] text-sm">{selectedDistrict.headquarters}</span>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm font-semibold text-brand-orange mb-2">
+            <p className="text-xs sm:text-sm font-semibold text-[#B66236] mb-2">
               {selectedDistrict.tagline}
             </p>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#5A625D] leading-relaxed">
               {selectedDistrict.overview}
             </p>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-slate-100 text-xs text-slate-700">
-              <div className="bg-[#FAF8F5] p-2.5 rounded-xl border border-[#E8E2D5]">
-                <span className="text-[10px] text-slate-500 block uppercase font-bold">Elevation Range</span>
-                <strong className="text-slate-900">{selectedDistrict.elevationRange}</strong>
+            <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-[#EAE6DD] text-xs text-[#2C312E]">
+              <div className="bg-[#F7F5F0] p-2.5 rounded-xl border border-[#E2DDD5]">
+                <span className="text-[10px] text-[#5A625D] block uppercase font-bold">Elevation Range</span>
+                <strong className="text-[#1C1F1D]">{selectedDistrict.elevationRange}</strong>
               </div>
-              <div className="bg-[#FAF8F5] p-2.5 rounded-xl border border-[#E8E2D5]">
-                <span className="text-[10px] text-slate-500 block uppercase font-bold">Total Area</span>
-                <strong className="text-slate-900">{selectedDistrict.area}</strong>
+              <div className="bg-[#F7F5F0] p-2.5 rounded-xl border border-[#E2DDD5]">
+                <span className="text-[10px] text-[#5A625D] block uppercase font-bold">Total Area</span>
+                <strong className="text-[#1C1F1D]">{selectedDistrict.area}</strong>
               </div>
             </div>
           </div>
 
           {/* Destinations Inside Selected District Header */}
           <div className="flex items-center justify-between px-1">
-            <h4 className="font-display font-extrabold text-lg text-slate-900 flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-brand-orange" />
+            <h4 className="font-display font-extrabold text-lg text-[#1C1F1D] flex items-center gap-2">
+              <MapPin className="w-5 h-5 text-[#1E3A2B]" />
               <span>Top Destinations in {selectedDistrict.name}</span>
             </h4>
-            <span className="text-xs font-bold text-brand-orange bg-brand-orange/10 px-2.5 py-0.5 rounded-full border border-brand-orange/20">
+            <span className="text-xs font-bold text-[#1E3A2B] bg-[#1E3A2B]/10 px-2.5 py-0.5 rounded-full border border-[#1E3A2B]/20">
               {selectedDistrict.destinations.length} Destinations
             </span>
           </div>
@@ -967,7 +967,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
             {selectedDistrict.destinations.map((dest) => (
               <div 
                 key={dest.id}
-                className="bg-white rounded-2xl p-4 sm:p-5 border border-[#D5CDBC] shadow-md hover:border-brand-orange/50 transition-all group flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+                className="bg-white rounded-2xl p-4 sm:p-5 border border-[#DDD5C7] shadow-2xs hover:border-[#1E3A2B]/50 transition-all group flex flex-col sm:flex-row gap-4 items-start sm:items-center"
               >
                 {/* Destination Thumbnail */}
                 <div className="relative w-full sm:w-32 aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 shrink-0">
@@ -989,23 +989,23 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                 {/* Content Details */}
                 <div className="flex-1 space-y-1.5 w-full">
                   <div className="flex items-start justify-between gap-2">
-                    <h5 className="font-display font-bold text-base text-slate-900 group-hover:text-brand-orange transition-colors">
+                    <h5 className="font-display font-bold text-base text-[#1C1F1D] group-hover:text-[#1E3A2B] transition-colors">
                       {dest.name}
                     </h5>
-                    <span className="text-[10px] text-slate-500 font-semibold bg-slate-100 px-2 py-0.5 rounded">
+                    <span className="text-[10px] text-[#5A625D] font-semibold bg-[#F7F5F0] border border-[#E8E2D5] px-2 py-0.5 rounded">
                       {dest.bestTime.split('&')[0]}
                     </span>
                   </div>
 
-                  <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-[#5A625D] line-clamp-2 leading-relaxed">
                     {dest.tagline}
                   </p>
 
                   {/* Highlights Bullet List */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 pt-1 text-[11px] text-slate-700">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 pt-1 text-[11px] text-[#2C312E]">
                     {dest.highlights.slice(0, 2).map((h, i) => (
                       <div key={i} className="flex items-center gap-1.5 truncate">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                         <span className="truncate">{h}</span>
                       </div>
                     ))}
@@ -1015,16 +1015,16 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
                   <div className="pt-2 flex items-center gap-2">
                     <Link
                       to={`/destinations/${dest.id}`}
-                      className="flex-1 py-1.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-bold transition-colors flex items-center justify-center gap-1"
+                      className="flex-1 py-1.5 px-3 rounded-lg bg-[#F7F5F0] hover:bg-[#EAE6DD] text-[#1C1F1D] text-[11px] font-bold transition-colors flex items-center justify-center gap-1 border border-[#DDD5C7]"
                     >
                       <span>Explore {dest.name}</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
+                      <ChevronRight className="w-3.5 h-3.5 text-[#1E3A2B]" />
                     </Link>
 
                     <button
                       type="button"
                       onClick={() => onOpenBookingModal ? onOpenBookingModal(dest.name) : null}
-                      className="py-1.5 px-3 rounded-lg orange-gradient-btn text-white text-[11px] font-bold shadow-xs transition-all flex items-center justify-center gap-1 cursor-pointer"
+                      className="py-1.5 px-3.5 rounded-lg forest-btn text-white text-[11px] font-bold shadow-xs transition-all flex items-center justify-center gap-1 cursor-pointer"
                     >
                       <span>Plan Trip</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -1036,7 +1036,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
           </div>
 
           {/* Bottom District Exploration Callout */}
-          <div className="bg-[#000044] rounded-2xl p-5 text-white flex items-center justify-between gap-4 shadow-xl border border-white/10">
+          <div className="bg-[#14281D] rounded-2xl p-5 text-white flex items-center justify-between gap-4 shadow-xl border border-white/10">
             <div>
               <h5 className="font-display font-bold text-sm text-white">
                 Planning a trip covering {selectedDistrict.name}?
@@ -1048,7 +1048,7 @@ export const UttarakhandMapExplorer: React.FC<UttarakhandMapExplorerProps> = ({
             <button
               type="button"
               onClick={() => onOpenBookingModal ? onOpenBookingModal(`${selectedDistrict.name} Tour Package`) : null}
-              className="orange-gradient-btn px-4 py-2.5 rounded-xl font-display font-bold text-xs text-white shrink-0 shadow-md cursor-pointer"
+              className="earth-btn px-4 py-2.5 rounded-xl font-display font-bold text-xs text-white shrink-0 shadow-md cursor-pointer"
             >
               Custom Enquiry →
             </button>

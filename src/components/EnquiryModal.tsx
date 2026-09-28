@@ -127,20 +127,20 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         className="relative w-full max-w-[580px] bg-[#FAF8F5] rounded-3xl shadow-2xl overflow-hidden border border-[#E5DECE] max-h-[92vh] flex flex-col animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Midnight Royal Navy Header matching website theme */}
-        <div className="bg-[#000044] px-6 py-5 sm:py-6 text-white relative border-b border-white/10 shrink-0">
+        {/* Top Forest Green Header matching website theme */}
+        <div className="bg-[#183124] px-6 py-5 sm:py-6 text-white relative border-b border-white/10 shrink-0">
           <button
             type="button"
             onClick={onClose}
-            className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-brand-orange border border-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-all cursor-pointer shadow-sm"
+            className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-all cursor-pointer shadow-sm"
             aria-label="Close"
           >
             <X className="w-4 h-4" />
           </button>
 
           <div className="pr-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-[11px] font-bold uppercase tracking-wider mb-2">
-              <Compass className="w-3.5 h-3.5 text-brand-orange" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[11px] font-bold uppercase tracking-wider mb-2">
+              <Compass className="w-3.5 h-3.5 text-emerald-300" />
               <span>DIRECT BOOKING SUPPORT</span>
             </div>
             <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug line-clamp-1 drop-shadow-sm">
@@ -285,11 +285,11 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 />
               </div>
 
-              {/* Submit Button with Signature Brand Orange Gradient */}
+              {/* Submit Button with Himalayan Forest Green */}
               <div className="pt-1.5">
                 <button
                   type="submit"
-                  className="w-full orange-gradient-btn text-white py-3.5 sm:py-4 px-6 rounded-2xl font-display font-bold text-sm sm:text-base shadow-xl shadow-brand-orange/25 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+                  className="w-full forest-btn text-white py-3.5 sm:py-4 px-6 rounded-2xl font-display font-bold text-sm sm:text-base shadow-lg shadow-brand-forest/20 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
                 >
                   <WhatsAppIcon className="w-5 h-5 fill-current shrink-0" />
                   <span>Send Enquiry via WhatsApp →</span>

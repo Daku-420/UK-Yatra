@@ -195,7 +195,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       </section>
 
       {/* ============================================================ */}
-      {/* 1.5 INTERACTIVE UTTARAKHAND MAP EXPLORER BY DISTRICTS */}
+      {/* 1.5 INTERACTIVE UTTARAKHAND DISTRICT & DESTINATION MAP EXPLORER */}
       {/* ============================================================ */}
       <UttarakhandMapExplorer onOpenBookingModal={onOpenBookingModal} />
 
@@ -205,14 +205,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section id="explore-section" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E3A2B]/10 border border-[#1E3A2B]/20 text-[#1E3A2B] text-xs font-bold uppercase tracking-wider mb-2">
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Sanctuaries</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
-              Explore <span className="text-brand-orange">Uttarakhand</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[#1C1F1D]">
+              Explore <span className="text-[#1E3A2B]">Uttarakhand</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-normal">
+            <p className="mt-2 text-xs sm:text-sm text-[#5A625D] max-w-xl font-normal">
               From peaceful valleys to high Himalayan trails, discover the places that make Uttarakhand unforgettable.
             </p>
           </div>
@@ -225,8 +225,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
                 onClick={() => setSelectedDestCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   selectedDestCategory === cat
-                    ? 'bg-brand-orange text-white shadow-md shadow-brand-orange/30'
-                    : 'bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-[#DCD6CC] shadow-xs'
+                    ? 'bg-[#1E3A2B] text-white shadow-xs'
+                    : 'bg-white text-[#2C312E] hover:bg-[#F0EDE6] hover:text-[#1C1F1D] border border-[#DDD5C7] shadow-2xs'
                 }`}
               >
                 {cat}
@@ -245,10 +245,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         <div className="mt-12 text-center">
           <Link
             to="/destinations"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-brand-card hover:bg-slate-800 text-slate-200 hover:text-white border border-white/15 shadow-sm font-display font-semibold text-xs transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-[#F7F5F0] text-[#1C1F1D] border border-[#DDD5C7] shadow-xs font-display font-semibold text-xs transition-all hover:scale-[1.02]"
           >
             <span>View All 20+ Uttarakhand Destinations</span>
-            <ArrowRight className="w-4 h-4 text-brand-orange" />
+            <ArrowRight className="w-4 h-4 text-[#1E3A2B]" />
           </Link>
         </div>
       </section>
@@ -322,24 +322,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E3A2B]/10 border border-[#1E3A2B]/20 text-[#1E3A2B] text-xs font-bold uppercase tracking-wider mb-2">
               <Flame className="w-3.5 h-3.5" />
               <span>Curated Packages</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
-              Journeys Worth <span className="text-brand-orange">Taking</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[#1C1F1D]">
+              Journeys Worth <span className="text-[#1E3A2B]">Taking</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-normal">
+            <p className="mt-2 text-xs sm:text-sm text-[#5A625D] max-w-xl font-normal">
               Handcrafted itineraries with verified hill drivers, sanitised stays, priority darshan, and transparent pricing.
             </p>
           </div>
 
           <Link
             to="/packages"
-            className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:underline"
+            className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-bold text-[#1E3A2B] hover:underline"
           >
             <span>Browse All Tour Packages</span>
-            <ArrowRight className="w-4 h-4 text-brand-orange" />
+            <ArrowRight className="w-4 h-4 text-[#1E3A2B]" />
           </Link>
         </div>
 
@@ -529,7 +529,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             </div>
 
             {/* Right Interactive Form */}
-            <div className="lg:col-span-7 bg-[#000044] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-xl">
+            <div className="lg:col-span-7 bg-[#183124] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl">
               {!customSubmitted ? (
                 <form onSubmit={handleCustomSubmit} className="space-y-4 text-xs">
                   <h3 className="font-display font-bold text-lg text-white mb-2 flex items-center justify-between">
@@ -670,24 +670,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E3A2B]/10 border border-[#1E3A2B]/20 text-[#1E3A2B] text-xs font-bold uppercase tracking-wider mb-2">
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Expeditions</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
-              Walk Into The <span className="text-brand-orange">Himalayas</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[#1C1F1D]">
+              Walk Into The <span className="text-[#1E3A2B]">Himalayas</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-normal">
+            <p className="mt-2 text-xs sm:text-sm text-[#5A625D] max-w-xl font-normal">
               From the winter snow slopes of Kedarkantha to the floral carpets of Valley of Flowers and Tungnath summit.
             </p>
           </div>
 
           <Link
             to="/trekking"
-            className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:underline"
+            className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-bold text-[#1E3A2B] hover:underline"
           >
             <span>Explore All 10+ Himalayan Treks</span>
-            <ArrowRight className="w-4 h-4 text-brand-orange" />
+            <ArrowRight className="w-4 h-4 text-[#1E3A2B]" />
           </Link>
         </div>
 
