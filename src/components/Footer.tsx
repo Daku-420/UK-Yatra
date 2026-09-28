@@ -135,13 +135,18 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/college-trips" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> College Trips & Treks
+                <Link to="/educational-programmes" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
+                  <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> Educational Programmes
                 </Link>
               </li>
               <li>
                 <Link to="/school-trips" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
                   <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> School Excursions
+                </Link>
+              </li>
+              <li>
+                <Link to="/college-trips" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
+                  <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> College Trips & Treks
                 </Link>
               </li>
               <li>

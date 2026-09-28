@@ -18,7 +18,10 @@ import {
   SlidersHorizontal,
   PhoneCall,
   Mountain,
-  ChevronRight
+  ChevronRight,
+  GraduationCap,
+  School,
+  SunMedium
 } from 'lucide-react';
 import { 
   OUTDOOR_ACTIVITIES, 
@@ -825,6 +828,116 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
             </button>
           </div>
         )}
+      </section>
+
+      {/* 5.5 EDUCATIONAL PROGRAMMES SECTION */}
+      <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="rounded-3xl bg-gradient-to-br from-[#000044] via-[#090e38] to-[#12194b] text-white p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden border border-white/10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 relative z-10">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
+                <GraduationCap className="w-3.5 h-3.5" />
+                <span>Experiential Learning & Youth Camps</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight text-white">
+                Educational Programmes in Uttarakhand
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-2xl">
+                Certified, curriculum-aligned excursions, campus adventure treks, and summer survival camps led with strict 1:8 safety supervision.
+              </p>
+            </div>
+            <Link
+              to="/educational-programmes"
+              className="text-xs font-bold text-brand-orange hover:text-white flex items-center gap-1.5 transition-colors self-start md:self-auto"
+            >
+              <span>Explore All Educational Tracks</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+            {/* School Trips Card */}
+            <div className="group flex flex-col justify-between bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:border-emerald-400/50 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    <School className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    1:8 Safe Ratio
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold font-display text-white group-hover:text-emerald-300 transition-colors">
+                  School Trips
+                </h3>
+                <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                  Curriculum-aligned STEM, ecology, botany at FRI Dehradun, geology at Wadia Institute, and safe Jim Corbett wildlife study.
+                </p>
+              </div>
+              <Link
+                to="/school-trips"
+                className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 group-hover:text-white transition-colors"
+              >
+                <span>View School Circuits</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* College Trips Card */}
+            <div className="group flex flex-col justify-between bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:border-brand-orange/50 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2.5 rounded-xl bg-orange-500/20 text-brand-orange border border-orange-500/30">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+                    Hot Discounts
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold font-display text-white group-hover:text-brand-orange transition-colors">
+                  College Trips
+                </h3>
+                <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                  High-altitude student treks (Kedarkantha, Chopta), thrilling Rishikesh white-water rafting, and riverside camping with student discounts.
+                </p>
+              </div>
+              <Link
+                to="/college-trips"
+                className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange group-hover:text-white transition-colors"
+              >
+                <span>View College Treks</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Summer Learning Programmes Card */}
+            <div className="group flex flex-col justify-between bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:border-amber-400/50 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2.5 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
+                    <SunMedium className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                    Summer Camps
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold font-display text-white group-hover:text-amber-300 transition-colors">
+                  Summer Learning Programmes
+                </h3>
+                <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                  Himalayan wilderness survival, friction fire craft, Dark-Sky astronomy at Benital, and youth leadership bootcamps with certification.
+                </p>
+              </div>
+              <Link
+                to="/summer-learning-programmes"
+                className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 group-hover:text-white transition-colors"
+              >
+                <span>View Summer Camps</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 6. HIMALAYAN SAFETY & ACCREDITATION BANNER */}
