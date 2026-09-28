@@ -33,7 +33,7 @@ import { ReviewCard } from '../components/ReviewCard';
 import { BlogCard } from '../components/BlogCard';
 import { InstagramIcon } from '../components/SocialIcons';
 import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
-import { LiveWeatherWidget } from '../components/LiveWeatherWidget';
+import { UttarakhandMapExplorer } from '../components/UttarakhandMapExplorer';
 import { adminStorage } from '../utils/adminStorage';
 
 interface HomePageProps {
@@ -195,9 +195,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       </section>
 
       {/* ============================================================ */}
-      {/* 1.5 LIVE HIMALAYAN WEATHER & YATRA PORTAL STATUS */}
+      {/* 1.5 INTERACTIVE UTTARAKHAND MAP EXPLORER BY DISTRICTS */}
       {/* ============================================================ */}
-      <LiveWeatherWidget />
+      <UttarakhandMapExplorer onOpenBookingModal={onOpenBookingModal} />
 
       {/* ============================================================ */}
       {/* 2. DESTINATIONS DISCOVERY SECTION */}
@@ -205,14 +205,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
       <section id="explore-section" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E3A2B]/10 border border-[#1E3A2B]/20 text-[#1E3A2B] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Sanctuaries</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[#1C1F1D]">
-              Explore <span className="text-[#1E3A2B]">Uttarakhand</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
+              Explore <span className="text-brand-orange">Uttarakhand</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-[#5A625D] max-w-xl font-normal">
+            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-normal">
               From peaceful valleys to high Himalayan trails, discover the places that make Uttarakhand unforgettable.
             </p>
           </div>
