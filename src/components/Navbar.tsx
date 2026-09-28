@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   Phone, 
   Mail, 
@@ -192,6 +192,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const closeActivitiesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closePackagesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigate = (path: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (closeActivitiesTimeoutRef.current) {
+      clearTimeout(closeActivitiesTimeoutRef.current);
+      closeActivitiesTimeoutRef.current = null;
+    }
+    if (closePackagesTimeoutRef.current) {
+      clearTimeout(closePackagesTimeoutRef.current);
+      closePackagesTimeoutRef.current = null;
+    }
+    setActivitiesOpen(false);
+    setActiveSubmenu(null);
+    setPackagesDropdownOpen(false);
+    setMobileMenuOpen(false);
+    navigate(path);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  };
 
   const handleActivitiesEnter = () => {
     if (closeActivitiesTimeoutRef.current) {
@@ -490,8 +512,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             <li key={item.slug}>
                               <Link
                                 to={item.path}
-                                onClick={() => setPackagesDropdownOpen(false)}
-                                className="group flex items-center justify-between py-1.5 px-2 rounded-lg text-xs hover:bg-[#EFE8DC] transition-colors"
+                                onClick={(e) => handleNavigate(item.path, e)}
+                                className="group flex items-center justify-between py-1.5 px-2 rounded-lg text-xs hover:bg-[#EFE8DC] transition-colors cursor-pointer"
                               >
                                 <span className="flex items-center gap-1.5 truncate">
                                   <span className="w-1.5 h-1.5 rounded-full bg-brand-orange/60 group-hover:bg-brand-orange transition-colors shrink-0"></span>
@@ -518,8 +540,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </div>
                     <Link
                       to="/packages"
-                      onClick={() => setPackagesDropdownOpen(false)}
-                      className="px-5 py-2 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-black text-xs shadow-md shadow-brand-orange/25 flex items-center gap-1.5 transition-all hover:scale-[1.02]"
+                      onClick={(e) => handleNavigate('/packages', e)}
+                      className="px-5 py-2 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-black text-xs shadow-md shadow-brand-orange/25 flex items-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer"
                     >
                       <span>VIEW ALL TOURS</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -585,11 +607,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     >
                       <Link
                         to="/outdoor-activities"
-                        onClick={() => {
-                          setActivitiesOpen(false);
-                          setActiveSubmenu(null);
-                        }}
-                        className={`flex items-center justify-between p-3 rounded-2xl border transition-all group shadow-xs ${
+                        onClick={(e) => handleNavigate('/outdoor-activities', e)}
+                        className={`flex items-center justify-between p-3 rounded-2xl border transition-all group shadow-xs cursor-pointer ${
                           activeSubmenu === 'outdoor'
                             ? 'bg-orange-50/80 border-brand-orange ring-2 ring-brand-orange/30 shadow-md'
                             : 'bg-white hover:bg-orange-50/50 border-[#DDD5C7] hover:border-brand-orange'
@@ -620,11 +639,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     >
                       <Link
                         to="/educational-programmes"
-                        onClick={() => {
-                          setActivitiesOpen(false);
-                          setActiveSubmenu(null);
-                        }}
-                        className={`flex items-center justify-between p-3 rounded-2xl border transition-all group shadow-xs ${
+                        onClick={(e) => handleNavigate('/educational-programmes', e)}
+                        className={`flex items-center justify-between p-3 rounded-2xl border transition-all group shadow-xs cursor-pointer ${
                           activeSubmenu === 'educational'
                             ? 'bg-indigo-50/80 border-indigo-600 ring-2 ring-indigo-500/30 shadow-md'
                             : 'bg-white hover:bg-indigo-50/40 border-[#DDD5C7] hover:border-indigo-500'
@@ -682,11 +698,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             <Link
                               key={item.id}
                               to={item.path}
-                              onClick={() => {
-                                setActivitiesOpen(false);
-                                setActiveSubmenu(null);
-                              }}
-                              className="group/item flex flex-col justify-between p-2.5 rounded-xl bg-white hover:bg-orange-50/60 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left"
+                              onClick={(e) => handleNavigate(item.path, e)}
+                              className="group/item flex flex-col justify-between p-2.5 rounded-xl bg-white hover:bg-orange-50/60 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left cursor-pointer"
                             >
                               <div className="flex items-start gap-2.5">
                                 <div className="p-1.5 rounded-lg bg-orange-50 border border-orange-200/60 text-brand-orange group-hover/item:scale-105 group-hover/item:bg-brand-orange group-hover/item:text-white transition-all shrink-0 mt-0.5">
@@ -719,14 +732,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                         </div>
                         <Link
                           to="/outdoor-activities"
-                          onClick={() => {
-                            setActivitiesOpen(false);
-                            setActiveSubmenu(null);
-                          }}
-                          className="px-4 py-1.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-black text-xs shadow-md shadow-brand-orange/20 flex items-center gap-1 transition-all hover:scale-[1.02]"
+                          onClick={(e) => handleNavigate('/outdoor-activities', e)}
+                          className="px-4 py-1.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-black text-xs shadow-md shadow-brand-orange/20 flex items-center gap-1 transition-all hover:scale-[1.02] cursor-pointer shrink-0"
                         >
-                          <span>VIEW ALL</span>
-                          <ArrowRight className="w-3 h-3" />
+                          <span>VIEW ALL ACTIVITIES</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>
                     </div>
@@ -766,13 +776,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               <div className="flex items-center justify-between mb-2">
                                 <Link
                                   to={track.path}
-                                  onClick={() => {
-                                    setActivitiesOpen(false);
-                                    setActiveSubmenu(null);
-                                  }}
-                                  className="flex items-center gap-2 group/trk text-xs font-black text-slate-950 hover:text-brand-orange transition-colors"
+                                  onClick={(e) => handleNavigate(track.path, e)}
+                                  className="flex items-center gap-2 group/trk text-xs font-black text-slate-950 hover:text-brand-orange transition-colors cursor-pointer"
                                 >
-                                  <span className="p-1 rounded-md bg-white border border-[#DDD5C7] text-brand-orange">
+                                  <span className="p-1 rounded-md bg-white border border-[#DDD5C7] text-brand-orange group-hover/trk:bg-orange-50 transition-colors">
                                     <TrackIcon className="w-3.5 h-3.5" />
                                   </span>
                                   <span>{track.name}</span>
@@ -780,14 +787,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                 </Link>
                                 <Link
                                   to={track.path}
-                                  onClick={() => {
-                                    setActivitiesOpen(false);
-                                    setActiveSubmenu(null);
-                                  }}
-                                  className="text-[11px] text-brand-orange hover:text-orange-700 font-bold flex items-center gap-0.5"
+                                  onClick={(e) => handleNavigate(track.path, e)}
+                                  className="px-2.5 py-1 rounded-lg bg-orange-100 hover:bg-brand-orange border border-orange-200/80 hover:border-brand-orange text-brand-orange hover:text-white font-extrabold text-[11px] flex items-center gap-1 transition-all cursor-pointer shadow-2xs hover:shadow-xs shrink-0 active:scale-95"
+                                  title={`View all ${track.name}`}
                                 >
                                   <span>All Trips</span>
-                                  <ChevronRight className="w-3 h-3" />
+                                  <ChevronRight className="w-3.5 h-3.5" />
                                 </Link>
                               </div>
 
@@ -796,11 +801,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                   <Link
                                     key={prog.id}
                                     to={prog.path}
-                                    onClick={() => {
-                                      setActivitiesOpen(false);
-                                      setActiveSubmenu(null);
-                                    }}
-                                    className="p-2.5 rounded-xl bg-white hover:bg-orange-50/50 border border-[#DDD5C7] hover:border-brand-orange transition-all text-left group/prog flex flex-col justify-between shadow-xs hover:shadow-md"
+                                    onClick={(e) => handleNavigate(prog.path, e)}
+                                    className="p-2.5 rounded-xl bg-white hover:bg-orange-50/50 border border-[#DDD5C7] hover:border-brand-orange transition-all text-left group/prog flex flex-col justify-between shadow-xs hover:shadow-md cursor-pointer"
                                   >
                                     <div>
                                       <div className="text-[11.5px] font-bold text-slate-950 group-hover/prog:text-brand-orange line-clamp-1">
@@ -831,14 +833,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                         </div>
                         <Link
                           to="/educational-programmes"
-                          onClick={() => {
-                            setActivitiesOpen(false);
-                            setActiveSubmenu(null);
-                          }}
-                          className="px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-md shadow-indigo-600/20 flex items-center gap-1 transition-all hover:scale-[1.02]"
+                          onClick={(e) => handleNavigate('/educational-programmes', e)}
+                          className="px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-md shadow-indigo-600/20 flex items-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer shrink-0"
                         >
-                          <span>PROGRAMMES HUB</span>
-                          <ArrowRight className="w-3 h-3" />
+                          <span>VIEW ALL TRIPS & HUB</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>
                     </div>
@@ -1113,7 +1112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             <Link
                               key={item.id}
                               to={item.path}
-                              onClick={() => setMobileMenuOpen(false)}
+                              onClick={(e) => handleNavigate(item.path, e)}
                               className="flex items-center justify-between py-1.5 px-2 rounded-lg text-[11px] text-slate-300 hover:text-white hover:bg-white/10"
                             >
                               <span className="truncate pr-2">{item.title}</span>
@@ -1122,7 +1121,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           ))}
                           <Link
                             to="/outdoor-activities"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={(e) => handleNavigate('/outdoor-activities', e)}
                             className="block py-1.5 px-2 text-[11px] font-bold text-brand-orange hover:underline text-center"
                           >
                             View All Outdoor Activities →
@@ -1136,7 +1135,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       <div className="flex items-center justify-between p-2.5">
                         <Link 
                           to="/educational-programmes" 
-                          onClick={() => setMobileMenuOpen(false)} 
+                          onClick={(e) => handleNavigate('/educational-programmes', e)} 
                           className="flex items-center gap-2 text-xs font-bold text-white hover:text-brand-orange"
                         >
                           <GraduationCap className="w-4 h-4 text-indigo-400" />
@@ -1159,7 +1158,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             <div key={track.id} className="space-y-1">
                               <Link
                                 to={track.path}
-                                onClick={() => setMobileMenuOpen(false)}
+                                onClick={(e) => handleNavigate(track.path, e)}
                                 className="block text-[11px] font-bold text-brand-orange px-2 pt-1"
                               >
                                 {track.name} →
@@ -1168,7 +1167,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                 <Link
                                   key={prog.id}
                                   to={prog.path}
-                                  onClick={() => setMobileMenuOpen(false)}
+                                  onClick={(e) => handleNavigate(prog.path, e)}
                                   className="flex items-center justify-between py-1 px-2 rounded text-[10.5px] text-slate-300 hover:text-white hover:bg-white/10"
                                 >
                                   <span className="truncate pr-2">{prog.title}</span>
@@ -1179,7 +1178,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           ))}
                           <Link
                             to="/educational-programmes"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={(e) => handleNavigate('/educational-programmes', e)}
                             className="block py-1.5 px-2 text-[11px] font-bold text-brand-orange hover:underline text-center"
                           >
                             Explore All Educational Hub →
