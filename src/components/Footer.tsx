@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
               href={getWhatsAppUrl("Hi UKYatra, I would like to speak to a travel specialist.")}
               target="_blank"
               rel="noreferrer"
-              className="earth-btn px-6 py-3 rounded-xl text-sm font-semibold text-white flex items-center gap-2 shadow-md"
+              className="orange-gradient-btn px-6 py-3 rounded-xl text-sm font-semibold text-white flex items-center gap-2 shadow-md"
             >
               <WhatsAppIcon className="w-4 h-4" />
               <span>Talk to an Expert</span>

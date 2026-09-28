@@ -1051,7 +1051,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <button
               onClick={onOpenBookingModal}
-              className="forest-btn px-4 xl:px-5 py-2 xl:py-2.5 rounded-xl font-display font-semibold text-xs xl:text-sm text-white flex items-center gap-2 shadow-sm whitespace-nowrap shrink-0 cursor-pointer"
+              className="orange-gradient-btn px-4 xl:px-5 py-2 xl:py-2.5 rounded-xl font-display font-semibold text-xs xl:text-sm text-white flex items-center gap-2 shadow-md whitespace-nowrap shrink-0 cursor-pointer"
             >
               <span>Plan My Trip</span>
             </button>
@@ -1079,9 +1079,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
         </div>
       </nav>
 
-      {/* Mobile Drawer Menu - Himalayan Forest Green */}
+      {/* Mobile Drawer Menu - Midnight Navy */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[88px] h-[calc(100dvh-60px)] md:h-[calc(100dvh-88px)] bg-[#14281D]/98 backdrop-blur-2xl border-t border-white/10 z-50 overflow-y-auto p-5 pb-[calc(6.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[88px] h-[calc(100dvh-60px)] md:h-[calc(100dvh-88px)] bg-[#000044]/98 backdrop-blur-2xl border-t border-white/10 z-50 overflow-y-auto p-5 pb-[calc(6.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
           <div className="space-y-2">
             <div className="pb-3 mb-2 border-b border-white/10 px-2 flex items-center justify-between">
               <Logo size="sm" />
@@ -1543,7 +1543,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 setMobileMenuOpen(false);
                 if (onOpenBookingModal) onOpenBookingModal();
               }}
-              className="w-full forest-btn py-3.5 rounded-xl font-display font-semibold text-center text-white shadow-md cursor-pointer"
+              className="w-full orange-gradient-btn py-3.5 rounded-xl font-display font-semibold text-center text-white shadow-md cursor-pointer"
             >
               Plan My Trip
             </button>

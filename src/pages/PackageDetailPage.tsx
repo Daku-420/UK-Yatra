@@ -248,21 +248,21 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
           </Link>
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2.5 sm:mb-3">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#1E3A2B] text-white shadow-xs">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white shadow-md">
               {tourPackage.category}
             </span>
             {tourPackage.difficulty && (
               <span className="px-3 py-1 rounded-full text-xs font-semibold bg-black/50 backdrop-blur-md text-white border border-white/20 flex items-center gap-1">
-                <Compass className="w-3.5 h-3.5 text-emerald-300" />
+                <Compass className="w-3.5 h-3.5 text-brand-orange" />
                 <span>{tourPackage.difficulty}</span>
               </span>
             )}
             <span className="px-3 py-1 rounded-full bg-black/50 text-white text-xs font-semibold backdrop-blur-md border border-white/20 flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-emerald-300" />
+              <Clock className="w-3.5 h-3.5 text-brand-orange" />
               <span>{tourPackage.duration}</span>
             </span>
             <span className="px-3 py-1 rounded-full bg-black/50 text-amber-200 text-xs font-semibold backdrop-blur-md border border-white/20 flex items-center gap-1">
-              <Star className="w-3.5 h-3.5 fill-[#C49746] text-[#C49746]" />
+              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
               <span>{tourPackage.rating} ({tourPackage.reviewsCount} reviews)</span>
             </span>
           </div>
@@ -272,12 +272,12 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
           </h1>
           <div className="mt-2.5 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-200 font-medium">
             <span className="flex items-center gap-1">
-              <MapPin className="w-4 h-4 text-emerald-300 shrink-0" />
+              <MapPin className="w-4 h-4 text-brand-orange shrink-0" />
               <span>{tourPackage.destination}</span>
             </span>
             <span>•</span>
             <span className="flex items-center gap-1">
-              <Calendar className="w-4 h-4 text-[#C49746] shrink-0" />
+              <Calendar className="w-4 h-4 text-amber-300 shrink-0" />
               <span>Best Season: {tourPackage.bestSeason}</span>
             </span>
             {tourPackage.startPoint && (
@@ -470,9 +470,9 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                               </div>
                             )}
                             {item.meals && (
-                              <div className="flex items-center gap-1.5 bg-[#F7F5F0] px-2.5 py-1 rounded-lg border border-[#EAE5DC]">
-                                <Utensils className="w-3.5 h-3.5 text-[#1E3A2B] shrink-0" />
-                                <span><strong className="text-[#1C1F1D]">Meals:</strong> {item.meals}</span>
+                              <div className="flex items-center gap-1.5 bg-[#F5F3EF] px-2.5 py-1 rounded-lg border border-[#E2DDD5]">
+                                <Utensils className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                                <span><strong className="text-slate-900">Meals:</strong> {item.meals}</span>
                               </div>
                             )}
                           </div>
@@ -482,13 +482,13 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                   ))}
                 </div>
               ) : (
-                <div className="border border-[#E2DDD5] rounded-xl p-6 sm:p-8 text-center space-y-4 bg-[#F7F5F0]">
-                  <div className="w-12 h-12 rounded-full bg-[#1E3A2B]/10 border border-[#1E3A2B]/20 flex items-center justify-center mx-auto text-[#1E3A2B]">
+                <div className="border border-[#E2DDD5] rounded-2xl p-6 sm:p-8 text-center space-y-4 bg-[#F5F3EF]">
+                  <div className="w-12 h-12 rounded-full bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mx-auto text-brand-orange">
                     <Compass className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#1C1F1D]">Customized Day-by-Day Route</h3>
-                    <p className="text-xs text-[#5A625D] mt-1 max-w-md mx-auto">
+                    <h3 className="text-base font-bold text-slate-900">Customized Day-by-Day Route</h3>
+                    <p className="text-xs text-slate-600 mt-1 max-w-md mx-auto">
                       This package is customized according to your arrival point, preferred stays, and group pace. Contact our local team on WhatsApp to receive your personalized itinerary PDF.
                     </p>
                   </div>
@@ -496,7 +496,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                     href={getPackageWhatsAppUrl(tourPackage.title)}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl forest-btn text-white font-bold text-xs shadow-sm transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl orange-gradient-btn text-white font-bold text-xs shadow-md transition-all"
                   >
                     <WhatsAppIcon className="w-4 h-4 fill-white" />
                     <span>Get Detailed PDF Itinerary</span>
@@ -662,26 +662,26 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
 
           {/* Right Sticky Booking Card */}
           <div className="lg:col-span-4">
-            <div className="sticky top-28 bg-white rounded-2xl p-6 sm:p-7 border border-[#E2DDD5] shadow-sm space-y-6">
+            <div className="sticky top-28 bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-lg space-y-6">
               <div>
-                <span className="text-[10px] uppercase font-bold tracking-wider text-[#B66236]">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-brand-orange">
                   Tariff & Quotation
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
-                  <span className="font-display font-extrabold text-2xl sm:text-3xl text-[#1C1F1D]">
+                  <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
                     {tourPackage.startingPrice || 'Pricing on Request'}
                   </span>
                   {tourPackage.originalPrice && !tourPackage.startingPrice?.includes('Request') && (
                     <>
-                      <span className="text-sm text-[#7E8782] line-through">
+                      <span className="text-sm text-slate-400 line-through">
                         {tourPackage.originalPrice}
                       </span>
-                      <span className="text-xs text-[#5A625D]">/ person</span>
+                      <span className="text-xs text-slate-600">/ person</span>
                     </>
                   )}
                 </div>
-                <p className="text-[11px] text-[#1E3A2B] font-medium mt-1.5 flex items-center gap-1">
-                  <Check className="w-3.5 h-3.5 text-[#1E3A2B] shrink-0" />
+                <p className="text-[11px] text-emerald-700 font-medium mt-1.5 flex items-center gap-1">
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                   <span>Custom quotes tailored to group size, dates & vehicle preference</span>
                 </p>
               </div>
@@ -689,7 +689,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
               <div className="space-y-3">
                 <button
                   onClick={() => onOpenBookingModal(tourPackage.title)}
-                  className="w-full forest-btn py-3.5 rounded-xl font-display font-bold text-xs text-white shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full orange-gradient-btn py-3.5 rounded-xl font-display font-bold text-xs text-white shadow-xl flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Plan This Trip</span>
                   <ArrowRight className="w-4 h-4" />
@@ -699,17 +699,17 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                   href={getPackageWhatsAppUrl(tourPackage.title, tourPackage.duration)}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-xl font-semibold text-xs transition-all shadow-xs"
+                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-xl font-semibold text-xs transition-all shadow-lg shadow-emerald-900/40"
                 >
                   <WhatsAppIcon className="w-4 h-4 fill-current" />
-                  <span>Enquire on WhatsApp</span>
+                  <span>Get Free Quote on WhatsApp</span>
                 </a>
 
                 <a
                   href={`tel:${SITE_CONFIG.phone}`}
-                  className="w-full flex items-center justify-center gap-2 bg-[#F7F5F0] hover:bg-[#EFECE4] text-[#1C1F1D] py-3 rounded-xl font-semibold text-xs border border-[#DDD5C7] transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 py-3 rounded-xl font-semibold text-xs border border-slate-200 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-[#1E3A2B]" />
+                  <Phone className="w-4 h-4 text-brand-orange" />
                   <span>Call Trip Coordinator</span>
                 </a>
 
@@ -717,26 +717,26 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                   <a
                     href={tourPackage.pdfBrochure}
                     download
-                    className="w-full flex items-center justify-center gap-2 bg-[#F7F5F0] hover:bg-[#EFECE4] text-[#1C1F1D] border border-[#DDD5C7] py-3 rounded-xl font-bold text-xs transition-all shadow-2xs"
+                    className="w-full flex items-center justify-center gap-2 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 py-3 rounded-xl font-bold text-xs transition-all shadow-xs"
                   >
-                    <Download className="w-4 h-4 text-[#1E3A2B]" />
+                    <Download className="w-4 h-4 text-brand-orange" />
                     <span>Download PDF Itinerary</span>
                   </a>
                 )}
               </div>
 
-              <div className="pt-4 border-t border-[#EAE5DC] space-y-2 text-[11px] text-[#5A625D]">
+              <div className="pt-4 border-t border-slate-100 space-y-2 text-[11px] text-slate-500">
                 <p className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-[#1E3A2B] shrink-0" />
-                  <span>25% advance booking deposit to confirm</span>
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span>25% advance booking amount to confirm</span>
                 </p>
                 <p className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-[#1E3A2B] shrink-0" />
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                   <span>Free date rescheduling up to 7 days prior</span>
                 </p>
                 <p className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-[#1E3A2B] shrink-0" />
-                  <span>Dedicated private hill vehicle with certified local driver</span>
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span>Private vehicle with certified mountain driver</span>
                 </p>
               </div>
             </div>
