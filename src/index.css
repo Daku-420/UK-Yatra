@@ -32,15 +32,14 @@
 
 @layer base {
   html {
-    color-scheme: dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
   
   body {
-    background-color: #000044;
-    color: #F8FAFC;
+    background-color: #F5F3EF;
+    color: #1E293B;
     min-height: 100vh;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -54,90 +53,175 @@
   }
 }
 
-/* Dark Frosted Glass (For Hero Overlays, Dark Badges, and Search Bars) */
+/* ========================================================
+   GLOBAL HIGH-VISIBILITY TYPOGRAPHY SYSTEM
+   ======================================================== */
+
+/* 1. Pure & Absolute Text Color Utilities (Never Overridden) */
+.text-white {
+  color: #FFFFFF !important;
+}
+.text-slate-50 {
+  color: #F8FAFC !important;
+}
+.text-slate-100 {
+  color: #F1F5F9 !important;
+}
+.text-slate-200 {
+  color: #E2E8F0 !important;
+}
+.text-slate-300 {
+  color: #CBD5E1 !important;
+}
+.text-slate-900 {
+  color: #0F172A !important;
+}
+.text-slate-800 {
+  color: #1E293B !important;
+}
+.text-slate-700 {
+  color: #334155 !important;
+}
+.text-slate-600 {
+  color: #475569 !important;
+}
+
+/* Interactive Hover & Group-Hover Colors */
+.hover\:text-white:hover {
+  color: #FFFFFF !important;
+}
+.group:hover .group-hover\:text-white {
+  color: #FFFFFF !important;
+}
+.hover\:text-brand-orange:hover {
+  color: #FF5A1F !important;
+}
+.group:hover .group-hover\:text-brand-orange {
+  color: #FF5A1F !important;
+}
+
+/* 2. Dark Hero Sections & Cinematic Overlays (Crystal Legibility on Dark Backgrounds) */
+.hero-dark,
+[class*="bg-hero"],
+.hero-dark h1,
+.hero-dark h2,
+.hero-dark h3 {
+  color: #FFFFFF !important;
+}
+
+.hero-dark p {
+  color: #F1F5F9 !important;
+}
+
+.hero-dark strong {
+  color: #FFFFFF !important;
+}
+
+/* 3. Dark Frosted Glass (For Hero Overlays, Badges, and Search Bars) */
 .glass-dark {
   background: rgba(0, 0, 68, 0.95);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.45);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
+}
+.glass-dark h1, .glass-dark h2, .glass-dark h3, .glass-dark h4 {
+  color: #FFFFFF !important;
+}
+.glass-dark p {
+  color: #E2E8F0 !important;
 }
 
-/* Existing Navy Card Surfaces */
-.glass-card {
+/* 4. Navy Card Surfaces (Trek Cards, Destination Cards, Package Cards) */
+.glass-card,
+.bg-brand-card {
   background-color: #000044;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
   color: #F8FAFC;
 }
 
-/* High-Visibility Typography Protection on Dark Surfaces */
 .glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6,
-.navy-banner h1, .navy-banner h2, .navy-banner h3,
-.cream-banner h1, .cream-banner h2, .cream-banner h3 {
+.bg-brand-card h1, .bg-brand-card h2, .bg-brand-card h3, .bg-brand-card h4, .bg-brand-card h5, .bg-brand-card h6,
+.navy-banner h1, .navy-banner h2, .navy-banner h3 {
   color: #FFFFFF !important;
 }
 
 .glass-card p,
-.navy-banner p,
-.cream-banner p {
-  color: #E2E8F0 !important; /* Crisp, high-contrast light slate (was dim #94A3B8) */
+.bg-brand-card p,
+.navy-banner p {
+  color: #E2E8F0 !important;
 }
 
 .glass-card strong,
-.navy-banner strong,
-.cream-banner strong {
+.bg-brand-card strong,
+.navy-banner strong {
   color: #FFFFFF !important;
 }
 
 .glass-card label,
-.navy-banner label,
-.cream-banner label {
+.bg-brand-card label,
+.navy-banner label {
   color: #F1F5F9 !important;
 }
 
-/* High visibility for secondary & muted text on dark navy backgrounds */
+/* Muted / Secondary text on Dark Navy Backgrounds */
 .glass-card .text-slate-400,
-.navy-banner .text-slate-400,
-.bg-brand-dark .text-slate-400,
 .bg-brand-card .text-slate-400,
+.bg-brand-dark .text-slate-400,
+.navy-banner .text-slate-400,
+.glass-header .text-slate-400,
+.glass-dark .text-slate-400,
+.hero-dark .text-slate-400,
 [class*="bg-[#000044]"] .text-slate-400 {
   color: #CBD5E1 !important;
 }
 
 .glass-card .text-slate-500,
-.navy-banner .text-slate-500,
-.bg-brand-dark .text-slate-500,
 .bg-brand-card .text-slate-500,
+.bg-brand-dark .text-slate-500,
+.navy-banner .text-slate-500,
+.glass-header .text-slate-500,
+.glass-dark .text-slate-500,
+.hero-dark .text-slate-500,
 [class*="bg-[#000044]"] .text-slate-500 {
   color: #E2E8F0 !important;
 }
 
-/* High-Contrast Typography inside Light, White & Cream Cards / Modals */
-.bg-white, [class*="bg-[#FFF"], [class*="bg-[#FAF"], [class*="bg-[#F5F"], [class*="bg-[#F8F"] {
+/* 5. Cream Banners & Light Container Typography */
+.cream-banner {
+  background: #FDFBF7;
   color: #1E293B;
 }
 
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
-[class*="bg-[#FFF"] h1, [class*="bg-[#FFF"] h2, [class*="bg-[#FFF"] h3, [class*="bg-[#FFF"] h4, [class*="bg-[#FFF"] h5, [class*="bg-[#FFF"] h6,
-[class*="bg-[#FAF"] h1, [class*="bg-[#FAF"] h2, [class*="bg-[#FAF"] h3, [class*="bg-[#FAF"] h4, [class*="bg-[#FAF"] h5, [class*="bg-[#FAF"] h6 {
-  color: #0F172A;
+.cream-banner h1, .cream-banner h2, .cream-banner h3, .cream-banner h4 {
+  color: #0F172A !important;
 }
 
-.bg-white p, [class*="bg-[#FFF"] p, [class*="bg-[#FAF"] p, [class*="bg-[#F5F"] p {
-  color: #334155;
+.cream-banner p {
+  color: #334155 !important;
 }
 
-/* Prevent washed-out grey text in light backgrounds */
+.cream-banner strong {
+  color: #0F172A !important;
+}
+
+/* High visibility for secondary & muted text on Light Backgrounds */
 .bg-white .text-slate-400,
+.bg-slate-50 .text-slate-400,
+.cream-banner .text-slate-400,
+[class*="bg-[#F5F3EF]"] .text-slate-400,
+[class*="bg-[#FFFDF9]"] .text-slate-400 {
+  color: #64748B !important;
+  font-weight: 500;
+}
+
 .bg-white .text-slate-500,
-[class*="bg-[#FFF"] .text-slate-400,
-[class*="bg-[#FFF"] .text-slate-500,
-[class*="bg-[#FAF"] .text-slate-400,
-[class*="bg-[#FAF"] .text-slate-500,
-[class*="bg-[#F5F"] .text-slate-400,
-[class*="bg-[#F5F"] .text-slate-500 {
+.bg-slate-50 .text-slate-500,
+.cream-banner .text-slate-500,
+[class*="bg-[#F5F3EF]"] .text-slate-500,
+[class*="bg-[#FFFDF9]"] .text-slate-500 {
   color: #475569 !important;
   font-weight: 500;
 }

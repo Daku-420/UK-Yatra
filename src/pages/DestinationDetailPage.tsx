@@ -226,7 +226,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           SECTION 1: HERO WITH DESTINATION NAME AND CTA
          ======================================================== */}
       <section 
-        className="relative h-[72vh] min-h-[540px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none"
+        className="relative h-[72vh] min-h-[540px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none hero-dark text-white"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={handleTouchStart}
@@ -251,7 +251,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
         {/* Cinematic Gradient Overlays */}
         <div className="absolute inset-0 bg-hero-gradient z-[1] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/40 z-[1] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/40 z-[1] pointer-events-none" />
 
         {/* Hero Slider Navigation Arrows */}
         {galleryImages.length > 1 && (
@@ -295,10 +295,10 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
         )}
 
         {/* Hero Bottom Content & CTAs */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 max-w-7xl mx-auto w-full text-white">
           <Link
             to="/destinations"
-            className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 mb-4 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-slate-100 hover:text-white bg-black/70 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 mb-4 transition-colors font-medium shadow-md"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Explore All Uttarakhand Destinations</span>
@@ -309,16 +309,16 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               {destination.category}
             </span>
             {destination.altitude && (
-              <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-slate-200 border border-white/15 flex items-center gap-1.5">
+              <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-black/65 backdrop-blur-md text-slate-100 border border-white/20 flex items-center gap-1.5 shadow-sm">
                 <Mountain className="w-3.5 h-3.5 text-brand-orange" />
                 <span>{destination.altitude}</span>
               </span>
             )}
-            <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-slate-200 border border-white/15 flex items-center gap-1.5">
+            <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-black/65 backdrop-blur-md text-slate-100 border border-white/20 flex items-center gap-1.5 shadow-sm">
               <Clock className="w-3.5 h-3.5 text-brand-orange" />
               <span>{destination.idealDuration}</span>
             </span>
-            <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-amber-300 border border-white/15 flex items-center gap-1.5">
+            <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-black/65 backdrop-blur-md text-amber-300 border border-white/20 flex items-center gap-1.5 shadow-sm">
               <Calendar className="w-3.5 h-3.5 text-amber-400" />
               <span>{destination.bestTime}</span>
             </span>
@@ -326,10 +326,10 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div className="max-w-3xl">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display text-white tracking-tight drop-shadow-md">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display text-white tracking-tight drop-shadow-lg">
                 {destination.name}
               </h1>
-              <p className="mt-2 text-base sm:text-lg text-slate-200 font-normal leading-relaxed drop-shadow">
+              <p className="mt-2 text-base sm:text-lg text-slate-100 font-normal leading-relaxed drop-shadow-md">
                 {destination.tagline}
               </p>
             </div>
@@ -391,7 +391,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Altitude</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Altitude</span>
               <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
                 <Mountain className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>{extraData.quickFacts.altitude}</span>
@@ -399,7 +399,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Ideal Duration</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Ideal Duration</span>
               <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
                 <Clock className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>{extraData.quickFacts.duration}</span>
@@ -407,7 +407,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Best Season</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Best Season</span>
               <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>{extraData.quickFacts.bestSeason}</span>
@@ -415,7 +415,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Weather / Avg Temp</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Weather / Avg Temp</span>
               <div className="mt-1 font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-1.5">
                 <Thermometer className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>{extraData.quickFacts.avgTemp}</span>
@@ -423,7 +423,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Nearest Airport</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Nearest Airport</span>
               <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
                 <Plane className="w-4 h-4 text-brand-orange shrink-0" />
                 <span className="truncate">{extraData.quickFacts.nearestAirport}</span>
@@ -431,7 +431,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Nearest Railhead</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Nearest Railhead</span>
               <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
                 <Train className="w-4 h-4 text-brand-orange shrink-0" />
                 <span className="truncate">{extraData.quickFacts.nearestRailhead}</span>
@@ -439,7 +439,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Himalayan Region</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Himalayan Region</span>
               <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>{extraData.quickFacts.region}</span>
@@ -447,7 +447,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Travel Vibe</span>
+              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block">Travel Vibe</span>
               <div className="mt-1 font-display font-bold text-xs sm:text-sm text-slate-800 flex items-center gap-1.5">
                 <Heart className="w-4 h-4 text-brand-orange shrink-0" />
                 <span className="truncate">{extraData.quickFacts.travelVibe}</span>
