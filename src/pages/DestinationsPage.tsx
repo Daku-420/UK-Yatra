@@ -6,6 +6,8 @@ import { Destination } from '../types';
 import { DestinationCard } from '../components/DestinationCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 
+import { DESTINATION_MEGA_NAV } from '../data/navigationDestinations';
+
 export interface DestinationCategoryDefinition {
   slug: string;
   name: string;
@@ -15,12 +17,36 @@ export interface DestinationCategoryDefinition {
   filterFn: (dest: Destination) => boolean;
 }
 
+// Complete destination IDs mapping matching the mega nav categories exactly
+export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
+  'hill-stations': [
+    'mussoorie', 'nainital', 'auli', 'ranikhet', 'chakrata',
+    'lansdowne', 'mukteshwar', 'dhanaulti', 'kausani', 'munsiyari'
+  ],
+  'spiritual-destinations': [
+    'haridwar', 'rishikesh', 'yamunotri', 'gangotri',
+    'kedarnath', 'badrinath', 'hemkund-sahib', 'tungnath'
+  ],
+  'nature-escapes': [
+    'valley-of-flowers', 'chopta', 'dayara-bugyal', 'deoria-tal',
+    'har-ki-dun', 'binsar', 'harsil-valley'
+  ],
+  'wildlife-national-parks': [
+    'jim-corbett', 'rajaji-national-park', 'nanda-devi-national-park',
+    'valley-of-flowers', 'gangotri-national-park', 'binsar-wildlife-sanctuary'
+  ],
+  'villages-hidden-gems': [
+    'mana-village', 'sari-village', 'sankri', 'khirsu',
+    'lata-village', 'osla-village', 'abbott-mount'
+  ]
+};
+
 export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDefinition> = {
   'all': {
     slug: 'all',
     name: 'All Destinations',
     tagline: 'Discover Uttarakhand',
-    description: 'From the holy peaks of Kedarnath and Badrinath to the adrenaline rapids of Rishikesh and the snowy meadows of Auli. Explore 20+ hand-curated Himalayan gems.',
+    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, and remote Himalayan hamlets. Explore all 38 hand-curated destinations.',
     badge: 'Complete Catalog',
     filterFn: () => true
   },
@@ -30,7 +56,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     tagline: 'Scenic Mountain Towns & British-Era Colonial Retreats',
     description: "Discover Uttarakhand's scenic mountain towns and hill retreats, offering crisp alpine air, panoramic snow views, and pleasant colonial promenades.",
     badge: 'Mountain Retreats',
-    filterFn: (dest) => ['mussoorie', 'nainital', 'auli', 'lansdowne', 'chopta'].includes(dest.id) || dest.category === 'Hills & Valleys' || dest.category === 'Weekend Escapes'
+    filterFn: (dest) => CATEGORY_SLUGS_MAP['hill-stations'].includes(dest.id)
   },
   'spiritual-destinations': {
     slug: 'spiritual-destinations',
@@ -38,7 +64,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     tagline: 'Sacred Temples, Holy Confluences & Divine Himalayan Shrines',
     description: 'Explore sacred temples, pilgrimage sites and spiritual towns where ancient traditions and holy rivers flow through the Devbhoomi.',
     badge: 'Char Dham & Shrines',
-    filterFn: (dest) => dest.category === 'Spiritual' || ['kedarnath', 'badrinath', 'rishikesh', 'chopta'].includes(dest.id)
+    filterFn: (dest) => CATEGORY_SLUGS_MAP['spiritual-destinations'].includes(dest.id)
   },
   'nature-escapes': {
     slug: 'nature-escapes',
@@ -46,7 +72,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     tagline: 'High Alpine Valleys, Wildflower Meadows & Scenic Landscapes',
     description: 'Experience Himalayan valleys, meadows, forests and scenic landscapes teeming with endemic flora, crisp mountain streams, and rolling bugyals.',
     badge: 'Valleys & Meadows',
-    filterFn: (dest) => ['valley-of-flowers', 'chopta', 'auli', 'munsiyari', 'nainital'].includes(dest.id) || dest.category === 'Hills & Valleys'
+    filterFn: (dest) => CATEGORY_SLUGS_MAP['nature-escapes'].includes(dest.id)
   },
   'wildlife-national-parks': {
     slug: 'wildlife-national-parks',
@@ -54,15 +80,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     tagline: 'Royal Bengal Tigers, Asiatic Elephants & Pristine Sanctuaries',
     description: 'Discover wildlife sanctuaries, national parks and Himalayan biodiversity spanning from sub-tropical riverine jungles to alpine biosphere reserves.',
     badge: 'Tiger Reserves & Sanctuaries',
-    filterFn: (dest) => dest.category === 'Wildlife' || ['jim-corbett', 'valley-of-flowers'].includes(dest.id)
-  },
-  'lakes-waterfalls': {
-    slug: 'lakes-waterfalls',
-    name: 'Lakes & Waterfalls',
-    tagline: 'Emerald Glacial Lakes, Water Sports & Cascading Waterfalls',
-    description: 'Explore serene mountain lakes, waterfalls and natural escapes perfect for boating, watersports, and tranquil riverside moments.',
-    badge: 'Lakes & Cascades',
-    filterFn: (dest) => ['tehri', 'nainital', 'mussoorie', 'lansdowne', 'munsiyari', 'jim-corbett'].includes(dest.id)
+    filterFn: (dest) => CATEGORY_SLUGS_MAP['wildlife-national-parks'].includes(dest.id)
   },
   'villages-hidden-gems': {
     slug: 'villages-hidden-gems',
@@ -70,7 +88,15 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     tagline: 'Unspoiled Mountain Hamlets, Border Villages & Offbeat Peace',
     description: 'Discover peaceful Himalayan villages and offbeat destinations where traditional Kumaoni and Garhwali architecture and serene slow living thrive.',
     badge: 'Offbeat Villages',
-    filterFn: (dest) => dest.category === 'Offbeat Uttarakhand' || ['munsiyari', 'chopta', 'badrinath', 'lansdowne'].includes(dest.id)
+    filterFn: (dest) => CATEGORY_SLUGS_MAP['villages-hidden-gems'].includes(dest.id)
+  },
+  'lakes-waterfalls': {
+    slug: 'lakes-waterfalls',
+    name: 'Lakes & Waterfalls',
+    tagline: 'Emerald Glacial Lakes, Water Sports & Cascading Waterfalls',
+    description: 'Explore serene mountain lakes, waterfalls and natural escapes perfect for boating, watersports, and tranquil riverside moments.',
+    badge: 'Lakes & Cascades',
+    filterFn: (dest) => ['tehri', 'nainital', 'deoria-tal', 'mussoorie', 'lansdowne'].includes(dest.id)
   }
 };
 
@@ -127,14 +153,28 @@ export const DestinationsPage: React.FC<DestinationsPageProps> = ({ initialCateg
   };
 
   const filteredDestinations = useMemo(() => {
-    return DESTINATIONS.filter(dest => {
+    const list = DESTINATIONS.filter(dest => {
       const matchesCat = currentConfig.filterFn(dest);
       const matchesSearch = dest.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             dest.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             dest.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCat && matchesSearch;
     });
-  }, [currentConfig, searchQuery]);
+
+    const orderList = CATEGORY_SLUGS_MAP[selectedCategory];
+    if (orderList && orderList.length > 0) {
+      list.sort((a, b) => {
+        const idxA = orderList.indexOf(a.id);
+        const idxB = orderList.indexOf(b.id);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+        return 0;
+      });
+    }
+
+    return list;
+  }, [currentConfig, searchQuery, selectedCategory]);
 
   const breadcrumbsItems = useMemo(() => {
     if (selectedCategory === 'all') {
