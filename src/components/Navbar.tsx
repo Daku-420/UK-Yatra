@@ -31,63 +31,7 @@ import { Logo } from './Logo';
 import { SearchBar } from './SearchBar';
 import { FEATURED_PACKAGES, TOUR_CATEGORIES } from '../data/navigationTours';
 
-export interface DestinationNavCategory {
-  id: string;
-  name: string;
-  slug: string;
-  path: string;
-  description: string;
-  tag: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
-
-export const DESTINATION_NAV_CATEGORIES: DestinationNavCategory[] = [
-  {
-    id: 'hill-stations',
-    name: 'Hill Stations',
-    slug: 'hill-stations',
-    path: '/destinations/hill-stations',
-    description: 'Scenic mountain towns & peaceful hill retreats',
-    tag: 'Mountain Towns',
-    icon: Mountain
-  },
-  {
-    id: 'spiritual-destinations',
-    name: 'Spiritual Destinations',
-    slug: 'spiritual-destinations',
-    path: '/destinations/spiritual-destinations',
-    description: 'Sacred temples, pilgrimage sites & holy shrines',
-    tag: 'Holy Shrines',
-    icon: Sparkles
-  },
-  {
-    id: 'nature-escapes',
-    name: 'Nature Escapes',
-    slug: 'nature-escapes',
-    path: '/destinations/nature-escapes',
-    description: 'Alpine valleys, meadows & scenic landscapes',
-    tag: 'Valleys & Flora',
-    icon: Trees
-  },
-  {
-    id: 'wildlife-national-parks',
-    name: 'Wildlife & National Parks',
-    slug: 'wildlife-national-parks',
-    path: '/destinations/wildlife-national-parks',
-    description: 'Wildlife sanctuaries & Himalayan biodiversity',
-    tag: 'Tiger Reserves',
-    icon: Compass
-  },
-  {
-    id: 'villages-hidden-gems',
-    name: 'Villages & Hidden Gems',
-    slug: 'villages-hidden-gems',
-    path: '/destinations/villages-hidden-gems',
-    description: 'Peaceful Himalayan hamlets & offbeat escapes',
-    tag: 'Offbeat Culture',
-    icon: MapPin
-  }
-];
+import { DESTINATION_MEGA_NAV } from '../data/navigationDestinations';
 
 const OUTDOOR_NAV_ITEMS = [
   {
@@ -240,6 +184,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [destinationsDropdownOpen, setDestinationsDropdownOpen] = useState(false);
   const [mobileDestinationsOpen, setMobileDestinationsOpen] = useState(false);
+  const [mobileDestinationsCategoryOpen, setMobileDestinationsCategoryOpen] = useState<string | null>('hill-stations');
   const [activitiesOpen, setActivitiesOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<'outdoor' | 'educational' | null>(null);
   const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(true);
@@ -532,21 +477,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               {/* Dropdown Menu Panel with seamless hover bridge */}
               {destinationsDropdownOpen && (
                 <div 
-                  className="absolute top-full left-0 pt-2 z-50 animate-in fade-in duration-150"
+                  className="absolute top-full -left-12 xl:-left-6 pt-2 z-50 animate-in fade-in duration-150"
                   onMouseEnter={handleDestinationsEnter}
                   onMouseLeave={handleDestinationsLeave}
                 >
                   <div 
-                    className="w-[380px] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] p-2.5 text-slate-900 ring-1 ring-black/10"
+                    className="w-[960px] xl:w-[1080px] max-w-[calc(100vw-2.5rem)] bg-[#FFFDF9] border-2 border-[#E2D9CB] rounded-3xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] p-5 text-slate-900 ring-1 ring-black/10"
                     style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto' }}
                   >
                     {/* Header bar */}
-                    <div className="px-3 py-2 mb-1.5 flex items-center justify-between border-b border-[#E2D9CB]">
-                      <div className="flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-brand-orange" />
-                        <span className="text-[11px] font-black uppercase tracking-wider text-slate-900">
-                          Uttarakhand Destinations
+                    <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E2D9CB]">
+                      <div className="flex items-center gap-2">
+                        <span className="p-1.5 rounded-lg bg-orange-100 text-brand-orange border border-orange-200">
+                          <MapPin className="w-4 h-4" />
                         </span>
+                        <div>
+                          <span className="text-xs uppercase font-black tracking-wider text-slate-950 block">
+                            Uttarakhand Destinations
+                          </span>
+                          <span className="text-[11px] text-slate-500 font-medium">
+                            Explore hill stations, spiritual shrines, nature escapes, wildlife reserves & hidden hamlets
+                          </span>
+                        </div>
                       </div>
                       <Link
                         to="/destinations"
@@ -554,41 +506,70 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           handleNavigate('/destinations', e);
                           setDestinationsDropdownOpen(false);
                         }}
-                        className="text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors cursor-pointer"
+                        className="px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-brand-orange text-brand-orange hover:text-white border border-orange-200 hover:border-brand-orange font-black text-xs flex items-center gap-1.5 transition-all shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
                       >
-                        View All
+                        <span>View All Destinations</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
 
-                    {/* Vertical list of 5 destination categories */}
-                    <div className="space-y-1">
-                      {DESTINATION_NAV_CATEGORIES.map((cat) => {
-                        const IconComponent = cat.icon;
+                    {/* 5 Categories organized in a clean balanced mega-menu */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3.5 xl:gap-4">
+                      {DESTINATION_MEGA_NAV.map((group) => {
+                        const IconComponent = group.icon;
                         return (
-                          <Link
-                            key={cat.slug}
-                            to={cat.path}
-                            onClick={(e) => {
-                              handleNavigate(cat.path, e);
-                              setDestinationsDropdownOpen(false);
-                            }}
-                            className="group flex items-start gap-3 p-2.5 rounded-xl bg-white hover:bg-orange-50/80 border border-[#EBE3D6] hover:border-brand-orange/80 shadow-2xs hover:shadow-xs transition-all text-left cursor-pointer"
+                          <div 
+                            key={group.id}
+                            className="flex flex-col justify-between p-3.5 rounded-2xl bg-white border border-[#DDD5C7] shadow-2xs hover:shadow-xs transition-shadow"
                           >
-                            <span className="w-9 h-9 rounded-xl bg-[#F8F5EE] group-hover:bg-brand-orange text-brand-orange group-hover:text-white border border-[#E2D9CB] group-hover:border-brand-orange flex items-center justify-center shrink-0 mt-0.5 transition-colors shadow-2xs">
-                              <IconComponent className="w-4 h-4" />
-                            </span>
-                            <div className="min-w-0 flex-1">
-                              <div className="flex items-center justify-between gap-1">
-                                <span className="font-extrabold text-[13.5px] text-slate-900 group-hover:text-brand-orange transition-colors">
-                                  {cat.name}
+                            <div>
+                              {/* Category Header */}
+                              <div className="flex items-center gap-2 pb-2.5 mb-2.5 border-b border-[#E2D9CB]">
+                                <span className="p-1 rounded-md bg-[#F8F5EE] text-brand-orange border border-[#E2D9CB] shrink-0">
+                                  <IconComponent className="w-3.5 h-3.5" />
                                 </span>
-                                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brand-orange group-hover:translate-x-0.5 transition-all shrink-0" />
+                                <h3 className="text-[11.5px] uppercase font-black tracking-wider text-slate-950 leading-tight">
+                                  {group.name}
+                                </h3>
                               </div>
-                              <p className="text-[11px] text-slate-600 line-clamp-1 mt-0.5">
-                                {cat.description}
-                              </p>
+
+                              {/* Destination List */}
+                              <ul className="space-y-1 mb-3">
+                                {group.destinations.map((dest) => (
+                                  <li key={dest.slug}>
+                                    <Link
+                                      to={dest.path}
+                                      onClick={(e) => {
+                                        handleNavigate(dest.path, e);
+                                        setDestinationsDropdownOpen(false);
+                                      }}
+                                      className="text-[12px] font-medium text-slate-700 hover:text-brand-orange transition-colors flex items-center gap-1.5 py-0.5 group/item cursor-pointer"
+                                    >
+                                      <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover/item:bg-brand-orange group-hover/item:scale-125 transition-all shrink-0" />
+                                      <span className="group-hover/item:translate-x-0.5 transition-transform truncate">
+                                        {dest.name}
+                                      </span>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-                          </Link>
+
+                            {/* Explore All Category CTA */}
+                            <div className="pt-2 border-t border-[#E2D9CB]/80 mt-auto">
+                              <Link
+                                to={group.path}
+                                onClick={(e) => {
+                                  handleNavigate(group.path, e);
+                                  setDestinationsDropdownOpen(false);
+                                }}
+                                className="text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center justify-between group/cta cursor-pointer"
+                              >
+                                <span className="truncate">{group.exploreAllText}</span>
+                                <ArrowRight className="w-3 h-3 group-hover/cta:translate-x-0.5 transition-transform shrink-0" />
+                              </Link>
+                            </div>
+                          </div>
                         );
                       })}
                     </div>
@@ -1181,37 +1162,61 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </Link>
                   </div>
 
-                  <div className="flex flex-col space-y-1.5">
-                    {DESTINATION_NAV_CATEGORIES.map((cat) => {
-                      const IconComponent = cat.icon;
+                  <div className="space-y-1.5">
+                    {DESTINATION_MEGA_NAV.map((group) => {
+                      const IconComponent = group.icon;
+                      const isCategoryExpanded = mobileDestinationsCategoryOpen === group.id;
                       return (
-                        <Link
-                          key={cat.slug}
-                          to={cat.path}
-                          onClick={(e) => {
-                            handleNavigate(cat.path, e);
-                            setMobileDestinationsOpen(false);
-                            setMobileMenuOpen(false);
-                          }}
-                          className="flex items-start gap-2.5 p-2.5 rounded-xl bg-white hover:bg-orange-50 border border-[#DDD5C7] text-left group shadow-xs transition-colors"
-                        >
-                          <span className="w-8 h-8 rounded-lg bg-[#F8F5EE] group-hover:bg-orange-100 text-brand-orange border border-[#E2D9CB] flex items-center justify-center shrink-0 mt-0.5">
-                            <IconComponent className="w-4 h-4" />
-                          </span>
-                          <div className="min-w-0 flex-1">
-                            <div className="flex items-center justify-between gap-1">
-                              <span className="text-xs font-black text-slate-950 group-hover:text-brand-orange truncate">
-                                {cat.name}
+                        <div key={group.id} className="rounded-xl bg-white border border-[#DDD5C7] overflow-hidden shadow-2xs">
+                          <button
+                            type="button"
+                            onClick={() => setMobileDestinationsCategoryOpen(isCategoryExpanded ? null : group.id)}
+                            className="w-full flex items-center justify-between p-2.5 text-left font-black text-xs text-slate-900 hover:text-brand-orange transition-colors cursor-pointer"
+                          >
+                            <div className="flex items-center gap-2">
+                              <span className="p-1 rounded-md bg-[#F8F5EE] text-brand-orange border border-[#E2D9CB]">
+                                <IconComponent className="w-3.5 h-3.5" />
                               </span>
-                              <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-[#F4EFE6] text-slate-600 shrink-0">
-                                {cat.tag}
-                              </span>
+                              <span>{group.name}</span>
                             </div>
-                            <p className="text-[10.5px] text-slate-500 line-clamp-1 mt-0.5">
-                              {cat.description}
-                            </p>
-                          </div>
-                        </Link>
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCategoryExpanded ? 'rotate-180 text-brand-orange' : 'text-slate-400'}`} />
+                          </button>
+
+                          {isCategoryExpanded && (
+                            <div className="px-3 pb-3 pt-1 border-t border-slate-100 space-y-2">
+                              <div className="grid grid-cols-2 gap-1 py-1">
+                                {group.destinations.map((dest) => (
+                                  <Link
+                                    key={dest.slug}
+                                    to={dest.path}
+                                    onClick={(e) => {
+                                      handleNavigate(dest.path, e);
+                                      setMobileDestinationsOpen(false);
+                                      setMobileMenuOpen(false);
+                                    }}
+                                    className="py-1.5 px-2 rounded-lg text-xs font-semibold text-slate-700 hover:text-brand-orange hover:bg-orange-50 active:bg-orange-100 transition-colors truncate"
+                                  >
+                                    {dest.name}
+                                  </Link>
+                                ))}
+                              </div>
+                              <div className="pt-2 border-t border-slate-100">
+                                <Link
+                                  to={group.path}
+                                  onClick={(e) => {
+                                    handleNavigate(group.path, e);
+                                    setMobileDestinationsOpen(false);
+                                    setMobileMenuOpen(false);
+                                  }}
+                                  className="text-xs font-black text-brand-orange hover:text-orange-700 flex items-center justify-between py-1"
+                                >
+                                  <span>{group.exploreAllText}</span>
+                                  <ArrowRight className="w-3 h-3" />
+                                </Link>
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       );
                     })}
                   </div>

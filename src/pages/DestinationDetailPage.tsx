@@ -19,6 +19,7 @@ import {
   X
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
+import { DESTINATION_MEGA_NAV } from '../data/navigationDestinations';
 import { adminStorage } from '../utils/adminStorage';
 import { TREKS } from '../data/treks';
 import { getDestinationWhatsAppUrl } from '../config/siteConfig';
@@ -34,7 +35,58 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  const destination = DESTINATIONS.find((d) => d.id === id) || DESTINATIONS[0];
+  const destination = React.useMemo(() => {
+    const found = DESTINATIONS.find((d) => d.id === id);
+    if (found) return found;
+
+    // Check if it's in our mega nav
+    let navItemName = id ? id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Destination';
+    let navCategory = 'Hills & Valleys';
+    for (const group of DESTINATION_MEGA_NAV) {
+      const match = group.destinations.find(d => d.slug === id);
+      if (match) {
+        navItemName = match.name;
+        navCategory = group.name;
+        break;
+      }
+    }
+
+    return {
+      id: id || 'destination',
+      name: navItemName,
+      tagline: `Discover the breathtaking beauty, heritage & mountain vistas of ${navItemName}`,
+      category: navCategory as any,
+      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      gallery: [
+        'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop'
+      ],
+      description: `Explore ${navItemName}, one of Uttarakhand's most captivating destinations. Experience authentic Himalayan hospitality, crisp alpine air, scenic panoramas, and customized travel itineraries curated by UK Yatra specialists.`,
+      highlights: [
+        'Panoramic Himalayan viewpoints',
+        'Scenic nature and heritage walking trails',
+        'Authentic mountain culture & local traditions',
+        'Peaceful and serene alpine ambiance'
+      ],
+      bestTime: 'Round the year (Best: March to June & Sept to Nov)',
+      altitude: '1,800 m - 3,200 m',
+      idealDuration: '2 - 4 Days',
+      startingPrice: '₹5,999',
+      isPopular: true,
+      topAttractions: [
+        { name: `${navItemName} Scenic Ridge`, desc: 'Breathtaking viewpoints overlooking snow-clad peaks and misty valleys.' },
+        { name: 'Heritage Hamlet & Temple', desc: 'Ancient stone architecture, sacred shrines, and timeless village traditions.' },
+        { name: 'Forest Nature Trails', desc: 'Enchanting paths lined with pine, oak, and rhododendron trees.' }
+      ],
+      howToReach: {
+        byAir: 'Nearest airport is Jolly Grant Airport, Dehradun or Pantnagar Airport.',
+        byTrain: 'Nearest major railheads are Haridwar, Rishikesh, Dehradun, or Kathgodam.',
+        byRoad: 'Well-connected by scenic state highways and mountain roads with taxi services.'
+      }
+    };
+  }, [id]);
 
   const galleryImages = (destination.gallery && destination.gallery.length > 0)
     ? destination.gallery
