@@ -524,9 +524,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                         handleNavigate(dest.path, e);
                                         setDestinationsDropdownOpen(false);
                                       }}
-                                      className="text-[12px] font-medium text-slate-700 hover:text-brand-orange transition-colors flex items-center gap-1.5 py-0.5 group/item cursor-pointer"
+                                      className="text-[12px] font-semibold text-slate-900 hover:text-brand-orange transition-colors flex items-center gap-1.5 py-0.5 group/item cursor-pointer"
                                     >
-                                      <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover/item:bg-brand-orange group-hover/item:scale-125 transition-all shrink-0" />
+                                      <span className="w-1.5 h-1.5 rounded-full bg-slate-400 group-hover/item:bg-brand-orange group-hover/item:scale-125 transition-all shrink-0" />
                                       <span className="group-hover/item:translate-x-0.5 transition-transform truncate">
                                         {dest.name}
                                       </span>
@@ -1175,7 +1175,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                       setMobileDestinationsOpen(false);
                                       setMobileMenuOpen(false);
                                     }}
-                                    className="py-1.5 px-2 rounded-lg text-xs font-semibold text-slate-700 hover:text-brand-orange hover:bg-orange-50 active:bg-orange-100 transition-colors truncate"
+                                    className="py-1.5 px-2 rounded-lg text-xs font-bold text-slate-900 hover:text-brand-orange hover:bg-orange-50 active:bg-orange-100 transition-colors truncate"
                                   >
                                     {dest.name}
                                   </Link>

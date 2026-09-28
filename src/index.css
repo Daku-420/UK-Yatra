@@ -33,6 +33,9 @@
 @layer base {
   html {
     color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   body {
@@ -40,12 +43,14 @@
     color: #F8FAFC;
     min-height: 100vh;
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.025em;
-    color: #FFFFFF;
   }
 }
 
@@ -67,38 +72,74 @@
   color: #F8FAFC;
 }
 
-/* Contrast & typography protection inside navy cards */
-.glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6 {
+/* High-Visibility Typography Protection on Dark Surfaces */
+.glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6,
+.navy-banner h1, .navy-banner h2, .navy-banner h3,
+.cream-banner h1, .cream-banner h2, .cream-banner h3 {
   color: #FFFFFF !important;
 }
 
-/* Softer white/gray for secondary text on navy */
-.glass-card p {
-  color: #94A3B8 !important;
+.glass-card p,
+.navy-banner p,
+.cream-banner p {
+  color: #E2E8F0 !important; /* Crisp, high-contrast light slate (was dim #94A3B8) */
 }
 
-/* Navy Banner for Inner Page Hero Sections */
-.cream-banner, .navy-banner {
-  background-color: #000044;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.35);
-}
-
-.cream-banner h1, .cream-banner h2, .cream-banner h3,
-.navy-banner h1, .navy-banner h2, .navy-banner h3 {
+.glass-card strong,
+.navy-banner strong,
+.cream-banner strong {
   color: #FFFFFF !important;
 }
 
-.cream-banner p, .navy-banner p {
-  color: #94A3B8 !important;
+.glass-card label,
+.navy-banner label,
+.cream-banner label {
+  color: #F1F5F9 !important;
 }
 
-.glass-card strong {
-  color: #FFFFFF !important;
-}
-
-.glass-card label {
+/* High visibility for secondary & muted text on dark navy backgrounds */
+.glass-card .text-slate-400,
+.navy-banner .text-slate-400,
+.bg-brand-dark .text-slate-400,
+.bg-brand-card .text-slate-400,
+[class*="bg-[#000044]"] .text-slate-400 {
   color: #CBD5E1 !important;
+}
+
+.glass-card .text-slate-500,
+.navy-banner .text-slate-500,
+.bg-brand-dark .text-slate-500,
+.bg-brand-card .text-slate-500,
+[class*="bg-[#000044]"] .text-slate-500 {
+  color: #E2E8F0 !important;
+}
+
+/* High-Contrast Typography inside Light, White & Cream Cards / Modals */
+.bg-white, [class*="bg-[#FFF"], [class*="bg-[#FAF"], [class*="bg-[#F5F"], [class*="bg-[#F8F"] {
+  color: #1E293B;
+}
+
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+[class*="bg-[#FFF"] h1, [class*="bg-[#FFF"] h2, [class*="bg-[#FFF"] h3, [class*="bg-[#FFF"] h4, [class*="bg-[#FFF"] h5, [class*="bg-[#FFF"] h6,
+[class*="bg-[#FAF"] h1, [class*="bg-[#FAF"] h2, [class*="bg-[#FAF"] h3, [class*="bg-[#FAF"] h4, [class*="bg-[#FAF"] h5, [class*="bg-[#FAF"] h6 {
+  color: #0F172A;
+}
+
+.bg-white p, [class*="bg-[#FFF"] p, [class*="bg-[#FAF"] p, [class*="bg-[#F5F"] p {
+  color: #334155;
+}
+
+/* Prevent washed-out grey text in light backgrounds */
+.bg-white .text-slate-400,
+.bg-white .text-slate-500,
+[class*="bg-[#FFF"] .text-slate-400,
+[class*="bg-[#FFF"] .text-slate-500,
+[class*="bg-[#FAF"] .text-slate-400,
+[class*="bg-[#FAF"] .text-slate-500,
+[class*="bg-[#F5F"] .text-slate-400,
+[class*="bg-[#F5F"] .text-slate-500 {
+  color: #475569 !important;
+  font-weight: 500;
 }
 
 /* High-Contrast Accessible Orange Text on White / Light Backgrounds (WCAG AA > 4.5:1) */

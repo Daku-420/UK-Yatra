@@ -208,10 +208,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Sanctuaries</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
               Explore <span className="text-brand-orange">Uttarakhand</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-medium">
+            <p className="mt-2 text-xs sm:text-sm text-slate-200 max-w-xl font-normal drop-shadow-xs">
               From peaceful valleys to high Himalayan trails, discover the places that make Uttarakhand unforgettable.
             </p>
           </div>
@@ -325,10 +325,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <Flame className="w-3.5 h-3.5" />
               <span>Curated Packages</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
               Journeys Worth <span className="text-brand-orange">Taking</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-medium">
+            <p className="mt-2 text-xs sm:text-sm text-slate-200 max-w-xl font-normal drop-shadow-xs">
               Handcrafted itineraries with verified hill drivers, sanitised stays, priority darshan, and transparent pricing.
             </p>
           </div>
@@ -673,10 +673,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Expeditions</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
               Walk Into The <span className="text-brand-orange">Himalayas</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl font-medium">
+            <p className="mt-2 text-xs sm:text-sm text-slate-200 max-w-xl font-normal drop-shadow-xs">
               From the winter snow slopes of Kedarkantha to the floral carpets of Valley of Flowers and Tungnath summit.
             </p>
           </div>

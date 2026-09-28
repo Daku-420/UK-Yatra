@@ -15,7 +15,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   highlightText,
   subtitle,
   centered = true,
-  light = false
+  light = true
 }) => {
   return (
     <div className={`mb-10 sm:mb-14 ${centered ? 'text-center max-w-3xl mx-auto' : 'max-w-2xl'}`}>
@@ -32,7 +32,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         )}
       </h2>
       {subtitle && (
-        <p className={`mt-3 text-sm sm:text-base leading-relaxed ${light ? 'text-slate-300' : 'text-slate-600 font-medium'}`}>
+        <p className={`mt-3 text-sm sm:text-base leading-relaxed ${light ? 'text-slate-200 font-normal drop-shadow-xs' : 'text-slate-700 font-medium'}`}>
           {subtitle}
         </p>
       )}
