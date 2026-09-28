@@ -440,39 +440,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               onMouseEnter={handleDestinationsEnter}
               onMouseLeave={handleDestinationsLeave}
             >
-              <div className="flex items-center">
-                <Link
-                  to="/destinations"
-                  onClick={(e) => {
-                    handleNavigate('/destinations', e);
-                    setDestinationsDropdownOpen(false);
-                  }}
-                  className={`pl-2.5 xl:pl-3 pr-1 py-2 text-sm font-semibold rounded-l-xl whitespace-nowrap transition-colors cursor-pointer ${
-                    isDestinationsActive || destinationsDropdownOpen
-                      ? 'text-brand-orange' 
-                      : 'text-white hover:text-brand-orange'
-                  }`}
-                >
-                  Destinations
-                </Link>
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setDestinationsDropdownOpen(!destinationsDropdownOpen);
-                  }}
-                  className={`pr-2 xl:pr-2.5 pl-0.5 py-2 text-sm font-semibold rounded-r-xl transition-colors flex items-center cursor-pointer ${
-                    isDestinationsActive || destinationsDropdownOpen
-                      ? 'text-brand-orange' 
-                      : 'text-white hover:text-brand-orange'
-                  }`}
-                  aria-expanded={destinationsDropdownOpen}
-                  aria-label="Toggle destinations menu"
-                  aria-haspopup="true"
-                >
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${destinationsDropdownOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setDestinationsDropdownOpen(!destinationsDropdownOpen)}
+                className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
+                  isDestinationsActive || destinationsDropdownOpen
+                    ? 'text-brand-orange' 
+                    : 'text-white hover:text-brand-orange'
+                }`}
+                aria-expanded={destinationsDropdownOpen}
+                aria-haspopup="true"
+              >
+                <span>Destinations</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${destinationsDropdownOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
+              </button>
 
               {/* Dropdown Menu Panel with seamless hover bridge */}
               {destinationsDropdownOpen && (
