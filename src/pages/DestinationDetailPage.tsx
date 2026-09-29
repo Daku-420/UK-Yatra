@@ -40,9 +40,6 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { PackageCard } from '../components/PackageCard';
 import { WhatsAppIcon } from '../components/SocialIcons';
 import { getDestinationExtraData } from '../data/destinationDetailData';
-import { SEOHead } from '../components/SEOHead';
-import { TREKS } from '../data/treks';
-import { TrekCard } from '../components/TrekCard';
 
 interface DestinationDetailPageProps {
   onOpenBookingModal: (packageName?: string) => void;
@@ -223,60 +220,8 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
   const activeItinerary = extraData.itineraries.find(i => i.id === activeItineraryTab) || extraData.itineraries[0];
 
-  const destinationSchema: Record<string, any>[] = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'TouristDestination',
-      name: `${destination.name}, Uttarakhand`,
-      description: destination.description,
-      touristType: destination.category,
-      includesAttraction: destination.topAttractions.map(att => ({
-        '@type': 'TouristAttraction',
-        name: att.name,
-        description: att.desc
-      })),
-      url: `https://uk-yatra.vercel.app/destinations/${destination.id}`
-    }
-  ];
-
-  if (extraData.faqs && extraData.faqs.length > 0) {
-    destinationSchema.push({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: extraData.faqs.map(f => ({
-        '@type': 'Question',
-        name: f.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: f.answer
-        }
-      }))
-    });
-  }
-
-  const nearbyTreks = TREKS.filter(
-    t => t.relatedDestinations?.includes(destination.id) ||
-         t.baseCamp.toLowerCase().includes(destination.name.toLowerCase()) ||
-         t.location?.toLowerCase().includes(destination.name.toLowerCase())
-  );
-
   return (
     <div className="pt-24 pb-20 bg-[#FFFDF9] min-h-screen text-slate-800">
-      <SEOHead
-        title={`${destination.name} Travel Guide: Places to Visit, Best Time & Packages | UK Yatra`}
-        description={`Plan your trip to ${destination.name}, Uttarakhand. Top attractions, ideal duration (${destination.idealDuration}), best season (${destination.bestTime}), how to reach from Dehradun/Delhi, weather, and verified tour packages.`}
-        canonicalPath={`/destinations/${destination.id}`}
-        ogImage={destination.image}
-        keywords={[
-          destination.name,
-          `${destination.name} travel guide`,
-          `Things to do in ${destination.name}`,
-          `Best time to visit ${destination.name}`,
-          `${destination.name} tour packages`,
-          `Places to visit near ${destination.name}`
-        ]}
-        schema={destinationSchema}
-      />
       {/* ========================================================
           SECTION 1: HERO WITH DESTINATION NAME AND CTA
          ======================================================== */}

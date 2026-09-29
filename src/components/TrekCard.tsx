@@ -35,15 +35,8 @@ export const TrekCard: React.FC<TrekCardProps> = ({ trek }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-black/20 to-transparent"></div>
 
         {/* Difficulty Badge */}
-        <div className="absolute top-4 left-4 flex items-center gap-1.5 flex-wrap">
-          <span className="px-3 py-1 rounded-full text-[11px] font-bold backdrop-blur-md bg-slate-950/80 text-white border border-white/15">
-            {trek.difficulty}
-          </span>
-          {trek.hasSnow && (
-            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-cyan-500/80 backdrop-blur-md text-white border border-cyan-300/30">
-              Snow Trek
-            </span>
-          )}
+        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold backdrop-blur-md bg-slate-950/80 text-white border border-white/15">
+          {trek.difficulty}
         </div>
 
         {/* Altitude Badge */}
@@ -62,7 +55,7 @@ export const TrekCard: React.FC<TrekCardProps> = ({ trek }) => {
       {/* Content */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4 bg-brand-card">
         <div>
-          <Link to={`/treks/${trek.id}`}>
+          <Link to={`/trekking/${trek.id}`}>
             <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-orange transition-colors line-clamp-1">
               {trek.name}
             </h3>
@@ -89,14 +82,13 @@ export const TrekCard: React.FC<TrekCardProps> = ({ trek }) => {
         {/* Price & Action */}
         <div className="pt-3 border-t border-white/10 flex items-center justify-between">
           <div>
-            <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-medium">From Dehradun</span>
+            <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-medium">Pricing</span>
             <span className="font-display font-bold text-sm text-brand-orange">{trek.startingPrice}</span>
           </div>
 
           <Link
-            to={`/treks/${trek.id}`}
-            className="px-4 py-2 rounded-xl orange-gradient-btn text-xs font-semibold text-white flex items-center gap-1.5 shadow-md hover:brightness-110 transition-all"
-            aria-label={`View detailed itinerary for ${trek.name}`}
+            to={`/trekking/${trek.id}`}
+            className="px-4 py-2 rounded-xl orange-gradient-btn text-xs font-semibold text-white flex items-center gap-1.5 shadow-md"
           >
             <span>View Trek</span>
             <ArrowRight className="w-3.5 h-3.5" />

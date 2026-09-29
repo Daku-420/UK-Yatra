@@ -13,7 +13,6 @@ import { BLOG_POSTS } from '../data/blogs';
 import { getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
-import { SEOHead } from '../components/SEOHead';
 
 export const BlogDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -21,44 +20,8 @@ export const BlogDetailPage: React.FC = () => {
 
   const relatedPosts = BLOG_POSTS.filter((p) => p.id !== post.id).slice(0, 2);
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    image: post.image,
-    datePublished: '2026-02-15',
-    dateModified: '2026-03-20',
-    author: {
-      '@type': 'Person',
-      name: post.author.name,
-      jobTitle: post.author.role
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'UK Yatra',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://uk-yatra.vercel.app/logo.png'
-      }
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://uk-yatra.vercel.app/blog/${post.slug}`
-    }
-  };
-
   return (
     <div className="pt-24 pb-20">
-      <SEOHead
-        title={post.title}
-        description={post.excerpt}
-        canonicalPath={`/blog/${post.slug}`}
-        ogImage={post.image}
-        ogType="article"
-        keywords={post.tags}
-        schema={articleSchema}
-      />
       {/* Article Hero */}
       <div className="relative h-[50vh] min-h-[400px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8">
         <img

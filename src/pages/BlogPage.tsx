@@ -3,13 +3,12 @@ import { Sparkles, Search } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogs';
 import { BlogCard } from '../components/BlogCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { SEOHead } from '../components/SEOHead';
 
 export const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Treks', 'Spiritual', 'Travel Guides', 'Weekend Escapes', 'Seasonal Travel', 'Travel Tips'];
+  const categories = ['All', 'Spiritual', 'Travel Guides', 'Trekking', 'Weekend Escapes'];
 
   const filteredPosts = BLOG_POSTS.filter((post) => {
     const matchCat = selectedCategory === 'All' || post.category === selectedCategory;
@@ -20,11 +19,6 @@ export const BlogPage: React.FC = () => {
 
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-      <SEOHead
-        title="Uttarakhand Travel Stories, Trekking Guides & Tips | UK Yatra Blog"
-        description="Read firsthand travel guides, Himalayan trekking preparation checklists, pilgrimage insights, and weekend itineraries from native Uttarakhand specialists."
-        canonicalPath="/blog"
-      />
       <Breadcrumbs items={[{ label: 'Stories & Travel Guides' }]} />
 
       {/* Header Banner */}
