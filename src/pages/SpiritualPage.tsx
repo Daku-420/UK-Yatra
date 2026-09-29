@@ -34,7 +34,7 @@ export const SpiritualPage: React.FC<SpiritualPageProps> = ({ onOpenBookingModal
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-800 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-            <span>Devbhoomi Pilgrimage 2026</span>
+            <span>Devbhoomi Pilgrimage 2027</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 leading-tight">
             Journeys With <span className="text-amber-600">Meaning</span>

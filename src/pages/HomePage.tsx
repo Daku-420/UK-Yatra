@@ -362,7 +362,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               Handcrafted Custom Itineraries
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-              Our 2026 seasonal packages and customized day-wise itineraries are currently being updated. Connect directly with our local destination architects on WhatsApp to receive a tailor-made day-by-day itinerary and transparent pricing.
+              Our 2027 seasonal packages and customized day-wise itineraries are currently being updated. Connect directly with our local destination architects on WhatsApp to receive a tailor-made day-by-day itinerary and transparent pricing.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a

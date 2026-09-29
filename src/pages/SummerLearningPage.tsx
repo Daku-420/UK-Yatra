@@ -150,7 +150,7 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-700 text-xs font-bold uppercase tracking-wider">
               <SunMedium className="w-4 h-4 text-amber-600" />
-              <span>Himalayan Youth Summer Camps 2026</span>
+              <span>Himalayan Youth Summer Camps 2027</span>
             </div>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-tight">
               Summer Learning & <br />
@@ -194,7 +194,7 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
         {/* Programme Grid */}
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Summer 2026 Expeditions</span>
+            <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Summer 2027 Expeditions</span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-1">
               Curated Summer Learning Tracks
             </h2>
@@ -284,7 +284,7 @@ export const SummerLearningPage: React.FC<SummerLearningPageProps> = ({ onOpenBo
           <div className="max-w-3xl mb-8">
             <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">Summer Schedule</span>
             <h3 className="text-2xl sm:text-3xl font-bold font-display text-white mt-1 mb-2">
-              Upcoming Summer 2026 Batch Dates
+              Upcoming Summer 2027 Batch Dates
             </h3>
             <p className="text-xs sm:text-sm text-slate-300">
               Early bird registrations receive complimentary round-trip Dehradun/Rishikesh pick-up and expedition kits.

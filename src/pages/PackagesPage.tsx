@@ -127,7 +127,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
           </div>
           <h3 className="text-2xl font-bold font-display text-slate-900">Custom Itineraries & Transparent Pricing</h3>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
-            Our 2026 seasonal packages and customized day-wise itineraries are currently being updated by our mountain architects. Connect directly with our team on WhatsApp for custom day-wise quotes and bespoke travel plans!
+            Our 2027 seasonal packages and customized day-wise itineraries are currently being updated by our mountain architects. Connect directly with our team on WhatsApp for custom day-wise quotes and bespoke travel plans!
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
