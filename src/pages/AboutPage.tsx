@@ -185,10 +185,10 @@ export const AboutPage: React.FC = () => {
             <Mountain className="w-3.5 h-3.5" />
             <span>Who We Are</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-white leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 leading-tight">
             Learn More - <span className="text-brand-orange">About UK Yatra</span>
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
             At UK Yatra, we provide the best travel services tailored to your needs. 
             Rooted in Haridwar, Uttarakhand since 2013, we combine deep local knowledge, passionate ground operations, and modern service standards to make every journey memorable.
           </p>

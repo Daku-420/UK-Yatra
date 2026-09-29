@@ -209,10 +209,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Sanctuaries</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
               Explore <span className="text-brand-orange">Uttarakhand</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-200 max-w-xl font-normal drop-shadow-xs">
+            <p className="mt-2 text-xs sm:text-sm text-slate-700 max-w-xl font-medium">
               From peaceful valleys to high Himalayan trails, discover the places that make Uttarakhand unforgettable.
             </p>
           </div>
@@ -245,7 +245,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         <div className="mt-12 text-center">
           <Link
             to="/destinations"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-brand-card hover:bg-slate-800 text-slate-200 hover:text-white border border-white/15 shadow-sm font-display font-semibold text-xs transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-brand-card hover:bg-slate-800 text-white border border-white/15 shadow-sm font-display font-bold text-xs transition-all hover:scale-105"
           >
             <span>View All 20+ Uttarakhand Destinations</span>
             <ArrowRight className="w-4 h-4 text-brand-orange" />
@@ -326,10 +326,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <Flame className="w-3.5 h-3.5" />
               <span>Curated Packages</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
               Journeys Worth <span className="text-brand-orange">Taking</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-200 max-w-xl font-normal drop-shadow-xs">
+            <p className="mt-2 text-xs sm:text-sm text-slate-700 max-w-xl font-medium">
               Handcrafted itineraries with verified hill drivers, sanitised stays, priority darshan, and transparent pricing.
             </p>
           </div>
@@ -674,10 +674,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <Mountain className="w-3.5 h-3.5" />
               <span>Himalayan Expeditions</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900">
               Walk Into The <span className="text-brand-orange">Himalayas</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-200 max-w-xl font-normal drop-shadow-xs">
+            <p className="mt-2 text-xs sm:text-sm text-slate-700 max-w-xl font-medium">
               From the winter snow slopes of Kedarkantha to the floral carpets of Valley of Flowers and Tungnath summit.
             </p>
           </div>
@@ -842,6 +842,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           title="Trusted by"
           highlightText="43,250+ Travellers"
           subtitle="Real guest experiences from across the mountains of Uttarakhand — verified on Google."
+          light={false}
         />
 
         {/* Google Rating Hero Card */}
@@ -914,7 +915,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             href="https://share.google/jPXqc3m8R3eYrwjKU"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-card border border-white/15 shadow-lg hover:shadow-xl text-slate-200 hover:text-white hover:bg-slate-800 font-semibold text-sm transition-all hover:scale-105 group"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-card border border-white/15 shadow-lg hover:shadow-xl text-white hover:bg-slate-800 font-bold text-sm transition-all hover:scale-105 group"
           >
             <svg className="w-5 h-5" viewBox="0 0 48 48">
               <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
@@ -1004,6 +1005,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           title="Stories From The"
           highlightText="Mountains"
           subtitle="Expert travel guides, seasonal weather insights, trekking preparation, and sacred lore."
+          light={false}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

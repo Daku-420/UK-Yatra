@@ -225,8 +225,8 @@ export const ContactPage: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-bold font-display text-white">Message Sent Successfully!</h3>
-                <p className="text-xs text-slate-300 max-w-sm mx-auto">
+                <h3 className="text-2xl font-bold font-display text-slate-900">Message Sent Successfully!</h3>
+                <p className="text-xs text-slate-600 max-w-sm mx-auto font-medium">
                   Thank you {formState.name}! A coordinator from our Rishikesh desk will reach out to you shortly.
                 </p>
                 <div className="pt-4">

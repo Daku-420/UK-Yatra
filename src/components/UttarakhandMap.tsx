@@ -175,10 +175,10 @@ export const UttarakhandMap: React.FC<UttarakhandMapProps> = ({ onOpenBookingMod
 
       {/* Section header */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-nav-text tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight">
           Tourist Map of <span className="text-brand-orange">Uttarakhand</span>
         </h2>
-        <p className="mt-2 text-sm text-body-text">
+        <p className="mt-2 text-sm text-slate-700 font-medium">
           Click a district to explore its top destinations
         </p>
       </div>
@@ -353,8 +353,8 @@ export const UttarakhandMap: React.FC<UttarakhandMapProps> = ({ onOpenBookingMod
           {!active ? (
             <div className="flex flex-col items-center justify-center h-80 rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50 text-center px-6">
               <span className="text-5xl mb-3">🗺️</span>
-              <p className="text-sm font-semibold text-gray-400">Select a district on the map</p>
-              <p className="text-xs text-gray-400 mt-1">to see its tourist destinations</p>
+              <p className="text-sm font-semibold text-slate-600">Select a district on the map</p>
+              <p className="text-xs text-slate-500 font-medium mt-1">to see its tourist destinations</p>
             </div>
           ) : (
             <div

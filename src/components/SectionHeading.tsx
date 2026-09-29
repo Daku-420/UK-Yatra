@@ -15,7 +15,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   highlightText,
   subtitle,
   centered = true,
-  light = true
+  light = false
 }) => {
   return (
     <div className={`mb-10 sm:mb-14 ${centered ? 'text-center max-w-3xl mx-auto' : 'max-w-2xl'}`}>
