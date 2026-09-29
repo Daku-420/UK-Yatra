@@ -886,7 +886,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           <div className="flex flex-col gap-6 max-w-md">
             {[
               { icon: Mountain, iconColor: 'text-sky-400 bg-sky-500/10 border-sky-500/20', value: '43,250+', label: 'Happy Travellers', sub: 'Families, solo travellers & groups served' },
-              { icon: CheckCircle2, iconColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20', value: '4.7 / 5.0', label: 'Average Google Rating', sub: 'Verified ratings from real customers' },
+              { icon: CheckCircle2, iconColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20', value: '4.7 / 5.0', label: 'Google Rating', sub: 'Verified ratings from real customers' },
               { icon: Award, iconColor: 'text-brand-orange bg-brand-orange/10 border-brand-orange/20', value: '8,500+', label: 'Trips Successfully Completed', sub: 'Across Uttarakhand, Himalayas & beyond' },
             ].map(stat => {
               const Icon = stat.icon;
