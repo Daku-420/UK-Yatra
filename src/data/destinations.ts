@@ -2843,6 +2843,616 @@ export const DESTINATIONS: Destination[] = [
     }
   },
 
+    {
+    id: 'kalap',
+    name: 'Kalap',
+    tagline: 'High-Altitude Offbeat Village of Mahabharata Lineage in Upper Tons Valley',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched at 7,500 feet in the remote upper reaches of the Tons Valley in Garhwal, Kalap is a secluded Himalayan hamlet reached only by a 4-hour uphill mountain footpath. The villagers claim direct lineage from the Pandavas and Kauravas of the Mahabharata and live in harmony with age-old agrarian customs.',
+    highlights: ['Unique Mahabharata lineage and living folklore traditions', 'Reachable only via a picturesque 4-hour mountain foot trail', 'Traditional multi-story wooden and slate architecture', 'Pristine organic farming of Himalayan red rice and kidney beans'],
+    bestTime: 'April to June & September to November',
+    altitude: '2,286 m (7,500 ft)',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Karna & Duryodhana Shrines', desc: 'Ancient stone and carved wooden temples preserving rare Mahabharata rituals.' },
+      { name: 'Kalap Village Foot Trail', desc: 'Breathtaking 8 km trail through deodar forests and terraced mountain step farms.' },
+      { name: 'Organic Orchard Walks', desc: 'Harvest walks among walnut trees, apricot orchards, and organic crops.' },
+      { name: 'High Alpine Pine Ridges', desc: 'Panoramic viewpoints looking deep into the Tons river gorge.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (210 km).',
+      byTrain: 'Dehradun Railway Station (190 km).',
+      byRoad: 'Drive from Dehradun to Netwar roadhead (Tons Valley), followed by an 8 km trek up to Kalap.'
+    }
+  },
+  {
+    id: 'dharali',
+    name: 'Dharali',
+    tagline: 'Apple Blossom Riverside Hamlet Along the Turquoise Bhagirathi',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located just 3 km upstream from Harsil along the banks of the rushing Bhagirathi river, Dharali is renowned for its vast sweet apple orchards and traditional wood-and-stone houses. Legend states that King Bhagiratha meditated here to bring the holy River Ganga to earth.',
+    highlights: ['Picturesque riverside apple orchards in the Bhagirathi valley', 'Ancient Shiva Temple believed to date back to the Pandava era', 'Gateway to the Seven Hidden Lakes of Saat Tal', 'Traditional carved wooden homes and cozy homestays'],
+    bestTime: 'April to June & September to November',
+    altitude: '2,680 m (8,793 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Saat Tal Dharali Trek', desc: 'Moderate 7 km pine forest trek to seven pristine interconnected mountain lakes.' },
+      { name: 'Ancient Shiva Temple', desc: 'Puranic stone shrine situated right along the sparkling riverbank.' },
+      { name: 'Apple & Kidney Bean (Rajma) Farms', desc: 'World-famous Dharali red apples and aromatic mountain rajma.' },
+      { name: 'Bhagirathi River Beaches', desc: 'Fine white sand riverbanks surrounded by fragrant deodars.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (225 km).',
+      byTrain: 'Rishikesh Railway Station (210 km).',
+      byRoad: 'Situated directly on NH-34, 3 km beyond Harsil toward Gangotri.'
+    }
+  },
+  {
+    id: 'mukhwa',
+    name: 'Mukhwa',
+    tagline: 'Sacred Winter Abode of Goddess Ganga Across From Harsil',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched across the Bhagirathi river just 1 km from Harsil, Mukhwa (Mukhba) is the revered winter seat of Goddess Ganga. When high Gangotri closes due to severe winter snowfall around Diwali, the idol of the goddess is brought down in a grand procession to be worshipped here for six months.',
+    highlights: ['Official winter abode of the deity of Gangotri Temple', 'Grand ceremonial Doli procession welcoming the goddess every winter', 'Authentic Garhwali village life with wooden courtyards and slate roofs', 'Panoramic views of snow-covered Himalayan peaks across the valley'],
+    bestTime: 'Throughout the year; Winter (Nov-April) for sacred Gangotri rituals',
+    altitude: '2,620 m (8,595 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Ganga Temple Mukhwa', desc: 'Decorated wooden winter sanctum where daily Vedic aartis are performed.' },
+      { name: 'Suspension Bridge to Harsil', desc: 'Scenic pedestrian footbridge over the roaring turquoise Bhagirathi.' },
+      { name: 'Village Heritage Walk', desc: 'Traditional multi-generation wooden houses decorated with sacred carvings.' },
+      { name: 'Pine and Deodar Woodland Trails', desc: 'Tranquil forest trails ideal for meditation and nature photography.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (220 km).',
+      byTrain: 'Rishikesh Railway Station (205 km).',
+      byRoad: '1 km walking distance or short drive across the river from Harsil on the Uttarkashi-Gangotri highway.'
+    }
+  },
+  {
+    id: 'jakhol',
+    name: 'Jakhol',
+    tagline: 'Traditional Wooden Pagoda Architecture & Cultural Heart of Govind Vihar',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated at the confluence of the Supin and Obra rivers in the Govind Wildlife Sanctuary belt, Jakhol is the cultural capital of the raw Tons Valley. Renowned for its stunning four-story wooden pagoda temple dedicated to Someshwar Devta (Lord Shiva), it serves as the launching ground for the remote Obra Gad and Dhaula valley treks.',
+    highlights: ['Magnificent 4-tiered pagoda-style wooden Someshwar Mahadev Temple', 'Gateway to the unexplored Obra Gad Valley and high bugyals', 'Distinctive Garhwali folk attire, wool weaving, and wooden horn music', 'Unspoilt mountain settlement nestled amidst dense blue pine forests'],
+    bestTime: 'April to June & September to November',
+    altitude: '2,200 m (7,218 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Someshwar Mahadev Temple', desc: 'Exquisite wooden architectural masterpiece adorned with ancient carvings and animal horns.' },
+      { name: 'Obra Gad River Trail', desc: 'Offbeat trekking route leading through pristine meadows to high glacial lakes.' },
+      { name: 'Supin River Gorges', desc: 'Spectacular hanging cliffs and wooden bridges over the roaring mountain river.' },
+      { name: 'Traditional Handloom Weaving', desc: 'Locals weaving pure sheep-wool blankets (Pankhis) on traditional pit-looms.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (205 km).',
+      byTrain: 'Dehradun Railway Station (185 km).',
+      byRoad: 'Drive from Mori to Netwar, then take the 18 km mountain road up to Jakhol.'
+    }
+  },
+  {
+    id: 'taluka',
+    name: 'Taluka',
+    tagline: 'Fairytale Wooden Hamlet on the Har Ki Dun Alpine River Trail',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located 11 km along the Supin River from Sankri, Taluka is an enchanting traditional mountain village that serves as the official trailhead for Har Ki Dun. Featuring two-story slate-roofed wooden cottages, walnut trees, and aromatic pines, it transports travelers into an era of Himalayan folklore.',
+    highlights: ['First staging camp and trailhead for the Har Ki Dun trek', 'Rich Kath-Kuni style timber-and-stone architecture', 'Surrounded by chestnut, walnut, willow, and deodar trees', 'Rushing glacial waters of the Supin River flowing right past the village'],
+    bestTime: 'April to June & September to November (Winter snow treks available)',
+    altitude: '2,075 m (6,808 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Supin River Suspension Bridge', desc: 'Photogenic footbridge marking the start of the classic high-altitude trek.' },
+      { name: 'Traditional Kath-Kuni Homes', desc: 'Earthquake-resistant interlocking timber homes built without cement.' },
+      { name: 'Walnut & Apricot Groves', desc: 'Peaceful orchards lining the riverbanks.' },
+      { name: 'Sankri-Taluka Forest Drive', desc: 'Thrilling dirt road through Govind Pashu Vihar National Park.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (220 km).',
+      byTrain: 'Dehradun Railway Station (200 km).',
+      byRoad: '11 km dirt mountain track from Sankri village (accessible by 4x4 or on foot).'
+    }
+  },
+  {
+    id: 'agoda',
+    name: 'Agoda',
+    tagline: 'Quaint Stone-and-Slate Staging Hamlet for Dodital Glacial Lake',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Tucked away on the emerald mountain slopes 6 km uphill from Sangam Chatti in Uttarkashi district, Agoda is a peaceful Garhwali village of stone houses and step farms. It is the beloved first-night stopover for trekkers climbing toward sacred Dodital (birthplace of Lord Ganesha) and the high Darwa Pass.',
+    highlights: ['Primary staging village on the famous Dodital and Darwa Pass trek', 'Warm and hospitable village homestay culture with home-cooked mountain food', 'Unobstructed views of deep forest valleys and cascading mountain streams', 'Pristine tranquility free from commercial traffic and noise'],
+    bestTime: 'April to June & September to November',
+    altitude: '2,250 m (7,382 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Dodital Trailhead', desc: 'Ancient path leading through rhododendron woods to the sacred emerald lake.' },
+      { name: 'Asi Ganga Valley Views', desc: 'Sweeping vistas over the deep forested gorge of the Asi Ganga.' },
+      { name: 'Garhwali Traditional Homestays', desc: 'Experience local hospitality, red rice, and mountain honey.' },
+      { name: 'Bebra Village Campsite (nearby)', desc: 'Peaceful campsite by the babbling mountain brook.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (185 km).',
+      byTrain: 'Rishikesh Railway Station (170 km).',
+      byRoad: 'Drive from Uttarkashi to Sangam Chatti (15 km), followed by a gentle 6 km uphill trek.'
+    }
+  },
+  {
+    id: 'bagori',
+    name: 'Bagori',
+    tagline: 'Ancient Jadh Bhotia Border Hamlet of Tibetan Buddhist Prayer Flags',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located right across a wooden footbridge from Harsil, Bagori is an authentic high-altitude settlement inhabited by the Jadh Bhotia community originally from the Nelong Valley. Fluttering with Tibetan prayer flags and adorned with ancient Buddhist chortens and intricate wooden carvings, it offers a fascinating glimpse into trans-Himalayan heritage.',
+    highlights: ['Unique Jadh Bhotia culture combining Buddhist and Hindu traditions', 'Ancient Buddhist prayer wheels, mani stones, and vibrant chortens', 'Skilled weavers producing pure sheep-wool carpets, mufflers, and shawls', 'Authentic multi-story wooden carved houses flanked by apple orchards'],
+    bestTime: 'April to October (Villagers migrate to lower Dunda during peak winter)',
+    altitude: '2,620 m (8,596 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Bagori Buddhist Temple & Chortens', desc: 'Serene monastery sanctum with spinning prayer wheels and murals.' },
+      { name: 'Artisan Wool Weaving Units', desc: 'Watch master craftsmen weave warm Bhotia carpets on hand looms.' },
+      { name: 'Ancient Wooden Carved Mansions', desc: 'Multi-tiered cedar homes designed for harsh Himalayan winters.' },
+      { name: 'Harsil Apple Valley Walks', desc: 'Direct connection to the apple trails of Harsil and Dharali.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (220 km).',
+      byTrain: 'Rishikesh Railway Station (205 km).',
+      byRoad: 'Short 5-minute walk across the river footbridge from Harsil town.'
+    }
+  },
+  {
+    id: 'barsu',
+    name: 'Barsu',
+    tagline: 'Serene Meadow Staging Village & Basecamp for Dayara Bugyal',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched at 2,250 meters high above the Bhagirathi river basin in Uttarkashi district, Barsu is a postcard-perfect mountain hamlet. Famous as the preferred basecamp for the world-renowned Dayara Bugyal alpine meadow trek, it boasts an emerald artificial pond, apple orchards, and sweeping views of Mount Gangotri and Srikantha.',
+    highlights: ['Primary basecamp and launchpad for the Dayara Bugyal trek', 'Picturesque village pond reflecting snow-clad Himalayan massifs', 'Sprawling apple and apricot orchards dotted with stone cottages', 'Spectacular sunset panoramas over the Bandarpoonch range'],
+    bestTime: 'Throughout the year; May-June for green meadows, Dec-Feb for snow',
+    altitude: '2,250 m (7,382 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Dayara Bugyal Trailhead', desc: 'Trail through oak and rhododendron forests climbing to the vast 28 sq km meadow.' },
+      { name: 'Barsu Village Lake', desc: 'Small scenic reservoir reflecting the towering peaks in early morning light.' },
+      { name: 'Boutique Eco-Homestays', desc: 'Warm community-run lodges offering authentic Garhwali hospitality.' },
+      { name: 'Barnala Tal Excursion', desc: 'Peaceful mid-point mountain lake located halfway up the meadow trail.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (185 km).',
+      byTrain: 'Rishikesh Railway Station (170 km).',
+      byRoad: 'Drive from Uttarkashi to Bhatwari (30 km), then take the 12 km scenic uphill road to Barsu.'
+    }
+  },
+  {
+    id: 'gangnani',
+    name: 'Gangnani',
+    tagline: 'Tranquil Hot Sulphur Thermal Spring Hamlet on the Gangotri Highway',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated 46 km from Uttarkashi along the highway toward Gangotri, Gangnani is celebrated for its natural hot sulphur springs at Rishikund. Pilgrims bound for Gangotri stop here to take a rejuvenating dip in the medicinal mineral waters with views of the snow-clad peaks.',
+    highlights: ['Natural hot sulphur thermal springs renowned for healing skin ailments', 'Rishikund sacred bathing pools for men and women', 'Ancient Parashar Rishi Temple and peaceful hermitage', 'Lush terraced valley slopes overlooking the Bhagirathi river'],
+    bestTime: 'Throughout the year; Especially popular from April to November',
+    altitude: '1,850 m (6,070 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Rishikund Thermal Springs', desc: 'Natural steaming hot sulphur pool set against steep mountain cliffs.' },
+      { name: 'Parashar Rishi Temple', desc: 'Ancient stone temple dedicated to Sage Parashara overlooking the springs.' },
+      { name: 'Bhatwari Apple Belt (nearby)', desc: 'Terraced fruit orchards lining the highway.' },
+      { name: 'Bhagirathi Riverside Walks', desc: 'Gentle walking trails along the mountain river.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (195 km).',
+      byTrain: 'Rishikesh Railway Station (180 km).',
+      byRoad: 'Situated directly on NH-34, 46 km north of Uttarkashi toward Gangotri.'
+    }
+  },
+  {
+    id: 'kanakchauri',
+    name: 'Kanakchauri',
+    tagline: 'Serene Ridge Village & Trailhead for the Spectacular Kartik Swami Temple',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched on a quiet mountain ridge 38 km from Rudraprayag along the Pokhari road, Kanakchauri is an offbeat Garhwali village famous as the base for the legendary Kartik Swami Temple. Perched at 3,050 meters, Kartik Swami is the only temple in Uttarakhand dedicated to Lord Kartikeya, offering a mind-boggling 360-degree panorama of over 100 Himalayan peaks.',
+    highlights: ['Trailhead for the stunning 3 km ridge trek to Kartik Swami Temple', 'Unmatched 360-degree sunrise and sunset views of the Himalayan range', 'Dense virgin forests of rhododendron, oak, and bird sanctuaries', 'Peaceful, unhurried village homestays far from tourist crowds'],
+    bestTime: 'October to May (Spring brings blooming crimson rhododendrons)',
+    altitude: '2,250 m (7,382 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kartik Swami Ridge Temple', desc: 'Temple situated dramatically atop a narrow knife-edge rock cliff with hundreds of brass bells.' },
+      { name: 'Rhododendron Forest Trail', desc: 'Gentle 3 km paved stone pathway alive with bird song and crimson blooms.' },
+      { name: 'Himalayan Sunrise Viewpoint', desc: 'Offers sweeping views from Chaukhamba to Nanda Devi and Trishul.' },
+      { name: 'Pokhari Valley Gateway', desc: 'Scenic mountain road connecting to the ancient temples of Chamoli.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (185 km).',
+      byTrain: 'Rishikesh Railway Station (170 km).',
+      byRoad: 'Drive 38 km from Rudraprayag along the Rudraprayag-Pokhari mountain road.'
+    }
+  },
+  {
+    id: 'dhanpur',
+    name: 'Dhanpur',
+    tagline: 'Historic Copper Mine Hamlet & Pristine Oak Forest Hideaway',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched in the dense oak-covered heights of the Chamoli and Pauri Garhwal borderlands near Karnaprayag, Dhanpur is a historical mountain settlement once famous during the Chand and British eras for its rich copper mines. Today, it is an unspoilt eco-village known for sweeping valley outlooks and pure solitude.',
+    highlights: ['Historic copper mining heritage dating back to pre-colonial eras', 'Dense pristine forests of oak, pine, and mountain rhododendron', 'Panoramic outlook over the Alaknanda and Pindar river valleys', 'Authentic rustic Garhwali village life and traditional agriculture'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,900 m (6,233 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Historical Copper Mine Shafts', desc: 'Ancient subterranean excavation sites of historical and geological interest.' },
+      { name: 'Dhanpur Forest Ridge Walks', desc: 'Quiet canopy trails frequented by barking deer and colorful pheasants.' },
+      { name: 'Karnaprayag Valley Overlook', desc: 'Vantage point delivering wide mountain panoramas.' },
+      { name: 'Traditional Garhwali Hamlets', desc: 'Centuries-old stone houses with slate roofs and intricate wooden doorways.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (190 km).',
+      byTrain: 'Rishikesh Railway Station (175 km).',
+      byRoad: 'Accessible by taxi and mountain roads from Karnaprayag (18 km).'
+    }
+  },
+  {
+    id: 'shaukiyathal',
+    name: 'Shaukiyathal',
+    tagline: 'Unexplored Pine-Draped Kumaon Ridge Overlooking Trishul & Nanda Devi',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located in the peaceful pine belt of Kumaon between Almora and Ranikhet, Shaukiyathal is an idyllic rural hamlet cherished by artists, writers, and solitude-seekers. Offering unobstructed views of the snow-clad Trishul, Nanda Devi, and Panchachuli peaks, it provides unhurried Himalayan bliss.',
+    highlights: ['Tranquil pine forest ridges far from commercial tourist hubs', 'Panoramic front-row views of Trishul, Nanda Ghunti, and Nanda Devi', 'Boutique farm stays, organic farming, and Kumaoni cuisine', 'Pleasant year-round climate and crisp mountain air'],
+    bestTime: 'Throughout the year; Autumn and Winter offer peerless snow views',
+    altitude: '1,850 m (6,069 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Shaukiyathal Himalayan Viewpoint', desc: 'Sunset ridge delivering 180-degree panoramas of the Greater Himalayas.' },
+      { name: 'Pine Forest Nature Trails', desc: 'Fragrant walking trails lined with pine needles and wild flora.' },
+      { name: 'Organic Mountain Stays', desc: 'Eco-resorts promoting sustainable tourism, birding, and star-gazing.' },
+      { name: 'Ranikhet & Almora Gateway', desc: 'Easy excursion access to nearby colonial hill stations.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (115 km).',
+      byTrain: 'Kathgodam Railway Station (85 km).',
+      byRoad: 'Situated off the Kathgodam-Almora-Ranikhet circuit road.'
+    }
+  },
+  {
+    id: 'shitlakhet',
+    name: 'Shitlakhet',
+    tagline: 'Fragrant Pine & Cedar Haven Blessed by Syahi Devi Ridge Temple',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched at 1,900 meters on the Syahi Devi ridge in Almora district, Shitlakhet is a hidden gem surrounded by lush pine, oak, and rhododendron forests. Famed for its sprawling fruit orchards, pure mountain springs, and the revered Syahi Devi hilltop temple, it is an offbeat paradise of fresh air and solitude.',
+    highlights: ['Scenic hilltop Syahi Devi Temple with 360-degree mountain panoramas', 'Famous fruit belt laden with apples, plums, peaches, and apricots', 'Exceptional birdwatching with over 150 species in old-growth forests', 'Unspoilt alternative to crowded hill stations like Nainital and Ranikhet'],
+    bestTime: 'Throughout the year; Spring for fruit blossoms, Autumn for clear snows',
+    altitude: '1,900 m (6,233 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Syahi Devi Temple', desc: 'Ancient hilltop temple reached via a 3 km pine forest walk offering panoramic snow views.' },
+      { name: 'Fruit Orchards of Chaubattia & Shitlakhet', desc: 'Lush agricultural estates where visitors pick seasonal fresh fruit.' },
+      { name: 'Katarmal Sun Temple Trail', desc: 'Scenic mountain walk connecting to the 9th-century Sun shrine (12 km).' },
+      { name: 'Oak & Rhododendron Nature Trails', desc: 'Shaded canopy walks filled with songbirds and wildflowers.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (118 km).',
+      byTrain: 'Kathgodam Railway Station (90 km).',
+      byRoad: 'Drive 24 km from Ranikhet or 30 km from Almora.'
+    }
+  },
+  {
+    id: 'satkhol',
+    name: 'Satkhol',
+    tagline: 'Spiritual Meditation Sanctuary Surrounded by Oak Woods & Fruit Orchards',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nestled on a tranquil ridge near Mukteshwar at 2,100 meters, Satkhol is an enchanting village surrounded by dense oak, pine, and rhododendron forests. Home to the renowned Satkhol Ashram (Sahaj Marg meditation retreat), it is deeply cherished by travelers seeking peace, nature, and panoramic Himalayan sunrises.',
+    highlights: ['World-renowned Sahaj Marg meditation retreat and spiritual ashram', 'Surrounded by quiet oak and rhododendron woods and fruit orchards', 'Panoramic views of Trishul, Nanda Devi, and Panchachuli peaks', 'Vibrant birding hotspot attracting Himalayan bulbuls, flycatchers, and minivets'],
+    bestTime: 'Throughout the year',
+    altitude: '2,100 m (6,890 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Satkhol Meditation Ashram', desc: 'Peaceful spiritual retreat center nestled amidst towering deodars.' },
+      { name: 'Himalayan Ridge Sunset Point', desc: 'Overlooks the rolling Kumaon valleys painted in evening crimson.' },
+      { name: 'Peora & Mukteshwar Forest Trails', desc: 'Pleasant bridle paths through virgin oak and chestnut woodlands.' },
+      { name: 'Organic Fruit Orchards', desc: 'Terraces laden with apricots, pears, and plums during summer.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (95 km).',
+      byTrain: 'Kathgodam Railway Station (65 km).',
+      byRoad: 'Situated 20 km from Mukteshwar along the road to Almora.'
+    }
+  },
+  {
+    id: 'kanda',
+    name: 'Kanda',
+    tagline: 'Ancient Katyuri Heritage Basin, Step Terraces & Sacred Kalishan Temple',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated 26 km east of Bageshwar in a bowl-shaped valley, Kanda is a historic rural town surrounded by emerald step farms, pine forests, and ancient Katyuri architecture. Crowned by the sacred Kalishan (Bhadrakali) Temple atop the ridge, it offers an authentic rural Kumaoni escape.',
+    highlights: ['Historic Katyuri-era temples and centuries-old stone step farming', 'Sacred Kalishan (Bhadrakali) Temple offering panoramic valley vistas', 'Community-driven rural village tourism, homestays, and craft workshops', 'Dense pine and oak woodlands with mild, pleasant year-round weather'],
+    bestTime: 'September to May',
+    altitude: '1,550 m (5,085 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Kalishan Bhadrakali Temple', desc: 'Revered Shakti shrine set atop the highest ridge overlooking Kanda valley.' },
+      { name: 'Kanda Rural Village Homestays', desc: 'Pioneering rural tourism program connecting travelers with local families.' },
+      { name: 'Katyuri Stone Water Spouts (Naulas)', desc: 'Ancient carved groundwater architecture preserving pure natural spring water.' },
+      { name: 'Pine Forest Bridle Trails', desc: 'Pleasant hikes connecting quaint surrounding farming hamlets.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (195 km).',
+      byTrain: 'Kathgodam Railway Station (170 km).',
+      byRoad: '26 km scenic road drive from Bageshwar along the road to Chaukori.'
+    }
+  },
+  {
+    id: 'khati',
+    name: 'Khati',
+    tagline: 'The Last Inhabited Himalayan Outpost on the Pindari Glacier Trail',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated at 2,210 meters on the right bank of the roaring Pindar River in Bageshwar district, Khati is celebrated as the last inhabited village on the iconic Pindari and Sunderdhunga glacier treks. With stone houses, slate roofs, hospitable shepherds, and ringed by snow peaks, it is the soul of Kumaoni wilderness.',
+    highlights: ['Last inhabited village on the Pindari and Sunderdhunga Glacier trails', 'Traditional Kumaoni stone-and-timber houses with colorful painted doors', 'Warm shepherd hospitality, fresh local meals, and rustic village homestays', 'Breathtaking setting surrounded by rhododendron forests and snow peaks'],
+    bestTime: 'April to June & September to November',
+    altitude: '2,210 m (7,250 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Pindar River Gorge', desc: 'Roaring glacial torrent flowing directly beneath the village cliffs.' },
+      { name: 'Traditional Village Square', desc: 'Heart of the community where locals spin wool and children play.' },
+      { name: 'Pindari Glacier Trail Path', desc: 'Trail branching toward Dwali, Phurkia, and Zero Point.' },
+      { name: 'Sunderdhunga Valley Route', desc: 'Wild trail branching westward toward the dramatic Maiktoli base.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (245 km).',
+      byTrain: 'Kathgodam Railway Station (225 km).',
+      byRoad: 'Drive from Bageshwar to Song/Loharkhet roadhead, followed by a scenic 17 km foot trek.'
+    }
+  },
+  {
+    id: 'loharkhet',
+    name: 'Loharkhet',
+    tagline: 'Historic Staging Settlement for High-Altitude Kumaon Glacial Expeditions',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Set in a small green valley basin 40 km from Bageshwar, Loharkhet is an ancient staging village where travelers have assembled for over a century to climb the Dhakuri Pass and enter the Pindar and Sunderdhunga valleys. Surrounded by thick oak forests and clear mountain streams, it remains a beloved stop for mountain explorers.',
+    highlights: ['Historic expedition staging post since British surveyor Traill\'s era', 'Base of the steep 9 km trail climbing up to the famous Dhakuri Pass', 'Charming village surrounded by terraced fields and oak woods', 'KMVN tourist rest house and rustic trekking lodges'],
+    bestTime: 'April to June & September to November',
+    altitude: '1,750 m (5,741 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Dhakuri Pass Trailhead', desc: 'Ascent through dense oak woods to the panoramic saddle at 2,680m.' },
+      { name: 'Song River Confluence', desc: 'Peaceful riverbank picnic spots surrounded by terraced hills.' },
+      { name: 'Loharkhet Forest Rest House', desc: 'Colonial-era stone rest house with peaceful mountain lawns.' },
+      { name: 'Kapkot Gateway', desc: 'Nearby rural market town famous for local copper and iron crafts.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (225 km).',
+      byTrain: 'Kathgodam Railway Station (205 km).',
+      byRoad: 'Drive from Bageshwar via Kapkot and Bharadi to Song/Loharkhet.'
+    }
+  },
+  {
+    id: 'khirsu-villages',
+    name: 'Khirsu Villages',
+    tagline: 'Idyllic Pauri Garhwal Farming Hamlets of Gaja & Ulkhagarhi',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Surrounding the quiet ridge town of Khirsu in Pauri Garhwal, the rural villages of Gaja, Ulkha, and Chauprikhal represent traditional Garhwali village life at its most picturesque. Dotted with apple orchards, ancient stone naulas (springs), and slate-roofed homestays, these settlements gaze out toward a 300-km panoramic panorama of snow peaks.',
+    highlights: ['Traditional Garhwali stone-and-wood farming hamlets around Khirsu', 'Panoramic views of 300+ snow-capped peaks including Trishul and Chaukhamba', 'Historic Ulkhagarhi hilltop fort and temple trek', 'Famous apple orchards, red rice farming, and warm local homestays'],
+    bestTime: 'Throughout the year; March to June & September to January',
+    altitude: '1,700 m - 1,900 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Ulkhagarhi Hilltop Temple', desc: 'Charming 3 km nature trek to ancient fort ruins offering breathtaking Himalayan panoramas.' },
+      { name: 'Gaja Village Apple Orchards', desc: 'Peaceful farming hamlet famed for organic apples, walnuts, and pears.' },
+      { name: 'Ancient Stone Naulas', desc: 'Historic carved natural stone spring sanctuaries preserved by villagers.' },
+      { name: 'Deodar Canopy Forest Walks', desc: 'Gentle nature walks through dense aromatic cedar and oak forests.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (145 km).',
+      byTrain: 'Kotdwar Railway Station (115 km) or Rishikesh (130 km).',
+      byRoad: 'Situated 15 km from Pauri and 30 km from Srinagar Garhwal.'
+    }
+  },
+  {
+    id: 'kausani-villages',
+    name: 'Kausani Villages',
+    tagline: 'Terraced Tea Garden Hamlets & Artisan Wool Weaving Settlements',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Scattered across the rolling tea-clad ridges around Kausani in the Kumaon hills, rural hamlets like Pinath, Garur, and Rudradhari preserve authentic Kumaoni pastoral lifestyles. Here, villagers tend high-altitude tea plantations, cultivate aromatic herbs, weave fine wool shawls, and live beneath the watchful gaze of Mount Trishul.',
+    highlights: ['Sprawling high-altitude tea garden settlements and picking trails', 'Artisan handloom cooperatives weaving Kausani wool shawls', 'Rudradhari waterfall and ancient cave temple in surrounding forests', 'Unobstructed 300-km views of Nanda Devi, Trishul, and Panchachuli'],
+    bestTime: 'Throughout the year; April to June & September to December',
+    altitude: '1,890 m (6,200 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kausani Tea Estate Hamlets', desc: 'Lush green tea gardens where organic orthodox and green tea is hand-picked.' },
+      { name: 'Rudradhari Waterfalls & Cave Temple', desc: 'Scenic forest cascade and Shiva shrine 12 km from Kausani.' },
+      { name: 'Pinath Village Ridge Walk', desc: '5 km nature hike to an ancient temple offering peaceful solitude.' },
+      { name: 'Kausani Shawl Weaving Centers', desc: 'Watch local village women create intricate woolen shawls on handlooms.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (165 km).',
+      byTrain: 'Kathgodam Railway Station (135 km).',
+      byRoad: 'Accessible by road from Almora (52 km) and Ranikhet (60 km).'
+    }
+  },
+  {
+    id: 'darma-valley-villages',
+    name: 'Darma Valley Villages',
+    tagline: 'Ancient Stone-and-Wood Rung Tribal Settlements of Dantu, Dugtu & Sela',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nestled beneath the dramatic eastern spires of Mount Panchachuli in Pithoragarh, the 14 indigenous Rung tribal villages of Darma Valley—including Dantu, Dugtu, Baling, and Sela—are living museums of trans-Himalayan culture. Built with dry stone masonry and carved deodar timber, these seasonal villages celebrate unique harvest festivals and welcome adventurers to the edge of the world.',
+    highlights: ['14 historic Rung tribal border villages dating back centuries', 'Front-row jaw-dropping views of Panchachuli I to V peaks', 'Traditional stone houses decorated with intricate floral wood carvings', 'Unique indigenous customs, loom weaving, and warm homestays'],
+    bestTime: 'May to June & September to October',
+    altitude: '3,200 m - 3,500 m',
+    idealDuration: '4 - 6 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Dantu & Dugtu Villages', desc: 'Twin settlements situated closest to the towering Panchachuli glacier.' },
+      { name: 'Panchachuli Basecamp Trail', desc: 'Short walk from Dugtu village to the direct base of the snow peaks.' },
+      { name: 'Rung Tribal Cultural Heritage', desc: 'Experience traditional wool weaving, folk songs, and authentic Rung cuisine.' },
+      { name: 'Dhauli Ganga River Gorges', desc: 'Spectacular glacial river torrent cutting through vertical granite walls.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (360 km to Dharchula).',
+      byTrain: 'Kathgodam Railway Station (310 km to Dharchula).',
+      byRoad: 'Rugged 4x4 mountain route from Dharchula (70 km) requiring inner-line permits.'
+    }
+  },
+  {
+    id: 'niti-valley-villages',
+    name: 'Niti Valley Villages',
+    tagline: 'High Borderland Settlements of Malari, Bampa, Gamshali & Niti',
+    category: 'Offbeat Uttarakhand',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located in the remote northern frontier of Chamoli district along the Dhauliganga river, the borderland villages of Malari, Bampa, Gamshali, and Niti form the ancestral realm of the Bhotia community. Framed by barren towering granite canyons and snow peaks, these settlements preserve ancient trans-Himalayan trade history and rare high-altitude lifestyles.',
+    highlights: ['Cluster of historic Indo-Tibetan border villages at 3,000m - 3,600m', 'Malari village famous for archaeological golden masks and rock caves', 'Timarsain Mahadev winter ice stalagmite cave near Niti', 'Untouched stark canyon landscapes similar to Ladakh and Zanskar'],
+    bestTime: 'May to October (Inner Line Permits required for Indian nationals)',
+    altitude: '3,000 m - 3,600 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Niti Village', desc: 'Last inhabited Indian settlement before the Niti Pass into Western Tibet.' },
+      { name: 'Malari Village & Archaeological Site', desc: 'Ancient saucer-shaped village famous for prehistoric cave excavations.' },
+      { name: 'Gamshali & Bampa Hamlets', desc: 'Picturesque wooden settlements surrounded by willow trees and buckwheat fields.' },
+      { name: 'Timarsain Mahadev Snow Lingam', desc: 'Natural winter cave shrine reverently called the Amarnath of Uttarakhand.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (350 km).',
+      byTrain: 'Rishikesh Railway Station (330 km).',
+      byRoad: 'Scenic mountain road from Joshimath via Tapovan and Malari (88 km).'
+    }
+  },
+
   // ==========================================
   // 6. LAKES & ADVENTURE (Tehri Lake)
   // ==========================================

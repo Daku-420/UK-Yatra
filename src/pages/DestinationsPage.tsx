@@ -59,7 +59,15 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
   ],
   'villages-hidden-gems': [
     'mana-village', 'sari-village', 'sankri', 'khirsu',
-    'lata-village', 'osla-village', 'abbott-mount'
+    'lata-village', 'osla-village', 'abbott-mount',
+    'kalap', 'harsil-valley', 'dharali', 'mukhwa',
+    'jakhol', 'taluka', 'agoda', 'bagori',
+    'barsu', 'gangnani', 'kanakchauri', 'dhanpur',
+    'peora', 'shaukiyathal', 'shitlakhet', 'satkhol',
+    'dhanachuli', 'ramgarh', 'pangot', 'kanda',
+    'chaukori', 'munsiyari', 'khati', 'loharkhet',
+    'khirsu-villages', 'gwaldam', 'kausani-villages',
+    'patal-bhuvaneshwar', 'darma-valley-villages', 'niti-valley-villages'
   ]
 };
 
@@ -68,7 +76,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     slug: 'all',
     name: 'All Destinations',
     tagline: 'Discover Uttarakhand',
-    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, pristine Himalayan valleys, wildlife sanctuaries, and remote mountain hamlets. Explore all 103 hand-curated destinations across the Devbhoomi.',
+    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, pristine Himalayan valleys, wildlife sanctuaries, and remote mountain hamlets. Explore all 124 hand-curated destinations across the Devbhoomi.',
     badge: 'Complete Catalog',
     filterFn: () => true
   },
