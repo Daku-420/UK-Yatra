@@ -21,7 +21,11 @@ export interface DestinationCategoryDefinition {
 export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
   'hill-stations': [
     'mussoorie', 'nainital', 'auli', 'ranikhet', 'chakrata',
-    'lansdowne', 'mukteshwar', 'dhanaulti', 'kausani', 'munsiyari'
+    'lansdowne', 'mukteshwar', 'dhanaulti', 'kausani', 'munsiyari',
+    'almora', 'chamba', 'kanatal', 'bhowali', 'bhimtal',
+    'dhanachuli', 'ramgarh', 'naukuchiatal', 'chaukori', 'pithoragarh',
+    'lohaghat', 'champawat', 'binsar', 'khirsu', 'pangot',
+    'peora', 'gwaldam', 'abbott-mount'
   ],
   'spiritual-destinations': [
     'haridwar', 'rishikesh', 'yamunotri', 'gangotri',
@@ -46,7 +50,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     slug: 'all',
     name: 'All Destinations',
     tagline: 'Discover Uttarakhand',
-    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, and remote Himalayan hamlets. Explore all 38 hand-curated destinations.',
+    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, and remote Himalayan hamlets. Explore all 53 hand-curated destinations across the Devbhoomi.',
     badge: 'Complete Catalog',
     filterFn: () => true
   },

@@ -529,7 +529,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               </div>
 
                               {/* Destination List */}
-                              <ul className="space-y-1 mb-3">
+                              <ul className="space-y-1 mb-3 max-h-[380px] overflow-y-auto pr-1.5 [scrollbar-width:thin]">
                                 {group.destinations.map((dest) => (
                                   <li key={dest.slug}>
                                     <Link

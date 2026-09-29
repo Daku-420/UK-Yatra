@@ -35,7 +35,25 @@ export const DESTINATION_MEGA_NAV: DestinationNavGroup[] = [
       { name: 'Mukteshwar', slug: 'mukteshwar', path: '/destinations/mukteshwar' },
       { name: 'Dhanaulti', slug: 'dhanaulti', path: '/destinations/dhanaulti' },
       { name: 'Kausani', slug: 'kausani', path: '/destinations/kausani' },
-      { name: 'Munsiyari', slug: 'munsiyari', path: '/destinations/munsiyari' }
+      { name: 'Munsiyari', slug: 'munsiyari', path: '/destinations/munsiyari' },
+      { name: 'Almora', slug: 'almora', path: '/destinations/almora' },
+      { name: 'Chamba', slug: 'chamba', path: '/destinations/chamba' },
+      { name: 'Kanatal', slug: 'kanatal', path: '/destinations/kanatal' },
+      { name: 'Bhowali', slug: 'bhowali', path: '/destinations/bhowali' },
+      { name: 'Bhimtal', slug: 'bhimtal', path: '/destinations/bhimtal' },
+      { name: 'Dhanachuli', slug: 'dhanachuli', path: '/destinations/dhanachuli' },
+      { name: 'Ramgarh', slug: 'ramgarh', path: '/destinations/ramgarh' },
+      { name: 'Naukuchiatal', slug: 'naukuchiatal', path: '/destinations/naukuchiatal' },
+      { name: 'Chaukori', slug: 'chaukori', path: '/destinations/chaukori' },
+      { name: 'Pithoragarh', slug: 'pithoragarh', path: '/destinations/pithoragarh' },
+      { name: 'Lohaghat', slug: 'lohaghat', path: '/destinations/lohaghat' },
+      { name: 'Champawat', slug: 'champawat', path: '/destinations/champawat' },
+      { name: 'Binsar', slug: 'binsar', path: '/destinations/binsar' },
+      { name: 'Khirsu', slug: 'khirsu', path: '/destinations/khirsu' },
+      { name: 'Pangot', slug: 'pangot', path: '/destinations/pangot' },
+      { name: 'Peora', slug: 'peora', path: '/destinations/peora' },
+      { name: 'Gwaldam', slug: 'gwaldam', path: '/destinations/gwaldam' },
+      { name: 'Abbott Mount', slug: 'abbott-mount', path: '/destinations/abbott-mount' }
     ]
   },
   {

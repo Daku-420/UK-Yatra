@@ -277,6 +277,427 @@ export const DESTINATIONS: Destination[] = [
       byRoad: 'Scenic road drive via Almora - Bageshwar - Thal - Munsiyari.'
     }
   },
+  {
+    id: 'almora',
+    name: 'Almora',
+    tagline: 'Cultural Heartland of Kumaon & Panoramic Himalayan Ridge',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched on a horse-saddle shaped ridge in Kumaon, Almora is celebrated for its rich cultural heritage, 200-year-old Lala Bazaar, ancient Kasar Devi temple renowned for its unique geomagnetic energy, and unobstructed views of Nanda Devi and Trishul.',
+    highlights: ['Kasar Devi Temple & Crank’s Ridge', '9th-century Katarmal Sun Temple', 'Bright End Corner sunrise & sunset', 'Heritage Lala Bazaar & traditional Bal Mithai'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,638 m (5,374 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kasar Devi Temple', desc: 'Ancient meditative shrine visited by Swami Vivekananda and Bob Dylan.' },
+      { name: 'Katarmal Sun Temple', desc: 'Rare 9th-century Surya temple famous for intricate stone masonry.' },
+      { name: 'Chitai Golu Devta', desc: 'Famed temple of the God of Justice covered in thousands of brass bells.' },
+      { name: 'Bright End Corner', desc: 'Picturesque viewpoint marking the edge of Almora ridge for sunsets.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (115 km).',
+      byTrain: 'Kathgodam Railway Station (82 km, 3 hours).',
+      byRoad: 'Direct scenic highway connectivity from Delhi via Kathgodam & Bhowali (360 km).'
+    }
+  },
+  {
+    id: 'chamba',
+    name: 'Chamba',
+    tagline: 'Quiet Garhwal Mountain Outpost & Apple Orchard Haven',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched at 1,600 m amidst pine and deodar forests in Tehri Garhwal, Chamba is a tranquil, uncommercialized retreat offering sweeping views of the snow-clad Himalayas, verdant terrace fields, and the shimmering waters of nearby Tehri Lake.',
+    highlights: ['Pristine Himalayan peak panorama', 'Proximity to Tehri Lake water sports', 'Gabbar Singh Memorial', 'Pine and rhododendron nature trails'],
+    bestTime: 'March to June & October to December',
+    altitude: '1,600 m (5,249 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Tehri Dam & Lake', desc: 'Massive reservoir offering jet skiing, boating, and scenic water views.' },
+      { name: 'Surkanda Devi Temple', desc: 'High-altitude Shakti Peeth with 360-degree Himalayan views.' },
+      { name: 'Gabbar Singh Memorial', desc: 'Historic memorial honoring World War I Victoria Cross recipient.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (75 km).',
+      byTrain: 'Rishikesh Railway Station (60 km, 2 hours).',
+      byRoad: 'Connected via smooth mountain highways from Rishikesh (60 km) and Mussoorie (55 km).'
+    }
+  },
+  {
+    id: 'kanatal',
+    name: 'Kanatal',
+    tagline: 'Serene High-Altitude Apple Orchards & Forest Glades',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located on the Mussoorie-Chamba highway at 2,590 m, Kanatal is a quiet mountain hamlet shrouded in mist, apple orchards, and dense cedar groves. Famous for peaceful eco-resorts, forest walks in Kaudia Forest, and breathtaking views of the Bandarpunch peaks.',
+    highlights: ['Kaudia Jungle Safari & nature walk', 'Surkanda Devi Temple ropeway trek', 'Tehri Lake view excursions', 'Stargazing & alpine camping'],
+    bestTime: 'Throughout the year (Winter snow in Dec-Feb)',
+    altitude: '2,590 m (8,500 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kaudia Forest', desc: 'Dense pine forest sanctuary home to barking deer, wild boars, and nature trails.' },
+      { name: 'Surkanda Devi Temple', desc: 'Sacred mountain temple reached by a scenic walk or ropeway ride.' },
+      { name: 'Chamba Overlook', desc: 'Panoramic ridge viewpoint looking out towards the Garhwal peaks.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (90 km).',
+      byTrain: 'Dehradun (85 km) or Rishikesh (75 km).',
+      byRoad: 'Easily accessible via Dhanaulti from Mussoorie (38 km) or Rishikesh via Chamba.'
+    }
+  },
+  {
+    id: 'bhowali',
+    name: 'Bhowali',
+    tagline: 'The Fruit Basket of Kumaon & Historic Sanatorium Town',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated just 11 km from Nainital at an altitude of 1,706 m, Bhowali is surrounded by lush oak and pine forests. Known historically for its rejuvenating mountain air, bustling fruit markets filled with fresh apricots and plums, and the spiritual Golu Devta temple at Ghorakhal.',
+    highlights: ['Golu Devta Temple at Ghorakhal', 'Kumaon wholesale fruit market', 'Shyamkhet Tea Garden', 'Gateway hub to Nainital, Bhimtal & Almora'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,706 m (5,597 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Ghorakhal Temple', desc: 'Sacred bell temple of Golu Devta situated on a picturesque wooded hilltop.' },
+      { name: 'Shyamkhet Tea Garden', desc: 'Boutique organic tea estate producing premium Himalayan black and green tea.' },
+      { name: 'Kainchi Dham Proximity', desc: 'Located just 9 km from Neem Karoli Baba’s revered Kainchi Dham.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (65 km).',
+      byTrain: 'Kathgodam Railway Station (35 km, 1 hour).',
+      byRoad: 'Situated right on the main highway connecting Nainital, Bhimtal, and Almora.'
+    }
+  },
+  {
+    id: 'bhimtal',
+    name: 'Bhimtal',
+    tagline: 'Picturesque Lake Town with an Island Aquarium & Pine Forests',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Larger and more peaceful than neighboring Nainital, Bhimtal is set around a magnificent C-shaped masonry lake featuring an island aquarium in its center. Surrounded by dense pine and oak trees, it offers boating, kayaking, historical temples, and tranquil nature walks.',
+    highlights: ['Bhimtal Lake island boating', 'Victorian masonry dam & aquarium', '17th-century Bhimeshwar Mahadev Temple', 'Butterfly Research Centre'],
+    bestTime: 'March to June & September to December',
+    altitude: '1,370 m (4,495 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Bhimtal Lake Island', desc: 'Picturesque central island featuring an aquarium reachable only by boat.' },
+      { name: 'Bhimeshwar Mahadev Temple', desc: 'Historic 17th-century Shiva temple built beside the ancient lake embankment.' },
+      { name: 'Butterfly Museum', desc: 'Renowned sanctuary housing over 240 species of Himalayan butterflies.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (55 km).',
+      byTrain: 'Kathgodam Railway Station (22 km, 45 minutes).',
+      byRoad: 'Well paved road connection directly from Kathgodam, Haldwani, and Nainital.'
+    }
+  },
+  {
+    id: 'dhanachuli',
+    name: 'Dhanachuli',
+    tagline: 'Untouched Kumaon Ridge Hamlet with Majestic Peak Vistas',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'A hidden village near Mukteshwar perched at 2,133 m, Dhanachuli offers unspoiled mountain beauty, endless apple and peach orchards, and dramatic unobstructed views of the snow-clad Nanda Devi range in total peace.',
+    highlights: ['Bhalu Gaad Waterfall trek', 'Nanda Devi panoramic ridge views', 'Apple and plum orchard strolls', 'Luxury boutique mountain homestays'],
+    bestTime: 'March to June & October to February',
+    altitude: '2,133 m (7,000 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Bhalu Gaad Waterfall', desc: '60-foot pristine jungle waterfall hidden within a forested canyon.' },
+      { name: 'Chauli Ki Jali Proximity', desc: 'Dramatic cliff edge offering natural rock climbing and valley vistas.' },
+      { name: 'Dhanachuli Orchards', desc: 'Terraced organic farms laden with apples, apricots, and plums in season.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (85 km).',
+      byTrain: 'Kathgodam Railway Station (55 km, 2 hours).',
+      byRoad: 'Easily accessible via Bhimtal and Dhanachuli Bend from Kathgodam.'
+    }
+  },
+  {
+    id: 'ramgarh',
+    name: 'Ramgarh',
+    tagline: 'Fruit Bowl of Kumaon & Rabindranath Tagore’s Mountain Muse',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Divided into Malla (Upper) and Talla (Lower) Ramgarh, this idyllic hill retreat was the beloved sanctuary of Rabindranath Tagore and Mahadevi Verma. Renowned for acres of apricot, peach, and apple orchards overlooking the glittering snow peaks.',
+    highlights: ['Tagore Top historic retreat', 'Mahadevi Verma Memorial Museum', 'Fruit orchards of peaches and plums', 'Peaceful Himalayan bird watching'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,789 m (5,869 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Tagore Top', desc: 'Peaceful ridge where Rabindranath Tagore composed parts of Gitanjali.' },
+      { name: 'Mahadevi Verma Museum', desc: 'Dedicated to the celebrated Hindi poetess who lived and wrote here.' },
+      { name: 'Nathuakhan Trail', desc: 'Enchanting pine forest walk connecting Ramgarh to the artist hamlet of Nathuakhan.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (76 km).',
+      byTrain: 'Kathgodam Railway Station (45 km, 1.5 hours).',
+      byRoad: 'Scenic mountain drive from Kathgodam via Bhowali on the Mukteshwar road.'
+    }
+  },
+  {
+    id: 'naukuchiatal',
+    name: 'Naukuchiatal',
+    tagline: 'The Mystical Nine-Cornered Lake of Kumaon',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Famed for its nine-cornered freshwater lake surrounded by terraced mountains and oak woods, Naukuchiatal is an adventure and relaxation haven offering paragliding, kayaking, birding, and serene lakeside luxury.',
+    highlights: ['Paragliding over lake valley', 'Nine-cornered lake boating & angling', 'Birdwatching paradise', 'Lakeside promenade cafes'],
+    bestTime: 'March to June & September to December',
+    altitude: '1,220 m (4,002 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Naukuchiatal Lake', desc: 'Deep freshwater nine-cornered lake fed by an underground perennial spring.' },
+      { name: 'Pandegaon Paragliding Hub', desc: 'Premier tandem paragliding site offering aerial lake views.' },
+      { name: 'Jungliagaon Bird Trail', desc: 'Lush mountain trail home to rare Himalayan woodpeckers, barbets, and thrushes.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (60 km).',
+      byTrain: 'Kathgodam Railway Station (26 km, 50 minutes).',
+      byRoad: 'Located just 4 km from Bhimtal, easily reachable by cab from Kathgodam.'
+    }
+  },
+  {
+    id: 'chaukori',
+    name: 'Chaukori',
+    tagline: 'Lush Tea Gardens & Front-Row Seats to Nanda Devi & Panchachuli',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nestled in the Pithoragarh district, Chaukori is a bowl-shaped hill town famous for emerald tea gardens, deodar and pine woods, and one of the clearest, most magnificent panoramic views of the Nanda Devi, Nanda Kot, and Panchachuli peaks.',
+    highlights: ['British-era emerald tea gardens', 'Panchachuli five-peak sunrise view', 'Patal Bhuvaneshwar cave proximity', 'Stargazing in crystal night skies'],
+    bestTime: 'March to June & September to November',
+    altitude: '2,010 m (6,594 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Chaukori Tea Estates', desc: 'Fragrant emerald tea bushes set against dramatic snow peaks.' },
+      { name: 'Patal Bhuvaneshwar', desc: 'Subterranean limestone cave temple dedicated to Lord Shiva (35 km away).' },
+      { name: 'Mahakali Temple Gangolihat', desc: 'Ancient Shakti shrine established by Adi Shankaracharya.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (205 km).',
+      byTrain: 'Kathgodam Railway Station (175 km, 6 hours).',
+      byRoad: 'Scenic mountain route through Almora, Bageshwar, and Kanda.'
+    }
+  },
+  {
+    id: 'pithoragarh',
+    name: 'Pithoragarh',
+    tagline: 'Little Kashmir of Uttarakhand & Gateway to the High Himalayas',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Known affectionately as "Little Kashmir", Pithoragarh sits in the lush Soar Valley bordered by Nepal and Tibet. Boasting a historic Chand dynasty fort, ancient temples, cascading waterfalls, and the gateway to the sacred Kailash Mansarovar and Adi Kailash trails.',
+    highlights: ['Pithoragarh Fort (Chand Dynasty)', 'Chandak Hill & Mostamanu Temple', 'Askot Wildlife Sanctuary proximity', 'Soar Valley sunrise vistas'],
+    bestTime: 'April to June & September to December',
+    altitude: '1,627 m (5,338 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Pithoragarh Fort', desc: 'Historical hilltop fortress offering panoramic 360-degree views of the valley.' },
+      { name: 'Chandak Hill', desc: 'Scenic mountain lookout hosting the revered Mostamanu Temple.' },
+      { name: 'Kapileshwar Mahadev', desc: 'Ancient cave temple situated at the edge of the Soar Valley.' }
+    ],
+    howToReach: {
+      byAir: 'Naini Saini Airport Pithoragarh / Pantnagar (210 km).',
+      byTrain: 'Tanakpur (150 km) or Kathgodam (180 km).',
+      byRoad: 'Well connected by NH9 via Tanakpur, Champawat, and Ghat.'
+    }
+  },
+  {
+    id: 'lohaghat',
+    name: 'Lohaghat',
+    tagline: 'Pine-Clad Spiritual Gem & Historic Mayavati Ashram',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Resting gracefully on the banks of the Lohawati River at 1,754 m, Lohaghat is known for its historic pine forests, buransh (rhododendron) blooms in spring, the serene Advaita Ashrama at Mayavati, and proximity to Abbott Mount.',
+    highlights: ['Mayavati Advaita Ashram (Swami Vivekananda)', 'Banasur Ka Kila historic fortress', 'Abbott Mount colonial churches proximity', 'Buransh rhododendron blossoms'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,754 m (5,755 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Mayavati Advaita Ashrama', desc: 'Tranquil spiritual ashram where Swami Vivekananda stayed and meditated.' },
+      { name: 'Banasur Fort', desc: 'Ancient mythological hill fortress offering panoramic valley views.' },
+      { name: 'Pancheshwar Confluence', desc: 'Sacred meeting point of Saryu and Mahakali rivers, renowned for angling.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (160 km).',
+      byTrain: 'Tanakpur Railway Station (90 km, 3 hours).',
+      byRoad: 'Accessible via Tanakpur-Pithoragarh highway through Champawat.'
+    }
+  },
+  {
+    id: 'champawat',
+    name: 'Champawat',
+    tagline: 'Ancient Chand Capital of Rich Stone Architecture & Folklore',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'The former capital of the Chand dynasty rulers of Kumaon, Champawat is steeped in history and folklore. Renowned for exquisite stone carvings at the 12th-century Baleshwar Temple, Kranteshwar Mahadev on the hilltop, and deep forest trails.',
+    highlights: ['Baleshwar Temple 12th-century stone carvings', 'Kranteshwar Mahadev summit', 'Ek Hathiya Ka Naula ancient rock-cut architecture', 'Pristine deodar ridges'],
+    bestTime: 'October to May',
+    altitude: '1,615 m (5,298 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Baleshwar Temple', desc: 'Masterpiece of stone architectural carving dating back to 10th-12th century.' },
+      { name: 'Kranteshwar Mahadev', desc: 'Summit temple located 6 km from town providing 360-degree Kumaon vistas.' },
+      { name: 'Ek Hathiya Ka Naula', desc: 'Ancient carved water structure carved by a one-handed artisan in a single night.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (150 km).',
+      byTrain: 'Tanakpur Railway Station (75 km, 2.5 hours).',
+      byRoad: 'Connected via NH9 directly from Tanakpur, Haldwani, and Pithoragarh.'
+    }
+  },
+  {
+    id: 'pangot',
+    name: 'Pangot',
+    tagline: 'Birdwatcher’s Himalayan Paradise & Oak Woodland Hamlet',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located just 15 km past Nainital through the lush forested Kilbury sanctuary, Pangot is world-renowned among ornithologists and nature lovers. Home to over 580 species of birds, quiet forest lodges, and peaceful walking trails through rhododendron and oak woods.',
+    highlights: ['Kilbury Bird Sanctuary & 580+ bird species', 'Cheena / China Peak trek', 'Peaceful eco-lodges away from crowds', 'Spectacular sunset at Woodside ridge'],
+    bestTime: 'October to June',
+    altitude: '1,984 m (6,509 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kilbury Bird Sanctuary', desc: 'Forested sanctuary habitat for cheer pheasants, koklass, and mountain hawk-eagles.' },
+      { name: 'Guano Hills', desc: 'Dense bamboo, oak, and deodar forest ridge trail ideal for quiet nature walks.' },
+      { name: 'China Peak Viewpoint', desc: 'Nainital’s highest vantage point, easily reached via a forest hike from Pangot.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (85 km).',
+      byTrain: 'Kathgodam Railway Station (50 km, 2 hours).',
+      byRoad: '15 km scenic forest drive up from Nainital through Kilbury.'
+    }
+  },
+  {
+    id: 'peora',
+    name: 'Peora',
+    tagline: 'Eco-Friendly Kumaoni Fruit Village & Tranquil Pine Haven',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'A pristine eco-tourism village tucked between Almora and Mukteshwar at 2,014 m, Peora is celebrated for sustainable homestays, pine needle crafts, organic orchards, and panoramic views of snow-capped Kumaon peaks in complete serenity.',
+    highlights: ['Organic herbal tea & pine craft workshops', 'Sweeping vistas of Trishul & Nanda Devi', 'Tranquil village nature walks', 'Birdwatching in oak forests'],
+    bestTime: 'March to June & September to November',
+    altitude: '2,014 m (6,607 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Organic Village Orchards', desc: 'Lush fruit groves with community workshops producing natural herbal extracts.' },
+      { name: 'Peora Pine Ridge', desc: 'Quiet mountain trail providing unobstructed morning views of the snowline.' },
+      { name: 'Mukteshwar Proximity', desc: 'Only 18 km away from the famous 350-year-old Mukteshwar Dham.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (100 km).',
+      byTrain: 'Kathgodam Railway Station (70 km, 2.5 hours).',
+      byRoad: 'Direct scenic road connecting Bhowali, Almora, and Mukteshwar.'
+    }
+  },
+  {
+    id: 'gwaldam',
+    name: 'Gwaldam',
+    tagline: 'Where Garhwal Meets Kumaon Amidst Tea Estates & High Peaks',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched on the border of Garhwal and Kumaon between Almora and Joshimath, Gwaldam is an idyllic hamlet surrounded by state tea gardens, apple orchards, and direct towering views of Trishul peak (7,120 m) and Nanda Ghunti.',
+    highlights: ['Direct front-row views of Trishul peak', 'State-run tea estates & processing gardens', 'Base camp for Roopkund trail journeys', 'Pindari Glacier route proximity'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,708 m (5,603 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Gwaldam Tea Gardens', desc: 'Picturesque tea gardens stretching down mountain slopes with peak backdrops.' },
+      { name: 'Badhangarh Temple', desc: 'Fortress temple perched at 2,260 m with 360-degree views of Garhwal and Kumaon.' },
+      { name: 'Angora Wool Farm', desc: 'Government breeding center surrounded by orchards and pine forests.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (195 km) or Jolly Grant Dehradun (240 km).',
+      byTrain: 'Kathgodam (165 km) or Rishikesh (215 km).',
+      byRoad: 'Located on the highway connecting Kausani (40 km) and Karnaprayag (65 km).'
+    }
+  },
 
   // ==========================================
   // 2. SPIRITUAL DESTINATIONS
