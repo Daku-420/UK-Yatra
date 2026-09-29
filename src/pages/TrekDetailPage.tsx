@@ -245,10 +245,10 @@ export const TrekDetailPage: React.FC<TrekDetailPageProps> = ({ onOpenBookingMod
             <div className="sticky top-28 bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DDD5] shadow-lg space-y-6">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-wider text-brand-orange">
-                  All-Inclusive Batch Cost
+                  Trek Tariff & Quotation
                 </span>
                 <div className="font-display font-extrabold text-2xl text-slate-900 mt-1">
-                  {trek.startingPrice} {trek.startingPrice !== 'Pricing on Request' && <span className="text-xs font-normal text-slate-500">/ trekker</span>}
+                  Pricing on Request
                 </div>
               </div>
 

@@ -81,7 +81,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '3 Days / 2 Nights',
     durationDays: 3,
     location: 'Dehradun & Mussoorie',
-    startingPrice: '₹3,850',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:8 Chaperone Ratio',
     image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -171,7 +171,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '3 Days / 2 Nights',
     durationDays: 3,
     location: 'Jim Corbett National Park',
-    startingPrice: '₹4,450',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:8 Chaperone Ratio',
     image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -256,7 +256,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '2 Days / 1 Night',
     durationDays: 2,
     location: 'Tehri Garhwal & New Tehri',
-    startingPrice: '₹2,950',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:8 Chaperone Ratio',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -326,7 +326,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '3 Days / 2 Nights',
     durationDays: 3,
     location: 'Rishikesh & Shivpuri',
-    startingPrice: '₹3,499',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: 'Certified IRF Marshals',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -410,7 +410,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '5 Days / 4 Nights',
     durationDays: 5,
     location: 'Sankri & Govind National Park',
-    startingPrice: '₹5,999',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:6 Mountaineer Ratio',
     image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -512,7 +512,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '6 Days / 5 Nights',
     durationDays: 6,
     location: 'Kanatal & Dhanaulti Pine Forests (8,500 ft)',
-    startingPrice: '₹8,900',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:6 Instructor Ratio',
     image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -617,7 +617,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '5 Days / 4 Nights',
     durationDays: 5,
     location: 'Benital Astro Village, Chamoli (8,600 ft)',
-    startingPrice: '₹9,450',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:6 Mentor Ratio',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
     gallery: [
@@ -712,7 +712,7 @@ export const EDUCATIONAL_PROGRAMMES: EducationalProgramme[] = [
     duration: '6 Days / 5 Nights',
     durationDays: 6,
     location: 'Ghangaria & Valley of Flowers UNESCO Site',
-    startingPrice: '₹9,800',
+    startingPrice: 'Pricing on Request',
     supervisionRatio: '1:6 Botanical Guide Ratio',
     image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
     gallery: [

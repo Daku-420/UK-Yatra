@@ -176,7 +176,7 @@ const CHECKLIST_DATA: ChecklistItem[] = [
   },
   {
     id: 'd-4',
-    name: 'Physical Emergency Cash (₹5,000 – ₹10,000)',
+    name: 'Physical Emergency Cash (Recommended for remote ATMs)',
     desc: 'Hill ATMs frequently run out of cash and UPI internet signal often drops above 2,500m.',
     category: 'docs',
     isCrucial: true

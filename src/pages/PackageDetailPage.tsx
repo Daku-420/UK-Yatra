@@ -681,16 +681,8 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
                   <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
-                    {tourPackage.startingPrice || 'Pricing on Request'}
+                    Pricing on Request
                   </span>
-                  {tourPackage.originalPrice && !tourPackage.startingPrice?.includes('Request') && (
-                    <>
-                      <span className="text-sm text-slate-400 line-through">
-                        {tourPackage.originalPrice}
-                      </span>
-                      <span className="text-xs text-slate-600">/ person</span>
-                    </>
-                  )}
                 </div>
                 <p className="text-[11px] text-emerald-700 font-medium mt-1.5 flex items-center gap-1">
                   <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />

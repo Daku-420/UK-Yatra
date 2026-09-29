@@ -170,8 +170,8 @@ export const EducationalProgrammeDetailPage: React.FC<EducationalProgrammeDetail
           <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <Award className="w-4 h-4 text-emerald-600 shrink-0" />
             <div>
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Starting From</span>
-              <span className="font-bold text-emerald-700">{programme.startingPrice} <span className="text-[10px] text-slate-400 font-normal">/ student</span></span>
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Pricing</span>
+              <span className="font-bold text-emerald-700">Quote on Request</span>
             </div>
           </div>
 
@@ -490,13 +490,12 @@ export const EducationalProgrammeDetailPage: React.FC<EducationalProgrammeDetail
           <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xl space-y-4">
             <div className="border-b border-slate-100 pb-3">
               <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
-                Estimated Institutional Fare
+                Institutional Quotation
               </span>
               <div className="flex items-baseline gap-1 mt-1">
                 <span className="text-2xl font-extrabold font-display text-slate-950">
-                  {programme.startingPrice}
+                  Custom Quote on Request
                 </span>
-                <span className="text-xs text-slate-500 font-medium">/ student (all-inclusive)</span>
               </div>
               <p className="text-[11px] text-slate-500 mt-1">
                 *Slabs discounted for batches above 40 students. Faculty travel complimentary.
@@ -689,7 +688,7 @@ export const EducationalProgrammeDetailPage: React.FC<EducationalProgrammeDetail
                 </div>
               </div>
               <div className="p-4 pt-0 flex items-center justify-between text-xs font-bold text-brand-orange">
-                <span>From {rel.startingPrice}</span>
+                <span>Custom Group Quote</span>
                 <span className="group-hover:translate-x-1 transition-transform">Details →</span>
               </div>
             </Link>

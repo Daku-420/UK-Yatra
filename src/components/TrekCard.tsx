@@ -83,7 +83,7 @@ export const TrekCard: React.FC<TrekCardProps> = ({ trek }) => {
         <div className="pt-3 border-t border-white/10 flex items-center justify-between">
           <div>
             <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-medium">Pricing</span>
-            <span className="font-display font-bold text-sm text-brand-orange">{trek.startingPrice}</span>
+            <span className="font-display font-bold text-sm text-brand-orange">Quote on Request</span>
           </div>
 
           <Link

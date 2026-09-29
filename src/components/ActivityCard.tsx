@@ -26,12 +26,6 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
           {activity.category}
         </div>
 
-        {activity.startingPrice && (
-          <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FF5A1F] text-white shadow-md">
-            From {activity.startingPrice}
-          </div>
-        )}
-
         <div className="absolute bottom-4 left-4 right-4">
           <h3 className="text-xl font-bold font-display text-white group-hover:text-brand-orange transition-colors flex items-center justify-between">
             <span>{activity.title}</span>

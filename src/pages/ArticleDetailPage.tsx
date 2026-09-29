@@ -520,7 +520,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
                       </h5>
                       <div className="flex items-center justify-between text-[11px]">
                         <span className="text-slate-500">{pkg.duration}</span>
-                        <span className="font-bold text-brand-orange">{pkg.price}</span>
+                        <span className="font-bold text-brand-orange">Pricing on Request</span>
                       </div>
                       <Link
                         to={pkg.link}

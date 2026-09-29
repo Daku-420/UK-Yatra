@@ -201,7 +201,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '5 Days / 4 Nights',
     season: ['Winter', 'Spring'],
     bestSeason: 'December to April (Peak Winter Snow)',
-    startingPrice: '₹9,499',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '12,500 ft (3,810 m)',
     image: '/assets/OUTDOOR ACTIVITIES/TREKKING.jpg',
     imagePosition: 'center 80%',
@@ -279,7 +279,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '1 Day (approx. 4–5 Hours)',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Late September to June',
-    startingPrice: '₹1,200',
+    startingPrice: 'Pricing on Request',
     image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
     imagePosition: 'center 85%',
     gallery: [
@@ -348,7 +348,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '4–6 Days (or Daily Passes)',
     season: ['Winter'],
     bestSeason: 'Late December to March',
-    startingPrice: '₹8,500',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '10,010 ft (3,050 m)',
     image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
     imagePosition: 'center 50%',
@@ -416,7 +416,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '6 Days / 5 Nights',
     season: ['Monsoon', 'Summer'],
     bestSeason: 'July to September (Peak Floral Bloom)',
-    startingPrice: '₹11,499',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '14,400 ft (4,389 m) at Hemkund Sahib',
     image: '/images/destinations/valley-of-flowers/photo-1.jpg',
     gallery: [
@@ -483,7 +483,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '3 Days / 2 Nights',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year (April-June for flowers, Dec-Mar for snow)',
-    startingPrice: '₹5,499',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '13,100 ft (4,000 m) at Chandrashila Peak',
     image: '/images/destinations/chopta/photo-1.jpg',
     gallery: [
@@ -550,7 +550,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '2–3 Days',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'September to June',
-    startingPrice: '₹2,499',
+    startingPrice: 'Pricing on Request',
     image: '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
     imagePosition: 'center 85%',
     gallery: [
@@ -618,7 +618,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: 'Half Day (approx. 2–3 Hours)',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year (Except monsoon July-August)',
-    startingPrice: '₹3,750',
+    startingPrice: 'Pricing on Request',
     image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
     imagePosition: '55% 40%',
     gallery: [
@@ -680,7 +680,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: 'Half Day (Flight: 15–25 mins)',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'October to June (Clear mountain thermals)',
-    startingPrice: '₹2,200',
+    startingPrice: 'Pricing on Request',
     image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
@@ -735,7 +735,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: 'Half Day (3–4 Hours per safari)',
     season: ['Autumn', 'Winter', 'Spring', 'Summer'],
     bestSeason: 'November 15 to June 15',
-    startingPrice: '₹4,500 / Jeep',
+    startingPrice: 'Pricing on Request',
     image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
@@ -791,7 +791,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: 'Half Day (3–4 Hours)',
     season: ['Spring', 'Summer', 'Autumn'],
     bestSeason: 'March to June & September to November',
-    startingPrice: '₹1,499',
+    startingPrice: 'Pricing on Request',
     image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop',
@@ -846,7 +846,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '7 Days / 6 Nights',
     season: ['Spring', 'Summer', 'Autumn'],
     bestSeason: 'April to June & September to November',
-    startingPrice: '₹13,999',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '11,700 ft (3,566 m)',
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     gallery: [
@@ -903,7 +903,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '4 Days / 3 Nights',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year (Snow in winter, lush green in summer)',
-    startingPrice: '₹7,800',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '12,000 ft (3,657 m)',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     gallery: [
@@ -957,7 +957,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '1 Day / Night Experience',
     season: ['Spring', 'Autumn', 'Winter'],
     bestSeason: 'October to May (Dark, clear skies)',
-    startingPrice: '₹1,500',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '8,790 ft (2,680 m)',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     gallery: [
@@ -1012,7 +1012,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '2–3 Days Course',
     season: ['Spring', 'Autumn', 'Winter'],
     bestSeason: 'October to May',
-    startingPrice: '₹4,999',
+    startingPrice: 'Pricing on Request',
     image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
@@ -1066,7 +1066,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '2 Days / 1 Night',
     season: ['Winter', 'Spring', 'Autumn'],
     bestSeason: 'November to April (Snow in Dec-Feb)',
-    startingPrice: '₹3,499',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '9,915 ft (3,022 m)',
     image: '/images/destinations/mussoorie/photo-1.jpg',
     gallery: [
@@ -1122,7 +1122,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: 'Half Day (1–2 Hours)',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year (Except heavy monsoon)',
-    startingPrice: '₹1,500',
+    startingPrice: 'Pricing on Request',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
@@ -1175,7 +1175,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: '1–2 Days',
     season: ['Spring', 'Autumn', 'Winter'],
     bestSeason: 'October to May',
-    startingPrice: '₹1,999',
+    startingPrice: 'Pricing on Request',
     image: '/images/destinations/nainital/photo-1.jpg',
     gallery: [
       '/images/destinations/nainital/photo-1.jpg',
@@ -1230,7 +1230,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     durationDetails: 'Half Day (2–3 Hours)',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year',
-    startingPrice: '₹899',
+    startingPrice: 'Pricing on Request',
     maxAltitude: '7,500 ft (2,286 m)',
     image: '/images/destinations/mussoorie/photo-1.jpg',
     gallery: [

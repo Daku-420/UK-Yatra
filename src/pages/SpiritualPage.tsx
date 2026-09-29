@@ -145,8 +145,8 @@ export const SpiritualPage: React.FC<SpiritualPageProps> = ({ onOpenBookingModal
               <span className="text-[10px] uppercase font-bold tracking-wider text-amber-600">
                 Package Estimate
               </span>
-              <div className="font-display font-extrabold text-3xl text-slate-900 mt-1">
-                {currentCircuit.startingPrice} <span className="text-xs font-normal text-slate-500">/ person</span>
+              <div className="font-display font-extrabold text-2xl text-slate-900 mt-1">
+                Pricing on Request
               </div>
               <p className="text-[11px] text-slate-600 mt-1">
                 Best Season: {currentCircuit.bestSeason}

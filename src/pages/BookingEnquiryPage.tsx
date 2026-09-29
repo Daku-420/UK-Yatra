@@ -200,7 +200,7 @@ export const BookingEnquiryPage: React.FC = () => {
                 className="w-full orange-gradient-btn py-4 rounded-xl font-display font-bold text-sm text-white shadow-xl flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
-                <span>Request Callback & Best Price Quote</span>
+                <span>Request Callback & Custom Quote</span>
               </button>
             </div>
 

@@ -34,7 +34,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
     groupSize: '25-50',
     preferredDestination: 'Rishikesh Rafting & Camping',
     travelMonth: 'April - May',
-    budgetPerStudent: '₹3,000 - ₹5,000',
+    budgetPerStudent: 'Standard Comfort Tier',
     specialRequirements: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -44,7 +44,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
       id: 'rishikesh-rafting-camping',
       title: 'Rishikesh Adrenaline & Riverside Camps',
       duration: '3 Days / 2 Nights',
-      price: '₹3,499',
+      price: 'Quote on Request',
       badge: 'Most Popular',
       image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
       highlights: [
@@ -59,7 +59,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
       id: 'kedarkantha-winter-snow',
       title: 'Kedarkantha Summit Student Expedition',
       duration: '5 Days / 4 Nights',
-      price: '₹5,999',
+      price: 'Quote on Request',
       badge: 'High Adventure',
       image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
       highlights: [
@@ -74,7 +74,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
       id: 'nag-tibba-weekend-trek',
       title: 'Nag Tibba Weekend Warrior Trek',
       duration: '2 Days / 1 Night',
-      price: '₹2,699',
+      price: 'Quote on Request',
       badge: 'Budget Pick',
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
       highlights: [
@@ -89,7 +89,7 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
       id: 'kasar-devi-jibhi-hippie',
       title: 'Kasar Devi & Jageshwar Cultural Trail',
       duration: '4 Days / 3 Nights',
-      price: '₹4,899',
+      price: 'Quote on Request',
       badge: 'Culture & Vibe',
       image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
       highlights: [
@@ -221,8 +221,8 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
                         <Clock className="w-3.5 h-3.5 text-amber-300" />
                         {trip.duration}
                       </span>
-                      <span className="text-lg font-bold text-amber-300">
-                        {trip.price} <span className="text-xs text-white/80 font-normal">/student</span>
+                      <span className="text-sm font-bold text-amber-300">
+                        Quote on Request
                       </span>
                     </div>
                   </div>
@@ -431,16 +431,16 @@ export const CollegeTripsPage: React.FC<CollegeTripsPageProps> = ({ onOpenBookin
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">Budget / Head</label>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Package Tier</label>
                     <select
                       value={formData.budgetPerStudent}
                       onChange={(e) => setFormData({ ...formData, budgetPerStudent: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-brand-orange focus:border-transparent outline-hidden bg-white"
                     >
-                      <option value="₹2,500 - ₹3,500">₹2,500 - ₹3,500</option>
-                      <option value="₹3,500 - ₹5,000">₹3,500 - ₹5,000</option>
-                      <option value="₹5,000 - ₹8,000">₹5,000 - ₹8,000</option>
-                      <option value="₹8,000+">₹8,000+ (Premium)</option>
+                      <option value="Student Economy Tier">Student Economy Tier</option>
+                      <option value="Standard Comfort Tier">Standard Comfort Tier</option>
+                      <option value="Adventure & Camping Tier">Adventure & Camping Tier</option>
+                      <option value="Custom / Premium Tier">Custom / Premium Tier</option>
                     </select>
                   </div>
                 </div>

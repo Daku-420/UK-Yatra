@@ -26,7 +26,7 @@ export const OffersPage: React.FC<OffersPageProps> = ({ onOpenBookingModal }) =>
     {
       code: 'HELIYATRA2026',
       badge: 'Charter Deal',
-      title: 'Flat ₹15,000 Off on Char Dham Helicopter Charters',
+      title: 'Exclusive Seasonal Savings on Char Dham Helicopter Charters',
       desc: 'Applicable on full-charter and group helicopter bookings confirmed 45+ days prior to departure date from Dehradun Sahastradhara.',
       validity: 'Valid for bookings made this month',
       targetPackage: 'Luxury Char Dham by Heli'

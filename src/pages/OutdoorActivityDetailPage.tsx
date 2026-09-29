@@ -58,7 +58,7 @@ export const OutdoorActivityDetailPage: React.FC<OutdoorActivityDetailPageProps>
     durationDetails: '1 Day',
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: legacyActivity.bestSeason,
-    startingPrice: legacyActivity.startingPrice || '₹1,500',
+    startingPrice: 'Pricing on Request',
     topLocations: legacyActivity.topLocations || [],
     safetyInfo: legacyActivity.safetyInfo || [],
     highlights: [

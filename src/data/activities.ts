@@ -12,7 +12,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'Late September to June',
     difficulty: 'Easy to High (Depending on stretch)',
     ageLimit: '14 to 60 Years',
-    startingPrice: '₹1,000 / person',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Certified rescue kayakers escort every expedition',
       'CE-certified life jackets and high-impact helmets mandatory',
@@ -31,7 +31,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'Round the year (Except monsoon July-Aug)',
     difficulty: 'Extreme Adrenaline',
     ageLimit: '12 to 45 Years (Min weight 40kg, Max 110kg)',
-    startingPrice: '₹3,550 / jump',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Operated under strict Australian & New Zealand safety standards (AS/NZS 5848)',
       'High-grade imported bungy cords inspected daily',
@@ -49,7 +49,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'March to June & September to December (Winter snow Dec-Mar)',
     difficulty: 'Easy to Challenging',
     ageLimit: '8 to 65 Years (Depending on trail)',
-    startingPrice: '₹5,499 / trek',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Wilderness First Aid (WFA) certified trek leaders on every batch',
       'Portable oxygen cylinders and pulse oximeter monitoring twice daily',
@@ -67,7 +67,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'Late December to March',
     difficulty: 'Beginner to Advanced courses available',
     ageLimit: '10+ Years',
-    startingPrice: '₹3,000 / day session',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Certified ski instructors with international FIS certifications',
       'Modern groomers and artificial snow backup',
@@ -85,7 +85,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'November 15 to June 15',
     difficulty: 'Easy / Family Friendly',
     ageLimit: 'All age groups',
-    startingPrice: '₹4,500 / 4x4 Jeep (Up to 6 persons)',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Registered 4x4 Gypsy vehicles with trained government forest drivers',
       'Authorized forest naturalists accompany every safari',
@@ -103,7 +103,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'Round the Year',
     difficulty: 'Easy / Soulful',
     ageLimit: 'All age groups',
-    startingPrice: 'Free / Included in packages',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Designated viewing seating and VIP ghat assistance available',
       'Life guards stationed along the ghat steps'
@@ -120,7 +120,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'September to June',
     difficulty: 'Relaxed & Leisure',
     ageLimit: 'All age groups',
-    startingPrice: '₹1,800 / person per night with all meals',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       '24/7 guarded secure private properties',
       'Clean running water and sanitized modern washrooms',
@@ -138,7 +138,7 @@ export const ACTIVITIES: Activity[] = [
     bestSeason: 'October to June (Clear skies)',
     difficulty: 'Moderate Thrill',
     ageLimit: '10 to 60 Years (Weight 35kg - 95kg)',
-    startingPrice: '₹1,800 / flight with GoPro recording',
+    startingPrice: 'Pricing on Request',
     safetyInfo: [
       'Tandem flights piloted only by DGCA / APPI certified pilots with 500+ hours',
       'Emergency reserve parachutes checked and repacked routinely'

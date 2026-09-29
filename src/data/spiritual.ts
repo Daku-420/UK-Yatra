@@ -24,7 +24,7 @@ export const SPIRITUAL_CIRCUITS: SpiritualCircuit[] = [
     subtitle: 'The Sacred Quadrilateral of Uttarakhand Himalayas',
     duration: '10 - 12 Days',
     bestSeason: 'May to June & September to November',
-    startingPrice: '₹32,500',
+    startingPrice: 'Pricing on Request',
     description: 'The ancient fourfold pilgrimage circuit established by Adi Shankaracharya in the 8th century. Completing the Char Dham is believed to cleanse worldly sins and grant Moksha (spiritual liberation). The clockwise order starts at Yamunotri, proceeds to Gangotri, then Kedarnath, and concludes at Badrinath.',
     shrines: [
       {
@@ -74,7 +74,7 @@ export const SPIRITUAL_CIRCUITS: SpiritualCircuit[] = [
     subtitle: 'The Sacred Confluence of Shaivism & Vaishnavism',
     duration: '5 - 6 Days',
     bestSeason: 'May to June & September to November',
-    startingPrice: '₹19,999',
+    startingPrice: 'Pricing on Request',
     description: 'The most popular yatra route covering the two most iconic Himalayan temples: Kedarnath (Lord Shiva) and Badrinath (Lord Vishnu). Perfect for devotees with time constraints seeking profound spiritual rejuvenation.',
     shrines: [
       {
@@ -106,7 +106,7 @@ export const SPIRITUAL_CIRCUITS: SpiritualCircuit[] = [
     subtitle: 'The 5 Holy Temples of Lord Shiva in Garhwal Himalayas',
     duration: '14 - 16 Days',
     bestSeason: 'May to June & September to October',
-    startingPrice: '₹42,000',
+    startingPrice: 'Pricing on Request',
     description: 'According to Mahabharata legends, the Pandavas sought Shiva to absolve their sins from the Kurukshetra war. Shiva took the form of a bull; when caught, his body appeared in 5 different sacred locations across Garhwal.',
     shrines: [
       { name: '1. Kedarnath (Hump)', deity: 'Lord Shiva', altitude: '3,584 m', district: 'Rudraprayag', significance: 'The divine bull’s hump appeared here.', image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop' },

@@ -21,7 +21,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & September to November (Winter snow in Jan)',
     altitude: '2,005 m (6,578 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹5,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Kempty Falls', desc: 'Famous multi-tiered mountain waterfall surrounded by high cliffs.' },
@@ -52,7 +52,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & September to November',
     altitude: '2,084 m (6,837 ft)',
     idealDuration: '3 - 4 Days',
-    startingPrice: '₹6,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Naini Lake', desc: 'Heart of the town offering yachting, paddle boating, and evening lights.' },
@@ -83,7 +83,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'December to March (Snow) & April to June (Meadows)',
     altitude: '2,800 m (9,200 ft)',
     idealDuration: '3 - 5 Days',
-    startingPrice: '₹12,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Auli Ropeway', desc: 'Connects Joshimath to Auli offering bird’s-eye views of Himalayan ranges.' },
@@ -111,7 +111,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & September to November',
     altitude: '1,869 m (6,132 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹5,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Chaubatia Orchards', desc: 'Famed fruit gardens with panoramic Himalayan vistas.' },
@@ -139,7 +139,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & October to December',
     altitude: '2,118 m (6,948 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹4,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Tiger Falls', desc: 'Majestic 312 ft waterfall plunging into a natural emerald pool.' },
@@ -164,7 +164,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'Round the year (Except heavy monsoon)',
     altitude: '1,706 m (5,600 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹4,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Tip-in-Top (Tiffin Top)', desc: 'Ridge viewpoint overlooking the snow peaks of Chaukhamba and Trishul.' },
@@ -189,7 +189,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & October to January',
     altitude: '2,171 m (7,122 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹5,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Chauli Ki Jali', desc: 'Dramatic natural rock ledge famed for rappelling and valley sunsets.' },
@@ -214,7 +214,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'Round the year (Snow in Dec-Feb)',
     altitude: '2,286 m (7,500 ft)',
     idealDuration: '2 Days',
-    startingPrice: '₹4,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Eco Park (Amber & Dhara)', desc: 'Peaceful walking trails surrounded by high deodar trees.' },
@@ -239,7 +239,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'April to June & September to November',
     altitude: '1,890 m (6,200 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹5,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Anasakti Ashram', desc: 'Where Mahatma Gandhi wrote his treatise on Anasakti Yoga.' },
@@ -264,7 +264,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & September to November',
     altitude: '2,200 m (7,200 ft)',
     idealDuration: '4 - 6 Days',
-    startingPrice: '₹11,499',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Khaliya Top', desc: 'Sub-alpine trek offering 360-degree views of Himalayan snowline.' },
@@ -293,7 +293,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'October to April (Round the year)',
     altitude: '314 m',
     idealDuration: '2 Days',
-    startingPrice: '₹3,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Har Ki Pauri', desc: 'Sacred ghat where thousands gather for the golden twilight Ganga Aarti.' },
@@ -318,7 +318,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'September to May',
     altitude: '372 m (1,220 ft)',
     idealDuration: '2 - 4 Days',
-    startingPrice: '₹4,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Triveni Ghat', desc: 'Confluence of Ganga, Yamuna & Saraswati famed for soulful evening Aarti.' },
@@ -343,7 +343,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to June & September to October',
     altitude: '3,291 m (10,797 ft)',
     idealDuration: '3 Days',
-    startingPrice: '₹9,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Yamunotri Temple', desc: 'Revered shrine of Goddess Yamuna constructed by Maharaja Pratap Shah.' },
@@ -368,7 +368,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to June & September to October',
     altitude: '3,100 m (10,170 ft)',
     idealDuration: '3 Days',
-    startingPrice: '₹9,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Gangotri Temple', desc: '18th-century temple built by Gurkha General Amar Singh Thapa.' },
@@ -393,7 +393,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to June & September to October',
     altitude: '3,584 m (11,759 ft)',
     idealDuration: '3 - 5 Days',
-    startingPrice: '₹14,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Kedarnath Temple', desc: 'Ancient stone temple dedicated to Lord Shiva surrounded by snow clad peaks.' },
@@ -418,7 +418,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to June & September to October',
     altitude: '3,300 m (10,826 ft)',
     idealDuration: '3 - 4 Days',
-    startingPrice: '₹13,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Badrinath Temple', desc: 'Colorful facade shrine with 1-meter tall black stone idol of Lord Vishnu.' },
@@ -443,7 +443,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'June to October (Doors open June 1)',
     altitude: '4,329 m (14,202 ft)',
     idealDuration: '4 - 5 Days',
-    startingPrice: '₹11,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Gurudwara Hemkund Sahib', desc: 'Star-shaped white marble shrine beside the crystal glacial waters.' },
@@ -468,7 +468,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'April to November (Winter treks available)',
     altitude: '3,680 m (12,073 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹6,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Tungnath Stone Temple', desc: 'Ancient stone sanctum where arms of Lord Shiva are worshipped.' },
@@ -497,7 +497,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'July to September (Peak bloom in late July - August)',
     altitude: '3,658 m (12,000 ft)',
     idealDuration: '4 - 6 Days',
-    startingPrice: '₹12,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Valley Floral Meadows', desc: 'Stretches for 8 km surrounded by Gauri Parvat and Rataban peaks.' },
@@ -522,7 +522,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'April to June & September to November',
     altitude: '2,680 m (8,790 ft)',
     idealDuration: '3 - 4 Days',
-    startingPrice: '₹7,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Tungnath Temple', desc: '3rd Kedar and world’s highest stone Shiva shrine.' },
@@ -547,7 +547,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to November (Meadows) & Dec to March (Snow)',
     altitude: '3,048 m - 3,810 m',
     idealDuration: '4 - 5 Days',
-    startingPrice: '₹8,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Bakaria Top', desc: 'Highest point of Dayara Bugyal with panoramic view of Bandarpoonch.' },
@@ -572,7 +572,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'Round the year (Best: March to June & Sept to Nov)',
     altitude: '2,438 m (7,999 ft)',
     idealDuration: '2 Days',
-    startingPrice: '₹3,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Chaukhamba Lake Reflection', desc: 'Iconic crystal mirror view during early sunrise.' },
@@ -597,7 +597,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'April to June & September to December',
     altitude: '3,566 m (11,700 ft)',
     idealDuration: '6 - 7 Days',
-    startingPrice: '₹13,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Swargarohini Peak View', desc: 'Glacial stair mountain believed to lead directly to heaven.' },
@@ -622,7 +622,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'October to March (Clear peaks) & April to June',
     altitude: '2,420 m (7,940 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹6,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Zero Point', desc: 'Highest viewpoint inside the sanctuary offering close-up snow peak vistas.' },
@@ -647,7 +647,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'April to June & September to November',
     altitude: '2,620 m (8,600 ft)',
     idealDuration: '3 - 4 Days',
-    startingPrice: '₹7,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Mukhba Village', desc: 'Sacred winter home where idol of Goddess Ganga is worshipped for 6 months.' },
@@ -676,7 +676,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'November to June (Dhikala zone opens Nov 15)',
     altitude: '385 m - 1,100 m',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹7,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Dhikala Tourism Zone', desc: 'Core tiger territory famed for sprawling grasslands and wildlife sightings.' },
@@ -701,7 +701,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'November 15 to June 15',
     altitude: '300 m - 1,000 m',
     idealDuration: '2 Days',
-    startingPrice: '₹5,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Chilla Safari Zone', desc: 'Premier safari gate near Haridwar with elephant herds and leopards.' },
@@ -726,7 +726,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to October',
     altitude: '3,500 m - 7,816 m',
     idealDuration: '5 - 7 Days',
-    startingPrice: '₹16,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Rishi Ganga Gorge', desc: 'One of the deepest and most dramatic mountain gorges on earth.' },
@@ -751,7 +751,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to October',
     altitude: '1,800 m - 7,083 m',
     idealDuration: '5 - 6 Days',
-    startingPrice: '₹14,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Gaumukh Glacier', desc: 'Vast snout of the Gangotri Glacier where the holy river originates.' },
@@ -776,7 +776,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'October to May',
     altitude: '2,200 m - 2,500 m',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹6,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Sanctuary Forest Trails', desc: 'Marked eco-walking paths for quiet wildlife tracking and birding.' },
@@ -805,7 +805,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to October',
     altitude: '3,200 m (10,500 ft)',
     idealDuration: '1 - 2 Days',
-    startingPrice: '₹4,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Bheem Pul', desc: 'Gigantic boulder placed across Saraswati River by Pandava prince Bheema.' },
@@ -830,7 +830,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'Round the year',
     altitude: '2,000 m (6,560 ft)',
     idealDuration: '2 Days',
-    startingPrice: '₹3,999',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Deoria Tal Trail', desc: 'Well-marked stone path winding up to the Chaukhamba reflection lake.' },
@@ -855,7 +855,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'Round the year (Snow in Dec-March)',
     altitude: '1,950 m (6,400 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹4,499',
+    startingPrice: 'Pricing on Request',
     isPopular: true,
     topAttractions: [
       { name: 'Sankri Village Promenade', desc: 'Boutique mountain cafes, gear rental shops, and wooden lodges.' },
@@ -880,7 +880,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & September to November',
     altitude: '1,700 m (5,577 ft)',
     idealDuration: '2 Days',
-    startingPrice: '₹3,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Khirsu Forest Park', desc: 'Serene nature trails shaded by centuries-old oak and deodar canopies.' },
@@ -905,7 +905,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'May to October',
     altitude: '2,316 m (7,600 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹4,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Nanda Devi Temple Lata', desc: 'Ancient village sanctuary hosting dramatic mask dances.' },
@@ -930,7 +930,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'April to June & September to November',
     altitude: '2,600 m (8,530 ft)',
     idealDuration: '3 - 4 Days',
-    startingPrice: '₹7,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Someshwar Temple', desc: 'Intricately carved wood-and-stone shrine venerating Lord Shiva.' },
@@ -955,7 +955,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'March to June & October to December',
     altitude: '2,011 m (6,600 ft)',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹5,499',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'St. John’s Church', desc: 'Quaint stone church built in 1942 shaded by century-old deodars.' },
@@ -984,7 +984,7 @@ export const DESTINATIONS: Destination[] = [
     bestTime: 'October to May',
     altitude: '1,750 m',
     idealDuration: '2 - 3 Days',
-    startingPrice: '₹5,999',
+    startingPrice: 'Pricing on Request',
     isPopular: false,
     topAttractions: [
       { name: 'Tehri Dam Viewpoint', desc: 'Engineering marvel towering over the Bhagirathi River.' },

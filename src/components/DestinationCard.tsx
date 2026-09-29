@@ -64,9 +64,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({ destination })
           </div>
 
           <div className="flex items-center justify-end gap-1.5 text-right font-medium text-slate-300">
-            {destination.startingPrice && (
-              <span>From <strong className="text-brand-orange font-bold">{destination.startingPrice}</strong></span>
-            )}
+            <span>Custom Packages</span>
           </div>
         </div>
 

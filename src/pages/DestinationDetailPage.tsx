@@ -86,7 +86,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
       bestTime: 'Round the year (Best: March to June & Sept to Nov)',
       altitude: '1,800 m - 3,200 m',
       idealDuration: '2 - 4 Days',
-      startingPrice: '₹5,999',
+      startingPrice: 'Pricing on Request',
       isPopular: true,
       topAttractions: [
         { name: `${navItemName} Scenic Ridge`, desc: 'Breathtaking viewpoints overlooking snow-clad peaks and misty pine valleys.' },
@@ -942,14 +942,12 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                 </p>
               </div>
 
-              {destination.startingPrice && (
-                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
-                  <span className="text-[10px] text-slate-500 block uppercase font-medium">Curated Packages From</span>
-                  <div className="font-display font-extrabold text-2xl text-slate-900">
-                    {destination.startingPrice} <span className="text-xs font-normal text-slate-500">/ person</span>
-                  </div>
+              <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4D9]">
+                <span className="text-[10px] text-slate-500 block uppercase font-medium">Curated Packages</span>
+                <div className="font-display font-extrabold text-xl text-slate-900">
+                  Custom Quote on Request
                 </div>
-              )}
+              </div>
 
               <div className="space-y-3">
                 <button

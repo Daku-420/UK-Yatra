@@ -457,9 +457,9 @@ export const EducationalProgrammesPage: React.FC<EducationalProgrammesPageProps>
                   {/* Card Bottom CTA */}
                   <div className="p-5 pt-0 border-t border-slate-100 flex items-center justify-between mt-2">
                     <div>
-                      <span className="text-[10px] text-slate-400 font-semibold block">Estimated Fare</span>
-                      <span className="text-base font-extrabold font-display text-slate-900">
-                        {prog.startingPrice} <span className="text-[10px] text-slate-500 font-normal">/ student</span>
+                      <span className="text-[10px] text-slate-400 font-semibold block">Institutional Tariff</span>
+                      <span className="text-sm font-extrabold font-display text-slate-900">
+                        Quote on Request
                       </span>
                     </div>
 

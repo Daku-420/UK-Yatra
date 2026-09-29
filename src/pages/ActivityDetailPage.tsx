@@ -134,14 +134,12 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ onOpenBo
                 </h3>
               </div>
 
-              {activity.startingPrice && (
-                <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5]">
-                  <span className="text-[10px] text-slate-500 block uppercase font-medium">Price Estimate</span>
-                  <div className="font-display font-extrabold text-2xl text-slate-900">
-                    {activity.startingPrice}
-                  </div>
+              <div className="p-4 rounded-2xl bg-[#F5F3EF] border border-[#E2DDD5]">
+                <span className="text-[10px] text-slate-500 block uppercase font-medium">Pricing</span>
+                <div className="font-display font-extrabold text-xl text-slate-900">
+                  Pricing on Request
                 </div>
-              )}
+              </div>
 
               <div className="space-y-3">
                 <button

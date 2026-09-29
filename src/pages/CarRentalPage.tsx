@@ -41,8 +41,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Luxury 6+1 / 7+1 SUV',
       capacity: '6-7 Seater',
       luggage: '4 Large Bags',
-      rate: 'From ₹4,500 / day',
-      perKm: '₹18 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Most Popular',
       desc: 'Reclining captain seats, dual AC & mountain heating, roof carrier, hill certified driver. Prime choice for Char Dham.',
       image: '/images/vehicles/innova-crysta.jpg'
@@ -54,8 +54,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Next-Gen Hybrid 7-Seater',
       capacity: '6-7 Seater',
       luggage: '4 Large Bags',
-      rate: 'From ₹5,500 / day',
-      perKm: '₹22 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Eco Premium',
       desc: 'Ultra-silent hybrid engine, Ottoman lounge seating, panoramic sunroof, superior ride comfort on winding hills.',
       image: '/images/vehicles/innova-hycross.jpg'
@@ -67,8 +67,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Economy 4+1 MUV',
       capacity: '4-5 Seater',
       luggage: '2-3 Bags',
-      rate: 'From ₹3,200 / day',
-      perKm: '₹14 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Economical Family',
       desc: 'Comfortable 3-row seating, high fuel mileage, clean sanitized interiors, ideal for budget family trips.',
       image: '/images/vehicles/maruti-ertiga.jpg'
@@ -80,8 +80,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Family 6/7 Seater RV',
       capacity: '6 Seater',
       luggage: '3 Bags',
-      rate: 'From ₹3,600 / day',
-      perKm: '₹15 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Modern Comfort',
       desc: 'Ventilated seats, individual AC vents for all 3 rows, sky roof, hill-start assist and premium suspension.',
       image: '/images/vehicles/kia-carens.jpg'
@@ -93,8 +93,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Full-Size 4WD Mountain SUV',
       capacity: '6-7 Seater',
       luggage: '5 Bags',
-      rate: 'From ₹8,500 / day',
-      perKm: '₹35 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'VIP 4x4 Off-Road',
       desc: 'High ground clearance, unstoppable 4x4 power for snow ghats, rugged stance, VIP mountain convoy status.',
       image: '/images/vehicles/toyota-fortuner.jpg'
@@ -106,8 +106,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Adventure 4x4 Off-Roader',
       capacity: '4-6 Seater',
       luggage: '3 Bags',
-      rate: 'From ₹4,800 / day',
-      perKm: '₹20 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Trek & Adventure',
       desc: 'Built for high altitude mountain passes, rough terrain, Chopta-Tungnath, Mana Pass, and rugged trails.',
       image: '/images/vehicles/mahindra-scorpio-thar.jpg'
@@ -121,8 +121,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Prime Sedan 4+1',
       capacity: '4 Seater',
       luggage: '2-3 Bags',
-      rate: 'From ₹2,800 / day',
-      perKm: '₹11 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Best Seller Sedan',
       desc: 'Smooth highway cruise, spacious legroom, climate control, perfect for airport transfers & Dehradun/Haridwar.',
       image: '/images/vehicles/maruti-dzire.jpg'
@@ -134,8 +134,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Comfort Outstation Sedan',
       capacity: '4 Seater',
       luggage: '3 Bags',
-      rate: 'From ₹2,900 / day',
-      perKm: '₹12 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Budget Executive',
       desc: 'Generous luggage boot, comfortable seating for long ghat drives, seasoned mountain-certified driver.',
       image: '/images/vehicles/toyota-etios-aura.jpg'
@@ -147,8 +147,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Compact Hatchback',
       capacity: '3-4 Seater',
       luggage: '2 Bags',
-      rate: 'From ₹2,200 / day',
-      perKm: '₹10 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Economy Choice',
       desc: 'Pocket-friendly city & hill tours, nimble mountain handling, easy parking in Mussoorie & Nainital.',
       image: '/images/vehicles/maruti-swift-wagonr.jpg'
@@ -162,8 +162,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: '12 / 16 / 26 Seater Coach',
       capacity: '12-26 Seater',
       luggage: '12+ Bags',
-      rate: 'From ₹7,500 / day',
-      perKm: '₹24 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Best for Groups',
       desc: '2x1 pushback luxury seats, high clearance suspension, LCD screen, commercial hill permit certified.',
       image: '/images/vehicles/tempo-traveller-12-26.jpg'
@@ -175,8 +175,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Royal 1x1 Sofa Seating',
       capacity: '9-12 Seater',
       luggage: '10 Bags',
-      rate: 'From ₹8,500 / day',
-      perKm: '₹28 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Maharaja Class',
       desc: '1x1 plush maharaja recliner sofas, ambient mood lighting, USB for every seat, ice box and music setup.',
       image: '/images/vehicles/tempo-traveller-maharaja.jpg'
@@ -188,8 +188,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'VIP Luxury 10-13 Seater',
       capacity: '10-13 Seater',
       luggage: '8+ Bags',
-      rate: 'From ₹9,500 / day',
-      perKm: '₹32 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Executive VIP',
       desc: 'Aircraft style luxury seating, panoramic tinted windows, individual USB charging, air suspension.',
       image: '/images/vehicles/force-urbania.jpg'
@@ -203,8 +203,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Ultra-Luxury Executive Lounge',
       capacity: '6 Seater',
       luggage: '4 Bags',
-      rate: 'From ₹18,000 / day',
-      perKm: '₹75 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Ultra Luxury',
       desc: 'First-class airline lounge seating, heated massage recliners, dual sunroof, presidential luxury.',
       image: '/images/vehicles/toyota-vellfire.jpg'
@@ -216,8 +216,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'VIP 7-Seater Luxury MUV',
       capacity: '7 Seater',
       luggage: '5 Bags',
-      rate: 'From ₹7,500 / day',
-      perKm: '₹30 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'VIP Limousine',
       desc: 'Generous stand-up headroom, VIP captain recliners, smart dual electric doors, quiet cabin insulation.',
       image: '/images/vehicles/kia-carnival.jpg'
@@ -229,8 +229,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Elite Wedding & VIP Sedan',
       capacity: '4 Seater',
       luggage: '3 Bags',
-      rate: 'From ₹14,000 / day',
-      perKm: '₹55 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Royal Luxury',
       desc: 'World-class comfort, elite presence for destination weddings, luxury corporate retreats, and dignitaries.',
       image: '/images/vehicles/mercedes-benz.jpg'
@@ -244,8 +244,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Char Dham Group Mini Coach',
       capacity: '27 Seater',
       luggage: '25+ Bags',
-      rate: 'From ₹12,000 / day',
-      perKm: '₹42 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Group Pilgrimage',
       desc: '2x2 pushback seats, dedicated roof carrier, microphone & sound system, commercial hill permit.',
       image: '/images/vehicles/mini-bus-27.jpg'
@@ -257,8 +257,8 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
       sub: 'Large Group Pilgrimage Bus',
       capacity: '45-52 Seater',
       luggage: '50+ Bags',
-      rate: 'From ₹16,500 / day',
-      perKm: '₹55 / km',
+      rate: 'Rates on Request',
+      perKm: 'Quote on Request',
       badge: 'Yatra Delegation',
       desc: 'Large yatra samitis, school & corporate tours, underbelly luggage decks, air suspension for smooth travel.',
       image: '/images/vehicles/volvo-bus-45-52.jpg'
@@ -266,12 +266,12 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
   ];
 
   const popularRoutes = [
-    { from: 'Dehradun Airport (Jolly Grant)', to: 'Rishikesh / Haridwar', time: '45 mins', price: '₹1,400' },
-    { from: 'Dehradun Airport', to: 'Mussoorie Queen of Hills', time: '2 hrs', price: '₹2,500' },
-    { from: 'Haridwar / Rishikesh', to: 'Guptkashi / Sonprayag (Kedarnath Base)', time: '7 - 8 hrs', price: '₹5,500 / day' },
-    { from: 'Haridwar / Rishikesh', to: 'Joshimath / Badrinath', time: '9 - 10 hrs', price: '₹6,000 / day' },
+    { from: 'Dehradun Airport (Jolly Grant)', to: 'Rishikesh / Haridwar', time: '45 mins', price: 'Quote on Request' },
+    { from: 'Dehradun Airport', to: 'Mussoorie Queen of Hills', time: '2 hrs', price: 'Quote on Request' },
+    { from: 'Haridwar / Rishikesh', to: 'Guptkashi / Sonprayag (Kedarnath Base)', time: '7 - 8 hrs', price: 'Quote on Request' },
+    { from: 'Haridwar / Rishikesh', to: 'Joshimath / Badrinath', time: '9 - 10 hrs', price: 'Quote on Request' },
     { from: 'Complete Char Dham Circuit (10 Days)', to: 'All 4 Shrines ex-Haridwar', time: '10 Days', price: 'Custom fixed package' },
-    { from: 'Delhi NCR', to: 'Rishikesh / Dehradun', time: '5 hrs (Expressway)', price: '₹4,800' }
+    { from: 'Delhi NCR', to: 'Rishikesh / Dehradun', time: '5 hrs (Expressway)', price: 'Quote on Request' }
   ];
 
   const [bookingForm, setBookingForm] = useState({
@@ -333,16 +333,16 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 bg-white/80 rounded-2xl border border-slate-200 shadow-xs">
-                  <div className="text-brand-orange font-bold text-sm">₹3,200/day</div>
-                  <div className="text-[11px] text-slate-600 font-medium">Starting Rates</div>
+                  <div className="text-brand-orange font-bold text-sm">Best Tariffs</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Quotes on Request</div>
                 </div>
                 <div className="p-3 bg-white/80 rounded-2xl border border-slate-200 shadow-xs">
                   <div className="text-emerald-600 font-bold text-sm">100% Hill Safe</div>
                   <div className="text-[11px] text-slate-600 font-medium">Verified Mountain Drivers</div>
                 </div>
                 <div className="p-3 bg-white/80 rounded-2xl border border-slate-200 shadow-xs col-span-2 sm:col-span-1">
-                  <div className="text-sky-600 font-bold text-sm">Zero Surcharge</div>
-                  <div className="text-[11px] text-slate-600 font-medium">Transparent Pricing</div>
+                  <div className="text-sky-600 font-bold text-sm">All-Inclusive</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Custom Route Quotes</div>
                 </div>
               </div>
             </div>
@@ -408,31 +408,31 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                       className="w-full bg-[#F5F3EF] border border-slate-200 rounded-xl px-2.5 py-2 text-slate-900 font-medium focus:outline-none focus:border-brand-orange text-xs"
                     >
                       <optgroup label="Popular SUVs & MUVs">
-                        <option value="Toyota Innova Crysta">Toyota Innova Crysta (6+1 SUV) - ₹4,500/day</option>
-                        <option value="Toyota Innova Hycross">Toyota Innova Hycross (Hybrid 7s) - ₹5,500/day</option>
-                        <option value="Maruti Suzuki Ertiga">Maruti Suzuki Ertiga (4-5 Pax MUV) - ₹3,200/day</option>
-                        <option value="Kia Carens Luxury">Kia Carens Luxury (6 Seater) - ₹3,600/day</option>
-                        <option value="Toyota Fortuner (4x4)">Toyota Fortuner 4x4 (Off-Road Beast) - ₹8,500/day</option>
-                        <option value="Mahindra Scorpio-N / Thar">Mahindra Scorpio-N / Thar 4x4 - ₹4,800/day</option>
+                        <option value="Toyota Innova Crysta">Toyota Innova Crysta (6+1 SUV)</option>
+                        <option value="Toyota Innova Hycross">Toyota Innova Hycross (Hybrid 7s)</option>
+                        <option value="Maruti Suzuki Ertiga">Maruti Suzuki Ertiga (4-5 Pax MUV)</option>
+                        <option value="Kia Carens Luxury">Kia Carens Luxury (6 Seater)</option>
+                        <option value="Toyota Fortuner (4x4)">Toyota Fortuner 4x4 (Off-Road Beast)</option>
+                        <option value="Mahindra Scorpio-N / Thar">Mahindra Scorpio-N / Thar 4x4</option>
                       </optgroup>
                       <optgroup label="Sedans & Hatchbacks">
-                        <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire (Sedan 4+1) - ₹2,800/day</option>
-                        <option value="Toyota Etios / Hyundai Aura">Toyota Etios / Hyundai Aura - ₹2,900/day</option>
-                        <option value="Maruti Swift / WagonR">Maruti Swift / WagonR (Hatchback) - ₹2,200/day</option>
+                        <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire (Sedan 4+1)</option>
+                        <option value="Toyota Etios / Hyundai Aura">Toyota Etios / Hyundai Aura</option>
+                        <option value="Maruti Swift / WagonR">Maruti Swift / WagonR (Hatchback)</option>
                       </optgroup>
                       <optgroup label="Tempo Travellers & Vans">
-                        <option value="Force Tempo Traveller (12-26s)">Force Tempo Traveller (12/16/26s) - ₹7,500/day</option>
-                        <option value="Maharaja Luxury Traveller">Maharaja Luxury Traveller (1x1 Sofas) - ₹8,500/day</option>
-                        <option value="Force Urbania Van">Force Urbania VIP Van (10-13s) - ₹9,500/day</option>
+                        <option value="Force Tempo Traveller (12-26s)">Force Tempo Traveller (12/16/26s)</option>
+                        <option value="Maharaja Luxury Traveller">Maharaja Luxury Traveller (1x1 Sofas)</option>
+                        <option value="Force Urbania Van">Force Urbania VIP Van (10-13s)</option>
                       </optgroup>
                       <optgroup label="Executive & Luxury Fleet">
-                        <option value="Toyota Vellfire Lounge">Toyota Vellfire VIP Lounge - ₹18,000/day</option>
-                        <option value="Kia Carnival Limousine">Kia Carnival Limousine - ₹7,500/day</option>
-                        <option value="Mercedes-Benz E / S-Class">Mercedes-Benz E/S-Class - ₹14,000/day</option>
+                        <option value="Toyota Vellfire Lounge">Toyota Vellfire VIP Lounge</option>
+                        <option value="Kia Carnival Limousine">Kia Carnival Limousine</option>
+                        <option value="Mercedes-Benz E / S-Class">Mercedes-Benz E/S-Class</option>
                       </optgroup>
                       <optgroup label="Group Pilgrimage Coaches">
-                        <option value="27-Seater Deluxe Mini Bus">27-Seater Deluxe Mini Bus - ₹12,000/day</option>
-                        <option value="45 / 52-Seater Volvo Coach">45/52-Seater Volvo Bus - ₹16,500/day</option>
+                        <option value="27-Seater Deluxe Mini Bus">27-Seater Deluxe Mini Bus</option>
+                        <option value="45 / 52-Seater Volvo Coach">45/52-Seater Volvo Bus</option>
                       </optgroup>
                     </select>
                   </div>
@@ -722,15 +722,15 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                 <span>Rajputana Standard Fare Transparency</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
-                Outstation & Uttarakhand Per-KM Taxi Fare Chart
+                Outstation & Uttarakhand Taxi Fleet Directory
               </h2>
               <p className="text-xs text-slate-600 mt-1">
-                Standard outstation rates per km, estimated 250 KM daily package, and driver allowance.
+                Verified Himalayan vehicles with certified mountain drivers, hill permits, and custom trip quotations.
               </p>
             </div>
             <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 self-start sm:self-auto flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4" />
-              <span>Zero Surge & Fixed Tariffs</span>
+              <span>Verified Mountain Fleet</span>
             </span>
           </div>
 
@@ -740,37 +740,37 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                 <tr className="border-b border-slate-200 text-slate-500 uppercase tracking-wider">
                   <th className="pb-3 font-semibold">Vehicle Category & Model</th>
                   <th className="pb-3 font-semibold">Capacity</th>
-                  <th className="pb-3 font-semibold">Per KM Rate</th>
-                  <th className="pb-3 font-semibold">Est. Day Rate (250 KM)</th>
-                  <th className="pb-3 font-semibold">Driver Allowance</th>
+                  <th className="pb-3 font-semibold">Tariff & Rate</th>
+                  <th className="pb-3 font-semibold">Terrain Suitability</th>
+                  <th className="pb-3 font-semibold">Driver & Hill Permits</th>
                   <th className="pb-3 font-semibold text-right">Instant Booking</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 {[
-                  { name: 'Maruti Swift / WagonR (Hatchback)', pax: '3-4 Pax', perKm: '₹10 / km', dayRate: '₹2,500 / day', driver: '₹300 / day' },
-                  { name: 'Maruti Suzuki Dzire / Etios (Sedan)', pax: '4 Pax', perKm: '₹11 - ₹12 / km', dayRate: '₹2,800 - ₹3,000 / day', driver: '₹300 / day' },
-                  { name: 'Maruti Ertiga (MUV)', pax: '5-6 Pax', perKm: '₹14 / km', dayRate: '₹3,500 / day', driver: '₹400 / day' },
-                  { name: 'Kia Carens (Family RV)', pax: '6 Pax', perKm: '₹15 / km', dayRate: '₹3,750 / day', driver: '₹400 / day' },
-                  { name: 'Toyota Innova Crysta (Luxury SUV)', pax: '6-7 Pax', perKm: '₹18 / km', dayRate: '₹4,500 / day', driver: '₹500 / day' },
-                  { name: 'Toyota Innova Hycross (Hybrid 7s)', pax: '6-7 Pax', perKm: '₹22 / km', dayRate: '₹5,500 / day', driver: '₹500 / day' },
-                  { name: 'Mahindra Scorpio-N / Thar (4x4)', pax: '4-6 Pax', perKm: '₹20 / km', dayRate: '₹5,000 / day', driver: '₹500 / day' },
-                  { name: 'Toyota Fortuner (4x4 Beast)', pax: '6-7 Pax', perKm: '₹35 / km', dayRate: '₹8,500 / day', driver: '₹600 / day' },
-                  { name: 'Force Tempo Traveller (12-16s)', pax: '12-16 Pax', perKm: '₹24 / km', dayRate: '₹6,000 - ₹7,500 / day', driver: '₹500 / day' },
-                  { name: 'Maharaja Luxury Traveller (1x1)', pax: '9-12 Pax', perKm: '₹28 / km', dayRate: '₹8,500 / day', driver: '₹600 / day' },
-                  { name: 'Force Urbania VIP Van (10-13s)', pax: '10-13 Pax', perKm: '₹32 / km', dayRate: '₹9,500 / day', driver: '₹600 / day' },
-                  { name: 'Kia Carnival Limousine', pax: '7 Pax', perKm: '₹30 / km', dayRate: '₹7,500 / day', driver: '₹600 / day' },
-                  { name: 'Mercedes-Benz E / S-Class', pax: '4 Pax', perKm: '₹55 / km', dayRate: '₹14,000 / day', driver: '₹800 / day' },
-                  { name: 'Toyota Vellfire VIP Lounge', pax: '6 Pax', perKm: '₹75 / km', dayRate: '₹18,000 / day', driver: '₹1,000 / day' },
-                  { name: '27-Seater Deluxe Mini Bus', pax: '27 Pax', perKm: '₹42 / km', dayRate: '₹12,000 / day', driver: '₹800 / day' },
-                  { name: '45 / 52-Seater Volvo Tourist Bus', pax: '45-52 Pax', perKm: '₹55 / km', dayRate: '₹16,500 / day', driver: '₹1,000 / day' }
+                  { name: 'Maruti Swift / WagonR (Hatchback)', pax: '3-4 Pax', rate: 'Quote on Request', terrain: 'City & Scenic Valleys', driver: 'Certified Hill Driver' },
+                  { name: 'Maruti Suzuki Dzire / Etios (Sedan)', pax: '4 Pax', rate: 'Quote on Request', terrain: 'Highway & Hill Stations', driver: 'Certified Hill Driver' },
+                  { name: 'Maruti Ertiga (MUV)', pax: '5-6 Pax', rate: 'Quote on Request', terrain: 'Family Yatra & Hill Ghats', driver: 'Certified Hill Driver' },
+                  { name: 'Kia Carens (Family RV)', pax: '6 Pax', rate: 'Quote on Request', terrain: 'Deluxe Family Pilgrimage', driver: 'Certified Hill Driver' },
+                  { name: 'Toyota Innova Crysta (Luxury SUV)', pax: '6-7 Pax', rate: 'Quote on Request', terrain: 'Char Dham & High Altitudes', driver: 'Certified Hill Driver' },
+                  { name: 'Toyota Innova Hycross (Hybrid 7s)', pax: '6-7 Pax', rate: 'Quote on Request', terrain: 'Eco Premium Long Drives', driver: 'Certified Hill Driver' },
+                  { name: 'Mahindra Scorpio-N / Thar (4x4)', pax: '4-6 Pax', rate: 'Quote on Request', terrain: 'Snow Ghats & Off-Road Trails', driver: 'Certified Hill Driver' },
+                  { name: 'Toyota Fortuner (4x4 Beast)', pax: '6-7 Pax', rate: 'Quote on Request', terrain: 'VIP Mountain Expeditions', driver: 'Certified Hill Driver' },
+                  { name: 'Force Tempo Traveller (12-16s)', pax: '12-16 Pax', rate: 'Quote on Request', terrain: 'Group Char Dham Pilgrimage', driver: 'Commercial Hill Crew' },
+                  { name: 'Maharaja Luxury Traveller (1x1)', pax: '9-12 Pax', rate: 'Quote on Request', terrain: 'VIP Executive Pilgrimage', driver: 'Commercial Hill Crew' },
+                  { name: 'Force Urbania VIP Van (10-13s)', pax: '10-13 Pax', rate: 'Quote on Request', terrain: 'Luxury Corporate / Family Tour', driver: 'Commercial Hill Crew' },
+                  { name: 'Kia Carnival Limousine', pax: '7 Pax', rate: 'Quote on Request', terrain: 'VIP Comfort Airport Transfers', driver: 'Uniformed Chauffeur' },
+                  { name: 'Mercedes-Benz E / S-Class', pax: '4 Pax', rate: 'Quote on Request', terrain: 'Destination Weddings & VIPs', driver: 'Uniformed Chauffeur' },
+                  { name: 'Toyota Vellfire VIP Lounge', pax: '6 Pax', rate: 'Quote on Request', terrain: 'Presidential Mountain Lounge', driver: 'Uniformed Chauffeur' },
+                  { name: '27-Seater Deluxe Mini Bus', pax: '27 Pax', rate: 'Quote on Request', terrain: 'Yatra Samitis & College Groups', driver: 'Commercial Hill Crew' },
+                  { name: '45 / 52-Seater Volvo Tourist Bus', pax: '45-52 Pax', rate: 'Quote on Request', terrain: 'Large Pilgrimage Delegations', driver: 'Commercial Hill Crew' }
                 ].map((item, i) => (
                   <tr key={i} className="hover:bg-[#F5F3EF]/60 transition-colors">
                     <td className="py-3 font-medium text-slate-900">{item.name}</td>
                     <td className="py-3 text-slate-600">{item.pax}</td>
-                    <td className="py-3 font-bold text-brand-orange">{item.perKm}</td>
-                    <td className="py-3 font-bold text-emerald-600">{item.dayRate}</td>
-                    <td className="py-3 text-slate-500">{item.driver}</td>
+                    <td className="py-3 font-bold text-brand-orange">{item.rate}</td>
+                    <td className="py-3 text-slate-600">{item.terrain}</td>
+                    <td className="py-3 text-emerald-600 font-medium">{item.driver}</td>
                     <td className="py-3 text-right">
                       <button
                         onClick={() => {
@@ -797,10 +797,10 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
         {/* Popular Inter-city Fixed Fare Table */}
         <div className="bg-white border border-[#E2DDD5] rounded-3xl p-8 sm:p-12 mb-16 shadow-sm">
           <h2 className="text-2xl font-bold font-display text-slate-900 mb-2">
-            Popular Uttarakhand Taxi Routes & Approx Fares
+            Popular Uttarakhand Taxi Routes & Transfers
           </h2>
           <p className="text-xs text-slate-600 mb-6">
-            Prices include fuel, driver charges, and hill permits. Tolls and state entry taxes as actuals.
+            All vehicle charters include fuel, verified mountain driver charges, and hill permits. Custom quotes tailored on enquiry.
           </p>
 
           <div className="overflow-x-auto">
@@ -810,7 +810,7 @@ export const CarRentalPage: React.FC<CarRentalPageProps> = ({ onOpenBookingModal
                   <th className="pb-3 font-semibold">Origin Point</th>
                   <th className="pb-3 font-semibold">Destination</th>
                   <th className="pb-3 font-semibold">Driving Time</th>
-                  <th className="pb-3 font-semibold">Starting Fare</th>
+                  <th className="pb-3 font-semibold">Tariff & Quotation</th>
                   <th className="pb-3 font-semibold text-right">Instant Action</th>
                 </tr>
               </thead>

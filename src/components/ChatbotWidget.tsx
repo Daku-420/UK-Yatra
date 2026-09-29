@@ -265,7 +265,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ onOpenBookingModal
         options: [
           { label: 'Explore Heli Packages', link: '/helicopter-packages' },
           { label: 'Get Heli Quotation', action: () => onOpenBookingModal?.('Helicopter Charter Enquiry') },
-          { label: 'Ask Heli Desk on WhatsApp', isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I need quick helicopter package details and price quotes.' }
+          { label: 'Ask Heli Desk on WhatsApp', isWhatsApp: true, whatsAppMsg: 'Hi UKYatra, I need quick helicopter package details and charter quotations.' }
         ]
       };
     }
@@ -326,7 +326,7 @@ if (q.includes('taxi') || q.includes('cab') || q.includes('car') || q.includes('
 if (q.includes('cost') || q.includes('price') || q.includes('pricing') || q.includes('rate') || q.includes('how much') || q.includes('budget') || q.includes('discount') || q.includes('offer') || q.includes('custom') || q.includes('customize')) {
   return {
     sender: 'bot',
-    text: `**Customized Packages & Pricing:**\n\nEvery journey with UKYatra is tailored to your travel dates, vehicle preference, and hotel category (Standard, Deluxe, Luxury):\n\n• **Weekend Escapes**: Starting from ₹7,499 per person\n• **Winter Treks**: Starting from ₹8,999 per person (all meals & gear)\n• **Char Dham by Road**: Starting from ₹28,500 per person (10N/11D)\n• **Char Dham by Helicopter**: Luxury charter pricing on request\n\n *We offer a 5% Early Bird discount and special concessions for groups of 6+ travellers!*`,
+    text: `**Customized Packages & Tailored Quotes:**\n\nEvery journey with UKYatra is bespoke and tailored directly to your travel dates, group size, vehicle preference, and hotel category (Standard, Deluxe, Luxury):\n\n• **Weekend Escapes**: Tailored quote on request\n• **Winter & Summer Treks**: All-inclusive customized quote on request\n• **Char Dham Overland Circuits**: Custom itinerary quote on request\n• **Char Dham by Helicopter**: VIP charter pricing on request\n\n *Connect with our mountain travel experts for an instant free personalized itinerary & quote!*`,
     options: [
       { label: '3-Step Trip Planner', link: '/customized-trip' },
       { label: 'View Active Offers', link: '/offers' },

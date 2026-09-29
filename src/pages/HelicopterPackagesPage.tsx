@@ -135,7 +135,7 @@ export const HelicopterPackagesPage: React.FC<HelicopterPackagesPageProps> = ({ 
               </h2>
             </div>
             <p className="text-xs text-slate-600 max-w-md mt-2 md:mt-0">
-              Prices include helicopter flying, VIP Darshan, 5-star stays, gourmet meals, ground logistics, and Dehradun transfers.
+              Charters include helicopter flying, VIP Darshan, 5-star stays, gourmet meals, ground logistics, and Dehradun transfers.
             </p>
           </div>
 

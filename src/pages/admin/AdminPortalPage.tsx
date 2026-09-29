@@ -1634,21 +1634,21 @@ export const AdminPortalPage: React.FC = () => {
               {/* Row 3: Pricing, Original Price, Cover Image, PDF Brochure */}
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Starting Price *</label>
+                  <label className="block text-slate-300 font-semibold mb-1">Starting Price / Tariff</label>
                   <input
-                    required
                     name="startingPrice"
                     type="text"
-                    placeholder="e.g. ₹18,500 / person or Pricing on Request"
+                    defaultValue="Pricing on Request"
+                    placeholder="Pricing on Request"
                     className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Original Price (Strikeout)</label>
+                  <label className="block text-slate-300 font-semibold mb-1">Original Price (Optional)</label>
                   <input
                     name="originalPrice"
                     type="text"
-                    placeholder="e.g. ₹22,000"
+                    placeholder="Optional (Leave blank)"
                     className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-orange"
                   />
                 </div>

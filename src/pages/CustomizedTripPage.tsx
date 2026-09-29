@@ -42,7 +42,7 @@ export const CustomizedTripPage: React.FC = () => {
     // Step 3: Stays & Budget
     stayPreference: 'Deluxe (4-Star / Boutique Lodge)',
     transportPreference: 'Private Hill Innova / Ertiga',
-    budgetRange: '₹15,000 - ₹25,000 per person',
+    budgetRange: 'Deluxe / Custom Quote',
     specialNotes: '',
     // Contact
     name: '',

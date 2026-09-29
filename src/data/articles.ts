@@ -135,13 +135,13 @@ export const ARTICLES: Article[] = [
       {
         title: 'Scenic Uttarakhand Explorer (Mussoorie, Rishikesh & Haridwar)',
         duration: '5 Nights / 6 Days',
-        price: '₹14,999 / person',
+        price: 'Pricing on Request',
         link: '/packages'
       },
       {
         title: 'Complete Char Dham Yatra Overland Journey',
         duration: '9 Nights / 10 Days',
-        price: '₹28,500 / person',
+        price: 'Pricing on Request',
         link: '/packages'
       }
     ]
@@ -294,7 +294,7 @@ export const ARTICLES: Article[] = [
         content: [
           'The overland journey to Kedarnath follows a scenic route from Haridwar or Rishikesh along the Ganga, Alaknanda, and Mandakini rivers:',
           '1. Rishikesh to Guptkashi/Sonprayag (210 km / 7-8 hrs): Follow NH 58 through Devprayag, Srinagar, and Rudraprayag, turning north along the Mandakini River via Agastyamuni and Kund.',
-          '2. Sonprayag to Gaurikund (5 km): Private vehicles must be parked in Sonprayag. Government shuttle jeeps run continuously between Sonprayag and Gaurikund (₹50 per seat).',
+          '2. Sonprayag to Gaurikund (5 km): Private vehicles must be parked in Sonprayag. Government shuttle jeeps run continuously between Sonprayag and Gaurikund at nominal fixed administration rates.',
           '3. Gaurikund to Kedarnath (16 km Trek): The stone-paved pedestrian trail begins at Gaurikund hot springs, ascending through Jungle Chatti, Bheembali, and Linchauli to the temple plateau.'
         ],
         table: {
@@ -315,8 +315,8 @@ export const ARTICLES: Article[] = [
         content: [
           'Pilgrims have multiple options to reach the shrine depending on fitness and budget:',
           '• Walking / Trekking: Takes 6 to 8 hours from Gaurikund. Requires trekking shoes, a walking stick, warm thermal layers, and a raincoat.',
-          '• Ponies (Mules): Government-regulated rates (~₹2,500 to ₹3,500 one way from Gaurikund to Kedarnath). Registered at the Gaurikund prepaid counter.',
-          '• Palki / Doli: Four porters carry a seated chair (~₹7,000 to ₹10,000 one way), suitable for elderly or physically challenged pilgrims.',
+          '• Ponies (Mules): Government-regulated rates set by the district administration, registered at the official Gaurikund prepaid counter.',
+          '• Palki / Doli: Four porters carry a seated chair, regulated by government rate cards, suitable for elderly or physically challenged pilgrims.',
           '• Helicopter Services: Official shuttle flights operate from Phata, Sirsi, and Guptkashi helipads. Flight duration is approximately 7 to 10 minutes. Booking is managed strictly via the IRCTC HeliYatra website.'
         ],
         callout: {
@@ -334,7 +334,7 @@ export const ARTICLES: Article[] = [
           '• Day 2: Early morning shuttle to Gaurikund, trek to Kedarnath, attend evening Aarti (Overnight stay in Kedarnath GMVN/cottage).',
           '• Day 3: Morning temple Darshan, descend to Gaurikund, drive back to Guptkashi/Rudraprayag.',
           '• Day 4: Return drive to Rishikesh/Haridwar with memories of Devbhoomi.',
-          'Approximate Budget: A budget trip costs ₹6,000 to ₹9,000 per person (bus + basic ashram/camp). A comfortable private tour with SUV, premium hotels, and helicopter ranges from ₹22,000 to ₹35,000 per person. Prices may change; verify current rates before booking.'
+          'Custom Itinerary Quotations: Trips range from budget backpacker routes to comfortable private tours with SUV, premium hotels, and helicopter services. Contact UK Yatra for personalized itinerary quotes tailored to your dates and preferences.'
         ]
       }
     ],
@@ -356,13 +356,13 @@ export const ARTICLES: Article[] = [
       {
         title: 'Kedarnath Yatra Overland Package (ex-Haridwar/Rishikesh)',
         duration: '3 Nights / 4 Days',
-        price: '₹11,499 / person',
+        price: 'Pricing on Request',
         link: '/packages'
       },
       {
         title: 'Do Dham Yatra (Kedarnath & Badrinath by Road)',
         duration: '5 Nights / 6 Days',
-        price: '₹18,999 / person',
+        price: 'Pricing on Request',
         link: '/packages'
       }
     ]
@@ -452,14 +452,14 @@ export const ARTICLES: Article[] = [
       },
       {
         question: 'How much does the Kedarkantha trek cost?',
-        answer: 'All-inclusive packages from Sankri to Sankri typically cost ₹6,500 to ₹9,500 per person including tent stays, meals, certified guides, and forest permits. Transfers from Dehradun add ₹2,000 to ₹3,000 round trip.'
+        answer: 'All-inclusive packages from Sankri to Sankri vary based on group size, dates, and inclusions (tent stays, meals, certified guides, and forest permits). Contact UK Yatra for a custom batch quotation.'
       }
     ],
     relatedPackages: [
       {
         title: 'Kedarkantha Winter Snow Summit Trek (ex-Dehradun)',
         duration: '4 Nights / 5 Days',
-        price: '₹8,499 / person',
+        price: 'Pricing on Request',
         link: '/packages'
       }
     ]
@@ -529,7 +529,7 @@ export const ARTICLES: Article[] = [
       {
         title: 'Valley of Flowers & Hemkund Sahib Trek (ex-Rishikesh)',
         duration: '5 Nights / 6 Days',
-        price: '₹12,499 / person',
+        price: 'Pricing on Request',
         link: '/packages'
       }
     ]
@@ -962,9 +962,9 @@ export const ARTICLES: Article[] = [
         heading: 'How Much Does a Uttarakhand Trip Cost?',
         level: 'h2',
         content: [
-          'Budget travel (public state buses + homestays/ashrams): ₹1,500 – ₹2,500 per person per day.',
-          'Mid-range travel (private sedan cab + 3-star boutique hotels with breakfast): ₹4,000 – ₹6,500 per person per day.',
-          'Luxury travel (private Innova/Crysta + luxury heritage resorts/glamping): ₹8,500 – ₹15,000+ per person per day. Prices may change; verify current rates before booking.'
+          'Budget travel: Public state buses with verified homestays and ashrams.',
+          'Mid-range travel: Private hill cabs with 3-star boutique view hotels and breakfast.',
+          'Luxury travel: Private Innova Crysta / Fortuner with luxury heritage resorts and alpine glamping. Custom quotations provided on request.'
         ]
       }
     ]
@@ -1236,11 +1236,11 @@ export const ARTICLES: Article[] = [
         heading: 'Real Travel Cost Estimates by Category',
         level: 'h2',
         content: [
-          'Planning a realistic mountain travel budget requires accounting for specialized hilly terrain transportation and seasonal hotel price fluctuations.',
-          '• Transport: AC Sedan (Dzire/Etios) costs ~₹3,500 to ₹4,200 per day including driver allowance, toll, and fuel. AC Innova/Crysta costs ~₹5,500 to ₹7,000 per day.',
-          '• Accommodation: Budget guesthouses/homestays cost ₹800 to ₹1,800/night; 3-star comfortable hotels cost ₹2,800 to ₹5,500/night; luxury mountain resorts range from ₹7,500 to ₹22,000/night.',
-          '• Food & Dining: Simple thali and local Garhwali meals cost ₹150 to ₹300 per meal. Cafe dining in Rishikesh or Mussoorie averages ₹500 to ₹800 per person.',
-          'Prices may change. Verify current rates before booking.'
+          'Planning a realistic mountain travel budget requires accounting for specialized hilly terrain transportation and seasonal hotel preferences.',
+          '• Transport: Dedicated mountain-certified sedans, Innova Crysta, and Tempo Travellers including driver allowance, permits, and fuel available on customized quotations.',
+          '• Accommodation: Verified budget homestays, comfortable 3-star boutique hotels, and luxury mountain resorts tailored to your travel comfort.',
+          '• Food & Dining: Authentic local Garhwali/Kumaoni cuisine and contemporary mountain cafes.',
+          'All packages customized upon request with transparent pricing and zero hidden surcharges.'
         ]
       }
     ]

@@ -77,14 +77,8 @@ export const PackageCard: React.FC<PackageCardProps> = ({ tourPackage, onOpenBoo
               <span className="text-[10px] uppercase tracking-wider text-slate-400 block font-medium">Tariff / Rates</span>
               <div className="flex items-baseline gap-2">
                 <span className="font-display font-bold text-base sm:text-lg text-amber-400">
-                  {tourPackage.startingPrice || 'Pricing on Request'}
+                  Pricing on Request
                 </span>
-                {tourPackage.originalPrice && !tourPackage.startingPrice?.includes('Request') && (
-                  <>
-                    <span className="text-xs text-slate-400 line-through">{tourPackage.originalPrice}</span>
-                    <span className="text-[10px] text-slate-400">/ person</span>
-                  </>
-                )}
               </div>
             </div>
 
