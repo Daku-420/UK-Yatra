@@ -36,7 +36,7 @@ const staticRoutes = [
 let articleSlugs = [];
 try {
   const articlesFile = fs.readFileSync('src/data/articles.ts', 'utf8');
-  const matches = [...articlesFile.matchAll(/slug:\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
+  const matches = [...articlesFile.matchAll(/(?:slug|"slug"):\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
   articleSlugs = [...new Set(matches)];
 } catch (e) {
   console.warn('Could not read articles.ts:', e.message);
@@ -46,7 +46,7 @@ try {
 let destinationIds = [];
 try {
   const destFile = fs.readFileSync('src/data/destinations.ts', 'utf8');
-  const matches = [...destFile.matchAll(/id:\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
+  const matches = [...destFile.matchAll(/(?:id|"id"):\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
   destinationIds = [...new Set(matches)];
 } catch (e) {
   console.warn('Could not read destinations.ts:', e.message);
@@ -56,7 +56,7 @@ try {
 let blogSlugs = [];
 try {
   const blogFile = fs.readFileSync('src/data/blogs.ts', 'utf8');
-  const matches = [...blogFile.matchAll(/slug:\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
+  const matches = [...blogFile.matchAll(/(?:slug|"slug"):\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
   blogSlugs = [...new Set(matches)];
 } catch (e) {
   console.warn('Could not read blogs.ts:', e.message);

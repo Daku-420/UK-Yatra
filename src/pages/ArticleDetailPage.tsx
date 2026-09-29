@@ -267,6 +267,19 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         {/* Left / Main Article Column */}
         <main className="lg:col-span-8 space-y-10">
+          {/* Topic Key Highlights & Briefing Box */}
+          <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-orange-50/90 via-amber-50/60 to-white border border-orange-200/80 shadow-xs space-y-2.5">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-brand-orange" />
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-orange">
+                Topic Briefing & Key Insights
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+              Welcome to our verified editorial dossier on <strong>{article.title}</strong>. Curated by the local mountain specialists at Team UK Yatra, this guide delivers updated routes, seasonal conditions, and logistical advice tailored specifically for travellers exploring this topic.
+            </p>
+          </div>
+
           {article.content.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-28 space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 border-b border-slate-200 pb-2">
@@ -367,10 +380,10 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
             </div>
             <div className="space-y-2">
               <h3 className="text-xl sm:text-2xl font-bold font-display">
-                Planning Your Trip to {article.destination || 'Uttarakhand'}?
+                Planning Your Trip: {article.title}
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
-                Let UK Yatra take care of your journey with carefully planned Uttarakhand travel packages, certified hill drivers, and 24/7 on-ground mountain support.
+                Let UK Yatra make your journey seamless with custom tour itineraries tailored around {article.title}, verified mountain drivers, and 24/7 on-ground support.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -395,11 +408,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
 
           {/* FAQs Section */}
           {article.faqs && article.faqs.length > 0 && (
-            <section className="space-y-4 pt-6 border-t border-slate-200">
+            <section id="faqs" className="space-y-4 pt-6 border-t border-slate-200 scroll-mt-28">
               <div className="flex items-center gap-2">
                 <HelpCircle className="w-5 h-5 text-brand-orange" />
                 <h3 className="text-xl font-bold font-display text-slate-900">
-                  Frequently Asked Questions
+                  Frequently Asked Questions: {article.title}
                 </h3>
               </div>
 
@@ -467,11 +480,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
           {/* Table of Contents (Sticky) */}
           <div className="sticky top-28 space-y-6">
             <div className="p-5 rounded-3xl bg-white border border-slate-200 shadow-sm">
-              <div className="flex items-center gap-2 pb-3 mb-3 border-b border-slate-100">
+              <div className="flex items-center gap-2 pb-2 mb-2 border-b border-slate-100">
                 <List className="w-4 h-4 text-brand-orange" />
                 <h4 className="font-display font-bold text-xs uppercase tracking-wider text-slate-900">
                   Table of Contents
                 </h4>
+              </div>
+              <div className="text-[11px] text-slate-500 font-medium mb-3 pb-2 border-b border-slate-100 line-clamp-2">
+                Topic Guide: <span className="font-semibold text-slate-800">{article.title}</span>
               </div>
 
               <nav className="space-y-1 max-h-[380px] overflow-y-auto pr-1 hide-scrollbar">
