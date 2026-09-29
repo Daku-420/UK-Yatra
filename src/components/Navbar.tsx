@@ -7,6 +7,7 @@ import {
   X, 
   ShieldCheck,
   ChevronDown,
+  ChevronUp,
   ChevronRight,
   GraduationCap,
   SunMedium,
@@ -193,6 +194,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [packagesDropdownOpen, setPackagesDropdownOpen] = useState(false);
   const [mobilePackagesOpen, setMobilePackagesOpen] = useState(false);
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState<string | null>('popular-uttarakhand');
+  const [expandedNavCategories, setExpandedNavCategories] = useState<Record<string, boolean>>({});
   const destinationsDropdownRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const packagesDropdownRef = useRef<HTMLDivElement>(null);
@@ -242,6 +244,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     }
     closeDestinationsTimeoutRef.current = setTimeout(() => {
       setDestinationsDropdownOpen(false);
+      setExpandedNavCategories({});
     }, 250);
   };
 
@@ -509,28 +512,40 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                     </div>
 
                     {/* 5 Categories organized in a clean balanced mega-menu */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3.5 xl:gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3.5 xl:gap-4 items-start">
                       {DESTINATION_MEGA_NAV.map((group) => {
                         const IconComponent = group.icon;
+                        const isExpanded = !!expandedNavCategories[group.id];
+                        const visibleDestinations = isExpanded ? group.destinations : group.destinations.slice(0, 5);
+                        const hasMore = group.destinations.length > 5;
+                        const remainingCount = group.destinations.length - 5;
+
                         return (
                           <div 
                             key={group.id}
-                            className="flex flex-col justify-between p-3.5 rounded-2xl bg-white border border-[#DDD5C7] shadow-2xs hover:shadow-xs transition-shadow"
+                            className="flex flex-col justify-between p-3.5 rounded-2xl bg-white border border-[#DDD5C7] shadow-2xs hover:shadow-xs transition-all duration-200"
                           >
                             <div>
                               {/* Category Header */}
-                              <div className="flex items-center gap-2 pb-2.5 mb-2.5 border-b border-[#E2D9CB]">
-                                <span className="p-1 rounded-md bg-[#F8F5EE] text-brand-orange border border-[#E2D9CB] shrink-0">
+                              <Link
+                                to={group.path}
+                                onClick={(e) => {
+                                  handleNavigate(group.path, e);
+                                  setDestinationsDropdownOpen(false);
+                                }}
+                                className="flex items-center gap-2 pb-2.5 mb-2.5 border-b border-[#E2D9CB] group/head hover:opacity-90 transition-opacity"
+                              >
+                                <span className="p-1 rounded-md bg-[#F8F5EE] text-brand-orange border border-[#E2D9CB] shrink-0 group-hover/head:bg-orange-500 group-hover/head:text-white transition-colors">
                                   <IconComponent className="w-3.5 h-3.5" />
                                 </span>
-                                <h3 className="text-[11.5px] uppercase font-black tracking-wider text-slate-950 leading-tight">
+                                <h3 className="text-[11.5px] uppercase font-black tracking-wider text-slate-950 leading-tight group-hover/head:text-brand-orange transition-colors truncate">
                                   {group.name}
                                 </h3>
-                              </div>
+                              </Link>
 
-                              {/* Destination List */}
-                              <ul className="space-y-1 mb-3 max-h-[380px] overflow-y-auto pr-1.5 [scrollbar-width:thin]">
-                                {group.destinations.map((dest) => (
+                              {/* Destination List (5 items by default, all when expanded) */}
+                              <ul className={`space-y-1 mb-2.5 ${isExpanded ? 'max-h-[300px] overflow-y-auto pr-1.5 [scrollbar-width:thin]' : ''}`}>
+                                {visibleDestinations.map((dest) => (
                                   <li key={dest.slug}>
                                     <Link
                                       to={dest.path}
@@ -552,17 +567,62 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
                             {/* Explore All Category CTA */}
                             <div className="pt-2 border-t border-[#E2D9CB]/80 mt-auto">
-                              <Link
-                                to={group.path}
-                                onClick={(e) => {
-                                  handleNavigate(group.path, e);
-                                  setDestinationsDropdownOpen(false);
-                                }}
-                                className="text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center justify-between group/cta cursor-pointer"
-                              >
-                                <span className="truncate">{group.exploreAllText}</span>
-                                <ArrowRight className="w-3 h-3 group-hover/cta:translate-x-0.5 transition-transform shrink-0" />
-                              </Link>
+                              {!isExpanded && hasMore ? (
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setExpandedNavCategories(prev => ({ ...prev, [group.id]: true }));
+                                  }}
+                                  className="w-full text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center justify-between group/cta cursor-pointer py-0.5"
+                                  title={`Show remaining ${remainingCount} destinations`}
+                                >
+                                  <span className="truncate">Explore All ({group.destinations.length})</span>
+                                  <span className="flex items-center text-[10px] font-bold text-slate-700 bg-orange-100 group-hover/cta:bg-orange-200 px-1.5 py-0.5 rounded-full shrink-0">
+                                    +{remainingCount}
+                                    <ChevronDown className="w-3 h-3 ml-0.5 text-brand-orange" />
+                                  </span>
+                                </button>
+                              ) : isExpanded ? (
+                                <div className="flex items-center justify-between gap-1.5 py-0.5">
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      setExpandedNavCategories(prev => ({ ...prev, [group.id]: false }));
+                                    }}
+                                    className="text-[11px] font-bold text-slate-500 hover:text-slate-800 transition-colors flex items-center gap-1 cursor-pointer"
+                                  >
+                                    <ChevronUp className="w-3 h-3 text-slate-400" />
+                                    <span>Show Less</span>
+                                  </button>
+                                  <Link
+                                    to={group.path}
+                                    onClick={(e) => {
+                                      handleNavigate(group.path, e);
+                                      setDestinationsDropdownOpen(false);
+                                    }}
+                                    className="text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center gap-1 group/cta cursor-pointer"
+                                  >
+                                    <span>View Page</span>
+                                    <ArrowRight className="w-3 h-3 group-hover/cta:translate-x-0.5 transition-transform shrink-0" />
+                                  </Link>
+                                </div>
+                              ) : (
+                                <Link
+                                  to={group.path}
+                                  onClick={(e) => {
+                                    handleNavigate(group.path, e);
+                                    setDestinationsDropdownOpen(false);
+                                  }}
+                                  className="text-[11px] font-black text-brand-orange hover:text-orange-700 transition-colors flex items-center justify-between group/cta cursor-pointer py-0.5"
+                                >
+                                  <span className="truncate">{group.exploreAllText}</span>
+                                  <ArrowRight className="w-3 h-3 group-hover/cta:translate-x-0.5 transition-transform shrink-0" />
+                                </Link>
+                              )}
                             </div>
                           </div>
                         );
@@ -1195,7 +1255,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           {isCategoryExpanded && (
                             <div className="px-3 pb-3 pt-1 border-t border-slate-100 space-y-2">
                               <div className="grid grid-cols-2 gap-1 py-1">
-                                {group.destinations.map((dest) => (
+                                {(expandedNavCategories[group.id] ? group.destinations : group.destinations.slice(0, 6)).map((dest) => (
                                   <Link
                                     key={dest.slug}
                                     to={dest.path}
@@ -1210,6 +1270,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                   </Link>
                                 ))}
                               </div>
+                              {group.destinations.length > 6 && (
+                                <button
+                                  type="button"
+                                  onClick={() => setExpandedNavCategories(prev => ({ ...prev, [group.id]: !prev[group.id] }))}
+                                  className="w-full text-xs font-bold text-brand-orange hover:text-orange-700 py-1 text-center border-t border-slate-100 flex items-center justify-center gap-1 cursor-pointer"
+                                >
+                                  <span>{expandedNavCategories[group.id] ? 'Show Less' : `Explore All ${group.name} (${group.destinations.length})`}</span>
+                                  {expandedNavCategories[group.id] ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                                </button>
+                              )}
                               <div className="pt-2 border-t border-slate-100">
                                 <Link
                                   to={group.path}
@@ -1220,7 +1290,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                                   }}
                                   className="text-xs font-black text-brand-orange hover:text-orange-700 flex items-center justify-between py-1"
                                 >
-                                  <span>{group.exploreAllText}</span>
+                                  <span>View Dedicated {group.name} Page</span>
                                   <ArrowRight className="w-3 h-3" />
                                 </Link>
                               </div>
