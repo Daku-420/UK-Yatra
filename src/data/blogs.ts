@@ -1,5 +1,11 @@
 import { BlogPost } from '../types';
 
+const TEAM_UK_YATRA_AUTHOR = {
+  name: 'Team UK Yatra',
+  role: 'Uttarakhand Travel Specialists',
+  avatar: '/logo.png'
+};
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'kedarnath-complete-travel-guide',
@@ -9,11 +15,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Spiritual',
     readTime: '6 min read',
     date: 'February 18, 2026',
-    author: {
-      name: 'Pravin Rawat',
-      role: 'Head Himalayan Expedition Leader',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     tags: ['Kedarnath', 'Char Dham', 'Spiritual', 'Travel Tips'],
     content: [
@@ -31,11 +33,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Travel Guides',
     readTime: '5 min read',
     date: 'January 24, 2026',
-    author: {
-      name: 'Ananya Sharma',
-      role: 'Travel Editor & Storyteller',
-      avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     image: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
     tags: ['Auli', 'Skiing', 'Snow', 'Adventure'],
     content: [
@@ -52,11 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Trekking',
     readTime: '7 min read',
     date: 'March 02, 2026',
-    author: {
-      name: 'Kavita Bisht',
-      role: 'Botanical & Eco-Guide',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     tags: ['Valley of Flowers', 'Trekking', 'Hemkund Sahib', 'Nature'],
     content: [
@@ -73,11 +67,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Weekend Escapes',
     readTime: '4 min read',
     date: 'February 10, 2026',
-    author: {
-      name: 'Pravin Rawat',
-      role: 'Trip Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     tags: ['Weekend Trips', 'Delhi', 'Rishikesh', 'Mussoorie', 'Lansdowne'],
     content: [

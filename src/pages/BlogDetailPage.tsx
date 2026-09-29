@@ -72,9 +72,9 @@ export const BlogDetailPage: React.FC = () => {
         <div className="flex items-center justify-between py-6 border-y border-slate-200 my-6">
           <div className="flex items-center gap-3">
             <img
-              src={post.author.avatar}
+              src={post.author.avatar || '/logo.png'}
               alt={post.author.name}
-              className="w-12 h-12 rounded-full object-cover border border-brand-orange/30"
+              className="w-10 h-10 rounded-full object-contain bg-slate-50 p-1 border border-brand-orange/30 shrink-0"
             />
             <div>
               <div className="font-display font-bold text-sm text-slate-900">{post.author.name}</div>

@@ -52,9 +52,9 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
         <div className="pt-3 border-t border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              src={post.author.avatar}
+              src={post.author.avatar || '/logo.png'}
               alt={post.author.name}
-              className="w-6 h-6 rounded-full object-cover border border-white/15"
+              className="w-6 h-6 rounded-full object-contain bg-white/10 p-0.5 border border-white/15"
             />
             <span className="text-[11px] text-slate-300 font-semibold">{post.author.name}</span>
           </div>

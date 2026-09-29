@@ -5,6 +5,13 @@ import { Article } from '../types';
  * Comprehensive, verified Uttarakhand travel knowledge base.
  */
 
+export const TEAM_UK_YATRA_AUTHOR = {
+  name: 'Team UK Yatra',
+  role: 'Uttarakhand Travel Specialists',
+  avatar: '/logo.png',
+  bio: 'Native travel coordinators, licensed tour leaders, and Uttarakhand destination architects with decades of collective field experience across Garhwal and Kumaon.'
+};
+
 export const ARTICLES: Article[] = [
   // =========================================================================
   // 1. CORE UTTARAKHAND GUIDES
@@ -18,12 +25,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Core Guides',
     featuredImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Himalayan peaks and alpine valleys in Uttarakhand Devbhoomi',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Himalayan Travel Specialists',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
-      bio: 'Native travel coordinators and Himalayan trek leaders with over 15 years of field experience across Garhwal and Kumaon.'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'January 10, 2026',
     updatedDate: 'September 2026',
     readingTime: '9 min read',
@@ -156,12 +158,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Seasonal Travel',
     featuredImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Rolling green bugyals and clear Himalayan skies in Uttarakhand',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Himalayan Travel Specialists',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
-      bio: 'Native travel coordinators and mountain safety specialists monitoring Himalayan weather.'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'January 14, 2026',
     updatedDate: 'September 2026',
     readingTime: '10 min read',
@@ -249,12 +246,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Char Dham',
     featuredImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Kedarnath temple stone facade surrounded by snow-capped Himalayan peaks',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Pilgrimage Logistics Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
-      bio: 'Senior pilgrimage operations manager with 12 years coordinating Char Dham road and helicopter journeys.'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 01, 2026',
     updatedDate: 'September 2026',
     readingTime: '11 min read',
@@ -380,12 +372,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Snow Treks',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Snowy summit ridge of Kedarkantha peak overlooking Garhwal Himalayas',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'High Altitude Trek Leader',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
-      bio: 'Nehru Institute of Mountaineering (NIM) certified mountaineer who has guided over 80 successful Kedarkantha summits.'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'January 20, 2026',
     updatedDate: 'September 2026',
     readingTime: '9 min read',
@@ -474,12 +461,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Monsoon Treks',
     featuredImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Himalayan alpine meadows full of colorful blooming wildflowers in Valley of Flowers',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Botanical & Eco-Guide',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
-      bio: 'Botanist and high-altitude guide leading ecological and photography treks in Chamoli.'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'January 25, 2026',
     updatedDate: 'September 2026',
     readingTime: '9 min read',
@@ -547,11 +529,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Hill Stations',
     featuredImage: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Colonial style hill station villas overlooking Doon Valley in Mussoorie',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Local Destination Curator',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 12, 2026',
     updatedDate: 'September 2026',
     readingTime: '7 min read',
@@ -598,11 +576,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Adventure & Spiritual',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Ganga river flowing past holy temples and foothills in Rishikesh',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Adventure & Culture Lead',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 15, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -640,11 +614,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Snow & Skiing',
     featuredImage: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Snow ski slopes and cable car in Auli with Nanda Devi peak in background',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Winter Sports Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 20, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -685,11 +655,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Delhi Weekend Trips',
     featuredImage: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Scenic highway winding through forested hills in Uttarakhand',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Road Trip Specialist',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 01, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -727,11 +693,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Romantic Escapes',
     featuredImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Couple enjoying scenic mountain view in Uttarakhand',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Couple Travel Curator',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 05, 2026',
     updatedDate: 'September 2026',
     readingTime: '7 min read',
@@ -769,11 +731,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Hidden Gems',
     featuredImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Quiet mountain village in Uttarakhand surrounded by terraced fields and forests',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Offbeat Expeditions Lead',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 10, 2026',
     updatedDate: 'September 2026',
     readingTime: '9 min read',
@@ -811,11 +769,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Outdoor Sports',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'White water river rafting in Rishikesh Ganga river',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Outdoor Sports Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 15, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -854,11 +808,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Monthly Guides',
     featuredImage: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Snowy winter landscape in Uttarakhand in December',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Winter Expeditions Lead',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 18, 2026',
     updatedDate: 'September 2026',
     readingTime: '7 min read',
@@ -891,11 +841,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Monthly Guides',
     featuredImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Pleasant sunny summer morning in Uttarakhand hills in May',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Summer Tour Director',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 20, 2026',
     updatedDate: 'September 2026',
     readingTime: '7 min read',
@@ -931,11 +877,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Core Guides',
     featuredImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Snow capped Himalayan range in Uttarakhand with winding mountain roads',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Head of Content & Logistics',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'January 05, 2026',
     updatedDate: 'September 2026',
     readingTime: '12 min read',
@@ -979,11 +921,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Char Dham',
     featuredImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Badrinath and Kedarnath holy temples in Uttarakhand',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Pilgrimage Logistics Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 05, 2026',
     updatedDate: 'September 2026',
     readingTime: '13 min read',
@@ -1019,11 +957,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Trail Directory',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Trekkers traversing alpine ridgeline in Uttarakhand Himalayas',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Mountaineering Lead',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 10, 2026',
     updatedDate: 'September 2026',
     readingTime: '11 min read',
@@ -1060,11 +994,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Itineraries',
     featuredImage: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Winding mountain roads through pine covered hills in Uttarakhand',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Itinerary Planning Specialist',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 18, 2026',
     updatedDate: 'September 2026',
     readingTime: '9 min read',
@@ -1101,11 +1031,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Hill Stations',
     featuredImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Naini Lake surrounded by hills and colorful boats in Nainital',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Kumaon Travel Specialist',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'February 22, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -1142,11 +1068,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Adventure & Nature',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Rolling meadows and Himalayan views in Chopta Tungnath',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Alpine Expedition Lead',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 02, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -1179,11 +1101,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Weekend Treks',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Ridge line trek to Nag Tibba summit with clear blue skies',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Weekend Expeditions Guide',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 06, 2026',
     updatedDate: 'September 2026',
     readingTime: '7 min read',
@@ -1216,11 +1134,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Budgeting',
     featuredImage: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Scenic valley in Uttarakhand with comfortable travel cars',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Trip Cost & Operations Specialist',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 12, 2026',
     updatedDate: 'September 2026',
     readingTime: '9 min read',
@@ -1255,11 +1169,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Wildlife',
     featuredImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Royal Bengal tiger walking through forest in Jim Corbett National Park',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Wildlife Safari Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 16, 2026',
     updatedDate: 'September 2026',
     readingTime: '8 min read',
@@ -1294,11 +1204,7 @@ export const ARTICLES: Article[] = [
     subcategory: 'Monthly Guides',
     featuredImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     featuredImageAlt: 'Crystal clear autumn Himalayan view with golden forests in October',
-    author: {
-      name: 'UK Yatra Editorial Team',
-      role: 'Autumn Trek Coordinator',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop'
-    },
+    author: TEAM_UK_YATRA_AUTHOR,
     publishedDate: 'March 22, 2026',
     updatedDate: 'September 2026',
     readingTime: '7 min read',

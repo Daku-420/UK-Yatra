@@ -196,9 +196,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
         <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-slate-200 text-xs text-slate-600">
           <div className="flex items-center gap-3">
             <img
-              src={article.author.avatar}
+              src={article.author.avatar || '/logo.png'}
               alt={article.author.name}
-              className="w-10 h-10 rounded-full object-cover border border-brand-orange/30"
+              className="w-10 h-10 rounded-full object-contain bg-slate-50 p-1 border border-brand-orange/30 shrink-0"
             />
             <div>
               <div className="font-display font-bold text-slate-900 text-sm">{article.author.name}</div>
@@ -444,9 +444,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenBook
           {/* Author Bio Box */}
           <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-4">
             <img
-              src={article.author.avatar}
+              src={article.author.avatar || '/logo.png'}
               alt={article.author.name}
-              className="w-16 h-16 rounded-full object-cover border-2 border-brand-orange/40 shrink-0"
+              className="w-14 h-14 rounded-2xl object-contain bg-slate-50 p-2 border-2 border-brand-orange/40 shrink-0"
             />
             <div className="space-y-1.5 text-center sm:text-left">
               <span className="text-[10px] font-black uppercase tracking-wider text-brand-orange">

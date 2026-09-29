@@ -91,13 +91,12 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
         <div className="pt-3.5 border-t border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <img
-              src={article.author.avatar}
+              src={article.author.avatar || '/logo.png'}
               alt={article.author.name}
-              className="w-7 h-7 rounded-full object-cover border border-white/20"
+              className="w-7 h-7 rounded-full object-contain bg-white/10 p-0.5 border border-white/20"
             />
             <div className="leading-tight">
               <span className="text-[11px] text-white font-semibold block">{article.author.name}</span>
-              <span className="text-[9.5px] text-slate-400 block">{article.author.role}</span>
             </div>
           </div>
 
