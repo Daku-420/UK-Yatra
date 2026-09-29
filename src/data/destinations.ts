@@ -903,6 +903,674 @@ export const DESTINATIONS: Destination[] = [
     }
   },
 
+    {
+    id: 'jageshwar',
+    name: 'Jageshwar',
+    tagline: 'Valley of 124 Ancient Jyotirlinga Stone Shrines in Sacred Deodar Groves',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nestled in a tranquil valley flanked by towering deodar forests and the holy Jata Ganga stream, Jageshwar Dham is an 8th to 12th-century cluster of 124 stone temples dedicated to Lord Shiva, considered one of the earliest Jyotirlinga pilgrimage sites.',
+    highlights: ['Cluster of 124 preserved Nagara-style stone temples', 'Maha Mrityunjaya & Jageshwar Jyotirlinga shrines', 'Dense deodar forest nature trails along Jata Ganga', 'Archaeological Museum housing exquisite Katyuri sculptures'],
+    bestTime: 'March to June & September to November; Shravan Mela in July-August',
+    altitude: '1,870 m (6,135 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Jageshwar Mahadev Temple', desc: 'Central sanctum holding the consecrated Jyotirlinga worshipped since Mahabharata lore.' },
+      { name: 'Maha Mrityunjaya Temple', desc: 'Oldest temple in the cluster dating back to the 8th century with eye-shaped lingam.' },
+      { name: 'Dandeshwar Shiva Temple', desc: 'Largest temple complex situated slightly upstream amidst majestic deodar woods.' },
+      { name: 'Archaeological Museum', desc: 'Preserves 150+ heritage statues including the famous Paun Raja metal icon.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (150 km) or Jolly Grant Dehradun (340 km).',
+      byTrain: 'Kathgodam Railway Station (118 km, approx 4 hours drive).',
+      byRoad: 'Well-paved hill roads connecting Almora (36 km), Nainital (100 km), and Delhi (395 km).'
+    }
+  },
+  {
+    id: 'baijnath',
+    name: 'Baijnath',
+    tagline: 'Historic Katyuri Temple Complex on the Banks of Gomti River',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Capital of the ancient Katyuri rulers in the 12th century, Baijnath sits beside the placid Gomti River. The main shrine houses a masterfully chiseled black-stone sculpture of Goddess Parvati and Lord Shiva amidst temple ruins.',
+    highlights: ['12th-century Katyuri dynasty architecture', 'Intricately carved black stone idol of Goddess Parvati', 'Sacred Gomti river ghats with golden Mahseer fish', 'Kot Bhramari Devi temple on hilltop overlooking valley'],
+    bestTime: 'September to May (Maha Shivratri is celebrated with immense fervor)',
+    altitude: '1,125 m (3,691 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Baijnath Temple Complex', desc: 'Stone-carved complex of 18 shrines constructed by Katyuri kings.' },
+      { name: 'Gomti River Ghat', desc: 'Devotees feed the sacred golden Mahseer fish along pristine steps.' },
+      { name: 'Kot Bhramari Devi Temple', desc: 'Fortress temple on a mountain ridge dedicated to Bhramari (Goddess of bees).' },
+      { name: 'Garur Valley & Tea Gardens', desc: 'Verdant terraced fields extending towards nearby Kausani.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (180 km).',
+      byTrain: 'Kathgodam Railway Station (160 km).',
+      byRoad: 'Accessible by taxi and state buses from Kausani (17 km), Almora (72 km), and Bageshwar (20 km).'
+    }
+  },
+  {
+    id: 'patal-bhuvaneshwar',
+    name: 'Patal Bhuvaneshwar',
+    tagline: 'Mystical Subterranean Limestone Cave Temple of 33 Crore Deities',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'A 160-meter long and 90-foot deep underground cave temple carved out of limestone by rainwater. Puranic belief holds that thirty-three crore Hindu deities reside in this sanctum where stalactites and stalagmites have taken forms of mythological iconography.',
+    highlights: ['Deep subterranean descent assisted by iron chains', 'Naturally formed Sheshnag, Kamdhenu, and Ganesha stalactites', 'Ancient Pandava and King Rituparna legends from Skanda Purana', 'Haat Kalika Shaktipeeth in nearby Gangolihat'],
+    bestTime: 'October to May',
+    altitude: '1,350 m (4,429 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Underground Limestone Cave', desc: 'Spectacular underground chambers with naturally sculpted divine figures.' },
+      { name: 'Kamdhenu & Sheshnag Formations', desc: 'Mineral deposits resembling the divine wish-fulfilling cow and serpent king.' },
+      { name: 'Haat Kalika Temple (Gangolihat)', desc: 'Fierce Shakti shrine revered by the Indian Army Kumaon Regiment (14 km away).' },
+      { name: 'Berinag Tea Estates', desc: 'Scenic mountain stopover renowned for panoramic views of Panchachuli.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (225 km).',
+      byTrain: 'Kathgodam Railway Station (192 km).',
+      byRoad: 'Connected by road via Gangolihat (14 km), Berinag (32 km), and Pithoragarh (88 km).'
+    }
+  },
+  {
+    id: 'dhari-devi',
+    name: 'Dhari Devi',
+    tagline: 'Guardian Deity of Devbhoomi & Protector of the Sacred Alaknanda River',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located in Kalyasaur between Srinagar and Rudraprayag, Dhari Devi is revered as the guardian protector of Uttarakhand and the four holy Dhams. The idol is placed on a raised platform over the Alaknanda waters and uniquely changes expression from a girl child to a woman and elder throughout the day.',
+    highlights: ['Guardian goddess of Char Dham pilgrimages', 'Elevated floating sanctum surrounded by turquoise Alaknanda waters', 'Miraculous facial transition across morning, noon, and evening', 'Sacred Kalimath counterpart holding the lower half of the deity'],
+    bestTime: 'September to June (Navratri draws thousands of devotees)',
+    altitude: '620 m (2,034 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Dhari Devi Floating Shrine', desc: 'Sacred open-roof temple where the upper half of Goddess Kali is worshipped.' },
+      { name: 'Alaknanda River Gorge', desc: 'Scenic suspension pedestrian bridge walkway over the mountain river.' },
+      { name: 'Srinagar Garhwal', desc: 'Historic former royal capital of the Garhwal Kingdom (15 km away).' },
+      { name: 'Kamleshwar Mahadev Temple', desc: 'Ancient Shiva temple where Lord Rama offered 1,000 lotus flowers.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (135 km).',
+      byTrain: 'Rishikesh Railway Station (118 km) or Yog Nagari Rishikesh.',
+      byRoad: 'Directly on the Badrinath National Highway (NH-7), 15 km from Srinagar and 19 km from Rudraprayag.'
+    }
+  },
+  {
+    id: 'neelkanth-mahadev',
+    name: 'Neelkanth Mahadev',
+    tagline: 'Venerated Shiva Shrine Where Lord Shiva Consumed the Halahala Poison',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched in the dense forested hills across the Ganges from Rishikesh, Neelkanth Mahadev marks the mythic spot where Lord Shiva drank the deadly poison churned out of the ocean during Samudra Manthan, turning his throat blue.',
+    highlights: ['Mythic Samudra Manthan ocean churning heritage', 'Ringed by Brahmakoot, Manikoot, and Vishnukoot peaks', 'Vibrant Shravan Kanwar Yatra and Maha Shivratri festivals', 'Picturesque trek through Rajaji tiger reserve buffers'],
+    bestTime: 'September to June (Avoid peak Kanwar peak in July unless joining pilgrimage)',
+    altitude: '1,330 m (4,363 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Neelkanth Mahadev Sanctum', desc: 'Ancient stone sanctum housing the sacred Swayambhu Lingam.' },
+      { name: 'Natural Mountain Spring', desc: 'Sacred fresh water spring where pilgrims take a holy bath before entering.' },
+      { name: 'Jhilmil Gufa Trek', desc: 'Forest cave trail inhabited by meditating hermits within lush woodlands.' },
+      { name: 'Manikoot Ridge Views', desc: 'Overlooks deep forested ravines and the distant plains of Haridwar.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (48 km).',
+      byTrain: 'Rishikesh Railway Station (32 km drive, or 12 km trek from Ram Jhula).',
+      byRoad: 'Taxis, shared jeeps, and regular buses operate daily from Rishikesh.'
+    }
+  },
+  {
+    id: 'devprayag',
+    name: 'Devprayag',
+    tagline: 'Holy Confluence of Bhagirathi and Alaknanda Birthplace of Mother Ganga',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Devprayag is the first and holiest of the Panch Prayags, where the roaring turquoise waters of the Bhagirathi meet the calm green currents of the Alaknanda to officially form the holy River Ganga. It is home to the ancient Raghunathji Temple, one of the 108 Divya Desams.',
+    highlights: ['Spectacular two-tone river confluence forming Mother Ganga', 'Ancient 1,250-year-old Raghunathji Temple (Lord Rama)', 'Sacred Brahmakund and Vashishta Kund bathing ghats', 'Nakshatra Vedhshala ancient astronomical observatory'],
+    bestTime: 'October to May (crystal clear water colors during autumn and winter)',
+    altitude: '830 m (2,723 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Sangam Confluence Ghat', desc: 'Point where Bhagirathi and Alaknanda rivers merge into the Ganga.' },
+      { name: 'Raghunathji Temple', desc: 'Magnificent pyramid-shaped stone temple holding black granite Lord Rama deity.' },
+      { name: 'Nakshatra Vedhshala', desc: '1946 astronomical observatory containing historic telescope instruments and rare manuscripts.' },
+      { name: 'Danda Naggaraja Temple', desc: 'Revered serpent god shrine situated high on an overlooking mountain ridge.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (90 km).',
+      byTrain: 'Rishikesh Railway Station (70 km).',
+      byRoad: 'Directly positioned on the Delhi-Badrinath National Highway (NH-7).'
+    }
+  },
+  {
+    id: 'rudraprayag',
+    name: 'Rudraprayag',
+    tagline: 'Holy Confluence of Alaknanda and Mandakini Named After Lord Shiva\'s Rudra Avatar',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Second of the Panch Prayags, Rudraprayag marks the majestic confluence where the Mandakini river rushing from Kedarnath joins the Alaknanda descending from Badrinath. Legend says Sage Narada meditated here on a rock to learn music from Lord Shiva.',
+    highlights: ['Confluence of Alaknanda and Mandakini rivers', 'Vital bifurcation junction for Kedarnath and Badrinath yatra routes', 'Narad Shila and ancient Rudranath Temple right at the sangam', 'Koteshwar Mahadev cave temple along Alaknanda riverbanks'],
+    bestTime: 'October to May',
+    altitude: '895 m (2,936 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Alaknanda-Mandakini Sangam', desc: 'Powerful confluence with bathing ghats overlooking steep emerald gorges.' },
+      { name: 'Rudra Temple & Narad Shila', desc: 'Sacred boulder where Sage Narad received divine musical knowledge from Shiva.' },
+      { name: 'Koteshwar Mahadev Temple', desc: 'Cave shrine 3 km away where Lord Shiva meditated en route to Kedarnath.' },
+      { name: 'Jim Corbett Memorial', desc: 'Historical site marking the hunting of the infamous Man-Eating Leopard of Rudraprayag.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (155 km).',
+      byTrain: 'Rishikesh Railway Station (140 km).',
+      byRoad: 'Major mountain highway nexus connecting NH-7 (Badrinath) and NH-107 (Kedarnath).'
+    }
+  },
+  {
+    id: 'karnaprayag',
+    name: 'Karnaprayag',
+    tagline: 'Sangam of Alaknanda and Pindar River Where Mahabharata Hero Karna Meditated',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Third of the holy Panch Prayags, Karnaprayag is situated at the meeting of the glacial Pindar river from Pindari Glacier with the Alaknanda. Here, Mahabharata hero Karna performed deep penance to obtain the invulnerable armor (Kavacha) from Surya Dev.',
+    highlights: ['Third sacred Panch Prayag confluence', 'Ancient Karna Temple and historic cremation memorial stone', 'Uma Devi Temple dedicated to Goddess Parvati', 'Gateway to Nanda Devi sanctuary treks and Gwaldam hills'],
+    bestTime: 'September to May',
+    altitude: '1,450 m (4,757 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Pindar-Alaknanda Sangam', desc: 'Roaring glacial meeting point lined with stone bathing ghats.' },
+      { name: 'Karna Temple', desc: 'Rare temple dedicated to the legendary son of Sun god Surya.' },
+      { name: 'Uma Devi Temple', desc: 'Venerated shrine holding an ancient idol dating back to the 8th century.' },
+      { name: 'Nauti Village Excursion', desc: 'Starting point of the world-famous 280 km Nanda Devi Raj Jat Yatra (20 km away).' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (185 km).',
+      byTrain: 'Rishikesh Railway Station (170 km).',
+      byRoad: 'Situated on NH-7, 32 km from Rudraprayag and 68 km from Joshimath.'
+    }
+  },
+  {
+    id: 'nandprayag',
+    name: 'Nandprayag',
+    tagline: 'Serene Confluence of Alaknanda and Nandakini Blessed by King Nanda',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Fourth of the holy Panch Prayags, Nandprayag is a peaceful riverside settlement where the tranquil Nandakini River originating from Nanda Ghunti meets the Alaknanda. The town once served as the capital of the Yadu kingdom under King Nanda.',
+    highlights: ['Fourth Panch Prayag confluence in pristine Chamoli district', 'Ancient Gopalji Temple dedicated to Lord Krishna', 'Serene uncrowded alpine valleys and terraced village orchards', 'Gateway to the Roopkund and Homkund trekking corridors'],
+    bestTime: 'September to May',
+    altitude: '914 m (2,999 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Nandakini-Alaknanda Sangam', desc: 'Picturesque confluence of green and crystal blue mountain waters.' },
+      { name: 'Gopalji Temple', desc: 'Sacred Krishna shrine installed by Raja Man Singh of Jaipur in 1898.' },
+      { name: 'Chamoli Valley Terraces', desc: 'Surrounding apple, walnut, and apricot orchards overlooking the river.' },
+      { name: 'Ancient Stone Footbridges', desc: 'Walkways connecting traditional Garhwali wooden hillside homes.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (205 km).',
+      byTrain: 'Rishikesh Railway Station (190 km).',
+      byRoad: 'Located on NH-7 between Karnaprayag (22 km) and Chamoli town (10 km).'
+    }
+  },
+  {
+    id: 'vishnuprayag',
+    name: 'Vishnuprayag',
+    tagline: 'First Confluence of Alaknanda and Dhauliganga Beneath Towering Himalayan Cliffs',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'The uppermost and first of the sacred Panch Prayags, Vishnuprayag is formed where the tumultuous Dhauliganga flowing from Niti Valley merges into the Alaknanda. Sage Narada is said to have worshipped Lord Vishnu here to achieve enlightenment.',
+    highlights: ['First confluence of the sacred Panch Prayag descending from Himalayas', 'Dramatic vertical mountain gorges and suspension bridge', '1889 Vishnu Temple constructed by Maharani Ahilyabai Holkar of Indore', 'Gateway to Joshimath, Badrinath, and the Valley of Flowers'],
+    bestTime: 'May to October',
+    altitude: '1,372 m (4,501 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Dhauliganga-Alaknanda Confluence', desc: 'Thunderous clash of two fierce glacial torrents below sheer granite peaks.' },
+      { name: 'Vishnu Temple & Vishnu Kund', desc: 'Historic stone temple featuring an octagonal structure and sacred pool.' },
+      { name: 'Kagbhusandi Lake Trailhead', desc: 'High-altitude emerald lake trek surrounded by Brahmakamal blossoms.' },
+      { name: 'Joshimath Base (12 km away)', desc: 'Spiritual seat of Adi Shankaracharya and ropeway station to Auli ski slopes.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (280 km).',
+      byTrain: 'Rishikesh Railway Station (265 km).',
+      byRoad: 'Situated 12 km downhill from Joshimath on the main highway toward Badrinath (NH-7).'
+    }
+  },
+  {
+    id: 'guptkashi',
+    name: 'Guptkashi',
+    tagline: 'Sacred Valley Town of Ancient Vishwanath Temple & Ardhanarishwar Shrine',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Guptkashi (Hidden Benares) is a legendary holy town situated high above the Mandakini river valley facing Chaukhamba peak. Shiva concealed himself here from the Pandavas in the form of Nandi bull before emerging at Kedarnath. It houses the ancient Vishwanath Temple and Manikarnika Kund fed by Ganga and Yamuna spouts.',
+    highlights: ['Ancient Vishwanath Temple mirroring the energy of Kashi Varanasi', 'Manikarnika Kund fed continuously by holy underground streams', 'Rare half-male half-female Ardhanarishwar stone idol', 'Primary staging hub with major helicopter services to Kedarnath'],
+    bestTime: 'May to June & September to November',
+    altitude: '1,319 m (4,327 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Vishwanath Temple', desc: 'Ancient stone sanctum dedicated to Lord Shiva with towering shikhara.' },
+      { name: 'Manikarnika Kund', desc: 'Sacred bathing reservoir with water flowing from cow-head (Gomukh) spouts.' },
+      { name: 'Ardhanarishwar Temple', desc: 'Unique sanctum representing the indivisible cosmic union of Shiva and Shakti.' },
+      { name: 'Chaukhamba Peak Viewpoint', desc: 'Panoramic unobstructed morning views of snow-draped Chaukhamba peaks.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (195 km); Helipads operate direct Kedarnath shuttles.',
+      byTrain: 'Rishikesh Railway Station (180 km).',
+      byRoad: 'Accessible along NH-107 via Rudraprayag (40 km) and Kund.'
+    }
+  },
+  {
+    id: 'ukhimath',
+    name: 'Ukhimath',
+    tagline: 'Winter Abode of Lord Kedarnath & Madhyamaheshwar with Omkareshwar Peeth',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Perched across the valley from Guptkashi, Ukhimath is the sacred winter seat of Lord Kedarnath and Lord Madhyamaheshwar. When high Himalayan shrines close for winter due to heavy snowfall, their festive palanquins (dolis) are brought down and worshipped here with full Vedic rites.',
+    highlights: ['Official winter seat of Kedarnath and Madhyamaheshwar Rawal priests', 'Historic Omkareshwar Temple with multi-tiered stone architecture', 'Mythic wedding site of Princess Usha (daughter of Banasura) and Aniruddha', 'Magnificent panoramic view of Chaukhamba and Kedarnath massif'],
+    bestTime: 'Throughout the year (November to April for Kedarnath Winter Doli rituals)',
+    altitude: '1,311 m (4,301 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Omkareshwar Temple', desc: 'Historic temple complex housing winter sanctums for Kedarnath and Madhyamaheshwar.' },
+      { name: 'Usha-Aniruddha Mandap', desc: 'Carved wooden pavilion where the grandson of Lord Krishna was wed.' },
+      { name: 'Sari Village & Deoria Tal (12 km)', desc: 'Trailhead to the legendary lake reflecting the Chaukhamba peak.' },
+      { name: 'Chopta Gateway', desc: 'Base station for the scenic mountain highway heading toward Tungnath.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (205 km).',
+      byTrain: 'Rishikesh Railway Station (190 km).',
+      byRoad: '41 km from Rudraprayag via Kund on the Gopeshwar-Chamoli mountain highway.'
+    }
+  },
+  {
+    id: 'triyuginarayan',
+    name: 'Triyuginarayan',
+    tagline: 'The Celestial Wedding Venue of Lord Shiva and Goddess Parvati with Eternal Flame',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Triyuginarayan is revered as the divine venue where Lord Shiva married Goddess Parvati in the presence of Lord Vishnu as the bride\'s brother and Lord Brahma as the head priest. The sacred Akhand Dhuni (eternal wood fire) in front of the temple has burned continuously across three cosmic epochs (Treta, Dvapara, and Kali Yuga).',
+    highlights: ['Perpetual eternal sacred flame burning across three cosmic yugas', 'Beloved destination for Vedic and celebrity spiritual weddings', 'Four sacred holy kunds: Brahma, Vishnu, Rudra, and Saraswati', 'Rare 8th-century silver Vishnu idol housed in stone sanctum'],
+    bestTime: 'April to June & September to November (accessible during mild winter)',
+    altitude: '1,980 m (6,496 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Akhand Dhuni Sanctum', desc: 'Devotees offer wood logs to the eternal fire and collect sacred ashes for blessings.' },
+      { name: 'Four Sacred Kunds', desc: 'Holy pools where deities bathed before the celestial wedding ceremony.' },
+      { name: 'Triyuginarayan Vishnu Temple', desc: 'Exquisite stone-built temple featuring silver statues of Vishnu and Lakshmi.' },
+      { name: 'Panwali Kantha Meadow Trail', desc: 'High alpine ridge trail with breathtaking views of Gangotri and Kedarnath ranges.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (225 km).',
+      byTrain: 'Rishikesh Railway Station (210 km).',
+      byRoad: '12 km mountain motorable road branching uphill from Sonprayag on the Kedarnath route.'
+    }
+  },
+  {
+    id: 'kalpeshwar',
+    name: 'Kalpeshwar',
+    tagline: 'Fifth Kedar Shrouded in Urgam Valley Where Lord Shiva\'s Jata (Hair Locks) are Worshipped',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'The fifth and final shrine of the sacred Panch Kedar pilgrimage, Kalpeshwar is nestled in the fertile terraced Urgam Valley. It is the only Panch Kedar temple that remains accessible and open to pilgrims throughout all twelve months of the year.',
+    highlights: ['Fifth Kedar where Lord Shiva\'s hair locks (Jata) are enshrined', 'Open all 12 months unlike other snow-blocked Panch Kedar shrines', 'Wish-fulfilling Kalpavriksha tree in the serene Urgam valley', 'Pristine emerald step-farm landscapes and rustic homestays'],
+    bestTime: 'Throughout the year; Best April to June & September to November',
+    altitude: '2,200 m (7,218 ft)',
+    idealDuration: '2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kalpeshwar Cave Temple', desc: 'Ancient rock cave sanctum entered through a natural cleft where Shiva\'s locks are worshipped.' },
+      { name: 'Wish-Fulfilling Kalpavriksha', desc: 'Sacred giant ancient tree deeply venerated by yogis and pilgrims.' },
+      { name: 'Urgam Valley Terraced Fields', desc: 'Lush agricultural valley famous for organic kidney beans (rajma) and apples.' },
+      { name: 'Dhyan Badri Temple', desc: 'One of the Panch Badri shrines located a short distance away in Urgam.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (265 km).',
+      byTrain: 'Rishikesh Railway Station (250 km).',
+      byRoad: 'Drive from Helang (on the Joshimath road) to Devgram village (9 km), followed by a gentle 300m walk.'
+    }
+  },
+  {
+    id: 'rudranath',
+    name: 'Rudranath',
+    tagline: 'Fourth Kedar Where Lord Shiva\'s Mukh (Face) is Revered Amidst Alpine Bugyals',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Rudranath is the fourth Kedar of the sacred Panch Kedar pilgrimage. Lord Shiva is worshipped in his natural stone cave sanctum as "Neelkanth Mahadev" in the form of his face (Mukh). The 20 km trek through Panar Bugyal is widely regarded as one of the most spiritually stirring and visually breathtaking Himalayan trails.',
+    highlights: ['Fourth Kedar worshipping the face of Lord Shiva', 'Challenging 20 km wilderness trek through lush rhododendron forests and high meadows', 'Vaitarni river and sacred holy tarns (Surya, Chandra, and Tara kunds)', 'Magnificent unobstructed vistas of Nanda Devi, Trishul, and Hathi Parvat'],
+    bestTime: 'May to October (Temple opens in May and closes around Diwali for winter)',
+    altitude: '3,600 m (11,811 ft)',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Rudranath Cave Sanctum', desc: 'Natural rock chamber where the tranquil stone face of Shiva is anointed with sandalwood.' },
+      { name: 'Panar Bugyal', desc: 'Spectacular undulating alpine grass meadow with front-row mountain views.' },
+      { name: 'Vaitarni River', desc: 'Sacred mythological stream where pilgrims perform rituals for ancestors.' },
+      { name: 'Pitradhar Ridge', desc: 'High mountain crest offering 360-degree panoramas of Garhwal peaks.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (240 km to base).',
+      byTrain: 'Rishikesh Railway Station (225 km to Sagar village / Gopeshwar).',
+      byRoad: 'Reach Sagar Village (5 km from Gopeshwar) by road, followed by a rewarding 20 km trek.'
+    }
+  },
+  {
+    id: 'madhyamaheshwar',
+    name: 'Madhyamaheshwar',
+    tagline: 'Second Kedar Nestled Beneath Chaukhamba Where Shiva\'s Nabhi (Navel) is Worshipped',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Second of the sacred Panch Kedars, Madhyamaheshwar sits in a divine amphitheater directly beneath the four towering summits of Mount Chaukhamba. The temple enshrines the navel (Nabhi) and stomach of Lord Shiva, surrounded by vibrant alpine pastures.',
+    highlights: ['Second Kedar temple dedicated to the sacred navel of Shiva', 'Climb to Budha Madhyamaheshwar for dramatic Chaukhamba reflections in mountain tarns', 'Scenic 16 km forest trek along the roaring Madhyamaheshwar Ganga', 'Rich pastoral tranquility in unspoilt high-altitude meadows'],
+    bestTime: 'May to October',
+    altitude: '3,497 m (11,473 ft)',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Madhyamaheshwar Stone Temple', desc: 'Classic black stone sanctum housing the navel lingam worshipped by priests.' },
+      { name: 'Budha Madhyamaheshwar Ridge', desc: '1.5 km climb above temple offering mind-boggling mirrored reflections of Chaukhamba.' },
+      { name: 'Ransi Village Gateway', desc: 'Picturesque starting point with the ancient Rakeshwari Devi stone temple.' },
+      { name: 'Gaundhar Confluence', desc: 'Confluence of Markanga Ganga and Madhyamaheshwar Ganga with suspension bridges.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (220 km to Ransi).',
+      byTrain: 'Rishikesh Railway Station (205 km).',
+      byRoad: 'Drive from Ukhimath to Ransi village (20 km), followed by a 16 km moderate mountain trek.'
+    }
+  },
+  {
+    id: 'adi-kailash',
+    name: 'Adi Kailash',
+    tagline: 'Sacred Chhota Kailash & Parvati Sarovar in the Remote Indo-Tibetan Borderlands',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Adi Kailash, also revered as Chhota Kailash or Baba Kailash, is a sacred Himalayan peak mirroring the divine shape of Mount Kailash. Located in the high Vyas Valley near the Indo-Tibetan border, pilgrims venerate the emerald waters of holy Parvati Sarovar and the divine Gauri Kund beneath the towering glaciated massif.',
+    highlights: ['Venerated Indian counterpart to Mount Kailash accessible without entering Tibet', 'Sacred Parvati Sarovar and Shiva-Parvati Mandir at 4,500m', 'Ancient Gauri Kund mirroring snow-clad pyramidal peaks', 'High-altitude borderland landscapes through traditional Rung villages'],
+    bestTime: 'May to June & September to October (Inner Line Permits issued for Indian nationals)',
+    altitude: '5,945 m (peak) / 4,497 m (base)',
+    idealDuration: '6 - 8 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Mount Adi Kailash', desc: 'Pyramidal snow mountain sacred to Shiva and Shakti devotees.' },
+      { name: 'Parvati Sarovar', desc: 'Holy alpine lake where reflection of Adi Kailash appears on calm mornings.' },
+      { name: 'Gauri Kund', desc: 'Glacial pool at the base of the mountain dedicated to Goddess Parvati.' },
+      { name: 'Gunji & Kuti Villages', desc: 'High-altitude border settlements retaining rich indigenous Rung tribal culture.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (340 km to Dharchula).',
+      byTrain: 'Kathgodam Railway Station (300 km to Dharchula).',
+      byRoad: 'Motorable 4x4 road connects Dharchula via Gunji and Nabi to Jyolingkong (base of Adi Kailash).'
+    }
+  },
+  {
+    id: 'om-parvat',
+    name: 'Om Parvat',
+    tagline: 'Miraculous Peak Inscribed Naturally with the Sacred Cosmic Syllable ॐ in Snow',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Rising to 5,590 meters on the international boundary, Om Parvat is world-renowned for its phenomenal black-rock mountain face where deposition of perennial snow naturally carves the sacred Hindu symbol "OM" (ॐ). It is one of the eight Kailash peaks revered across the Himalayas.',
+    highlights: ['Astounding naturally formed sacred "OM" (ॐ) snow pattern', 'Vyas Gufa where Maharishi Ved Vyas meditated and compiled the Mahabharata', 'Sacred Kali River originating from the springs of Kalapani', 'Unforgettable high mountain pass landscapes facing Nepal and Tibet'],
+    bestTime: 'May to June & September to October',
+    altitude: '5,590 m (18,340 ft)',
+    idealDuration: '6 - 8 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Om Parvat Viewpoint at Nabidhang', desc: 'Clear front-facing vantage point for viewing the miracle of natural OM snow formation.' },
+      { name: 'Kalapani Temple & Kali River Origin', desc: 'Sacred natural springs worshipped as the cradle of the Kali River.' },
+      { name: 'Vyas Gufa', desc: 'Cave dwelling where Sage Ved Vyas stayed and composed Vedic scriptures.' },
+      { name: 'Sheshnag Mountain', desc: 'Adjacent mountain range ridge resembling the hood of celestial serpent Sheshnag.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (340 km to Dharchula).',
+      byTrain: 'Kathgodam Railway Station (300 km to Dharchula).',
+      byRoad: 'Inner Line Permit route via 4x4 mountain vehicles from Dharchula to Gunji and Nabidhang.'
+    }
+  },
+  {
+    id: 'piran-kaliyar',
+    name: 'Piran Kaliyar',
+    tagline: 'Centuries-Old Sufi Dargah of Hazrat Alauddin Ali Ahmed Sabir Kalyari',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located in Kaliyar village near Roorkee and Haridwar, Piran Kaliyar Sharif is the 13th-century Sufi shrine of Hazrat Alauddin Ali Ahmed Sabir Kalyari, renowned spiritual master of the Chishti order. It stands as an enduring symbol of interfaith unity and spiritual solace.',
+    highlights: ['13th-century Chishti Sufi shrine revered for spiritual healing', 'Annual Urs festival drawing devotees of all faiths from across the subcontinent', 'Peaceful setting along the historic banks of Upper Ganga Canal', 'Proximity to Roorkee University heritage and Haridwar ghats'],
+    bestTime: 'October to March (Urs festival dates vary by Islamic calendar)',
+    altitude: '260 m (853 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Dargah Sharif of Sabir Kalyari', desc: 'Main marble sanctum adorned with carved jaali screens and prayer offerings.' },
+      { name: 'Upper Ganga Canal Banks', desc: 'Historic 19th-century canal engineering lined with peaceful shaded paths.' },
+      { name: 'Solani Aqueduct (Roorkee)', desc: 'Colonial masonry engineering marvel situated just 6 km away.' },
+      { name: 'Haridwar Ghats Link', desc: 'Located only 22 km from Har Ki Pauri for unified spiritual itineraries.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (60 km).',
+      byTrain: 'Roorkee Railway Station (7 km) or Haridwar Junction (22 km).',
+      byRoad: 'Situated off NH-334 with excellent four-lane highway connectivity from Delhi (185 km).'
+    }
+  },
+  {
+    id: 'nanakmatta',
+    name: 'Nanakmatta',
+    tagline: 'Venerated Sikh Pilgrimage Gurdwara Associated with Guru Nanak Dev Ji & Doodh Wala Kuan',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nanakmatta is a major historic Sikh pilgrimage town situated on the banks of Deoha river in the Udham Singh Nagar district. Guru Nanak Dev Ji visited here during his third Udasi (spiritual travels) in 1514 and meditated beneath a peepal tree, holding theological dialogues with Siddhas and Yogis.',
+    highlights: ['Sacred Gurdwara Nanakmatta Sahib blessed by Guru Nanak Dev Ji', 'Miraculous Doodh Wala Kuan (Well of Milk) and Panja Sahib peepal tree', 'Expansive Nanakmatta Dam reservoir offering boating and migratory birdwatching', 'Grand celebrations during Guru Nanak Jayanti, Diwali, and Baisakhi'],
+    bestTime: 'October to April',
+    altitude: '298 m (978 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Gurdwara Nanakmatta Sahib', desc: 'White marble gurdwara complex with sacred Sarovar lake and 24-hour Langar hall.' },
+      { name: 'Sacred Peepal Tree', desc: 'Holy tree that turned green again when blessed by Guru Nanak Dev Ji.' },
+      { name: 'Doodh Wala Kuan', desc: 'Historic stone well where milk miraculously turned into pure sweet water.' },
+      { name: 'Nanakmatta Sagar (Reservoir)', desc: 'Huge artificial lake created by the dam, popular for boating and winter birds.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (55 km).',
+      byTrain: 'Khatima Railway Station (15 km) or Rudrapur City (50 km).',
+      byRoad: 'Situated on the Khatima-Sitarganj highway (NH-9), easily reachable from Delhi (285 km).'
+    }
+  },
+  {
+    id: 'chitai-golu-devta',
+    name: 'Chitai Golu Devta',
+    tagline: 'The Legendary Temple of Justice Hung with Thousands of Sacred Brass Bells',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Chitai Golu Devta Temple, dedicated to Lord Golu—an incarnation of Shiva regarded as the God of Justice—is situated on a pine-clad hill near Almora. Devotees seeking fairness and resolution pin written legal petitions and letters to the deity, and return to hang brass bells when their prayers are answered.',
+    highlights: ['Mesmerizing canopy of thousands of brass bells of all sizes', 'Unique custom of offering handwritten letters and legal affidavits to the deity', 'Deeply embedded folk deity of the Kumaon region', 'Surrounded by fragrant pine forests 9 km from Almora town'],
+    bestTime: 'Throughout the year',
+    altitude: '1,700 m (5,577 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Chitai Bell Canopy Sanctum', desc: 'Sanctum where resonant brass bells rang constantly by devotees fill every archway.' },
+      { name: 'Written Petition Wall', desc: 'Fascinating collection of letters and stamp-paper petitions seeking divine justice.' },
+      { name: 'Almora Heritage Town', desc: 'Cultural capital of Kumaon known for Bal Mithai and wooden craft lanes (9 km away).' },
+      { name: 'Bright End Corner', desc: 'Sunset viewpoint offering panoramic views of Himalayan peaks.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (125 km).',
+      byTrain: 'Kathgodam Railway Station (90 km).',
+      byRoad: 'Situated 9 km east of Almora along the Pithoragarh Highway.'
+    }
+  },
+  {
+    id: 'kasar-devi',
+    name: 'Kasar Devi',
+    tagline: 'Cosmic Energy Vortex Sanctuary on the Van Allen Radiation Belt',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Kasar Devi is renowned worldwide for its extraordinary geomagnetic field caused by the Van Allen Radiation Belt—a phenomenon shared only with Stonehenge and Machu Picchu. Worshipped since the 2nd century AD, this hilltop sanctuary has drawn spiritual seekers including Swami Vivekananda, Lama Govinda, Rabindranath Tagore, and Bob Dylan.',
+    highlights: ['Global geomagnetic energy vortex enhancing meditation and calm', '2nd-century hilltop cave temple worshipped by Swami Vivekananda in 1890', 'Crank\'s Ridge (Hippie Hill) Bohemian counter-culture legacy', 'Spectacular 300-km panoramic views of Trishul, Nanda Devi, and Panchachuli'],
+    bestTime: 'Throughout the year; Autumn and Winter offer peerless crystal views',
+    altitude: '2,116 m (6,942 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kasar Devi Cave Temple', desc: 'Rock cave sanctum where Goddess Durga defeated the demons Shumbha and Nishumbha.' },
+      { name: 'Crank\'s Ridge (Hippie Trail)', desc: 'Ridge promenade lined with peaceful cafes, art spaces, and meditation centers.' },
+      { name: 'Kalimath & Almora Overlook', desc: 'Sunset viewing ridge over the rolling hills and pine forests.' },
+      { name: 'Binsar Wildlife Sanctuary Gateway', desc: 'Virgin oak and rhododendron forest reserve just 20 km uphill.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (128 km).',
+      byTrain: 'Kathgodam Railway Station (92 km).',
+      byRoad: '8 km winding pine drive north from Almora on the Binsar road.'
+    }
+  },
+  {
+    id: 'katarmal-sun-temple',
+    name: 'Katarmal Sun Temple',
+    tagline: '9th-Century Architectural Marvel of Surya Dev & Second Largest Sun Temple in India',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Constructed in the 9th century by Katyuri monarch Katarmalla, this grand sun temple complex is considered India\'s second most significant sun shrine after Konark. Engineered with remarkable astronomical precision, the first rays of dawn pierce the main sanctum to illuminate the idol of Surya (Baraditya).',
+    highlights: ['Grand 9th-century Katyuri dynasty sun shrine cluster', '44 miniature auxiliary stone shrines surrounding the main shikhara', 'Astronomical dawn alignment illuminating the innermost sanctum', 'Peaceful pine-covered ridge overlooking the Kosi River valley'],
+    bestTime: 'September to May',
+    altitude: '2,114 m (6,935 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Main Baraditya Sun Shrine', desc: 'Towering stone temple sanctum holding ancient engraved sun motifs.' },
+      { name: 'Cluster of 44 Sub-Shrines', desc: 'Delicately carved secondary shrines dedicated to Shiva, Vishnu, and Parvati.' },
+      { name: 'Ancient Carved Wooden Panels', desc: 'Intricate cedar door carvings preserved by the Archaeological Survey of India.' },
+      { name: 'Kosi River Valley Vista', desc: 'Scenic mountain walk through terraced fields and fragrant pine groves.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (135 km).',
+      byTrain: 'Kathgodam Railway Station (100 km).',
+      byRoad: '17 km drive from Almora along the Kausani road to Kosi village, followed by a gentle 1 km paved stone climb.'
+    }
+  },
+
   // ==========================================
   // 3. NATURE ESCAPES
   // ==========================================

@@ -29,7 +29,13 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
   ],
   'spiritual-destinations': [
     'haridwar', 'rishikesh', 'yamunotri', 'gangotri',
-    'kedarnath', 'badrinath', 'hemkund-sahib', 'tungnath'
+    'kedarnath', 'badrinath', 'hemkund-sahib', 'tungnath',
+    'jageshwar', 'baijnath', 'patal-bhuvaneshwar', 'dhari-devi',
+    'neelkanth-mahadev', 'devprayag', 'rudraprayag', 'karnaprayag',
+    'nandprayag', 'vishnuprayag', 'guptkashi', 'ukhimath',
+    'triyuginarayan', 'kalpeshwar', 'rudranath', 'madhyamaheshwar',
+    'adi-kailash', 'om-parvat', 'piran-kaliyar', 'nanakmatta',
+    'chitai-golu-devta', 'kasar-devi', 'katarmal-sun-temple'
   ],
   'nature-escapes': [
     'valley-of-flowers', 'chopta', 'dayara-bugyal', 'deoria-tal',
@@ -50,7 +56,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     slug: 'all',
     name: 'All Destinations',
     tagline: 'Discover Uttarakhand',
-    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, and remote Himalayan hamlets. Explore all 53 hand-curated destinations across the Devbhoomi.',
+    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, and remote Himalayan hamlets. Explore all 76 hand-curated destinations across the Devbhoomi.',
     badge: 'Complete Catalog',
     filterFn: () => true
   },
