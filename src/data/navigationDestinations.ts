@@ -149,7 +149,19 @@ export const DESTINATION_MEGA_NAV: DestinationNavGroup[] = [
       { name: 'Nanda Devi National Park', slug: 'nanda-devi-national-park', path: '/destinations/nanda-devi-national-park' },
       { name: 'Valley of Flowers National Park', slug: 'valley-of-flowers', path: '/destinations/valley-of-flowers' },
       { name: 'Gangotri National Park', slug: 'gangotri-national-park', path: '/destinations/gangotri-national-park' },
-      { name: 'Binsar Wildlife Sanctuary', slug: 'binsar-wildlife-sanctuary', path: '/destinations/binsar-wildlife-sanctuary' }
+      { name: 'Binsar Wildlife Sanctuary', slug: 'binsar-wildlife-sanctuary', path: '/destinations/binsar-wildlife-sanctuary' },
+      { name: 'Govind Pashu Vihar National Park', slug: 'govind-pashu-vihar-national-park', path: '/destinations/govind-pashu-vihar-national-park' },
+      { name: 'Kedarnath Wildlife Sanctuary', slug: 'kedarnath-wildlife-sanctuary', path: '/destinations/kedarnath-wildlife-sanctuary' },
+      { name: 'Askot Wildlife Sanctuary', slug: 'askot-wildlife-sanctuary', path: '/destinations/askot-wildlife-sanctuary' },
+      { name: 'Nandhaur Wildlife Sanctuary', slug: 'nandhaur-wildlife-sanctuary', path: '/destinations/nandhaur-wildlife-sanctuary' },
+      { name: 'Benog Wildlife Sanctuary', slug: 'benog-wildlife-sanctuary', path: '/destinations/benog-wildlife-sanctuary' },
+      { name: 'Sonanadi Wildlife Sanctuary', slug: 'sonanadi-wildlife-sanctuary', path: '/destinations/sonanadi-wildlife-sanctuary' },
+      { name: 'Jhilmil Jheel Conservation Reserve', slug: 'jhilmil-jheel-conservation-reserve', path: '/destinations/jhilmil-jheel-conservation-reserve' },
+      { name: 'Asan Conservation Reserve', slug: 'asan-conservation-reserve', path: '/destinations/asan-conservation-reserve' },
+      { name: 'Pawalgarh Conservation Reserve', slug: 'pawalgarh-conservation-reserve', path: '/destinations/pawalgarh-conservation-reserve' },
+      { name: 'Ramnagar Forest', slug: 'ramnagar-forest', path: '/destinations/ramnagar-forest' },
+      { name: 'Corbett Landscape', slug: 'corbett-landscape', path: '/destinations/corbett-landscape' },
+      { name: 'Kaladhungi', slug: 'kaladhungi', path: '/destinations/kaladhungi' }
     ]
   },
   {

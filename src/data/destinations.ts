@@ -2315,6 +2315,355 @@ export const DESTINATIONS: Destination[] = [
     }
   },
 
+    {
+    id: 'govind-pashu-vihar-national-park',
+    name: 'Govind Pashu Vihar National Park',
+    tagline: 'Snow Leopard Sanctuary & Wilderness Cradle of the Tons River',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Encompassing over 950 square kilometers of the high Garhwal Himalayas in Uttarkashi district, Govind Pashu Vihar National Park and Sanctuary was established to safeguard the endangered Snow Leopard. It is the birthplace of the Tons River and contains some of India\'s most celebrated alpine valleys like Har Ki Dun and Ruinsara Tal.',
+    highlights: ['Govind Wildlife Sanctuary & Snow Leopard Conservation Project', 'Source of the fierce Tons River in Supin Range', 'Gateway to Har Ki Dun, Ruinsara Tal & Bali Pass', 'Habitat of Bearded Vultures (Lammergeier) and Himalayan Monal'],
+    bestTime: 'April to June & September to November',
+    altitude: '1,400 m - 6,323 m',
+    idealDuration: '4 - 6 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Har Ki Dun Valley', desc: 'Legendary cradle-shaped alpine valley surrounded by Swargarohini peaks.' },
+      { name: 'Ruinsara High Glacial Lake', desc: 'Sacred alpine tarn worshipped by local shepherds beneath Mount Banderpoonch.' },
+      { name: 'Osla Heritage Village', desc: 'Centuries-old wooden village famous for Someshwar Mahadev architecture.' },
+      { name: 'Sankri Launchpad', desc: 'Vibrant trekking hub and basecamp for national park expeditions.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (210 km).',
+      byTrain: 'Dehradun Railway Station (190 km).',
+      byRoad: 'Drive from Dehradun via Mussoorie, Naugaon, and Purola to Sankri village roadhead.'
+    }
+  },
+  {
+    id: 'kedarnath-wildlife-sanctuary',
+    name: 'Kedarnath Wildlife Sanctuary',
+    tagline: 'Largest Protected Area in Western Himalayas & Musk Deer Haven',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Spanning across 975 square kilometers of the Chamoli and Rudraprayag districts, Kedarnath Wildlife Sanctuary (also known as Kedarnath Musk Deer Sanctuary) is the largest protected area in the Western Himalayas. Dedicated primarily to saving the endangered Himalayan Musk Deer, it encompasses dense temperate oak forests and sprawling alpine bugyals beneath Kedarnath peak.',
+    highlights: ['Spread across 975 sq km of pristine Chamoli and Rudraprayag terrain', 'Dedicated captive breeding sanctuary for Endangered Himalayan Musk Deer', 'Sub-alpine birch, oak, and vibrant rhododendron bugyals', 'Home to Snow Leopards, Himalayan Tahr, and Golden Eagles'],
+    bestTime: 'May to June & September to November',
+    altitude: '1,160 m - 7,068 m',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kanchula Korak Musk Deer Breeding Center', desc: 'Specialized high-altitude breeding sanctuary located on the Chopta road.' },
+      { name: 'Tungnath & Chandrashila Ridge', desc: 'Highest Shiva shrine on earth situated right inside the sanctuary boundary.' },
+      { name: 'Madhyamaheshwar Valley Corridor', desc: 'Deep river valley corridor harboring Himalayan Black Bears and Serow.' },
+      { name: 'Deoria Tal Sanctuary Edge', desc: 'Emerald forest lake reflecting the Chaukhamba massifs.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (220 km).',
+      byTrain: 'Rishikesh Railway Station (205 km).',
+      byRoad: 'Accessible along the Kund-Ukhimath-Chopta-Gopeshwar highway.'
+    }
+  },
+  {
+    id: 'askot-wildlife-sanctuary',
+    name: 'Askot Wildlife Sanctuary',
+    tagline: 'The Green Paradise of Kumaon Dedicated to the Endangered Musk Deer',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Set amidst the high ridges of Pithoragarh district near the Indo-Nepal and Indo-Tibet borders, Askot Wildlife Sanctuary covers 600 square kilometers from sub-tropical valley floors to glaciated peaks like Panchachuli. Established in 1986 to protect the musk deer, it is an international ecological treasure.',
+    highlights: ['Renowned as Askot Musk Deer Sanctuary in Pithoragarh', 'Bounded by the Kali River bordering Nepal to the east', 'Rugged glaciated peaks including Panchachuli, Chipla Kot & Najirikot', 'Rich biodiversity of Snow Leopards, Serow, and Himalayan Black Bears'],
+    bestTime: 'April to June & September to November',
+    altitude: '600 m - 6,905 m',
+    idealDuration: '3 - 5 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: false,
+    topAttractions: [
+      { name: 'Chipla Kot Alpine Meadows', desc: 'Vast high bugyal known for holy tarns and panoramic views of Nepal Himalayas.' },
+      { name: 'Gori Ganga & Kali River Corridors', desc: 'Roaring glacial rivers forming deep valleys teeming with wildlife.' },
+      { name: 'Askot Heritage Palace', desc: 'Historic palace of the Katyuri-descended Pal dynasty rulers.' },
+      { name: 'Dharchula Border Gateway', desc: 'Town on the banks of Kali River serving as the gateway to the sanctuary.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (285 km).',
+      byTrain: 'Kathgodam Railway Station (250 km).',
+      byRoad: 'Situated 54 km from Pithoragarh town along the road to Dharchula.'
+    }
+  },
+  {
+    id: 'nandhaur-wildlife-sanctuary',
+    name: 'Nandhaur Wildlife Sanctuary',
+    tagline: 'Pristine Terai Arc Tiger & Elephant Corridor in the Shivalik Foothills',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Created in 2012 in the lower Shivalik belt between the Gola and Sharda rivers, Nandhaur Wildlife Sanctuary spans 270 square kilometers of virgin sal forests. Forming a vital part of the Terai Arc Landscape, it links Corbett with Shuklaphanta National Park in Nepal and hosts a surging tiger and elephant population.',
+    highlights: ['Critical wildlife corridor between Corbett and Shuklaphanta (Nepal)', 'Dense pristine sal and riverine forests along Nandhaur River', 'Thriving population of Royal Bengal Tigers, Elephants & Leopards', 'Unspoilt eco-tourism destination free from heavy tourist crowds'],
+    bestTime: 'November to May',
+    altitude: '300 m - 1,200 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Nandhaur River Safari Track', desc: 'Rugged jungle tracks winding along the pristine gravel riverbed.' },
+      { name: 'Chorgallia & Jaulasal Forest Gates', desc: 'Main safari entry points with traditional colonial forest rest houses.' },
+      { name: 'Devidhura Viewpoint', desc: 'Overlooks the vast expanse of the Terai arc forest canopy.' },
+      { name: 'Avian Watch Points', desc: 'Home to Great Pied Hornbills, Crested Serpent Eagles, and over 250 bird species.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (60 km).',
+      byTrain: 'Kathgodam Railway Station (40 km).',
+      byRoad: 'Easily accessible from Haldwani (35 km) or Tanakpur (60 km).'
+    }
+  },
+  {
+    id: 'benog-wildlife-sanctuary',
+    name: 'Benog Wildlife Sanctuary',
+    tagline: 'Scenic Pine Sanctuary & Last Known Habitat of the Mountain Quail',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located 11 km west of Mussoorie library, Benog Wildlife Sanctuary (part of Rajaji Park management) slopes down through pine, fir, and medicinal shrub forests toward the Yamuna valley. Famous historically as the last sighting location of the critically endangered Mountain Quail, it is a haven for trekkers, birders, and deer herds.',
+    highlights: ['Historical sanctuary established to protect the rare Mountain Quail', 'Dense old-growth pine, cedar, and oak forests near Mussoorie', 'Panoramic views of Chaukhamba and Bandarpunch peaks', 'Sanctuary for Leopards, Himalayan Goral, Red Fox & rare birds'],
+    bestTime: 'October to May',
+    altitude: '2,250 m (7,382 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Benog Hill Crest Trail', desc: 'Scenic forested walking trail with uninterrupted Himalayan vistas.' },
+      { name: 'Cloud\'s End Estate', desc: '1838 heritage bungalow marking the geographical end of Mussoorie ridge.' },
+      { name: 'Aglar Valley Overlook', desc: 'Deep mountain valley overlook famous for sunset hues.' },
+      { name: 'Birdwatching Nature Loop', desc: 'Home to White-throated Laughingthrushes, Blue Magpies, and Woodpeckers.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (68 km).',
+      byTrain: 'Dehradun Railway Station (42 km).',
+      byRoad: '11 km drive from Library Chowk Mussoorie towards Cloud\'s End.'
+    }
+  },
+  {
+    id: 'sonanadi-wildlife-sanctuary',
+    name: 'Sonanadi Wildlife Sanctuary',
+    tagline: 'Golden River Sanctuary & Core Buffer of Corbett Tiger Reserve',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Covering 301 square kilometers in Pauri Garhwal north of the Ramganga River, Sonanadi Wildlife Sanctuary takes its name from the Sonanadi ("River of Gold"). Together with Corbett National Park, it forms the heart of the Corbett Tiger Reserve, featuring towering sal trees, bamboo brakes, and huge herds of wild Asian elephants.',
+    highlights: ['Named after the Sonanadi ("River of Gold") in Kotdwar-Pauri belt', 'Sprawling 301 sq km core buffer of Corbett Tiger Reserve', 'Premier sanctuary for wild Asian Elephants, Tigers, and Cheetal herds', 'Lush bamboo and sal forests teeming with 550+ avian species'],
+    bestTime: 'November 15 to June 15',
+    altitude: '350 m - 1,200 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Sonanadi River Safari', desc: 'Picturesque riverbed trail where elephant herds gather during twilight.' },
+      { name: 'Halduparao Forest Rest House', desc: 'Colonial 1890 forest lodge accessible only by 4x4 safari vehicles.' },
+      { name: 'Vatanvasa Entry Gate', desc: 'Remote forest gateway near Kotdwar offering raw wilderness.' },
+      { name: 'Pailani Waterfall Trail', desc: 'Secret jungle waterfall tucked inside the dense buffer woods.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (140 km) or Delhi IGI (230 km).',
+      byTrain: 'Kotdwar Railway Station (45 km) or Ramnagar (75 km).',
+      byRoad: 'Accessible via Kotdwar through Dugadda, or from Ramnagar via Marchula.'
+    }
+  },
+  {
+    id: 'jhilmil-jheel-conservation-reserve',
+    name: 'Jhilmil Jheel Conservation Reserve',
+    tagline: 'Unique Wetland Sanctuary & Last Refuge of the Swamp Deer (Barasingha)',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated along the southern bank of the River Ganga in Haridwar district, Jhilmil Jheel is a 3,783-hectare saucer-shaped floodplain wetland. Inaugurated in 2005 by President APJ Abdul Kalam, it is celebrated as Uttarakhand\'s only surviving habitat of the magnificent Swamp Deer (Barasingha).',
+    highlights: ['Only habitat of the endangered Swamp Deer (Barasingha) in Uttarakhand', 'Saucer-shaped freshwater wetland along the Ganga floodplains near Haridwar', 'Inaugurated by President APJ Abdul Kalam in 2005', 'Winter sanctuary for thousands of migratory waterfowl and waders'],
+    bestTime: 'November to April',
+    altitude: '240 m (787 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Barasingha Wetland Watchtower', desc: 'Elevated viewpoint over the reed beds where herds of 12-tined deer graze.' },
+      { name: 'Ganga Floodplain Safari Track', desc: '4x4 track through tall grasslands and marshy channels.' },
+      { name: 'Tantwala Eco Camps', desc: 'Quiet community-run eco-tourism basecamp for birders and photographers.' },
+      { name: 'Chilla-Rajaji Corridor', desc: 'Crucial migratory path for wild elephant herds traveling across the river.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (55 km).',
+      byTrain: 'Haridwar Railway Station (20 km).',
+      byRoad: 'Situated 20 km downstream from Haridwar via the Najibabad road.'
+    }
+  },
+  {
+    id: 'asan-conservation-reserve',
+    name: 'Asan Conservation Reserve',
+    tagline: 'Uttarakhand\'s First Ramsar Wetland & Winter Migratory Bird Haven',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1508873696983-2df5293cb32f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located at the confluence of the Asan River and the Yamuna Canal in the Doon Valley, Asan Conservation Reserve was declared Uttarakhand\'s first Ramsar Site in 2020. Every winter, over 5,000 migratory waterfowl from Central Asia and Siberia flock to this 444-hectare wetland paradise.',
+    highlights: ['Uttarakhand\'s first designated Ramsar Site of international importance', 'Confluence of Asan River and Eastern Yamuna Canal near Dehradun', 'Winter host to over 5,000 migratory waterfowl including Brahminy Ducks and Bar-headed Geese', 'Recognized Globally as an Important Bird Area (IBA)'],
+    bestTime: 'October to March (Peak migratory birding Dec-Feb)',
+    altitude: '399 m (1,309 ft)',
+    idealDuration: '1 Day',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Asan Barrage Reservoir', desc: 'Main water body hosting massive congregations of Ruddy Shelducks and Pochards.' },
+      { name: 'Birdwatching Hide & Boardwalk', desc: 'Forest department observation decks offering close-range avian photography.' },
+      { name: 'Paonta Sahib Gurdwara', desc: 'Historic Sikh shrine on the Yamuna riverbanks situated just 10 km away.' },
+      { name: 'Timli Pass Sal Forest', desc: 'Adjacent forest ridge popular for woodland birding and gentle nature walks.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (70 km).',
+      byTrain: 'Dehradun Railway Station (40 km).',
+      byRoad: 'Situated on the Chandigarh-Dehradun highway (NH-72) near Herbertpur.'
+    }
+  },
+  {
+    id: 'pawalgarh-conservation-reserve',
+    name: 'Pawalgarh Conservation Reserve',
+    tagline: 'Corbett\'s Birding Capital & Legendary Realm of the Bachelor of Powalgarh',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Immortalized by Jim Corbett in his story of "The Bachelor of Powalgarh", this 58-square-kilometer reserve in Nainital district lies in the foothills of the Himalayas. Blessed with the perennial Dabka and Baur streams, it is celebrated as India\'s top birdwatching destination with over 365 cataloged bird species.',
+    highlights: ['Setting of Jim Corbett\'s famous tale "The Bachelor of Powalgarh"', 'Premier birdwatching haven in India with over 365 identified bird species', 'Pristine riparian corridors along Dabka and Baur rivers', 'Rich wildlife including Tigers, Leopards, Barking Deer, and Flying Squirrels'],
+    bestTime: 'October to May',
+    altitude: '400 m - 1,100 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Dabka Riverbed Safari Trail', desc: 'Shaded riparian forest trail frequented by tigers and Asian elephants.' },
+      { name: 'Historic Pawalgarh Forest Rest House', desc: 'Charming 1912 heritage lodge where Jim Corbett camped during hunts.' },
+      { name: 'Sandni Gaja Birding Ridge', desc: 'Canopy walk renowned for Hornbills, Woodpeckers, and Flycatchers.' },
+      { name: 'Sitabani Temple Trail Link', desc: 'Sacred forest temple path connecting to adjacent reserve forests.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (65 km).',
+      byTrain: 'Ramnagar Railway Station (18 km).',
+      byRoad: 'Situated 18 km east of Ramnagar on the road toward Kotabagh and Kaladhungi.'
+    }
+  },
+  {
+    id: 'ramnagar-forest',
+    name: 'Ramnagar Forest',
+    tagline: 'The Sal Forest Gateway to Corbett, Kosi River & Wildlife Trails',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Encircling the bustling town of Ramnagar on the banks of the Kosi River, Ramnagar Forest Division forms the vibrant ecological buffer of Corbett Tiger Reserve. Known for premier wildlife eco-resorts, elephant migration corridors, and the iconic Garjiya Devi rock temple, it is the beating heart of Kumaon wildlife tourism.',
+    highlights: ['Forested transition zone between the Shivaliks and the Tarai plains', 'Scenic Kosi River corridor dotted with riverside safari eco-lodges', 'Gateway forest division for Sitabani and Corbett safari circuits', 'Elephant corridors and thrilling nighttime forest drives'],
+    bestTime: 'October to June',
+    altitude: '345 m - 600 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Garjiya Devi Temple', desc: 'Famous Shakti shrine perched atop a huge rock in the middle of Kosi River.' },
+      { name: 'Kosi River Safari & Angling', desc: 'Pristine gravel river banks offering mahseer angling and elephant crossings.' },
+      { name: 'Dhangarhi Heritage Gate & Museum', desc: 'Corbett park historical center featuring tiger trophies and educational exhibits.' },
+      { name: 'Sitabani Eco Forest Route', desc: 'Historical forest sanctuary mentioned in the Ramayana with rich birdlife.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (75 km) or Delhi IGI (250 km).',
+      byTrain: 'Ramnagar Railway Station (Direct trains from Delhi, Moradabad, and Lucknow).',
+      byRoad: 'Smooth 5-hour drive from Delhi (245 km) via NH-9 and Moradabad.'
+    }
+  },
+  {
+    id: 'corbett-landscape',
+    name: 'Corbett Landscape',
+    tagline: 'Sprawling Wilderness of Riverine Grasslands, Dense Sal & Big Cats',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'The Corbett Landscape encompasses the broader 1,288-square-kilometer wilderness matrix including Corbett National Park, Sonanadi Sanctuary, Pawalgarh, and the buffer forest divisions of Ramnagar. It supports the world\'s highest density of Royal Bengal Tigers alongside 1,200 Asian elephants, 50 raptor species, and ancient sal woodlands.',
+    highlights: ['Greater eco-region spanning Ramnagar, Pawalgarh, Kota, and Kaladhungi', 'Seamless wildlife movement corridor between Kumaon and Garhwal foothills', 'Diverse biomes from dry deciduous ridges to wet Chaurs (grasslands)', 'Exceptional density of Royal Bengal Tigers, Wild Elephants & Mugger Crocodiles'],
+    bestTime: 'November to June',
+    altitude: '300 m - 1,200 m',
+    idealDuration: '3 - 5 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Ramganga Reservoir (Kalagarh Dam)', desc: 'Huge lake sanctuary hosting migratory birds, gharials, and marsh crocodiles.' },
+      { name: 'Dhela & Jhirna Year-Round Zones', desc: 'Popular eco-tourism safari zones open throughout all twelve months.' },
+      { name: 'Kyari Eco Village Trails', desc: 'Rustic farming village offering walking safaris, treehouse stays, and cycling.' },
+      { name: 'Marchula Mountain River Gorge', desc: 'Picturesque mountain canyon along Ramganga River ideal for cliffside stays.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (80 km).',
+      byTrain: 'Ramnagar Railway Station (10 km).',
+      byRoad: 'Accessible directly via NH-309 from Delhi and Moradabad.'
+    }
+  },
+  {
+    id: 'kaladhungi',
+    name: 'Kaladhungi',
+    tagline: 'Historic Winter Home of Jim Corbett & Dense Baur River Woodlands',
+    category: 'Wildlife',
+    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nestled at the base of the Kumaon foothills 30 km east of Ramnagar, Kaladhungi is famous worldwide as the winter home of legendary naturalist and hunter Jim Corbett. Set amidst orchards and canals fed by the Baur River, it houses Corbett\'s ancestral home—now a museum—and serves as the cultural gateway to Kumaon.',
+    highlights: ['Historic winter residence of legendary conservationist and hunter Jim Corbett', 'Jim Corbett Museum (Chhoti Haldwani heritage estate)', 'Lush Baur River canal trails and dense canopy birdwatching', 'Chhoti Haldwani model village established by Corbett for local communities'],
+    bestTime: 'October to May',
+    altitude: '393 m (1,289 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Jim Corbett Heritage Museum', desc: 'Preserves personal letters, books, maps, and photographs of the famous author.' },
+      { name: 'Corbett Waterfall', desc: 'Scenic 20-meter jungle cascade surrounded by dense teak and sal woods.' },
+      { name: 'Chhoti Haldwani Heritage Village', desc: 'Model village established by Corbett with historical boundary stone walls.' },
+      { name: 'Baur River Eco Trail', desc: 'Pleasant canal path frequented by Kingfishers, Hornbills, and spotted deer.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (55 km).',
+      byTrain: 'Kathgodam Railway Station (30 km) or Ramnagar (30 km).',
+      byRoad: 'Situated midway along the scenic highway between Nainital (35 km) and Ramnagar (30 km).'
+    }
+  },
+
   // ==========================================
   // 5. VILLAGES & HIDDEN GEMS
   // ==========================================

@@ -49,7 +49,13 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
   ],
   'wildlife-national-parks': [
     'jim-corbett', 'rajaji-national-park', 'nanda-devi-national-park',
-    'valley-of-flowers', 'gangotri-national-park', 'binsar-wildlife-sanctuary'
+    'valley-of-flowers', 'gangotri-national-park', 'binsar-wildlife-sanctuary',
+    'govind-pashu-vihar-national-park', 'kedarnath-wildlife-sanctuary',
+    'askot-wildlife-sanctuary', 'nandhaur-wildlife-sanctuary',
+    'benog-wildlife-sanctuary', 'sonanadi-wildlife-sanctuary',
+    'jhilmil-jheel-conservation-reserve', 'asan-conservation-reserve',
+    'pawalgarh-conservation-reserve', 'ramnagar-forest',
+    'corbett-landscape', 'kaladhungi'
   ],
   'villages-hidden-gems': [
     'mana-village', 'sari-village', 'sankri', 'khirsu',
@@ -62,7 +68,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     slug: 'all',
     name: 'All Destinations',
     tagline: 'Discover Uttarakhand',
-    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, pristine Himalayan valleys, and remote mountain hamlets. Explore all 91 hand-curated destinations across the Devbhoomi.',
+    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, pristine Himalayan valleys, wildlife sanctuaries, and remote mountain hamlets. Explore all 103 hand-curated destinations across the Devbhoomi.',
     badge: 'Complete Catalog',
     filterFn: () => true
   },
