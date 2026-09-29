@@ -33,7 +33,7 @@ import { ReviewCard } from '../components/ReviewCard';
 import { BlogCard } from '../components/BlogCard';
 import { InstagramIcon } from '../components/SocialIcons';
 import { PackingChecklistGuide } from '../components/PackingChecklistGuide';
-import { UttarakhandMap } from '../components/UttarakhandMap';
+
 import { adminStorage } from '../utils/adminStorage';
 
 interface HomePageProps {
@@ -194,10 +194,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         </button>
       </section>
 
-      {/* ============================================================ */}
-      {/* 1.5 EXPLORE UTTARAKHAND BY DISTRICT MAP */}
-      {/* ============================================================ */}
-      <UttarakhandMap onOpenBookingModal={onOpenBookingModal} />
 
       {/* ============================================================ */}
       {/* 2. DESTINATIONS DISCOVERY SECTION */}
