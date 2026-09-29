@@ -114,8 +114,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onClose, autoFocus = false
   return (
     <div className="relative w-full">
       {/* Search Input Box */}
-      <div className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 hover:border-white/40 focus-within:border-brand-orange focus-within:bg-[#000044] px-3.5 py-2 transition-all duration-200 shadow-inner w-full min-w-0 overflow-hidden">
-        <Search className="shrink-0 w-4 h-4 text-brand-orange" />
+      <div className="flex items-center gap-1.5 xl:gap-2 rounded-xl border border-white/20 bg-white/10 hover:border-white/40 focus-within:border-brand-orange focus-within:bg-[#000044] px-2.5 xl:px-3.5 py-1.5 xl:py-2 transition-all duration-200 shadow-inner w-full min-w-0 overflow-hidden">
+        <Search className="shrink-0 w-3.5 h-3.5 xl:w-4 xl:h-4 text-brand-orange" />
         <input
           ref={inputRef}
           type="text"
@@ -123,8 +123,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onClose, autoFocus = false
           onChange={e => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.length >= 2 && setIsOpen(true)}
-          placeholder="Search destinations, treks..."
-          className="flex-1 min-w-0 bg-transparent outline-none placeholder-slate-400 text-white text-xs sm:text-sm truncate focus:truncate-none transition-all duration-200"
+          placeholder="Search..."
+          className="flex-1 min-w-0 bg-transparent outline-none placeholder-slate-400 text-white text-xs xl:text-sm truncate focus:truncate-none transition-all duration-200"
           aria-label="Search site"
         />
         {query && (

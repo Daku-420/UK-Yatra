@@ -14,7 +14,7 @@ export const Logo: React.FC<LogoProps> = ({
   // Dimension sizing classes for heights
   const sizeClasses = {
     sm: 'h-8 sm:h-9',
-    md: 'h-10 sm:h-11 md:h-12',
+    md: 'h-9 sm:h-10 lg:h-9.5 xl:h-11',
     lg: 'h-12 sm:h-14 md:h-16',
     xl: 'h-16 sm:h-20'
   }[size];

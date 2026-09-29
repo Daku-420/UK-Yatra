@@ -414,18 +414,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       </div>
 
       {/* Main Sticky Navigation - Consistent Dark Frosted Header Across All Pages */}
-      <nav className="glass-header py-2.5 xl:py-3 shadow-xl border-b border-white/10 px-4 sm:px-6 lg:px-8 transition-all duration-300">
-        <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
+      <nav className="glass-header py-2 xl:py-2.5 shadow-xl border-b border-white/10 px-3 sm:px-4 lg:px-4 xl:px-6 2xl:px-8 transition-all duration-300">
+        <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-1.5 lg:gap-2 xl:gap-3 2xl:gap-4">
           {/* Official UK Yatra Brand Logo */}
           <Link to="/" className="flex items-center group py-0.5 shrink-0">
             <Logo size="md" className="group-hover:scale-[1.02] transition-transform drop-shadow-md" />
           </Link>
 
-          {/* Desktop Navigation Links - Centered & Balanced */}
-          <div className="hidden lg:flex items-center justify-center gap-0.5 xl:gap-1 flex-1 min-w-0 px-1 xl:px-2">
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5 shrink-0">
             <Link 
               to="/" 
-              className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
+              className={`hidden 2xl:inline-flex px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -444,7 +444,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <button
                 type="button"
                 onClick={() => setDestinationsDropdownOpen(!destinationsDropdownOpen)}
-                className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 cursor-pointer ${
+                className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 cursor-pointer ${
                   isDestinationsActive || destinationsDropdownOpen
                     ? 'text-brand-orange' 
                     : 'text-white hover:text-brand-orange'
@@ -570,7 +570,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <button
                 type="button"
                 onClick={() => setPackagesDropdownOpen(!packagesDropdownOpen)}
-                className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 cursor-pointer ${
+                className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 cursor-pointer ${
                   isPackagesActive || packagesDropdownOpen
                     ? 'text-brand-orange' 
                     : 'text-white hover:text-brand-orange'
@@ -578,7 +578,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 aria-expanded={packagesDropdownOpen}
                 aria-haspopup="true"
               >
-                <span>Tour Packages</span>
+                <span><span className="lg:hidden xl:inline">Tour </span>Packages</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${packagesDropdownOpen ? 'rotate-180 text-brand-orange' : 'text-white/70'}`} />
               </button>
 
@@ -718,14 +718,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <Link 
               to="/book-vehicle" 
-              className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 ${
+              className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 ${
                 isActive('/book-vehicle') || isActive('/car-rental')
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
               }`}
             >
               <Car className="w-3.5 h-3.5 text-brand-orange" />
-              <span>Book Vehicle</span>
+              <span><span className="lg:hidden xl:inline">Book </span>Vehicle</span>
             </Link>
 
             {/* Activities Dropdown Column */}
@@ -738,7 +738,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               <button
                 type="button"
                 onClick={() => setActivitiesOpen(!activitiesOpen)}
-                className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 cursor-pointer ${
+                className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1 xl:gap-1.5 cursor-pointer ${
                   isActivitiesActive || activitiesOpen
                     ? 'text-brand-orange' 
                     : 'text-white hover:text-brand-orange'
@@ -1012,7 +1012,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <Link 
               to="/articles" 
-              className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
+              className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/articles') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -1023,7 +1023,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <Link 
               to="/about" 
-              className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
+              className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/about') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -1034,7 +1034,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <Link 
               to="/contact" 
-              className={`px-2 xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
+              className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/contact') 
                   ? 'text-brand-orange' 
                   : 'text-white hover:text-brand-orange'
@@ -1045,8 +1045,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
           </div>
 
           {/* Desktop Right Actions: Search + WhatsApp + Book Your Trip */}
-          <div className="hidden lg:flex items-center justify-end gap-1.5 xl:gap-3 shrink-0">
-            <div className="w-32 lg:w-36 xl:w-56 min-w-0">
+          <div className="hidden lg:flex items-center justify-end gap-1.5 xl:gap-2 2xl:gap-3 shrink-0">
+            <div className="w-24 lg:w-28 xl:w-36 2xl:w-56 min-w-0">
               <SearchBar />
             </div>
 
@@ -1054,7 +1054,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               href={getWhatsAppUrl("Hi UKYatra, I would like to enquire about Uttarakhand trips.")}
               target="_blank"
               rel="noreferrer"
-              className="p-1.5 xl:p-2.5 rounded-xl bg-[#25D366]/15 text-[#25D366] hover:bg-[#25D366]/25 border border-[#25D366]/35 transition-all hover:scale-105 shrink-0"
+              className="p-1.5 xl:p-2 rounded-xl bg-[#25D366]/15 text-[#25D366] hover:bg-[#25D366]/25 border border-[#25D366]/35 transition-all hover:scale-105 shrink-0"
               aria-label="Quick WhatsApp"
               title="Chat on WhatsApp"
             >
@@ -1063,7 +1063,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
 
             <button
               onClick={onOpenBookingModal}
-              className="orange-gradient-btn px-3 xl:px-5 py-2 xl:py-2.5 rounded-xl font-display font-semibold text-xs xl:text-sm text-white flex items-center gap-1.5 xl:gap-2 shadow-lg shadow-brand-orange/20 whitespace-nowrap shrink-0"
+              className="orange-gradient-btn px-2.5 xl:px-3.5 2xl:px-4 py-1.5 xl:py-2 rounded-xl font-display font-semibold text-xs xl:text-sm text-white flex items-center gap-1.5 shadow-lg shadow-brand-orange/20 whitespace-nowrap shrink-0"
             >
               <span>Book Your Trip</span>
             </button>
