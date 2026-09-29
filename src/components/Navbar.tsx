@@ -715,6 +715,32 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               )}
             </div>
 
+            {/* Treks & Himalayan Trails */}
+            <Link 
+              to="/treks" 
+              className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1.5 ${
+                isActive('/treks') || isActive('/trekking') || isActive('/trek-comparison') || isActive('/trek-calendar')
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              <Mountain className="w-3.5 h-3.5 text-brand-orange" />
+              <span>Treks</span>
+            </Link>
+
+            {/* Travel Guide Pillar */}
+            <Link 
+              to="/uttarakhand-travel-guide" 
+              className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1.5 ${
+                isActive('/uttarakhand-travel-guide') || isActive('/itineraries')
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              <Compass className="w-3.5 h-3.5 text-brand-orange" />
+              <span>Travel Guide</span>
+            </Link>
+
             <Link 
               to="/book-vehicle" 
               className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors flex items-center gap-1.5 ${
@@ -1541,6 +1567,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 >
                   <Car className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                   <span>Taxi & Cabs</span>
+                </Link>
+                <Link 
+                  to="/uttarakhand-travel-guide" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                    isActive('/uttarakhand-travel-guide')
+                      ? 'text-brand-orange' 
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  <Compass className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Travel Guide</span>
+                </Link>
+                <Link 
+                  to="/trek-comparison" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                    isActive('/trek-comparison')
+                      ? 'text-brand-orange' 
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  <Mountain className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Compare Treks</span>
                 </Link>
               </div>
             </div>

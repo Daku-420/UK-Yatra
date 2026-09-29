@@ -203,26 +203,32 @@ export const Footer: React.FC = () => {
           {/* Travel Themes & Treks */}
           <div className="col-span-1">
             <h4 className="font-display font-bold text-base text-white uppercase tracking-wider mb-5">
-              Himalayan Treks
+              Himalayan Treks & Guides
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link to="/spiritual" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Char Dham Yatra 2026</Link>
+                <Link to="/treks" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Uttarakhand Treks Directory</Link>
               </li>
               <li>
-                <Link to="/helicopter-packages" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Do Dham Heli Yatra</Link>
+                <Link to="/treks/kedarkantha-trek" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Kedarkantha Winter Trek</Link>
               </li>
               <li>
-                <Link to="/trekking/kedarkantha-winter-trek" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Kedarkantha Winter Trek</Link>
+                <Link to="/treks/valley-of-flowers-trek" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Valley of Flowers Trek</Link>
               </li>
               <li>
-                <Link to="/trekking/valley-of-flowers-trek" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Valley of Flowers Trek</Link>
+                <Link to="/trek-comparison" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Compare Treks Tool</Link>
               </li>
               <li>
-                <Link to="/trekking/chopta-chandrashila-trek" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Chopta Tungnath</Link>
+                <Link to="/trek-calendar" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Best Treks by Month Calendar</Link>
               </li>
               <li>
-                <Link to="/trekking" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">View All Treks</Link>
+                <Link to="/uttarakhand-travel-guide" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Uttarakhand Travel Guide 2026</Link>
+              </li>
+              <li>
+                <Link to="/itineraries" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Suggested Itineraries</Link>
+              </li>
+              <li>
+                <Link to="/things-to-do" className="text-slate-300 hover:text-brand-orange font-medium transition-colors block">Things To Do in Uttarakhand</Link>
               </li>
             </ul>
           </div>

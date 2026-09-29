@@ -2,8 +2,37 @@ import { Destination } from '../types';
 
 export const DESTINATIONS: Destination[] = [
   // ==========================================
-  // 1. HILL STATIONS
+  // 1. HILL STATIONS & GATEWAYS
   // ==========================================
+  {
+    id: 'dehradun',
+    name: 'Dehradun',
+    tagline: 'Capital Gateway of Uttarakhand & Picturesque Doon Valley Hub',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Nestled in the foothills of the Himalayas between the Ganga and Yamuna rivers, Dehradun is the vibrant capital gateway of Uttarakhand. Renowned for its elite educational institutions, Robber’s Cave, Sahastradhara mineral springs, Mindrolling Monastery, and direct access to Garhwal trekking trails and hill retreats.',
+    highlights: ['Robber’s Cave (Guchhupani) river gorge walk', 'Sahastradhara therapeutic sulphur springs', 'Mindrolling Monastery architecture', 'Gateway to Mussoorie, Rishikesh & Sankri treks'],
+    bestTime: 'October to May (Pleasant weather throughout winter and spring)',
+    altitude: '640 m (2,100 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: '₹4,499',
+    isPopular: true,
+    topAttractions: [
+      { name: "Robber’s Cave (Guchhupani)", desc: 'Natural limestone river cave where water flows knee-deep inside a narrow gorge.' },
+      { name: 'Sahastradhara', desc: 'Thousand-fold waterfall and sulfur springs famous for skin-soothing mineral waters.' },
+      { name: 'Mindrolling Monastery', desc: 'One of India’s largest Tibetan Buddhist centers with majestic stupa and garden.' },
+      { name: 'Forest Research Institute (FRI)', desc: 'Colonial Greco-Roman heritage campus spanning 450 hectares with botanical museums.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport (DED) is located 25 km from Dehradun city center.',
+      byTrain: 'Dehradun Railway Station (DDN) has direct Vande Bharat and Shatabdi trains from New Delhi.',
+      byRoad: 'Delhi-Dehradun Expressway connects Delhi NCR to Dehradun in approximately 3.5 to 4 hours.'
+    }
+  },
   {
     id: 'mussoorie',
     name: 'Mussoorie',

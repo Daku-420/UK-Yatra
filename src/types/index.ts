@@ -87,9 +87,47 @@ export interface Trek {
   baseCamp: string;
   highlights: string[];
   overview: string;
-  itinerary: { day: number; title: string; desc: string; stay?: string; meals?: string }[];
+  itinerary: { day: number; title: string; desc: string; stay?: string; meals?: string; altitude?: string; distance?: string }[];
   inclusions: string[];
   exclusions: string[];
+  // Extended fields for rich trek data architecture & comparison
+  slug?: string;
+  location?: string;
+  region?: 'Garhwal' | 'Kumaon' | string;
+  distance?: string;
+  maxAltitude?: string;
+  startingPoint?: string;
+  endingPoint?: string;
+  bestMonths?: string[];
+  temperature?: {
+    summer?: string;
+    winter?: string;
+    day?: string;
+    night?: string;
+  } | string;
+  snowAvailability?: string;
+  hasSnow?: boolean;
+  beginnerSuitability?: string;
+  isBeginnerFriendly?: boolean;
+  fitnessRequirement?: string;
+  permitInformation?: string;
+  howToReach?: {
+    nearestRailhead: string;
+    nearestAirport: string;
+    distanceFromDehradun: string;
+    byRoad?: string;
+  };
+  distanceFromDehradunKm?: number;
+  routeOverview?: string;
+  packingList?: string[];
+  safetyInfo?: string[];
+  videos?: string[];
+  faqs?: { question: string; answer: string }[];
+  reviews?: { id: string; author: string; location: string; rating: number; date: string; comment: string }[];
+  relatedTreks?: string[];
+  relatedDestinations?: string[];
+  relatedPackages?: string[];
+  relatedArticles?: string[];
 }
 
 export type OutdoorCategory = 

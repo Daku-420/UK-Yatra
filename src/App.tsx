@@ -49,6 +49,13 @@ import { TermsPage } from './pages/TermsPage';
 import { CancellationPolicyPage } from './pages/CancellationPolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
+// New Architecture & Pillar SEO Pages
+import { TrekComparisonPage } from './pages/TrekComparisonPage';
+import { TrekCalendarPage } from './pages/TrekCalendarPage';
+import { UttarakhandTravelGuidePage } from './pages/UttarakhandTravelGuidePage';
+import { ItinerariesPage } from './pages/ItinerariesPage';
+import { ThingsToDoPage } from './pages/ThingsToDoPage';
+
 function AppInner() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
@@ -129,9 +136,18 @@ function AppInner() {
           {/* Customized Trip Planner */}
           <Route path="/customized-trip" element={<CustomizedTripPage />} />
           
-          {/* Trekking */}
+          {/* Trekking & Himalayan Trails (both /trekking and /treks for SEO & legacy URLs) */}
           <Route path="/trekking" element={<TrekkingPage />} />
           <Route path="/trekking/:id" element={<TrekDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/treks" element={<TrekkingPage />} />
+          <Route path="/treks/:id" element={<TrekDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/trek-comparison" element={<TrekComparisonPage />} />
+          <Route path="/trek-calendar" element={<TrekCalendarPage />} />
+
+          {/* Core Content & Information Architecture Pillars */}
+          <Route path="/itineraries" element={<ItinerariesPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/things-to-do" element={<ThingsToDoPage onOpenBookingModal={handleOpenBookingModal} />} />
+          <Route path="/uttarakhand-travel-guide" element={<UttarakhandTravelGuidePage onOpenBookingModal={handleOpenBookingModal} />} />
           
           {/* Char Dham & Spiritual */}
           <Route path="/spiritual" element={<SpiritualPage onOpenBookingModal={handleOpenBookingModal} />} />

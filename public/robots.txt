@@ -1,0 +1,13 @@
+# UK Yatra Robots.txt
+# https://uk-yatra.vercel.app
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin/*
+
+# Host
+Host: https://uk-yatra.vercel.app
+
+# Sitemap
+Sitemap: https://uk-yatra.vercel.app/sitemap.xml
