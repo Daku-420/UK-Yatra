@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { X, ChevronRight } from 'lucide-react';
 
@@ -164,9 +164,16 @@ const STROKE_OUTER  = '#3a4a2a';   // dark green outer border
 interface UttarakhandMapProps { onOpenBookingModal?: (name: string) => void; }
 
 export const UttarakhandMap: React.FC<UttarakhandMapProps> = ({ onOpenBookingModal }) => {
-  const [activeId, setActiveId]   = useState<string | null>(null);
-  const [hoverId,  setHoverId]    = useState<string | null>(null);
+  const [activeId, setActiveId]     = useState<string | null>(null);
+  const [hoverId,  setHoverId]      = useState<string | null>(null);
   const [tipHotspot, setTipHotspot] = useState<Hotspot | null>(null);
+  const [mousePos,   setMousePos]   = useState({ x: 0, y: 0 });
+  const mapContainerRef             = useRef<HTMLDivElement>(null);
+
+  const handleMapMouseMove = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+    const rect = mapContainerRef.current?.getBoundingClientRect();
+    if (rect) setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  }, []);
 
   const active = DISTRICTS.find(d => d.id === activeId) ?? null;
 
@@ -213,11 +220,12 @@ export const UttarakhandMap: React.FC<UttarakhandMapProps> = ({ onOpenBookingMod
             </div>
 
             {/* SVG MAP */}
-            <div className="relative">
+            <div className="relative" ref={mapContainerRef}>
               <svg
                 viewBox="40 30 1215 1060"
                 className="w-full h-auto"
                 xmlns="http://www.w3.org/2000/svg"
+                onMouseMove={handleMapMouseMove}
               >
                 {/* ── Surrounding region labels ── */}
                 <text x="340" y="58" textAnchor="middle" fontSize="28" fontWeight="900" fill="#6b7280" letterSpacing="3" opacity="0.55" style={{ fontFamily: 'Georgia, serif' }}>HIMACHAL PRADESH</text>
@@ -323,6 +331,69 @@ export const UttarakhandMap: React.FC<UttarakhandMapProps> = ({ onOpenBookingMod
                   </g>
                 )}
               </svg>
+
+              {/* ── Hover Tooltip: shows top locations of hovered district ── */}
+              {hoverId && (() => {
+                const hd = DISTRICTS.find(d => d.id === hoverId);
+                if (!hd) return null;
+
+                // Compute tooltip position, flipping when near right/bottom edge
+                const containerW = mapContainerRef.current?.offsetWidth  ?? 600;
+                const containerH = mapContainerRef.current?.offsetHeight ?? 500;
+                const tooltipW   = 200;
+                const tooltipH   = 40 + hd.destinations.length * 26;
+                const rawX       = mousePos.x + 18;
+                const rawY       = mousePos.y - tooltipH - 12;
+                const clampedX   = rawX + tooltipW > containerW ? mousePos.x - tooltipW - 10 : rawX;
+                const clampedY   = rawY < 4 ? mousePos.y + 14 : rawY;
+
+                return (
+                  <div
+                    key={hoverId}
+                    className="pointer-events-none absolute z-20 rounded-xl shadow-2xl overflow-hidden"
+                    style={{
+                      left: clampedX,
+                      top:  clampedY,
+                      width: tooltipW,
+                      background: 'rgba(15,23,10,0.93)',
+                      border: '1px solid rgba(90,120,60,0.5)',
+                      backdropFilter: 'blur(8px)',
+                    }}
+                  >
+                    {/* Tooltip header */}
+                    <div
+                      className="px-3 py-2 flex items-center gap-2"
+                      style={{ background: 'rgba(58,74,42,0.9)', borderBottom: '1px solid rgba(90,120,60,0.4)' }}
+                    >
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest"
+                        style={{ color: hd.division === 'Garhwal' ? '#86efac' : '#93c5fd' }}
+                      >
+                        {hd.division}
+                      </span>
+                      <span className="text-white text-xs font-bold ml-auto">{hd.name}</span>
+                    </div>
+
+                    {/* Destination list */}
+                    <ul className="px-3 py-2 space-y-1.5">
+                      {hd.destinations.map(dest => (
+                        <li key={dest.id} className="flex items-center gap-2">
+                          <span style={{ color: '#f97316', fontSize: '10px' }}>★</span>
+                          <span className="text-[11px] font-semibold" style={{ color: '#e5e7eb' }}>
+                            {dest.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Click hint */}
+                    <div className="px-3 pb-2">
+                      <p className="text-[9px] font-medium" style={{ color: 'rgba(156,163,175,0.8)' }}>
+                        Click to explore →
+                      </p>
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
 
             {/* ── Legend ── */}
