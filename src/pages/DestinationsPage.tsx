@@ -39,7 +39,13 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
   ],
   'nature-escapes': [
     'valley-of-flowers', 'chopta', 'dayara-bugyal', 'deoria-tal',
-    'har-ki-dun', 'binsar', 'harsil-valley'
+    'har-ki-dun', 'harsil-valley', 'binsar', 'khirsu', 'sari-village',
+    'mandal-valley', 'mandakini-valley', 'bhilangana-valley',
+    'darma-valley', 'johar-valley', 'niti-valley', 'nelong-valley',
+    'mana-valley', 'kalpeshwar-valley', 'gangotri-valley',
+    'yamunotri-valley', 'tons-valley', 'pindar-valley',
+    'ramganga-valley', 'dhanaulti', 'kanatal', 'chaiinsheel-valley',
+    'gwaldam', 'munsiyari', 'chaukori'
   ],
   'wildlife-national-parks': [
     'jim-corbett', 'rajaji-national-park', 'nanda-devi-national-park',
@@ -56,7 +62,7 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
     slug: 'all',
     name: 'All Destinations',
     tagline: 'Discover Uttarakhand',
-    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, and remote Himalayan hamlets. Explore all 76 hand-curated destinations across the Devbhoomi.',
+    description: 'From the holy shrines of Kedarnath and Badrinath to the rapids of Rishikesh, the snowy slopes of Auli, pristine Himalayan valleys, and remote mountain hamlets. Explore all 91 hand-curated destinations across the Devbhoomi.',
     badge: 'Complete Catalog',
     filterFn: () => true
   },
@@ -78,10 +84,10 @@ export const DESTINATION_CATEGORIES_CONFIG: Record<string, DestinationCategoryDe
   },
   'nature-escapes': {
     slug: 'nature-escapes',
-    name: 'Nature Escapes',
-    tagline: 'High Alpine Valleys, Wildflower Meadows & Scenic Landscapes',
-    description: 'Experience Himalayan valleys, meadows, forests and scenic landscapes teeming with endemic flora, crisp mountain streams, and rolling bugyals.',
-    badge: 'Valleys & Meadows',
+    name: 'Nature & Valleys',
+    tagline: 'High Alpine Valleys, Wildflower Meadows & Scenic Glacial Corridors',
+    description: 'Experience majestic Himalayan valleys, high meadows, alpine forests and pristine river corridors teeming with endemic flora, waterfalls, and rolling bugyals.',
+    badge: 'Nature & Valleys',
     filterFn: (dest) => CATEGORY_SLUGS_MAP['nature-escapes'].includes(dest.id)
   },
   'wildlife-national-parks': {

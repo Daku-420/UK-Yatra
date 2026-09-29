@@ -1750,6 +1750,442 @@ export const DESTINATIONS: Destination[] = [
     }
   },
 
+    {
+    id: 'mandal-valley',
+    name: 'Mandal Valley',
+    tagline: 'The Butterfly Valley of Garhwal & Cradle of the Chipko Movement',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Known as the "Cherrapunji of Garhwal" for its lush precipitation and dense green canopy, Mandal Valley is celebrated as the cradle of the historic Chipko forest conservation movement. Home to over 200 species of vibrant butterflies and the revered Ansuya Devi and Atri Muni cave shrines, it remains an unspoilt alpine paradise.',
+    highlights: ['Birthplace of the legendary Chipko forest conservation movement', 'Over 200 species of rare Himalayan butterflies and birds', 'Sacred Ansuya Devi Temple & Atri Muni natural cave waterfall', 'Lush virgin oak, alder, and rhododendron nature trails'],
+    bestTime: 'March to June & September to November',
+    altitude: '1,560 m (5,118 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Ansuya Devi Temple & Atri Muni Cave', desc: 'Revered Shakti shrine and cliffside cave waterfall 5 km trek from Mandal.' },
+      { name: 'Kedarnath Wildlife Sanctuary Buffer', desc: 'Lush biodiversity corridor teeming with monals, musk deer, and butterflies.' },
+      { name: 'Balkhila River Pools', desc: 'Crystal-clear mountain stream ideal for angling and quiet nature walks.' },
+      { name: 'Chopta Gateway', desc: 'Scenic mountain ascent leading toward Tungnath and Chandrashila.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (235 km).',
+      byTrain: 'Rishikesh Railway Station (220 km).',
+      byRoad: '14 km from Gopeshwar along the scenic Gopeshwar-Chopta highway.'
+    }
+  },
+  {
+    id: 'mandakini-valley',
+    name: 'Mandakini Valley',
+    tagline: 'Sacred River Valley of Cascading Glaciers, Shrines & Emerald Terraces',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Carved out by the glacial Mandakini River originating from the Chorabari glacier near Kedarnath, this dramatic river valley passes between towering snow massifs of Chaukhamba and Kedar Dome. Lined with terraced villages, ancient shrines, and mountain rapids, it forms the sacred spine of Garhwal.',
+    highlights: ['Lifeline river valley descending from Chorabari Glacier', 'Flanked by towering Chaukhamba and Kedar Dome massifs', 'En route to Kedarnath, Triyuginarayan, and Madhyamaheshwar', 'Traditional stone-roofed Garhwali hamlet culture'],
+    bestTime: 'April to June & September to November',
+    altitude: '1,000 m - 3,584 m',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Mandakini River Rapids & Suspension Bridges', desc: 'Roaring emerald glacial waters carving deep mountain ravines.' },
+      { name: 'Agastyamuni & Tilwara', desc: 'Peaceful riverside towns famed for ancient sage hermitages and sports grounds.' },
+      { name: 'Guptkashi & Kalimath Shrines', desc: 'Spiritual hubs perched high on the valley ridges overlooking snow peaks.' },
+      { name: 'Sonprayag Sangam', desc: 'Confluence of Mandakini and Songanga rivers serving as the gateway to Kedarnath.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (180 km).',
+      byTrain: 'Rishikesh Railway Station (165 km).',
+      byRoad: 'NH-107 runs parallel to the entire valley from Rudraprayag through Kund to Gaurikund.'
+    }
+  },
+  {
+    id: 'bhilangana-valley',
+    name: 'Bhilangana Valley',
+    tagline: 'Pristine Glacial Valley Leading to Khatling Glacier & High Alpine Lakes',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Formed by the glacial waters of the Bhilangana River flowing from the dramatic Khatling Glacier, this pristine valley is renowned for remote trekking corridors, high-altitude alpine tarns like Masar Tal and Vasuki Tal, and scenic backwaters feeding the Tehri reservoir.',
+    highlights: ['Source of Bhilangana River originating from Khatling Glacier', 'Untouched high meadow trails to Masar Tal and Vasuki Tal', 'Ghansali and Ghuttu traditional mountain settlements', 'Scenic backwaters of Tehri Dam at the downstream confluence'],
+    bestTime: 'May to June & September to October',
+    altitude: '1,400 m - 3,700 m',
+    idealDuration: '3 - 5 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Khatling Glacier Trailhead', desc: 'Vast hanging lateral moraine glacier surrounded by high peaks.' },
+      { name: 'Ghuttu Village Basecamp', desc: 'Rustic mountain village serving as the launching pad for high pass treks.' },
+      { name: 'Masar Tal Glacial Lake', desc: 'Pristine high-altitude tarn revered by local shepherds and trekkers.' },
+      { name: 'Bhilangana River Trout Waters', desc: 'Cold glacial torrents ideal for eco-camping and birdwatching.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (145 km).',
+      byTrain: 'Rishikesh Railway Station (130 km).',
+      byRoad: 'Drive from Rishikesh via Chamba, New Tehri, and Ghansali along the river.'
+    }
+  },
+  {
+    id: 'darma-valley',
+    name: 'Darma Valley',
+    tagline: 'Dramatic Eastern Himalayan Valley of 14 Tribal Villages & Panchachuli Vistas',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located in the borderlands of Pithoragarh district near Tibet and Nepal, Darma Valley is carved by the Dhauli Ganga river. Home to 14 traditional Rung tribal villages, it offers the closest and most dramatic views of the towering Panchachuli peaks and glaciated cirques.',
+    highlights: ['Spectacular close-up views of Panchachuli East face', '14 ancient indigenous Rung tribal villages in Pithoragarh', 'Carved out by the roaring Dhauli Ganga river', 'Rugged off-road paradise and rare Himalayan biodiversity'],
+    bestTime: 'May to June & September to October',
+    altitude: '3,470 m - 4,200 m',
+    idealDuration: '4 - 6 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Panchachuli Base Camp (Dugtu)', desc: 'Front-row vantage point facing the majestic five snow-clad peaks.' },
+      { name: 'Dantu and Sela Villages', desc: 'Ancient stone settlements with intricate wood carvings and wool weaving.' },
+      { name: 'Dhauli Ganga Gorges', desc: 'Roaring glacial river cutting through dramatic granite canyon cliffs.' },
+      { name: 'Birch & Juniper Woodlands', desc: 'High-altitude sub-alpine forests turning brilliant golden in autumn.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (360 km to Dharchula).',
+      byTrain: 'Kathgodam Railway Station (310 km to Dharchula).',
+      byRoad: 'Rugged 4x4 mountain route from Dharchula (70 km) requiring local permits.'
+    }
+  },
+  {
+    id: 'johar-valley',
+    name: 'Johar Valley',
+    tagline: 'Historic Indo-Tibetan Silk Trade Corridor & Gateway to Milam Glacier',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Also known as the Gori Ganga Valley, Johar Valley was for centuries the premier trade route between India and Western Tibet operated by the enterprising Shauka traders. Dominated by views of Nanda Devi East, Hardeol, and Trishuli, it leads directly to the mighty Milam Glacier.',
+    highlights: ['Ancient trans-Himalayan trading route to Western Tibet', 'Cradle of legendary explorer Pundit Nain Singh Rawat', 'Epic gateway to Milam and Ralam Glaciers', 'Framed by Trishuli, Hardeol, and Nanda Devi East peaks'],
+    bestTime: 'May to June & September to October',
+    altitude: '2,200 m - 4,267 m',
+    idealDuration: '5 - 7 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Milam Glacier', desc: 'Mighty 37 sq km glacier originating from the slopes of Kohli and Trishuli.' },
+      { name: 'Ghost Village of Martoli', desc: 'Ancient stone trading village with historic Nanda Devi sun temple.' },
+      { name: 'Gori Ganga River Canyons', desc: 'Vigorous torrent cutting through high rock formations.' },
+      { name: 'Munsiyari Trailhead', desc: 'Himalayan hill resort serving as the gateway to Johar Valley.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (310 km to Munsiyari).',
+      byTrain: 'Kathgodam Railway Station (280 km to Munsiyari).',
+      byRoad: 'Munsiyari is the motorable base from which trails enter the Johar Valley.'
+    }
+  },
+  {
+    id: 'niti-valley',
+    name: 'Niti Valley',
+    tagline: 'Remote Indo-Tibetan Borderland of Glacial Gorges & Timarsain Mahadev',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Positioned in the northernmost corner of Chamoli district along the Dhauliganga, Niti Valley ends at Niti village (3,600m), the last inhabited border settlement before Tibet. Famous for the sacred Timarsain Mahadev winter ice cave and rugged trans-Himalayan scenery, it offers sheer untamed serenity.',
+    highlights: ['Last Indian village of Niti situated near Tibetan border (3,600m)', 'Timarsain Mahadev naturally formed winter ice lingam', 'Dramatic canyon gorges carved by Dhauliganga', 'High-altitude habitat of Snow Leopards and Bharal'],
+    bestTime: 'May to October (Inner Line Permits required)',
+    altitude: '3,200 m - 3,600 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Niti Village', desc: 'Quaint border settlement with stone houses, prayer flags, and mountain views.' },
+      { name: 'Timarsain Mahadev Cave', desc: 'Sacred cave where a natural ice stalagmite forms during winter months.' },
+      { name: 'Malari Village & Prehistoric Caves', desc: 'Archaeological hotspot where golden masks and ancient cists were discovered.' },
+      { name: 'Dhauliganga River Canyon', desc: 'Deep vertical rock cuts flanked by towering Himalayan ridges.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (350 km).',
+      byTrain: 'Rishikesh Railway Station (330 km).',
+      byRoad: '88 km drive from Joshimath via Tapovan, Lata, and Malari.'
+    }
+  },
+  {
+    id: 'nelong-valley',
+    name: 'Nelong Valley',
+    tagline: 'The Ladakh of Uttarakhand with High-Altitude Cold Desert Canyons',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Located in the Uttarkashi district inside Gangotri National Park near the Indo-China border, Nelong Valley resembles the barren high-altitude moonscapes of Ladakh and Spiti. It features the legendary 150-year-old Gartang Gali cliff-hanging wooden bridge and pristine high desert wildlife.',
+    highlights: ['Arid cold-desert Tibetan plateau terrain similar to Ladakh and Spiti', 'Historic Gartang Gali 150-year-old cliffside wooden walkway', 'Located inside Gangotri National Park border zone', 'Rare wildlife including Snow Leopard, Musk Deer, and Himalayan Monal'],
+    bestTime: 'May to October (Special entry permit required from SDM Bhatwari)',
+    altitude: '3,350 m (11,000 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Gartang Gali Wooden Skywalk', desc: '136-meter historic wooden pathway chiseled directly into a vertical granite cliff.' },
+      { name: 'Nelong Cold Desert Valley', desc: 'Spectacular moonscape canyon formed by the Jadh Ganga torrent.' },
+      { name: 'Lal Devta Temple', desc: 'Historic border shrine revered by ITBP and indigenous Jadh communities.' },
+      { name: 'Jadhang & Dhumku Ghost Hamlets', desc: 'Deserted historic trading settlements offering eerie trans-Himalayan charm.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (280 km).',
+      byTrain: 'Rishikesh Railway Station (260 km).',
+      byRoad: 'Drive from Uttarkashi to Bhaironghati (85 km), then enter via forest permit gate.'
+    }
+  },
+  {
+    id: 'mana-valley',
+    name: 'Mana Valley',
+    tagline: 'High-Altitude Borderland of Mythic Saraswati, Vasudhara & Vyas Gufa',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Situated just 3 km beyond Badrinath at 3,200m, Mana Valley is celebrated as the "Last Indian Village" before Tibet. It is an epicenter of Mahabharata legends, housing the thunderous Saraswati River gorge, Bhim Pul natural stone bridge, Vyas Gufa, and the trail to the 400-ft Vasudhara Falls.',
+    highlights: ['Last Indian village before the border with Tibet (3,200m)', 'Bhim Pul natural stone bridge spanning roar of Saraswati River', 'Magnificent 400-foot Vasudhara Falls cascading from glacial tarns', 'Vyas Gufa and Ganesh Gufa where Mahabharata was penned'],
+    bestTime: 'May to October',
+    altitude: '3,200 m (10,500 ft)',
+    idealDuration: '1 - 2 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Bhim Pul & Saraswati Gorge', desc: 'Massive stone boulder placed by Bhima across the deafening Saraswati torrent.' },
+      { name: 'Vasudhara Falls', desc: 'Glacial waterfall falling 400 feet against high mountain winds (5 km trek).' },
+      { name: 'Vyas Gufa & Ganesh Gufa', desc: 'Sacred caves where the epic Mahabharata was dictated and written down.' },
+      { name: 'Swargarohini Trailhead', desc: 'Legendary path the Pandavas took on their ascent to heaven.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (315 km).',
+      byTrain: 'Rishikesh Railway Station (300 km).',
+      byRoad: '3 km paved road extension beyond Badrinath Temple town.'
+    }
+  },
+  {
+    id: 'kalpeshwar-valley',
+    name: 'Kalpeshwar Valley',
+    tagline: 'The Hidden Urgam Valley of Whispering Pines & Terraced Organic Farms',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Tucked away in the Chamoli Himalayas, the secluded Urgam Valley (Kalpeshwar Valley) is a fertile amphitheater of step farms, organic apple orchards, and pine-clad hills. Home to the fifth Kedar, Kalpeshwar Mahadev, it remains open and tranquil throughout all seasons.',
+    highlights: ['Enchanting terraced fields of the secluded Urgam Valley', 'Sanctuary of the fifth Kedar (Kalpeshwar Mahadev)', 'Ancient wish-fulfilling Kalpavriksha tree and wooden hamlets', 'Pristine mountain streams and trout waters fed by Himalayan snows'],
+    bestTime: 'Throughout the year; Best April to June & September to November',
+    altitude: '2,200 m (7,218 ft)',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Kalpeshwar Rock Temple', desc: 'Ancient rock cave sanctum entered through a natural cleft where Shiva\'s locks are worshipped.' },
+      { name: 'Urgam Organic Terraces', desc: 'Green stepped agricultural fields known for aromatic herbs and apples.' },
+      { name: 'Dhyan Badri Shrine', desc: 'Part of the Panch Badri temples nestled amidst tranquil cedar groves.' },
+      { name: 'Devgram Heritage Hamlet', desc: 'Charming traditional mountain village with slate roofs and wood carvings.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (265 km).',
+      byTrain: 'Rishikesh Railway Station (250 km).',
+      byRoad: '9 km mountain road from Helang off the main Badrinath National Highway (NH-7).'
+    }
+  },
+  {
+    id: 'gangotri-valley',
+    name: 'Gangotri Valley',
+    tagline: 'Grand Glacial Gorge of the Bhagirathi & Gateway to Gaumukh-Tapovan',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Flanked by towering granite cliffs and fragrant deodar woods, Gangotri Valley is the dramatic mountain amphitheater through which the turquoise Bhagirathi river surges. It is the launching ground for the iconic Gaumukh Glacier and high-altitude Tapovan meadow treks.',
+    highlights: ['Dramatic sheer granite gorges carved by the torrential Bhagirathi', 'Gateway to the Gaumukh glacier and high-altitude Tapovan meadows', 'Towering snow-clad vistas of Shivling, Meru, and Bhagirathi peaks', 'Sub-alpine deodar woodlands and sacred river beaches'],
+    bestTime: 'May to June & September to October',
+    altitude: '3,100 m - 4,463 m',
+    idealDuration: '3 - 5 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Gaumukh Glacier & Tapovan', desc: 'Iconic glacial snout source of Ganga beneath the pyramidal spire of Mt. Shivling.' },
+      { name: 'Surya Kund & Gauri Kund', desc: 'Cascading river gorges with deafening natural rock pools.' },
+      { name: 'Bhaironghati Confluence', desc: 'Spectacular deep bridge crossing where Jadh Ganga meets Bhagirathi.' },
+      { name: 'Submerged Shiva Lingam', desc: 'Natural rock formation visible during early winter when water levels recede.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (250 km).',
+      byTrain: 'Rishikesh Railway Station (235 km).',
+      byRoad: 'NH-34 connects Uttarkashi to Gangotri (100 km) via Maneri, Bhatwari, and Harsil.'
+    }
+  },
+  {
+    id: 'yamunotri-valley',
+    name: 'Yamunotri Valley',
+    tagline: 'Steep Rugged Canyons of the Sacred Yamuna & Thermal Sulphur Springs',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Encompassed by the Bandarpoonch massif and Kalind Parvat, Yamunotri Valley is a narrow, rugged alpine canyon where the sacred Yamuna River originates. Featuring hot steaming thermal springs at Surya Kund and sheer cliff faces, it provides high Himalayan drama.',
+    highlights: ['Birthplace canyon of the holy Yamuna River under Kalind Parvat', 'Boiling thermal sulphur springs of Surya Kund', '6 km mountain path along rushing glacial streams from Janki Chatti', 'Lush rhododendron and silver fir mountain walls'],
+    bestTime: 'May to June & September to November',
+    altitude: '2,650 m - 3,293 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Surya Kund Thermal Spring', desc: 'Natural boiling water spring where pilgrims cook rice and potatoes as prasad.' },
+      { name: 'Yamunotri Temple Sanctum', desc: 'Black marble shrine dedicated to Goddess Yamuna on the riverbank.' },
+      { name: 'Divya Shila Rock', desc: 'Sacred stone pillar worshipped before entering the main temple sanctum.' },
+      { name: 'Kharsali Village (Winter Seat)', desc: 'Historic wooden temple village across the river where Yamuna is worshipped in winter.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (175 km).',
+      byTrain: 'Dehradun Railway Station (160 km).',
+      byRoad: 'Drive to Janki Chatti via Barkot and Naugaon, followed by 6 km mountain trek.'
+    }
+  },
+  {
+    id: 'tons-valley',
+    name: 'Tons Valley',
+    tagline: 'Untamed Wilderness of Pine Forests, Rafting & Wooden Pagoda Architecture',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Flowing through the western edge of Garhwal near the Himachal border, Tons Valley is a wild wonderland of dense deodar forests, Class IV+ white water rapids, and unique multi-tiered wooden pagoda architecture dedicated to Mahabharata heroes.',
+    highlights: ['Deep forested canyons carved by the fierce Tons River', 'World-class Class IV+ white water rafting rapids', 'Unique centuries-old wooden temples in Mori, Netwar, and Jakhol', 'Gateway to the Govind Pashu Vihar National Park and Har Ki Dun'],
+    bestTime: 'April to June & September to November',
+    altitude: '1,100 m - 2,500 m',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Mori River Rafting Hub', desc: 'Exciting rapids through dense pine gorges popular for adventure camping.' },
+      { name: 'Netwar & Jakhol Wooden Temples', desc: 'Rare wooden temple architecture decorated with intricate folklore motifs.' },
+      { name: 'Govind Pashu Vihar Sanctuary', desc: 'Protected reserve home to snow leopards, bearded vultures, and brown bears.' },
+      { name: 'Sankri Village Base', desc: 'Trekking capital for Har Ki Dun, Kedarkantha, and Bali Pass.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (190 km).',
+      byTrain: 'Dehradun Railway Station (170 km).',
+      byRoad: 'Accessible by road via Mussoorie, Naugaon, Purola, and Mori.'
+    }
+  },
+  {
+    id: 'pindar-valley',
+    name: 'Pindar Valley',
+    tagline: 'Lush Emerald Corridor Leading to Pindari Glacier & Traill\'s Pass',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Extending from the foothills of Bageshwar up to the massive Pindari Glacier at 3,660m, Pindar Valley is renowned as one of Kumaon’s most rewarding trekking corridors. Flanked by Nanda Devi, Nanda Kot, and Panwali Dwar, it boasts rushing blue torrents and untouched shepherd hamlets.',
+    highlights: ['One of Kumaon\'s most celebrated trekking valleys', 'Source of the fierce Pindar River from Pindari Glacier (3,660m)', 'Panoramic vistas of Nanda Kot, Changuch, and Panwali Dwar', 'Traditional Kumaoni stone settlements of Loharkhet and Khati'],
+    bestTime: 'April to June & September to November',
+    altitude: '1,450 m - 3,660 m',
+    idealDuration: '4 - 6 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Pindari Glacier Zero Point', desc: 'Famous accessible glacier offering mind-boggling high-altitude views.' },
+      { name: 'Khati Village', desc: 'Last inhabited village on the trail featuring hospitable stone homestays.' },
+      { name: 'Dwali & Phurkia Campgrounds', desc: 'Alpine wilderness camping spots surrounded by roaring waterfalls.' },
+      { name: 'Sunderdhunga Valley Gateway', desc: 'Valley of Beautiful Stones branching westward from Khati.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (230 km to Song roadhead).',
+      byTrain: 'Kathgodam Railway Station (210 km to Song).',
+      byRoad: 'Drive from Bageshwar via Kapkot to Song/Loharkhet roadhead, followed by trek.'
+    }
+  },
+  {
+    id: 'ramganga-valley',
+    name: 'Ramganga Valley',
+    tagline: 'Secluded River Haven of Angling, Deodars & Prehistoric Rock Carvings',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Winding through the rolling mid-Himalayan ridges of Almora and Chamoli, the Western and Eastern Ramganga Valleys offer a tranquil world of pine forests, fertile riverbed terraces in Chaukhutia, prehistoric megalithic stone excavations, and world-class catch-and-release golden mahseer angling.',
+    highlights: ['Tranquil Eastern and Western Ramganga river valleys', 'Prime destination for legendary Himalayan Golden Mahseer angling', 'Prehistoric megalithic cup-marks and rock art in Chaukhutia', 'Scenic terraced slopes flanked by dense deodar and pine woods'],
+    bestTime: 'September to May',
+    altitude: '1,150 m - 2,100 m',
+    idealDuration: '2 - 3 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Chaukhutia Valley Meadows', desc: 'Vast scenic valley basin known for historical temples and mountain views.' },
+      { name: 'Agastyeshwar Mahadev Temple', desc: 'Ancient stone temple dedicated to Sage Agastya on the Ramganga banks.' },
+      { name: 'Masi Riverbed & Fishing Pools', desc: 'Pristine gravel river banks popular for eco-angling and picnics.' },
+      { name: 'Dwarahat Temple Town', desc: 'Historic 11th-century Katyuri temple complex situated 18 km uphill.' }
+    ],
+    howToReach: {
+      byAir: 'Pantnagar Airport (160 km).',
+      byTrain: 'Kathgodam Railway Station (140 km).',
+      byRoad: 'Well-connected via Ranikhet (55 km), Almora (75 km), and Karnaprayag (65 km).'
+    }
+  },
+  {
+    id: 'chaiinsheel-valley',
+    name: 'Chaiinsheel Valley',
+    tagline: 'Pristine High-Altitude Bugyal Frontier on the Himachal-Uttarakhand Border',
+    category: 'Hills & Valleys',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    description: 'Straddling the scenic frontier between Uttarkashi district and the Shimla hills, Chaiinsheel Valley (Chaiinsheel Bugyal) is an untouched realm of rolling alpine meadows at 3,550m. Surrounded by dense deodar forests, apple orchards of Arakot, and snow peaks, it is an offbeat camping wonderland.',
+    highlights: ['Sprawling virgin alpine meadows (Chaiinsheel Bugyal) at 3,550m', 'Border crest connecting Uttarkashi district with Shimla hills', 'Carpeted with alpine wildflowers and gentians during monsoon', 'Untouched offbeat camping paradise far from commercial crowds'],
+    bestTime: 'May to June & September to November',
+    altitude: '2,700 m - 3,550 m (11,647 ft)',
+    idealDuration: '3 - 4 Days',
+    startingPrice: 'Pricing on Request',
+    isPopular: true,
+    topAttractions: [
+      { name: 'Chaiinsheel Bugyal High Ridge', desc: 'Vast grassy alpine meadows offering 360-degree views of Garhwal and Kinnaur ranges.' },
+      { name: 'Arakot Apple Valley', desc: 'Fertile valley basin producing some of India’s finest high-altitude apples.' },
+      { name: 'Kirul & Balawat Villages', desc: 'Remote mountain settlements known for wooden multi-story homes.' },
+      { name: 'Tikula Camping Grounds', desc: 'Pristine forest glade ideal for starlight camping and bonfires.' }
+    ],
+    howToReach: {
+      byAir: 'Jolly Grant Airport Dehradun (185 km).',
+      byTrain: 'Dehradun Railway Station (165 km).',
+      byRoad: 'Reachable by car via Chakrata or Tiuni to Arakot, followed by scenic uphill mountain drive.'
+    }
+  },
+
   // ==========================================
   // 4. WILDLIFE & NATIONAL PARKS
   // ==========================================
