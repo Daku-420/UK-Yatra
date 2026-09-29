@@ -23,7 +23,8 @@ import {
   Mountain,
   Waves,
   Tent,
-  School
+  School,
+  BookOpen
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
@@ -1010,6 +1011,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </div>
 
             <Link 
+              to="/articles" 
+              className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
+                isActive('/articles') 
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              Articles
+            </Link>
+
+            <Link 
               to="/about" 
               className={`px-3 xl:px-3.5 py-2 text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/about') 
@@ -1453,6 +1465,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </div>
 
             <Link 
+              to="/articles" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+                isActive('/articles') 
+                  ? 'text-brand-orange' 
+                  : 'text-white hover:text-brand-orange'
+              }`}
+            >
+              <BookOpen className="w-5 h-5 text-brand-orange shrink-0" />
+              <span>Articles & Guides</span>
+            </Link>
+            <Link 
               to="/about" 
               onClick={() => setMobileMenuOpen(false)} 
               className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
@@ -1541,6 +1565,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 >
                   <Car className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                   <span>Taxi & Cabs</span>
+                </Link>
+                <Link 
+                  to="/articles" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                    isActive('/articles') 
+                      ? 'text-brand-orange' 
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                  <span>Articles</span>
                 </Link>
               </div>
             </div>

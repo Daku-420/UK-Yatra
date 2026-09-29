@@ -188,3 +188,77 @@ export interface FAQItem {
   answer: string;
   category: 'General' | 'Char Dham' | 'Trekking' | 'Booking & Payments' | 'Weather & Packing';
 }
+
+export type ArticleCategory =
+  | 'Destinations'
+  | 'Trekking'
+  | 'Pilgrimage'
+  | 'Travel Planning'
+  | 'Adventure'
+  | 'Honeymoon & Couples'
+  | 'Offbeat Uttarakhand';
+
+export interface ArticleSection {
+  id: string;
+  heading: string;
+  level?: 'h2' | 'h3';
+  content: string[];
+  callout?: {
+    type: 'verified' | 'tip' | 'warning' | 'route' | 'note';
+    title: string;
+    text: string;
+  };
+  table?: {
+    headers: string[];
+    rows: string[][];
+  };
+  highlights?: string[];
+  image?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
+}
+
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: ArticleCategory;
+  subcategory?: string;
+  featuredImage: string;
+  featuredImageAlt?: string;
+  author: {
+    name: string;
+    role: string;
+    avatar: string;
+    bio?: string;
+  };
+  publishedDate: string;
+  updatedDate: string;
+  readingTime: string;
+  primaryKeyword: string;
+  secondaryKeywords: string[];
+  tags: string[];
+  destination?: string;
+  trek?: string;
+  month?: string;
+  relatedArticles?: string[];
+  relatedPackages?: {
+    id?: string;
+    title: string;
+    duration: string;
+    price: string;
+    link: string;
+    image?: string;
+  }[];
+  seoTitle: string;
+  metaDescription: string;
+  canonicalUrl: string;
+  content: ArticleSection[];
+  faqs?: { question: string; answer: string }[];
+  quickStats?: { label: string; value: string; icon?: string }[];
+  isFeatured?: boolean;
+}
+

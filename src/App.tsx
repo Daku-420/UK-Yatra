@@ -35,6 +35,8 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogDetailPage } from './pages/BlogDetailPage';
+import { ArticlesPage } from './pages/ArticlesPage';
+import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { FaqPage } from './pages/FaqPage';
 import { ReviewsPage } from './pages/ReviewsPage';
 import { BookingEnquiryPage } from './pages/BookingEnquiryPage';
@@ -144,6 +146,10 @@ function AppInner() {
           {/* Blog & Travel Stories */}
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
+          
+          {/* Dedicated SEO Articles & Travel Guides */}
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/articles/:slug" element={<ArticleDetailPage onOpenBookingModal={handleOpenBookingModal} />} />
           
           {/* FAQs & Reviews */}
           <Route path="/faqs" element={<FaqPage />} />

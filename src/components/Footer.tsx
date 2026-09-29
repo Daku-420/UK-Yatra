@@ -91,6 +91,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/articles" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
+                  <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> Articles & Guides
+                </Link>
+              </li>
+              <li>
                 <Link to="/why-us" className="text-slate-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-2">
                   <ChevronRight className="w-3.5 h-3.5 text-brand-orange shrink-0" /> Why Choose Us
                 </Link>

@@ -5,6 +5,7 @@ import { ACTIVITIES } from '../data/activities';
 import { SPIRITUAL_CIRCUITS } from '../data/spiritual';
 import { FAQS } from '../data/faqs';
 import { BLOG_POSTS } from '../data/blogs';
+import { ARTICLES } from '../data/articles';
 export type SearchCategory = 
   | 'package' 
   | 'destination' 
@@ -236,6 +237,34 @@ const buildComprehensiveSearchIndex = (): RawSearchDoc[] => {
       category: 'blog',
       url: `/blog/${blog.slug}`,
       image: blog.image,
+      fields
+    });
+  });
+
+  // 8. DEDICATED ARTICLES & EDITORIAL GUIDES
+  ARTICLES.forEach(article => {
+    const fields: { section: string; text: string }[] = [
+      { section: 'Article Title', text: article.title },
+      { section: 'Summary', text: article.excerpt },
+      { section: 'Category & Focus', text: `${article.category} • ${article.subcategory || ''}` },
+      ...(article.content || []).map((sec) => ({
+        section: `Section: ${sec.heading}`,
+        text: sec.content.join(' ')
+      })),
+      { section: 'Keywords & Tags', text: `${article.primaryKeyword}, ${article.secondaryKeywords.join(', ')}, ${article.tags.join(', ')}` },
+      ...(article.faqs || []).map((faq) => ({
+        section: `FAQ: ${faq.question}`,
+        text: faq.answer
+      }))
+    ];
+
+    docs.push({
+      id: `article-${article.slug}`,
+      title: article.title,
+      subtitle: `${article.category} • ${article.readingTime}`,
+      category: 'blog',
+      url: `/articles/${article.slug}`,
+      image: article.featuredImage,
       fields
     });
   });

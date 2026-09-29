@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin
+
+# Host
+Host: https://uk-yatra.vercel.app
+
+# Sitemaps
+Sitemap: https://uk-yatra.vercel.app/sitemap.xml

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Sparkles, Search, ArrowRight } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogs';
 import { BlogCard } from '../components/BlogCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -34,6 +35,15 @@ export const BlogPage: React.FC = () => {
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
             Insider travel guides, trekking checklists, seasonal weather forecasts, and sacred spiritual lore curated by native Himalayan guides.
           </p>
+          <div className="pt-2">
+            <Link
+              to="/articles"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-orange text-white text-xs font-bold shadow-md hover:bg-orange-600 transition-colors"
+            >
+              <span>Browse All Travel Articles & Guides</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </div>
 
