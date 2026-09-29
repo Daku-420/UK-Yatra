@@ -355,6 +355,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     return false;
   };
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
+      return;
+    }
+    e.preventDefault();
+    if (window.location.pathname === '/' || window.location.pathname === '') {
+      window.location.reload();
+    } else {
+      window.location.href = '/';
+    }
+  };
+
   const isDestinationsActive = location.pathname.startsWith('/destinations');
 
   const isPackagesActive = 
@@ -417,7 +429,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       <nav className="glass-header py-2 xl:py-2.5 shadow-xl border-b border-white/10 px-3 sm:px-4 lg:px-4 xl:px-6 2xl:px-8 transition-all duration-300">
         <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-1.5 lg:gap-2 xl:gap-3 2xl:gap-4">
           {/* Official UK Yatra Brand Logo */}
-          <Link to="/" className="flex items-center group py-0.5 shrink-0">
+          <Link to="/" onClick={handleHomeClick} className="flex items-center group py-0.5 shrink-0" title="UK Yatra Home">
             <Logo size="md" className="group-hover:scale-[1.02] transition-transform drop-shadow-md" />
           </Link>
 
@@ -425,6 +437,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
           <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5 shrink-0">
             <Link 
               to="/" 
+              onClick={handleHomeClick}
               className={`hidden 2xl:inline-flex px-1.5 xl:px-2 2xl:px-2.5 py-1.5 xl:py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl whitespace-nowrap transition-colors ${
                 isActive('/') 
                   ? 'text-brand-orange' 
@@ -1096,7 +1109,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
         <div className="lg:hidden fixed inset-x-0 top-[60px] md:top-[88px] h-[calc(100dvh-60px)] md:h-[calc(100dvh-88px)] bg-[#000044]/98 backdrop-blur-2xl border-t border-white/10 z-50 overflow-y-auto p-5 pb-[calc(6.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-top-4 duration-200 flex flex-col justify-between shadow-2xl text-white">
           <div className="space-y-2">
             <div className="pb-3 mb-2 border-b border-white/10 px-2 flex items-center justify-between">
-              <Logo size="sm" />
+              <Link to="/" onClick={handleHomeClick} className="block cursor-pointer">
+                <Logo size="sm" />
+              </Link>
             </div>
             {/* Mobile Search */}
             <div className="px-1 pb-2">
@@ -1107,7 +1122,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </div>
             <Link 
               to="/" 
-              onClick={() => setMobileMenuOpen(false)} 
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                handleHomeClick(e);
+              }} 
               className={`flex items-center gap-2.5 px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
                 isActive('/') 
                   ? 'text-brand-orange' 
