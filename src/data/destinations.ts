@@ -166,10 +166,9 @@ export const DESTINATIONS: Destination[] = [
     name: 'Lansdowne',
     tagline: 'Quiet Cantonment Charm, Pine Woods & Colonial Serenity',
     category: 'Hills & Valleys',
-    image: '/assets/LANSDWONE/1 (1).jpg',
+    image: '/assets/LANSDWONE/lansdowne-pine-forest.jpg',
     gallery: [
-      '/assets/LANSDWONE/1 (1).jpg',
-      '/assets/LANSDWONE/1 (2).jpg',
+      '/assets/LANSDWONE/lansdowne-pine-forest.jpg',
       '/assets/LANSDWONE/1 (3).jpg'
     ],
     description: 'Founded as a British military cantonment and home to the Garhwal Rifles, Lansdowne is an unspoilt hill station filled with thick blue pine forests, heritage churches, and peaceful forest walks.',
@@ -223,13 +222,11 @@ export const DESTINATIONS: Destination[] = [
   {
     id: 'dhanaulti',
     name: 'Dhanaulti',
-    tagline: 'Serene Alpine Haven Amidst Deodars & Surkanda Devi Peak',
+    tagline: 'Serene Alpine Haven Amidst Towering Deodars',
     category: 'Hills & Valleys',
-    image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.jpg',
+    image: '/assets/dhanaulti/dhanaulti-nature-forest.jpg',
     gallery: [
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.jpg',
-      '/assets/dhanaulti/Misty Forest Path of Nature and Care.jpg',
-      '/assets/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.jpg',
+      '/assets/dhanaulti/dhanaulti-nature-forest.jpg',
       '/assets/dhanaulti/Snowy Mountain Village Road.jpg'
     ],
     description: 'Located just 30 km past Mussoorie, Dhanaulti offers quiet alpine charm without commercial crowds. Walk through towering deodar woods at Eco Park and trek to the sacred mountain-top Surkanda Devi temple.',
@@ -253,14 +250,11 @@ export const DESTINATIONS: Destination[] = [
   {
     id: 'kausani',
     name: 'Kausani',
-    tagline: 'Switzerland of India & 300-km Himalayan Snow Wall',
+    tagline: 'Switzerland of India with 300 km Panoramic Himalayan Range',
     category: 'Hills & Valleys',
-    image: '/assets/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
+    image: '/assets/kausani/kausani-himalayan-peaks.jpg',
     gallery: [
-      '/assets/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
-      '/assets/kausani/1 (1).jpg',
-      '/assets/kausani/1 (2).jpg',
-      '/assets/kausani/1 (3).jpg',
+      '/assets/kausani/kausani-himalayan-peaks.jpg',
       '/assets/kausani/1 (4).jpg'
     ],
     description: 'Mahatma Gandhi dubbed Kausani the "Switzerland of India". Perched atop a ridge, it offers an uninterrupted 300 km panoramic view of Himalayan peaks including Trishul, Nanda Devi, and Panchachuli.',
@@ -314,12 +308,11 @@ export const DESTINATIONS: Destination[] = [
   {
     id: 'almora',
     name: 'Almora',
-    tagline: 'Cultural Heartland of Kumaon & Panoramic Himalayan Ridge',
+    tagline: 'Cultural Capital of Kumaon with Magnificent Himalayan Views',
     category: 'Hills & Valleys',
-    image: '/assets/almora/2 (1).jpg',
+    image: '/assets/almora/almora-ridge-view.jpg',
     gallery: [
-      '/assets/almora/2 (1).jpg',
-      '/assets/almora/2 (2).jpg',
+      '/assets/almora/almora-ridge-view.jpg',
       '/assets/almora/2 (3).jpg',
       '/assets/almora/2 (4).jpg'
     ],
@@ -345,15 +338,12 @@ export const DESTINATIONS: Destination[] = [
   {
     id: 'chamba',
     name: 'Chamba',
-    tagline: 'Quiet Garhwal Mountain Outpost & Apple Orchard Haven',
+    tagline: 'Tranquil Apple Hamlet Overlooking Tehri Lake and Himalayan Peaks',
     category: 'Hills & Valleys',
-    image: '/assets/chamba/Turquoise Himalayan Lake Valley Vista.jpg',
+    image: '/assets/chamba/chamba-himalayan-vista.jpg',
     gallery: [
-      '/assets/chamba/Turquoise Himalayan Lake Valley Vista.jpg',
-      '/assets/chamba/1 (1).jpg',
-      '/assets/chamba/1 (2).jpg',
-      '/assets/chamba/1 (3).jpg',
-      '/assets/chamba/1 (4).jpg'
+      '/assets/chamba/chamba-himalayan-vista.jpg',
+      '/assets/chamba/1 (3).jpg'
     ],
     description: 'Perched at 1,600 m amidst pine and deodar forests in Tehri Garhwal, Chamba is a tranquil, uncommercialized retreat offering sweeping views of the snow-clad Himalayas, verdant terrace fields, and the shimmering waters of nearby Tehri Lake.',
     highlights: ['Pristine Himalayan peak panorama', 'Proximity to Tehri Lake water sports', 'Gabbar Singh Memorial', 'Pine and rhododendron nature trails'],
@@ -466,11 +456,9 @@ export const DESTINATIONS: Destination[] = [
     name: 'Dhanachuli',
     tagline: 'Untouched Kumaon Ridge Hamlet with Majestic Peak Vistas',
     category: 'Hills & Valleys',
-    image: '/assets/dhanachuli/1 (1).jpg',
+    image: '/assets/dhanachuli/dhanachuli-heritage-haven.jpg',
     gallery: [
-      '/assets/dhanachuli/1 (1).jpg',
-      '/assets/dhanachuli/1 (2).jpg',
-      '/assets/dhanachuli/1 (3).jpg'
+      '/assets/dhanachuli/dhanachuli-heritage-haven.jpg'
     ],
     description: 'A hidden village near Mukteshwar perched at 2,133 m, Dhanachuli offers unspoiled mountain beauty, endless apple and peach orchards, and dramatic unobstructed views of the snow-clad Nanda Devi range in total peace.',
     highlights: ['Bhalu Gaad Waterfall trek', 'Nanda Devi panoramic ridge views', 'Apple and plum orchard strolls', 'Luxury boutique mountain homestays'],
@@ -751,12 +739,9 @@ export const DESTINATIONS: Destination[] = [
     name: 'Haridwar',
     tagline: 'Gateway to the Gods & Holy Har Ki Pauri Ganga Aarti',
     category: 'Spiritual',
-    image: '/assets/haridwar/Twilight Temple Festival by the River.jpg',
+    image: '/assets/haridwar/haridwar-ganga-aarti-aerial.jpg',
     gallery: [
-      '/assets/haridwar/Twilight Temple Festival by the River.jpg',
-      '/assets/haridwar/Aerial Riverside Festival at Dusk.jpg',
-      '/assets/haridwar/Riverside Ghat and Orange Bridge.jpg',
-      '/assets/haridwar/Sunset Crowds Along the Sacred River.jpg'
+      '/assets/haridwar/haridwar-ganga-aarti-aerial.jpg'
     ],
     description: 'Where the holy Ganges exits the Himalayas to touch the plains of Northern India. Haridwar is one of India’s seven holiest cities (Sapta Puri) famous for the mesmerizing evening Ganga Aarti at Har Ki Pauri.',
     highlights: ['Har Ki Pauri Maha Aarti', 'Mansa Devi & Chandi Devi cable cars', 'Daksheshwar Mahadev Temple', 'Sacred Brahma Kund dip'],

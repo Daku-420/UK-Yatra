@@ -49,9 +49,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/haridwar/Twilight Temple Festival by the River.jpg',
+      '/assets/haridwar/haridwar-ganga-aarti-aerial.jpg',
       '/assets/rishikesh/1 (2).jpg',
-      '/assets/haridwar/Riverside Ghat and Orange Bridge.jpg'
+      '/assets/haridwar/haridwar-ganga-aarti-aerial.jpg'
     ],
     rating: 4.9,
     reviewsCount: 68,
@@ -361,7 +361,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     gallery: [
       '/assets/mussorie/1 (1).jpg',
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/haridwar/Twilight Temple Festival by the River.jpg'
+      '/assets/haridwar/haridwar-ganga-aarti-aerial.jpg'
     ],
     rating: 4.9,
     reviewsCount: 89,
@@ -913,9 +913,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (1).jpg',
+    image: '/assets/LANSDWONE/lansdowne-pine-forest.jpg',
     gallery: [
-      '/assets/LANSDWONE/1 (1).jpg',
+      '/assets/LANSDWONE/lansdowne-pine-forest.jpg',
       '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.jpg',
       '/assets/LANSDWONE/1 (2).jpg'
     ],
@@ -1892,9 +1892,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (1).jpg',
+    image: '/assets/LANSDWONE/lansdowne-pine-forest.jpg',
     gallery: [
-      '/assets/LANSDWONE/1 (1).jpg',
+      '/assets/LANSDWONE/lansdowne-pine-forest.jpg',
       '/assets/LANSDWONE/1 (2).jpg'
     ],
     rating: 4.84,
