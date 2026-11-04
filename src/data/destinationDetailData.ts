@@ -183,8 +183,8 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
       }
     ],
     nearby: [
-      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/assets/dhanaulti/Misty Forest Path of Nature and Care.png' },
-      { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/assets/chakrata/Sunlit Mountain Resort Panorama.png' },
+      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/assets/dhanaulti/Misty Forest Path of Nature and Care.jpg' },
+      { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/assets/chakrata/Sunlit Mountain Resort Panorama.jpg' },
       { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' }
     ],
     faqs: [
@@ -240,7 +240,7 @@ export function getDestinationExtraData(id: string, name: string, category: stri
       nearby: existing.nearby || [
         { name: 'Rishikesh', distance: 'Scenic Drive', desc: 'Yoga capital of the world and hub for Ganga river rafting.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
         { name: 'Nainital', distance: 'Scenic Drive', desc: 'Iconic emerald lake city surrounded by seven high ridges.', path: '/destinations/nainital', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' },
-        { name: 'Auli', distance: 'Scenic Drive', desc: 'India’s premier ski destination with sweeping Nanda Devi panoramas.', path: '/destinations/auli', image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png' }
+        { name: 'Auli', distance: 'Scenic Drive', desc: 'India’s premier ski destination with sweeping Nanda Devi panoramas.', path: '/destinations/auli', image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg' }
       ],
       faqs: existing.faqs || [
         { question: `What is the best time to visit ${name}?`, answer: `${name} is best visited between March and June for pleasant weather, and from September to November for crystal clear Himalayan views.` },
@@ -304,7 +304,7 @@ export function getDestinationExtraData(id: string, name: string, category: stri
     ],
     nearby: [
       { name: 'Rishikesh', distance: 'Direct Highway', desc: 'World capital of yoga, sacred evening aartis, and white-water rapids.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: '/assets/mussorie/Himalayan Hill Town Panorama.png' },
+      { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: '/assets/mussorie/Himalayan Hill Town Panorama.jpg' },
       { name: 'Nainital', distance: 'Lake District', desc: 'Enchanting emerald lake surrounded by lush forested mountain peaks.', path: '/destinations/nainital', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' }
     ],
     faqs: [

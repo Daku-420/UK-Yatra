@@ -9,15 +9,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Mussoorie',
     tagline: 'The Queen of Hills & Quintessential Colonial Retreat',
     category: 'Hills & Valleys',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
+    image: '/assets/mussorie/1 (1).jpg',
     gallery: [
-      '/assets/mussorie/Himalayan Hill Town Panorama.png',
-      '/assets/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.png',
       '/assets/mussorie/1 (1).jpg',
       '/assets/mussorie/1 (2).jpg',
       '/assets/mussorie/1 (3).jpg',
       '/assets/mussorie/1 (4).jpg',
-      '/assets/mussorie/1 (5).jpg'
+      '/assets/mussorie/1 (5).jpg',
+      '/assets/mussorie/Himalayan Hill Town Panorama.jpg'
     ],
     description: 'Perched overlooking the Doon Valley and Shivalik range, Mussoorie charms travellers with its colonial architecture, bustling Mall Road, cascading waterfalls, and panoramic sunset viewpoints at Gun Hill and George Everest Peak.',
     highlights: ['Mall Road heritage walk', 'Kempty & Bhatta Falls', 'George Everest Peak ridge trail', 'Gun Hill cable car'],
@@ -75,13 +74,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Auli',
     tagline: 'India’s Premier Skiing Paradise & 360° Himalayan Vista',
     category: 'Hills & Valleys',
-    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg',
     gallery: [
-      '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
-      '/assets/AULI/Snowy Himalayan Lake Panorama.png',
-      '/assets/AULI/Alpine Village Beneath Snowy Peaks.png',
-      '/assets/AULI/Golden Hour Himalayan Terrace View.png',
-      '/assets/AULI/Misty Jaul Hill Viewpoint with Cow.png'
+      '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg',
+      '/assets/AULI/Snowy Himalayan Lake Panorama.jpg',
+      '/assets/AULI/Alpine Village Beneath Snowy Peaks.jpg',
+      '/assets/AULI/Golden Hour Himalayan Terrace View.jpg',
+      '/assets/AULI/Misty Jaul Hill Viewpoint with Cow.jpg'
     ],
     description: 'Surrounded by pine and oak forests with front-row views of Nanda Devi, Kamet, and Mana Parvat, Auli is the ultimate winter wonderland for skiing, snowboarding, and highest cable car rides.',
     highlights: ['Auli Ropeway (Longest in Asia, 4 km)', 'Artificial Lake with reflections', 'Nanda Devi 360° Panorama', 'Gorson Bugyal Snow Trek'],
@@ -106,13 +105,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Ranikhet',
     tagline: 'The Queen’s Meadow, Military Heritage & Apple Orchards',
     category: 'Hills & Valleys',
-    image: '/assets/ranikhet/1 (1).png',
+    image: '/assets/ranikhet/1 (1).jpg',
     gallery: [
-      '/assets/ranikhet/1 (1).png',
-      '/assets/ranikhet/1 (2).png',
-      '/assets/ranikhet/1 (1).png',
-      '/assets/ranikhet/1 (4).png',
-      '/assets/ranikhet/1 (4).png'
+      '/assets/ranikhet/1 (1).jpg',
+      '/assets/ranikhet/1 (2).jpg',
+      '/assets/ranikhet/1 (3).jpg',
+      '/assets/ranikhet/1 (4).jpg',
+      '/assets/ranikhet/1 (5).jpg'
     ],
     description: 'Home to the Kumaon Regimental Centre, Ranikhet offers undisturbed tranquility, fragrant pine and deodar forests, ancient Jhula Devi temple, and majestic views of Trishul and Nanda Devi peaks.',
     highlights: ['Majkhali snow panorama', 'Chaubatia Apple Orchards', 'Jhula Devi Bell Temple', 'Kumaon Regimental Centre Museum'],
@@ -137,12 +136,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Chakrata',
     tagline: 'Secluded Jaunsar Bawar Haven & Roaring Tiger Falls',
     category: 'Hills & Valleys',
-    image: '/assets/chakrata/Sunlit Mountain Resort Panorama.png',
+    image: '/assets/chakrata/Sunlit Mountain Resort Panorama.jpg',
     gallery: [
-      '/assets/chakrata/Sunlit Mountain Resort Panorama.png',
-      '/assets/chakrata/1 (1).png',
-      '/assets/chakrata/1 (2).png',
-      '/assets/chakrata/1 (2).png'
+      '/assets/chakrata/Sunlit Mountain Resort Panorama.jpg',
+      '/assets/chakrata/1 (1).jpg',
+      '/assets/chakrata/1 (2).jpg',
+      '/assets/chakrata/1 (3).jpg'
     ],
     description: 'An untouched British cantonment nestled in the Jaunsar-Bawar region. Chakrata is renowned for dense deodar forests, peaceful walking trails, Chilmiri sunset neck, and the thundering 312-foot Tiger Falls.',
     highlights: ['Tiger Falls (One of highest in India)', 'Chilmiri Neck sunset viewpoint', 'Deoban ancient deodar woods', 'Budher Caves trek'],
@@ -167,11 +166,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Lansdowne',
     tagline: 'Quiet Cantonment Charm, Pine Woods & Colonial Serenity',
     category: 'Hills & Valleys',
-    image: '/assets/LANSDWONE/1 (2).png',
+    image: '/assets/LANSDWONE/1 (1).jpg',
     gallery: [
-      '/assets/LANSDWONE/1 (2).png',
-      '/assets/LANSDWONE/1 (2).png',
-      '/assets/LANSDWONE/1 (3).png'
+      '/assets/LANSDWONE/1 (1).jpg',
+      '/assets/LANSDWONE/1 (2).jpg',
+      '/assets/LANSDWONE/1 (3).jpg'
     ],
     description: 'Founded as a British military cantonment and home to the Garhwal Rifles, Lansdowne is an unspoilt hill station filled with thick blue pine forests, heritage churches, and peaceful forest walks.',
     highlights: ['Tip-in-Top viewpoint', 'Bhulla Tal Lake', 'Garhwal Rifles War Memorial', 'St. John’s Colonial Church'],
@@ -196,12 +195,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Mukteshwar',
     tagline: 'Apple Orchards, Rock Climbing & Trishul Peak Views',
     category: 'Hills & Valleys',
-    image: '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
+    image: '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.jpg',
     gallery: [
-      '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
-      '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
-      '/assets/mukhteshwar/Jagged Cliff View Over Lush Terraced Valley.png',
-      '/assets/mukhteshwar/Mossy Forest Shrine Gateway.png'
+      '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.jpg',
+      '/assets/mukhteshwar/Mukteshwar Temple Forest Entrance.jpg',
+      '/assets/mukhteshwar/Jagged Cliff View Over Lush Terraced Valley.jpg',
+      '/assets/mukhteshwar/Mossy Forest Shrine Gateway.jpg'
     ],
     description: 'Named after the 350-year-old Shiva shrine Mukteshwar Dham, this quiet Kumaon ridge town is surrounded by sprawling fruit orchards and dramatic overhanging cliffs at Chauli Ki Jali.',
     highlights: ['Chauli Ki Jali rocky cliff', 'Mukteshwar Dham 350-yr shrine', 'Breathtaking Nanda Devi vistas', 'Peaceful orchard stays'],
@@ -226,12 +225,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Dhanaulti',
     tagline: 'Serene Alpine Haven Amidst Deodars & Surkanda Devi Peak',
     category: 'Hills & Valleys',
-    image: '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
+    image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.jpg',
     gallery: [
-      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
-      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
-      '/assets/dhanaulti/Snowy Mountain Village Road.png',
-      '/assets/dhanaulti/Snowy Mountain Village Road.png'
+      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.jpg',
+      '/assets/dhanaulti/Misty Forest Path of Nature and Care.jpg',
+      '/assets/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.jpg',
+      '/assets/dhanaulti/Snowy Mountain Village Road.jpg'
     ],
     description: 'Located just 30 km past Mussoorie, Dhanaulti offers quiet alpine charm without commercial crowds. Walk through towering deodar woods at Eco Park and trek to the sacred mountain-top Surkanda Devi temple.',
     highlights: ['Eco Park Deodar Woods', 'Surkanda Devi Temple (2,757m)', 'Potato Farm Viewpoint', 'Adventure sports park'],
@@ -256,13 +255,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Kausani',
     tagline: 'Switzerland of India & 300-km Himalayan Snow Wall',
     category: 'Hills & Valleys',
-    image: '/assets/kausani/1 (2).png',
+    image: '/assets/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
     gallery: [
-      '/assets/kausani/1 (2).png',
-      '/assets/kausani/1 (2).png',
-      '/assets/kausani/1 (2).png',
-      '/assets/kausani/1 (4).png',
-      '/assets/kausani/1 (4).png'
+      '/assets/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
+      '/assets/kausani/1 (1).jpg',
+      '/assets/kausani/1 (2).jpg',
+      '/assets/kausani/1 (3).jpg',
+      '/assets/kausani/1 (4).jpg'
     ],
     description: 'Mahatma Gandhi dubbed Kausani the "Switzerland of India". Perched atop a ridge, it offers an uninterrupted 300 km panoramic view of Himalayan peaks including Trishul, Nanda Devi, and Panchachuli.',
     highlights: ['300 km Himalayan snow peak panorama', 'Anasakti Ashram (Gandhi Smarak)', 'Kausani Tea Estate', 'Rudradhari Falls & Caves'],
@@ -287,12 +286,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Munsiyari',
     tagline: 'Little Kashmir & Gateway to the Panchachuli Snow Peaks',
     category: 'Hills & Valleys',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/assets/munsyari/2 (1).jpg',
     gallery: [
-      '/assets/munsyari/2 (1).png',
-      '/images/destinations/munsiyari/photo-1.jpg',
-      '/images/destinations/munsiyari/photo-2.jpg',
-      '/assets/munsyari/2 (1).png'
+      '/assets/munsyari/2 (1).jpg',
+      '/assets/munsyari/2 (2).jpg',
+      '/assets/munsyari/2 (3).jpg',
+      '/assets/munsyari/2 (4).jpg'
     ],
     description: 'Perched on the rim of Goriganga river valley in Pithoragarh, Munsiyari provides unhindered vistas of the iconic five snow peaks of Panchachuli and serves as gateway to Milam & Ralam glaciers.',
     highlights: ['Panchachuli 5 Peaks View', 'Birthi Waterfalls (126m)', 'Milam & Ralam Glacier trails', 'Khaliya Top Snow Trek'],
@@ -317,12 +316,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Almora',
     tagline: 'Cultural Heartland of Kumaon & Panoramic Himalayan Ridge',
     category: 'Hills & Valleys',
-    image: '/assets/almora/2 (2).png',
+    image: '/assets/almora/2 (1).jpg',
     gallery: [
-      '/assets/almora/2 (2).png',
-      '/assets/almora/2 (2).png',
-      '/assets/almora/2 (3).png',
-      '/assets/almora/2 (4).png'
+      '/assets/almora/2 (1).jpg',
+      '/assets/almora/2 (2).jpg',
+      '/assets/almora/2 (3).jpg',
+      '/assets/almora/2 (4).jpg'
     ],
     description: 'Perched on a horse-saddle shaped ridge in Kumaon, Almora is celebrated for its rich cultural heritage, 200-year-old Lala Bazaar, ancient Kasar Devi temple renowned for its unique geomagnetic energy, and unobstructed views of Nanda Devi and Trishul.',
     highlights: ['Kasar Devi Temple & Crank’s Ridge', '9th-century Katarmal Sun Temple', 'Bright End Corner sunrise & sunset', 'Heritage Lala Bazaar & traditional Bal Mithai'],
@@ -348,13 +347,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Chamba',
     tagline: 'Quiet Garhwal Mountain Outpost & Apple Orchard Haven',
     category: 'Hills & Valleys',
-    image: '/assets/chamba/1 (1).png',
+    image: '/assets/chamba/Turquoise Himalayan Lake Valley Vista.jpg',
     gallery: [
-      '/assets/chamba/1 (1).png',
-      '/assets/chamba/1 (1).png',
-      '/assets/chamba/1 (1).png',
-      '/assets/chamba/1 (3).png',
-      '/assets/chamba/1 (3).png'
+      '/assets/chamba/Turquoise Himalayan Lake Valley Vista.jpg',
+      '/assets/chamba/1 (1).jpg',
+      '/assets/chamba/1 (2).jpg',
+      '/assets/chamba/1 (3).jpg',
+      '/assets/chamba/1 (4).jpg'
     ],
     description: 'Perched at 1,600 m amidst pine and deodar forests in Tehri Garhwal, Chamba is a tranquil, uncommercialized retreat offering sweeping views of the snow-clad Himalayas, verdant terrace fields, and the shimmering waters of nearby Tehri Lake.',
     highlights: ['Pristine Himalayan peak panorama', 'Proximity to Tehri Lake water sports', 'Gabbar Singh Memorial', 'Pine and rhododendron nature trails'],
@@ -379,12 +378,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Kanatal',
     tagline: 'Serene High-Altitude Apple Orchards & Forest Glades',
     category: 'Hills & Valleys',
-    image: '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
+    image: '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.jpg',
     gallery: [
-      '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
-      '/assets/kanatal/Golden Hour Mountain Village and Sunset.png',
-      '/assets/kanatal/Hillside Garden Estate at Sunset.png',
-      '/assets/kanatal/Turquoise Mountain Lake Vista.png'
+      '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.jpg',
+      '/assets/kanatal/Golden Hour Mountain Village and Sunset.jpg',
+      '/assets/kanatal/Hillside Garden Estate at Sunset.jpg',
+      '/assets/kanatal/Turquoise Mountain Lake Vista.jpg'
     ],
     description: 'Located on the Mussoorie-Chamba highway at 2,590 m, Kanatal is a quiet mountain hamlet shrouded in mist, apple orchards, and dense cedar groves. Famous for peaceful eco-resorts, forest walks in Kaudia Forest, and breathtaking views of the Bandarpunch peaks.',
     highlights: ['Kaudia Jungle Safari & nature walk', 'Surkanda Devi Temple ropeway trek', 'Tehri Lake view excursions', 'Stargazing & alpine camping'],
@@ -409,12 +408,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Bhowali',
     tagline: 'The Fruit Basket of Kumaon & Historic Sanatorium Town',
     category: 'Hills & Valleys',
-    image: '/assets/bhowali/Serene Mountain Lakeside Temple Town.png',
+    image: '/assets/bhowali/Serene Mountain Lakeside Temple Town.jpg',
     gallery: [
-      '/assets/bhowali/Serene Mountain Lakeside Temple Town.png',
-      '/assets/bhowali/Himalayan Peaks in Golden Alpenglow.png',
-      '/assets/bhowali/Snow-Capped Mountains Beyond Forested Ridges.png',
-      '/assets/bhowali/Turquoise Lake Beneath a Leafy Canopy.png'
+      '/assets/bhowali/Serene Mountain Lakeside Temple Town.jpg',
+      '/assets/bhowali/Himalayan Peaks in Golden Alpenglow.jpg',
+      '/assets/bhowali/Snow-Capped Mountains Beyond Forested Ridges.jpg',
+      '/assets/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg'
     ],
     description: 'Situated just 11 km from Nainital at an altitude of 1,706 m, Bhowali is surrounded by lush oak and pine forests. Known historically for its rejuvenating mountain air, bustling fruit markets filled with fresh apricots and plums, and the spiritual Golu Devta temple at Ghorakhal.',
     highlights: ['Golu Devta Temple at Ghorakhal', 'Kumaon wholesale fruit market', 'Shyamkhet Tea Garden', 'Gateway hub to Nainital, Bhimtal & Almora'],
@@ -467,11 +466,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Dhanachuli',
     tagline: 'Untouched Kumaon Ridge Hamlet with Majestic Peak Vistas',
     category: 'Hills & Valleys',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/dhanachuli/1 (1).jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop'
+      '/assets/dhanachuli/1 (1).jpg',
+      '/assets/dhanachuli/1 (2).jpg',
+      '/assets/dhanachuli/1 (3).jpg'
     ],
     description: 'A hidden village near Mukteshwar perched at 2,133 m, Dhanachuli offers unspoiled mountain beauty, endless apple and peach orchards, and dramatic unobstructed views of the snow-clad Nanda Devi range in total peace.',
     highlights: ['Bhalu Gaad Waterfall trek', 'Nanda Devi panoramic ridge views', 'Apple and plum orchard strolls', 'Luxury boutique mountain homestays'],
@@ -496,10 +495,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Ramgarh',
     tagline: 'Fruit Bowl of Kumaon & Rabindranath Tagore’s Mountain Muse',
     category: 'Hills & Valleys',
-    image: '/assets/ramgarh/Sunlit Mountain Terrace Cottages.png',
+    image: '/assets/ramgarh/Sunlit Mountain Terrace Cottages.jpg',
     gallery: [
-      '/assets/ramgarh/Sunlit Mountain Terrace Cottages.png',
-      '/assets/ramgarh/Sunlit Mountain Terrace Cottages.png'
+      '/assets/ramgarh/Sunlit Mountain Terrace Cottages.jpg',
+      '/assets/ramgarh/Misty Mountain Garden Retreat.jpg'
     ],
     description: 'Divided into Malla (Upper) and Talla (Lower) Ramgarh, this idyllic hill retreat was the beloved sanctuary of Rabindranath Tagore and Mahadevi Verma. Renowned for acres of apricot, peach, and apple orchards overlooking the glittering snow peaks.',
     highlights: ['Tagore Top historic retreat', 'Mahadevi Verma Memorial Museum', 'Fruit orchards of peaches and plums', 'Peaceful Himalayan bird watching'],
@@ -752,12 +751,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Haridwar',
     tagline: 'Gateway to the Gods & Holy Har Ki Pauri Ganga Aarti',
     category: 'Spiritual',
-    image: '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
+    image: '/assets/haridwar/Twilight Temple Festival by the River.jpg',
     gallery: [
-      '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
-      '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
-      '/assets/rishikesh/1 (1).jpg',
-      '/assets/rishikesh/1 (2).jpg'
+      '/assets/haridwar/Twilight Temple Festival by the River.jpg',
+      '/assets/haridwar/Aerial Riverside Festival at Dusk.jpg',
+      '/assets/haridwar/Riverside Ghat and Orange Bridge.jpg',
+      '/assets/haridwar/Sunset Crowds Along the Sacred River.jpg'
     ],
     description: 'Where the holy Ganges exits the Himalayas to touch the plains of Northern India. Haridwar is one of India’s seven holiest cities (Sapta Puri) famous for the mesmerizing evening Ganga Aarti at Har Ki Pauri.',
     highlights: ['Har Ki Pauri Maha Aarti', 'Mansa Devi & Chandi Devi cable cars', 'Daksheshwar Mahadev Temple', 'Sacred Brahma Kund dip'],
@@ -785,9 +784,7 @@ export const DESTINATIONS: Destination[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/rishikesh/1 (1).png',
       '/assets/rishikesh/1 (2).jpg',
-      '/assets/rishikesh/1 (2).png',
       '/assets/rishikesh/1 (3).jpg'
     ],
     description: 'Where the holy Ganges surges down the Shivalik foothills, Rishikesh bridges serene spirituality with high-adrenaline sports like white-water rafting, riverside luxury camping, and soulful Ganga Aarti.',
@@ -813,12 +810,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Yamunotri',
     tagline: 'Sacred Origin of River Yamuna & Goddess Yamuna Dham',
     category: 'Spiritual',
-    image: '/assets/yamnotri/3 (1).webp',
+    image: '/assets/yamnotri/3 (1).jpg',
     gallery: [
-      '/assets/yamnotri/3 (1).webp',
-      '/assets/yamnotri/3 (2).webp',
       '/assets/yamnotri/3 (1).jpg',
-      '/assets/yamnotri/3 (2).jpg'
+      '/assets/yamnotri/3 (2).jpg',
+      '/assets/yamnotri/3 (1).webp',
+      '/assets/yamnotri/3 (2).webp'
     ],
     description: 'The westernmost shrine of the Char Dham circuit, nestled against Bandarpoonch peak. Devotees cook rice and potatoes in the boiling hot springs of Surya Kund before offering prayers to black marble Goddess Yamuna.',
     highlights: ['Yamunotri Temple darshan', 'Surya Kund thermal hot springs', 'Divya Shila sacred rock', 'Janki Chatti base trek (6 km)'],

@@ -60,7 +60,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/auli-joshimath',
     duration: '3N/4D',
     badge: 'Snow & Views',
-    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png'
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg'
   },
   {
     name: 'Mussoorie',
@@ -69,7 +69,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/mussoorie-dhanaulti',
     duration: '3N/4D',
     badge: 'Weekend',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png'
+    image: '/assets/mussorie/Himalayan Hill Town Panorama.jpg'
   },
   {
     name: 'Nainital',

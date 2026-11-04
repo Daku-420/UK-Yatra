@@ -956,7 +956,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             {[
               { img: '/assets/KEDARNATH/3 (1).jpg', tag: '#Kedarnath' },
               { img: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg', tag: '#RishikeshRafting' },
-              { img: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png', tag: '#AuliSkiing' },
+              { img: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg', tag: '#AuliSkiing' },
               { img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=400&auto=format&fit=crop', tag: '#NainitalBoating' },
               { img: '/assets/valley of flowee/4 (1).jpg', tag: '#ValleyOfFlowers' },
               { img: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=400&auto=format&fit=crop', tag: '#CorbettSafari' },

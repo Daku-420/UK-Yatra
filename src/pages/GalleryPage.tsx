@@ -47,7 +47,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Golden Sunset over Nanda Devi from Auli',
       location: 'Auli Snow Slopes',
       category: 'Scenic',
-      image: '/assets/AULI/Golden Hour Himalayan Terrace View.png',
+      image: '/assets/AULI/Golden Hour Himalayan Terrace View.jpg',
       likes: 1540
     },
     {

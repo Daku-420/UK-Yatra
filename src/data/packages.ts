@@ -385,7 +385,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 80,
@@ -505,7 +505,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 87,
@@ -821,7 +821,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 108,
@@ -934,7 +934,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 115,
@@ -1229,7 +1229,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 136,
@@ -1692,7 +1692,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 54,
@@ -1811,7 +1811,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 61,
@@ -1903,7 +1903,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 68,
@@ -2022,7 +2022,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
     ],
     "rating": 5.0,
     "reviewsCount": 75,
@@ -2110,11 +2110,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
+    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
     "gallery": [
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
       "/assets/rishikesh/1 (1).jpg",
-      "/assets/mussorie/Himalayan Hill Town Panorama.png"
+      "/assets/mussorie/Himalayan Hill Town Panorama.jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 82,
@@ -2188,11 +2188,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
+    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
     "gallery": [
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
       "/assets/rishikesh/1 (1).jpg",
-      "/assets/mussorie/Himalayan Hill Town Panorama.png"
+      "/assets/mussorie/Himalayan Hill Town Panorama.jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 89,
@@ -2537,11 +2537,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Dec - Mar (Snow & Skiing) / Apr - Jun",
     "category": "Trek & Adventure",
-    "image": "/assets/AULI/Sunlit Snowy Mountain Ski Resort.png",
+    "image": "/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg",
     "gallery": [
-      "/assets/AULI/Sunlit Snowy Mountain Ski Resort.png",
-      "/assets/AULI/Snowy Himalayan Lake Panorama.png",
-      "/assets/AULI/Alpine Village Beneath Snowy Peaks.png"
+      "/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg",
+      "/assets/AULI/Snowy Himalayan Lake Panorama.jpg",
+      "/assets/AULI/Alpine Village Beneath Snowy Peaks.jpg"
     ],
     "rating": 5.0,
     "reviewsCount": 117,
