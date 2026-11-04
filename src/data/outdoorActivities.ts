@@ -155,7 +155,7 @@ export const DESTINATION_ADVENTURES: DestinationAdventureItem[] = [
     id: 'Auli',
     name: 'Auli',
     tagline: 'India’s Premier Ski Resort',
-    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+    image: '/images/destinations/auli/photo-1.jpg',
     badge: 'Winter Paradise',
     activitiesCount: '8+ Adventures',
     activitiesList: ['Skiing', 'Snow Trekking', 'Snow Experiences', 'Camping']
@@ -173,7 +173,7 @@ export const DESTINATION_ADVENTURES: DestinationAdventureItem[] = [
     id: 'Mussoorie',
     name: 'Mussoorie',
     tagline: 'Queen of the Hills & Ridge Walks',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
+    image: '/assets/mussorie/1 (1).jpg',
     badge: 'Colonial Trails',
     activitiesCount: '12+ Adventures',
     activitiesList: ['Trekking', 'Camping', 'Rock Climbing', 'Adventure Activities']
@@ -348,12 +348,11 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Late December to March',
     startingPrice: 'Pricing on Request',
     maxAltitude: '10,010 ft (3,050 m)',
-    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+    image: '/images/destinations/auli/photo-1.jpg',
     imagePosition: 'center 50%',
     gallery: [
-      '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
-      '/assets/AULI/Snowy Himalayan Lake Panorama.png',
-      '/assets/AULI/Alpine Village Beneath Snowy Peaks.png',
+      '/images/destinations/auli/photo-1.jpg',
+      '/images/destinations/auli/photo-2.jpg',
       '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg'
     ],
     shortDesc: 'Glide down powdery slopes on India’s premier ski slopes directly facing the majesty of Nanda Devi.',
@@ -552,7 +551,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     imagePosition: 'center 85%',
     gallery: [
       '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
-      '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
     ],
     shortDesc: 'Starlit skies, crackling bonfires, live acoustic jams, and luxury Swiss tents beside mountain streams.',
     fullDesc: 'Disconnect from urban noise and wake up to birdsong, rustling pine leaves, and murmuring Himalayan streams. Our hand-picked glamping resorts combine rugged outdoor romance with hotel-like luxury: spacious waterproof Swiss tents with ensuite western bathrooms, air cooling/heating, sparkling swimming pools, volleyball courts, barbecue evenings, and guided sunrise forest trails.',
@@ -675,7 +674,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
     gallery: [
       '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
-      '/assets/mussorie/Himalayan Hill Town Panorama.png'
+      '/assets/mussorie/1 (1).jpg'
     ],
     shortDesc: 'Soar like a Himalayan golden eagle over terraced valleys, blue lakes, and snow-draped ridge lines.',
     fullDesc: 'Catch thermal updrafts and experience weightless flight seated comfortably in front of an experienced DGCA/APPI licensed tandem glider pilot. Launch from hilltop vantage points in Bhimtal, Naukuchiatal, or Mussoorie, carving smooth arcs across the sky with dramatic aerial vistas of emerald pine valleys and distant glaciated peaks.',
@@ -1221,11 +1220,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Round the Year',
     startingPrice: 'Pricing on Request',
     maxAltitude: '7,500 ft (2,286 m)',
-    image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
-      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
-      '/assets/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.png'
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
     ],
     shortDesc: 'Walk Burma bridges, skywalks, and ziplines suspended between colossal 150-year-old Deodar cedar trees.',
     fullDesc: 'Nestled amidst the serene deodar forests of Dhanaulti, the Eco Adventure Park offers thrilling aerial rope courses for both adrenaline seekers and adventurous families. Negotiate Burma bridges, swinging logs, commando nets, and zip between ancient trees with the crisp scent of pine resin and direct views of the snow-clad Garhwal range.',

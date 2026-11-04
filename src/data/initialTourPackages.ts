@@ -49,9 +49,8 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/haridwar/Twilight Temple Festival by the River.png',
-      '/assets/rishikesh/1 (2).jpg',
-      '/assets/haridwar/Riverside Ghat and Orange Bridge.png'
+      'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop',
+      '/assets/rishikesh/1 (2).jpg'
     ],
     rating: 4.9,
     reviewsCount: 68,
@@ -133,12 +132,11 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round (Snow in Dec-Feb)',
     category: 'Popular Uttarakhand',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
+    image: '/assets/mussorie/1 (1).jpg',
     gallery: [
-      '/assets/mussorie/Himalayan Hill Town Panorama.png',
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
-      '/assets/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.png',
-      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png'
+      '/assets/mussorie/1 (1).jpg',
+      '/assets/mussorie/1 (2).jpg',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.8,
     reviewsCount: 52,
@@ -217,7 +215,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/mussorie/Himalayan Hill Town Panorama.png',
+      '/assets/mussorie/1 (1).jpg',
       '/assets/rishikesh/1 (2).jpg'
     ],
     rating: 4.9,
@@ -309,11 +307,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Popular Uttarakhand',
-    image: '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
+    image: '/images/destinations/nainital/photo-1.jpg',
     gallery: [
-      '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
-      '/assets/mukhteshwar/Mukteshwar Temple Forest Entrance.png',
-      '/assets/mukhteshwar/Jagged Cliff View Over Lush Terraced Valley.png'
+      '/images/destinations/nainital/photo-1.jpg',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.8,
     reviewsCount: 38,
@@ -357,11 +354,11 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'September to June',
     category: 'Popular Uttarakhand',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
+    image: '/assets/mussorie/1 (1).jpg',
     gallery: [
-      '/assets/mussorie/Himalayan Hill Town Panorama.png',
+      '/assets/mussorie/1 (1).jpg',
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/haridwar/Twilight Temple Festival by the River.png'
+      'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.9,
     reviewsCount: 89,
@@ -544,12 +541,11 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'December to March (Skiing) & April to June (Green Bugyals)',
     category: 'Popular Uttarakhand',
-    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+    image: '/images/destinations/auli/photo-1.jpg',
     gallery: [
-      '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
-      '/assets/AULI/Snowy Himalayan Lake Panorama.png',
-      '/assets/AULI/Alpine Village Beneath Snowy Peaks.png',
-      '/assets/AULI/Golden Hour Himalayan Terrace View.png'
+      '/images/destinations/auli/photo-1.jpg',
+      '/images/destinations/auli/photo-2.jpg',
+      '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg'
     ],
     rating: 4.9,
     reviewsCount: 84,
@@ -764,7 +760,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/KEDARNATH/3 (1).jpg',
     gallery: [
       '/assets/KEDARNATH/3 (1).jpg',
-      '/assets/KEDARNATH/3 (2).jpg'
+      '/images/destinations/badrinath/photo-1.jpg'
     ],
     rating: 4.97,
     reviewsCount: 168,
@@ -813,8 +809,8 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/KEDARNATH/3 (1).jpg',
     gallery: [
       '/assets/KEDARNATH/3 (1).jpg',
-      '/assets/yamnotri/3 (1).webp',
-      '/assets/KEDARNATH/3 (2).jpg'
+      '/assets/yamnotri/3 (1).jpg',
+      '/images/destinations/badrinath/photo-1.jpg'
     ],
     rating: 4.98,
     reviewsCount: 245,
@@ -865,11 +861,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round (Winter Snow in Dec-Feb)',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/chakrata/Sunlit Mountain Resort Panorama.png',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      '/assets/chakrata/Sunlit Mountain Resort Panorama.png',
-      '/assets/chakrata/1 (1).png',
-      '/assets/chakrata/1 (2).png'
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.85,
     reviewsCount: 39,
@@ -912,11 +907,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (1).png',
+    image: '/images/destinations/lansdowne/photo-1.jpg',
     gallery: [
-      '/assets/LANSDWONE/1 (1).png',
-      '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
-      '/assets/LANSDWONE/1 (2).png'
+      '/images/destinations/lansdowne/photo-1.jpg',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.8,
     reviewsCount: 34,
@@ -960,11 +954,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'September to June',
     category: 'Kumaon',
-    image: '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
-      '/assets/ranikhet/1 (1).png',
-      '/assets/almora/2 (1).png'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.9,
     reviewsCount: 65,
@@ -1010,11 +1003,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Kumaon',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
-      '/assets/munsyari/2 (1).png',
-      '/assets/munsyari/2 (2).png',
-      '/assets/munsyari/2 (3).png'
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/photo-2.jpg'
     ],
     rating: 4.92,
     reviewsCount: 41,
@@ -1058,10 +1050,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
-      '/assets/munsyari/2 (1).png',
-      '/assets/munsyari/2 (2).png'
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/photo-2.jpg'
     ],
     rating: 4.95,
     reviewsCount: 56,
@@ -1197,7 +1189,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/rishikesh/1 (2).jpg'
+      '/images/destinations/jim-corbett/photo-1.jpg'
     ],
     rating: 4.88,
     reviewsCount: 58,
@@ -1317,11 +1309,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'May to June & September to November',
     category: 'Spiritual & Char Dham',
-    image: '/assets/yamnotri/3 (1).webp',
+    image: '/assets/yamnotri/3 (1).jpg',
     gallery: [
-      '/assets/yamnotri/3 (1).webp',
-      '/assets/yamnotri/3 (2).webp',
-      '/assets/yamnotri/3 (1).jpg'
+      '/assets/yamnotri/3 (1).jpg',
+      '/assets/yamnotri/3 (2).jpg'
     ],
     rating: 4.9,
     reviewsCount: 54,
@@ -1362,8 +1353,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/KEDARNATH/3 (1).jpg',
     gallery: [
       '/assets/KEDARNATH/3 (1).jpg',
-      '/assets/yamnotri/3 (1).webp',
-      '/assets/KEDARNATH/3 (2).jpg'
+      '/assets/yamnotri/3 (1).jpg'
     ],
     rating: 4.96,
     reviewsCount: 122,
@@ -1684,10 +1674,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Kumaon',
-    image: '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
-      '/assets/kausani/1 (1).png'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.89,
     reviewsCount: 40,
@@ -1726,10 +1715,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Kumaon',
-    image: '/assets/almora/2 (1).png',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      '/assets/almora/2 (1).png',
-      '/assets/almora/2 (2).png'
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.92,
     reviewsCount: 48,
@@ -1768,10 +1756,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Kumaon',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
-      '/assets/munsyari/2 (1).png',
-      '/assets/munsyari/2 (3).png'
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/photo-2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 35,
@@ -1850,11 +1838,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
-      '/assets/chamba/Turquoise Himalayan Lake Valley Vista.png'
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop',
+      '/images/destinations/tehri/photo-1.jpg'
     ],
     rating: 4.86,
     reviewsCount: 42,
@@ -1892,10 +1879,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (1).png',
+    image: '/images/destinations/lansdowne/photo-1.jpg',
     gallery: [
-      '/assets/LANSDWONE/1 (1).png',
-      '/assets/LANSDWONE/1 (2).png'
+      '/images/destinations/lansdowne/photo-1.jpg',
+      '/images/destinations/lansdowne/photo-2.jpg'
     ],
     rating: 4.84,
     reviewsCount: 29,
@@ -1934,10 +1921,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
-      '/assets/ramgarh/Sunlit Mountain Terrace Cottages.png'
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.9,
     reviewsCount: 33,

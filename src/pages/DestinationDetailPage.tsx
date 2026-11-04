@@ -245,13 +245,17 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               alt={`${destination.name} - Photo ${idx + 1}`}
               className="w-full h-full object-cover object-center scale-105 transition-transform duration-10000"
               loading={idx === 0 ? 'eager' : 'lazy'}
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop';
+              }}
             />
           </div>
         ))}
 
         {/* Cinematic Gradient Overlays */}
-        <div className="absolute inset-0 bg-hero-gradient z-[1] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/40 z-[1] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/30 z-[1] pointer-events-none" />
 
         {/* Hero Slider Navigation Arrows */}
         {galleryImages.length > 1 && (
@@ -1202,6 +1206,11 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               src={galleryImages[currentImageIndex]}
               alt={`${destination.name} photo ${currentImageIndex + 1}`}
               className="max-h-[72vh] sm:max-h-[78vh] max-w-full rounded-2xl object-contain shadow-2xl transition-all duration-300 select-none"
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop';
+              }}
             />
 
             {galleryImages.length > 1 && (
