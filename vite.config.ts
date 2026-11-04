@@ -9,4 +9,7 @@ export default defineConfig({
       ignored: ['**/public/**/*.mp4', '**/public/**/*.mov', '**/public/**/*.webm'],
     },
   },
+  build: {
+    chunkSizeWarningLimit: 3000,
+  },
 })
