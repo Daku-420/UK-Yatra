@@ -458,7 +458,9 @@ export const DESTINATIONS: Destination[] = [
     category: 'Hills & Valleys',
     image: '/assets/dhanachuli/dhanachuli-heritage-haven.jpg',
     gallery: [
-      '/assets/dhanachuli/dhanachuli-heritage-haven.jpg'
+      '/assets/dhanachuli/dhanachuli-heritage-haven.jpg',
+      '/assets/dhanachuli/dhanachuli-prayer-flags.jpg',
+      '/assets/dhanachuli/dhanachuli-apple-orchards.jpg'
     ],
     description: 'A hidden village near Mukteshwar perched at 2,133 m, Dhanachuli offers unspoiled mountain beauty, endless apple and peach orchards, and dramatic unobstructed views of the snow-clad Nanda Devi range in total peace.',
     highlights: ['Bhalu Gaad Waterfall trek', 'Nanda Devi panoramic ridge views', 'Apple and plum orchard strolls', 'Luxury boutique mountain homestays'],
