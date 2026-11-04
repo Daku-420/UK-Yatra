@@ -133,7 +133,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round (Snow in Dec-Feb)',
     category: 'Popular Uttarakhand',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
+    image: '/assets/mussorie/1 (1).jpg',
     gallery: [
       '/assets/mussorie/Himalayan Hill Town Panorama.png',
       '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
@@ -262,7 +262,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to November',
     category: 'Popular Uttarakhand',
-    image: 'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/destinations/nainital/photo-1.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop'
@@ -357,7 +357,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'September to June',
     category: 'Popular Uttarakhand',
-    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
+    image: '/assets/mussorie/1 (1).jpg',
     gallery: [
       '/assets/mussorie/Himalayan Hill Town Panorama.png',
       '/assets/rishikesh/1 (1).jpg',
@@ -544,7 +544,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'December to March (Skiing) & April to June (Green Bugyals)',
     category: 'Popular Uttarakhand',
-    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+    image: '/images/destinations/auli/photo-1.jpg',
     gallery: [
       '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
       '/assets/AULI/Snowy Himalayan Lake Panorama.png',
@@ -912,7 +912,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (2).png',
+    image: '/images/destinations/lansdowne/photo-1.jpg',
     gallery: [
       '/assets/LANSDWONE/1 (2).png',
       '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
@@ -1010,7 +1010,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Kumaon',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
       '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-1.jpg',
@@ -1058,7 +1058,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
       '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-1.jpg'
@@ -1107,7 +1107,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'October to June',
     category: 'Wildlife & Nature',
-    image: 'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/destinations/jim-corbett/photo-1.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop'
@@ -1241,7 +1241,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'May to June & September to November',
     category: 'Spiritual & Char Dham',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/destinations/badrinath/photo-1.jpg',
     gallery: ['https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop'],
     rating: 4.96,
     reviewsCount: 94,
@@ -1317,7 +1317,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'May to June & September to November',
     category: 'Spiritual & Char Dham',
-    image: '/assets/yamnotri/3 (1).webp',
+    image: '/assets/yamnotri/3 (1).jpg',
     gallery: [
       '/assets/yamnotri/3 (1).webp',
       '/assets/yamnotri/3 (2).webp',
@@ -1768,7 +1768,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Kumaon',
-    image: '/assets/munsyari/2 (1).png',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
       '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-2.jpg'
@@ -1892,7 +1892,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (2).png',
+    image: '/images/destinations/lansdowne/photo-1.jpg',
     gallery: [
       '/assets/LANSDWONE/1 (2).png',
       '/assets/LANSDWONE/1 (2).png'
@@ -2014,7 +2014,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'October to June',
     category: 'Wildlife & Nature',
-    image: 'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/destinations/jim-corbett/photo-1.jpg',
     gallery: ['https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=800&auto=format&fit=crop'],
     rating: 4.94,
     reviewsCount: 165,
@@ -2093,7 +2093,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Wildlife & Nature',
-    image: 'https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/destinations/nainital/photo-1.jpg',
     gallery: ['https://images.unsplash.com/photo-1582650625119-3a31f841807d?q=80&w=800&auto=format&fit=crop'],
     rating: 4.89,
     reviewsCount: 34,
