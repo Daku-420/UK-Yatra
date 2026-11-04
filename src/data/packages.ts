@@ -19,11 +19,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 45,
@@ -111,11 +111,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 52,
@@ -189,11 +189,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 5.0,
     "reviewsCount": 59,
@@ -246,11 +246,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 66,
@@ -324,11 +324,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 73,
@@ -381,11 +381,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 80,
@@ -501,11 +501,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.8,
     "reviewsCount": 87,
@@ -628,11 +628,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 94,
@@ -720,11 +719,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 5.0,
     "reviewsCount": 101,
@@ -819,11 +817,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 108,
@@ -932,11 +930,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.8,
     "reviewsCount": 115,
@@ -1052,11 +1050,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 122,
@@ -1137,11 +1134,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 129,
@@ -1229,11 +1225,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 136,
@@ -1356,11 +1352,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp"
     ],
     "rating": 5.0,
     "reviewsCount": 143,
@@ -1490,11 +1485,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/KEDARNATH/3 (2).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 150,
@@ -1589,11 +1583,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/KEDARNATH/3 (3).jpg"
     ],
     "rating": 4.8,
     "reviewsCount": 47,
@@ -1695,11 +1688,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 54,
@@ -1815,11 +1808,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.8,
     "reviewsCount": 61,
@@ -1907,11 +1899,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Fixed Departure Group",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 68,
@@ -2027,11 +2019,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Fixed Departure Group",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 5.0,
     "reviewsCount": 75,
@@ -2119,11 +2110,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/haridwar/Twilight Temple Festival by the River.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png",
+      "/assets/rishikesh/1 (1).jpg",
+      "/assets/mussorie/Himalayan Hill Town Panorama.png"
     ],
     "rating": 4.9,
     "reviewsCount": 82,
@@ -2197,11 +2188,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/haridwar/Twilight Temple Festival by the River.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png",
+      "/assets/rishikesh/1 (1).jpg",
+      "/assets/mussorie/Himalayan Hill Town Panorama.png"
     ],
     "rating": 4.8,
     "reviewsCount": 89,
@@ -2303,11 +2294,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Apr - Jun & Sep - Nov",
     "category": "Trek & Adventure",
-    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/CHOPTA/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop"
+      "/assets/CHOPTA/3 (1).jpg",
+      "/assets/CHOPTA/3 (2).jpg",
+      "/assets/CHOPTA/3 (3).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 96,
@@ -2370,11 +2361,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Trek & Adventure",
-    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop"
+      "/assets/KEDARNATH/3 (1).jpg",
+      "/assets/yamnotri/3 (1).webp"
     ],
     "rating": 4.8,
     "reviewsCount": 103,
@@ -2473,11 +2463,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Apr - Jun & Sep - Nov",
     "category": "Trek & Adventure",
-    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/CHOPTA/3 (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop"
+      "/assets/CHOPTA/3 (1).jpg",
+      "/assets/CHOPTA/3 (2).jpg",
+      "/assets/CHOPTA/3 (3).jpg"
     ],
     "rating": 4.9,
     "reviewsCount": 110,
@@ -2547,11 +2537,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Dec - Mar (Snow & Skiing) / Apr - Jun",
     "category": "Trek & Adventure",
-    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/AULI/Sunlit Snowy Mountain Ski Resort.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop"
+      "/assets/AULI/Sunlit Snowy Mountain Ski Resort.png",
+      "/assets/AULI/Snowy Himalayan Lake Panorama.png",
+      "/assets/AULI/Alpine Village Beneath Snowy Peaks.png"
     ],
     "rating": 5.0,
     "reviewsCount": 117,

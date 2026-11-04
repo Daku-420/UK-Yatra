@@ -793,9 +793,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
             <div className="lg:col-span-7 grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-3xl overflow-hidden aspect-[4/5] border border-white/10 shadow-xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop"
-                    alt="Kedarnath Temple"
+                  <img src="/assets/KEDARNATH/3 (1).jpg" alt="Kedarnath Temple"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -956,11 +954,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           {/* Instagram Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
             {[
-              { img: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=400&auto=format&fit=crop', tag: '#Kedarnath' },
-              { img: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=400&auto=format&fit=crop', tag: '#RishikeshRafting' },
-              { img: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=400&auto=format&fit=crop', tag: '#AuliSkiing' },
+              { img: '/assets/KEDARNATH/3 (1).jpg', tag: '#Kedarnath' },
+              { img: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg', tag: '#RishikeshRafting' },
+              { img: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png', tag: '#AuliSkiing' },
               { img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=400&auto=format&fit=crop', tag: '#NainitalBoating' },
-              { img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop', tag: '#ValleyOfFlowers' },
+              { img: '/assets/valley of flowee/4 (1).jpg', tag: '#ValleyOfFlowers' },
               { img: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=400&auto=format&fit=crop', tag: '#CorbettSafari' },
             ].map((item, idx) => (
               <a

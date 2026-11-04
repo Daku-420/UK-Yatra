@@ -31,7 +31,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Kedarnath Temple in Morning Sun',
       location: 'Kedarnath (3,584m)',
       category: 'Spiritual',
-      image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/KEDARNATH/3 (1).jpg',
       likes: 1240
     },
     {
@@ -47,7 +47,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Golden Sunset over Nanda Devi from Auli',
       location: 'Auli Snow Slopes',
       category: 'Scenic',
-      image: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/AULI/Golden Hour Himalayan Terrace View.png',
       likes: 1540
     },
     {
@@ -55,7 +55,7 @@ export const GalleryPage: React.FC = () => {
       title: 'White Water Rafting on Ganga Rapids',
       location: 'Shivpuri, Rishikesh',
       category: 'Adventure',
-      image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
       likes: 890
     },
     {
@@ -63,7 +63,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Tungnath Chandrashila Summit Trail',
       location: 'Chopta, Rudraprayag',
       category: 'Treks',
-      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/CHOPTA/3 (1).jpg',
       likes: 1120
     },
     {
@@ -71,7 +71,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Valley of Flowers Bloom in Monsoon',
       location: 'Chamoli UNESCO Reserve',
       category: 'Treks',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/valley of flowee/4 (1).jpg',
       likes: 2100
     },
     {
@@ -95,7 +95,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Divine Evening Ganga Aarti at Triveni Ghat',
       location: 'Rishikesh',
       category: 'Spiritual',
-      image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/rishikesh/1 (1).jpg',
       likes: 1850
     },
     {
@@ -111,7 +111,7 @@ export const GalleryPage: React.FC = () => {
       title: 'Boutique Riverside Glamping at Shivpuri',
       location: 'Shivpuri River Bank',
       category: 'Adventure',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop',
+      image: '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
       likes: 910
     },
     {

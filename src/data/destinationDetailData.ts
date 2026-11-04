@@ -122,8 +122,8 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
     ],
     nearby: [
       { name: 'Badrinath', distance: '218 km', desc: 'Sacred seat of Lord Vishnu along the Alaknanda river.', path: '/destinations/badrinath', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Chopta', distance: '73 km', desc: 'Mini Switzerland of Uttarakhand and base for Tungnath.', path: '/destinations/chopta', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Rishikesh', distance: '216 km', desc: 'Yoga capital and gateway to Himalayan pilgrim trails.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop' }
+      { name: 'Chopta', distance: '73 km', desc: 'Mini Switzerland of Uttarakhand and base for Tungnath.', path: '/destinations/chopta', image: '/assets/CHOPTA/3 (1).jpg' },
+      { name: 'Rishikesh', distance: '216 km', desc: 'Yoga capital and gateway to Himalayan pilgrim trails.', path: '/destinations/rishikesh', image: '/assets/rishikesh/1 (1).jpg' }
     ],
     faqs: [
       { question: 'Is prior biometric registration mandatory for Kedarnath?', answer: 'Yes, biometric registration via the official Uttarakhand Tourism portal is mandatory for all pilgrims before boarding helicopters or beginning the trek.' },
@@ -183,8 +183,8 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
       }
     ],
     nearby: [
-      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' },
+      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png' },
+      { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/assets/chakrata/Sunlit Mountain Resort Panorama.png' },
       { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' }
     ],
     faqs: [
@@ -240,7 +240,7 @@ export function getDestinationExtraData(id: string, name: string, category: stri
       nearby: existing.nearby || [
         { name: 'Rishikesh', distance: 'Scenic Drive', desc: 'Yoga capital of the world and hub for Ganga river rafting.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
         { name: 'Nainital', distance: 'Scenic Drive', desc: 'Iconic emerald lake city surrounded by seven high ridges.', path: '/destinations/nainital', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' },
-        { name: 'Auli', distance: 'Scenic Drive', desc: 'India’s premier ski destination with sweeping Nanda Devi panoramas.', path: '/destinations/auli', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop' }
+        { name: 'Auli', distance: 'Scenic Drive', desc: 'India’s premier ski destination with sweeping Nanda Devi panoramas.', path: '/destinations/auli', image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png' }
       ],
       faqs: existing.faqs || [
         { question: `What is the best time to visit ${name}?`, answer: `${name} is best visited between March and June for pleasant weather, and from September to November for crystal clear Himalayan views.` },
@@ -304,7 +304,7 @@ export function getDestinationExtraData(id: string, name: string, category: stri
     ],
     nearby: [
       { name: 'Rishikesh', distance: 'Direct Highway', desc: 'World capital of yoga, sacred evening aartis, and white-water rapids.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop' },
+      { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: '/assets/mussorie/Himalayan Hill Town Panorama.png' },
       { name: 'Nainital', distance: 'Lake District', desc: 'Enchanting emerald lake surrounded by lush forested mountain peaks.', path: '/destinations/nainital', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' }
     ],
     faqs: [

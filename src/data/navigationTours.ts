@@ -33,7 +33,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/chopta-tungnath-chandrashila',
     duration: '3N/4D',
     badge: 'Popular',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/CHOPTA/3 (1).jpg'
   },
   {
     name: 'Valley of Flowers',
@@ -42,7 +42,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/valley-of-flowers',
     duration: '4N/5D',
     badge: 'Top Pick',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/valley of flowee/4 (1).jpg'
   },
   {
     name: 'Kedarnath Yatra',
@@ -51,7 +51,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/kedarnath-yatra',
     duration: '3N/4D',
     badge: 'Trending',
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/KEDARNATH/3 (1).jpg'
   },
   {
     name: 'Auli',
@@ -60,7 +60,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/auli-joshimath',
     duration: '3N/4D',
     badge: 'Snow & Views',
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png'
   },
   {
     name: 'Mussoorie',
@@ -69,7 +69,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/mussoorie-dhanaulti',
     duration: '3N/4D',
     badge: 'Weekend',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/mussorie/Himalayan Hill Town Panorama.png'
   },
   {
     name: 'Nainital',

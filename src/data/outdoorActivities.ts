@@ -146,7 +146,7 @@ export const DESTINATION_ADVENTURES: DestinationAdventureItem[] = [
     id: 'Rishikesh',
     name: 'Rishikesh',
     tagline: 'Adventure Capital of India',
-    image: '/images/destinations/rishikesh/photo-1.jpg',
+    image: '/assets/rishikesh/1 (1).jpg',
     badge: 'World Famous',
     activitiesCount: '15+ Adventures',
     activitiesList: ['River Rafting', 'Bungee Jumping', 'Camping', 'Zipline', 'Kayaking']
@@ -155,7 +155,7 @@ export const DESTINATION_ADVENTURES: DestinationAdventureItem[] = [
     id: 'Auli',
     name: 'Auli',
     tagline: 'India’s Premier Ski Resort',
-    image: '/images/destinations/auli/photo-1.jpg',
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
     badge: 'Winter Paradise',
     activitiesCount: '8+ Adventures',
     activitiesList: ['Skiing', 'Snow Trekking', 'Snow Experiences', 'Camping']
@@ -164,7 +164,7 @@ export const DESTINATION_ADVENTURES: DestinationAdventureItem[] = [
     id: 'Chopta',
     name: 'Chopta',
     tagline: 'Mini Switzerland & Tungnath Base',
-    image: '/images/destinations/chopta/photo-1.jpg',
+    image: '/assets/CHOPTA/3 (1).jpg',
     badge: 'Scenic Bugyals',
     activitiesCount: '10+ Adventures',
     activitiesList: ['Trekking', 'Camping', 'Snow Trekking', 'Stargazing']
@@ -173,7 +173,7 @@ export const DESTINATION_ADVENTURES: DestinationAdventureItem[] = [
     id: 'Mussoorie',
     name: 'Mussoorie',
     tagline: 'Queen of the Hills & Ridge Walks',
-    image: '/images/destinations/mussoorie/photo-1.jpg',
+    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
     badge: 'Colonial Trails',
     activitiesCount: '12+ Adventures',
     activitiesList: ['Trekking', 'Camping', 'Rock Climbing', 'Adventure Activities']
@@ -284,10 +284,8 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     imagePosition: 'center 85%',
     gallery: [
       '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop'
+      '/assets/rishikesh/1 (1).jpg',
+      '/assets/rishikesh/1 (2).jpg'
     ],
     shortDesc: 'Conquer legendary Grade III and IV rapids like Roller Coaster, Golf Course, and The Wall on the holy turquoise Ganga.',
     fullDesc: 'Rishikesh is celebrated worldwide as India’s undisputed capital of white-water rafting. Plunge into exhilarating white-water waves rushing down from the Gangotri glacier. Guided by international certified river guides and escorted by safety rescue kayakers, paddle through iconic rapids, leap off high river boulders, and body-surf in calm emerald river eddies.',
@@ -350,13 +348,13 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Late December to March',
     startingPrice: 'Pricing on Request',
     maxAltitude: '10,010 ft (3,050 m)',
-    image: '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
     imagePosition: 'center 50%',
     gallery: [
-      '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg',
-      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+      '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+      '/assets/AULI/Snowy Himalayan Lake Panorama.png',
+      '/assets/AULI/Alpine Village Beneath Snowy Peaks.png',
+      '/assets/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg'
     ],
     shortDesc: 'Glide down powdery slopes on India’s premier ski slopes directly facing the majesty of Nanda Devi.',
     fullDesc: 'Nestled between 2,500 and 3,050 metres in the Chamoli Himalayas, Auli provides international-standard ski slopes with panoramic views of Mount Nanda Devi, Kamet, and Mana Parvat. Whether you are stepping onto skis for the very first time or carving technical turns down Gorson Bugyal slopes, our National Institute of Mountaineering (NIM) certified instructors guide you through snow ploughs, stem turns, and parallel carving.',
@@ -418,12 +416,11 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'July to September (Peak Floral Bloom)',
     startingPrice: 'Pricing on Request',
     maxAltitude: '14,400 ft (4,389 m) at Hemkund Sahib',
-    image: '/images/destinations/valley-of-flowers/photo-1.jpg',
+    image: '/assets/valley of flowee/4 (1).jpg',
     gallery: [
-      '/images/destinations/valley-of-flowers/photo-1.jpg',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop'
+      '/assets/valley of flowee/4 (1).jpg',
+      '/assets/valley of flowee/4 (2).jpg',
+      '/assets/valley of flowee/4 (3).jpg'
     ],
     shortDesc: 'A UNESCO World Heritage sanctuary carpeted in over 500 varieties of wild Himalayan orchids, poppies, and primulas.',
     fullDesc: 'Discovered in 1931 by British mountaineer Frank Smythe, the Valley of Flowers is an emerald wonderland tucked away in the Zanskar range. Every monsoon, glacial melt and mountain rains transform this 87 sq km biosphere into a breathtaking natural tapestry of rare alpine blossoms, including the legendary Blue Poppy and sacred Brahma Kamal, set beside cascading waterfalls and misty glaciers.',
@@ -485,12 +482,12 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Round the Year (April-June for flowers, Dec-Mar for snow)',
     startingPrice: 'Pricing on Request',
     maxAltitude: '13,100 ft (4,000 m) at Chandrashila Peak',
-    image: '/images/destinations/chopta/photo-1.jpg',
+    image: '/assets/CHOPTA/3 (1).jpg',
     gallery: [
-      '/images/destinations/chopta/photo-1.jpg',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop'
+      '/assets/CHOPTA/3 (1).jpg',
+      '/assets/CHOPTA/3 (2).jpg',
+      '/assets/CHOPTA/3 (3).jpg',
+      '/assets/CHOPTA/3 (4).jpg'
     ],
     shortDesc: 'Hike to the world’s highest Shiva temple at Tungnath (3,680m) and summit Chandrashila for grand 360° views.',
     fullDesc: 'Affectionately known as the "Mini Switzerland of Uttarakhand", Chopta is an alpine pasture surrounded by thick deodar, pine, and rhododendron forests. The stone-paved trail ascends past grazing bugyals to Tungnath—the highest of the Panch Kedar temples dating back over 1,000 years. An exhilarating final ridge push leads to the summit of Chandrashila (Moon Rock) at 13,100 ft, presenting uninterrupted panoramas of Chaukhamba, Trishul, and Nanda Devi.',
@@ -555,10 +552,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     imagePosition: 'center 85%',
     gallery: [
       '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop'
+      '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png'
     ],
     shortDesc: 'Starlit skies, crackling bonfires, live acoustic jams, and luxury Swiss tents beside mountain streams.',
     fullDesc: 'Disconnect from urban noise and wake up to birdsong, rustling pine leaves, and murmuring Himalayan streams. Our hand-picked glamping resorts combine rugged outdoor romance with hotel-like luxury: spacious waterproof Swiss tents with ensuite western bathrooms, air cooling/heating, sparkling swimming pools, volleyball courts, barbecue evenings, and guided sunrise forest trails.',
@@ -623,10 +617,7 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     imagePosition: '55% 40%',
     gallery: [
       '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+      '/assets/rishikesh/1 (1).jpg'
     ],
     shortDesc: 'Take the ultimate leap of faith from India’s highest fixed cantilever platform (83m) over the Hall River gorge.',
     fullDesc: 'Designed and operated by certified jump masters from New Zealand, feel the mind-bending thrill of pure gravity as you free-fall 83 metres into a breathtaking rocky canyon in Mohan Chatti, Rishikesh. Rebound inches above the crystal Hall river and receive your official "Dare to Jump" certificate and badge.',
@@ -681,11 +672,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'October to June (Clear mountain thermals)',
     startingPrice: 'Pricing on Request',
-    image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop'
+      '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
+      '/assets/mussorie/Himalayan Hill Town Panorama.png'
     ],
     shortDesc: 'Soar like a Himalayan golden eagle over terraced valleys, blue lakes, and snow-draped ridge lines.',
     fullDesc: 'Catch thermal updrafts and experience weightless flight seated comfortably in front of an experienced DGCA/APPI licensed tandem glider pilot. Launch from hilltop vantage points in Bhimtal, Naukuchiatal, or Mussoorie, carving smooth arcs across the sky with dramatic aerial vistas of emerald pine valleys and distant glaciated peaks.',
@@ -959,11 +949,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'October to May (Dark, clear skies)',
     startingPrice: 'Pricing on Request',
     maxAltitude: '8,790 ft (2,680 m)',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/CHOPTA/3 (2).jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      '/images/destinations/chopta/photo-1.jpg',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop'
+      '/assets/CHOPTA/3 (2).jpg',
+      '/assets/CHOPTA/3 (1).jpg'
     ],
     shortDesc: 'Observe the Milky Way, distant nebulae, and Saturn’s rings through computerized telescopes in zero light pollution.',
     fullDesc: 'Perched in the Kedarnath Wildlife Sanctuary with virtually zero light pollution, Chopta offers Bortle Class 2-3 night skies. Peer through high-powered optical and computerized Schmidt-Cassegrain telescopes to witness celestial wonders: the spiral arms of Andromeda Galaxy, the Orion Nebula, Saturn’s rings, lunar craters, and vibrant shooting meteor showers.',
@@ -1013,10 +1002,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     season: ['Spring', 'Autumn', 'Winter'],
     bestSeason: 'October to May',
     startingPrice: 'Pricing on Request',
-    image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+      '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
+      '/assets/rishikesh/1 (2).jpg'
     ],
     shortDesc: 'Master the eskimo roll, eddy hopping, and river reading in solo whitewater kayaks on the upper Ganga.',
     fullDesc: 'Step beyond group rafting and learn to command the river solo. Under the instruction of national slalom champions and certified IRF rescue kayakers, master flat-water balance, the classic C-to-C eskimo roll, ferry gliding across strong currents, and reading river hydraulics (holes, pillows, and wave trains).',
@@ -1123,10 +1112,10 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     bestSeason: 'Round the Year (Except heavy monsoon)',
     startingPrice: 'Pricing on Request',
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop'
+      '/assets/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg',
+      '/assets/rishikesh/1 (1).jpg'
     ],
     shortDesc: 'Fly at speeds up to 140 km/h on a 1-kilometer steel zip wire suspended 70 meters above the holy river.',
     fullDesc: 'Strapped safely into a secure flying harness, launch from a cliffside platform and soar 70 metres directly above the raging white-water rapids of the holy Ganges. Powered purely by gravity, zoom across two massive steel zip wires spanning up to 1 kilometre with panoramic views of the forested Himalayan foothills.',
@@ -1232,11 +1221,11 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Round the Year',
     startingPrice: 'Pricing on Request',
     maxAltitude: '7,500 ft (2,286 m)',
-    image: '/images/destinations/mussoorie/photo-1.jpg',
+    image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
     gallery: [
-      '/images/destinations/mussoorie/photo-1.jpg',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop'
+      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
+      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
+      '/assets/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.png'
     ],
     shortDesc: 'Walk Burma bridges, skywalks, and ziplines suspended between colossal 150-year-old Deodar cedar trees.',
     fullDesc: 'Nestled amidst the serene deodar forests of Dhanaulti, the Eco Adventure Park offers thrilling aerial rope courses for both adrenaline seekers and adventurous families. Negotiate Burma bridges, swinging logs, commando nets, and zip between ancient trees with the crisp scent of pine resin and direct views of the snow-clad Garhwal range.',
