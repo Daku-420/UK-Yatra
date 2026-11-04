@@ -1221,11 +1221,11 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
     bestSeason: 'Round the Year',
     startingPrice: 'Pricing on Request',
     maxAltitude: '7,500 ft (2,286 m)',
-    image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
+    image: '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
     gallery: [
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
       '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
-      '/assets/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.png'
+      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
+      '/assets/dhanaulti/Snowy Mountain Village Road.png'
     ],
     shortDesc: 'Walk Burma bridges, skywalks, and ziplines suspended between colossal 150-year-old Deodar cedar trees.',
     fullDesc: 'Nestled amidst the serene deodar forests of Dhanaulti, the Eco Adventure Park offers thrilling aerial rope courses for both adrenaline seekers and adventurous families. Negotiate Burma bridges, swinging logs, commando nets, and zip between ancient trees with the crisp scent of pine resin and direct views of the snow-clad Garhwal range.',

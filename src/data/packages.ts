@@ -385,7 +385,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.9,
     "reviewsCount": 80,
@@ -505,7 +505,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.8,
     "reviewsCount": 87,
@@ -821,7 +821,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.9,
     "reviewsCount": 108,
@@ -934,7 +934,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.8,
     "reviewsCount": 115,
@@ -1229,7 +1229,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.9,
     "reviewsCount": 136,
@@ -1692,7 +1692,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.9,
     "reviewsCount": 54,
@@ -1811,7 +1811,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.8,
     "reviewsCount": 61,
@@ -1903,7 +1903,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 4.9,
     "reviewsCount": 68,
@@ -2022,7 +2022,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/haridwar/Twilight Temple Festival by the River.png"
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png"
     ],
     "rating": 5.0,
     "reviewsCount": 75,
@@ -2110,9 +2110,9 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "/assets/haridwar/Twilight Temple Festival by the River.png",
+    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
     "gallery": [
-      "/assets/haridwar/Twilight Temple Festival by the River.png",
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
       "/assets/rishikesh/1 (1).jpg",
       "/assets/mussorie/Himalayan Hill Town Panorama.png"
     ],
@@ -2188,9 +2188,9 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "/assets/haridwar/Twilight Temple Festival by the River.png",
+    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
     "gallery": [
-      "/assets/haridwar/Twilight Temple Festival by the River.png",
+      "/assets/haridwar/Aerial Riverside Festival at Dusk.png",
       "/assets/rishikesh/1 (1).jpg",
       "/assets/mussorie/Himalayan Hill Town Panorama.png"
     ],

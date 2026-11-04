@@ -183,7 +183,7 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
       }
     ],
     nearby: [
-      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png' },
+      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/assets/dhanaulti/Misty Forest Path of Nature and Care.png' },
       { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/assets/chakrata/Sunlit Mountain Resort Panorama.png' },
       { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' }
     ],

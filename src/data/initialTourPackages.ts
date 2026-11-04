@@ -49,9 +49,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/haridwar/Twilight Temple Festival by the River.png',
+      '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
       '/assets/rishikesh/1 (2).jpg',
-      '/assets/haridwar/Riverside Ghat and Orange Bridge.png'
+      '/assets/haridwar/Aerial Riverside Festival at Dusk.png'
     ],
     rating: 4.9,
     reviewsCount: 68,
@@ -136,7 +136,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
     gallery: [
       '/assets/mussorie/Himalayan Hill Town Panorama.png',
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
+      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
       '/assets/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.png',
       '/assets/dhanaulti/Misty Forest Path of Nature and Care.png'
     ],
@@ -312,7 +312,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
     gallery: [
       '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
-      '/assets/mukhteshwar/Mukteshwar Temple Forest Entrance.png',
+      '/assets/mukhteshwar/Snowy Mountain Temple in Winter Sun.png',
       '/assets/mukhteshwar/Jagged Cliff View Over Lush Terraced Valley.png'
     ],
     rating: 4.8,
@@ -361,7 +361,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     gallery: [
       '/assets/mussorie/Himalayan Hill Town Panorama.png',
       '/assets/rishikesh/1 (1).jpg',
-      '/assets/haridwar/Twilight Temple Festival by the River.png'
+      '/assets/haridwar/Aerial Riverside Festival at Dusk.png'
     ],
     rating: 4.9,
     reviewsCount: 89,
@@ -912,9 +912,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (1).png',
+    image: '/assets/LANSDWONE/1 (2).png',
     gallery: [
-      '/assets/LANSDWONE/1 (1).png',
+      '/assets/LANSDWONE/1 (2).png',
       '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
       '/assets/LANSDWONE/1 (2).png'
     ],
@@ -960,11 +960,11 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'September to June',
     category: 'Kumaon',
-    image: '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
+    image: '/assets/kausani/1 (2).png',
     gallery: [
-      '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
+      '/assets/kausani/1 (2).png',
       '/assets/ranikhet/1 (1).png',
-      '/assets/almora/2 (1).png'
+      '/assets/almora/2 (2).png'
     ],
     rating: 4.9,
     reviewsCount: 65,
@@ -1013,8 +1013,8 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/munsyari/2 (1).png',
     gallery: [
       '/assets/munsyari/2 (1).png',
-      '/assets/munsyari/2 (2).png',
-      '/assets/munsyari/2 (3).png'
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/photo-2.jpg'
     ],
     rating: 4.92,
     reviewsCount: 41,
@@ -1061,7 +1061,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/munsyari/2 (1).png',
     gallery: [
       '/assets/munsyari/2 (1).png',
-      '/assets/munsyari/2 (2).png'
+      '/images/destinations/munsiyari/photo-1.jpg'
     ],
     rating: 4.95,
     reviewsCount: 56,
@@ -1684,10 +1684,10 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Kumaon',
-    image: '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
+    image: '/assets/kausani/1 (2).png',
     gallery: [
-      '/assets/kausani/Himalayan Village Beneath Snowy Peaks.png',
-      '/assets/kausani/1 (1).png'
+      '/assets/kausani/1 (2).png',
+      '/assets/kausani/1 (2).png'
     ],
     rating: 4.89,
     reviewsCount: 40,
@@ -1726,9 +1726,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Kumaon',
-    image: '/assets/almora/2 (1).png',
+    image: '/assets/almora/2 (2).png',
     gallery: [
-      '/assets/almora/2 (1).png',
+      '/assets/almora/2 (2).png',
       '/assets/almora/2 (2).png'
     ],
     rating: 4.92,
@@ -1771,7 +1771,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/munsyari/2 (1).png',
     gallery: [
       '/assets/munsyari/2 (1).png',
-      '/assets/munsyari/2 (3).png'
+      '/images/destinations/munsiyari/photo-2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 35,
@@ -1853,8 +1853,8 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     image: '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
     gallery: [
       '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
-      '/assets/dhanaulti/Sunlit Mountain Forest Clearing.png',
-      '/assets/chamba/Turquoise Himalayan Lake Valley Vista.png'
+      '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
+      '/assets/chamba/1 (1).png'
     ],
     rating: 4.86,
     reviewsCount: 42,
@@ -1892,9 +1892,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/assets/LANSDWONE/1 (1).png',
+    image: '/assets/LANSDWONE/1 (2).png',
     gallery: [
-      '/assets/LANSDWONE/1 (1).png',
+      '/assets/LANSDWONE/1 (2).png',
       '/assets/LANSDWONE/1 (2).png'
     ],
     rating: 4.84,
