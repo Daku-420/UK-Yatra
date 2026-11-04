@@ -51,7 +51,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
       '/assets/rishikesh/1 (1).jpg',
       '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
       '/assets/rishikesh/1 (2).jpg',
-      '/assets/haridwar/Aerial Riverside Festival at Dusk.png'
+      '/assets/rishikesh/1 (1).jpg'
     ],
     rating: 4.9,
     reviewsCount: 68,
@@ -133,7 +133,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round (Snow in Dec-Feb)',
     category: 'Popular Uttarakhand',
-    image: '/assets/mussorie/1 (1).jpg',
+    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
     gallery: [
       '/assets/mussorie/Himalayan Hill Town Panorama.png',
       '/assets/dhanaulti/Misty Forest Path of Nature and Care.png',
@@ -357,7 +357,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'September to June',
     category: 'Popular Uttarakhand',
-    image: '/assets/mussorie/1 (1).jpg',
+    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
     gallery: [
       '/assets/mussorie/Himalayan Hill Town Panorama.png',
       '/assets/rishikesh/1 (1).jpg',
@@ -544,7 +544,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'December to March (Skiing) & April to June (Green Bugyals)',
     category: 'Popular Uttarakhand',
-    image: '/images/destinations/auli/photo-1.jpg',
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
     gallery: [
       '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
       '/assets/AULI/Snowy Himalayan Lake Panorama.png',
@@ -912,7 +912,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/lansdowne/photo-1.jpg',
+    image: '/assets/LANSDWONE/1 (2).png',
     gallery: [
       '/assets/LANSDWONE/1 (2).png',
       '/assets/kanatal/Hillside Geodesic Dome Glamping Retreat.png',
@@ -1010,7 +1010,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Kumaon',
-    image: '/images/destinations/munsiyari/photo-1.jpg',
+    image: '/assets/munsyari/2 (1).png',
     gallery: [
       '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-1.jpg',
@@ -1058,7 +1058,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/munsiyari/photo-1.jpg',
+    image: '/assets/munsyari/2 (1).png',
     gallery: [
       '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-1.jpg'
@@ -1317,7 +1317,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'May to June & September to November',
     category: 'Spiritual & Char Dham',
-    image: '/assets/yamnotri/3 (1).jpg',
+    image: '/assets/yamnotri/3 (1).webp',
     gallery: [
       '/assets/yamnotri/3 (1).webp',
       '/assets/yamnotri/3 (2).webp',
@@ -1768,7 +1768,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'March to June & September to November',
     category: 'Kumaon',
-    image: '/images/destinations/munsiyari/photo-1.jpg',
+    image: '/assets/munsyari/2 (1).png',
     gallery: [
       '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-2.jpg'
@@ -1892,7 +1892,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     originalPrice: null,
     bestSeason: 'Year Round',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/lansdowne/photo-1.jpg',
+    image: '/assets/LANSDWONE/1 (2).png',
     gallery: [
       '/assets/LANSDWONE/1 (2).png',
       '/assets/LANSDWONE/1 (2).png'

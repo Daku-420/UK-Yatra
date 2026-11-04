@@ -9,13 +9,15 @@ export const DESTINATIONS: Destination[] = [
     name: 'Mussoorie',
     tagline: 'The Queen of Hills & Quintessential Colonial Retreat',
     category: 'Hills & Valleys',
-    image: '/assets/mussorie/1 (1).jpg',
+    image: '/assets/mussorie/Himalayan Hill Town Panorama.png',
     gallery: [
+      '/assets/mussorie/Himalayan Hill Town Panorama.png',
+      '/assets/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.png',
       '/assets/mussorie/1 (1).jpg',
       '/assets/mussorie/1 (2).jpg',
       '/assets/mussorie/1 (3).jpg',
-      '/images/destinations/mussoorie/photo-1.jpg',
-      '/images/destinations/mussoorie/photo-2.jpg'
+      '/assets/mussorie/1 (4).jpg',
+      '/assets/mussorie/1 (5).jpg'
     ],
     description: 'Perched overlooking the Doon Valley and Shivalik range, Mussoorie charms travellers with its colonial architecture, bustling Mall Road, cascading waterfalls, and panoramic sunset viewpoints at Gun Hill and George Everest Peak.',
     highlights: ['Mall Road heritage walk', 'Kempty & Bhatta Falls', 'George Everest Peak ridge trail', 'Gun Hill cable car'],
@@ -73,13 +75,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Auli',
     tagline: 'India’s Premier Skiing Paradise & 360° Himalayan Vista',
     category: 'Hills & Valleys',
-    image: '/images/destinations/auli/photo-1.jpg',
+    image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
     gallery: [
-      '/images/destinations/auli/photo-1.jpg',
-      '/images/destinations/auli/photo-2.jpg',
-      '/images/destinations/auli/photo-3.jpg',
-      '/images/destinations/auli/photo-4.jpg',
-      '/images/destinations/auli/photo-5.jpg'
+      '/assets/AULI/Sunlit Snowy Mountain Ski Resort.png',
+      '/assets/AULI/Snowy Himalayan Lake Panorama.png',
+      '/assets/AULI/Alpine Village Beneath Snowy Peaks.png',
+      '/assets/AULI/Golden Hour Himalayan Terrace View.png',
+      '/assets/AULI/Misty Jaul Hill Viewpoint with Cow.png'
     ],
     description: 'Surrounded by pine and oak forests with front-row views of Nanda Devi, Kamet, and Mana Parvat, Auli is the ultimate winter wonderland for skiing, snowboarding, and highest cable car rides.',
     highlights: ['Auli Ropeway (Longest in Asia, 4 km)', 'Artificial Lake with reflections', 'Nanda Devi 360° Panorama', 'Gorson Bugyal Snow Trek'],
@@ -165,13 +167,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Lansdowne',
     tagline: 'Quiet Cantonment Charm, Pine Woods & Colonial Serenity',
     category: 'Hills & Valleys',
-    image: '/images/destinations/lansdowne/photo-1.jpg',
+    image: '/assets/LANSDWONE/1 (2).png',
     gallery: [
-      '/images/destinations/lansdowne/photo-1.jpg',
-      '/images/destinations/lansdowne/photo-2.jpg',
-      '/images/destinations/lansdowne/photo-3.jpg',
-      '/images/destinations/lansdowne/photo-4.jpg',
-      '/images/destinations/lansdowne/photo-5.jpg'
+      '/assets/LANSDWONE/1 (2).png',
+      '/assets/LANSDWONE/1 (2).png',
+      '/assets/LANSDWONE/1 (3).png'
     ],
     description: 'Founded as a British military cantonment and home to the Garhwal Rifles, Lansdowne is an unspoilt hill station filled with thick blue pine forests, heritage churches, and peaceful forest walks.',
     highlights: ['Tip-in-Top viewpoint', 'Bhulla Tal Lake', 'Garhwal Rifles War Memorial', 'St. John’s Colonial Church'],
@@ -287,13 +287,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Munsiyari',
     tagline: 'Little Kashmir & Gateway to the Panchachuli Snow Peaks',
     category: 'Hills & Valleys',
-    image: '/images/destinations/munsiyari/photo-1.jpg',
+    image: '/assets/munsyari/2 (1).png',
     gallery: [
+      '/assets/munsyari/2 (1).png',
       '/images/destinations/munsiyari/photo-1.jpg',
       '/images/destinations/munsiyari/photo-2.jpg',
-      '/images/destinations/munsiyari/photo-3.jpg',
-      '/images/destinations/munsiyari/photo-4.jpg',
-      '/images/destinations/munsiyari/photo-5.jpg'
+      '/assets/munsyari/2 (1).png'
     ],
     description: 'Perched on the rim of Goriganga river valley in Pithoragarh, Munsiyari provides unhindered vistas of the iconic five snow peaks of Panchachuli and serves as gateway to Milam & Ralam glaciers.',
     highlights: ['Panchachuli 5 Peaks View', 'Birthi Waterfalls (126m)', 'Milam & Ralam Glacier trails', 'Khaliya Top Snow Trek'],
@@ -753,10 +752,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Haridwar',
     tagline: 'Gateway to the Gods & Holy Har Ki Pauri Ganga Aarti',
     category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
+      '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
+      '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
       '/assets/rishikesh/1 (1).jpg',
       '/assets/rishikesh/1 (2).jpg'
     ],
@@ -786,10 +785,10 @@ export const DESTINATIONS: Destination[] = [
     image: '/assets/rishikesh/1 (1).jpg',
     gallery: [
       '/assets/rishikesh/1 (1).jpg',
+      '/assets/rishikesh/1 (1).png',
       '/assets/rishikesh/1 (2).jpg',
-      '/assets/rishikesh/1 (3).jpg',
-      '/images/destinations/rishikesh/photo-1.jpg',
-      '/images/destinations/rishikesh/photo-2.jpg'
+      '/assets/rishikesh/1 (2).png',
+      '/assets/rishikesh/1 (3).jpg'
     ],
     description: 'Where the holy Ganges surges down the Shivalik foothills, Rishikesh bridges serene spirituality with high-adrenaline sports like white-water rafting, riverside luxury camping, and soulful Ganga Aarti.',
     highlights: ['Triveni Ghat Ganga Aarti', 'Ram & Laxman Jhula bridges', 'Beatles Ashram meditation', 'White water river rafting'],
@@ -814,12 +813,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Yamunotri',
     tagline: 'Sacred Origin of River Yamuna & Goddess Yamuna Dham',
     category: 'Spiritual',
-    image: '/assets/yamnotri/3 (1).jpg',
+    image: '/assets/yamnotri/3 (1).webp',
     gallery: [
-      '/assets/yamnotri/3 (1).jpg',
-      '/assets/yamnotri/3 (2).jpg',
       '/assets/yamnotri/3 (1).webp',
-      '/assets/yamnotri/3 (2).webp'
+      '/assets/yamnotri/3 (2).webp',
+      '/assets/yamnotri/3 (1).jpg',
+      '/assets/yamnotri/3 (2).jpg'
     ],
     description: 'The westernmost shrine of the Char Dham circuit, nestled against Bandarpoonch peak. Devotees cook rice and potatoes in the boiling hot springs of Surya Kund before offering prayers to black marble Goddess Yamuna.',
     highlights: ['Yamunotri Temple darshan', 'Surya Kund thermal hot springs', 'Divya Shila sacred rock', 'Janki Chatti base trek (6 km)'],
@@ -873,9 +872,7 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/assets/KEDARNATH/3 (1).jpg',
       '/assets/KEDARNATH/3 (2).jpg',
-      '/assets/KEDARNATH/3 (3).jpg',
-      '/images/destinations/kedarnath/kedarnath-temple-front.jpg',
-      '/images/destinations/kedarnath/photo-1.jpg'
+      '/assets/KEDARNATH/3 (3).jpg'
     ],
     description: 'Set at an altitude of 3,584 metres against the magnificent Kedar dome, Kedarnath is the most revered shrine of Lord Shiva in the Garhwal Himalayas. A divine journey of faith, endurance, and unmatched alpine beauty.',
     highlights: ['Kedarnath Temple (1200+ yrs old)', 'Bhairavnath Temple viewpoint', 'Vasuki Tal glacial trek', 'Helicopter and pony trail options'],
@@ -1661,9 +1658,7 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/assets/valley of flowee/4 (1).jpg',
       '/assets/valley of flowee/4 (2).jpg',
-      '/assets/valley of flowee/4 (3).jpg',
-      '/images/destinations/valley-of-flowers/photo-1.jpg',
-      '/images/destinations/valley-of-flowers/photo-2.jpg'
+      '/assets/valley of flowee/4 (3).jpg'
     ],
     description: 'Discovered accidentally by Frank Smythe in 1931, this high-altitude valley explodes into a natural carpet of over 500 varieties of wildflowers, glacial streams, and butterflies during the monsoon.',
     highlights: ['UNESCO World Heritage Site', '500+ species of alpine wildflowers', 'Pushpawati river waterfalls', 'Rare Blue Poppy & Brahma Kamal'],
@@ -1693,8 +1688,8 @@ export const DESTINATIONS: Destination[] = [
       '/assets/CHOPTA/3 (1).jpg',
       '/assets/CHOPTA/3 (2).jpg',
       '/assets/CHOPTA/3 (3).jpg',
-      '/images/destinations/chopta/photo-1.jpg',
-      '/images/destinations/chopta/photo-2.jpg'
+      '/assets/CHOPTA/3 (4).jpg',
+      '/assets/CHOPTA/3 (5).jpg'
     ],
     description: 'An untouched alpine meadow nestled within Kedarnath Wildlife Sanctuary. Chopta is the base for Tungnath and the dramatic Chandrashila summit overlooking Chaukhamba peaks.',
     highlights: ['Tungnath Temple (3,680m)', 'Chandrashila Peak (4,000m)', 'Deoria Tal Reflection Lake', 'Lush Rhododendron Forests'],
