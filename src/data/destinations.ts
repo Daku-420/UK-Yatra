@@ -751,10 +751,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Haridwar',
     tagline: 'Gateway to the Gods & Holy Har Ki Pauri Ganga Aarti',
     category: 'Spiritual',
-    image: '/assets/haridwar/Twilight Temple Festival by the River.png',
+    image: '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
     gallery: [
-      '/assets/haridwar/Twilight Temple Festival by the River.png',
       '/assets/haridwar/Aerial Riverside Festival at Dusk.png',
+      '/assets/haridwar/Twilight Temple Festival by the River.png',
       '/assets/haridwar/Riverside Ghat and Orange Bridge.png',
       '/assets/haridwar/Sunset Crowds Along the Sacred River.png'
     ],
