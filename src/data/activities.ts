@@ -96,7 +96,7 @@ export const ACTIVITIES: Activity[] = [
     id: 'ganga-aarti-spiritual',
     title: 'Sacred Ganga Aarti & Temple Trails',
     category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/haridwar/Twilight Temple Festival by the River.png',
     shortDesc: 'Immerse in the celestial vibrations of Haridwar & Rishikesh evening river prayers.',
     fullDesc: 'As twilight descends over the holy Ganges, hundreds of lamps are lit, conch shells resonate, and Vedic hymns fill the mountain breeze at Har Ki Pauri and Triveni Ghat. A soulful, unforgettable spiritual experience.',
     topLocations: ['Triveni Ghat, Rishikesh', 'Har Ki Pauri, Haridwar', 'Parmarth Niketan, Rishikesh', 'Devprayag Sangam'],

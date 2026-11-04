@@ -385,7 +385,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 80,
@@ -505,7 +505,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.8,
     "reviewsCount": 87,
@@ -821,7 +821,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 108,
@@ -934,7 +934,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.8,
     "reviewsCount": 115,
@@ -1229,7 +1229,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 136,
@@ -1692,7 +1692,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 54,
@@ -1811,7 +1811,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.8,
     "reviewsCount": 61,
@@ -1903,7 +1903,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
       "/assets/yamnotri/3 (1).webp",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 4.9,
     "reviewsCount": 68,
@@ -2022,7 +2022,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "image": "/assets/KEDARNATH/3 (1).jpg",
     "gallery": [
       "/assets/KEDARNATH/3 (1).jpg",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+      "/assets/haridwar/Twilight Temple Festival by the River.png"
     ],
     "rating": 5.0,
     "reviewsCount": 75,
@@ -2110,11 +2110,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop",
+    "image": "/assets/haridwar/Twilight Temple Festival by the River.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop",
+      "/assets/haridwar/Twilight Temple Festival by the River.png",
       "/assets/rishikesh/1 (1).jpg",
-      "/assets/mussorie/1 (1).jpg"
+      "/assets/mussorie/Himalayan Hill Town Panorama.png"
     ],
     "rating": 4.9,
     "reviewsCount": 82,
@@ -2188,11 +2188,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop",
+    "image": "/assets/haridwar/Twilight Temple Festival by the River.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop",
+      "/assets/haridwar/Twilight Temple Festival by the River.png",
       "/assets/rishikesh/1 (1).jpg",
-      "/assets/mussorie/1 (1).jpg"
+      "/assets/mussorie/Himalayan Hill Town Panorama.png"
     ],
     "rating": 4.8,
     "reviewsCount": 89,
@@ -2537,11 +2537,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Dec - Mar (Snow & Skiing) / Apr - Jun",
     "category": "Trek & Adventure",
-    "image": "/images/destinations/auli/photo-1.jpg",
+    "image": "/assets/AULI/Sunlit Snowy Mountain Ski Resort.png",
     "gallery": [
-      "/images/destinations/auli/photo-1.jpg",
-      "/images/destinations/auli/photo-1.jpg",
-      "/images/destinations/auli/photo-1.jpg"
+      "/assets/AULI/Sunlit Snowy Mountain Ski Resort.png",
+      "/assets/AULI/Snowy Himalayan Lake Panorama.png",
+      "/assets/AULI/Alpine Village Beneath Snowy Peaks.png"
     ],
     "rating": 5.0,
     "reviewsCount": 117,
