@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { 
-  Send, 
+  Send,
+  Sparkles, 
   CheckCircle2, 
   Phone, 
   Calendar, 
   Users, 
   ShieldCheck, 
-  Sparkles,
-  MapPin,
-  Clock,
   Lock,
   Zap
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
-import { DESTINATIONS } from '../data/destinations';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { WhatsAppIcon } from '../components/SocialIcons';
 

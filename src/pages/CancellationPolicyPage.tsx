@@ -1,6 +1,5 @@
 import React from 'react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { SITE_CONFIG } from '../config/siteConfig';
 
 export const CancellationPolicyPage: React.FC = () => {
   return (

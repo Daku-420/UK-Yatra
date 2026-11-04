@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Mountain, Search, Sparkles, ShieldCheck } from 'lucide-react';
+import { Mountain, Search } from 'lucide-react';
 import { TREKS } from '../data/treks';
 import { TrekCard } from '../components/TrekCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';

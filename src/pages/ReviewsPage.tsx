@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, CheckCircle, Quote, Plus, X, Send, Sparkles } from 'lucide-react';
+import { Star, CheckCircle, Plus, X, Send, Sparkles } from 'lucide-react';
 import { REVIEWS } from '../data/reviews';
 import { ReviewCard } from '../components/ReviewCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';

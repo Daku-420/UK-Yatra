@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 
 const BASE_URL = 'https://uk-yatra.vercel.app';
 const currentDate = new Date().toISOString().split('T')[0];

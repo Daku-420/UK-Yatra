@@ -243,7 +243,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             <img
               src={imgUrl}
               alt={`${destination.name} - Photo ${idx + 1}`}
-              className="w-full h-full object-cover object-center scale-105 transition-transform duration-10000"
+              className="w-full h-full object-cover object-center scale-105 transition-transform duration-10000 transform-gpu [backface-visibility:hidden]"
               loading={idx === 0 ? 'eager' : 'lazy'}
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;

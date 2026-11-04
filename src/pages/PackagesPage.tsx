@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Sparkles, Search, Filter } from 'lucide-react';
+import { Sparkles, Search } from 'lucide-react';
 import { adminStorage } from '../utils/adminStorage';
 import { PackageCard } from '../components/PackageCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';

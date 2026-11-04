@@ -29,24 +29,18 @@ import {
   ArrowUpRight, 
   DollarSign, 
   TrendingUp, 
-  Mountain,
-  FileText,
-  ShieldCheck,
-  Check,
-  Share2
 } from 'lucide-react';
 import { useAdminAuth } from '../../context/AdminAuthContext';
 import { AdminLoginPage } from './AdminLoginPage';
 import { adminStorage, AdminBooking, BookingStatus, AdminWeatherAdvisory, AdminSettings } from '../../utils/adminStorage';
 import { TourPackage } from '../../types';
-import { getWhatsAppUrl, SITE_CONFIG } from '../../config/siteConfig';
+import { getWhatsAppUrl } from '../../config/siteConfig';
 import { Logo } from '../../components/Logo';
 import { WhatsAppIcon } from '../../components/SocialIcons';
 
 export const AdminPortalPage: React.FC = () => {
-  const { isAuthenticated, user, logout, changePassword } = useAdminAuth();
-  const navigate = useNavigate();
-
+  const { isAuthenticated, user, logout } = useAdminAuth();
+  
   // Active Tab state
   const [activeTab, setActiveTab] = useState<'overview' | 'bookings' | 'packages' | 'weather' | 'reviews' | 'settings'>('overview');
 

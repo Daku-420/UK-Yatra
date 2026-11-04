@@ -10,7 +10,6 @@ import {
   CheckCircle2, 
   Mountain, 
   Sparkles,
-  Phone
 } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../config/siteConfig';
 import { Breadcrumbs } from '../components/Breadcrumbs';

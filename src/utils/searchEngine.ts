@@ -1,5 +1,4 @@
 import { DESTINATIONS } from '../data/destinations';
-import { TOUR_PACKAGES } from '../data/packages';
 import { TREKS } from '../data/treks';
 import { ACTIVITIES } from '../data/activities';
 import { SPIRITUAL_CIRCUITS } from '../data/spiritual';

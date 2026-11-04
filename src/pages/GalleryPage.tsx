@@ -6,7 +6,6 @@ import {
   Heart, 
   Eye, 
   X, 
-  Share2
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SITE_CONFIG } from '../config/siteConfig';

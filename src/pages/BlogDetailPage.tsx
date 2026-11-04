@@ -7,7 +7,6 @@ import {
   Tag, 
   Sparkles, 
   ChevronLeft,
-  ArrowRight
 } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogs';
 import { getWhatsAppUrl } from '../config/siteConfig';
