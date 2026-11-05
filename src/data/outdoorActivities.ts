@@ -678,8 +678,8 @@ export const OUTDOOR_ACTIVITIES: OutdoorActivity[] = [
       '/assets/mussorie/Himalayan Hill Town Panorama.jpg'
     ],
     shortDesc: 'Soar like a Himalayan golden eagle over terraced valleys, blue lakes, and snow-draped ridge lines.',
-    fullDesc: 'Catch thermal updrafts and experience weightless flight seated comfortably in front of an experienced DGCA/APPI licensed tandem glider pilot. Launch from hilltop vantage points in Bhimtal, Naukuchiatal, or Mussoorie, carving smooth arcs across the sky with dramatic aerial vistas of emerald pine valleys and distant glaciated peaks.',
-    topLocations: ['Pandegaon / Naukuchiatal (Nainital)', 'Bhimtal Valley', 'George Everest Peak (Mussoorie)', 'Rishikesh Valley'],
+    fullDesc: 'Catch thermal updrafts and experience weightless flight seated comfortably in front of an experienced DGCA/APPI licensed tandem glider pilot. Launch from hilltop vantage points in Bhimtal or Mussoorie, carving smooth arcs across the sky with dramatic aerial vistas of emerald pine valleys and distant glaciated peaks.',
+    topLocations: ['Pandegaon / Bhimtal (Nainital)', 'Bhimtal Valley', 'George Everest Peak (Mussoorie)', 'Rishikesh Valley'],
     highlights: [
       'Tandem flight piloted by instructors with 500+ logged flight hours',
       'Glide 1,500 to 3,000 feet above scenic alpine lakes and terraced villages',

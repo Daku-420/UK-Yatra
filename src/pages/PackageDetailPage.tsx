@@ -65,7 +65,6 @@ const PACKAGE_ALIASES: Record<string, string> = {
   'chamba': 'kanatal-dhanaulti-tehri',
   'bhimtal': 'nainital-bhimtal-sattal',
   'bhowali': 'nainital-bhimtal-sattal',
-  'naukuchiatal': 'nainital-bhimtal-sattal',
   'ramgarh': 'peora-mukteshwar-ramgarh',
   'dhanachuli': 'peora-mukteshwar-ramgarh',
   'khirsu': 'khirsu-pauri-lansdowne',

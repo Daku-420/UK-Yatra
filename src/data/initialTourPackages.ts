@@ -255,7 +255,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
   {
     id: 'nainital-bhimtal-sattal',
     title: 'Nainital Lake District & Sattal Forest Serenade (3N/4D)',
-    destination: 'Nainital, Bhimtal, Sattal & Naukuchiatal',
+    destination: 'Nainital, Bhimtal & Sattal',
     duration: '3 Nights / 4 Days',
     days: 4,
     startingPrice: 'Pricing on Request',
@@ -273,7 +273,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     highlights: [
       'Boat cruise on pear-shaped Naini Lake and visit sacred Naina Devi Temple',
       'Aerial ropeway to Snow View Point with majestic Nanda Devi mountain views',
-      'Excursion to Bhimtal with its central island aquarium cafe and Naukuchiatal',
+      'Excursion to Bhimtal with its central island aquarium cafe and Sattal',
       'Nature walk and bird watching amidst the pristine freshwater lakes of Sattal',
       'Stroll the historic Governor’s House and bustling Tibetan candle market'
     ],
@@ -283,11 +283,11 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     accommodationType: 'Lake-view Hotel / Colonial Heritage Resort',
     transportationType: 'Private AC Tourist Cab',
     mealPlan: 'Daily Buffet Breakfast & Dinner',
-    routeSummary: ['Kathgodam', 'Nainital Naini Lake', 'Snow View', 'Bhimtal', 'Sattal', 'Naukuchiatal'],
+    routeSummary: ['Kathgodam', 'Nainital Naini Lake', 'Snow View', 'Bhimtal', 'Sattal'],
     itinerary: [
       { day: 1, title: 'Kathgodam to Nainital – Arrival & Lake Walk', description: 'Pick up from Kathgodam Railway Station or Pantnagar Airport. Drive up through winding pine valleys to Nainital. Check-in and evening boat ride on Naini Lake.', stay: 'Nainital Hotel', meals: 'Dinner' },
       { day: 2, title: 'Nainital Sights & Snow View Ridge', description: 'Visit Naina Peak, Cave Garden, Lover’s Point, and take the ropeway up to Snow View. Evening shopping along Mall Road.', stay: 'Nainital Hotel', meals: 'Breakfast & Dinner' },
-      { day: 3, title: 'Lakes Tour: Bhimtal, Sattal & Naukuchiatal', description: 'Full day excursion to the serene lakes: Bhimtal with its island temple, the seven forested lakes of Sattal, and nine-cornered Naukuchiatal.', stay: 'Nainital Hotel', meals: 'Breakfast & Dinner' },
+      { day: 3, title: 'Lakes Tour: Bhimtal & Sattal', description: 'Full day excursion to the serene lakes: Bhimtal with its island temple, and the seven forested lakes of Sattal.', stay: 'Nainital Hotel', meals: 'Breakfast & Dinner' },
       { day: 4, title: 'Khurpatal Overlook & Kathgodam Drop', description: 'Check out after breakfast. Stop by scenic Khurpatal lake overlook and drop at Kathgodam Railway Station.', stay: 'Departure', meals: 'Breakfast' }
     ],
     inclusions: ['3 Nights stay in premium rooms', 'Daily breakfast & dinner', 'Private AC vehicle for all tours', 'Tolls & driver charges'],
@@ -333,7 +333,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     routeSummary: ['Kathgodam', 'Nainital', 'Bhowali', 'Ramgarh Orchards', 'Mukteshwar', 'Chauli Ki Jali'],
     itinerary: [
       { day: 1, title: 'Arrival at Nainital', description: 'Kathgodam pick-up, drive to Nainital, check in, and enjoy an evening boat ride on Naini Lake.', stay: 'Nainital Hotel', meals: 'Dinner' },
-      { day: 2, title: 'Nainital & Bhimtal Highlights', description: 'Explore Snow View, Cave Garden, and the serene waters of Bhimtal and Naukuchiatal.', stay: 'Nainital Hotel', meals: 'Breakfast & Dinner' },
+      { day: 2, title: 'Nainital & Bhimtal Highlights', description: 'Explore Snow View, Cave Garden, and the serene waters of Bhimtal.', stay: 'Nainital Hotel', meals: 'Breakfast & Dinner' },
       { day: 3, title: 'Nainital to Mukteshwar via Ramgarh', description: 'Scenic drive through the fruit bowl of Kumaon (Ramgarh). Arrive in Mukteshwar and relax at your orchard lodge.', stay: 'Mukteshwar Resort', meals: 'Breakfast & Dinner' },
       { day: 4, title: 'Chauli Ki Jali & Mukteshwar Dham', description: 'Visit the dramatic cliffs of Chauli Ki Jali for panoramic Himalayan views, and explore the ancient Mukteshwar Shiva Temple.', stay: 'Mukteshwar Resort', meals: 'Breakfast & Dinner' },
       { day: 5, title: 'Departure to Kathgodam', description: 'After breakfast, drive down through pine forests to Kathgodam for your train connection.', stay: 'Departure', meals: 'Breakfast' }
@@ -1122,7 +1122,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
       '2 Nights in Nainital with lake boating and Snow View cable car',
       'Stay in luxury riverside jungle resort along the Kosi River',
       'Visit Corbett Waterfall, Garjia Devi Temple & Corbett Museum',
-      'Excursion to Bhimtal and Naukuchiatal freshwater lakes'
+      'Excursion to Bhimtal freshwater lake'
     ],
     startPoint: 'Delhi / Kathgodam / Ramnagar',
     endPoint: 'Delhi / Kathgodam',
@@ -1156,7 +1156,7 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
       {
         day: 4,
         title: 'Nainital Lakes & Snow View Ridge',
-        description: 'Take the cable car to Snow View for mountain vistas. Afternoon excursion to Bhimtal and Naukuchiatal.',
+        description: 'Take the cable car to Snow View for mountain vistas. Afternoon excursion to Bhimtal.',
         stay: 'Nainital Lake Hotel',
         meals: 'Breakfast & Dinner'
       },

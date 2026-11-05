@@ -1264,7 +1264,7 @@ export const ARTICLES: Article[] = [
           "• White Water Rafting (Rishikesh): Brave Grade III-IV rapids like The Wall, Roller Coaster, and Golf Course.",
           "• Bungee Jumping (Mohan Chatti): India’s highest fixed platform jump (83 metres) engineered by New Zealand jump masters.",
           "• Alpine Skiing & Snowboarding (Auli): Certified instructors, powder snow, and modern chairlifts.",
-          "• Tandem Paragliding (Bhimtal & Naukuchiatal): Soar over azure Kumaon lakes with panoramic mountain views.",
+          "• Tandem Paragliding (Bhimtal): Soar over azure Kumaon lakes with panoramic mountain views.",
           "• Wildlife Jeep Safari (Jim Corbett): Track Bengal tigers and wild Asian elephants in India’s oldest national park.",
           "A central focus of this 15 Best Adventure Activities in Uttarakhand: Rafting, Trekking, Skiing & More is delivering authentic regional experiences, exploring the adventure activities in uttarakhand, from heritage viewpoints to peaceful alpine landscapes.",
           "When planning your journey in accordance with our 15 Best Adventure Activities in Uttarakhand: Rafting, Trekking, Skiing & More, setting aside buffer days for mountain weather, altitude acclimatization, and adventure activities in uttarakhand logistics ensures a relaxed and safe experience.",

@@ -23,7 +23,7 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
     'mussoorie', 'nainital', 'auli', 'ranikhet', 'chakrata',
     'lansdowne', 'mukteshwar', 'dhanaulti', 'kausani', 'munsiyari',
     'almora', 'chamba', 'kanatal', 'bhowali', 'bhimtal',
-    'dhanachuli', 'ramgarh', 'naukuchiatal', 'chaukori', 'pithoragarh',
+    'dhanachuli', 'ramgarh', 'chaukori', 'pithoragarh',
     'lohaghat', 'champawat', 'binsar', 'khirsu', 'pangot',
     'peora', 'gwaldam', 'abbott-mount'
   ],

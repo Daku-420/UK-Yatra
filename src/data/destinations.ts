@@ -528,34 +528,6 @@ export const DESTINATIONS: Destination[] = [
     }
   },
   {
-    id: 'naukuchiatal',
-    name: 'Naukuchiatal',
-    tagline: 'The Mystical Nine-Cornered Lake of Kumaon',
-    category: 'Hills & Valleys',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop'
-    ],
-    description: 'Famed for its nine-cornered freshwater lake surrounded by terraced mountains and oak woods, Naukuchiatal is an adventure and relaxation haven offering paragliding, kayaking, birding, and serene lakeside luxury.',
-    highlights: ['Paragliding over lake valley', 'Nine-cornered lake boating & angling', 'Birdwatching paradise', 'Lakeside promenade cafes'],
-    bestTime: 'March to June & September to December',
-    altitude: '1,220 m (4,002 ft)',
-    idealDuration: '2 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Naukuchiatal Lake', desc: 'Deep freshwater nine-cornered lake fed by an underground perennial spring.' },
-      { name: 'Pandegaon Paragliding Hub', desc: 'Premier tandem paragliding site offering aerial lake views.' },
-      { name: 'Jungliagaon Bird Trail', desc: 'Lush mountain trail home to rare Himalayan woodpeckers, barbets, and thrushes.' }
-    ],
-    howToReach: {
-      byAir: 'Pantnagar Airport (60 km).',
-      byTrain: 'Kathgodam Railway Station (26 km, 50 minutes).',
-      byRoad: 'Located just 4 km from Bhimtal, easily reachable by cab from Kathgodam.'
-    }
-  },
-  {
     id: 'chaukori',
     name: 'Chaukori',
     tagline: 'Lush Tea Gardens & Front-Row Seats to Nanda Devi & Panchachuli',

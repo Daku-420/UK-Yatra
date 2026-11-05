@@ -43,7 +43,6 @@ export const DESTINATION_MEGA_NAV: DestinationNavGroup[] = [
       { name: 'Bhimtal', slug: 'bhimtal', path: '/destinations/bhimtal' },
       { name: 'Dhanachuli', slug: 'dhanachuli', path: '/destinations/dhanachuli' },
       { name: 'Ramgarh', slug: 'ramgarh', path: '/destinations/ramgarh' },
-      { name: 'Naukuchiatal', slug: 'naukuchiatal', path: '/destinations/naukuchiatal' },
       { name: 'Chaukori', slug: 'chaukori', path: '/destinations/chaukori' },
       { name: 'Pithoragarh', slug: 'pithoragarh', path: '/destinations/pithoragarh' },
       { name: 'Lohaghat', slug: 'lohaghat', path: '/destinations/lohaghat' },

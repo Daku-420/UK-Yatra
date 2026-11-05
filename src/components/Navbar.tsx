@@ -79,7 +79,7 @@ const OUTDOOR_NAV_ITEMS = [
   {
     id: 'paragliding-fly',
     title: 'Tandem Paragliding',
-    subtitle: 'Bhimtal & Naukuchiatal High Flights',
+    subtitle: 'Bhimtal & Mussoorie High Flights',
     tag: 'Aero Flight',
     path: '/outdoor-activities/paragliding-fly',
     icon: Compass
