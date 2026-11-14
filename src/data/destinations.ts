@@ -18,7 +18,11 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/mussoorie/mussoorie-queen-of-hills.jpg',
       '/images/destinations/mussoorie/photo-2.jpg',
       '/images/destinations/mussoorie/photo-3.jpg',
-      '/images/destinations/mussoorie/photo-4.jpg'
+      '/images/destinations/mussoorie/photo-4.jpg',
+      '/images/destinations/mussoorie/1 (4).jpg',
+      '/images/destinations/mussoorie/1 (5).jpg',
+      '/images/destinations/mussoorie/photo-5.jpg',
+      '/images/destinations/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.jpg'
     ],
     description: 'Perched overlooking the Doon Valley and Shivalik range, Mussoorie charms travellers with its colonial architecture, bustling Mall Road, cascading waterfalls, and panoramic sunset viewpoints at Gun Hill and George Everest Peak.',
     highlights: ['Mall Road heritage walk', 'Kempty & Bhatta Falls', 'George Everest Peak ridge trail', 'Gun Hill cable car'],
@@ -83,7 +87,11 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/auli/Alpine Village Beneath Snowy Peaks.jpg',
       '/images/destinations/auli/Golden Hour Himalayan Terrace View.jpg',
       '/images/destinations/auli/photo-1.jpg',
-      '/images/destinations/auli/photo-2.jpg'
+      '/images/destinations/auli/photo-2.jpg',
+      '/images/destinations/auli/Misty Jaul Hill Viewpoint with Cow.jpg',
+      '/images/destinations/auli/photo-3.jpg',
+      '/images/destinations/auli/photo-4.jpg',
+      '/images/destinations/auli/photo-5.jpg'
     ],
     description: 'Surrounded by pine and oak forests with front-row views of Nanda Devi, Kamet, and Mana Parvat, Auli is the ultimate winter wonderland for skiing, snowboarding, and highest cable car rides.',
     highlights: ['Auli Ropeway (Longest in Asia, 4 km)', 'Artificial Lake with reflections', 'Nanda Devi 360° Panorama', 'Gorson Bugyal Snow Trek'],
@@ -176,7 +184,9 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/lansdowne/1 (1).jpg',
       '/images/destinations/lansdowne/1 (2).jpg',
       '/images/destinations/lansdowne/photo-2.jpg',
-      '/images/destinations/lansdowne/photo-3.jpg'
+      '/images/destinations/lansdowne/photo-3.jpg',
+      '/images/destinations/lansdowne/photo-4.jpg',
+      '/images/destinations/lansdowne/photo-5.jpg'
     ],
     description: 'Founded as a British military cantonment and home to the Garhwal Rifles, Lansdowne is an unspoilt hill station filled with thick blue pine forests, heritage churches, and peaceful forest walks.',
     highlights: ['Tip-in-Top viewpoint', 'Bhulla Tal Lake', 'Garhwal Rifles War Memorial', 'St. John’s Colonial Church'],
@@ -234,7 +244,8 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg',
       '/images/destinations/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.jpg',
       '/images/destinations/dhanaulti/Misty Forest Path of Nature and Care.jpg',
-      '/images/destinations/dhanaulti/Sunlit Mountain Forest Clearing.jpg'
+      '/images/destinations/dhanaulti/Sunlit Mountain Forest Clearing.jpg',
+      '/images/destinations/dhanaulti/Snowy Mountain Village Road.jpg'
     ],
     description: 'Located just 30 km past Mussoorie, Dhanaulti offers quiet alpine charm without commercial crowds. Walk through towering deodar woods at Eco Park and trek to the sacred mountain-top Surkanda Devi temple.',
     highlights: ['Eco Park Deodar Woods', 'Surkanda Devi Temple (2,757m)', 'Potato Farm Viewpoint', 'Adventure sports park'],
@@ -265,7 +276,8 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
       '/images/destinations/kausani/1 (1).jpg',
       '/images/destinations/kausani/1 (2).jpg',
-      '/images/destinations/kausani/1 (3).jpg'
+      '/images/destinations/kausani/1 (3).jpg',
+      '/images/destinations/kausani/1 (4).jpg'
     ],
     description: 'Mahatma Gandhi dubbed Kausani the "Switzerland of India". Perched atop a ridge, it offers an uninterrupted 300 km panoramic view of Himalayan peaks including Trishul, Nanda Devi, and Panchachuli.',
     highlights: ['300 km Himalayan snow peak panorama', 'Anasakti Ashram (Gandhi Smarak)', 'Kausani Tea Estate', 'Rudradhari Falls & Caves'],
@@ -298,7 +310,11 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/munsiyari/2 (2).jpg',
       '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png',
       '/images/destinations/munsiyari/photo-2.jpg',
-      '/images/destinations/munsiyari/photo-3.jpg'
+      '/images/destinations/munsiyari/photo-3.jpg',
+      '/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png',
+      '/images/destinations/munsiyari/Himalayan Valley Sports Field Panorama.png',
+      '/images/destinations/munsiyari/photo-4.jpg',
+      '/images/destinations/munsiyari/photo-5.jpg'
     ],
     description: 'Perched on the rim of Goriganga river valley in Pithoragarh, Munsiyari provides unhindered vistas of the iconic five snow peaks of Panchachuli and serves as gateway to Milam & Ralam glaciers.',
     highlights: ['Panchachuli 5 Peaks View', 'Birthi Waterfalls (126m)', 'Milam & Ralam Glacier trails', 'Khaliya Top Snow Trek'],
@@ -772,7 +788,8 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/rishikesh/1 (3).jpg',
       '/images/destinations/rishikesh/photo-2.jpg',
       '/images/destinations/rishikesh/photo-3.jpg',
-      '/images/destinations/rishikesh/photo-4.jpg'
+      '/images/destinations/rishikesh/photo-4.jpg',
+      '/images/destinations/rishikesh/photo-5.jpg'
     ],
     description: 'Where the holy Ganges surges down the Shivalik foothills, Rishikesh bridges serene spirituality with high-adrenaline sports like white-water rafting, riverside luxury camping, and soulful Ganga Aarti.',
     highlights: ['Triveni Ghat Ganga Aarti', 'Ram & Laxman Jhula bridges', 'Beatles Ashram meditation', 'White water river rafting'],
@@ -863,7 +880,11 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/kedarnath/3 (1).jpg',
       '/images/destinations/kedarnath/3 (2).jpg',
       '/images/destinations/kedarnath/3 (3).jpg',
-      '/images/destinations/kedarnath/photo-2.jpg'
+      '/images/destinations/kedarnath/photo-2.jpg',
+      '/images/destinations/kedarnath/photo-3.jpg',
+      '/images/destinations/kedarnath/photo-4.jpg',
+      '/images/destinations/kedarnath/photo-5.jpg',
+      '/images/destinations/kedarnath/photo-6.jpg'
     ],
     description: 'Set at an altitude of 3,584 metres against the magnificent Kedar dome, Kedarnath is the most revered shrine of Lord Shiva in the Garhwal Himalayas. A divine journey of faith, endurance, and unmatched alpine beauty.',
     highlights: ['Kedarnath Temple (1200+ yrs old)', 'Bhairavnath Temple viewpoint', 'Vasuki Tal glacial trek', 'Helicopter and pony trail options'],
@@ -894,7 +915,10 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/badrinath/Colorful Temple Beneath Snowy Mountains.png',
       '/images/destinations/badrinath/photo-2.jpg',
       '/images/destinations/badrinath/photo-3.jpg',
-      '/images/destinations/badrinath/photo-4.jpg'
+      '/images/destinations/badrinath/photo-4.jpg',
+      '/images/destinations/badrinath/photo-5.jpg',
+      '/images/destinations/badrinath/Vibrant Riverside Pilgrimage Market.png',
+      '/images/destinations/badrinath/Vibrant Temple Entrance Amid Mountain Peaks.png'
     ],
     description: 'One of the Char Dhams of India and the holiest temple of Lord Vishnu, situated between Nar and Narayana mountain ranges alongside the sacred thermal springs of Tapt Kund.',
     highlights: ['Badrinath Temple golden facade', 'Tapt Kund natural hot springs', 'Mana - The First Indian Village', 'Vasudhara Falls (122m)'],
@@ -919,8 +943,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Hemkund Sahib',
     tagline: 'World’s Highest Gurudwara & Pristine Glacial Lake',
     category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
-    gallery: ['https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop'],
+    image: '/images/destinations/hemkund saheb/Hemkund_Lake.jpg',
+    gallery: [
+      '/images/destinations/hemkund saheb/Hemkund_Lake.jpg',
+      '/images/destinations/hemkund saheb/Pilgrims_crossing_the_Hemkund_Glacier.jpg',
+      '/images/destinations/hemkund saheb/Hemkunt-003.jpg',
+      '/images/destinations/hemkund saheb/Hemkunt-006.jpg',
+      '/images/destinations/hemkund saheb/Helicopter_service.jpg'
+    ],
     description: 'Situated at an astonishing altitude of 4,329 meters and surrounded by seven snow-capped peaks, Sri Hemkund Sahib is where the tenth Sikh Guru, Guru Gobind Singh Ji, meditated in his previous incarnation.',
     highlights: ['Glacial lake reflection of 7 peaks', 'World’s highest Sikh Gurudwara', 'Rare Brahma Kamal flowers', 'Lakshman Temple nearby'],
     bestTime: 'June to October (Doors open June 1)',
@@ -978,7 +1008,10 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/jageshwar/Ancient Forest Temple Complex.png',
       '/images/destinations/jageshwar/Dandeshwar+Temple+complex.webp',
-      '/images/destinations/jageshwar/Forest Temple and Rocky Mountain Stream.png'
+      '/images/destinations/jageshwar/Forest Temple and Rocky Mountain Stream.png',
+      '/images/destinations/jageshwar/Jageshwar-Dham-Uttarakhand.webp',
+      '/images/destinations/jageshwar/jageshwar1imp.webp',
+      '/images/destinations/jageshwar/Meditation Among Ancient Stone Temples.png'
     ],
     description: 'Nestled in a tranquil valley flanked by towering deodar forests and the holy Jata Ganga stream, Jageshwar Dham is an 8th to 12th-century cluster of 124 stone temples dedicated to Lord Shiva, considered one of the earliest Jyotirlinga pilgrimage sites.',
     highlights: ['Cluster of 124 preserved Nagara-style stone temples', 'Maha Mrityunjaya & Jageshwar Jyotirlinga shrines', 'Dense deodar forest nature trails along Jata Ganga', 'Archaeological Museum housing exquisite Katyuri sculptures'],
@@ -1038,7 +1071,10 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/patal bhunehswar/1510244852_patal_bhuvaneshwar_banner3.jpg.webp',
       '/images/destinations/patal bhunehswar/Basalt Cliffside Caves and Colonnade.png',
-      '/images/destinations/patal bhunehswar/Cave Shrine with Floral Offerings.png'
+      '/images/destinations/patal bhunehswar/Cave Shrine with Floral Offerings.png',
+      '/images/destinations/patal bhunehswar/patal-bhuvaneshwar-temple-5753724.webp',
+      '/images/destinations/patal bhunehswar/pictures-patal-bhuvaneshwar1.webp',
+      '/images/destinations/patal bhunehswar/Shrine Steps Into Darkness.png'
     ],
     description: 'A 160-meter long and 90-foot deep underground cave temple carved out of limestone by rainwater. Puranic belief holds that thirty-three crore Hindu deities reside in this sanctum where stalactites and stalagmites have taken forms of mythological iconography.',
     highlights: ['Deep subterranean descent assisted by iron chains', 'Naturally formed Sheshnag, Kamdhenu, and Ganesha stalactites', 'Ancient Pandava and King Rituparna legends from Skanda Purana', 'Haat Kalika Shaktipeeth in nearby Gangolihat'],
@@ -1068,7 +1104,10 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/dhari devi/Floating Temple Pavilion Over Calm Green Water.png',
       '/images/destinations/dhari devi/Lakeside Ceremonial Procession by the Temple.png',
-      '/images/destinations/dhari devi/dhari-devi-doli-images-1024x838.webp'
+      '/images/destinations/dhari devi/nsplsh_8174bebe249b40b48c13a85ab6d37ea6~mv2.webp',
+      '/images/destinations/dhari devi/shutterstock2382983649-min.webp',
+      '/images/destinations/dhari devi/dhari-devi-doli-images-1024x838.webp',
+      '/images/destinations/dhari devi/Temple Walkway with Draped Bell.png'
     ],
     description: 'Located in Kalyasaur between Srinagar and Rudraprayag, Dhari Devi is revered as the guardian protector of Uttarakhand and the four holy Dhams. The idol is placed on a raised platform over the Alaknanda waters and uniquely changes expression from a girl child to a woman and elder throughout the day.',
     highlights: ['Guardian goddess of Char Dham pilgrimages', 'Elevated floating sanctum surrounded by turquoise Alaknanda waters', 'Miraculous facial transition across morning, noon, and evening', 'Sacred Kalimath counterpart holding the lower half of the deity'],
@@ -1098,7 +1137,9 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/neelkanth/Colorful Hindu Temple Entrance Crowd.png',
       '/images/destinations/neelkanth/Colorful Temple Tower Amidst Hillside Greenery.png',
-      '/images/destinations/neelkanth/a67ec66c721d70fdcbc253d06bba1d8c.webp'
+      '/images/destinations/neelkanth/a67ec66c721d70fdcbc253d06bba1d8c.webp',
+      '/images/destinations/neelkanth/neelkanth-mahadev-temple-rishikesh-images-261131352.webp',
+      '/images/destinations/neelkanth/Neelkanth-Mahadev-Temple-Rshikesh.webp'
     ],
     description: 'Perched in the dense forested hills across the Ganges from Rishikesh, Neelkanth Mahadev marks the mythic spot where Lord Shiva drank the deadly poison churned out of the ocean during Samudra Manthan, turning his throat blue.',
     highlights: ['Mythic Samudra Manthan ocean churning heritage', 'Ringed by Brahmakoot, Manikoot, and Vishnukoot peaks', 'Vibrant Shravan Kanwar Yatra and Maha Shivratri festivals', 'Picturesque trek through Rajaji tiger reserve buffers'],
@@ -1128,7 +1169,12 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/devprayag/devprayag-the-sangam-of-alaknanda-and-bhagirathi-rivers.webp',
       '/images/destinations/devprayag/1539886778_Devprayag1.webp',
-      '/images/destinations/devprayag/1683807587_1683807585993.jpg.webp'
+      '/images/destinations/devprayag/1683807587_1683807585993.jpg.webp',
+      '/images/destinations/devprayag/devprayag.webp',
+      '/images/destinations/devprayag/Mountain Town Suspension Bridge.png',
+      '/images/destinations/devprayag/Riverside Terraces Above Turquoise Rapids.png',
+      '/images/destinations/devprayag/Sunny Riverside Terrace by Rocky Hills.png',
+      '/images/destinations/devprayag/Turquoise River Rapids and Cliffside Town.png'
     ],
     description: 'Devprayag is the first and holiest of the Panch Prayags, where the roaring turquoise waters of the Bhagirathi meet the calm green currents of the Alaknanda to officially form the holy River Ganga. It is home to the ancient Raghunathji Temple, one of the 108 Divya Desams.',
     highlights: ['Spectacular two-tone river confluence forming Mother Ganga', 'Ancient 1,250-year-old Raghunathji Temple (Lord Rama)', 'Sacred Brahmakund and Vashishta Kund bathing ghats', 'Nakshatra Vedhshala ancient astronomical observatory'],
@@ -1273,10 +1319,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Guptkashi',
     tagline: 'Sacred Valley Town of Ancient Vishwanath Temple & Ardhanarishwar Shrine',
     category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+      '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
+      '/images/destinations/guptakashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg'
     ],
     description: 'Guptkashi (Hidden Benares) is a legendary holy town situated high above the Mandakini river valley facing Chaukhamba peak. Shiva concealed himself here from the Pandavas in the form of Nandi bull before emerging at Kedarnath. It houses the ancient Vishwanath Temple and Manikarnika Kund fed by Ganga and Yamuna spouts.',
     highlights: ['Ancient Vishwanath Temple mirroring the energy of Kashi Varanasi', 'Manikarnika Kund fed continuously by holy underground streams', 'Rare half-male half-female Ardhanarishwar stone idol', 'Primary staging hub with major helicopter services to Kedarnath'],
@@ -1398,7 +1444,8 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/rushranath/1551335374_4.jpg.webp',
       '/images/destinations/rushranath/Gemini_Generated_Image_eypgjneypgjneypg.png',
       '/images/destinations/rushranath/Gemini_Generated_Image_tce480tce480tce4.png',
-      '/images/destinations/rushranath/Gemini_Generated_Image_tkw3xytkw3xytkw3.png'
+      '/images/destinations/rushranath/Gemini_Generated_Image_tkw3xytkw3xytkw3.png',
+      '/images/destinations/rushranath/rudranath-3959138.webp'
     ],
     description: 'Rudranath is the fourth Kedar of the sacred Panch Kedar pilgrimage. Lord Shiva is worshipped in his natural stone cave sanctum as "Neelkanth Mahadev" in the form of his face (Mukh). The 20 km trek through Panar Bugyal is widely regarded as one of the most spiritually stirring and visually breathtaking Himalayan trails.',
     highlights: ['Fourth Kedar worshipping the face of Lord Shiva', 'Challenging 20 km wilderness trek through lush rhododendron forests and high meadows', 'Vaitarni river and sacred holy tarns (Surya, Chandra, and Tara kunds)', 'Magnificent unobstructed vistas of Nanda Devi, Trishul, and Hathi Parvat'],
@@ -1428,7 +1475,9 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/madhyamaheshwar/how-to-reach-madhyamaheshw-1746780980759.webp',
       '/images/destinations/madhyamaheshwar/Gemini_Generated_Image_26xz7q26xz7q26xz.png',
-      '/images/destinations/madhyamaheshwar/Gemini_Generated_Image_i8wp2vi8wp2vi8wp.png'
+      '/images/destinations/madhyamaheshwar/Gemini_Generated_Image_i8wp2vi8wp2vi8wp.png',
+      '/images/destinations/madhyamaheshwar/madhyamaheshwar-banner.webp',
+      '/images/destinations/madhyamaheshwar/madhyamaheshwar-banner3.webp'
     ],
     description: 'Second of the sacred Panch Kedars, Madhyamaheshwar sits in a divine amphitheater directly beneath the four towering summits of Mount Chaukhamba. The temple enshrines the navel (Nabhi) and stomach of Lord Shiva, surrounded by vibrant alpine pastures.',
     highlights: ['Second Kedar temple dedicated to the sacred navel of Shiva', 'Climb to Budha Madhyamaheshwar for dramatic Chaukhamba reflections in mountain tarns', 'Scenic 16 km forest trek along the roaring Madhyamaheshwar Ganga', 'Rich pastoral tranquility in unspoilt high-altitude meadows'],
@@ -1671,7 +1720,9 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/valley-of-flowers/4 (2).jpg',
       '/images/destinations/valley-of-flowers/4 (3).jpg',
       '/images/destinations/valley-of-flowers/photo-2.jpg',
-      '/images/destinations/valley-of-flowers/photo-3.jpg'
+      '/images/destinations/valley-of-flowers/photo-3.jpg',
+      '/images/destinations/valley-of-flowers/photo-4.jpg',
+      '/images/destinations/valley-of-flowers/photo-5.jpg'
     ],
     description: 'Discovered accidentally by Frank Smythe in 1931, this high-altitude valley explodes into a natural carpet of over 500 varieties of wildflowers, glacial streams, and butterflies during the monsoon.',
     highlights: ['UNESCO World Heritage Site', '500+ species of alpine wildflowers', 'Pushpawati river waterfalls', 'Rare Blue Poppy & Brahma Kamal'],
@@ -1702,7 +1753,12 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/chopta/3 (2).jpg',
       '/images/destinations/chopta/3 (3).jpg',
       '/images/destinations/chopta/3 (4).jpg',
-      '/images/destinations/chopta/3 (5).jpg'
+      '/images/destinations/chopta/3 (5).jpg',
+      '/images/destinations/chopta/photo-1.jpg',
+      '/images/destinations/chopta/photo-2.jpg',
+      '/images/destinations/chopta/photo-3.jpg',
+      '/images/destinations/chopta/photo-4.jpg',
+      '/images/destinations/chopta/photo-5.jpg'
     ],
     description: 'An untouched alpine meadow nestled within Kedarnath Wildlife Sanctuary. Chopta is the base for Tungnath and the dramatic Chandrashila summit overlooking Chaukhamba peaks.',
     highlights: ['Tungnath Temple (3,680m)', 'Chandrashila Peak (4,000m)', 'Deoria Tal Reflection Lake', 'Lush Rhododendron Forests'],
@@ -1731,7 +1787,8 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp',
       '/images/destinations/dhtayabugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
-      '/images/destinations/dhtayabugyal/2db70ae7a153fdddaee9b127fba08338.webp'
+      '/images/destinations/dhtayabugyal/2db70ae7a153fdddaee9b127fba08338.webp',
+      '/images/destinations/dhtayabugyal/Gemini_Generated_Image_t8s3hgt8s3hgt8s3.png'
     ],
     description: 'Considered among the most breathtaking sub-alpine meadows in India, Dayara Bugyal spans across 28 square kilometers of lush velvet grasslands in summer and converts into vast powder snowfields in winter.',
     highlights: ['28 sq km alpine meadow expanse', 'Bakaria Top summit (3,810m)', 'Barnala Tal lake campsite', 'Winter butter festival (Anduri Utsav)'],
@@ -1846,7 +1903,8 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/harshil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
       '/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
       '/images/destinations/harshil/1543513902_1543513900031.jpg.webp',
-      '/images/destinations/harshil/1602328040_1602328036685.jpg.webp'
+      '/images/destinations/harshil/1602328040_1602328036685.jpg.webp',
+      '/images/destinations/harshil/images.jpg'
     ],
     description: 'Nestled on the banks of Bhagirathi River on the route to Gangotri, Harsil is a fairy-tale hamlet celebrated for its crisp red apple orchards, dense deodar forests, traditional wooden bridges, and serene Swiss-like tranquility.',
     highlights: ['Crisp organic apple orchards', 'Wilson’s Cottage heritage lore', 'Mukhba village (Winter seat of Ganga)', 'Saat Tal glacial lake trek'],

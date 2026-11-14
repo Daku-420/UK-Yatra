@@ -621,7 +621,9 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     gallery: [
       '/assets/valley of flowee/4 (1).jpg',
       '/assets/valley of flowee/4 (2).jpg',
-      '/assets/valley of flowee/4 (3).jpg'
+      '/assets/valley of flowee/4 (3).jpg',
+      '/images/destinations/hemkund saheb/Hemkund_Lake.jpg',
+      '/images/destinations/hemkund saheb/Pilgrims_crossing_the_Hemkund_Glacier.jpg'
     ],
     rating: 4.96,
     reviewsCount: 135,
@@ -679,7 +681,8 @@ export const INITIAL_TOUR_PACKAGES: TourPackage[] = [
     gallery: [
       '/assets/KEDARNATH/3 (1).jpg',
       '/assets/KEDARNATH/3 (2).jpg',
-      '/assets/KEDARNATH/3 (3).jpg'
+      '/assets/KEDARNATH/3 (3).jpg',
+      '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp'
     ],
     rating: 4.98,
     reviewsCount: 210,
