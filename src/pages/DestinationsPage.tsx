@@ -34,7 +34,7 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
     'neelkanth-mahadev', 'devprayag', 'rudraprayag', 'karnaprayag',
     'nandprayag', 'vishnuprayag', 'guptkashi', 'ukhimath',
     'triyuginarayan', 'kalpeshwar', 'rudranath', 'madhyamaheshwar',
-    'adi-kailash', 'om-parvat', 'piran-kaliyar', 'nanakmatta',
+    'adi-kailash', 'om-parvat', 'nanakmatta',
     'chitai-golu-devta', 'kasar-devi', 'katarmal-sun-temple'
   ],
   'nature-escapes': [

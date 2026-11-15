@@ -1560,35 +1560,6 @@ export const DESTINATIONS: Destination[] = [
     }
   },
   {
-    id: 'piran-kaliyar',
-    name: 'Piran Kaliyar',
-    tagline: 'Centuries-Old Sufi Dargah of Hazrat Alauddin Ali Ahmed Sabir Kalyari',
-    category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1200&auto=format&fit=crop'
-    ],
-    description: 'Located in Kaliyar village near Roorkee and Haridwar, Piran Kaliyar Sharif is the 13th-century Sufi shrine of Hazrat Alauddin Ali Ahmed Sabir Kalyari, renowned spiritual master of the Chishti order. It stands as an enduring symbol of interfaith unity and spiritual solace.',
-    highlights: ['13th-century Chishti Sufi shrine revered for spiritual healing', 'Annual Urs festival drawing devotees of all faiths from across the subcontinent', 'Peaceful setting along the historic banks of Upper Ganga Canal', 'Proximity to Roorkee University heritage and Haridwar ghats'],
-    bestTime: 'October to March (Urs festival dates vary by Islamic calendar)',
-    altitude: '260 m (853 ft)',
-    idealDuration: '1 Day',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Dargah Sharif of Sabir Kalyari', desc: 'Main marble sanctum adorned with carved jaali screens and prayer offerings.' },
-      { name: 'Upper Ganga Canal Banks', desc: 'Historic 19th-century canal engineering lined with peaceful shaded paths.' },
-      { name: 'Solani Aqueduct (Roorkee)', desc: 'Colonial masonry engineering marvel situated just 6 km away.' },
-      { name: 'Haridwar Ghats Link', desc: 'Located only 22 km from Har Ki Pauri for unified spiritual itineraries.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (60 km).',
-      byTrain: 'Roorkee Railway Station (7 km) or Haridwar Junction (22 km).',
-      byRoad: 'Situated off NH-334 with excellent four-lane highway connectivity from Delhi (185 km).'
-    }
-  },
-  {
     id: 'nanakmatta',
     name: 'Nanakmatta',
     tagline: 'Venerated Sikh Pilgrimage Gurdwara Associated with Guru Nanak Dev Ji & Doodh Wala Kuan',
