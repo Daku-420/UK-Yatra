@@ -121,9 +121,9 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
       }
     ],
     nearby: [
-      { name: 'Badrinath', distance: '218 km', desc: 'Sacred seat of Lord Vishnu along the Alaknanda river.', path: '/destinations/badrinath', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Chopta', distance: '73 km', desc: 'Mini Switzerland of Uttarakhand and base for Tungnath.', path: '/destinations/chopta', image: '/assets/CHOPTA/3 (1).jpg' },
-      { name: 'Rishikesh', distance: '216 km', desc: 'Yoga capital and gateway to Himalayan pilgrim trails.', path: '/destinations/rishikesh', image: '/assets/rishikesh/1 (1).jpg' }
+      { name: 'Badrinath', distance: '218 km', desc: 'Sacred seat of Lord Vishnu along the Alaknanda river.', path: '/destinations/badrinath', image: '/images/destinations/badrinath/photo-1.jpg' },
+      { name: 'Chopta', distance: '73 km', desc: 'Mini Switzerland of Uttarakhand and base for Tungnath.', path: '/destinations/chopta', image: '/images/destinations/chopta/photo-1.jpg' },
+      { name: 'Rishikesh', distance: '216 km', desc: 'Yoga capital and gateway to Himalayan pilgrim trails.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' }
     ],
     faqs: [
       { question: 'Is prior biometric registration mandatory for Kedarnath?', answer: 'Yes, biometric registration via the official Uttarakhand Tourism portal is mandatory for all pilgrims before boarding helicopters or beginning the trek.' },
@@ -183,9 +183,9 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
       }
     ],
     nearby: [
-      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/assets/dhanaulti/Misty Forest Path of Nature and Care.jpg' },
-      { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/assets/chakrata/Sunlit Mountain Resort Panorama.jpg' },
-      { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' }
+      { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg' },
+      { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg' },
+      { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' }
     ],
     faqs: [
       { question: 'How far is Mussoorie from Delhi and Dehradun?', answer: 'Mussoorie is approximately 35 km (1.5 hours) from Dehradun and 280 km (6-7 hours drive via Delhi-Meerut Expressway) from New Delhi.' },
@@ -196,11 +196,114 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
       { id: '1', author: 'Neha & Siddharth Kapoor', location: 'Delhi NCR', rating: 5, date: 'January 2026', tripType: 'Couples Getaway', review: 'We caught the winter snowfall in Landour! UK Yatra arranged our boutique stay and private cab perfectly. The driver was very polite and knew all the hidden cafes.' },
       { id: '2', author: 'Pooja Verma', location: 'Chandigarh', rating: 5, date: 'May 2025', tripType: 'Family Vacation', review: 'A wonderful 3-day family trip. The kids loved the ropeway ride and Kempty falls. Smooth hotel check-in and totally hassle-free service.' }
     ]
+  },
+  dhanachuli: {
+    quickFacts: {
+      altitude: '2,133 m (7,000 ft)',
+      duration: '2 - 3 Days',
+      bestSeason: 'March to June & Oct to Feb',
+      avgTemp: '10°C to 22°C (Summer) / 0°C to 12°C (Winter)',
+      nearestAirport: 'Pantnagar Airport (75 km)',
+      nearestRailhead: 'Kathgodam Railway Station (48 km)',
+      region: 'Kumaon Hills (Nainital District)',
+      travelVibe: 'Untouched Mountain Hamlet, Ridge Orchards, Himalayan Views'
+    },
+    activities: [
+      { title: 'Chauli Ki Jali Ridge Walk', category: 'Nature & Trails', desc: 'Visit the scenic cliff edge with natural rock crevices offering sweeping views of the Kumaon valley.', duration: '2 Hours' },
+      { title: 'Bhalu Gaad Waterfall Hike', category: 'Adventure', desc: 'Trek through pine and oak forests to the hidden 60-foot cascading mountain waterfall and natural pool.', duration: 'Half Day' },
+      { title: 'Apple & Plum Orchard Stroll', category: 'Sightseeing', desc: 'Walk through terraced fruit groves laden with apples, plums, and apricots in bloom.', duration: '1 - 2 Hours' },
+      { title: 'Mukteshwar Dham Temple Darshan', category: 'Spiritual', desc: 'Pay homage at the 350-year-old hilltop Shiva temple offering 180-degree Himalayan snow vistas.', duration: '2 Hours' }
+    ],
+    seasons: [
+      { season: 'Summer', months: 'March to June', temp: '15°C - 24°C', desc: 'Crisp mountain breezes and blooming fruit orchards. Perfect weather for nature walks and terrace views.', tag: 'Orchard Blooms', isPopular: true },
+      { season: 'Monsoon', months: 'July to August', temp: '14°C - 20°C', desc: 'Lush green valley terracing with mist rolling over pine ridges. Ideal for slow romantic getaways.', tag: 'Misty Valleys', isPopular: false },
+      { season: 'Winter', months: 'Oct to Feb', temp: '0°C - 12°C', desc: 'Crystal clear snow-capped Himalayan views with occasional snowfall in January and cozy fireside evenings.', tag: 'Clear Snow Peaks', isPopular: true }
+    ],
+    itineraries: [
+      {
+        id: 'serenity',
+        title: 'Untouched Dhanachuli Weekend',
+        duration: '2 Days / 1 Night',
+        idealFor: 'Couples & Peace Seekers',
+        days: [
+          { day: 1, title: 'Arrival via Kathgodam & Orchard Sunset', highlights: ['Scenic hill drive through Bhimtal', 'Check-in at valley-facing boutique stay', 'Sunset tea overlooking Trishul and Nanda Devi peaks'] },
+          { day: 2, title: 'Bhalu Gaad Waterfall & Return Transfer', highlights: ['Morning nature trail to Bhalu Gaad waterfall', 'Fresh orchard produce tasting', 'Transfer to Kathgodam railway station'] }
+        ]
+      },
+      {
+        id: 'kumaon-explorer',
+        title: 'Dhanachuli & Mukteshwar Heritage Circuit',
+        duration: '3 Days / 2 Nights',
+        idealFor: 'Families & Nature Lovers',
+        days: [
+          { day: 1, title: 'Kathgodam to Dhanachuli via Bhimtal Lake', highlights: ['Scenic drive past Bhimtal and Bhowali', 'Check-in and evening bonfire'] },
+          { day: 2, title: 'Mukteshwar Dham, Chauli Ki Jali & Sunset Point', highlights: ['Darshan at 350-year-old Mukteshwar temple', 'Panoramic photo stop at Chauli Ki Jali cliff', 'Café hopping in local fruit belt'] },
+          { day: 3, title: 'Forest Nature Trail & Scenic Return', highlights: ['Morning bird watching walk', 'Kumaoni village lunch', 'Scenic descent to Kathgodam/Pantnagar'] }
+        ]
+      }
+    ],
+    nearby: [
+      { name: 'Mukteshwar', distance: '14 km', desc: 'Fruit orchards, historic Shiva shrine, and snow-capped Trishul peak views.', path: '/destinations/mukteshwar', image: '/images/destinations/mukteshwar/mukteshwar-shrine-gateway.jpg' },
+      { name: 'Nainital', distance: '48 km', desc: 'Iconic emerald lake city surrounded by seven high forested mountain ridges.', path: '/destinations/nainital', image: '/images/destinations/nainital/photo-1.jpg' },
+      { name: 'Bhimtal', distance: '38 km', desc: 'Quiet mountain lake with an island aquarium and serene paddle boating.', path: '/destinations/bhimtal', image: '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg' }
+    ]
   }
 };
 
+// Helper: Contextual nearby destinations based on destination geographic belt
+function getRegionalNearbyPlaces(id: string, name: string): NearbyPlace[] {
+  const normId = id.toLowerCase();
+  
+  // 1. Kumaon Lake & Orchard Belt
+  const kumaonKeywords = [
+    'dhanachuli', 'mukteshwar', 'nainital', 'bhimtal', 'bhowali', 'ramgarh', 
+    'ranikhet', 'almora', 'kausani', 'binsar', 'peora', 'pithoragarh', 
+    'munsiyari', 'chaukori', 'lohaghat', 'champawat', 'baijnath', 'jageshwar',
+    'shitlakhet', 'satkhol', 'kanda', 'dhanpur', 'shaukiyathal'
+  ];
+  if (kumaonKeywords.some(k => normId.includes(k))) {
+    const candidates: NearbyPlace[] = [
+      { name: 'Mukteshwar', distance: '14 km', desc: 'Fruit orchards, ancient Shiva shrine, and snow-capped Trishul peak views.', path: '/destinations/mukteshwar', image: '/images/destinations/mukteshwar/mukteshwar-shrine-gateway.jpg' },
+      { name: 'Nainital', distance: '48 km', desc: 'Iconic emerald lake city surrounded by seven high forested ridges.', path: '/destinations/nainital', image: '/images/destinations/nainital/photo-1.jpg' },
+      { name: 'Bhimtal', distance: '38 km', desc: 'Quiet mountain lake with an island aquarium and serene boating.', path: '/destinations/bhimtal', image: '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg' },
+      { name: 'Ranikhet', distance: '55 km', desc: 'Pine-scented cantonment hill resort with rolling golf meadows.', path: '/destinations/ranikhet', image: '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg' },
+      { name: 'Almora', distance: '52 km', desc: 'Cultural capital of Kumaon known for Kasar Devi ridge and heritage bazaars.', path: '/destinations/almora', image: '/images/destinations/almora/almora-ridge-view.jpg' }
+    ];
+    return candidates.filter(c => !normId.includes(c.name.toLowerCase().replace(/\s+/g, '-'))).slice(0, 3);
+  }
+
+  // 2. High Himalayas, Char Dham & Sacred Pilgrim Shrines
+  const pilgrimKeywords = [
+    'kedarnath', 'badrinath', 'gangotri', 'yamunotri', 'chopta', 'tungnath', 
+    'auli', 'joshimath', 'rudraprayag', 'devprayag', 'guptakashi', 'ukhimath', 
+    'hemkund', 'valley-of-flowers', 'karnprayag', 'nandprayag', 'vishnuprayag',
+    'madhyamaheshwar', 'kalpeshwar', 'tiryuginarayan'
+  ];
+  if (pilgrimKeywords.some(k => normId.includes(k))) {
+    const candidates: NearbyPlace[] = [
+      { name: 'Badrinath', distance: 'Sacred Shrine', desc: 'Seat of Lord Badri Vishal along the holy Alaknanda river.', path: '/destinations/badrinath', image: '/images/destinations/badrinath/photo-1.jpg' },
+      { name: 'Chopta', distance: 'Mini Switzerland', desc: 'Lush alpine meadows and base camp for Tungnath and Chandrashila.', path: '/destinations/chopta', image: '/images/destinations/chopta/photo-1.jpg' },
+      { name: 'Auli', distance: 'Ski Resort', desc: 'India’s premier ski slopes with 360-degree vistas of Nanda Devi.', path: '/destinations/auli', image: '/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg' },
+      { name: 'Kedarnath', distance: 'Holy Jyotirlinga', desc: 'Sacred Shiva shrine surrounded by snow-clad Himalayan peaks.', path: '/destinations/kedarnath', image: '/images/destinations/kedarnath/photo-1.jpg' },
+      { name: 'Rishikesh', distance: 'Gateway City', desc: 'Yoga capital and foothills gateway to sacred Himalayan trails.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' }
+    ];
+    return candidates.filter(c => !normId.includes(c.name.toLowerCase().replace(/\s+/g, '-'))).slice(0, 3);
+  }
+
+  // 3. Garhwal Hills & Dehradun Valley (Default)
+  const candidates: NearbyPlace[] = [
+    { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: '/images/destinations/mussoorie/photo-1.jpg' },
+    { name: 'Rishikesh', distance: 'Direct Highway', desc: 'World capital of yoga, sacred evening Ganga aartis, and river rapids.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' },
+    { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat with Eco Park and mountain walks.', path: '/destinations/dhanaulti', image: '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg' },
+    { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient limestone caves.', path: '/destinations/chakrata', image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg' }
+  ];
+  return candidates.filter(c => !normId.includes(c.name.toLowerCase().replace(/\s+/g, '-'))).slice(0, 3);
+}
+
 // Generic fallback data generator so that ANY destination has rich 14-section data
 export function getDestinationExtraData(id: string, name: string, category: string, altitude?: string, idealDuration?: string, bestTime?: string): DestinationExtraData {
+  const dynamicNearby = getRegionalNearbyPlaces(id, name);
+
   if (DESTINATION_DETAILS_MAP[id]) {
     const existing = DESTINATION_DETAILS_MAP[id];
     return {
@@ -237,11 +340,7 @@ export function getDestinationExtraData(id: string, name: string, category: stri
           ]
         }
       ],
-      nearby: existing.nearby || [
-        { name: 'Rishikesh', distance: 'Scenic Drive', desc: 'Yoga capital of the world and hub for Ganga river rafting.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
-        { name: 'Nainital', distance: 'Scenic Drive', desc: 'Iconic emerald lake city surrounded by seven high ridges.', path: '/destinations/nainital', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' },
-        { name: 'Auli', distance: 'Scenic Drive', desc: 'India’s premier ski destination with sweeping Nanda Devi panoramas.', path: '/destinations/auli', image: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg' }
-      ],
+      nearby: existing.nearby || dynamicNearby,
       faqs: existing.faqs || [
         { question: `What is the best time to visit ${name}?`, answer: `${name} is best visited between March and June for pleasant weather, and from September to November for crystal clear Himalayan views.` },
         { question: `How many days are ideal to explore ${name}?`, answer: `A duration of 2 to 4 days is ideal to experience all prime attractions, viewpoints, and local heritage without rushing.` },
@@ -302,11 +401,7 @@ export function getDestinationExtraData(id: string, name: string, category: stri
         ]
       }
     ],
-    nearby: [
-      { name: 'Rishikesh', distance: 'Direct Highway', desc: 'World capital of yoga, sacred evening aartis, and white-water rapids.', path: '/destinations/rishikesh', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop' },
-      { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: '/assets/mussorie/Himalayan Hill Town Panorama.jpg' },
-      { name: 'Nainital', distance: 'Lake District', desc: 'Enchanting emerald lake surrounded by lush forested mountain peaks.', path: '/destinations/nainital', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop' }
-    ],
+    nearby: dynamicNearby,
     faqs: [
       { question: `What makes ${name} special compared to other destinations?`, answer: `${name} offers a pristine blend of authentic Himalayan tranquility, scenic panoramas, and genuine mountain warmth away from commercial crowds.` },
       { question: `What is the best way to reach ${name}?`, answer: `You can reach ${name} via direct highway drives from Dehradun, Rishikesh, or Kathgodam. UK Yatra provides sanitized private cabs with experienced mountain drivers.` },

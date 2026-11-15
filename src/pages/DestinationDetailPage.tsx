@@ -800,8 +800,28 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                   >
                     <div className="relative aspect-16/10 overflow-hidden">
                       <img
-                        src={place.image}
+                        src={(() => {
+                          const destSlug = place.path.replace(/^\/destinations\/?/, '').replace(/\/$/, '').toLowerCase();
+                          const matchedDest = DESTINATIONS.find(d => 
+                            d.id.toLowerCase() === destSlug || 
+                            d.name.toLowerCase() === place.name.toLowerCase()
+                          );
+                          return matchedDest?.image || place.image;
+                        })()}
                         alt={place.name}
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          const destSlug = place.path.replace(/^\/destinations\/?/, '').replace(/\/$/, '').toLowerCase();
+                          const matchedDest = DESTINATIONS.find(d => 
+                            d.id.toLowerCase() === destSlug || 
+                            d.name.toLowerCase() === place.name.toLowerCase()
+                          );
+                          if (matchedDest?.gallery && matchedDest.gallery.length > 0) {
+                            target.src = matchedDest.gallery[0];
+                          } else {
+                            target.src = '/images/destinations/mussoorie/photo-1.jpg';
+                          }
+                        }}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-black/70 text-white backdrop-blur-md">
