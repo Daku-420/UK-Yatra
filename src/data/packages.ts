@@ -19,12 +19,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/badrinath/photo-1.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/KEDARNATH/3 (2).jpg"
-    ],
+      "/images/destinations/badrinath/photo-1.jpg",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/yamunotri/3 (1).jpg"
+],
     "rating": 4.8,
     "reviewsCount": 45,
     "overview": "UK Yatra is a premier Uttarakhand-based tour and travel company with extensive experience in operating and managing Char Dham Yatra by Helicopter. Over the years, we have emerged as a well-established and trusted name, becoming the preferred choice of lakhs of pilgrims undertaking Yamunotri, Gangotri, Kedarnath, and Badrinath Yatra by helicopter. “UK” represents Uttarakhand, the sacred land of the Himalayas and “Yatra” signifies a meaningful journey. Backed by a strong local operational network, professional ground teams at each destination, and deep sector expertise in helicopter logistics, UK Yatra delivers crystal-clear, transparent, and reliable pilgrimage solutions. Our personalized services, seamless coordination, and ethical travel practices ensure safety, comfort, and realistic itinerary planning for every guest. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra stands for trust, compliance, and excellence—offering customer-centric, professionally executed Char Dham and Do Dham helicopter journeys that create spiritually enriching and lifelong memories. Uttarakhand, also known as Dev Bhoomi or the Land of Gods, is home to numerous temples and welcome devotees all year round. In Hindi, ‘CHAR' means four and ‘DHAM' refers to religious destinations.",
@@ -111,12 +112,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/KEDARNATH/3 (2).jpg"
-    ],
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg"
+],
     "rating": 4.9,
     "reviewsCount": 52,
     "overview": "UK Yatra is a premier Uttarakhand-based tour and travel company with proven expertise in operating and managing Do Dham Yatra by Helicopter, covering the sacred shrines of Kedarnath and Badrinath. With years of hands-on experience in helicopter pilgrimage operations, UK Yatra has built a strong reputation as a trusted and preferred partner for high-reliability Himalayan yatra services. “UK” stands for Uttarakhand, the spiritual heart of the Himalayas while “Yatra” signifies a purposeful and transformative journey. Supported by a robust local operational network, professional ground teams at each helipad and shrine, and deep domain knowledge of helicopter logistics, UK Yatra ensures safe, time-efficient, transparent, and well-coordinated Do Dham helicopter journeys. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra operates with complete regulatory integrity. Our customer-first approach, ethical practices, and realistic itinerary planning deliver comfort, clarity, and spiritual fulfillment, making every Do Dham helicopter yatra a seamless and memorable experience. KEDARNATH: Set in the beautiful Mandakini valley, cupped by lofty peaks, the majestic Kedarnath temple stands on a glacial terrace, remnant of an ancient glacier – long since melted. This is Lord Shiv's territory – and the region is a living testimony to his adventures and exploits. The temple is believed to have been built by the pandavs, protagonists of the Mahabharata, as a tribute to Lord Shiva having forgiven them for fratricide after an exciting chase through the Himalayas. The journey to Kedarnath – The most significant of the 12 Jyotirlingas located in different parts of India -- is to relive these ancient tales and legends, and to become one with God.",
@@ -189,12 +189,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/badrinath/photo-1.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/KEDARNATH/3 (2).jpg"
-    ],
+      "/images/destinations/badrinath/photo-1.jpg",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg"
+],
     "rating": 5.0,
     "reviewsCount": 59,
     "overview": "UK Yatra is a premier Uttarakhand-based tour and travel company with proven expertise in operating and managing Do Dham Yatra by Helicopter, covering the sacred shrines of Kedarnath and Badrinath. With years of hands-on experience in helicopter pilgrimage operations, UK Yatra has built a strong reputation as a trusted and preferred partner for high-reliability Himalayan yatra services. “UK” stands for Uttarakhand, the spiritual heart of the Himalayas while “Yatra” signifies a purposeful and transformative journey. Supported by a robust local operational network, professional ground teams at each helipad and shrine, and deep domain knowledge of helicopter logistics, UK Yatra ensures safe, time-efficient, transparent, and well-coordinated Do Dham helicopter journeys. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra operates with complete regulatory integrity. Our customer-first approach, ethical practices, and realistic itinerary planning deliver comfort, clarity, and spiritual fulfillment, making every Do Dham helicopter yatra a seamless and memorable experience. KEDARNATH: Set in the beautiful Mandakini valley, cupped by lofty peaks, the majestic Kedarnath temple stands on a glacial terrace, remnant of an ancient glacier – long since melted. This is Lord Shiv's territory – and the region is a living testimony to his adventures and exploits. The temple is believed to have been built by the pandavs, protagonists of the Mahabharata, as a tribute to Lord Shiva having forgiven them for fratricide after an exciting chase through the Himalayas. The journey to Kedarnath – The most significant of the 12 Jyotirlingas located in different parts of India -- is to relive these ancient tales and legends, and to become one with God.",
@@ -246,12 +245,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/KEDARNATH/3 (2).jpg"
-    ],
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg"
+],
     "rating": 4.9,
     "reviewsCount": 66,
     "overview": "UK Yatra is a premier Uttarakhand-based tour and travel company with proven expertise in operating and managing Do Dham Yatra by Helicopter, covering the sacred shrines of Kedarnath and Badrinath. Building on our extensive experience in helicopter pilgrimage operations, we are now coming up with a more premium, safer, and highly convenient Do Dham Yatra by Helicopter using a Twin Engine Helicopter (MI-17) designed to elevate safety standards, passenger comfort, and operational reliability in the challenging Himalayan terrain. Over the years, UK Yatra has established itself as a trusted and preferred partner for high-reliability Himalayan yatra services. “UK” represents Uttarakhand, the spiritual heart of the Himalayas, while “Yatra” signifies a purposeful and transformative journey. Backed by a strong local operational network, professional ground teams deployed at every helipad and shrine, and deep domain expertise in helicopter logistics, UK Yatra ensures safe, time-efficient, transparent, and well-coordinated Do Dham helicopter journeys.",
@@ -324,12 +322,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Helicopter Yatra",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/badrinath/photo-1.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/KEDARNATH/3 (2).jpg"
-    ],
+      "/images/destinations/badrinath/photo-1.jpg",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg"
+],
     "rating": 4.8,
     "reviewsCount": 73,
     "overview": "UK Yatra is a premier Uttarakhand-based tour and travel company with proven expertise in operating and managing Do Dham Yatra by Helicopter, covering the sacred shrines of Kedarnath and Badrinath. Building on our extensive experience in helicopter pilgrimage operations, we are now coming up with a more premium, safer, and highly convenient Do Dham Yatra by Helicopter using a Twin Engine Helicopter (MI-17) designed to elevate safety standards, passenger comfort, and operational reliability in the challenging Himalayan terrain. Over the years, UK Yatra has established itself as a trusted and preferred partner for high-reliability Himalayan yatra services. “UK” represents Uttarakhand, the spiritual heart of the Himalayas, while “Yatra” signifies a purposeful and transformative journey. Backed by a strong local operational network, professional ground teams deployed at every helipad and shrine, and deep domain expertise in helicopter logistics, UK Yatra ensures safe, time-efficient, transparent, and well-coordinated Do Dham helicopter journeys.",
@@ -381,12 +378,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
-    ],
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg",
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/yamunotri/3 (1).jpg"
+],
     "rating": 4.9,
     "reviewsCount": 80,
     "overview": "UK Yatra is an Uttarakhand-based tour and travel company with hands-on experience in planning and operating Char Dham Yatra by road. Over the years, we have grown into a trusted name for pilgrims traveling to Yamunotri, Gangotri, Kedarnath, and Badrinath, offering journeys that are well-planned, comfortable, and spiritually fulfilling. “UK” stands for Uttarakhand, the sacred land of the Himalayas, and “Yatra” means a journey with purpose. With a strong local operational network, experienced ground teams at every key destination, and in-depth knowledge of mountain routes and pilgrimage logistics, we focus on delivering transparent and reliable road-based Char Dham journeys. Our approach is simple: personalized service, ethical travel practices, and realistic itinerary planning, so that every guest travels safely, comfortably, and without stress. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra stands for trust and professionalism, creating Char Dham Yatra experiences by road that pilgrims remember for a lifetime.",
@@ -501,12 +499,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Road & Heli Combo",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/badrinath/photo-1.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
-    ],
+      "/images/destinations/badrinath/photo-1.jpg",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/yamunotri/3 (1).jpg"
+],
     "rating": 4.8,
     "reviewsCount": 87,
     "overview": "UK Yatra is an Uttarakhand-based tour and travel company with hands-on experience in planning and operating Char Dham Yatra by road. Over the years, we have grown into a trusted name for pilgrims traveling to Yamunotri, Gangotri, Kedarnath, and Badrinath, offering journeys that are well-planned, comfortable, and spiritually fulfilling. “UK” stands for Uttarakhand, the sacred land of the Himalayas, and “Yatra” means a journey with purpose. With a strong local operational network, experienced ground teams at every key destination, and in-depth knowledge of mountain routes and pilgrimage logistics, we focus on delivering transparent and reliable road-based Char Dham journeys. Our approach is simple: personalized service, ethical travel practices, and realistic itinerary planning, so that every guest travels safely, comfortably, and without stress. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra stands for trust and professionalism, creating Char Dham Yatra experiences by road that pilgrims remember for a lifetime.",
@@ -1225,12 +1224,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
-    ],
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/yamunotri/3 (1).jpg",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg"
+],
     "rating": 4.9,
     "reviewsCount": 136,
     "overview": "UK Yatra is an Uttarakhand-based tour and travel company with hands-on experience in planning and operating Char Dham Yatra by road. Over the years, we have grown into a trusted name for pilgrims traveling to Yamunotri, Gangotri, Kedarnath, and Badrinath, offering journeys that are well-planned, comfortable, and spiritually fulfilling. “UK” stands for Uttarakhand, the sacred land of the Himalayas, and “Yatra” means a journey with purpose. With a strong local operational network, experienced ground teams at every key destination, and in-depth knowledge of mountain routes and pilgrimage logistics, we focus on delivering transparent and reliable road-based Char Dham journeys. Our approach is simple: personalized service, ethical travel practices, and realistic itinerary planning, so that every guest travels safely, comfortably, and without stress. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra stands for trust and professionalism, creating Char Dham Yatra experiences by road that pilgrims remember for a lifetime.",
@@ -1352,11 +1352,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Classic Overland Road",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/yamunotri/3 (1).jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp"
-    ],
+      "/images/destinations/yamunotri/3 (1).jpg",
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg"
+],
     "rating": 5.0,
     "reviewsCount": 143,
     "overview": "UK Yatra is an Uttarakhand-based tour and travel company with hands-on experience in planning and operating Char Dham Yatra by road. Over the years, we have grown into a trusted name for pilgrims traveling to Yamunotri, Gangotri, Kedarnath, and Badrinath, offering journeys that are well-planned, comfortable, and spiritually fulfilling. “UK” stands for Uttarakhand, the sacred land of the Himalayas, and “Yatra” means a journey with purpose. With a strong local operational network, experienced ground teams at every key destination, and in-depth knowledge of mountain routes and pilgrimage logistics, we focus on delivering transparent and reliable road-based Char Dham journeys. Our approach is simple: personalized service, ethical travel practices, and realistic itinerary planning, so that every guest travels safely, comfortably, and without stress. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra stands for trust and professionalism, creating Char Dham Yatra experiences by road that pilgrims remember for a lifetime.",
@@ -1899,12 +1901,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Fixed Departure Group",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp",
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg"
-    ],
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg",
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/yamunotri/3 (1).jpg"
+],
     "rating": 4.9,
     "reviewsCount": 68,
     "overview": "UK Yatra is an Uttarakhand-based tour and travel company with hands-on experience in planning and operating Char Dham Yatra by road. Over the years, we have grown into a trusted name for pilgrims traveling to Yamunotri, Gangotri, Kedarnath, and Badrinath, offering journeys that are well-planned, comfortable, and spiritually fulfilling. “UK” stands for Uttarakhand, the sacred land of the Himalayas, and “Yatra” means a journey with purpose. With a strong local operational network, experienced ground teams at every key destination, and in-depth knowledge of mountain routes and pilgrimage logistics, we focus on delivering transparent and reliable road-based Char Dham journeys. Our approach is simple: personalized service, ethical travel practices, and realistic itinerary planning, so that every guest travels safely, comfortably, and without stress. Certified with Uttarakhand Tourism, GST registered, MSME registered, and compliant with the Shop & Establishment Act, UK Yatra stands for trust and professionalism, creating Char Dham Yatra experiences by road that pilgrims remember for a lifetime.",
@@ -2110,12 +2113,12 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
+    "image": "/images/destinations/mussoorie/photo-1.jpg",
     "gallery": [
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
-      "/assets/rishikesh/1 (1).jpg",
-      "/assets/mussorie/Himalayan Hill Town Panorama.jpg"
-    ],
+      "/images/destinations/mussoorie/photo-1.jpg",
+      "/images/destinations/rishikesh/1 (1).jpg",
+      "/images/destinations/haridwar/haridwar-ganga-aarti-aerial.jpg"
+],
     "rating": 4.9,
     "reviewsCount": 82,
     "overview": "Welcome to UK Yatra – a premier tour and travel company specializing in exploring the majestic state of Uttarakhand, India. Our name “Yatra” in Sanskrit means “journey” and we believe that traveling is more than just visiting a destination, it’s an experience that creates lifelong memories and we at UK Yatra help you “Capture Unforgettable memories”. Experience the beauty and spirit of Uttarakhand with a journey covering Haridwar, Rishikesh, Dehradun, and Mussoorie.",
@@ -2188,12 +2191,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "All Year Round (Best: Oct - Jun)",
     "category": "Leisure & Hill Station",
-    "image": "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
+    "image": "/images/destinations/rishikesh/1 (1).jpg",
     "gallery": [
-      "/assets/haridwar/Aerial Riverside Festival at Dusk.jpg",
-      "/assets/rishikesh/1 (1).jpg",
-      "/assets/mussorie/Himalayan Hill Town Panorama.jpg"
-    ],
+      "/images/destinations/rishikesh/1 (1).jpg",
+      "/images/destinations/mussoorie/photo-1.jpg",
+      "/images/destinations/haridwar/haridwar-ganga-aarti-aerial.jpg",
+      "/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg"
+],
     "rating": 4.8,
     "reviewsCount": 89,
     "overview": "Welcome to UK Yatra – a premier tour and travel company specializing in exploring the majestic state of Uttarakhand, India. Our name “Yatra” in Sanskrit means “journey” and we believe that traveling is more than just visiting a destination, it’s an experience that creates lifelong memories and we at UK Yatra help you “Capture Unforgettable memories”. Comfortable and sanitized vehicle (as per group size) for sightseeing on all days as per the itinerary.",
@@ -2294,12 +2298,12 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Apr - Jun & Sep - Nov",
     "category": "Trek & Adventure",
-    "image": "/assets/CHOPTA/3 (1).jpg",
+    "image": "/images/destinations/chopta/photo-1.jpg",
     "gallery": [
-      "/assets/CHOPTA/3 (1).jpg",
-      "/assets/CHOPTA/3 (2).jpg",
-      "/assets/CHOPTA/3 (3).jpg"
-    ],
+      "/images/destinations/chopta/photo-1.jpg",
+      "/images/destinations/tungnath/Golden Shrine Above the Clouds.png",
+      "/images/destinations/chopta/3 (1).jpg"
+],
     "rating": 4.9,
     "reviewsCount": 96,
     "overview": "UK Yatra – a premier tour and travel company specializing in exploring the majestic state of Uttarakhand, India. Our name “Yatra” in Sanskrit means “journey” and we believe that traveling is more than just visiting a destination, it’s an experience that creates lifelong memories and we at UK Yatra help you “Capture Unforgettable memories”. Chopta, known as the \"Mini Switzerland of India\" offers breathtaking views of the Himalayas and lush meadows. It’s the base for the trek to Tungnath, the world’s highest Shiva temple. This serene destination is perfect for nature lovers and adventure seekers looking for a peaceful yet thrilling mountain escape.",
@@ -2361,11 +2365,12 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "May - Jun & Sep - Nov",
     "category": "Trek & Adventure",
-    "image": "/assets/KEDARNATH/3 (1).jpg",
+    "image": "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
     "gallery": [
-      "/assets/KEDARNATH/3 (1).jpg",
-      "/assets/yamnotri/3 (1).webp"
-    ],
+      "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+      "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+      "/images/destinations/badrinath/photo-1.jpg"
+],
     "rating": 4.8,
     "reviewsCount": 103,
     "overview": "UK Yatra – a premier tour and travel company specializing in exploring the majestic state of Uttarakhand, India. Our name “Yatra” in Sanskrit means “journey” and we believe that traveling is more than just visiting a destination, it’s an experience that creates lifelong memories and we at UK Yatra help you “Capture Unforgettable memories”. Teen Dham is the famous religious circuit visited by lakhs of devotees every year. Located on the high Himalayas of Uttarakhand, Teen Dham Yatra complete after the visit of four Hindu pilgrimage destination – Gangotri, Kedarnath and Badrinath.",
@@ -2463,12 +2468,12 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Apr - Jun & Sep - Nov",
     "category": "Trek & Adventure",
-    "image": "/assets/CHOPTA/3 (1).jpg",
+    "image": "/images/destinations/tungnath/Golden Shrine Above the Clouds.png",
     "gallery": [
-      "/assets/CHOPTA/3 (1).jpg",
-      "/assets/CHOPTA/3 (2).jpg",
-      "/assets/CHOPTA/3 (3).jpg"
-    ],
+      "/images/destinations/tungnath/Golden Shrine Above the Clouds.png",
+      "/images/destinations/chopta/photo-1.jpg",
+      "/images/destinations/chopta/3 (2).jpg"
+],
     "rating": 4.9,
     "reviewsCount": 110,
     "overview": "UK Yatra – a premier tour and travel company specializing in exploring the majestic state of Uttarakhand, India. Our name “Yatra” in Sanskrit means “journey” and we believe that traveling is more than just visiting a destination, it’s an experience that creates lifelong memories and we at UK Yatra help you “Capture Unforgettable memories”. Chopta, known as the \"Mini Switzerland of India\" offers breathtaking views of the Himalayas and lush meadows. It’s the base for the trek to Tungnath, the world’s highest Shiva temple. This serene destination is perfect for nature lovers and adventure seekers looking for a peaceful yet thrilling mountain escape.",
@@ -2537,12 +2542,12 @@ export const TOUR_PACKAGES: TourPackage[] = [
     "originalPrice": null,
     "bestSeason": "Dec - Mar (Snow & Skiing) / Apr - Jun",
     "category": "Trek & Adventure",
-    "image": "/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg",
+    "image": "/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg",
     "gallery": [
-      "/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg",
-      "/assets/AULI/Snowy Himalayan Lake Panorama.jpg",
-      "/assets/AULI/Alpine Village Beneath Snowy Peaks.jpg"
-    ],
+      "/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg",
+      "/images/destinations/chopta/photo-1.jpg",
+      "/images/destinations/auli/Golden Hour Himalayan Terrace View.jpg"
+],
     "rating": 5.0,
     "reviewsCount": 117,
     "overview": "UK Yatra – a premier tour and travel company specializing in exploring the majestic state of Uttarakhand, India. Our name “Yatra” in Sanskrit means “journey” and we believe that traveling is more than just visiting a destination, it’s an experience that creates lifelong memories and we at UK Yatra help you “Capture Unforgettable memories”. Char Dham is the famous religious circuit visited by lakhs of devotees every year. Located on the high Himalayas of Uttarakhand, Char Dham Yatra complete after the visit of four Hindu pilgrimage destination – Yamunotri, Gangotri, Kedarnath and Badrinath.",

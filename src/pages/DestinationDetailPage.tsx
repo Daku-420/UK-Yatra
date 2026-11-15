@@ -122,6 +122,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [activeItineraryTab, setActiveItineraryTab] = useState<string>(extraData.itineraries[0]?.id || '');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
@@ -483,39 +484,60 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               {galleryImages.length > 1 && (
                 <div className="mt-6 pt-6 border-t border-slate-100">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                      Scenic Glimpse ({galleryImages.length} Images)
+                    <span className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+                      <Camera className="w-3.5 h-3.5 text-brand-orange" />
+                      <span>Destination Photo Gallery ({galleryImages.length} Photographs)</span>
                     </span>
                     <button
                       type="button"
                       onClick={() => setIsLightboxOpen(true)}
-                      className="text-xs font-semibold text-brand-orange hover:underline flex items-center gap-1"
+                      className="text-xs font-semibold text-brand-orange hover:underline flex items-center gap-1 cursor-pointer"
                     >
                       <Camera className="w-3.5 h-3.5" />
-                      <span>View Gallery</span>
+                      <span>Full Screen Slider</span>
                     </button>
                   </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    {galleryImages.slice(0, 3).map((img, idx) => (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {(showAllPhotos ? galleryImages : galleryImages.slice(0, 6)).map((img, idx) => (
                       <div
                         key={idx}
                         onClick={() => {
                           setCurrentImageIndex(idx);
                           setIsLightboxOpen(true);
                         }}
-                        className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer border border-slate-200 hover:border-brand-orange"
+                        className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer border border-[#EAE4D9] hover:border-brand-orange shadow-xs hover:shadow-md transition-all"
                       >
                         <img 
                           src={img} 
-                          alt={`${destination.name} view`} 
+                          alt={`${destination.name} view ${idx + 1}`} 
                           loading="lazy"
                           decoding="async"
+                          onError={(e) => {
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.onerror = null;
+                            target.src = '/images/destinations/mussoorie/photo-1.jpg';
+                          }}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
                         />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+                        <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors" />
+                        <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-black/60 text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                          #{idx + 1}
+                        </span>
                       </div>
                     ))}
                   </div>
+
+                  {galleryImages.length > 6 && (
+                    <div className="mt-4 text-center">
+                      <button
+                        type="button"
+                        onClick={() => setShowAllPhotos(!showAllPhotos)}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FAF8F5] hover:bg-[#F2ECE1] border border-[#DDD5C7] text-xs font-bold text-slate-800 hover:text-brand-orange transition-colors cursor-pointer shadow-xs"
+                      >
+                        <span>{showAllPhotos ? 'Show Fewer Photos' : `View All ${galleryImages.length} Photos in ${destination.name}`}</span>
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
             </section>

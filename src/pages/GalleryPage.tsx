@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Camera, 
   MapPin, 
-  Sparkles, 
   Heart, 
-  Eye, 
   X, 
+  Compass
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { InstagramIcon } from '../components/SocialIcons';
+import { DESTINATIONS } from '../data/destinations';
 
 interface GalleryItem {
   id: string;
+  destId?: string;
   title: string;
   location: string;
   category: 'Spiritual' | 'Treks' | 'Adventure' | 'Wildlife' | 'Scenic';
@@ -23,111 +25,70 @@ interface GalleryItem {
 export const GalleryPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [activeModalImage, setActiveModalImage] = useState<GalleryItem | null>(null);
+  const [visibleCount, setVisibleCount] = useState<number>(24);
 
-  const galleryItems: GalleryItem[] = [
-    {
-      id: '1',
-      title: 'Kedarnath Temple in Morning Sun',
-      location: 'Kedarnath (3,584m)',
-      category: 'Spiritual',
-      image: '/assets/KEDARNATH/3 (1).jpg',
-      likes: 1240
-    },
-    {
-      id: '2',
-      title: 'Badrinath Sanctum & Alaknanda Valley',
-      location: 'Badrinath Dham',
-      category: 'Spiritual',
-      image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1200&auto=format&fit=crop',
-      likes: 980
-    },
-    {
-      id: '3',
-      title: 'Golden Sunset over Nanda Devi from Auli',
-      location: 'Auli Snow Slopes',
-      category: 'Scenic',
-      image: '/assets/AULI/Golden Hour Himalayan Terrace View.jpg',
-      likes: 1540
-    },
-    {
-      id: '4',
-      title: 'White Water Rafting on Ganga Rapids',
-      location: 'Shivpuri, Rishikesh',
-      category: 'Adventure',
-      image: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg',
-      likes: 890
-    },
-    {
-      id: '5',
-      title: 'Tungnath Chandrashila Summit Trail',
-      location: 'Chopta, Rudraprayag',
-      category: 'Treks',
-      image: '/assets/CHOPTA/3 (1).jpg',
-      likes: 1120
-    },
-    {
-      id: '6',
-      title: 'Valley of Flowers Bloom in Monsoon',
-      location: 'Chamoli UNESCO Reserve',
-      category: 'Treks',
-      image: '/assets/valley of flowee/4 (1).jpg',
-      likes: 2100
-    },
-    {
-      id: '7',
-      title: 'Royal Bengal Tiger Safari in Corbett',
-      location: 'Jim Corbett National Park',
-      category: 'Wildlife',
-      image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1200&auto=format&fit=crop',
-      likes: 1430
-    },
-    {
-      id: '8',
-      title: 'Naini Lake Twilight Boating',
-      location: 'Nainital, Kumaon',
-      category: 'Scenic',
-      image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=1200&auto=format&fit=crop',
-      likes: 760
-    },
-    {
-      id: '9',
-      title: 'Divine Evening Ganga Aarti at Triveni Ghat',
-      location: 'Rishikesh',
-      category: 'Spiritual',
-      image: '/assets/rishikesh/1 (1).jpg',
-      likes: 1850
-    },
-    {
-      id: '10',
-      title: 'Kedarkantha Winter Snow Summit (3,810m)',
-      location: 'Sankri, Uttarkashi',
-      category: 'Treks',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
-      likes: 1670
-    },
-    {
-      id: '11',
-      title: 'Boutique Riverside Glamping at Shivpuri',
-      location: 'Shivpuri River Bank',
-      category: 'Adventure',
-      image: '/assets/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg',
-      likes: 910
-    },
-    {
-      id: '12',
-      title: 'Tehri Lake Speed Boating & Water Sports',
-      location: 'Tehri Dam Reservoir',
-      category: 'Adventure',
-      image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop',
-      likes: 840
+  // Dynamically assemble all authentic local photography from the destination catalog
+  const allGalleryItems = useMemo<GalleryItem[]>(() => {
+    const items: GalleryItem[] = [];
+
+    for (const dest of DESTINATIONS) {
+      // Map destination category to gallery categories
+      let cat: GalleryItem['category'] = 'Scenic';
+      if (dest.category === 'Spiritual' || ['haridwar', 'rishikesh', 'kedarnath', 'badrinath', 'gangotri', 'yamunotri', 'tungnath', 'jageshwar', 'baijnath', 'hemkund-sahib', 'patal-bhuvaneshwar', 'dhari-devi', 'neelkanth-mahadev', 'devprayag', 'rudraprayag', 'karnaprayag', 'guptkashi', 'ukhimath', 'triyuginarayan', 'kalpeshwar', 'rudranath', 'madhyamaheshwar', 'adi-kailash', 'om-parvat'].includes(dest.id)) {
+        cat = 'Spiritual';
+      } else if ((dest.category as string) === 'Wildlife' || (dest.category as string) === 'Wildlife & National Parks' || ['jim-corbett', 'rajaji-national-park', 'nanda-devi-national-park', 'binsar-wildlife-sanctuary', 'kedarnath-wildlife-sanctuary', 'askot-wildlife-sanctuary', 'benog-wildlife-sanctuary', 'sonanadi-wildlife-sanctuary', 'jhilmil-jheel-conservation-reserve', 'asan-conservation-reserve', 'pawalgarh-conservation-reserve', 'ramnagar-forest'].includes(dest.id)) {
+        cat = 'Wildlife';
+      } else if (dest.category === 'Adventure' || ['rishikesh', 'auli', 'tehri', 'chopta'].includes(dest.id)) {
+        cat = 'Adventure';
+      } else if (['valley-of-flowers', 'dayara-bugyal', 'deoria-tal', 'har-ki-dun', 'sankri', 'sari-village', 'osla-village'].includes(dest.id)) {
+        cat = 'Treks';
+      } else {
+        cat = 'Scenic';
+      }
+
+      const images = (dest.gallery && dest.gallery.length > 0) ? dest.gallery : [dest.image];
+      images.forEach((img, idx) => {
+        const attractionName = dest.topAttractions && dest.topAttractions[idx % dest.topAttractions.length]?.name;
+        const photoTitle = idx === 0 
+          ? `${dest.name} Himalayan Panorama` 
+          : attractionName 
+            ? `${attractionName} in ${dest.name}`
+            : `${dest.name} Scenic View #${idx + 1}`;
+
+        // Stable pseudo-random likes between 450 and 2400
+        const hash = (dest.id + idx).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+        const likes = 500 + (hash * 37) % 1900;
+
+        items.push({
+          id: `dest-${dest.id}-${idx}`,
+          destId: dest.id,
+          title: photoTitle,
+          location: `${dest.name}, Uttarakhand`,
+          category: cat,
+          image: img,
+          likes
+        });
+      });
     }
-  ];
 
-  const categories = ['All', 'Spiritual', 'Treks', 'Adventure', 'Wildlife', 'Scenic'];
+    return items;
+  }, []);
 
-  const filteredItems = selectedCategory === 'All'
-    ? galleryItems
-    : galleryItems.filter(item => item.category === selectedCategory);
+  const categories = ['All', 'Spiritual', 'Scenic', 'Wildlife', 'Adventure', 'Treks'];
+
+  const filteredItems = useMemo(() => {
+    if (selectedCategory === 'All') return allGalleryItems;
+    return allGalleryItems.filter(item => item.category === selectedCategory);
+  }, [allGalleryItems, selectedCategory]);
+
+  const displayedItems = useMemo(() => {
+    return filteredItems.slice(0, visibleCount);
+  }, [filteredItems, visibleCount]);
+
+  const handleCategoryChange = (cat: string) => {
+    setSelectedCategory(cat);
+    setVisibleCount(24);
+  };
 
   return (
     <div className="min-h-screen bg-[#F5F3EF] pt-28 pb-20">
@@ -135,7 +96,7 @@ export const GalleryPage: React.FC = () => {
         <Breadcrumbs items={[{ label: 'Photo & Video Gallery' }]} />
 
         {/* Hero */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4">
             <Camera className="w-3.5 h-3.5" />
             <span>#CaptureUnforgettableMoments</span>
@@ -143,31 +104,46 @@ export const GalleryPage: React.FC = () => {
           <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight">
             Uttarakhand Visual Gallery
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Immerse yourself in authentic captures from high Himalayan summits, sacred temple shrines, white-water rapids, and serene hill lakes.
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+            Discover authentic local photography from high Himalayan shrines, emerald lake districts, alpine bugyals, and peaceful mountain hamlets across all 113 Devbhoomi destinations.
           </p>
+          <div className="mt-4 flex items-center justify-center gap-3 text-xs font-bold text-slate-500">
+            <span>{allGalleryItems.length} High-Resolution Photographs</span>
+            <span>•</span>
+            <span>113 Unique Locations</span>
+          </div>
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all ${
-                selectedCategory === cat
-                  ? 'bg-brand-orange text-white shadow-md shadow-brand-orange/30 border border-brand-orange'
-                  : 'bg-white text-slate-700 border border-[#E2DDD5] hover:border-brand-orange hover:text-brand-orange shadow-sm'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+          {categories.map(cat => {
+            const count = cat === 'All' 
+              ? allGalleryItems.length 
+              : allGalleryItems.filter(i => i.category === cat).length;
+            return (
+              <button
+                key={cat}
+                onClick={() => handleCategoryChange(cat)}
+                className={`px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  selectedCategory === cat
+                    ? 'bg-brand-orange text-white shadow-md shadow-brand-orange/30 border border-brand-orange'
+                    : 'bg-white text-slate-700 border border-[#E2DDD5] hover:border-brand-orange hover:text-brand-orange shadow-xs'
+                }`}
+              >
+                <span>{cat}</span>
+                <span className={`ml-1.5 text-[10px] px-1.5 py-0.5 rounded-full ${
+                  selectedCategory === cat ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+                }`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {filteredItems.map(item => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {displayedItems.map(item => (
             <div
               key={item.id}
               onClick={() => setActiveModalImage(item)}
@@ -177,20 +153,26 @@ export const GalleryPage: React.FC = () => {
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = '/images/destinations/mussoorie/photo-1.jpg';
+                }}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
               <div className="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between">
                 <div>
                   <div className="flex items-center gap-1.5 text-brand-orange text-[11px] font-bold uppercase mb-1">
-                    <MapPin className="w-3.5 h-3.5" />
+                    <MapPin className="w-3.5 h-3.5 shrink-0" />
                     <span>{item.location}</span>
                   </div>
-                  <h3 className="text-white font-bold text-base leading-snug">{item.title}</h3>
+                  <h3 className="text-white font-bold text-sm sm:text-base leading-snug drop-shadow-sm">{item.title}</h3>
                 </div>
 
-                <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-semibold text-white">
+                <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-semibold text-white shrink-0">
                   <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
                   <span>{item.likes}</span>
                 </div>
@@ -199,36 +181,70 @@ export const GalleryPage: React.FC = () => {
           ))}
         </div>
 
+        {/* Load More Button */}
+        {visibleCount < filteredItems.length && (
+          <div className="text-center mb-16">
+            <button
+              type="button"
+              onClick={() => setVisibleCount(prev => prev + 24)}
+              className="px-8 py-3.5 rounded-2xl bg-white hover:bg-brand-orange hover:text-white border border-[#DDD5C7] text-slate-800 text-sm font-bold shadow-md hover:shadow-lg transition-all cursor-pointer inline-flex items-center gap-2 group"
+            >
+              <span>Load More Photographs</span>
+              <span className="text-xs text-slate-400 group-hover:text-white/80">
+                (Showing {displayedItems.length} of {filteredItems.length})
+              </span>
+            </button>
+          </div>
+        )}
+
         {/* Lightbox Modal */}
         {activeModalImage && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-dark/95 backdrop-blur-xl animate-in fade-in"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl animate-in fade-in"
             onClick={() => setActiveModalImage(null)}
           >
             <div 
-              className="relative max-w-4xl w-full rounded-3xl overflow-hidden bg-brand-card border border-white/20"
+              className="relative max-w-4xl w-full rounded-3xl overflow-hidden bg-slate-900 border border-white/20 shadow-2xl"
               onClick={e => e.stopPropagation()}
             >
               <button
+                type="button"
                 onClick={() => setActiveModalImage(null)}
-                className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-brand-dark/80 text-white hover:bg-brand-orange transition-colors"
+                aria-label="Close photo preview"
+                className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-black/70 text-white hover:bg-brand-orange transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <img
-                src={activeModalImage.image}
-                alt={activeModalImage.title}
-                className="w-full max-h-[75vh] object-cover"
-              />
+              <div className="relative aspect-16/10 max-h-[72vh] overflow-hidden bg-black flex items-center justify-center">
+                <img
+                  src={activeModalImage.image}
+                  alt={activeModalImage.title}
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = '/images/destinations/mussoorie/photo-1.jpg';
+                  }}
+                />
+              </div>
 
-              <div className="p-6 flex flex-wrap items-center justify-between gap-4 bg-brand-card">
+              <div className="p-6 flex flex-wrap items-center justify-between gap-4 bg-slate-900 border-t border-white/10">
                 <div>
                   <span className="text-brand-orange text-xs font-bold uppercase tracking-wider">{activeModalImage.location}</span>
-                  <h3 className="text-xl font-bold font-display text-white mt-0.5">{activeModalImage.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold font-display text-white mt-0.5">{activeModalImage.title}</h3>
                 </div>
 
                 <div className="flex items-center gap-3">
+                  {activeModalImage.destId && (
+                    <Link
+                      to={`/destinations/${activeModalImage.destId}`}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-orange text-white text-xs font-bold shadow-md hover:bg-brand-orange/90 transition-colors"
+                    >
+                      <Compass className="w-3.5 h-3.5" />
+                      <span>Explore Destination</span>
+                    </Link>
+                  )}
                   <a
                     href={SITE_CONFIG.social.instagram}
                     target="_blank"

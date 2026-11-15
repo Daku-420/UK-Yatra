@@ -48,7 +48,7 @@ export interface AdminSettings {
 
 const STORAGE_KEYS = {
   BOOKINGS: 'ukyatra_admin_bookings',
-  PACKAGES: 'ukyatra_admin_packages_v12',
+  PACKAGES: 'ukyatra_admin_packages_v14',
   WEATHER: 'ukyatra_admin_weather',
   REVIEWS: 'ukyatra_admin_reviews',
   SETTINGS: 'ukyatra_admin_settings',
@@ -245,15 +245,21 @@ export const adminStorage = {
   // --- TOUR PACKAGES ---
   getPackages: (): TourPackage[] => {
     try {
-      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom', 'ukyatra_admin_packages_v4', 'ukyatra_admin_packages_v5'].forEach(k => {
+      ['ukyatra_admin_packages', 'ukyatra_admin_packages_v2', 'ukyatra_admin_packages_v3', 'ukyatra_admin_packages_custom', 'ukyatra_admin_packages_v4', 'ukyatra_admin_packages_v5', 'ukyatra_admin_packages_v12', 'ukyatra_admin_packages_v13'].forEach(k => {
         if (localStorage.getItem(k)) localStorage.removeItem(k);
       });
-      const sanitizePkg = (p: TourPackage): TourPackage => ({
-        ...p,
-        title: p.title.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim(),
-        startingPrice: p.startingPrice && !p.startingPrice.includes('₹') ? p.startingPrice : 'Pricing on Request',
-        originalPrice: null
-      });
+      const defaultMap = new Map(TOUR_PACKAGES.map(p => [p.id, p]));
+      const sanitizePkg = (p: TourPackage): TourPackage => {
+        const canonical = defaultMap.get(p.id);
+        return {
+          ...p,
+          title: p.title.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim(),
+          startingPrice: p.startingPrice && !p.startingPrice.includes('₹') ? p.startingPrice : 'Pricing on Request',
+          originalPrice: null,
+          image: canonical?.image || p.image,
+          gallery: canonical?.gallery && canonical.gallery.length > 0 ? canonical.gallery : p.gallery
+        };
+      };
       const stored = localStorage.getItem(STORAGE_KEYS.PACKAGES);
       if (!stored) {
         return TOUR_PACKAGES.map(sanitizePkg);
@@ -266,12 +272,18 @@ export const adminStorage = {
       const unincluded = TOUR_PACKAGES.filter(p => !storedIds.has(p.id));
       return [...parsed, ...unincluded].map(sanitizePkg);
     } catch {
-      const sanitizePkg = (p: TourPackage): TourPackage => ({
-        ...p,
-        title: p.title.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim(),
-        startingPrice: 'Pricing on Request',
-        originalPrice: null
-      });
+      const defaultMap = new Map(TOUR_PACKAGES.map(p => [p.id, p]));
+      const sanitizePkg = (p: TourPackage): TourPackage => {
+        const canonical = defaultMap.get(p.id);
+        return {
+          ...p,
+          title: p.title.replace(/\s*[-–]\s*Ex-[A-Za-z\s]+$/i, '').trim(),
+          startingPrice: 'Pricing on Request',
+          originalPrice: null,
+          image: canonical?.image || p.image,
+          gallery: canonical?.gallery && canonical.gallery.length > 0 ? canonical.gallery : p.gallery
+        };
+      };
       return TOUR_PACKAGES.map(sanitizePkg);
     }
   },

@@ -255,7 +255,7 @@ export const AboutPage: React.FC = () => {
               <div className="relative group">
                 <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-800 ring-1 ring-white/15 bg-slate-900">
                   <img 
-                    src="/images/Seema%20Maindola.jpg" 
+                    src="/images/Seema Maindola.jpg" 
                     alt="Seema Maindola - Founder & CEO of UK Yatra" 
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
@@ -312,7 +312,7 @@ export const AboutPage: React.FC = () => {
               <div className="relative group">
                 <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-800 ring-1 ring-white/15 bg-slate-900">
                   <img 
-                    src="/images/Ravi%20Maindola.jpg" 
+                    src="/images/Ravi Maindola.jpg" 
                     alt="Ravi Maindola - Co-Founder & Director of UK Yatra" 
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />

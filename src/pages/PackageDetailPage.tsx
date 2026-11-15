@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { DESTINATIONS } from '../data/destinations';
 import { 
   Clock, 
   MapPin, 
@@ -266,9 +267,24 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
     );
   }
 
-  const galleryImages = tourPackage.gallery && tourPackage.gallery.length > 0 
-    ? tourPackage.gallery 
-    : [tourPackage.image];
+  const galleryImages = useMemo(() => {
+    const directImages = tourPackage.gallery && tourPackage.gallery.length > 0 
+      ? tourPackage.gallery 
+      : [tourPackage.image];
+
+    // Find authentic photography from matched destinations in catalog
+    const destStr = ((tourPackage.destination || '') + ' ' + (tourPackage.title || '')).toLowerCase();
+    const matchedDests = DESTINATIONS.filter(d => 
+      destStr.includes(d.name.toLowerCase()) || 
+      destStr.includes(d.id.toLowerCase())
+    );
+
+    const relatedPhotos = matchedDests.flatMap(d => (d.gallery && d.gallery.length > 0 ? d.gallery : [d.image]));
+    
+    // Combine unique photos, prioritizing package specific images
+    const combined = [...new Set([...directImages, ...relatedPhotos])];
+    return combined.length > 0 ? combined : [tourPackage.image];
+  }, [tourPackage]);
 
   const thingsToCarryList = tourPackage.thingsToCarry || STANDARD_THINGS_TO_CARRY;
   const importantInfoList = tourPackage.importantInfo || STANDARD_IMPORTANT_INFO;
@@ -305,6 +321,11 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
           loading="eager"
           fetchPriority="high"
           decoding="async"
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement;
+            target.onerror = null;
+            target.src = '/images/destinations/mussoorie/photo-1.jpg';
+          }}
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-hero-gradient"></div>
@@ -681,6 +702,11 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                         decoding="async"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = '/images/destinations/mussoorie/photo-1.jpg';
+                        }}
                       />
                       <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
                         <Camera className="w-6 h-6 drop-shadow-md" />

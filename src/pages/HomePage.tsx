@@ -257,7 +257,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Scenic Mountains and River Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop"
+            src="/images/destinations/chopta/photo-1.jpg"
             alt="Mountains and River Valley"
             className="w-full h-full object-cover object-center"
             loading="lazy"
@@ -391,7 +391,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Scenic Mountains and River Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
+            src="/images/destinations/mussoorie/photo-1.jpg"
             alt="Misty Mountain Peaks and River"
             className="w-full h-full object-cover object-center"
             loading="lazy"
@@ -733,7 +733,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Sacred Mountains and River Valley Dawn Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071&auto=format&fit=crop"
+            src="/images/destinations/kedarnath/kedarnath-temple-front.jpg"
             alt="Sacred Himalayan Mountains and River Valley"
             className="w-full h-full object-cover object-center"
             loading="lazy"
@@ -816,7 +816,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
                 </div>
                 <div className="rounded-3xl overflow-hidden aspect-[4/5] border border-white/10 shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=800&auto=format&fit=crop"
+                    src="/images/destinations/badrinath/photo-1.jpg"
                     alt="Badrinath Temple"
                     className="w-full h-full object-cover"
                   />
@@ -931,7 +931,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Scenic Mountains and River Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop"
+            src="/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg"
             alt="Pristine Mountain Lake and River"
             className="w-full h-full object-cover object-center"
             loading="lazy"
@@ -954,12 +954,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
           {/* Instagram Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
             {[
-              { img: '/assets/KEDARNATH/3 (1).jpg', tag: '#Kedarnath' },
-              { img: '/assets/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg', tag: '#RishikeshRafting' },
-              { img: '/assets/AULI/Sunlit Snowy Mountain Ski Resort.jpg', tag: '#AuliSkiing' },
-              { img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=400&auto=format&fit=crop', tag: '#NainitalBoating' },
-              { img: '/assets/valley of flowee/4 (1).jpg', tag: '#ValleyOfFlowers' },
-              { img: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=400&auto=format&fit=crop', tag: '#CorbettSafari' },
+              { img: '/images/destinations/kedarnath/kedarnath-temple-front.jpg', tag: '#Kedarnath' },
+              { img: '/images/destinations/rishikesh/1 (1).jpg', tag: '#RishikeshRafting' },
+              { img: '/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg', tag: '#AuliSkiing' },
+              { img: '/images/destinations/nainital/photo-1.jpg', tag: '#NainitalBoating' },
+              { img: '/images/destinations/valley-of-flowers/4 (1).jpg', tag: '#ValleyOfFlowers' },
+              { img: '/images/destinations/jim-corbett/photo-1.jpg', tag: '#CorbettSafari' },
             ].map((item, idx) => (
               <a
                 key={idx}
@@ -1022,7 +1022,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
         {/* Scenic Alpine Mountain River Valley Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
+            src="/images/destinations/mussoorie/photo-1.jpg"
             alt="Misty Mountains and River"
             className="w-full h-full object-cover object-center"
             loading="lazy"
