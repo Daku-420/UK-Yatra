@@ -50,7 +50,55 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
   // Find destination from standard list or navigation mega nav fallback
   const destination = useMemo(() => {
-    const found = DESTINATIONS.find((d) => d.id === id);
+    const normId = (id || '').toLowerCase();
+    const DESTINATION_SLUG_ALIASES: Record<string, string> = {
+      'mana-village': 'badrinath',
+      'lata-village': 'badrinath',
+      'sari-village': 'chopta',
+      'deoria-tal': 'chopta',
+      'mandal-valley': 'chopta',
+      'har-ki-dun': 'chakrata',
+      'sankri': 'chakrata',
+      'osla-village': 'chakrata',
+      'jakhol': 'chakrata',
+      'taluka': 'chakrata',
+      'tons-valley': 'chakrata',
+      'chaiinsheel-valley': 'chakrata',
+      'kalap': 'khirsu',
+      'harsil-valley': 'harsil',
+      'dharali': 'harsil',
+      'bagori': 'harsil',
+      'nelong-valley': 'harsil',
+      'gangnani': 'harsil',
+      'mukhwa': 'gangotri',
+      'chitai-golu-devta': 'almora',
+      'katarmal-sun-temple': 'almora',
+      'shitlakhet': 'ranikhet',
+      'ramganga-valley': 'ranikhet',
+      'satkhol': 'peora',
+      'dhanpur': 'peora',
+      'kanda': 'baijnath',
+      'agoda': 'dayara-bugyal',
+      'barsu': 'dayara-bugyal',
+      'kanakchauri': 'rudraprayag',
+      'shaukiyathal': 'munsiyari',
+      'khati': 'munsiyari',
+      'loharkhet': 'munsiyari',
+      'johar-valley': 'munsiyari',
+      'mandakini-valley': 'guptkashi',
+      'bhilangana-valley': 'tehri',
+      'pindar-valley': 'gwaldam',
+      'govind-pashu-vihar-national-park': 'gangotri-national-park',
+      'patal-bhubaneshwar': 'patal-bhuvaneshwar',
+      'kedarnath-wildlife': 'kedarnath-wildlife-sanctuary',
+      'askot': 'askot-wildlife-sanctuary',
+      'benog': 'benog-wildlife-sanctuary',
+      'asan-barrage': 'asan-conservation-reserve',
+      'corbett-landscape': 'jim-corbett'
+    };
+
+    const targetId = DESTINATION_SLUG_ALIASES[normId] || normId;
+    const found = DESTINATIONS.find((d) => d.id.toLowerCase() === targetId);
     if (found) return found;
 
     let navItemName = id ? id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Destination';

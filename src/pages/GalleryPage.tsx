@@ -105,12 +105,12 @@ export const GalleryPage: React.FC = () => {
             Uttarakhand Visual Gallery
           </h1>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
-            Discover authentic local photography from high Himalayan shrines, emerald lake districts, alpine bugyals, and peaceful mountain hamlets across all 113 Devbhoomi destinations.
+            Discover authentic local photography from high Himalayan shrines, emerald lake districts, alpine bugyals, and peaceful mountain hamlets across all {DESTINATIONS.length} Devbhoomi destinations.
           </p>
           <div className="mt-4 flex items-center justify-center gap-3 text-xs font-bold text-slate-500">
             <span>{allGalleryItems.length} High-Resolution Photographs</span>
             <span>•</span>
-            <span>113 Unique Locations</span>
+            <span>{DESTINATIONS.length} Authentic Destinations</span>
           </div>
         </div>
 

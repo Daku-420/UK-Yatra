@@ -34,37 +34,29 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
     'neelkanth-mahadev', 'devprayag', 'rudraprayag', 'karnaprayag',
     'nandprayag', 'vishnuprayag', 'guptkashi', 'ukhimath',
     'triyuginarayan', 'kalpeshwar', 'rudranath', 'madhyamaheshwar',
-    'adi-kailash', 'om-parvat',
-    'chitai-golu-devta', 'kasar-devi', 'katarmal-sun-temple'
+    'adi-kailash', 'om-parvat', 'kasar-devi'
   ],
   'nature-escapes': [
-    'valley-of-flowers', 'chopta', 'dayara-bugyal', 'deoria-tal',
-    'har-ki-dun', 'harsil-valley', 'binsar', 'khirsu', 'sari-village',
-    'mandal-valley', 'mandakini-valley', 'bhilangana-valley',
-    'darma-valley', 'johar-valley', 'niti-valley', 'nelong-valley', 'tons-valley', 'pindar-valley',
-    'ramganga-valley', 'dhanaulti', 'kanatal', 'chaiinsheel-valley',
-    'gwaldam', 'munsiyari', 'chaukori'
+    'valley-of-flowers', 'chopta', 'dayara-bugyal', 'darma-valley',
+    'niti-valley', 'harsil', 'tehri', 'binsar', 'khirsu',
+    'dhanaulti', 'kanatal', 'gwaldam', 'munsiyari', 'chaukori',
+    'pangot', 'peora', 'dhanachuli', 'ramgarh'
   ],
   'wildlife-national-parks': [
     'jim-corbett', 'rajaji-national-park', 'nanda-devi-national-park',
     'valley-of-flowers', 'gangotri-national-park', 'binsar-wildlife-sanctuary',
-    'govind-pashu-vihar-national-park', 'kedarnath-wildlife-sanctuary',
-    'askot-wildlife-sanctuary', 'nandhaur-wildlife-sanctuary',
-    'benog-wildlife-sanctuary', 'sonanadi-wildlife-sanctuary',
-    'jhilmil-jheel-conservation-reserve', 'asan-conservation-reserve',
-    'pawalgarh-conservation-reserve', 'ramnagar-forest',
-    'corbett-landscape', 'kaladhungi'
+    'kedarnath-wildlife-sanctuary', 'askot-wildlife-sanctuary',
+    'nandhaur-wildlife-sanctuary', 'benog-wildlife-sanctuary',
+    'sonanadi-wildlife-sanctuary', 'jhilmil-jheel-conservation-reserve',
+    'asan-conservation-reserve', 'pawalgarh-conservation-reserve',
+    'ramnagar-forest', 'kaladhungi'
   ],
   'villages-hidden-gems': [
-    'mana-village', 'sari-village', 'sankri', 'khirsu',
-    'lata-village', 'osla-village', 'abbott-mount',
-    'kalap', 'harsil-valley', 'dharali', 'mukhwa',
-    'jakhol', 'taluka', 'agoda', 'bagori',
-    'barsu', 'gangnani', 'kanakchauri', 'dhanpur',
-    'peora', 'shaukiyathal', 'shitlakhet', 'satkhol',
-    'dhanachuli', 'ramgarh', 'pangot', 'kanda',
-    'chaukori', 'munsiyari', 'khati', 'loharkhet', 'gwaldam',
-    'patal-bhuvaneshwar'
+    'abbott-mount', 'khirsu', 'peora', 'dhanachuli',
+    'ramgarh', 'pangot', 'chaukori', 'munsiyari',
+    'gwaldam', 'kaladhungi', 'lohaghat', 'champawat',
+    'baijnath', 'kasar-devi', 'patal-bhuvaneshwar',
+    'bhowali', 'bhimtal'
   ]
 };
 

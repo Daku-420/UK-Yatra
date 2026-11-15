@@ -265,7 +265,7 @@ function getRegionalNearbyPlaces(id: string, name: string): NearbyPlace[] {
     const candidates: NearbyPlace[] = [
       { name: 'Mukteshwar', distance: '14 km', desc: 'Fruit orchards, ancient Shiva shrine, and snow-capped Trishul peak views.', path: '/destinations/mukteshwar', image: '/images/destinations/mukteshwar/mukteshwar-shrine-gateway.jpg' },
       { name: 'Nainital', distance: '48 km', desc: 'Iconic emerald lake city surrounded by seven high forested ridges.', path: '/destinations/nainital', image: '/images/destinations/nainital/photo-1.jpg' },
-      { name: 'Bhimtal', distance: '38 km', desc: 'Quiet mountain lake with an island aquarium and serene boating.', path: '/destinations/bhimtal', image: '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg' },
+      { name: 'Bhimtal', distance: '38 km', desc: 'Quiet mountain lake with an island aquarium and serene boating.', path: '/destinations/bhimtal', image: '/images/destinations/bhimtal/-ONLcM0ueLhmakb4MV3Q5TyrrHsaE7LTOGzS-nlYq7UoBq_hN9S0XPsWlIXP_WlrMVpvXhMefuwM-WS9orQRma3eSAPmKMXJhqBjzNosYUaABGEsvveW3ZnwEIYRhpTI3IRx2W9WeabW3GYj0vzDk8wIG0-nBS1QPVndjkMRmciFblcmgqJ48TxSEESENRSt.jpg' },
       { name: 'Ranikhet', distance: '55 km', desc: 'Pine-scented cantonment hill resort with rolling golf meadows.', path: '/destinations/ranikhet', image: '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg' },
       { name: 'Almora', distance: '52 km', desc: 'Cultural capital of Kumaon known for Kasar Devi ridge and heritage bazaars.', path: '/destinations/almora', image: '/images/destinations/almora/almora-ridge-view.jpg' }
     ];
