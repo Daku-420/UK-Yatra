@@ -18,6 +18,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({ tourPackage, onOpenBoo
           src={tourPackage.image}
           alt={tourPackage.title}
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover card-zoom-image"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>

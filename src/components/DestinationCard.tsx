@@ -19,6 +19,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({ destination })
           src={destination.image}
           alt={destination.name}
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover card-zoom-image"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>

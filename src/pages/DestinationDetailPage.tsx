@@ -245,6 +245,8 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               alt={`${destination.name} - Photo ${idx + 1}`}
               className="w-full h-full object-cover object-center scale-105 transition-transform duration-10000 transform-gpu [backface-visibility:hidden]"
               loading={idx === 0 ? 'eager' : 'lazy'}
+              fetchPriority={idx === 0 ? 'high' : 'low'}
+              decoding="async"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.onerror = null;
@@ -503,7 +505,13 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                         }}
                         className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer border border-slate-200 hover:border-brand-orange"
                       >
-                        <img src={img} alt={`${destination.name} view`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <img 
+                          src={img} 
+                          alt={`${destination.name} view`} 
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                       </div>
                     ))}
@@ -822,7 +830,9 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                             target.src = '/images/destinations/mussoorie/photo-1.jpg';
                           }
                         }}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-black/70 text-white backdrop-blur-md">
                         {place.distance}

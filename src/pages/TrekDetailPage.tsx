@@ -69,6 +69,9 @@ export const TrekDetailPage: React.FC<TrekDetailPageProps> = ({ onOpenBookingMod
         <img
           src={trek.image}
           alt={trek.name}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-hero-gradient"></div>

@@ -310,6 +310,9 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
         <img
           src={tourPackage.image}
           alt={tourPackage.title}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-hero-gradient"></div>
@@ -685,6 +688,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                         alt={`${tourPackage.title} view ${i + 1}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
                         <Camera className="w-6 h-6 drop-shadow-md" />
@@ -834,6 +838,8 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             <img 
               src={activeGalleryImage} 
               alt="Himalayan view" 
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-contain"
             />
             <button

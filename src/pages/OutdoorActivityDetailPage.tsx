@@ -141,6 +141,9 @@ export const OutdoorActivityDetailPage: React.FC<OutdoorActivityDetailPageProps>
         <img
           src={activity.image}
           alt={activity.title}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           style={{ objectPosition: activity.imagePosition || 'center' }}
           className="absolute inset-0 w-full h-full object-cover brightness-90 animate-in fade-in duration-700"
           onError={(e) => {
