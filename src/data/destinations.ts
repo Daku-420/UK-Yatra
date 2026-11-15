@@ -552,8 +552,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/kausani/kausani-himalayan-peaks.jpg',
     gallery: [
       '/images/destinations/kausani/kausani-himalayan-peaks.jpg',
-      '/images/destinations/kausani/photo-1.jpg',
-      '/images/destinations/kausani/photo-2.jpg'
+      '/images/destinations/kausani/1 (1).jpg',
+      '/images/destinations/kausani/1 (2).jpg'
     ],
     description: 'Nestled in the Pithoragarh district, Chaukori is a bowl-shaped hill town famous for emerald tea gardens, deodar and pine woods, and one of the clearest, most magnificent panoramic views of the Nanda Devi, Nanda Kot, and Panchachuli peaks.',
     highlights: ['British-era emerald tea gardens', 'Panchachuli five-peak sunrise view', 'Patal Bhuvaneshwar cave proximity', 'Stargazing in crystal night skies'],
@@ -2530,11 +2530,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Askot Wildlife Sanctuary',
     tagline: 'The Green Paradise of Kumaon Dedicated to the Endangered Musk Deer',
     category: 'Wildlife',
-    image: '/images/destinations/askot w ssntuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
+    image: '/images/destinations/askot w santuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
     gallery: [
-      '/images/destinations/askot w ssntuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
-      '/images/destinations/askot w ssntuary/Gemini_Generated_Image_hao88ohao88ohao8.png',
-      '/images/destinations/askot w ssntuary/Gemini_Generated_Image_tsgsjotsgsjotsgs.png'
+      '/images/destinations/askot w santuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
+      '/images/destinations/askot w santuary/Gemini_Generated_Image_hao88ohao88ohao8.png',
+      '/images/destinations/askot w santuary/Gemini_Generated_Image_tsgsjotsgsjotsgs.png'
     ],
     description: 'Set amidst the high ridges of Pithoragarh district near the Indo-Nepal and Indo-Tibet borders, Askot Wildlife Sanctuary covers 600 square kilometers from sub-tropical valley floors to glaciated peaks like Panchachuli. Established in 1986 to protect the musk deer, it is an international ecological treasure.',
     highlights: ['Renowned as Askot Musk Deer Sanctuary in Pithoragarh', 'Bounded by the Kali River bordering Nepal to the east', 'Rugged glaciated peaks including Panchachuli, Chipla Kot & Najirikot', 'Rich biodiversity of Snow Leopards, Serow, and Himalayan Black Bears'],
