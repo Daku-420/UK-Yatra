@@ -695,7 +695,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                           onClick={() => setPackagesDropdownOpen(false)}
                           className="group/feat flex flex-col p-2.5 rounded-xl bg-white hover:bg-orange-50/40 border border-[#DDD5C7] hover:border-brand-orange shadow-xs hover:shadow-md transition-all text-left"
                         >
-                          <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden mb-2 bg-[#EFEAE2]">
+                          <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden mb-2 bg-[#EFEAE2]">
                             <img
                               src={item.image}
                               alt={item.name}

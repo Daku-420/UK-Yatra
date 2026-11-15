@@ -346,7 +346,7 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
                 }`}
               >
                 {/* Category Image Header - Adjusted Aspect Ratio & Smart Framing */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#EFEAE2]">
+                <div className="relative aspect-4/3 w-full overflow-hidden bg-[#EFEAE2]">
                   <img
                     src={cat.image}
                     alt={cat.name}
@@ -542,7 +542,7 @@ export const OutdoorActivitiesPage: React.FC<OutdoorActivitiesPageProps> = ({ on
                     : 'border-[#E2DDD5] hover:border-brand-orange/40'
                 }`}
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#EFEAE2]">
+                <div className="relative aspect-4/3 w-full overflow-hidden bg-[#EFEAE2]">
                   <img
                     src={dest.image}
                     alt={dest.name}

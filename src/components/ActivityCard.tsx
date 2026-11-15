@@ -13,7 +13,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
       to={`/activities/${activity.id}`}
       className="group relative flex flex-col rounded-3xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-2xl"
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="relative aspect-4/3 w-full overflow-hidden">
         <img
           src={activity.image}
           alt={activity.title}

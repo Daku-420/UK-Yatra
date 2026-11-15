@@ -14,7 +14,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({ destination })
       className="group relative flex flex-col rounded-3xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-orange/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-2xl"
     >
       {/* Image container */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="relative aspect-4/3 w-full overflow-hidden">
         <img
           src={destination.image}
           alt={destination.name}

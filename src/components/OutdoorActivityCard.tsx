@@ -26,7 +26,7 @@ export const OutdoorActivityCard: React.FC<OutdoorActivityCardProps> = ({
   return (
     <div className="group relative flex flex-col bg-white rounded-3xl overflow-hidden border border-[#E2DDD5] hover:border-brand-orange/40 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex-1">
       {/* Top Image Container */}
-      <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden bg-[#EFEAE2]">
+      <div className="relative aspect-[16/10] sm:aspect-4/3 w-full overflow-hidden bg-[#EFEAE2]">
         <img
           src={activity.image}
           alt={activity.title}

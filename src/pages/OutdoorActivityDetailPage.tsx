@@ -410,7 +410,7 @@ export const OutdoorActivityDetailPage: React.FC<OutdoorActivityDetailPageProps>
                   <div
                     key={i}
                     onClick={() => setActivePhoto(img)}
-                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-slate-100 border border-[#E2DDD5] hover:border-brand-orange transition-all"
+                    className="group relative aspect-4/3 rounded-2xl overflow-hidden cursor-pointer bg-slate-100 border border-[#E2DDD5] hover:border-brand-orange transition-all"
                   >
                     <img
                       src={img}

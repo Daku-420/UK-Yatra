@@ -147,7 +147,7 @@ export const GalleryPage: React.FC = () => {
             <div
               key={item.id}
               onClick={() => setActiveModalImage(item)}
-              className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-[4/3] bg-white border border-[#E2DDD5] shadow-sm hover:shadow-xl transition-all"
+              className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-4/3 bg-white border border-[#E2DDD5] shadow-sm hover:shadow-xl transition-all"
             >
               <img
                 src={item.image}
@@ -161,7 +161,7 @@ export const GalleryPage: React.FC = () => {
                 }}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
               <div className="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between">
                 <div>

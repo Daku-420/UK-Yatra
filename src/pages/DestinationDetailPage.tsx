@@ -275,7 +275,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           SECTION 1: HERO WITH DESTINATION NAME AND CTA
          ======================================================== */}
       <section 
-        className="relative h-[72vh] min-h-[540px] w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none hero-dark text-white"
+        className="relative h-[72vh] min-h-135 w-full flex items-end pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden select-none hero-dark text-white"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={handleTouchStart}
@@ -292,7 +292,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
             <img
               src={imgUrl}
               alt={`${destination.name} - Photo ${idx + 1}`}
-              className="w-full h-full object-cover object-center scale-105 transition-transform duration-10000 transform-gpu [backface-visibility:hidden]"
+              className="w-full h-full object-cover object-center scale-105 transition-transform duration-10000 transform-gpu backface-hidden"
               loading={idx === 0 ? 'eager' : 'lazy'}
               fetchPriority={idx === 0 ? 'high' : 'low'}
               decoding="async"
@@ -306,7 +306,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
         ))}
 
         {/* Cinematic Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/30 z-[1] pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-black/30 z-1 pointer-events-none" />
 
         {/* Hero Slider Navigation Arrows */}
         {galleryImages.length > 1 && (
@@ -553,7 +553,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                           setCurrentImageIndex(idx);
                           setIsLightboxOpen(true);
                         }}
-                        className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer border border-[#EAE4D9] hover:border-brand-orange shadow-xs hover:shadow-md transition-all"
+                        className="group relative aspect-4/3 rounded-2xl overflow-hidden cursor-pointer border border-[#EAE4D9] hover:border-brand-orange shadow-xs hover:shadow-md transition-all"
                       >
                         <img 
                           src={img} 
@@ -1128,7 +1128,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
         {/* ========================================================
             SECTION 14: INQUIRY FORM / FINAL CTA
            ======================================================== */}
-        <section className="mt-20 rounded-3xl bg-gradient-to-br from-slate-900 via-brand-dark to-slate-900 text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <section className="mt-20 rounded-3xl bg-linear-to-br from-slate-900 via-brand-dark to-slate-900 text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           {/* Subtle decorative circles */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-orange/5 rounded-full blur-2xl pointer-events-none" />

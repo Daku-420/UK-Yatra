@@ -314,7 +314,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
   return (
     <div className="pt-24 pb-20">
       {/* Hero Header */}
-      <div className="relative h-[48vh] min-h-[380px] sm:h-[62vh] sm:min-h-[460px] w-full flex items-end pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="relative h-[48vh] min-h-95 sm:h-[62vh] sm:min-h-115 w-full flex items-end pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <img
           src={tourPackage.image}
           alt={tourPackage.title}
@@ -400,7 +400,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Starting Point</div>
-              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug wrap-break-word">{tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
             </div>
           </div>
 
@@ -410,7 +410,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Ending Point</div>
-              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{tourPackage.endPoint || tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug wrap-break-word">{tourPackage.endPoint || tourPackage.startPoint || 'Haridwar / Dehradun'}</div>
             </div>
           </div>
 
@@ -420,7 +420,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Duration</div>
-              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{tourPackage.duration}</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug wrap-break-word">{tourPackage.duration}</div>
             </div>
           </div>
 
@@ -430,7 +430,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Stay Standard</div>
-              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{getConciseAccommodation(tourPackage.accommodationType)}</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug wrap-break-word">{getConciseAccommodation(tourPackage.accommodationType)}</div>
             </div>
           </div>
 
@@ -440,7 +440,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Transport</div>
-              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{getConciseTransport(tourPackage.transportationType)}</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug wrap-break-word">{getConciseTransport(tourPackage.transportationType)}</div>
             </div>
           </div>
 
@@ -450,7 +450,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-slate-500 uppercase font-black tracking-wider truncate mb-0.5">Meal Plan</div>
-              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug break-words">{getConciseMealPlan(tourPackage.mealPlan)}</div>
+              <div className="font-bold text-slate-950 text-xs sm:text-[13px] leading-snug wrap-break-word">{getConciseMealPlan(tourPackage.mealPlan)}</div>
             </div>
           </div>
         </div>
@@ -694,7 +694,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenBook
                     <div
                       key={i}
                       onClick={() => setActiveGalleryImage(img)}
-                      className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group shadow-xs hover:shadow-md transition-all"
+                      className="relative aspect-4/3 rounded-2xl overflow-hidden cursor-pointer group shadow-xs hover:shadow-md transition-all"
                     >
                       <img
                         src={img}

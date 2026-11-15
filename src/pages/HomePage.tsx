@@ -279,7 +279,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal }) => {
               <div key={act.id}>
                 <Link
                   to={`/activities/${act.id}`}
-                  className="group relative block aspect-[4/3] rounded-3xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] hover:shadow-xl"
+                  className="group relative block aspect-4/3 rounded-3xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] hover:shadow-xl"
                 >
                   <img
                     src={act.image}
