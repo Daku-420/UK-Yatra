@@ -15,14 +15,13 @@ export const DESTINATIONS: Destination[] = [
       '/images/destinations/mussoorie/1 (1).jpg',
       '/images/destinations/mussoorie/1 (2).jpg',
       '/images/destinations/mussoorie/1 (3).jpg',
+      '/images/destinations/mussoorie/1 (4).jpg',
+      '/images/destinations/mussoorie/1 (5).jpg',
       '/images/destinations/mussoorie/mussoorie-queen-of-hills.jpg',
       '/images/destinations/mussoorie/photo-2.jpg',
       '/images/destinations/mussoorie/photo-3.jpg',
       '/images/destinations/mussoorie/photo-4.jpg',
-      '/images/destinations/mussoorie/1 (4).jpg',
-      '/images/destinations/mussoorie/1 (5).jpg',
-      '/images/destinations/mussoorie/photo-5.jpg',
-      '/images/destinations/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.jpg'
+      '/images/destinations/mussoorie/photo-5.jpg'
     ],
     description: 'Perched overlooking the Doon Valley and Shivalik range, Mussoorie charms travellers with its colonial architecture, bustling Mall Road, cascading waterfalls, and panoramic sunset viewpoints at Gun Hill and George Everest Peak.',
     highlights: ['Mall Road heritage walk', 'Kempty & Bhatta Falls', 'George Everest Peak ridge trail', 'Gun Hill cable car'],
@@ -83,15 +82,15 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg',
     gallery: [
       '/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg',
-      '/images/destinations/auli/Snowy Himalayan Lake Panorama.jpg',
       '/images/destinations/auli/Alpine Village Beneath Snowy Peaks.jpg',
       '/images/destinations/auli/Golden Hour Himalayan Terrace View.jpg',
+      '/images/destinations/auli/Misty Jaul Hill Viewpoint with Cow.jpg',
       '/images/destinations/auli/photo-1.jpg',
       '/images/destinations/auli/photo-2.jpg',
-      '/images/destinations/auli/Misty Jaul Hill Viewpoint with Cow.jpg',
       '/images/destinations/auli/photo-3.jpg',
       '/images/destinations/auli/photo-4.jpg',
-      '/images/destinations/auli/photo-5.jpg'
+      '/images/destinations/auli/photo-5.jpg',
+      '/images/destinations/auli/Snowy Himalayan Lake Panorama.jpg'
     ],
     description: 'Surrounded by pine and oak forests with front-row views of Nanda Devi, Kamet, and Mana Parvat, Auli is the ultimate winter wonderland for skiing, snowboarding, and highest cable car rides.',
     highlights: ['Auli Ropeway (Longest in Asia, 4 km)', 'Artificial Lake with reflections', 'Nanda Devi 360° Panorama', 'Gorson Bugyal Snow Trek'],
@@ -116,13 +115,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Ranikhet',
     tagline: 'The Queen’s Meadow, Military Heritage & Apple Orchards',
     category: 'Hills & Valleys',
-    image: '/images/destinations/ranikhet/1 (1).jpg',
+    image: '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg',
     gallery: [
+      '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg',
       '/images/destinations/ranikhet/1 (1).jpg',
       '/images/destinations/ranikhet/1 (2).jpg',
       '/images/destinations/ranikhet/1 (3).jpg',
       '/images/destinations/ranikhet/1 (4).jpg',
-      '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg'
+      '/images/destinations/ranikhet/1 (5).jpg'
     ],
     description: 'Home to the Kumaon Regimental Centre, Ranikhet offers undisturbed tranquility, fragrant pine and deodar forests, ancient Jhula Devi temple, and majestic views of Trishul and Nanda Devi peaks.',
     highlights: ['Majkhali snow panorama', 'Chaubatia Apple Orchards', 'Jhula Devi Bell Temple', 'Kumaon Regimental Centre Museum'],
@@ -177,12 +177,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Lansdowne',
     tagline: 'Quiet Cantonment Charm, Pine Woods & Colonial Serenity',
     category: 'Hills & Valleys',
-    image: '/images/destinations/lansdowne/lansdowne-pine-forest.jpg',
+    image: '/images/destinations/lansdowne/photo-1.jpg',
     gallery: [
-      '/images/destinations/lansdowne/lansdowne-pine-forest.jpg',
       '/images/destinations/lansdowne/photo-1.jpg',
       '/images/destinations/lansdowne/1 (1).jpg',
-      '/images/destinations/lansdowne/1 (2).jpg',
       '/images/destinations/lansdowne/photo-2.jpg',
       '/images/destinations/lansdowne/photo-3.jpg',
       '/images/destinations/lansdowne/photo-4.jpg',
@@ -242,10 +240,10 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg',
     gallery: [
       '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg',
-      '/images/destinations/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.jpg',
       '/images/destinations/dhanaulti/Misty Forest Path of Nature and Care.jpg',
-      '/images/destinations/dhanaulti/Sunlit Mountain Forest Clearing.jpg',
-      '/images/destinations/dhanaulti/Snowy Mountain Village Road.jpg'
+      '/images/destinations/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.jpg',
+      '/images/destinations/dhanaulti/Snowy Mountain Village Road.jpg',
+      '/images/destinations/dhanaulti/Sunlit Mountain Forest Clearing.jpg'
     ],
     description: 'Located just 30 km past Mussoorie, Dhanaulti offers quiet alpine charm without commercial crowds. Walk through towering deodar woods at Eco Park and trek to the sacred mountain-top Surkanda Devi temple.',
     highlights: ['Eco Park Deodar Woods', 'Surkanda Devi Temple (2,757m)', 'Potato Farm Viewpoint', 'Adventure sports park'],
@@ -273,11 +271,14 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/kausani/kausani-himalayan-peaks.jpg',
     gallery: [
       '/images/destinations/kausani/kausani-himalayan-peaks.jpg',
-      '/images/destinations/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
       '/images/destinations/kausani/1 (1).jpg',
       '/images/destinations/kausani/1 (2).jpg',
       '/images/destinations/kausani/1 (3).jpg',
-      '/images/destinations/kausani/1 (4).jpg'
+      '/images/destinations/kausani/1 (4).jpg',
+      '/images/destinations/kausani/3j3QHzg8lMg3CddzmvtNdqN3jk9hiYDFDy7g3_TnOfGBzNr0vsQ8r4x_hy3860aN8AGKWTz8VC19CD-UTWMIqPeAi8qNoGgDBjmQtCfTwpL3nSms1k1ReZLpf5O-uIMs3Fsjj0QWWLGDPNVf1QqXKQLZV-_2ENEz27HsKq4b8y5QC8pP_rspwATsL7LdWz24.jpg',
+      '/images/destinations/kausani/4XgWClS8Zg8P9MDUF0wg39UEK6HJ2mbqNCz5F7SbKduMrJxHSlT4NUuEql-IGDcZsgNSbRvBDXc3Kt703AXnI548l5p9tdq_nKFqk3LL8JiW6N2_7h6RKq4QMOWIUEX5qplZVjqjKM6Jl2vMnV0D422ZwUAlFr4Rv5SuOo04ZXjHoBQNkg2tb3rayENWCqoe.jpg',
+      '/images/destinations/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
+      '/images/destinations/kausani/s-E_EPi17_eyGb0MdSz5uwhft77U84lyMM3fMxNRkusJgrNhKKy6CL7tlm_I4ve-afs4Nu5toGc2Zck7RRzD9V3Z9_AxoPWy6p30KTyD4Q--gCkjnsf4JdUcbzw3LEccNomZrSJLixV4iJJ2j1K0UCtt5nTYlHFQsnU4KeerohY.jpg'
     ],
     description: 'Mahatma Gandhi dubbed Kausani the "Switzerland of India". Perched atop a ridge, it offers an uninterrupted 300 km panoramic view of Himalayan peaks including Trishul, Nanda Devi, and Panchachuli.',
     highlights: ['300 km Himalayan snow peak panorama', 'Anasakti Ashram (Gandhi Smarak)', 'Kausani Tea Estate', 'Rudradhari Falls & Caves'],
@@ -305,14 +306,16 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/munsiyari/munsiyari-panchachuli-peaks.jpg',
     gallery: [
       '/images/destinations/munsiyari/munsiyari-panchachuli-peaks.jpg',
-      '/images/destinations/munsiyari/photo-1.jpg',
       '/images/destinations/munsiyari/2 (1).jpg',
       '/images/destinations/munsiyari/2 (2).jpg',
-      '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png',
-      '/images/destinations/munsiyari/photo-2.jpg',
-      '/images/destinations/munsiyari/photo-3.jpg',
+      '/images/destinations/munsiyari/2 (3).jpg',
+      '/images/destinations/munsiyari/2 (4).jpg',
       '/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png',
       '/images/destinations/munsiyari/Himalayan Valley Sports Field Panorama.png',
+      '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png',
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/photo-2.jpg',
+      '/images/destinations/munsiyari/photo-3.jpg',
       '/images/destinations/munsiyari/photo-4.jpg',
       '/images/destinations/munsiyari/photo-5.jpg'
     ],
@@ -374,10 +377,11 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/chamba/chamba-himalayan-vista.jpg',
     gallery: [
       '/images/destinations/chamba/chamba-himalayan-vista.jpg',
-      '/images/destinations/chamba/Turquoise Himalayan Lake Valley Vista.jpg',
       '/images/destinations/chamba/1 (1).jpg',
       '/images/destinations/chamba/1 (2).jpg',
-      '/images/destinations/chamba/1 (3).jpg'
+      '/images/destinations/chamba/1 (3).jpg',
+      '/images/destinations/chamba/1 (4).jpg',
+      '/images/destinations/chamba/Turquoise Himalayan Lake Valley Vista.jpg'
     ],
     description: 'Perched at 1,600 m amidst pine and deodar forests in Tehri Garhwal, Chamba is a tranquil, uncommercialized retreat offering sweeping views of the snow-clad Himalayas, verdant terrace fields, and the shimmering waters of nearby Tehri Lake.',
     highlights: ['Pristine Himalayan peak panorama', 'Proximity to Tehri Lake water sports', 'Gabbar Singh Memorial', 'Pine and rhododendron nature trails'],
@@ -406,8 +410,8 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/kanatal/Hillside Geodesic Dome Glamping Retreat.jpg',
       '/images/destinations/kanatal/Golden Hour Mountain Village and Sunset.jpg',
-      '/images/destinations/kanatal/Turquoise Mountain Lake Vista.jpg',
-      '/images/destinations/kanatal/Hillside Garden Estate at Sunset.jpg'
+      '/images/destinations/kanatal/Hillside Garden Estate at Sunset.jpg',
+      '/images/destinations/kanatal/Turquoise Mountain Lake Vista.jpg'
     ],
     description: 'Located on the Mussoorie-Chamba highway at 2,590 m, Kanatal is a quiet mountain hamlet shrouded in mist, apple orchards, and dense cedar groves. Famous for peaceful eco-resorts, forest walks in Kaudia Forest, and breathtaking views of the Bandarpunch peaks.',
     highlights: ['Kaudia Jungle Safari & nature walk', 'Surkanda Devi Temple ropeway trek', 'Tehri Lake view excursions', 'Stargazing & alpine camping'],
@@ -436,8 +440,8 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/bhowali/Serene Mountain Lakeside Temple Town.jpg',
       '/images/destinations/bhowali/Himalayan Peaks in Golden Alpenglow.jpg',
-      '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg',
-      '/images/destinations/bhowali/Snow-Capped Mountains Beyond Forested Ridges.jpg'
+      '/images/destinations/bhowali/Snow-Capped Mountains Beyond Forested Ridges.jpg',
+      '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg'
     ],
     description: 'Situated just 11 km from Nainital at an altitude of 1,706 m, Bhowali is surrounded by lush oak and pine forests. Known historically for its rejuvenating mountain air, bustling fruit markets filled with fresh apricots and plums, and the spiritual Golu Devta temple at Ghorakhal.',
     highlights: ['Golu Devta Temple at Ghorakhal', 'Kumaon wholesale fruit market', 'Shyamkhet Tea Garden', 'Gateway hub to Nainital, Bhimtal & Almora'],
@@ -462,11 +466,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Bhimtal',
     tagline: 'Picturesque Lake Town with an Island Aquarium & Pine Forests',
     category: 'Hills & Valleys',
-    image: '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg',
+    image: '/images/destinations/bhimtal/-ONLcM0ueLhmakb4MV3Q5TyrrHsaE7LTOGzS-nlYq7UoBq_hN9S0XPsWlIXP_WlrMVpvXhMefuwM-WS9orQRma3eSAPmKMXJhqBjzNosYUaABGEsvveW3ZnwEIYRhpTI3IRx2W9WeabW3GYj0vzDk8wIG0-nBS1QPVndjkMRmciFblcmgqJ48TxSEESENRSt.jpg',
     gallery: [
-      '/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg',
-      '/images/destinations/bhowali/Serene Mountain Lakeside Temple Town.jpg',
-      '/images/destinations/bhowali/Himalayan Peaks in Golden Alpenglow.jpg'
+      '/images/destinations/bhimtal/-ONLcM0ueLhmakb4MV3Q5TyrrHsaE7LTOGzS-nlYq7UoBq_hN9S0XPsWlIXP_WlrMVpvXhMefuwM-WS9orQRma3eSAPmKMXJhqBjzNosYUaABGEsvveW3ZnwEIYRhpTI3IRx2W9WeabW3GYj0vzDk8wIG0-nBS1QPVndjkMRmciFblcmgqJ48TxSEESENRSt.jpg',
+      '/images/destinations/bhimtal/7NBaviKnU7eEamyIIEDUHfuPf355zsatWW7u9ky-gmgXrk06MHdaKqfvm7ZVXQFVWIDaWuf7MXZiTSKO8zM5LmEjJDWU2dTEshGIieAtvIgb5aAFMVus4tcP0IoKAbkILhr81Giktx11-9tdPoM8DeJpJfJs9RqlnUyeJaELUWiY1rYAAAkRPavpDKgjs8Zg.jpg',
+      '/images/destinations/bhimtal/qAAwt-WJivhafBIJTU_LQYcMC35NrvMrgpy6bvqLG-9y2KNqayzZ5RAGvcBd4qh-M4B3UiLv1AoR-b5XZQpDvYAh26tUyObe9Bnq-NhyrJkIAIkyGr8qK7temcOsVge9_WU3I7cwTD1H-_3RUphiMW9dZjwA5J5-cUyDb115pi2MbYrvj_mfHN1Vul8ocKlX.jpg',
+      '/images/destinations/bhimtal/Ucj64LUHCmrbcSKbIM5HunXLBlCSSIZwoCsPFrnzc64_3Pd_7u_4ydseK5zNJA3YAAnroZzyJ4crdhBJvjpHHfYHWZaRhe_GDhvRd_K7W5-343PFgB8DiHqRL_VCg2o2AbA9-h0m36I-eZagcmDpeBbCkg4KQmOAxDj4JuPW36SJgaG22bGRBUoPvEfMRTzK.jpg',
+      '/images/destinations/bhimtal/w8drR4tOXEiaXE_sytCzT8bal6hZK8sQL6vM9_PmQhUsN61whDLTz7eFsufSQP80J1AuBhxxZRTkXn0oyhuqEgjthIvhLo59LA0LEnQXR_liC9mwu_r5uz0jDF4UD0iKsgAXdmPOsjsroMN5rP3DNQQxN75OCY1hC7Fy5GLLWwLgMLdEAH6cdnZF6Wvd0BSc.jpg'
     ],
     description: 'Larger and more peaceful than neighboring Nainital, Bhimtal is set around a magnificent C-shaped masonry lake featuring an island aquarium in its center. Surrounded by dense pine and oak trees, it offers boating, kayaking, historical temples, and tranquil nature walks.',
     highlights: ['Bhimtal Lake island boating', 'Victorian masonry dam & aquarium', '17th-century Bhimeshwar Mahadev Temple', 'Butterfly Research Centre'],
@@ -494,8 +500,11 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/dhanachuli/dhanachuli-heritage-haven.jpg',
     gallery: [
       '/images/destinations/dhanachuli/dhanachuli-heritage-haven.jpg',
-      '/images/destinations/dhanachuli/dhanachuli-prayer-flags.jpg',
-      '/images/destinations/dhanachuli/dhanachuli-apple-orchards.jpg'
+      '/images/destinations/dhanachuli/1 (1).jpg',
+      '/images/destinations/dhanachuli/1 (2).jpg',
+      '/images/destinations/dhanachuli/1 (3).jpg',
+      '/images/destinations/dhanachuli/dhanachuli-apple-orchards.jpg',
+      '/images/destinations/dhanachuli/dhanachuli-prayer-flags.jpg'
     ],
     description: 'A hidden village near Mukteshwar perched at 2,133 m, Dhanachuli offers unspoiled mountain beauty, endless apple and peach orchards, and dramatic unobstructed views of the snow-clad Nanda Devi range in total peace.',
     highlights: ['Bhalu Gaad Waterfall trek', 'Nanda Devi panoramic ridge views', 'Apple and plum orchard strolls', 'Luxury boutique mountain homestays'],
@@ -523,8 +532,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/ramgarh/ramgarh-fruit-orchards.jpg',
     gallery: [
       '/images/destinations/ramgarh/ramgarh-fruit-orchards.jpg',
-      '/images/destinations/ramgarh/Sunlit Mountain Terrace Cottages.jpg',
-      '/images/destinations/ramgarh/Misty Mountain Garden Retreat.jpg'
+      '/images/destinations/ramgarh/Misty Mountain Garden Retreat.jpg',
+      '/images/destinations/ramgarh/Sunlit Mountain Terrace Cottages.jpg'
     ],
     description: 'Divided into Malla (Upper) and Talla (Lower) Ramgarh, this idyllic hill retreat was the beloved sanctuary of Rabindranath Tagore and Mahadevi Verma. Renowned for acres of apricot, peach, and apple orchards overlooking the glittering snow peaks.',
     highlights: ['Tagore Top historic retreat', 'Mahadevi Verma Memorial Museum', 'Fruit orchards of peaches and plums', 'Peaceful Himalayan bird watching'],
@@ -549,11 +558,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Chaukori',
     tagline: 'Lush Tea Gardens & Front-Row Seats to Nanda Devi & Panchachuli',
     category: 'Hills & Valleys',
-    image: '/images/destinations/kausani/kausani-himalayan-peaks.jpg',
+    image: '/images/destinations/chaukori/0O8bKzUZAwSN29XikrhYFIfObxDw5YU2ZzRT2E5RCz83KEtKhJ9pGqdvPfgk5yKBt-1o8Aw5Krbfc3FS63Kq8vc3J0vxk4jLAgnekxXPcAJKeagQANb8jwj1XfQQf_Rf0JzAnq9OiYIuWlJkoFzHPIWKM2ezCuMisibENqCLLzJRu9AEEXut4oNL21gr1rHa.jpg',
     gallery: [
-      '/images/destinations/kausani/kausani-himalayan-peaks.jpg',
-      '/images/destinations/kausani/1 (1).jpg',
-      '/images/destinations/kausani/1 (2).jpg'
+      '/images/destinations/chaukori/0O8bKzUZAwSN29XikrhYFIfObxDw5YU2ZzRT2E5RCz83KEtKhJ9pGqdvPfgk5yKBt-1o8Aw5Krbfc3FS63Kq8vc3J0vxk4jLAgnekxXPcAJKeagQANb8jwj1XfQQf_Rf0JzAnq9OiYIuWlJkoFzHPIWKM2ezCuMisibENqCLLzJRu9AEEXut4oNL21gr1rHa.jpg',
+      '/images/destinations/chaukori/frT1HPHBvE1NlcJREzSPUStiOmzdu6wCswQ9apYWSRMMSpGCabQUMrTHdPZHgOW9aqo2m90WkTyG_TdE8DZl7o8Obf3lI_lquf6HkSN-frh3lUi333iryRsGHvJgFfS166mJIXw8ThiqxIpN8S09nPz015ZHXdPkbtv_TESfIr6qLBxE5_KxlZsDB5CqW55D.jpg',
+      '/images/destinations/chaukori/NrpTa9FnfvpVqFRYaivThV1DPkf2LIpmNAIKs3vd2k1VXBSQru-zvXqKKpEdNW0wl7FQ25KV_r_Vz1Bz5JSx0H0KDgytIjf3hLlWtqKu802tNRQm2uM3U78xE_zIV5aMY8wRrZEamb3T7Jc1IDLEMryfV-VS-O4oAVIq__h0-DlCkTUsknLVQ7mSs2K4a-6m.jpg',
+      '/images/destinations/chaukori/rbhwln3_7WYluqB-Rw7BggNZfF7PHb4QuQS-kva4ehj6vQuu1YSpbdJpETTkW1Pgqc70RoMhPCFXzY3pEwVMpAXyazF9BRs6MrGU7TC030vBRUjKJDk5Q5-E6kSsphv-ZkdG0EIXxYrYBHHFuNy39P_pPL7pmmfyJX_HCRWro2ow1vj3oyG90GWCdYG8zkl5.jpg',
+      '/images/destinations/chaukori/sDSf-JDR50-WZLINLFHm8Iw_eCvS-esWOjomopXtrQlhoTcxKzkC31h6YUsy7cvz3FRg8OLfOHXGhZyXju7aPPpq6_mVKZgZsFoS6NGGTo-d9nKmCHmLzb3Yze2kYeJy-c59DTPcng6wrODgILxZ6ZXMhosWWpFdVf0c5ru9J6dt-skbYkMNe3-xHKRl-Kd7.jpg'
     ],
     description: 'Nestled in the Pithoragarh district, Chaukori is a bowl-shaped hill town famous for emerald tea gardens, deodar and pine woods, and one of the clearest, most magnificent panoramic views of the Nanda Devi, Nanda Kot, and Panchachuli peaks.',
     highlights: ['British-era emerald tea gardens', 'Panchachuli five-peak sunrise view', 'Patal Bhuvaneshwar cave proximity', 'Stargazing in crystal night skies'],
@@ -578,11 +589,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Pithoragarh',
     tagline: 'Little Kashmir of Uttarakhand & Gateway to the High Himalayas',
     category: 'Hills & Valleys',
-    image: '/images/destinations/munsiyari/photo-1.jpg',
+    image: '/images/destinations/pithoragarh/1920px-Pithoragarh_skyline.jpg',
     gallery: [
-      '/images/destinations/munsiyari/photo-1.jpg',
-      '/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png',
-      '/images/destinations/munsiyari/Himalayan Valley Sports Field Panorama.png'
+      '/images/destinations/pithoragarh/1920px-Pithoragarh_skyline.jpg',
+      '/images/destinations/pithoragarh/1920px-Adi_Patal_Bhubaneshwar_Temple,_Pithoragarh,_Uttarakhand.jpg',
+      '/images/destinations/pithoragarh/Pithoragarh_Fort.jpg',
+      '/images/destinations/pithoragarh/Pithoragarh_Sunrise.jpg',
+      '/images/destinations/pithoragarh/Temporary_campus_of_SIT_pithoaragarh.jpg'
     ],
     description: 'Known affectionately as "Little Kashmir", Pithoragarh sits in the lush Soar Valley bordered by Nepal and Tibet. Boasting a historic Chand dynasty fort, ancient temples, cascading waterfalls, and the gateway to the sacred Kailash Mansarovar and Adi Kailash trails.',
     highlights: ['Pithoragarh Fort (Chand Dynasty)', 'Chandak Hill & Mostamanu Temple', 'Askot Wildlife Sanctuary proximity', 'Soar Valley sunrise vistas'],
@@ -607,11 +620,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Lohaghat',
     tagline: 'Pine-Clad Spiritual Gem & Historic Mayavati Ashram',
     category: 'Hills & Valleys',
-    image: '/images/destinations/abbout mount/Glacier-Crowned Mountain Wilderness.png',
+    image: '/images/destinations/lohaghat/26OHKezdyYcXLMgmbY1PflRF06YPB3cZzcpWNn3VdtHqAQkvm7DJy2gMo4aL7G5omB-kZ8B1f7k41pm3o-h0SCM8w2EUDiGmAqmR2y3xuRbP6fKcF3JCa07ZwXyPi-waJpV9AV1yX9HmUExP5EdSbm4K3_Ma3Qb6o8w9k2R_YpvLbGKvpowvpWFwOF8YshiM.jpg',
     gallery: [
-      '/images/destinations/abbout mount/Glacier-Crowned Mountain Wilderness.png',
-      '/images/destinations/abbout mount/Dramatic Alpine Glacier Peaks.png',
-      '/images/destinations/abbout mount/Moonlit Alpine Summit.png'
+      '/images/destinations/lohaghat/26OHKezdyYcXLMgmbY1PflRF06YPB3cZzcpWNn3VdtHqAQkvm7DJy2gMo4aL7G5omB-kZ8B1f7k41pm3o-h0SCM8w2EUDiGmAqmR2y3xuRbP6fKcF3JCa07ZwXyPi-waJpV9AV1yX9HmUExP5EdSbm4K3_Ma3Qb6o8w9k2R_YpvLbGKvpowvpWFwOF8YshiM.jpg',
+      '/images/destinations/lohaghat/HqwqTmZ7lkGulcYLWag_bYuJ4UH2ECHhcxl7Suiy4M2uFur19zRCBtneJQ_vUQS7D1p9DvGsitnS-QCogxMg2I3U6Td-GUEQBYe0WoIWASwRv3P4Kn4kYamYouOi8agkhXIcElZho4T8w01F8057aZgriWR5DnftM0eaqeTllAHYbsGyj13HCD3_7DrFj8pD.jpg',
+      '/images/destinations/lohaghat/I8p5m2-BF46zne92fFgACKEoAJsImFJ3cGuPcnxzZTyzJX7eTUleEyry60nYiACBiFaPQsxvl5cOlwdqvRhmxd9RHB7zQW_mPEH4JdmNAvg9q0lPHGDGEE-jRxWq3yjsdvZbj3_AiSdiAvoWxZJScZ0cfwYNqu_jMFsX2j8HTz_vSMzWrqg1d_KAcPYgOBro.jpg',
+      '/images/destinations/lohaghat/kNzJzmTsuNc1fbKavdleN6zI7aYMsn1GwB4JjcZH9yYNerOwH5CDgR2fkAbux6GDBlc2CpzhOHY9ga0FPRjave2hOyXoukPzdyx4LcE5A2LEcK0DdhUBK_QTHTtVQ2SknnalJITZxgcXdRqSe8K7le_V_Sde5bB6YBcf_BaH5JIF0ooxFzfTnjeAaoQKVdVO.jpg',
+      '/images/destinations/lohaghat/_Y-8G7ceeNc7NeUC-SY8RPc_yOL-9PkDs9Pedm1pm01PhATT59gRZ5BdNTaF0IxyrXH1d-FLnUtkS9OiIxG95Z2WfNf_8t-0GSZEOq_XPJnQBvZPuNpC-fpwC511BcA1lVOZI30RcYi-PuDJuOZMrs73Zj26YKItd1Upr38Tk6fIrIL19LHhizvkau8_G91v.jpg'
     ],
     description: 'Resting gracefully on the banks of the Lohawati River at 1,754 m, Lohaghat is known for its historic pine forests, buransh (rhododendron) blooms in spring, the serene Advaita Ashrama at Mayavati, and proximity to Abbott Mount.',
     highlights: ['Mayavati Advaita Ashram (Swami Vivekananda)', 'Banasur Ka Kila historic fortress', 'Abbott Mount colonial churches proximity', 'Buransh rhododendron blossoms'],
@@ -636,10 +651,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Champawat',
     tagline: 'Ancient Chand Capital of Rich Stone Architecture & Folklore',
     category: 'Hills & Valleys',
-    image: '/images/destinations/abbout mount/Dramatic Alpine Glacier Peaks.png',
+    image: '/images/destinations/champawat/biFXduARbnH5GhBn4nukN0501ICvDOvFdRCMkfSrPg6EhSXt4IhveDzXclN3XdnWx5CRXGbXTuDkrriF032TrEx5SDqZwUtAIW6NJtIVc50aU62ELvLL9wgtnhwl9T3bnVQN0IOnLXui20HUxMU7l78vyI1GMjaYr6DcRY6wFki-y8MHqTrvUEbqkWtaGhFX.jpg',
     gallery: [
-      '/images/destinations/abbout mount/Dramatic Alpine Glacier Peaks.png',
-      '/images/destinations/abbout mount/Glacier-Crowned Mountain Wilderness.png'
+      '/images/destinations/champawat/biFXduARbnH5GhBn4nukN0501ICvDOvFdRCMkfSrPg6EhSXt4IhveDzXclN3XdnWx5CRXGbXTuDkrriF032TrEx5SDqZwUtAIW6NJtIVc50aU62ELvLL9wgtnhwl9T3bnVQN0IOnLXui20HUxMU7l78vyI1GMjaYr6DcRY6wFki-y8MHqTrvUEbqkWtaGhFX.jpg',
+      '/images/destinations/champawat/GuiNX37kGFUaiXYOq9_nEQXMnSvawqPkuzZYBYVc26Jq7Tm6qqHk8d0BbWghjLfvDE4CHqXaVTm6I4r7su0SofPLEDUA1V7i8NT1B74MigCwpvfxafT1XEduydW-Cpd7do7MjU0ELa0FqzelT6N4GawA6CvgXiOaRoXaJPhKWtJ-eWzhbxFrK7_s_V6-tS6b.jpg',
+      '/images/destinations/champawat/nCbNZP2DnOZj_OOYjXbRM8gYi0F6cioAf4aTlv-r_4Dn4zIFc0HW5TcwfeeSe7y0MJTV_0anYz9H6gqNTwfV8mNS1PsIM5mz7K_cy_uwNyN6Vci-x830yYOGwMSxZJAnvGIR5D3RCzEaobn26cv25jYh_n2QCY96J06wy72FdkXGMoM1fsLr7sn6WD3jao2o.jpg',
+      '/images/destinations/champawat/o1dTKzQppA7kIggFL8NKHDzC2S1gVwOjJOX1TCUH1mAsI0_aqP7LepLk9KfIh19N_bLuu8-IiXi18skS0aI7V60AgmMY5tDCdX-GHLFrBl1yASy0mvNCNNvZMipaz03zOsZs1YPCsFmif0pKxzxP9ncVJ4eGXl9Olp8IcK62BDYdnr0JhMdh6YP7_4FoDfbq.jpg',
+      '/images/destinations/champawat/_Ah11XI9I1OAVyqyGBdXJW2t0j8WzTFu_8XmnHZkW6vEsHcZVFTGIkxVRqxSpq8fALpT5MKl_Yk7dXL6LTXbLgMkq5qTv6wRnXKcOkaT3NH5pbpdRLyjvCH_8bai2ty9mofzbILWPkcRytP1maQ0gwfp4DJ0u9Y1ibtjhz0OxMiOtbw8b8MSO9lzezE5RRIr.jpg'
     ],
     description: 'The former capital of the Chand dynasty rulers of Kumaon, Champawat is steeped in history and folklore. Renowned for exquisite stone carvings at the 12th-century Baleshwar Temple, Kranteshwar Mahadev on the hilltop, and deep forest trails.',
     highlights: ['Baleshwar Temple 12th-century stone carvings', 'Kranteshwar Mahadev summit', 'Ek Hathiya Ka Naula ancient rock-cut architecture', 'Pristine deodar ridges'],
@@ -664,11 +682,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Pangot',
     tagline: 'Birdwatcher’s Himalayan Paradise & Oak Woodland Hamlet',
     category: 'Hills & Valleys',
-    image: '/images/destinations/New folder/Misty Mountain Cottage in Lush Greenery.png',
+    image: '/images/destinations/pangot/Misty Mountain Cottage in Lush Greenery.png',
     gallery: [
-      '/images/destinations/New folder/Misty Mountain Cottage in Lush Greenery.png',
-      '/images/destinations/New folder/Forest Lamp and Hidden Red-Roofed House.png',
-      '/images/destinations/New folder/Golden Foliage Hiding a Rustic Cabin.png'
+      '/images/destinations/pangot/Misty Mountain Cottage in Lush Greenery.png',
+      '/images/destinations/pangot/Forest Lamp and Hidden Red-Roofed House.png',
+      '/images/destinations/pangot/Golden Foliage Hiding a Rustic Cabin.png'
     ],
     description: 'Located just 15 km past Nainital through the lush forested Kilbury sanctuary, Pangot is world-renowned among ornithologists and nature lovers. Home to over 580 species of birds, quiet forest lodges, and peaceful walking trails through rhododendron and oak woods.',
     highlights: ['Kilbury Bird Sanctuary & 580+ bird species', 'Cheena / China Peak trek', 'Peaceful eco-lodges away from crowds', 'Spectacular sunset at Woodside ridge'],
@@ -693,10 +711,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Peora',
     tagline: 'Eco-Friendly Kumaoni Fruit Village & Tranquil Pine Haven',
     category: 'Hills & Valleys',
-    image: '/images/destinations/peora/Terraced Hills Through Pine Canopy.png',
+    image: '/images/destinations/peora/Misty Hillside Home with Red Roses.png',
     gallery: [
-      '/images/destinations/peora/Terraced Hills Through Pine Canopy.png',
       '/images/destinations/peora/Misty Hillside Home with Red Roses.png',
+      '/images/destinations/peora/Terraced Hills Through Pine Canopy.png',
       '/images/destinations/peora/Terraced Hillside Mediterranean Villa.png'
     ],
     description: 'A pristine eco-tourism village tucked between Almora and Mukteshwar at 2,014 m, Peora is celebrated for sustainable homestays, pine needle crafts, organic orchards, and panoramic views of snow-capped Kumaon peaks in complete serenity.',
@@ -725,8 +743,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/gwaldam/Misty Mountain Forest Retreat.png',
     gallery: [
       '/images/destinations/gwaldam/Misty Mountain Forest Retreat.png',
-      '/images/destinations/gwaldam/Misty Hillside Village Panorama.png',
-      '/images/destinations/gwaldam/Gilded Gifting Partner Emblem (1).png'
+      '/images/destinations/gwaldam/Gilded Gifting Partner Emblem (1).png',
+      '/images/destinations/gwaldam/Misty Hillside Village Panorama.png'
     ],
     description: 'Perched on the border of Garhwal and Kumaon between Almora and Joshimath, Gwaldam is an idyllic hamlet surrounded by state tea gardens, apple orchards, and direct towering views of Trishul peak (7,120 m) and Nanda Ghunti.',
     highlights: ['Direct front-row views of Trishul peak', 'State-run tea estates & processing gardens', 'Base camp for Roopkund trail journeys', 'Pindari Glacier route proximity'],
@@ -759,7 +777,9 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/haridwar/haridwar-ganga-aarti-aerial.jpg',
       '/images/destinations/haridwar/Aerial Riverside Festival at Dusk.jpg',
-      '/images/destinations/haridwar/Riverside Ghat and Orange Bridge.jpg'
+      '/images/destinations/haridwar/Riverside Ghat and Orange Bridge.jpg',
+      '/images/destinations/haridwar/Sunset Crowds Along the Sacred River.jpg',
+      '/images/destinations/haridwar/Twilight Temple Festival by the River.jpg'
     ],
     description: 'Where the holy Ganges exits the Himalayas to touch the plains of Northern India. Haridwar is one of India’s seven holiest cities (Sapta Puri) famous for the mesmerizing evening Ganga Aarti at Har Ki Pauri.',
     highlights: ['Har Ki Pauri Maha Aarti', 'Mansa Devi & Chandi Devi cable cars', 'Daksheshwar Mahadev Temple', 'Sacred Brahma Kund dip'],
@@ -784,12 +804,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Rishikesh',
     tagline: 'Yoga Capital of the World & Gateway to Himalayan Adventure',
     category: 'Spiritual',
-    image: '/images/destinations/rishikesh/photo-1.jpg',
+    image: '/images/destinations/rishikesh/1 (1).jpg',
     gallery: [
-      '/images/destinations/rishikesh/photo-1.jpg',
       '/images/destinations/rishikesh/1 (1).jpg',
       '/images/destinations/rishikesh/1 (2).jpg',
       '/images/destinations/rishikesh/1 (3).jpg',
+      '/images/destinations/rishikesh/photo-1.jpg',
       '/images/destinations/rishikesh/photo-2.jpg',
       '/images/destinations/rishikesh/photo-3.jpg',
       '/images/destinations/rishikesh/photo-4.jpg',
@@ -821,8 +841,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/yamunotri/3 (1).jpg',
     gallery: [
       '/images/destinations/yamunotri/3 (1).jpg',
-      '/images/destinations/yamunotri/3 (2).jpg',
       '/images/destinations/yamunotri/3 (1).webp',
+      '/images/destinations/yamunotri/3 (2).jpg',
       '/images/destinations/yamunotri/3 (2).webp'
     ],
     description: 'The westernmost shrine of the Char Dham circuit, nestled against Bandarpoonch peak. Devotees cook rice and potatoes in the boiling hot springs of Surya Kund before offering prayers to black marble Goddess Yamuna.',
@@ -880,10 +900,10 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/kedarnath/kedarnath-temple-front.jpg',
     gallery: [
       '/images/destinations/kedarnath/kedarnath-temple-front.jpg',
-      '/images/destinations/kedarnath/photo-1.jpg',
       '/images/destinations/kedarnath/3 (1).jpg',
       '/images/destinations/kedarnath/3 (2).jpg',
       '/images/destinations/kedarnath/3 (3).jpg',
+      '/images/destinations/kedarnath/photo-1.jpg',
       '/images/destinations/kedarnath/photo-2.jpg',
       '/images/destinations/kedarnath/photo-3.jpg',
       '/images/destinations/kedarnath/photo-4.jpg',
@@ -947,13 +967,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Hemkund Sahib',
     tagline: 'World’s Highest Gurudwara & Pristine Glacial Lake',
     category: 'Spiritual',
-    image: '/images/destinations/hemkund saheb/Hemkund_Lake.jpg',
+    image: '/images/destinations/hemkund-sahib/Hemkund_Lake.jpg',
     gallery: [
-      '/images/destinations/hemkund saheb/Hemkund_Lake.jpg',
-      '/images/destinations/hemkund saheb/Pilgrims_crossing_the_Hemkund_Glacier.jpg',
-      '/images/destinations/hemkund saheb/Hemkunt-003.jpg',
-      '/images/destinations/hemkund saheb/Hemkunt-006.jpg',
-      '/images/destinations/hemkund saheb/Helicopter_service.jpg'
+      '/images/destinations/hemkund-sahib/Hemkund_Lake.jpg',
+      '/images/destinations/hemkund-sahib/Helicopter_service.jpg',
+      '/images/destinations/hemkund-sahib/Hemkunt-003.jpg',
+      '/images/destinations/hemkund-sahib/Hemkunt-006.jpg',
+      '/images/destinations/hemkund-sahib/Pilgrims_crossing_the_Hemkund_Glacier.jpg'
     ],
     description: 'Situated at an astonishing altitude of 4,329 meters and surrounded by seven snow-capped peaks, Sri Hemkund Sahib is where the tenth Sikh Guru, Guru Gobind Singh Ji, meditated in his previous incarnation.',
     highlights: ['Glacial lake reflection of 7 peaks', 'World’s highest Sikh Gurudwara', 'Rare Brahma Kamal flowers', 'Lakshman Temple nearby'],
@@ -981,8 +1001,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/tungnath/Golden Shrine Above the Clouds.png',
     gallery: [
       '/images/destinations/tungnath/Golden Shrine Above the Clouds.png',
-      '/images/destinations/tungnath/Mountain Shrine Overlooking Snowy Peaks.png',
-      '/images/destinations/tungnath/6129685.webp'
+      '/images/destinations/tungnath/6129685.webp',
+      '/images/destinations/tungnath/Mountain Shrine Overlooking Snowy Peaks.png'
     ],
     description: 'Standing at 3,680 meters, Tungnath is the highest among all Panch Kedar temples and the highest Shiva temple on earth. A gentle 4 km stone path from Chopta leads pilgrims to this eternal sanctuary.',
     highlights: ['Highest Shiva Temple on Earth (3,680m)', '3rd Kedar of Panch Kedar', 'Paved trail through rhododendrons', 'Chandrashila summit extension'],
@@ -1071,14 +1091,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Patal Bhuvaneshwar',
     tagline: 'Mystical Subterranean Limestone Cave Temple of 33 Crore Deities',
     category: 'Spiritual',
-    image: '/images/destinations/patal bhunehswar/1510244852_patal_bhuvaneshwar_banner3.jpg.webp',
+    image: '/images/destinations/patal-bhuvaneshwar/1510244852_patal_bhuvaneshwar_banner3.jpg.webp',
     gallery: [
-      '/images/destinations/patal bhunehswar/1510244852_patal_bhuvaneshwar_banner3.jpg.webp',
-      '/images/destinations/patal bhunehswar/Basalt Cliffside Caves and Colonnade.png',
-      '/images/destinations/patal bhunehswar/Cave Shrine with Floral Offerings.png',
-      '/images/destinations/patal bhunehswar/patal-bhuvaneshwar-temple-5753724.webp',
-      '/images/destinations/patal bhunehswar/pictures-patal-bhuvaneshwar1.webp',
-      '/images/destinations/patal bhunehswar/Shrine Steps Into Darkness.png'
+      '/images/destinations/patal-bhuvaneshwar/1510244852_patal_bhuvaneshwar_banner3.jpg.webp',
+      '/images/destinations/patal-bhuvaneshwar/Basalt Cliffside Caves and Colonnade.png',
+      '/images/destinations/patal-bhuvaneshwar/Cave Shrine with Floral Offerings.png',
+      '/images/destinations/patal-bhuvaneshwar/patal-bhuvaneshwar-temple-5753724.webp',
+      '/images/destinations/patal-bhuvaneshwar/pictures-patal-bhuvaneshwar1.webp',
+      '/images/destinations/patal-bhuvaneshwar/Shrine Steps Into Darkness.png'
     ],
     description: 'A 160-meter long and 90-foot deep underground cave temple carved out of limestone by rainwater. Puranic belief holds that thirty-three crore Hindu deities reside in this sanctum where stalactites and stalagmites have taken forms of mythological iconography.',
     highlights: ['Deep subterranean descent assisted by iron chains', 'Naturally formed Sheshnag, Kamdhenu, and Ganesha stalactites', 'Ancient Pandava and King Rituparna legends from Skanda Purana', 'Haat Kalika Shaktipeeth in nearby Gangolihat'],
@@ -1107,10 +1127,10 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/dhari devi/Floating Temple Pavilion Over Calm Green Water.png',
     gallery: [
       '/images/destinations/dhari devi/Floating Temple Pavilion Over Calm Green Water.png',
+      '/images/destinations/dhari devi/dhari-devi-doli-images-1024x838.webp',
       '/images/destinations/dhari devi/Lakeside Ceremonial Procession by the Temple.png',
       '/images/destinations/dhari devi/nsplsh_8174bebe249b40b48c13a85ab6d37ea6~mv2.webp',
       '/images/destinations/dhari devi/shutterstock2382983649-min.webp',
-      '/images/destinations/dhari devi/dhari-devi-doli-images-1024x838.webp',
       '/images/destinations/dhari devi/Temple Walkway with Draped Bell.png'
     ],
     description: 'Located in Kalyasaur between Srinagar and Rudraprayag, Dhari Devi is revered as the guardian protector of Uttarakhand and the four holy Dhams. The idol is placed on a raised platform over the Alaknanda waters and uniquely changes expression from a girl child to a woman and elder throughout the day.',
@@ -1140,8 +1160,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/neelkanth/Colorful Hindu Temple Entrance Crowd.png',
     gallery: [
       '/images/destinations/neelkanth/Colorful Hindu Temple Entrance Crowd.png',
-      '/images/destinations/neelkanth/Colorful Temple Tower Amidst Hillside Greenery.png',
       '/images/destinations/neelkanth/a67ec66c721d70fdcbc253d06bba1d8c.webp',
+      '/images/destinations/neelkanth/Colorful Temple Tower Amidst Hillside Greenery.png',
       '/images/destinations/neelkanth/neelkanth-mahadev-temple-rishikesh-images-261131352.webp',
       '/images/destinations/neelkanth/Neelkanth-Mahadev-Temple-Rshikesh.webp'
     ],
@@ -1207,8 +1227,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/rudraprayag/Hillside Town Along a Mountain River.png',
     gallery: [
       '/images/destinations/rudraprayag/Hillside Town Along a Mountain River.png',
-      '/images/destinations/rudraprayag/Mountain River Valley with Cliffside Pavilion.png',
-      '/images/destinations/rudraprayag/Clifftop Temple Over Turbulent Ocean.png'
+      '/images/destinations/rudraprayag/Clifftop Temple Over Turbulent Ocean.png',
+      '/images/destinations/rudraprayag/Mountain River Valley with Cliffside Pavilion.png'
     ],
     description: 'Second of the Panch Prayags, Rudraprayag marks the majestic confluence where the Mandakini river rushing from Kedarnath joins the Alaknanda descending from Badrinath. Legend says Sage Narada meditated here on a rock to learn music from Lord Shiva.',
     highlights: ['Confluence of Alaknanda and Mandakini rivers', 'Vital bifurcation junction for Kedarnath and Badrinath yatra routes', 'Narad Shila and ancient Rudranath Temple right at the sangam', 'Koteshwar Mahadev cave temple along Alaknanda riverbanks'],
@@ -1234,11 +1254,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Karnaprayag',
     tagline: 'Sangam of Alaknanda and Pindar River Where Mahabharata Hero Karna Meditated',
     category: 'Spiritual',
-    image: '/images/destinations/karnprayag/Hillside Town Above the River.png',
+    image: '/images/destinations/karnaprayag/Hillside Town Above the River.png',
     gallery: [
-      '/images/destinations/karnprayag/Hillside Town Above the River.png',
-      '/images/destinations/karnprayag/Turquoise River Through Mountain Villages.png',
-      '/images/destinations/karnprayag/Turquoise River Valley Townscape.png'
+      '/images/destinations/karnaprayag/Hillside Town Above the River.png',
+      '/images/destinations/karnaprayag/Turquoise River Through Mountain Villages.png',
+      '/images/destinations/karnaprayag/Turquoise River Valley Townscape.png'
     ],
     description: 'Third of the holy Panch Prayags, Karnaprayag is situated at the meeting of the glacial Pindar river from Pindari Glacier with the Alaknanda. Here, Mahabharata hero Karna performed deep penance to obtain the invulnerable armor (Kavacha) from Surya Dev.',
     highlights: ['Third sacred Panch Prayag confluence', 'Ancient Karna Temple and historic cremation memorial stone', 'Uma Devi Temple dedicated to Goddess Parvati', 'Gateway to Nanda Devi sanctuary treks and Gwaldam hills'],
@@ -1323,10 +1343,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Guptkashi',
     tagline: 'Sacred Valley Town of Ancient Vishwanath Temple & Ardhanarishwar Shrine',
     category: 'Spiritual',
-    image: '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
+    image: '/images/destinations/guptkashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
     gallery: [
-      '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
-      '/images/destinations/guptakashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg'
+      '/images/destinations/guptkashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
+      '/images/destinations/guptkashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg'
     ],
     description: 'Guptkashi (Hidden Benares) is a legendary holy town situated high above the Mandakini river valley facing Chaukhamba peak. Shiva concealed himself here from the Pandavas in the form of Nandi bull before emerging at Kedarnath. It houses the ancient Vishwanath Temple and Manikarnika Kund fed by Ganga and Yamuna spouts.',
     highlights: ['Ancient Vishwanath Temple mirroring the energy of Kashi Varanasi', 'Manikarnika Kund fed continuously by holy underground streams', 'Rare half-male half-female Ardhanarishwar stone idol', 'Primary staging hub with major helicopter services to Kedarnath'],
@@ -1383,11 +1403,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Triyuginarayan',
     tagline: 'The Celestial Wedding Venue of Lord Shiva and Goddess Parvati with Eternal Flame',
     category: 'Spiritual',
-    image: '/images/destinations/tiryuginarayan/Gemini_Generated_Image_7npc0j7npc0j7npc-clean.png',
+    image: '/images/destinations/triyuginarayan/Gemini_Generated_Image_7npc0j7npc0j7npc-clean.png',
     gallery: [
-      '/images/destinations/tiryuginarayan/Gemini_Generated_Image_7npc0j7npc0j7npc-clean.png',
-      '/images/destinations/tiryuginarayan/Gemini_Generated_Image_7zozm17zozm17zoz.png',
-      '/images/destinations/tiryuginarayan/Gemini_Generated_Image_k6sp5ak6sp5ak6sp (1)-clean.png'
+      '/images/destinations/triyuginarayan/Gemini_Generated_Image_7npc0j7npc0j7npc-clean.png',
+      '/images/destinations/triyuginarayan/Gemini_Generated_Image_7zozm17zozm17zoz.png',
+      '/images/destinations/triyuginarayan/Gemini_Generated_Image_k6sp5ak6sp5ak6sp (1)-clean.png'
     ],
     description: 'Triyuginarayan is revered as the divine venue where Lord Shiva married Goddess Parvati in the presence of Lord Vishnu as the bride\'s brother and Lord Brahma as the head priest. The sacred Akhand Dhuni (eternal wood fire) in front of the temple has burned continuously across three cosmic epochs (Treta, Dvapara, and Kali Yuga).',
     highlights: ['Perpetual eternal sacred flame burning across three cosmic yugas', 'Beloved destination for Vedic and celebrity spiritual weddings', 'Four sacred holy kunds: Brahma, Vishnu, Rudra, and Saraswati', 'Rare 8th-century silver Vishnu idol housed in stone sanctum'],
@@ -1443,13 +1463,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Rudranath',
     tagline: 'Fourth Kedar Where Lord Shiva\'s Mukh (Face) is Revered Amidst Alpine Bugyals',
     category: 'Spiritual',
-    image: '/images/destinations/rushranath/1551335374_4.jpg.webp',
+    image: '/images/destinations/rudranath/1551335374_4.jpg.webp',
     gallery: [
-      '/images/destinations/rushranath/1551335374_4.jpg.webp',
-      '/images/destinations/rushranath/Gemini_Generated_Image_eypgjneypgjneypg.png',
-      '/images/destinations/rushranath/Gemini_Generated_Image_tce480tce480tce4.png',
-      '/images/destinations/rushranath/Gemini_Generated_Image_tkw3xytkw3xytkw3.png',
-      '/images/destinations/rushranath/rudranath-3959138.webp'
+      '/images/destinations/rudranath/1551335374_4.jpg.webp',
+      '/images/destinations/rudranath/Gemini_Generated_Image_eypgjneypgjneypg.png',
+      '/images/destinations/rudranath/Gemini_Generated_Image_tce480tce480tce4.png',
+      '/images/destinations/rudranath/Gemini_Generated_Image_tkw3xytkw3xytkw3.png',
+      '/images/destinations/rudranath/rudranath-3959138.webp'
     ],
     description: 'Rudranath is the fourth Kedar of the sacred Panch Kedar pilgrimage. Lord Shiva is worshipped in his natural stone cave sanctum as "Neelkanth Mahadev" in the form of his face (Mukh). The 20 km trek through Panar Bugyal is widely regarded as one of the most spiritually stirring and visually breathtaking Himalayan trails.',
     highlights: ['Fourth Kedar worshipping the face of Lord Shiva', 'Challenging 20 km wilderness trek through lush rhododendron forests and high meadows', 'Vaitarni river and sacred holy tarns (Surya, Chandra, and Tara kunds)', 'Magnificent unobstructed vistas of Nanda Devi, Trishul, and Hathi Parvat'],
@@ -1475,11 +1495,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Madhyamaheshwar',
     tagline: 'Second Kedar Nestled Beneath Chaukhamba Where Shiva\'s Nabhi (Navel) is Worshipped',
     category: 'Spiritual',
-    image: '/images/destinations/madhyamaheshwar/how-to-reach-madhyamaheshw-1746780980759.webp',
+    image: '/images/destinations/madhyamaheshwar/Gemini_Generated_Image_26xz7q26xz7q26xz.png',
     gallery: [
-      '/images/destinations/madhyamaheshwar/how-to-reach-madhyamaheshw-1746780980759.webp',
       '/images/destinations/madhyamaheshwar/Gemini_Generated_Image_26xz7q26xz7q26xz.png',
       '/images/destinations/madhyamaheshwar/Gemini_Generated_Image_i8wp2vi8wp2vi8wp.png',
+      '/images/destinations/madhyamaheshwar/how-to-reach-madhyamaheshw-1746780980759.webp',
       '/images/destinations/madhyamaheshwar/madhyamaheshwar-banner.webp',
       '/images/destinations/madhyamaheshwar/madhyamaheshwar-banner3.webp'
     ],
@@ -1568,11 +1588,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Chitai Golu Devta',
     tagline: 'The Legendary Temple of Justice Hung with Thousands of Sacred Brass Bells',
     category: 'Spiritual',
-    image: '/images/destinations/almora/almora-ridge-view.jpg',
+    image: '/images/destinations/almora/2 (2).jpg',
     gallery: [
-      '/images/destinations/almora/almora-ridge-view.jpg',
-      '/images/destinations/jageshwar/Ancient Forest Temple Complex.png',
-      '/images/destinations/almora/2 (1).jpg'
+      '/images/destinations/almora/2 (2).jpg',
+      '/images/destinations/almora/2 (1).jpg',
+      '/images/destinations/almora/2 (4).jpg'
     ],
     description: 'Chitai Golu Devta Temple, dedicated to Lord Golu—an incarnation of Shiva regarded as the God of Justice—is situated on a pine-clad hill near Almora. Devotees seeking fairness and resolution pin written legal petitions and letters to the deity, and return to hang brass bells when their prayers are answered.',
     highlights: ['Mesmerizing canopy of thousands of brass bells of all sizes', 'Unique custom of offering handwritten letters and legal affidavits to the deity', 'Deeply embedded folk deity of the Kumaon region', 'Surrounded by fragrant pine forests 9 km from Almora town'],
@@ -1598,11 +1618,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Kasar Devi',
     tagline: 'Cosmic Energy Vortex Sanctuary on the Van Allen Radiation Belt',
     category: 'Spiritual',
-    image: '/images/destinations/almora/2 (1).jpg',
+    image: '/images/destinations/kasar-devi/-neGpO3JxTnHw-ThMAI2PWLmVB44xq9Tq3bWIVtqTG5LLP5AR1TAsBmcPZO-j9Y5GASuwMjOh3_UavHPGSuNBfEt_tFToeftaCRBFgg1k7r-OFq-Yf9rPTg9v_izTijYvKJwDk-_EruEoWNucK2VsrX4XnpWiFtyUN6IS4O8xVBtJd8Qid73dj8saNcJo842.jpg',
     gallery: [
-      '/images/destinations/almora/2 (1).jpg',
-      '/images/destinations/almora/almora-ridge-view.jpg',
-      '/images/destinations/almora/2 (3).jpg'
+      '/images/destinations/kasar-devi/-neGpO3JxTnHw-ThMAI2PWLmVB44xq9Tq3bWIVtqTG5LLP5AR1TAsBmcPZO-j9Y5GASuwMjOh3_UavHPGSuNBfEt_tFToeftaCRBFgg1k7r-OFq-Yf9rPTg9v_izTijYvKJwDk-_EruEoWNucK2VsrX4XnpWiFtyUN6IS4O8xVBtJd8Qid73dj8saNcJo842.jpg',
+      '/images/destinations/kasar-devi/5rpwGuQVOygX2FfKnk96R-2yTQeXoRSR9-7SNnvtuczkenKmc6NeBXpNY1sM-mYYU-_NXfJvsyk0jo8tecAejIXMGgLHtpOkbbYgXuv2PaPB0gb4aFTmwbjAWFnm16PXxpdzAibAhMa9QtzE0xBxZcynyMx-CfEJg_X3FCXRXLR0msX5dfg_KoHbB-DpqP5M.jpg',
+      '/images/destinations/kasar-devi/dWc4sXiP_SZ1Dta0aZerbTrwtzFhKRzhUg-42yjoMF2Zz2qC4GHV2IfQ7xttjUpRJ5K5hzfkCKOYn2NC4FEt4pfeyQdjcQ3Gms3wSUPoSZofOdEcnGG0q-cauMo92Jk0DuDnfxHkJTSbxLVhjFAKPmAUt2OvdLyJzGhYmMP10Jl5kIsoWWaZbIjQXVsmFG_C.jpg',
+      '/images/destinations/kasar-devi/DxVkcFGd7F8m5c6a-UBjDfNZqs7PXQgi5sLh_PzJxAHqJALcj5wH3JcNByRUEt5GNDSvGvxLH7OvN9r41TkvMPRWlj_sgznuK8eW4rldRD8wuqscZAkJ9uYQSPxr-eMdWNibGtH_r4Hohx-ScN4AsV6dEzD0uTvr5hkBKQK4EkAakyeJYaoOMIhDHWC0CjKI.jpg',
+      '/images/destinations/kasar-devi/MFTQwdEUUj9oVi_MMH6QLA6jOsn-8lZn0kzy1nBSoOm8A1QyA9dWQmlavvVVplkHUvM-Lq90qWvnndl0aMUV38jryk9NXjEILhMpJG5c_ODTtpZ4hS8X7xIJuCRKhemInjzyTOqzD8H7AgSRJBrnpCgQYxci7PpMezCQcUBiq2riq0GROlbhDn4gpAYOYxml.jpg'
     ],
     description: 'Kasar Devi is renowned worldwide for its extraordinary geomagnetic field caused by the Van Allen Radiation Belt—a phenomenon shared only with Stonehenge and Machu Picchu. Worshipped since the 2nd century AD, this hilltop sanctuary has drawn spiritual seekers including Swami Vivekananda, Lama Govinda, Rabindranath Tagore, and Bob Dylan.',
     highlights: ['Global geomagnetic energy vortex enhancing meditation and calm', '2nd-century hilltop cave temple worshipped by Swami Vivekananda in 1890', 'Crank\'s Ridge (Hippie Hill) Bohemian counter-culture legacy', 'Spectacular 300-km panoramic views of Trishul, Nanda Devi, and Panchachuli'],
@@ -1628,10 +1650,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Katarmal Sun Temple',
     tagline: '9th-Century Architectural Marvel of Surya Dev & Second Largest Sun Temple in India',
     category: 'Spiritual',
-    image: '/images/destinations/jageshwar/Ancient Forest Temple Complex.png',
+    image: '/images/destinations/almora/2 (3).jpg',
     gallery: [
-      '/images/destinations/jageshwar/Ancient Forest Temple Complex.png',
-      '/images/destinations/jageshwar/Meditation Among Ancient Stone Temples.png'
+      '/images/destinations/almora/2 (3).jpg',
+      '/images/destinations/almora/2 (1).jpg',
+      '/images/destinations/almora/almora-ridge-view.jpg'
     ],
     description: 'Constructed in the 9th century by Katyuri monarch Katarmalla, this grand sun temple complex is considered India\'s second most significant sun shrine after Konark. Engineered with remarkable astronomical precision, the first rays of dawn pierce the main sanctum to illuminate the idol of Surya (Baraditya).',
     highlights: ['Grand 9th-century Katyuri dynasty sun shrine cluster', '44 miniature auxiliary stone shrines surrounding the main shikhara', 'Astronomical dawn alignment illuminating the innermost sanctum', 'Peaceful pine-covered ridge overlooking the Kosi River valley'],
@@ -1661,16 +1684,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Valley of Flowers',
     tagline: 'UNESCO World Heritage Alpine Floral Paradise & Glacial Wonderland',
     category: 'Adventure',
-    image: '/images/destinations/valley-of-flowers/photo-1.jpg',
+    image: '/images/destinations/valley-of-flowers/ewHyy2mR5mIrlinwGKYZXgOIYewCP-hRlvwuLWKtvIoOa3AeNNeeRdOgfyto7GkymriYUIil_lxE4eLWw7gSgrZBCvELengLej_3TK3-4Uzve1BNrCvoiqHgc-zHV9pZzMJ1NgsoXN_rk24W8OTmETCEn3YLneilVuLJnWjH8yc.jpg',
     gallery: [
-      '/images/destinations/valley-of-flowers/photo-1.jpg',
-      '/images/destinations/valley-of-flowers/4 (1).jpg',
-      '/images/destinations/valley-of-flowers/4 (2).jpg',
-      '/images/destinations/valley-of-flowers/4 (3).jpg',
-      '/images/destinations/valley-of-flowers/photo-2.jpg',
-      '/images/destinations/valley-of-flowers/photo-3.jpg',
-      '/images/destinations/valley-of-flowers/photo-4.jpg',
-      '/images/destinations/valley-of-flowers/photo-5.jpg'
+      '/images/destinations/valley-of-flowers/ewHyy2mR5mIrlinwGKYZXgOIYewCP-hRlvwuLWKtvIoOa3AeNNeeRdOgfyto7GkymriYUIil_lxE4eLWw7gSgrZBCvELengLej_3TK3-4Uzve1BNrCvoiqHgc-zHV9pZzMJ1NgsoXN_rk24W8OTmETCEn3YLneilVuLJnWjH8yc.jpg',
+      '/images/destinations/valley-of-flowers/GwiO6SugKCHZlagyaNiCBHspkG2l8oRLypyY4fXDKI1doSKSAHOljTQmfXeaOb_dE4ARdok8YG42UN45fs2zSC-6wDxXPcUloWNkeE9fMmqsQELV54acmvD8eY382gmVqZ8cWKnKG9mklXtktN0AllqiunYM-2A9y_qTdnwPsCtoA-4xbuiAXoV6.jpg',
+      '/images/destinations/valley-of-flowers/ifc3H2GQUJ6eJSFYZdCO6jpEQVYYGRTFLBk8JCWprdIu0ovQipZTJ7e0c03fXAIbt0bCy-P2GLKjY-v25gQvbF4U-ai2Ik7DCEZuCmHlgruk2ZkdntU3p1uFd92vlSzdVnYz4i39Qxn8PvWoQnyv4WBIuHzl18AKbuShv918Avo.jpg',
+      '/images/destinations/valley-of-flowers/k5WMGd1uN4ura0eKUTm1ePkas8Nc31qa3kKGI9XDTRfDZkN1RR-yCNoS3yAHcuTFkezHU6H146024nn-d8XB4otq6IMlIT5tU179NFXbIfSwm8vs90MzREf4PHvBVUUuKC9v8Wr4zfIt_WejWsW-OlW1unZvcfNXcig0Sj9pqEU.jpg',
+      '/images/destinations/valley-of-flowers/KjU33ZZ5pqCE7N88_A5tsifpbXwcrJj55oVYg0VWf36Gql6rrmfO_GaZaedeNC7sazcChHDKceYu2oM5nUOP_uyZEj72dUECh-yyoMz-Fu220MjbLSEPwD-BMxt7zQJ0M3jSQqvjSZzsdrqw2b5L0Zboq8LHWFrJgP4zbjvrlyE.jpg',
+      '/images/destinations/valley-of-flowers/sWRUfLnuCkdTo441AziJx6XWvHqPF86R-Zc1h_pk5V2fWWg23eStDZXP1PzHEARtyN0xLIYIbDnrZATTDXaESKUXvJ9ltB3W3nxkgdfFdmN363OfGsG1ZnEuj230855VcgR4wqaSzUjrSecxz9jtlx2_VJEizdW_7CpKBEj4r5U.jpg'
     ],
     description: 'Discovered accidentally by Frank Smythe in 1931, this high-altitude valley explodes into a natural carpet of over 500 varieties of wildflowers, glacial streams, and butterflies during the monsoon.',
     highlights: ['UNESCO World Heritage Site', '500+ species of alpine wildflowers', 'Pushpawati river waterfalls', 'Rare Blue Poppy & Brahma Kamal'],
@@ -1695,14 +1716,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Chopta',
     tagline: 'Mini Switzerland of India & Gateway to Tungnath Chandrashila',
     category: 'Adventure',
-    image: '/images/destinations/chopta/3 (1).jpg',
+    image: '/images/destinations/chopta/photo-1.jpg',
     gallery: [
+      '/images/destinations/chopta/photo-1.jpg',
       '/images/destinations/chopta/3 (1).jpg',
       '/images/destinations/chopta/3 (2).jpg',
       '/images/destinations/chopta/3 (3).jpg',
       '/images/destinations/chopta/3 (4).jpg',
       '/images/destinations/chopta/3 (5).jpg',
-      '/images/destinations/chopta/photo-1.jpg',
       '/images/destinations/chopta/photo-2.jpg',
       '/images/destinations/chopta/photo-3.jpg',
       '/images/destinations/chopta/photo-4.jpg',
@@ -1731,12 +1752,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Dayara Bugyal',
     tagline: 'Endless Alpine Velvet Meadows & Panoramic Snow Horizons',
     category: 'Hills & Valleys',
-    image: '/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp',
+    image: '/images/destinations/dayara-bugyal/dayara_bugyal_3_1.webp',
     gallery: [
-      '/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp',
-      '/images/destinations/dhtayabugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
-      '/images/destinations/dhtayabugyal/2db70ae7a153fdddaee9b127fba08338.webp',
-      '/images/destinations/dhtayabugyal/Gemini_Generated_Image_t8s3hgt8s3hgt8s3.png'
+      '/images/destinations/dayara-bugyal/dayara_bugyal_3_1.webp',
+      '/images/destinations/dayara-bugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
+      '/images/destinations/dayara-bugyal/2db70ae7a153fdddaee9b127fba08338.webp',
+      '/images/destinations/dayara-bugyal/Gemini_Generated_Image_t8s3hgt8s3hgt8s3.png'
     ],
     description: 'Considered among the most breathtaking sub-alpine meadows in India, Dayara Bugyal spans across 28 square kilometers of lush velvet grasslands in summer and converts into vast powder snowfields in winter.',
     highlights: ['28 sq km alpine meadow expanse', 'Bakaria Top summit (3,810m)', 'Barnala Tal lake campsite', 'Winter butter festival (Anduri Utsav)'],
@@ -1765,8 +1786,7 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/chopta/3 (4).jpg',
       '/images/destinations/chopta/3 (1).jpg',
-      '/images/destinations/chopta/3 (2).jpg',
-      '/images/destinations/chopta/3 (5).jpg'
+      '/images/destinations/chopta/3 (2).jpg'
     ],
     description: 'At an altitude of 2,438 meters, Deoria Tal is an idyllic emerald lake famous for its mirror-like reflections of the Chaukhamba massif. According to the Mahabharata, this is where the Yaksha tested the Pandavas.',
     highlights: ['Chaukhamba mirror reflection', 'Mahabharata Yaksha Prashna site', '2.5 km gentle hike from Sari village', 'Lush forest camping & bird watching'],
@@ -1791,10 +1811,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Har Ki Dun Valley',
     tagline: 'The Cradle of the Gods & Ancient Morinda Glacial Valley',
     category: 'Hills & Valleys',
-    image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg',
+    image: '/images/destinations/chakrata/1 (2).jpg',
     gallery: [
-      '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg',
-      '/images/destinations/chakrata/1 (1).jpg'
+      '/images/destinations/chakrata/1 (2).jpg',
+      '/images/destinations/chakrata/1 (1).jpg',
+      '/images/destinations/chakrata/1 (3).jpg'
     ],
     description: 'A cradle-shaped hanging valley nestled inside Govind Pashu Vihar National Park. Known as the Valley of Gods, it is steeped in folklore as the trail the Pandavas ascended on their path to heaven.',
     highlights: ['Swargarohini & Jaundhar glacier vistas', 'Ancient Someshwar wooden temples', 'Alpine flora and endemic bird species', 'Sankri & Osla heritage hamlets'],
@@ -1849,13 +1870,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Harsil Valley',
     tagline: 'Pristine Bhagirathi Apple Valley & Himalayan Deodars',
     category: 'Hills & Valleys',
-    image: '/images/destinations/harshil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
+    image: '/images/destinations/harsil/1543513902_1543513900031.jpg.webp',
     gallery: [
-      '/images/destinations/harshil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
-      '/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
-      '/images/destinations/harshil/1543513902_1543513900031.jpg.webp',
-      '/images/destinations/harshil/1602328040_1602328036685.jpg.webp',
-      '/images/destinations/harshil/images.jpg'
+      '/images/destinations/harsil/1543513902_1543513900031.jpg.webp',
+      '/images/destinations/harsil/1602328040_1602328036685.jpg.webp',
+      '/images/destinations/harsil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
+      '/images/destinations/harsil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
+      '/images/destinations/harsil/images.jpg'
     ],
     description: 'Nestled on the banks of Bhagirathi River on the route to Gangotri, Harsil is a fairy-tale hamlet celebrated for its crisp red apple orchards, dense deodar forests, traditional wooden bridges, and serene Swiss-like tranquility.',
     highlights: ['Crisp organic apple orchards', 'Wilson’s Cottage heritage lore', 'Mukhba village (Winter seat of Ganga)', 'Saat Tal glacial lake trek'],
@@ -1881,10 +1902,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Mandal Valley',
     tagline: 'The Butterfly Valley of Garhwal & Cradle of the Chipko Movement',
     category: 'Hills & Valleys',
-    image: '/images/destinations/chopta/photo-1.jpg',
+    image: '/images/destinations/chopta/3 (1).jpg',
     gallery: [
-      '/images/destinations/chopta/photo-1.jpg',
-      '/images/destinations/chopta/3 (1).jpg'
+      '/images/destinations/chopta/3 (1).jpg',
+      '/images/destinations/chopta/3 (3).jpg',
+      '/images/destinations/chopta/photo-2.jpg'
     ],
     description: 'Known as the "Cherrapunji of Garhwal" for its lush precipitation and dense green canopy, Mandal Valley is celebrated as the cradle of the historic Chipko forest conservation movement. Home to over 200 species of vibrant butterflies and the revered Ansuya Devi and Atri Muni cave shrines, it remains an unspoilt alpine paradise.',
     highlights: ['Birthplace of the legendary Chipko forest conservation movement', 'Over 200 species of rare Himalayan butterflies and birds', 'Sacred Ansuya Devi Temple & Atri Muni natural cave waterfall', 'Lush virgin oak, alder, and rhododendron nature trails'],
@@ -1910,10 +1932,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Mandakini Valley',
     tagline: 'Sacred River Valley of Cascading Glaciers, Shrines & Emerald Terraces',
     category: 'Hills & Valleys',
-    image: '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
+    image: '/images/destinations/guptkashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg',
     gallery: [
-      '/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp',
-      '/images/destinations/guptakashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg'
+      '/images/destinations/guptkashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg',
+      '/images/destinations/guptkashi/guptkashi-uttarakhand-wide-view-of-temple.webp'
     ],
     description: 'Carved out by the glacial Mandakini River originating from the Chorabari glacier near Kedarnath, this dramatic river valley passes between towering snow massifs of Chaukhamba and Kedar Dome. Lined with terraced villages, ancient shrines, and mountain rapids, it forms the sacred spine of Garhwal.',
     highlights: ['Lifeline river valley descending from Chorabari Glacier', 'Flanked by towering Chaukhamba and Kedar Dome massifs', 'En route to Kedarnath, Triyuginarayan, and Madhyamaheshwar', 'Traditional stone-roofed Garhwali hamlet culture'],
@@ -1939,10 +1961,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Bhilangana Valley',
     tagline: 'Pristine Glacial Valley Leading to Khatling Glacier & High Alpine Lakes',
     category: 'Hills & Valleys',
-    image: '/images/destinations/tehri/photo-1.jpg',
+    image: '/images/destinations/tehri/photo-2.jpg',
     gallery: [
-      '/images/destinations/tehri/photo-1.jpg',
-      '/images/destinations/tehri/photo-2.jpg'
+      '/images/destinations/tehri/photo-2.jpg',
+      '/images/destinations/tehri/photo-3.jpg',
+      '/images/destinations/tehri/photo-4.jpg'
     ],
     description: 'Formed by the glacial waters of the Bhilangana River flowing from the dramatic Khatling Glacier, this pristine valley is renowned for remote trekking corridors, high-altitude alpine tarns like Masar Tal and Vasuki Tal, and scenic backwaters feeding the Tehri reservoir.',
     highlights: ['Source of Bhilangana River originating from Khatling Glacier', 'Untouched high meadow trails to Masar Tal and Vasuki Tal', 'Ghansali and Ghuttu traditional mountain settlements', 'Scenic backwaters of Tehri Dam at the downstream confluence'],
@@ -1968,10 +1991,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Darma Valley',
     tagline: 'Dramatic Eastern Himalayan Valley of 14 Tribal Villages & Panchachuli Vistas',
     category: 'Hills & Valleys',
-    image: '/images/destinations/munsiyari/munsiyari-panchachuli-peaks.jpg',
+    image: '/images/destinations/darma-valley/bNZMhE7jUjatFwNKlKEP6s7oXRQuCTpSGU8Rlq3toK0MvW7qTnZiWkmvmDyIB3PJjBgSYKnJBd_c75a_0Ibx3RVL88dXsTt0KHOXXE5nPiFAzNF6sFhgHbdUr2MXZXKtx3l1QcJnJE_bfvLpZOuxQmWouZGjTivYO_pEKEWKs3y6ywoWGWXlbP-8zpWHhESi.jpg',
     gallery: [
-      '/images/destinations/munsiyari/munsiyari-panchachuli-peaks.jpg',
-      '/images/destinations/munsiyari/photo-1.jpg'
+      '/images/destinations/darma-valley/bNZMhE7jUjatFwNKlKEP6s7oXRQuCTpSGU8Rlq3toK0MvW7qTnZiWkmvmDyIB3PJjBgSYKnJBd_c75a_0Ibx3RVL88dXsTt0KHOXXE5nPiFAzNF6sFhgHbdUr2MXZXKtx3l1QcJnJE_bfvLpZOuxQmWouZGjTivYO_pEKEWKs3y6ywoWGWXlbP-8zpWHhESi.jpg',
+      '/images/destinations/darma-valley/fq0-6si2TrwMU2CnpmPntT7-vzvU6ZQZ19V_3jg7NPa_J-KB10t9gfUyvSerrts8UpnchVxGY3J2A7ZwVEGedQZd5uSwoFW-DzZ8xxoKiTDr158GQNywqhuJOoFxFOp5PdVVbTq4fU16USbpjG4o5bmHXEEYMNKsFJboo8w5DMk.jpg',
+      '/images/destinations/darma-valley/fukFzIGW50CEkuwfFna0RobNSXH6naKHOY2dXLitiZzkzGpfiPHVAQjmcvd2OrxQTsJbVP-W-BUfw1D4OuDHnYoegDoI8zi2bLORIvrHTEp3yoFRprL4AkEzIt2PuZoIZHQyYxhHGndVd04rHwxjQprVMAWvc05zTKGfWimFQh2ZelLIp4DafVhukD6-.jpg',
+      '/images/destinations/darma-valley/maDBVNzN3eWFColLQdeB9YTtypnPjycQqPAZ7GPMSstVya8BlZRaVwCBYsGWo7nDvJVTmiphJamRG2q4it8VbmpWB7xnsrwInG7fOwnYm8hOHEWAbIqoP600JbKtunVzf5pvg7VY7RMrqiFdTB1wUduf_zlFptSUmNkKQ3u5Si1CbD3vxOjKCugFaqyv.jpg',
+      '/images/destinations/darma-valley/TFspUTkBFHdMCUQ0thu02wyOalKWZh8lCV09JzLCEkahGBxwAI9dLoSa0QUWPUhyGWJ9mFASOG2xLdyTlzwhPHW7DA8mOogjbDVEnddMGMIywk7L0hH7M3V9vCM2bNKcuBhE2FET9zb5WnPT7OrPq-Wc8wSexXH1auUAWZn7pWyLSuNuzHXKa4SjVwte.jpg'
     ],
     description: 'Located in the borderlands of Pithoragarh district near Tibet and Nepal, Darma Valley is carved by the Dhauli Ganga river. Home to 14 traditional Rung tribal villages, it offers the closest and most dramatic views of the towering Panchachuli peaks and glaciated cirques.',
     highlights: ['Spectacular close-up views of Panchachuli East face', '14 ancient indigenous Rung tribal villages in Pithoragarh', 'Carved out by the roaring Dhauli Ganga river', 'Rugged off-road paradise and rare Himalayan biodiversity'],
@@ -2000,7 +2026,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/munsiyari/photo-2.jpg',
     gallery: [
       '/images/destinations/munsiyari/photo-2.jpg',
-      '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png'
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/2 (1).jpg'
     ],
     description: 'Also known as the Gori Ganga Valley, Johar Valley was for centuries the premier trade route between India and Western Tibet operated by the enterprising Shauka traders. Dominated by views of Nanda Devi East, Hardeol, and Trishuli, it leads directly to the mighty Milam Glacier.',
     highlights: ['Ancient trans-Himalayan trading route to Western Tibet', 'Cradle of legendary explorer Pundit Nain Singh Rawat', 'Epic gateway to Milam and Ralam Glaciers', 'Framed by Trishuli, Hardeol, and Nanda Devi East peaks'],
@@ -2026,10 +2053,13 @@ export const DESTINATIONS: Destination[] = [
     name: 'Niti Valley',
     tagline: 'Remote Indo-Tibetan Borderland of Glacial Gorges & Timarsain Mahadev',
     category: 'Hills & Valleys',
-    image: '/images/destinations/badrinath/photo-2.jpg',
+    image: '/images/destinations/niti-valley/6vLCGMwIk0rwWXlMkDSPAUC5b4Yee2T82wkST1LW-UmYH9aJAvANMk_pJbuNGbwNwg3ZLcFE_1l08_WCGinbVP0ClIr2ebV08mS-eVCXQ_BB9H0ClmyfXPAsL6a1hC40A9Q1e5hWKLfLNKyMxeM-YytQJ1r-UJ6HoaxYjt2N64J75w1enlYu-Mh1mQiWto79.jpg',
     gallery: [
-      '/images/destinations/badrinath/photo-2.jpg',
-      '/images/destinations/badrinath/photo-3.jpg'
+      '/images/destinations/niti-valley/6vLCGMwIk0rwWXlMkDSPAUC5b4Yee2T82wkST1LW-UmYH9aJAvANMk_pJbuNGbwNwg3ZLcFE_1l08_WCGinbVP0ClIr2ebV08mS-eVCXQ_BB9H0ClmyfXPAsL6a1hC40A9Q1e5hWKLfLNKyMxeM-YytQJ1r-UJ6HoaxYjt2N64J75w1enlYu-Mh1mQiWto79.jpg',
+      '/images/destinations/niti-valley/cZtN1aMUdX12vBkBbQzDs7mqWdFLMImvPLFfrTJOaoNDlWhKXvIV8UcpIrsT6OVFKE56mQWhoGyesELpdwCYtSuh9TdSJ6d7yy8Te6fyr2I_qjZkzn1x5o1O1t8si9RJV39-ZwDbW3GL7ML4I9ZKnkFlviBsXMEtOc1CZWnY4HE.jpg',
+      '/images/destinations/niti-valley/qj2gDsTNAHThAeMtN-uWSIVEN0HdAP1WRwFa2kuY2DhLwAf200W1-iA79zk0haRBWUBpqb0Exn7iWazd6Ye7Zff4259jXV03VUdjqXGLOVzuo8GiQBqw62hkKYLKODAlmxarRQ8UqWEofRzelqi5H7laTkIaq8C4yKN4L00DGvA.jpg',
+      '/images/destinations/niti-valley/SrFe7UmPP__tv5ObwmOnwasFHiFHNlCeNehr0NahLT3Cq78vX0visGTQy4pxbXOJrpRoyTrW6Uk-DNIPe6muzNoRk5OArJvRJsaeMEHcz9WE1l3bmP_aNDN64V309PoAoaC62zL50iiDePiu4WT6pD5nNonfUcP5kCF2wo0zehlpWbyS7mNQimCpY1zE6ZoU.jpg',
+      '/images/destinations/niti-valley/zeIR32GG2m6aA1V7vn1Z9QLebOyy-SHteb6R2998I7_qT_ocqzhPiurxlNJmegMIwtf_oHqQCYHEYG4enWoVCSGpIIprzQY4z1nRnMyqgViFGlt15gG9kB6p3mFJ2xLeLPENjw6Ql3IFXCAPkBPNcKBTVopIurcvLSphbvHZuG7JFDkVYtYRcIyZPD3JhwVI.jpg'
     ],
     description: 'Positioned in the northernmost corner of Chamoli district along the Dhauliganga, Niti Valley ends at Niti village (3,600m), the last inhabited border settlement before Tibet. Famous for the sacred Timarsain Mahadev winter ice cave and rugged trans-Himalayan scenery, it offers sheer untamed serenity.',
     highlights: ['Last Indian village of Niti situated near Tibetan border (3,600m)', 'Timarsain Mahadev naturally formed winter ice lingam', 'Dramatic canyon gorges carved by Dhauliganga', 'High-altitude habitat of Snow Leopards and Bharal'],
@@ -2055,10 +2085,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Nelong Valley',
     tagline: 'The Ladakh of Uttarakhand with High-Altitude Cold Desert Canyons',
     category: 'Hills & Valleys',
-    image: '/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
+    image: '/images/destinations/harsil/images.jpg',
     gallery: [
-      '/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
-      '/images/destinations/harshil/1543513902_1543513900031.jpg.webp'
+      '/images/destinations/harsil/images.jpg',
+      '/images/destinations/harsil/1543513902_1543513900031.jpg.webp',
+      '/images/destinations/harsil/1602328040_1602328036685.jpg.webp'
     ],
     description: 'Located in the Uttarkashi district inside Gangotri National Park near the Indo-China border, Nelong Valley resembles the barren high-altitude moonscapes of Ladakh and Spiti. It features the legendary 150-year-old Gartang Gali cliff-hanging wooden bridge and pristine high desert wildlife.',
     highlights: ['Arid cold-desert Tibetan plateau terrain similar to Ladakh and Spiti', 'Historic Gartang Gali 150-year-old cliffside wooden walkway', 'Located inside Gangotri National Park border zone', 'Rare wildlife including Snow Leopard, Musk Deer, and Himalayan Monal'],
@@ -2080,127 +2111,6 @@ export const DESTINATIONS: Destination[] = [
     }
   },
   {
-    id: 'mana-valley',
-    name: 'Mana Valley',
-    tagline: 'High-Altitude Borderland of Mythic Saraswati, Vasudhara & Vyas Gufa',
-    category: 'Hills & Valleys',
-    image: '/images/destinations/badrinath/Colorful Temple Beneath Snowy Mountains.png',
-    gallery: [
-      '/images/destinations/badrinath/Colorful Temple Beneath Snowy Mountains.png',
-      '/images/destinations/badrinath/photo-4.jpg',
-      '/images/destinations/badrinath/photo-5.jpg',
-      '/images/destinations/badrinath/photo-1.jpg'
-    ],
-    description: 'Situated just 3 km beyond Badrinath at 3,200m, Mana Valley is celebrated as the "Last Indian Village" before Tibet. It is an epicenter of Mahabharata legends, housing the thunderous Saraswati River gorge, Bhim Pul natural stone bridge, Vyas Gufa, and the trail to the 400-ft Vasudhara Falls.',
-    highlights: ['Last Indian village before the border with Tibet (3,200m)', 'Bhim Pul natural stone bridge spanning roar of Saraswati River', 'Magnificent 400-foot Vasudhara Falls cascading from glacial tarns', 'Vyas Gufa and Ganesh Gufa where Mahabharata was penned'],
-    bestTime: 'May to October',
-    altitude: '3,200 m (10,500 ft)',
-    idealDuration: '1 - 2 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Bhim Pul & Saraswati Gorge', desc: 'Massive stone boulder placed by Bhima across the deafening Saraswati torrent.' },
-      { name: 'Vasudhara Falls', desc: 'Glacial waterfall falling 400 feet against high mountain winds (5 km trek).' },
-      { name: 'Vyas Gufa & Ganesh Gufa', desc: 'Sacred caves where the epic Mahabharata was dictated and written down.' },
-      { name: 'Swargarohini Trailhead', desc: 'Legendary path the Pandavas took on their ascent to heaven.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (315 km).',
-      byTrain: 'Rishikesh Railway Station (300 km).',
-      byRoad: '3 km paved road extension beyond Badrinath Temple town.'
-    }
-  },
-  {
-    id: 'kalpeshwar-valley',
-    name: 'Kalpeshwar Valley',
-    tagline: 'The Hidden Urgam Valley of Whispering Pines & Terraced Organic Farms',
-    category: 'Hills & Valleys',
-    image: '/images/destinations/kalpeshwar/Gemini_Generated_Image_sjm7cqsjm7cqsjm7-clean.png',
-    gallery: [
-      '/images/destinations/kalpeshwar/Gemini_Generated_Image_sjm7cqsjm7cqsjm7-clean.png',
-      '/images/destinations/kalpeshwar/Gemini_Generated_Image_3mchwm3mchwm3mch-clean.png',
-      '/images/destinations/kalpeshwar/Gemini_Generated_Image_u6ss0tu6ss0tu6ss.png'
-    ],
-    description: 'Tucked away in the Chamoli Himalayas, the secluded Urgam Valley (Kalpeshwar Valley) is a fertile amphitheater of step farms, organic apple orchards, and pine-clad hills. Home to the fifth Kedar, Kalpeshwar Mahadev, it remains open and tranquil throughout all seasons.',
-    highlights: ['Enchanting terraced fields of the secluded Urgam Valley', 'Sanctuary of the fifth Kedar (Kalpeshwar Mahadev)', 'Ancient wish-fulfilling Kalpavriksha tree and wooden hamlets', 'Pristine mountain streams and trout waters fed by Himalayan snows'],
-    bestTime: 'Throughout the year; Best April to June & September to November',
-    altitude: '2,200 m (7,218 ft)',
-    idealDuration: '2 - 3 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Kalpeshwar Rock Temple', desc: 'Ancient rock cave sanctum entered through a natural cleft where Shiva\'s locks are worshipped.' },
-      { name: 'Urgam Organic Terraces', desc: 'Green stepped agricultural fields known for aromatic herbs and apples.' },
-      { name: 'Dhyan Badri Shrine', desc: 'Part of the Panch Badri temples nestled amidst tranquil cedar groves.' },
-      { name: 'Devgram Heritage Hamlet', desc: 'Charming traditional mountain village with slate roofs and wood carvings.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (265 km).',
-      byTrain: 'Rishikesh Railway Station (250 km).',
-      byRoad: '9 km mountain road from Helang off the main Badrinath National Highway (NH-7).'
-    }
-  },
-  {
-    id: 'gangotri-valley',
-    name: 'Gangotri Valley',
-    tagline: 'Grand Glacial Gorge of the Bhagirathi & Gateway to Gaumukh-Tapovan',
-    category: 'Hills & Valleys',
-    image: '/images/destinations/gangotri/Riverside Mountain Town at Golden Hour.png',
-    gallery: [
-      '/images/destinations/gangotri/Riverside Mountain Town at Golden Hour.png',
-      '/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png',
-      '/images/destinations/gangotri/Himalayan Temple Valley Pilgrimage.png'
-    ],
-    description: 'Flanked by towering granite cliffs and fragrant deodar woods, Gangotri Valley is the dramatic mountain amphitheater through which the turquoise Bhagirathi river surges. It is the launching ground for the iconic Gaumukh Glacier and high-altitude Tapovan meadow treks.',
-    highlights: ['Dramatic sheer granite gorges carved by the torrential Bhagirathi', 'Gateway to the Gaumukh glacier and high-altitude Tapovan meadows', 'Towering snow-clad vistas of Shivling, Meru, and Bhagirathi peaks', 'Sub-alpine deodar woodlands and sacred river beaches'],
-    bestTime: 'May to June & September to October',
-    altitude: '3,100 m - 4,463 m',
-    idealDuration: '3 - 5 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Gaumukh Glacier & Tapovan', desc: 'Iconic glacial snout source of Ganga beneath the pyramidal spire of Mt. Shivling.' },
-      { name: 'Surya Kund & Gauri Kund', desc: 'Cascading river gorges with deafening natural rock pools.' },
-      { name: 'Bhaironghati Confluence', desc: 'Spectacular deep bridge crossing where Jadh Ganga meets Bhagirathi.' },
-      { name: 'Submerged Shiva Lingam', desc: 'Natural rock formation visible during early winter when water levels recede.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (250 km).',
-      byTrain: 'Rishikesh Railway Station (235 km).',
-      byRoad: 'NH-34 connects Uttarkashi to Gangotri (100 km) via Maneri, Bhatwari, and Harsil.'
-    }
-  },
-  {
-    id: 'yamunotri-valley',
-    name: 'Yamunotri Valley',
-    tagline: 'Steep Rugged Canyons of the Sacred Yamuna & Thermal Sulphur Springs',
-    category: 'Hills & Valleys',
-    image: '/images/destinations/yamunotri/3 (2).jpg',
-    gallery: [
-      '/images/destinations/yamunotri/3 (2).jpg',
-      '/images/destinations/yamunotri/3 (1).jpg',
-      '/images/destinations/yamunotri/3 (1).webp'
-    ],
-    description: 'Encompassed by the Bandarpoonch massif and Kalind Parvat, Yamunotri Valley is a narrow, rugged alpine canyon where the sacred Yamuna River originates. Featuring hot steaming thermal springs at Surya Kund and sheer cliff faces, it provides high Himalayan drama.',
-    highlights: ['Birthplace canyon of the holy Yamuna River under Kalind Parvat', 'Boiling thermal sulphur springs of Surya Kund', '6 km mountain path along rushing glacial streams from Janki Chatti', 'Lush rhododendron and silver fir mountain walls'],
-    bestTime: 'May to June & September to November',
-    altitude: '2,650 m - 3,293 m',
-    idealDuration: '2 - 3 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Surya Kund Thermal Spring', desc: 'Natural boiling water spring where pilgrims cook rice and potatoes as prasad.' },
-      { name: 'Yamunotri Temple Sanctum', desc: 'Black marble shrine dedicated to Goddess Yamuna on the riverbank.' },
-      { name: 'Divya Shila Rock', desc: 'Sacred stone pillar worshipped before entering the main temple sanctum.' },
-      { name: 'Kharsali Village (Winter Seat)', desc: 'Historic wooden temple village across the river where Yamuna is worshipped in winter.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (175 km).',
-      byTrain: 'Dehradun Railway Station (160 km).',
-      byRoad: 'Drive to Janki Chatti via Barkot and Naugaon, followed by 6 km mountain trek.'
-    }
-  },
-  {
     id: 'tons-valley',
     name: 'Tons Valley',
     tagline: 'Untamed Wilderness of Pine Forests, Rafting & Wooden Pagoda Architecture',
@@ -2208,7 +2118,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/chakrata/1 (1).jpg',
     gallery: [
       '/images/destinations/chakrata/1 (1).jpg',
-      '/images/destinations/chakrata/1 (2).jpg'
+      '/images/destinations/chakrata/1 (2).jpg',
+      '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg'
     ],
     description: 'Flowing through the western edge of Garhwal near the Himachal border, Tons Valley is a wild wonderland of dense deodar forests, Class IV+ white water rapids, and unique multi-tiered wooden pagoda architecture dedicated to Mahabharata heroes.',
     highlights: ['Deep forested canyons carved by the fierce Tons River', 'World-class Class IV+ white water rafting rapids', 'Unique centuries-old wooden temples in Mori, Netwar, and Jakhol', 'Gateway to the Govind Pashu Vihar National Park and Har Ki Dun'],
@@ -2234,10 +2145,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Pindar Valley',
     tagline: 'Lush Emerald Corridor Leading to Pindari Glacier & Traill\'s Pass',
     category: 'Hills & Valleys',
-    image: '/images/destinations/gwaldam/Misty Mountain Forest Retreat.png',
+    image: '/images/destinations/gwaldam/Misty Hillside Village Panorama.png',
     gallery: [
-      '/images/destinations/gwaldam/Misty Mountain Forest Retreat.png',
-      '/images/destinations/gwaldam/Misty Hillside Village Panorama.png'
+      '/images/destinations/gwaldam/Misty Hillside Village Panorama.png',
+      '/images/destinations/gwaldam/Misty Mountain Forest Retreat.png'
     ],
     description: 'Extending from the foothills of Bageshwar up to the massive Pindari Glacier at 3,660m, Pindar Valley is renowned as one of Kumaon’s most rewarding trekking corridors. Flanked by Nanda Devi, Nanda Kot, and Panwali Dwar, it boasts rushing blue torrents and untouched shepherd hamlets.',
     highlights: ['One of Kumaon\'s most celebrated trekking valleys', 'Source of the fierce Pindar River from Pindari Glacier (3,660m)', 'Panoramic vistas of Nanda Kot, Changuch, and Panwali Dwar', 'Traditional Kumaoni stone settlements of Loharkhet and Khati'],
@@ -2263,10 +2174,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Ramganga Valley',
     tagline: 'Secluded River Haven of Angling, Deodars & Prehistoric Rock Carvings',
     category: 'Hills & Valleys',
-    image: '/images/destinations/corbett zone/Elephants Grazing by a Blue Lake.png',
+    image: '/images/destinations/ranikhet/1 (3).jpg',
     gallery: [
-      '/images/destinations/corbett zone/Elephants Grazing by a Blue Lake.png',
-      '/images/destinations/corbett zone/Golden River Elephant Herd.png'
+      '/images/destinations/ranikhet/1 (3).jpg',
+      '/images/destinations/ranikhet/1 (1).jpg',
+      '/images/destinations/ranikhet/1 (4).jpg'
     ],
     description: 'Winding through the rolling mid-Himalayan ridges of Almora and Chamoli, the Western and Eastern Ramganga Valleys offer a tranquil world of pine forests, fertile riverbed terraces in Chaukhutia, prehistoric megalithic stone excavations, and world-class catch-and-release golden mahseer angling.',
     highlights: ['Tranquil Eastern and Western Ramganga river valleys', 'Prime destination for legendary Himalayan Golden Mahseer angling', 'Prehistoric megalithic cup-marks and rock art in Chaukhutia', 'Scenic terraced slopes flanked by dense deodar and pine woods'],
@@ -2292,10 +2204,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Chaiinsheel Valley',
     tagline: 'Pristine High-Altitude Bugyal Frontier on the Himachal-Uttarakhand Border',
     category: 'Hills & Valleys',
-    image: '/images/destinations/chakrata/1 (2).jpg',
+    image: '/images/destinations/chakrata/1 (3).jpg',
     gallery: [
-      '/images/destinations/chakrata/1 (2).jpg',
-      '/images/destinations/chakrata/1 (3).jpg'
+      '/images/destinations/chakrata/1 (3).jpg',
+      '/images/destinations/chakrata/1 (1).jpg',
+      '/images/destinations/chakrata/1 (2).jpg'
     ],
     description: 'Straddling the scenic frontier between Uttarkashi district and the Shimla hills, Chaiinsheel Valley (Chaiinsheel Bugyal) is an untouched realm of rolling alpine meadows at 3,550m. Surrounded by dense deodar forests, apple orchards of Arakot, and snow peaks, it is an offbeat camping wonderland.',
     highlights: ['Sprawling virgin alpine meadows (Chaiinsheel Bugyal) at 3,550m', 'Border crest connecting Uttarkashi district with Shimla hills', 'Carpeted with alpine wildflowers and gentians during monsoon', 'Untouched offbeat camping paradise far from commercial crowds'],
@@ -2325,10 +2238,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Jim Corbett National Park',
     tagline: 'India’s Oldest National Park & Royal Bengal Tiger Kingdom',
     category: 'Wildlife',
-    image: '/images/destinations/jim corbett/1586882-2560x1440-desktop-hd-jim-corbett-national-park-background.webp',
+    image: '/images/destinations/jim corbett/1585732-2000x1382-desktop-hd-jim-corbett-national-park-background.webp',
     gallery: [
-      '/images/destinations/jim corbett/1586882-2560x1440-desktop-hd-jim-corbett-national-park-background.webp',
       '/images/destinations/jim corbett/1585732-2000x1382-desktop-hd-jim-corbett-national-park-background.webp',
+      '/images/destinations/jim corbett/1586882-2560x1440-desktop-hd-jim-corbett-national-park-background.webp',
       '/images/destinations/jim corbett/1586926-1920x1080-desktop-1080p-jim-corbett-national-park-background-image.webp',
       '/images/destinations/jim corbett/e6290b9b7b584417f0618d96dddb91d1.webp'
     ],
@@ -2355,11 +2268,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Rajaji National Park',
     tagline: 'Asiatic Elephant Sanctuary in the Shivalik Foothills',
     category: 'Wildlife',
-    image: '/images/destinations/rajaji national park/Gemini_Generated_Image_1ni9h31ni9h31ni9.png',
+    image: '/images/destinations/rajaji-national-park/Gemini_Generated_Image_1ni9h31ni9h31ni9.png',
     gallery: [
-      '/images/destinations/rajaji national park/Gemini_Generated_Image_1ni9h31ni9h31ni9.png',
-      '/images/destinations/rajaji national park/Gemini_Generated_Image_haz9mthaz9mthaz9.png',
-      '/images/destinations/rajaji national park/Gemini_Generated_Image_p6nij5p6nij5p6ni.png'
+      '/images/destinations/rajaji-national-park/Gemini_Generated_Image_1ni9h31ni9h31ni9.png',
+      '/images/destinations/rajaji-national-park/Gemini_Generated_Image_haz9mthaz9mthaz9.png',
+      '/images/destinations/rajaji-national-park/Gemini_Generated_Image_p6nij5p6nij5p6ni.png'
     ],
     description: 'Spanning across 820 square kilometers of the Shivalik ranges near Haridwar and Rishikesh, Rajaji is home to over 500 wild Asiatic elephants, leopards, tigers, sloth bears, and 400 species of birds.',
     highlights: ['Chilla & Motichur Safari Zones', '500+ Asiatic Wild Elephants', 'Tiger corridor conservation', 'Bird watching on Ganga canal'],
@@ -2384,11 +2297,14 @@ export const DESTINATIONS: Destination[] = [
     name: 'Nanda Devi National Park',
     tagline: 'UNESCO World Biosphere & High Himalayan Wilderness',
     category: 'Wildlife',
-    image: '/images/destinations/nanda devi national park/Gemini_Generated_Image_bw4p35bw4p35bw4p.png',
+    image: '/images/destinations/nanda-devi-national-park/Gemini_Generated_Image_qhfi5zqhfi5zqhfi.png',
     gallery: [
-      '/images/destinations/nanda devi national park/Gemini_Generated_Image_bw4p35bw4p35bw4p.png',
-      '/images/destinations/nanda devi national park/Gemini_Generated_Image_qhfi5zqhfi5zqhfi.png',
-      '/images/destinations/nanda devi national park/Gemini_Generated_Image_uy4mdbuy4mdbuy4m.png'
+      '/images/destinations/nanda-devi-national-park/Gemini_Generated_Image_qhfi5zqhfi5zqhfi.png',
+      '/images/destinations/nanda-devi-national-park/Gangotri-National-Park_1a11aef7930a4f8d0be991f45bfad2f3.webp',
+      '/images/destinations/nanda-devi-national-park/Gemini_Generated_Image_bw4p35bw4p35bw4p.png',
+      '/images/destinations/nanda-devi-national-park/Gemini_Generated_Image_uy4mdbuy4mdbuy4m.png',
+      '/images/destinations/nanda-devi-national-park/m_Gangotri_national_park_1_l_583_881.webp',
+      '/images/destinations/nanda-devi-national-park/Under BannerGangotri.webp'
     ],
     description: 'Surrounding India’s second highest mountain, Nanda Devi (7,816m), this UNESCO Biosphere Reserve is a pristine high-altitude sanctuary housing the elusive Snow Leopard, Himalayan Musk Deer, and Bharal (Blue Sheep).',
     highlights: ['UNESCO World Heritage Biosphere', 'Nanda Devi peak (7,816m)', 'Snow Leopard & Bharal habitat', 'Rishi Ganga River gorge'],
@@ -2413,11 +2329,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Gangotri National Park',
     tagline: 'High Alpine Snow Leopard Reserve & Gaumukh Glacier',
     category: 'Wildlife',
-    image: '/images/destinations/gangotri national park/Gemini_Generated_Image_d4j72id4j72id4j7.png',
+    image: '/images/destinations/gangotri-national-park/Gemini_Generated_Image_d4j72id4j72id4j7.png',
     gallery: [
-      '/images/destinations/gangotri national park/Gemini_Generated_Image_d4j72id4j72id4j7.png',
-      '/images/destinations/gangotri national park/Gemini_Generated_Image_p9vyf9p9vyf9p9vy.png',
-      '/images/destinations/gangotri national park/Gemini_Generated_Image_wd4tsxwd4tsxwd4t.png'
+      '/images/destinations/gangotri-national-park/Gemini_Generated_Image_d4j72id4j72id4j7.png',
+      '/images/destinations/gangotri-national-park/Gemini_Generated_Image_p9vyf9p9vyf9p9vy.png',
+      '/images/destinations/gangotri-national-park/Gemini_Generated_Image_wd4tsxwd4tsxwd4t.png'
     ],
     description: 'Encompassing the Gaumukh glacier and dramatic peaks like Shivling and Bhagirathi, this park protects coniferous forests, glacial tarns, and high-altitude wildlife including the Tibetan Wolf, Snow Leopard, and Ibex.',
     highlights: ['Gaumukh Glacier & Tapovan trail', 'Shivling & Bhagirathi Sister Peaks', 'Rare Snow Leopard & Blue Sheep', 'High altitude glacial moraines'],
@@ -2442,11 +2358,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Binsar Wildlife Sanctuary',
     tagline: 'Avian Wonderland, Barking Deer & Dense Rhododendron Forests',
     category: 'Wildlife',
-    image: '/images/destinations/binsar national santuary/Gemini_Generated_Image_br2pxrbr2pxrbr2p.png',
+    image: '/images/destinations/binsar-wildlife-sanctuary/Gemini_Generated_Image_br2pxrbr2pxrbr2p.png',
     gallery: [
-      '/images/destinations/binsar national santuary/Gemini_Generated_Image_br2pxrbr2pxrbr2p.png',
-      '/images/destinations/binsar national santuary/Gemini_Generated_Image_gjv1w3gjv1w3gjv1.png',
-      '/images/destinations/binsar national santuary/Gemini_Generated_Image_uoawhcuoawhcuoaw.png'
+      '/images/destinations/binsar-wildlife-sanctuary/Gemini_Generated_Image_br2pxrbr2pxrbr2p.png',
+      '/images/destinations/binsar-wildlife-sanctuary/Gemini_Generated_Image_gjv1w3gjv1w3gjv1.png',
+      '/images/destinations/binsar-wildlife-sanctuary/Gemini_Generated_Image_uoawhcuoawhcuoaw.png'
     ],
     description: 'Spanning across 47 square kilometers in the Kumaon hills, Binsar Sanctuary protects endangered wildlife such as leopards, ghoral, red foxes, and black bears amidst ancient oak and rhododendron canopies.',
     highlights: ['200+ resident & migratory bird species', 'Himalayan Black Bear & Leopard', 'Dense undisturbed oak jungle', 'Zero Point Himalayan panorama'],
@@ -2472,9 +2388,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Govind Pashu Vihar National Park',
     tagline: 'Snow Leopard Sanctuary & Wilderness Cradle of the Tons River',
     category: 'Wildlife',
-    image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg',
+    image: '/images/destinations/nanda-devi-national-park/Gemini_Generated_Image_uy4mdbuy4mdbuy4m.png',
     gallery: [
-      '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg'
+      '/images/destinations/nanda-devi-national-park/Gemini_Generated_Image_uy4mdbuy4mdbuy4m.png',
+      '/images/destinations/nanda-devi-national-park/m_Gangotri_national_park_1_l_583_881.webp'
     ],
     description: 'Encompassing over 950 square kilometers of the high Garhwal Himalayas in Uttarkashi district, Govind Pashu Vihar National Park and Sanctuary was established to safeguard the endangered Snow Leopard. It is the birthplace of the Tons River and contains some of India\'s most celebrated alpine valleys like Har Ki Dun and Ruinsara Tal.',
     highlights: ['Govind Wildlife Sanctuary & Snow Leopard Conservation Project', 'Source of the fierce Tons River in Supin Range', 'Gateway to Har Ki Dun, Ruinsara Tal & Bali Pass', 'Habitat of Bearded Vultures (Lammergeier) and Himalayan Monal'],
@@ -2500,11 +2417,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Kedarnath Wildlife Sanctuary',
     tagline: 'Largest Protected Area in Western Himalayas & Musk Deer Haven',
     category: 'Wildlife',
-    image: '/images/destinations/kedarnath windlife sancuary/kws.webp',
+    image: '/images/destinations/kedarnath-wildlife-sanctuary/kws.webp',
     gallery: [
-      '/images/destinations/kedarnath windlife sancuary/kws.webp',
-      '/images/destinations/kedarnath windlife sancuary/Gemini_Generated_Image_45qv0345qv0345qv.png',
-      '/images/destinations/kedarnath windlife sancuary/Gemini_Generated_Image_ebnqjhebnqjhebnq.png'
+      '/images/destinations/kedarnath-wildlife-sanctuary/kws.webp',
+      '/images/destinations/kedarnath-wildlife-sanctuary/Gemini_Generated_Image_45qv0345qv0345qv.png',
+      '/images/destinations/kedarnath-wildlife-sanctuary/Gemini_Generated_Image_ebnqjhebnqjhebnq.png'
     ],
     description: 'Spanning across 975 square kilometers of the Chamoli and Rudraprayag districts, Kedarnath Wildlife Sanctuary (also known as Kedarnath Musk Deer Sanctuary) is the largest protected area in the Western Himalayas. Dedicated primarily to saving the endangered Himalayan Musk Deer, it encompasses dense temperate oak forests and sprawling alpine bugyals beneath Kedarnath peak.',
     highlights: ['Spread across 975 sq km of pristine Chamoli and Rudraprayag terrain', 'Dedicated captive breeding sanctuary for Endangered Himalayan Musk Deer', 'Sub-alpine birch, oak, and vibrant rhododendron bugyals', 'Home to Snow Leopards, Himalayan Tahr, and Golden Eagles'],
@@ -2530,11 +2447,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Askot Wildlife Sanctuary',
     tagline: 'The Green Paradise of Kumaon Dedicated to the Endangered Musk Deer',
     category: 'Wildlife',
-    image: '/images/destinations/askot w santuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
+    image: '/images/destinations/askot-wildlife-sanctuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
     gallery: [
-      '/images/destinations/askot w santuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
-      '/images/destinations/askot w santuary/Gemini_Generated_Image_hao88ohao88ohao8.png',
-      '/images/destinations/askot w santuary/Gemini_Generated_Image_tsgsjotsgsjotsgs.png'
+      '/images/destinations/askot-wildlife-sanctuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp',
+      '/images/destinations/askot-wildlife-sanctuary/Gemini_Generated_Image_hao88ohao88ohao8.png',
+      '/images/destinations/askot-wildlife-sanctuary/Gemini_Generated_Image_tsgsjotsgsjotsgs.png'
     ],
     description: 'Set amidst the high ridges of Pithoragarh district near the Indo-Nepal and Indo-Tibet borders, Askot Wildlife Sanctuary covers 600 square kilometers from sub-tropical valley floors to glaciated peaks like Panchachuli. Established in 1986 to protect the musk deer, it is an international ecological treasure.',
     highlights: ['Renowned as Askot Musk Deer Sanctuary in Pithoragarh', 'Bounded by the Kali River bordering Nepal to the east', 'Rugged glaciated peaks including Panchachuli, Chipla Kot & Najirikot', 'Rich biodiversity of Snow Leopards, Serow, and Himalayan Black Bears'],
@@ -2560,11 +2477,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Nandhaur Wildlife Sanctuary',
     tagline: 'Pristine Terai Arc Tiger & Elephant Corridor in the Shivalik Foothills',
     category: 'Wildlife',
-    image: '/images/destinations/nanduar wildlife santuary/af9c0d06351d3283066aefe1d971226b.webp',
+    image: '/images/destinations/nandhaur-wildlife-sanctuary/af9c0d06351d3283066aefe1d971226b.webp',
     gallery: [
-      '/images/destinations/nanduar wildlife santuary/af9c0d06351d3283066aefe1d971226b.webp',
-      '/images/destinations/nanduar wildlife santuary/0b8df97d186c58ee8b7846d4ad105a14.webp',
-      '/images/destinations/nanduar wildlife santuary/nandur-madhmeshwar-bird.webp'
+      '/images/destinations/nandhaur-wildlife-sanctuary/af9c0d06351d3283066aefe1d971226b.webp',
+      '/images/destinations/nandhaur-wildlife-sanctuary/0b8df97d186c58ee8b7846d4ad105a14.webp',
+      '/images/destinations/nandhaur-wildlife-sanctuary/nandur-madhmeshwar-bird (1).webp',
+      '/images/destinations/nandhaur-wildlife-sanctuary/nandur-madhmeshwar-bird.webp'
     ],
     description: 'Created in 2012 in the lower Shivalik belt between the Gola and Sharda rivers, Nandhaur Wildlife Sanctuary spans 270 square kilometers of virgin sal forests. Forming a vital part of the Terai Arc Landscape, it links Corbett with Shuklaphanta National Park in Nepal and hosts a surging tiger and elephant population.',
     highlights: ['Critical wildlife corridor between Corbett and Shuklaphanta (Nepal)', 'Dense pristine sal and riverine forests along Nandhaur River', 'Thriving population of Royal Bengal Tigers, Elephants & Leopards', 'Unspoilt eco-tourism destination free from heavy tourist crowds'],
@@ -2590,11 +2508,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Benog Wildlife Sanctuary',
     tagline: 'Scenic Pine Sanctuary & Last Known Habitat of the Mountain Quail',
     category: 'Wildlife',
-    image: '/images/destinations/benog wildlife/IMG_1520.webp',
+    image: '/images/destinations/benog-wildlife-sanctuary/IMG_1520.webp',
     gallery: [
-      '/images/destinations/benog wildlife/IMG_1520.webp',
-      '/images/destinations/benog wildlife/IMG_1586_landscape.webp',
-      '/images/destinations/benog wildlife/IMG_1706.webp'
+      '/images/destinations/benog-wildlife-sanctuary/IMG_1520.webp',
+      '/images/destinations/benog-wildlife-sanctuary/IMG_1586_landscape.webp',
+      '/images/destinations/benog-wildlife-sanctuary/IMG_1706.webp'
     ],
     description: 'Located 11 km west of Mussoorie library, Benog Wildlife Sanctuary (part of Rajaji Park management) slopes down through pine, fir, and medicinal shrub forests toward the Yamuna valley. Famous historically as the last sighting location of the critically endangered Mountain Quail, it is a haven for trekkers, birders, and deer herds.',
     highlights: ['Historical sanctuary established to protect the rare Mountain Quail', 'Dense old-growth pine, cedar, and oak forests near Mussoorie', 'Panoramic views of Chaukhamba and Bandarpunch peaks', 'Sanctuary for Leopards, Himalayan Goral, Red Fox & rare birds'],
@@ -2620,11 +2538,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Sonanadi Wildlife Sanctuary',
     tagline: 'Golden River Sanctuary & Core Buffer of Corbett Tiger Reserve',
     category: 'Wildlife',
-    image: '/images/destinations/sonanadi wildlife/sonanadi-wildlife-sanctuary.webp',
+    image: '/images/destinations/sonanadi-wildlife-sanctuary/sonanadi-wildlife-sanctuary.webp',
     gallery: [
-      '/images/destinations/sonanadi wildlife/sonanadi-wildlife-sanctuary.webp',
-      '/images/destinations/sonanadi wildlife/sonanadi-wildlife-sanctuary (1).webp',
-      '/images/destinations/sonanadi wildlife/Gemini_Generated_Image_29rw1r29rw1r29rw.png'
+      '/images/destinations/sonanadi-wildlife-sanctuary/sonanadi-wildlife-sanctuary.webp',
+      '/images/destinations/sonanadi-wildlife-sanctuary/Gemini_Generated_Image_29rw1r29rw1r29rw.png',
+      '/images/destinations/sonanadi-wildlife-sanctuary/sonanadi-wildlife-sanctuary (1).webp'
     ],
     description: 'Covering 301 square kilometers in Pauri Garhwal north of the Ramganga River, Sonanadi Wildlife Sanctuary takes its name from the Sonanadi ("River of Gold"). Together with Corbett National Park, it forms the heart of the Corbett Tiger Reserve, featuring towering sal trees, bamboo brakes, and huge herds of wild Asian elephants.',
     highlights: ['Named after the Sonanadi ("River of Gold") in Kotdwar-Pauri belt', 'Sprawling 301 sq km core buffer of Corbett Tiger Reserve', 'Premier sanctuary for wild Asian Elephants, Tigers, and Cheetal herds', 'Lush bamboo and sal forests teeming with 550+ avian species'],
@@ -2650,12 +2568,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Jhilmil Jheel Conservation Reserve',
     tagline: 'Unique Wetland Sanctuary & Last Refuge of the Swamp Deer (Barasingha)',
     category: 'Wildlife',
-    image: '/images/destinations/jheel wildlife/deer.webp',
+    image: '/images/destinations/jhilmil-jheel/deer.webp',
     gallery: [
-      '/images/destinations/jheel wildlife/deer.webp',
-      '/images/destinations/jheel wildlife/Deer Herd in a Sunlit Meadow.png',
-      '/images/destinations/jheel wildlife/Spotted Deer in a Sunlit Forest Clearing.png',
-      '/images/destinations/jheel wildlife/Spotted Deer in Lush Grassland.png'
+      '/images/destinations/jhilmil-jheel/deer.webp',
+      '/images/destinations/jhilmil-jheel/Deer Herd in a Sunlit Meadow.png',
+      '/images/destinations/jhilmil-jheel/Spotted Deer in a Sunlit Forest Clearing.png',
+      '/images/destinations/jhilmil-jheel/Spotted Deer in Lush Grassland.png'
     ],
     description: 'Situated along the southern bank of the River Ganga in Haridwar district, Jhilmil Jheel is a 3,783-hectare saucer-shaped floodplain wetland. Inaugurated in 2005 by President APJ Abdul Kalam, it is celebrated as Uttarakhand\'s only surviving habitat of the magnificent Swamp Deer (Barasingha).',
     highlights: ['Only habitat of the endangered Swamp Deer (Barasingha) in Uttarakhand', 'Saucer-shaped freshwater wetland along the Ganga floodplains near Haridwar', 'Inaugurated by President APJ Abdul Kalam in 2005', 'Winter sanctuary for thousands of migratory waterfowl and waders'],
@@ -2681,11 +2599,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Asan Conservation Reserve',
     tagline: 'Uttarakhand\'s First Ramsar Wetland & Winter Migratory Bird Haven',
     category: 'Wildlife',
-    image: '/images/destinations/asan conservation/Tranquil Lake Bird Sanctuary.png',
+    image: '/images/destinations/asan-conservation-reserve/Ruddy Ducks Resting on a Lakeside Dock.png',
     gallery: [
-      '/images/destinations/asan conservation/Tranquil Lake Bird Sanctuary.png',
-      '/images/destinations/asan conservation/Ruddy Ducks Resting on a Lakeside Dock.png',
-      '/images/destinations/asan conservation/Tranquil Flock on the Reed-Lined Lake.png'
+      '/images/destinations/asan-conservation-reserve/Ruddy Ducks Resting on a Lakeside Dock.png',
+      '/images/destinations/asan-conservation-reserve/Tranquil Flock on the Reed-Lined Lake.png',
+      '/images/destinations/asan-conservation-reserve/Tranquil Lake Bird Sanctuary.png'
     ],
     description: 'Located at the confluence of the Asan River and the Yamuna Canal in the Doon Valley, Asan Conservation Reserve was declared Uttarakhand\'s first Ramsar Site in 2020. Every winter, over 5,000 migratory waterfowl from Central Asia and Siberia flock to this 444-hectare wetland paradise.',
     highlights: ['Uttarakhand\'s first designated Ramsar Site of international importance', 'Confluence of Asan River and Eastern Yamuna Canal near Dehradun', 'Winter host to over 5,000 migratory waterfowl including Brahminy Ducks and Bar-headed Geese', 'Recognized Globally as an Important Bird Area (IBA)'],
@@ -2711,11 +2629,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Pawalgarh Conservation Reserve',
     tagline: 'Corbett\'s Birding Capital & Legendary Realm of the Bachelor of Powalgarh',
     category: 'Wildlife',
-    image: '/images/destinations/pawal garh/Pawalgarh Gate Forest Entrance.png',
+    image: '/images/destinations/pawalgarh-conservation-reserve/Pawalgarh Gate Forest Entrance.png',
     gallery: [
-      '/images/destinations/pawal garh/Pawalgarh Gate Forest Entrance.png',
-      '/images/destinations/pawal garh/Sunlit Forest Veranda Building.png',
-      '/images/destinations/pawal garh/Sunlit Stone Temple in the Forest.png'
+      '/images/destinations/pawalgarh-conservation-reserve/Pawalgarh Gate Forest Entrance.png',
+      '/images/destinations/pawalgarh-conservation-reserve/Sunlit Forest Veranda Building.png',
+      '/images/destinations/pawalgarh-conservation-reserve/Sunlit Stone Temple in the Forest.png'
     ],
     description: 'Immortalized by Jim Corbett in his story of "The Bachelor of Powalgarh", this 58-square-kilometer reserve in Nainital district lies in the foothills of the Himalayas. Blessed with the perennial Dabka and Baur streams, it is celebrated as India\'s top birdwatching destination with over 365 cataloged bird species.',
     highlights: ['Setting of Jim Corbett\'s famous tale "The Bachelor of Powalgarh"', 'Premier birdwatching haven in India with over 365 identified bird species', 'Pristine riparian corridors along Dabka and Baur rivers', 'Rich wildlife including Tigers, Leopards, Barking Deer, and Flying Squirrels'],
@@ -2741,12 +2659,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Ramnagar Forest',
     tagline: 'The Sal Forest Gateway to Corbett, Kosi River & Wildlife Trails',
     category: 'Wildlife',
-    image: '/images/destinations/ramnagar national/Nagar Van Forest Gateway.png',
+    image: '/images/destinations/ramnagar-forest/Nagar Van Forest Gateway.png',
     gallery: [
-      '/images/destinations/ramnagar national/Nagar Van Forest Gateway.png',
-      '/images/destinations/ramnagar national/Alert Bengal Tiger on a Forest Road.png',
-      '/images/destinations/ramnagar national/Bengal Tiger in a Dense Forest.png',
-      '/images/destinations/ramnagar national/Cinematic Forest Road with SUV and Man.png'
+      '/images/destinations/ramnagar-forest/Nagar Van Forest Gateway.png',
+      '/images/destinations/ramnagar-forest/Alert Bengal Tiger on a Forest Road.png',
+      '/images/destinations/ramnagar-forest/Bengal Tiger in a Dense Forest.png',
+      '/images/destinations/ramnagar-forest/Cinematic Forest Road with SUV and Man.png'
     ],
     description: 'Encircling the bustling town of Ramnagar on the banks of the Kosi River, Ramnagar Forest Division forms the vibrant ecological buffer of Corbett Tiger Reserve. Known for premier wildlife eco-resorts, elephant migration corridors, and the iconic Garjiya Devi rock temple, it is the beating heart of Kumaon wildlife tourism.',
     highlights: ['Forested transition zone between the Shivaliks and the Tarai plains', 'Scenic Kosi River corridor dotted with riverside safari eco-lodges', 'Gateway forest division for Sitabani and Corbett safari circuits', 'Elephant corridors and thrilling nighttime forest drives'],
@@ -2772,12 +2690,12 @@ export const DESTINATIONS: Destination[] = [
     name: 'Corbett Landscape',
     tagline: 'Sprawling Wilderness of Riverine Grasslands, Dense Sal & Big Cats',
     category: 'Wildlife',
-    image: '/images/destinations/corbett zone/Off-Road Jeeps Crossing a Rustic River Bridge.png',
+    image: '/images/destinations/corbett-landscape/Off-Road Jeeps Crossing a Rustic River Bridge.png',
     gallery: [
-      '/images/destinations/corbett zone/Off-Road Jeeps Crossing a Rustic River Bridge.png',
-      '/images/destinations/corbett zone/Golden River Elephant Herd.png',
-      '/images/destinations/corbett zone/Elephants Along the Rocky Forest Edge.png',
-      '/images/destinations/corbett zone/Elephants Grazing by a Blue Lake.png'
+      '/images/destinations/corbett-landscape/Off-Road Jeeps Crossing a Rustic River Bridge.png',
+      '/images/destinations/corbett-landscape/Elephants Along the Rocky Forest Edge.png',
+      '/images/destinations/corbett-landscape/Elephants Grazing by a Blue Lake.png',
+      '/images/destinations/corbett-landscape/Golden River Elephant Herd.png'
     ],
     description: 'The Corbett Landscape encompasses the broader 1,288-square-kilometer wilderness matrix including Corbett National Park, Sonanadi Sanctuary, Pawalgarh, and the buffer forest divisions of Ramnagar. It supports the world\'s highest density of Royal Bengal Tigers alongside 1,200 Asian elephants, 50 raptor species, and ancient sal woodlands.',
     highlights: ['Greater eco-region spanning Ramnagar, Pawalgarh, Kota, and Kaladhungi', 'Seamless wildlife movement corridor between Kumaon and Garhwal foothills', 'Diverse biomes from dry deciduous ridges to wet Chaurs (grasslands)', 'Exceptional density of Royal Bengal Tigers, Wild Elephants & Mugger Crocodiles'],
@@ -2841,8 +2759,7 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/badrinath/photo-2.jpg',
       '/images/destinations/badrinath/photo-3.jpg',
-      '/images/destinations/badrinath/photo-4.jpg',
-      '/images/destinations/badrinath/photo-1.jpg'
+      '/images/destinations/badrinath/photo-5.jpg'
     ],
     description: 'Officially recognized by the Prime Minister as "The First Village of India", Mana sits at 3,200 meters just 3 km from Badrinath on the ancient Indo-Tibet trade route. Home to Vyas Gufa and the thundering Bheem Pul.',
     highlights: ['Bheem Pul natural stone bridge', 'Vyas Gufa (Where Mahabharata was penned)', 'Ganesh Gufa cave', 'Last tea stall of India on border'],
@@ -2871,7 +2788,7 @@ export const DESTINATIONS: Destination[] = [
     gallery: [
       '/images/destinations/chopta/3 (2).jpg',
       '/images/destinations/chopta/3 (3).jpg',
-      '/images/destinations/chopta/3 (4).jpg'
+      '/images/destinations/chopta/photo-2.jpg'
     ],
     description: 'A picture-postcard Garhwali village with terraced fields, stone slate roofs, and apple orchards. Sari is the beloved gateway for the 2.5 km hike to the emerald waters of Deoria Tal.',
     highlights: ['Authentic Garhwali homestays', 'Stone and slate traditional architecture', 'Apple & Peach orchard walks', 'Direct trail to Deoria Tal'],
@@ -2896,9 +2813,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Sankri',
     tagline: 'Alpine Base Village for Kedarkantha & Har Ki Dun Treks',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/chakrata/1 (3).jpg',
+    image: '/images/destinations/munsiyari/photo-1.jpg',
     gallery: [
-      '/images/destinations/chakrata/1 (3).jpg'
+      '/images/destinations/munsiyari/photo-1.jpg',
+      '/images/destinations/munsiyari/2 (1).jpg',
+      '/images/destinations/munsiyari/2 (2).jpg'
     ],
     description: 'Tucked inside the Govind Pashu Vihar National Park, Sankri is a bustling mountaineer’s haven with wooden alpine homes, apple orchards, and sweeping views of the Swargarohini range.',
     highlights: ['Basecamp for Kedarkantha Snow Trek', 'Gateway to Har Ki Dun & Ruinsara Tal', 'Traditional wooden homes', 'Sunset over Swargarohini peak'],
@@ -2954,7 +2873,9 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/badrinath/photo-4.jpg',
     gallery: [
-      '/images/destinations/badrinath/photo-4.jpg'
+      '/images/destinations/badrinath/photo-4.jpg',
+      '/images/destinations/badrinath/photo-1.jpg',
+      '/images/destinations/badrinath/photo-3.jpg'
     ],
     description: 'Perched high in the Dhauli Ganga valley, Lata is the historic birthplace of the world-famous Chipko forest-protection movement and cultural gateway to Nanda Devi Biosphere Reserve.',
     highlights: ['Birthplace of the Chipko Movement', 'Nanda Devi Temple & sacred fairs', 'Traditional carved wooden homes', 'Gateway to Bhyundar & Nanda Devi trails'],
@@ -2979,9 +2900,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Osla Village',
     tagline: 'Ancient Wooden Architectural Marvel in the Valley of Gods',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg',
+    image: '/images/destinations/munsiyari/Himalayan Valley Sports Field Panorama.png',
     gallery: [
-      '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg'
+      '/images/destinations/munsiyari/Himalayan Valley Sports Field Panorama.png',
+      '/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png'
     ],
     description: 'A timeless settlement untouched by modernization along the Har Ki Dun trail. Famous for its multi-story wooden houses carved with intricate deities and an ancient temple dedicated to Someshwar Devta.',
     highlights: ['Someshwar Devta carved wooden temple', 'Century-old multi-story wooden houses', 'Traditional sheep-wool weaving', 'Dramatic Supin river gorge backdrop'],
@@ -3006,11 +2928,11 @@ export const DESTINATIONS: Destination[] = [
     name: 'Abbott Mount',
     tagline: 'Colonial Hilltop Haven, Historic Church & Solitude in Kumaon',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/abbout mount/Glacier-Crowned Mountain Wilderness.png',
+    image: '/images/destinations/abbott-mount/Glacier-Crowned Mountain Wilderness.png',
     gallery: [
-      '/images/destinations/abbout mount/Glacier-Crowned Mountain Wilderness.png',
-      '/images/destinations/abbout mount/Dramatic Alpine Glacier Peaks.png',
-      '/images/destinations/abbout mount/Moonlit Alpine Summit.png'
+      '/images/destinations/abbott-mount/Glacier-Crowned Mountain Wilderness.png',
+      '/images/destinations/abbott-mount/Dramatic Alpine Glacier Peaks.png',
+      '/images/destinations/abbott-mount/Moonlit Alpine Summit.png'
     ],
     description: 'Founded by British businessman John Harold Abbott in 1914, this hidden hilltop in Champawat is famous for stone cottages, a 1942 stone church amidst deodars, and complete peace away from any tourist rush.',
     highlights: ['Historic 1942 St. John’s Church', 'Panoramic snow views of Trishul & Maiktoli', 'Dense deodar and walnut forests', 'Mahakali River angling nearby'],
@@ -3038,7 +2960,8 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/khirsu/Sunlit Mountain Village in Bloom.png',
     gallery: [
-      '/images/destinations/khirsu/Sunlit Mountain Village in Bloom.png'
+      '/images/destinations/khirsu/Sunlit Mountain Village in Bloom.png',
+      '/images/destinations/khirsu/Misty Mountain Village Panorama.png'
     ],
     description: 'Perched at 7,500 feet in the remote upper reaches of the Tons Valley in Garhwal, Kalap is a secluded Himalayan hamlet reached only by a 4-hour uphill mountain footpath. The villagers claim direct lineage from the Pandavas and Kauravas of the Mahabharata and live in harmony with age-old agrarian customs.',
     highlights: ['Unique Mahabharata lineage and living folklore traditions', 'Reachable only via a picturesque 4-hour mountain foot trail', 'Traditional multi-story wooden and slate architecture', 'Pristine organic farming of Himalayan red rice and kidney beans'],
@@ -3064,11 +2987,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Dharali',
     tagline: 'Apple Blossom Riverside Hamlet Along the Turquoise Bhagirathi',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/harshil/1602328040_1602328036685.jpg.webp',
+    image: '/images/destinations/harsil/1602328040_1602328036685.jpg.webp',
     gallery: [
-      '/images/destinations/harshil/1602328040_1602328036685.jpg.webp',
-      '/images/destinations/harshil/images.jpg',
-      '/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp'
+      '/images/destinations/harsil/1602328040_1602328036685.jpg.webp',
+      '/images/destinations/harsil/1543513902_1543513900031.jpg.webp'
     ],
     description: 'Located just 3 km upstream from Harsil along the banks of the rushing Bhagirathi river, Dharali is renowned for its vast sweet apple orchards and traditional wood-and-stone houses. Legend states that King Bhagiratha meditated here to bring the holy River Ganga to earth.',
     highlights: ['Picturesque riverside apple orchards in the Bhagirathi valley', 'Ancient Shiva Temple believed to date back to the Pandava era', 'Gateway to the Seven Hidden Lakes of Saat Tal', 'Traditional carved wooden homes and cozy homestays'],
@@ -3097,7 +3019,6 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/destinations/gangotri/Himalayan Temple Valley Pilgrimage.png',
     gallery: [
       '/images/destinations/gangotri/Himalayan Temple Valley Pilgrimage.png',
-      '/images/destinations/gangotri/Riverside Mountain Town at Golden Hour.png',
       '/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png'
     ],
     description: 'Perched across the Bhagirathi river just 1 km from Harsil, Mukhwa (Mukhba) is the revered winter seat of Goddess Ganga. When high Gangotri closes due to severe winter snowfall around Diwali, the idol of the goddess is brought down in a grand procession to be worshipped here for six months.',
@@ -3124,9 +3045,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Jakhol',
     tagline: 'Traditional Wooden Pagoda Architecture & Cultural Heart of Govind Vihar',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/chakrata/1 (1).jpg',
+    image: '/images/destinations/munsiyari/2 (3).jpg',
     gallery: [
-      '/images/destinations/chakrata/1 (1).jpg'
+      '/images/destinations/munsiyari/2 (3).jpg',
+      '/images/destinations/munsiyari/2 (4).jpg'
     ],
     description: 'Situated at the confluence of the Supin and Obra rivers in the Govind Wildlife Sanctuary belt, Jakhol is the cultural capital of the raw Tons Valley. Renowned for its stunning four-story wooden pagoda temple dedicated to Someshwar Devta (Lord Shiva), it serves as the launching ground for the remote Obra Gad and Dhaula valley treks.',
     highlights: ['Magnificent 4-tiered pagoda-style wooden Someshwar Mahadev Temple', 'Gateway to the unexplored Obra Gad Valley and high bugyals', 'Distinctive Garhwali folk attire, wool weaving, and wooden horn music', 'Unspoilt mountain settlement nestled amidst dense blue pine forests'],
@@ -3152,9 +3074,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Taluka',
     tagline: 'Fairytale Wooden Hamlet on the Har Ki Dun Alpine River Trail',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/chakrata/1 (2).jpg',
+    image: '/images/destinations/munsiyari/2 (4).jpg',
     gallery: [
-      '/images/destinations/chakrata/1 (2).jpg'
+      '/images/destinations/munsiyari/2 (4).jpg',
+      '/images/destinations/munsiyari/2 (1).jpg'
     ],
     description: 'Located 11 km along the Supin River from Sankri, Taluka is an enchanting traditional mountain village that serves as the official trailhead for Har Ki Dun. Featuring two-story slate-roofed wooden cottages, walnut trees, and aromatic pines, it transports travelers into an era of Himalayan folklore.',
     highlights: ['First staging camp and trailhead for the Har Ki Dun trek', 'Rich Kath-Kuni style timber-and-stone architecture', 'Surrounded by chestnut, walnut, willow, and deodar trees', 'Rushing glacial waters of the Supin River flowing right past the village'],
@@ -3180,10 +3103,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Agoda',
     tagline: 'Quaint Stone-and-Slate Staging Hamlet for Dodital Glacial Lake',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp',
+    image: '/images/destinations/dayara-bugyal/2db70ae7a153fdddaee9b127fba08338.webp',
     gallery: [
-      '/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp',
-      '/images/destinations/dhtayabugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp'
+      '/images/destinations/dayara-bugyal/2db70ae7a153fdddaee9b127fba08338.webp',
+      '/images/destinations/dayara-bugyal/dayara_bugyal_3_1.webp'
     ],
     description: 'Tucked away on the emerald mountain slopes 6 km uphill from Sangam Chatti in Uttarkashi district, Agoda is a peaceful Garhwali village of stone houses and step farms. It is the beloved first-night stopover for trekkers climbing toward sacred Dodital (birthplace of Lord Ganesha) and the high Darwa Pass.',
     highlights: ['Primary staging village on the famous Dodital and Darwa Pass trek', 'Warm and hospitable village homestay culture with home-cooked mountain food', 'Unobstructed views of deep forest valleys and cascading mountain streams', 'Pristine tranquility free from commercial traffic and noise'],
@@ -3209,11 +3132,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Bagori',
     tagline: 'Ancient Jadh Bhotia Border Hamlet of Tibetan Buddhist Prayer Flags',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/harshil/1543513902_1543513900031.jpg.webp',
+    image: '/images/destinations/harsil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
     gallery: [
-      '/images/destinations/harshil/1543513902_1543513900031.jpg.webp',
-      '/images/destinations/harshil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
-      '/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp'
+      '/images/destinations/harsil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png',
+      '/images/destinations/harsil/1543513902_1543513900031.jpg.webp'
     ],
     description: 'Located right across a wooden footbridge from Harsil, Bagori is an authentic high-altitude settlement inhabited by the Jadh Bhotia community originally from the Nelong Valley. Fluttering with Tibetan prayer flags and adorned with ancient Buddhist chortens and intricate wooden carvings, it offers a fascinating glimpse into trans-Himalayan heritage.',
     highlights: ['Unique Jadh Bhotia culture combining Buddhist and Hindu traditions', 'Ancient Buddhist prayer wheels, mani stones, and vibrant chortens', 'Skilled weavers producing pure sheep-wool carpets, mufflers, and shawls', 'Authentic multi-story wooden carved houses flanked by apple orchards'],
@@ -3239,10 +3161,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Barsu',
     tagline: 'Serene Meadow Staging Village & Basecamp for Dayara Bugyal',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/dhtayabugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
+    image: '/images/destinations/dayara-bugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
     gallery: [
-      '/images/destinations/dhtayabugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
-      '/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp'
+      '/images/destinations/dayara-bugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp',
+      '/images/destinations/dayara-bugyal/dayara_bugyal_3_1.webp'
     ],
     description: 'Perched at 2,250 meters high above the Bhagirathi river basin in Uttarkashi district, Barsu is a postcard-perfect mountain hamlet. Famous as the preferred basecamp for the world-renowned Dayara Bugyal alpine meadow trek, it boasts an emerald artificial pond, apple orchards, and sweeping views of Mount Gangotri and Srikantha.',
     highlights: ['Primary basecamp and launchpad for the Dayara Bugyal trek', 'Picturesque village pond reflecting snow-clad Himalayan massifs', 'Sprawling apple and apricot orchards dotted with stone cottages', 'Spectacular sunset panoramas over the Bandarpoonch range'],
@@ -3268,9 +3190,10 @@ export const DESTINATIONS: Destination[] = [
     name: 'Gangnani',
     tagline: 'Tranquil Hot Sulphur Thermal Spring Hamlet on the Gangotri Highway',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/harshil/1543513902_1543513900031.jpg.webp',
+    image: '/images/destinations/harsil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
     gallery: [
-      '/images/destinations/harshil/1543513902_1543513900031.jpg.webp'
+      '/images/destinations/harsil/HARSIL_TRIP_GARHWAL_3-1024x686.webp',
+      '/images/destinations/harsil/1543513902_1543513900031.jpg.webp'
     ],
     description: 'Situated 46 km from Uttarkashi along the highway toward Gangotri, Gangnani is celebrated for its natural hot sulphur springs at Rishikund. Pilgrims bound for Gangotri stop here to take a rejuvenating dip in the medicinal mineral waters with views of the snow-clad peaks.',
     highlights: ['Natural hot sulphur thermal springs renowned for healing skin ailments', 'Rishikund sacred bathing pools for men and women', 'Ancient Parashar Rishi Temple and peaceful hermitage', 'Lush terraced valley slopes overlooking the Bhagirathi river'],
@@ -3296,8 +3219,9 @@ export const DESTINATIONS: Destination[] = [
     name: 'Kanakchauri',
     tagline: 'Serene Ridge Village & Trailhead for the Spectacular Kartik Swami Temple',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/rudraprayag/Hillside Town Along a Mountain River.png',
+    image: '/images/destinations/rudraprayag/Mountain River Valley with Cliffside Pavilion.png',
     gallery: [
+      '/images/destinations/rudraprayag/Mountain River Valley with Cliffside Pavilion.png',
       '/images/destinations/rudraprayag/Hillside Town Along a Mountain River.png'
     ],
     description: 'Perched on a quiet mountain ridge 38 km from Rudraprayag along the Pokhari road, Kanakchauri is an offbeat Garhwali village famous as the base for the legendary Kartik Swami Temple. Perched at 3,050 meters, Kartik Swami is the only temple in Uttarakhand dedicated to Lord Kartikeya, offering a mind-boggling 360-degree panorama of over 100 Himalayan peaks.',
@@ -3326,7 +3250,8 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/peora/Terraced Hills Through Pine Canopy.png',
     gallery: [
-      '/images/destinations/peora/Terraced Hills Through Pine Canopy.png'
+      '/images/destinations/peora/Terraced Hills Through Pine Canopy.png',
+      '/images/destinations/peora/Misty Hillside Home with Red Roses.png'
     ],
     description: 'Perched in the dense oak-covered heights of the Chamoli and Pauri Garhwal borderlands near Karnaprayag, Dhanpur is a historical mountain settlement once famous during the Chand and British eras for its rich copper mines. Today, it is an unspoilt eco-village known for sweeping valley outlooks and pure solitude.',
     highlights: ['Historic copper mining heritage dating back to pre-colonial eras', 'Dense pristine forests of oak, pine, and mountain rhododendron', 'Panoramic outlook over the Alaknanda and Pindar river valleys', 'Authentic rustic Garhwali village life and traditional agriculture'],
@@ -3354,7 +3279,8 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/munsiyari/photo-3.jpg',
     gallery: [
-      '/images/destinations/munsiyari/photo-3.jpg'
+      '/images/destinations/munsiyari/photo-3.jpg',
+      '/images/destinations/munsiyari/munsiyari-panchachuli-peaks.jpg'
     ],
     description: 'Located in the peaceful pine belt of Kumaon between Almora and Ranikhet, Shaukiyathal is an idyllic rural hamlet cherished by artists, writers, and solitude-seekers. Offering unobstructed views of the snow-clad Trishul, Nanda Devi, and Panchachuli peaks, it provides unhurried Himalayan bliss.',
     highlights: ['Tranquil pine forest ridges far from commercial tourist hubs', 'Panoramic front-row views of Trishul, Nanda Ghunti, and Nanda Devi', 'Boutique farm stays, organic farming, and Kumaoni cuisine', 'Pleasant year-round climate and crisp mountain air'],
@@ -3380,8 +3306,9 @@ export const DESTINATIONS: Destination[] = [
     name: 'Shitlakhet',
     tagline: 'Fragrant Pine & Cedar Haven Blessed by Syahi Devi Ridge Temple',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg',
+    image: '/images/destinations/ranikhet/1 (2).jpg',
     gallery: [
+      '/images/destinations/ranikhet/1 (2).jpg',
       '/images/destinations/ranikhet/ranikhet-pine-meadows.jpg'
     ],
     description: 'Perched at 1,900 meters on the Syahi Devi ridge in Almora district, Shitlakhet is a hidden gem surrounded by lush pine, oak, and rhododendron forests. Famed for its sprawling fruit orchards, pure mountain springs, and the revered Syahi Devi hilltop temple, it is an offbeat paradise of fresh air and solitude.',
@@ -3410,7 +3337,8 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/peora/Terraced Hillside Mediterranean Villa.png',
     gallery: [
-      '/images/destinations/peora/Terraced Hillside Mediterranean Villa.png'
+      '/images/destinations/peora/Terraced Hillside Mediterranean Villa.png',
+      '/images/destinations/peora/Misty Hillside Home with Red Roses.png'
     ],
     description: 'Nestled on a tranquil ridge near Mukteshwar at 2,100 meters, Satkhol is an enchanting village surrounded by dense oak, pine, and rhododendron forests. Home to the renowned Satkhol Ashram (Sahaj Marg meditation retreat), it is deeply cherished by travelers seeking peace, nature, and panoramic Himalayan sunrises.',
     highlights: ['World-renowned Sahaj Marg meditation retreat and spiritual ashram', 'Surrounded by quiet oak and rhododendron woods and fruit orchards', 'Panoramic views of Trishul, Nanda Devi, and Panchachuli peaks', 'Vibrant birding hotspot attracting Himalayan bulbuls, flycatchers, and minivets'],
@@ -3436,8 +3364,9 @@ export const DESTINATIONS: Destination[] = [
     name: 'Kanda',
     tagline: 'Ancient Katyuri Heritage Basin, Step Terraces & Sacred Kalishan Temple',
     category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/baijnath/Ancient Stone Temple Courtyard.png',
+    image: '/images/destinations/baijnath/Stone Temple Courtyard in Sunlight.png',
     gallery: [
+      '/images/destinations/baijnath/Stone Temple Courtyard in Sunlight.png',
       '/images/destinations/baijnath/Ancient Stone Temple Courtyard.png'
     ],
     description: 'Situated 26 km east of Bageshwar in a bowl-shaped valley, Kanda is a historic rural town surrounded by emerald step farms, pine forests, and ancient Katyuri architecture. Crowned by the sacred Kalishan (Bhadrakali) Temple atop the ridge, it offers an authentic rural Kumaoni escape.',
@@ -3466,7 +3395,8 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png',
     gallery: [
-      '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png'
+      '/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png',
+      '/images/destinations/munsiyari/photo-1.jpg'
     ],
     description: 'Situated at 2,210 meters on the right bank of the roaring Pindar River in Bageshwar district, Khati is celebrated as the last inhabited village on the iconic Pindari and Sunderdhunga glacier treks. With stone houses, slate roofs, hospitable shepherds, and ringed by snow peaks, it is the soul of Kumaoni wilderness.',
     highlights: ['Last inhabited village on the Pindari and Sunderdhunga Glacier trails', 'Traditional Kumaoni stone-and-timber houses with colorful painted doors', 'Warm shepherd hospitality, fresh local meals, and rustic village homestays', 'Breathtaking setting surrounded by rhododendron forests and snow peaks'],
@@ -3494,7 +3424,8 @@ export const DESTINATIONS: Destination[] = [
     category: 'Offbeat Uttarakhand',
     image: '/images/destinations/munsiyari/photo-4.jpg',
     gallery: [
-      '/images/destinations/munsiyari/photo-4.jpg'
+      '/images/destinations/munsiyari/photo-4.jpg',
+      '/images/destinations/munsiyari/photo-5.jpg'
     ],
     description: 'Set in a small green valley basin 40 km from Bageshwar, Loharkhet is an ancient staging village where travelers have assembled for over a century to climb the Dhakuri Pass and enter the Pindar and Sunderdhunga valleys. Surrounded by thick oak forests and clear mountain streams, it remains a beloved stop for mountain explorers.',
     highlights: ['Historic expedition staging post since British surveyor Traill\'s era', 'Base of the steep 9 km trail climbing up to the famous Dhakuri Pass', 'Charming village surrounded by terraced fields and oak woods', 'KMVN tourist rest house and rustic trekking lodges'],
@@ -3513,123 +3444,6 @@ export const DESTINATIONS: Destination[] = [
       byAir: 'Pantnagar Airport (225 km).',
       byTrain: 'Kathgodam Railway Station (205 km).',
       byRoad: 'Drive from Bageshwar via Kapkot and Bharadi to Song/Loharkhet.'
-    }
-  },
-  {
-    id: 'khirsu-villages',
-    name: 'Khirsu Villages',
-    tagline: 'Idyllic Pauri Garhwal Farming Hamlets of Gaja & Ulkhagarhi',
-    category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/khirsu/Sunlit Mountain Hillside Retreat.png',
-    gallery: [
-      '/images/destinations/khirsu/Sunlit Mountain Hillside Retreat.png',
-      '/images/destinations/khirsu/Misty Mountain Village Panorama.png',
-      '/images/destinations/khirsu/Sunlit Mountain Village in Bloom.png'
-    ],
-    description: 'Surrounding the quiet ridge town of Khirsu in Pauri Garhwal, the rural villages of Gaja, Ulkha, and Chauprikhal represent traditional Garhwali village life at its most picturesque. Dotted with apple orchards, ancient stone naulas (springs), and slate-roofed homestays, these settlements gaze out toward a 300-km panoramic panorama of snow peaks.',
-    highlights: ['Traditional Garhwali stone-and-wood farming hamlets around Khirsu', 'Panoramic views of 300+ snow-capped peaks including Trishul and Chaukhamba', 'Historic Ulkhagarhi hilltop fort and temple trek', 'Famous apple orchards, red rice farming, and warm local homestays'],
-    bestTime: 'Throughout the year; March to June & September to January',
-    altitude: '1,700 m - 1,900 m',
-    idealDuration: '2 - 3 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Ulkhagarhi Hilltop Temple', desc: 'Charming 3 km nature trek to ancient fort ruins offering breathtaking Himalayan panoramas.' },
-      { name: 'Gaja Village Apple Orchards', desc: 'Peaceful farming hamlet famed for organic apples, walnuts, and pears.' },
-      { name: 'Ancient Stone Naulas', desc: 'Historic carved natural stone spring sanctuaries preserved by villagers.' },
-      { name: 'Deodar Canopy Forest Walks', desc: 'Gentle nature walks through dense aromatic cedar and oak forests.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (145 km).',
-      byTrain: 'Kotdwar Railway Station (115 km) or Rishikesh (130 km).',
-      byRoad: 'Situated 15 km from Pauri and 30 km from Srinagar Garhwal.'
-    }
-  },
-  {
-    id: 'kausani-villages',
-    name: 'Kausani Villages',
-    tagline: 'Terraced Tea Garden Hamlets & Artisan Wool Weaving Settlements',
-    category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
-    gallery: [
-      '/images/destinations/kausani/Himalayan Village Beneath Snowy Peaks.jpg',
-      '/images/destinations/kausani/1 (1).jpg',
-      '/images/destinations/kausani/1 (2).jpg',
-      '/images/destinations/kausani/kausani-himalayan-peaks.jpg'
-    ],
-    description: 'Scattered across the rolling tea-clad ridges around Kausani in the Kumaon hills, rural hamlets like Pinath, Garur, and Rudradhari preserve authentic Kumaoni pastoral lifestyles. Here, villagers tend high-altitude tea plantations, cultivate aromatic herbs, weave fine wool shawls, and live beneath the watchful gaze of Mount Trishul.',
-    highlights: ['Sprawling high-altitude tea garden settlements and picking trails', 'Artisan handloom cooperatives weaving Kausani wool shawls', 'Rudradhari waterfall and ancient cave temple in surrounding forests', 'Unobstructed 300-km views of Nanda Devi, Trishul, and Panchachuli'],
-    bestTime: 'Throughout the year; April to June & September to December',
-    altitude: '1,890 m (6,200 ft)',
-    idealDuration: '2 - 3 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Kausani Tea Estate Hamlets', desc: 'Lush green tea gardens where organic orthodox and green tea is hand-picked.' },
-      { name: 'Rudradhari Waterfalls & Cave Temple', desc: 'Scenic forest cascade and Shiva shrine 12 km from Kausani.' },
-      { name: 'Pinath Village Ridge Walk', desc: '5 km nature hike to an ancient temple offering peaceful solitude.' },
-      { name: 'Kausani Shawl Weaving Centers', desc: 'Watch local village women create intricate woolen shawls on handlooms.' }
-    ],
-    howToReach: {
-      byAir: 'Pantnagar Airport (165 km).',
-      byTrain: 'Kathgodam Railway Station (135 km).',
-      byRoad: 'Accessible by road from Almora (52 km) and Ranikhet (60 km).'
-    }
-  },
-  {
-    id: 'darma-valley-villages',
-    name: 'Darma Valley Villages',
-    tagline: 'Ancient Stone-and-Wood Rung Tribal Settlements of Dantu, Dugtu & Sela',
-    category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png',
-    gallery: [
-      '/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png'
-    ],
-    description: 'Nestled beneath the dramatic eastern spires of Mount Panchachuli in Pithoragarh, the 14 indigenous Rung tribal villages of Darma Valley—including Dantu, Dugtu, Baling, and Sela—are living museums of trans-Himalayan culture. Built with dry stone masonry and carved deodar timber, these seasonal villages celebrate unique harvest festivals and welcome adventurers to the edge of the world.',
-    highlights: ['14 historic Rung tribal border villages dating back centuries', 'Front-row jaw-dropping views of Panchachuli I to V peaks', 'Traditional stone houses decorated with intricate floral wood carvings', 'Unique indigenous customs, loom weaving, and warm homestays'],
-    bestTime: 'May to June & September to October',
-    altitude: '3,200 m - 3,500 m',
-    idealDuration: '4 - 6 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: false,
-    topAttractions: [
-      { name: 'Dantu & Dugtu Villages', desc: 'Twin settlements situated closest to the towering Panchachuli glacier.' },
-      { name: 'Panchachuli Basecamp Trail', desc: 'Short walk from Dugtu village to the direct base of the snow peaks.' },
-      { name: 'Rung Tribal Cultural Heritage', desc: 'Experience traditional wool weaving, folk songs, and authentic Rung cuisine.' },
-      { name: 'Dhauli Ganga River Gorges', desc: 'Spectacular glacial river torrent cutting through vertical granite walls.' }
-    ],
-    howToReach: {
-      byAir: 'Pantnagar Airport (360 km to Dharchula).',
-      byTrain: 'Kathgodam Railway Station (310 km to Dharchula).',
-      byRoad: 'Rugged 4x4 mountain route from Dharchula (70 km) requiring inner-line permits.'
-    }
-  },
-  {
-    id: 'niti-valley-villages',
-    name: 'Niti Valley Villages',
-    tagline: 'High Borderland Settlements of Malari, Bampa, Gamshali & Niti',
-    category: 'Offbeat Uttarakhand',
-    image: '/images/destinations/badrinath/photo-3.jpg',
-    gallery: [
-      '/images/destinations/badrinath/photo-3.jpg'
-    ],
-    description: 'Located in the remote northern frontier of Chamoli district along the Dhauliganga river, the borderland villages of Malari, Bampa, Gamshali, and Niti form the ancestral realm of the Bhotia community. Framed by barren towering granite canyons and snow peaks, these settlements preserve ancient trans-Himalayan trade history and rare high-altitude lifestyles.',
-    highlights: ['Cluster of historic Indo-Tibetan border villages at 3,000m - 3,600m', 'Malari village famous for archaeological golden masks and rock caves', 'Timarsain Mahadev winter ice stalagmite cave near Niti', 'Untouched stark canyon landscapes similar to Ladakh and Zanskar'],
-    bestTime: 'May to October (Inner Line Permits required for Indian nationals)',
-    altitude: '3,000 m - 3,600 m',
-    idealDuration: '2 - 3 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: false,
-    topAttractions: [
-      { name: 'Niti Village', desc: 'Last inhabited Indian settlement before the Niti Pass into Western Tibet.' },
-      { name: 'Malari Village & Archaeological Site', desc: 'Ancient saucer-shaped village famous for prehistoric cave excavations.' },
-      { name: 'Gamshali & Bampa Hamlets', desc: 'Picturesque wooden settlements surrounded by willow trees and buckwheat fields.' },
-      { name: 'Timarsain Mahadev Snow Lingam', desc: 'Natural winter cave shrine reverently called the Amarnath of Uttarakhand.' }
-    ],
-    howToReach: {
-      byAir: 'Jolly Grant Airport Dehradun (350 km).',
-      byTrain: 'Rishikesh Railway Station (330 km).',
-      byRoad: 'Scenic mountain road from Joshimath via Tapovan and Malari (88 km).'
     }
   },
 

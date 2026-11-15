@@ -69,12 +69,12 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
       name: navItemName,
       tagline: `Discover the breathtaking beauty, heritage & mountain vistas of ${navItemName}`,
       category: navCategory as any,
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      image: '/images/destinations/mussoorie/photo-1.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1200&auto=format&fit=crop'
+        '/images/destinations/mussoorie/photo-1.jpg',
+        '/images/destinations/rishikesh/1 (1).jpg',
+        '/images/destinations/nainital/photo-1.jpg',
+        '/images/destinations/chopta/photo-1.jpg'
       ],
       description: `Explore ${navItemName}, one of Uttarakhand's most captivating destinations. Experience authentic Himalayan hospitality, crisp alpine air, scenic panoramas, and customized travel itineraries curated by UK Yatra specialists.`,
       highlights: [
@@ -250,7 +250,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.onerror = null;
-                target.src = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop';
+                target.src = '/images/destinations/mussoorie/photo-1.jpg';
               }}
             />
           </div>
@@ -1239,7 +1239,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.onerror = null;
-                target.src = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop';
+                target.src = '/images/destinations/mussoorie/photo-1.jpg';
               }}
             />
 

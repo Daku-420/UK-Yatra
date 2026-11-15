@@ -704,7 +704,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                               onError={(e) => {
                                 const target = e.currentTarget as HTMLImageElement;
                                 target.onerror = null;
-                                target.src = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop';
+                                target.src = '/images/destinations/mussoorie/photo-1.jpg';
                               }}
                             />
                             {item.badge && (
@@ -1342,7 +1342,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                             onError={(e) => {
                               const target = e.currentTarget as HTMLImageElement;
                               target.onerror = null;
-                              target.src = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop';
+                              target.src = '/images/destinations/mussoorie/photo-1.jpg';
                             }}
                           />
                           <div className="min-w-0">

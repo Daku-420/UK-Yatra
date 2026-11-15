@@ -118,10 +118,6 @@ export const DESTINATION_MEGA_NAV: DestinationNavGroup[] = [
       { name: 'Johar Valley', slug: 'johar-valley', path: '/destinations/johar-valley' },
       { name: 'Niti Valley', slug: 'niti-valley', path: '/destinations/niti-valley' },
       { name: 'Nelong Valley', slug: 'nelong-valley', path: '/destinations/nelong-valley' },
-      { name: 'Mana Valley', slug: 'mana-valley', path: '/destinations/mana-valley' },
-      { name: 'Kalpeshwar Valley', slug: 'kalpeshwar-valley', path: '/destinations/kalpeshwar-valley' },
-      { name: 'Gangotri Valley', slug: 'gangotri-valley', path: '/destinations/gangotri-valley' },
-      { name: 'Yamunotri Valley', slug: 'yamunotri-valley', path: '/destinations/yamunotri-valley' },
       { name: 'Tons Valley', slug: 'tons-valley', path: '/destinations/tons-valley' },
       { name: 'Pindar Valley', slug: 'pindar-valley', path: '/destinations/pindar-valley' },
       { name: 'Ramganga Valley', slug: 'ramganga-valley', path: '/destinations/ramganga-valley' },
@@ -200,12 +196,8 @@ export const DESTINATION_MEGA_NAV: DestinationNavGroup[] = [
       { name: 'Munsiyari', slug: 'munsiyari', path: '/destinations/munsiyari' },
       { name: 'Khati', slug: 'khati', path: '/destinations/khati' },
       { name: 'Loharkhet', slug: 'loharkhet', path: '/destinations/loharkhet' },
-      { name: 'Khirsu Villages', slug: 'khirsu-villages', path: '/destinations/khirsu-villages' },
       { name: 'Gwaldam', slug: 'gwaldam', path: '/destinations/gwaldam' },
-      { name: 'Kausani Villages', slug: 'kausani-villages', path: '/destinations/kausani-villages' },
-      { name: 'Patal Bhuvaneshwar Area', slug: 'patal-bhuvaneshwar', path: '/destinations/patal-bhuvaneshwar' },
-      { name: 'Darma Valley Villages', slug: 'darma-valley-villages', path: '/destinations/darma-valley-villages' },
-      { name: 'Niti Valley Villages', slug: 'niti-valley-villages', path: '/destinations/niti-valley-villages' }
+      { name: 'Patal Bhuvaneshwar Area', slug: 'patal-bhuvaneshwar', path: '/destinations/patal-bhuvaneshwar' }
     ]
   }
 ];

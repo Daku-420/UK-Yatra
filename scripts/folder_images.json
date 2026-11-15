@@ -1,0 +1,560 @@
+{
+  "abbout mount": [
+    "/images/destinations/abbout mount/Dramatic Alpine Glacier Peaks.png",
+    "/images/destinations/abbout mount/Glacier-Crowned Mountain Wilderness.png",
+    "/images/destinations/abbout mount/Moonlit Alpine Summit.png"
+  ],
+  "adi kailash": [
+    "/images/destinations/adi kailash/360_F_861114677_5FHZAxts08zLC3KzAGHbCkcIhPhyK5Ne.webp",
+    "/images/destinations/adi kailash/adi-kailash-om-parvat-tour-package-from-delhi-with-patal-bhuvneshwar-caves-08-days-07-nights-6738be9c08118.webp",
+    "/images/destinations/adi kailash/adi-kailash-om-parvat-yatra-18.webp",
+    "/images/destinations/adi kailash/Gemini_Generated_Image_wlw5wewlw5wewlw5.png"
+  ],
+  "almora": [
+    "/images/destinations/almora/2 (1).jpg",
+    "/images/destinations/almora/2 (2).jpg",
+    "/images/destinations/almora/2 (3).jpg",
+    "/images/destinations/almora/2 (4).jpg",
+    "/images/destinations/almora/almora-ridge-view.jpg"
+  ],
+  "asan conservation": [
+    "/images/destinations/asan conservation/Ruddy Ducks Resting on a Lakeside Dock.png",
+    "/images/destinations/asan conservation/Tranquil Flock on the Reed-Lined Lake.png",
+    "/images/destinations/asan conservation/Tranquil Lake Bird Sanctuary.png"
+  ],
+  "askot w santuary": [
+    "/images/destinations/askot w santuary/askot-sanctuary-askote-pithoragarh-tourist-attraction-anwlkeb.webp",
+    "/images/destinations/askot w santuary/Gemini_Generated_Image_hao88ohao88ohao8.png",
+    "/images/destinations/askot w santuary/Gemini_Generated_Image_tsgsjotsgsjotsgs.png"
+  ],
+  "auli": [
+    "/images/destinations/auli/Alpine Village Beneath Snowy Peaks.jpg",
+    "/images/destinations/auli/Golden Hour Himalayan Terrace View.jpg",
+    "/images/destinations/auli/Misty Jaul Hill Viewpoint with Cow.jpg",
+    "/images/destinations/auli/photo-1.jpg",
+    "/images/destinations/auli/photo-2.jpg",
+    "/images/destinations/auli/photo-3.jpg",
+    "/images/destinations/auli/photo-4.jpg",
+    "/images/destinations/auli/photo-5.jpg",
+    "/images/destinations/auli/Snowy Himalayan Lake Panorama.jpg",
+    "/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg"
+  ],
+  "badrinath": [
+    "/images/destinations/badrinath/Colorful Temple Beneath Snowy Mountains.png",
+    "/images/destinations/badrinath/photo-1.jpg",
+    "/images/destinations/badrinath/photo-2.jpg",
+    "/images/destinations/badrinath/photo-3.jpg",
+    "/images/destinations/badrinath/photo-4.jpg",
+    "/images/destinations/badrinath/photo-5.jpg",
+    "/images/destinations/badrinath/Vibrant Riverside Pilgrimage Market.png",
+    "/images/destinations/badrinath/Vibrant Temple Entrance Amid Mountain Peaks.png"
+  ],
+  "baijnath": [
+    "/images/destinations/baijnath/Ancient Stone Temple Courtyard.png",
+    "/images/destinations/baijnath/Golden-Hour Stone Temple Complex.png",
+    "/images/destinations/baijnath/Stone Temple Courtyard in Sunlight.png"
+  ],
+  "benog wildlife": [
+    "/images/destinations/benog wildlife/IMG_1520.webp",
+    "/images/destinations/benog wildlife/IMG_1586_landscape.webp",
+    "/images/destinations/benog wildlife/IMG_1706.webp"
+  ],
+  "bhimtal": [
+    "/images/destinations/bhimtal/-ONLcM0ueLhmakb4MV3Q5TyrrHsaE7LTOGzS-nlYq7UoBq_hN9S0XPsWlIXP_WlrMVpvXhMefuwM-WS9orQRma3eSAPmKMXJhqBjzNosYUaABGEsvveW3ZnwEIYRhpTI3IRx2W9WeabW3GYj0vzDk8wIG0-nBS1QPVndjkMRmciFblcmgqJ48TxSEESENRSt.jpg",
+    "/images/destinations/bhimtal/7NBaviKnU7eEamyIIEDUHfuPf355zsatWW7u9ky-gmgXrk06MHdaKqfvm7ZVXQFVWIDaWuf7MXZiTSKO8zM5LmEjJDWU2dTEshGIieAtvIgb5aAFMVus4tcP0IoKAbkILhr81Giktx11-9tdPoM8DeJpJfJs9RqlnUyeJaELUWiY1rYAAAkRPavpDKgjs8Zg.jpg",
+    "/images/destinations/bhimtal/qAAwt-WJivhafBIJTU_LQYcMC35NrvMrgpy6bvqLG-9y2KNqayzZ5RAGvcBd4qh-M4B3UiLv1AoR-b5XZQpDvYAh26tUyObe9Bnq-NhyrJkIAIkyGr8qK7temcOsVge9_WU3I7cwTD1H-_3RUphiMW9dZjwA5J5-cUyDb115pi2MbYrvj_mfHN1Vul8ocKlX.jpg",
+    "/images/destinations/bhimtal/Ucj64LUHCmrbcSKbIM5HunXLBlCSSIZwoCsPFrnzc64_3Pd_7u_4ydseK5zNJA3YAAnroZzyJ4crdhBJvjpHHfYHWZaRhe_GDhvRd_K7W5-343PFgB8DiHqRL_VCg2o2AbA9-h0m36I-eZagcmDpeBbCkg4KQmOAxDj4JuPW36SJgaG22bGRBUoPvEfMRTzK.jpg",
+    "/images/destinations/bhimtal/w8drR4tOXEiaXE_sytCzT8bal6hZK8sQL6vM9_PmQhUsN61whDLTz7eFsufSQP80J1AuBhxxZRTkXn0oyhuqEgjthIvhLo59LA0LEnQXR_liC9mwu_r5uz0jDF4UD0iKsgAXdmPOsjsroMN5rP3DNQQxN75OCY1hC7Fy5GLLWwLgMLdEAH6cdnZF6Wvd0BSc.jpg"
+  ],
+  "bhowali": [
+    "/images/destinations/bhowali/Himalayan Peaks in Golden Alpenglow.jpg",
+    "/images/destinations/bhowali/Serene Mountain Lakeside Temple Town.jpg",
+    "/images/destinations/bhowali/Snow-Capped Mountains Beyond Forested Ridges.jpg",
+    "/images/destinations/bhowali/Turquoise Lake Beneath a Leafy Canopy.jpg"
+  ],
+  "binsar": [
+    "/images/destinations/binsar/3_1920x1080.webp",
+    "/images/destinations/binsar/Rustic Stone Watchtower Amid Lush Greenery.png",
+    "/images/destinations/binsar/Sunlit Balcony Overlooking Misty Mountains.png",
+    "/images/destinations/binsar/Sunlit Terrace Overlooking Mountain Valley.png"
+  ],
+  "binsar national santuary": [
+    "/images/destinations/binsar national santuary/Gemini_Generated_Image_br2pxrbr2pxrbr2p.png",
+    "/images/destinations/binsar national santuary/Gemini_Generated_Image_gjv1w3gjv1w3gjv1.png",
+    "/images/destinations/binsar national santuary/Gemini_Generated_Image_uoawhcuoawhcuoaw.png"
+  ],
+  "chakrata": [
+    "/images/destinations/chakrata/1 (1).jpg",
+    "/images/destinations/chakrata/1 (2).jpg",
+    "/images/destinations/chakrata/1 (3).jpg",
+    "/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg"
+  ],
+  "chamba": [
+    "/images/destinations/chamba/1 (1).jpg",
+    "/images/destinations/chamba/1 (2).jpg",
+    "/images/destinations/chamba/1 (3).jpg",
+    "/images/destinations/chamba/1 (4).jpg",
+    "/images/destinations/chamba/chamba-himalayan-vista.jpg",
+    "/images/destinations/chamba/Turquoise Himalayan Lake Valley Vista.jpg"
+  ],
+  "CHAMPAWAT": [
+    "/images/destinations/CHAMPAWAT/biFXduARbnH5GhBn4nukN0501ICvDOvFdRCMkfSrPg6EhSXt4IhveDzXclN3XdnWx5CRXGbXTuDkrriF032TrEx5SDqZwUtAIW6NJtIVc50aU62ELvLL9wgtnhwl9T3bnVQN0IOnLXui20HUxMU7l78vyI1GMjaYr6DcRY6wFki-y8MHqTrvUEbqkWtaGhFX.jpg",
+    "/images/destinations/CHAMPAWAT/GuiNX37kGFUaiXYOq9_nEQXMnSvawqPkuzZYBYVc26Jq7Tm6qqHk8d0BbWghjLfvDE4CHqXaVTm6I4r7su0SofPLEDUA1V7i8NT1B74MigCwpvfxafT1XEduydW-Cpd7do7MjU0ELa0FqzelT6N4GawA6CvgXiOaRoXaJPhKWtJ-eWzhbxFrK7_s_V6-tS6b.jpg",
+    "/images/destinations/CHAMPAWAT/nCbNZP2DnOZj_OOYjXbRM8gYi0F6cioAf4aTlv-r_4Dn4zIFc0HW5TcwfeeSe7y0MJTV_0anYz9H6gqNTwfV8mNS1PsIM5mz7K_cy_uwNyN6Vci-x830yYOGwMSxZJAnvGIR5D3RCzEaobn26cv25jYh_n2QCY96J06wy72FdkXGMoM1fsLr7sn6WD3jao2o.jpg",
+    "/images/destinations/CHAMPAWAT/o1dTKzQppA7kIggFL8NKHDzC2S1gVwOjJOX1TCUH1mAsI0_aqP7LepLk9KfIh19N_bLuu8-IiXi18skS0aI7V60AgmMY5tDCdX-GHLFrBl1yASy0mvNCNNvZMipaz03zOsZs1YPCsFmif0pKxzxP9ncVJ4eGXl9Olp8IcK62BDYdnr0JhMdh6YP7_4FoDfbq.jpg",
+    "/images/destinations/CHAMPAWAT/_Ah11XI9I1OAVyqyGBdXJW2t0j8WzTFu_8XmnHZkW6vEsHcZVFTGIkxVRqxSpq8fALpT5MKl_Yk7dXL6LTXbLgMkq5qTv6wRnXKcOkaT3NH5pbpdRLyjvCH_8bai2ty9mofzbILWPkcRytP1maQ0gwfp4DJ0u9Y1ibtjhz0OxMiOtbw8b8MSO9lzezE5RRIr.jpg"
+  ],
+  "CHAR DHAM": [],
+  "Chaukori": [
+    "/images/destinations/Chaukori/0O8bKzUZAwSN29XikrhYFIfObxDw5YU2ZzRT2E5RCz83KEtKhJ9pGqdvPfgk5yKBt-1o8Aw5Krbfc3FS63Kq8vc3J0vxk4jLAgnekxXPcAJKeagQANb8jwj1XfQQf_Rf0JzAnq9OiYIuWlJkoFzHPIWKM2ezCuMisibENqCLLzJRu9AEEXut4oNL21gr1rHa.jpg",
+    "/images/destinations/Chaukori/frT1HPHBvE1NlcJREzSPUStiOmzdu6wCswQ9apYWSRMMSpGCabQUMrTHdPZHgOW9aqo2m90WkTyG_TdE8DZl7o8Obf3lI_lquf6HkSN-frh3lUi333iryRsGHvJgFfS166mJIXw8ThiqxIpN8S09nPz015ZHXdPkbtv_TESfIr6qLBxE5_KxlZsDB5CqW55D.jpg",
+    "/images/destinations/Chaukori/NrpTa9FnfvpVqFRYaivThV1DPkf2LIpmNAIKs3vd2k1VXBSQru-zvXqKKpEdNW0wl7FQ25KV_r_Vz1Bz5JSx0H0KDgytIjf3hLlWtqKu802tNRQm2uM3U78xE_zIV5aMY8wRrZEamb3T7Jc1IDLEMryfV-VS-O4oAVIq__h0-DlCkTUsknLVQ7mSs2K4a-6m.jpg",
+    "/images/destinations/Chaukori/rbhwln3_7WYluqB-Rw7BggNZfF7PHb4QuQS-kva4ehj6vQuu1YSpbdJpETTkW1Pgqc70RoMhPCFXzY3pEwVMpAXyazF9BRs6MrGU7TC030vBRUjKJDk5Q5-E6kSsphv-ZkdG0EIXxYrYBHHFuNy39P_pPL7pmmfyJX_HCRWro2ow1vj3oyG90GWCdYG8zkl5.jpg",
+    "/images/destinations/Chaukori/sDSf-JDR50-WZLINLFHm8Iw_eCvS-esWOjomopXtrQlhoTcxKzkC31h6YUsy7cvz3FRg8OLfOHXGhZyXju7aPPpq6_mVKZgZsFoS6NGGTo-d9nKmCHmLzb3Yze2kYeJy-c59DTPcng6wrODgILxZ6ZXMhosWWpFdVf0c5ru9J6dt-skbYkMNe3-xHKRl-Kd7.jpg"
+  ],
+  "chopta": [
+    "/images/destinations/chopta/3 (1).jpg",
+    "/images/destinations/chopta/3 (2).jpg",
+    "/images/destinations/chopta/3 (3).jpg",
+    "/images/destinations/chopta/3 (4).jpg",
+    "/images/destinations/chopta/3 (5).jpg",
+    "/images/destinations/chopta/photo-1.jpg",
+    "/images/destinations/chopta/photo-2.jpg",
+    "/images/destinations/chopta/photo-3.jpg",
+    "/images/destinations/chopta/photo-4.jpg",
+    "/images/destinations/chopta/photo-5.jpg"
+  ],
+  "corbett zone": [
+    "/images/destinations/corbett zone/Elephants Along the Rocky Forest Edge.png",
+    "/images/destinations/corbett zone/Elephants Grazing by a Blue Lake.png",
+    "/images/destinations/corbett zone/Golden River Elephant Herd.png",
+    "/images/destinations/corbett zone/Off-Road Jeeps Crossing a Rustic River Bridge.png"
+  ],
+  "darma valley": [
+    "/images/destinations/darma valley/bNZMhE7jUjatFwNKlKEP6s7oXRQuCTpSGU8Rlq3toK0MvW7qTnZiWkmvmDyIB3PJjBgSYKnJBd_c75a_0Ibx3RVL88dXsTt0KHOXXE5nPiFAzNF6sFhgHbdUr2MXZXKtx3l1QcJnJE_bfvLpZOuxQmWouZGjTivYO_pEKEWKs3y6ywoWGWXlbP-8zpWHhESi.jpg",
+    "/images/destinations/darma valley/fq0-6si2TrwMU2CnpmPntT7-vzvU6ZQZ19V_3jg7NPa_J-KB10t9gfUyvSerrts8UpnchVxGY3J2A7ZwVEGedQZd5uSwoFW-DzZ8xxoKiTDr158GQNywqhuJOoFxFOp5PdVVbTq4fU16USbpjG4o5bmHXEEYMNKsFJboo8w5DMk.jpg",
+    "/images/destinations/darma valley/fukFzIGW50CEkuwfFna0RobNSXH6naKHOY2dXLitiZzkzGpfiPHVAQjmcvd2OrxQTsJbVP-W-BUfw1D4OuDHnYoegDoI8zi2bLORIvrHTEp3yoFRprL4AkEzIt2PuZoIZHQyYxhHGndVd04rHwxjQprVMAWvc05zTKGfWimFQh2ZelLIp4DafVhukD6-.jpg",
+    "/images/destinations/darma valley/maDBVNzN3eWFColLQdeB9YTtypnPjycQqPAZ7GPMSstVya8BlZRaVwCBYsGWo7nDvJVTmiphJamRG2q4it8VbmpWB7xnsrwInG7fOwnYm8hOHEWAbIqoP600JbKtunVzf5pvg7VY7RMrqiFdTB1wUduf_zlFptSUmNkKQ3u5Si1CbD3vxOjKCugFaqyv.jpg",
+    "/images/destinations/darma valley/TFspUTkBFHdMCUQ0thu02wyOalKWZh8lCV09JzLCEkahGBxwAI9dLoSa0QUWPUhyGWJ9mFASOG2xLdyTlzwhPHW7DA8mOogjbDVEnddMGMIywk7L0hH7M3V9vCM2bNKcuBhE2FET9zb5WnPT7OrPq-Wc8wSexXH1auUAWZn7pWyLSuNuzHXKa4SjVwte.jpg"
+  ],
+  "devprayag": [
+    "/images/destinations/devprayag/1539886778_Devprayag1.webp",
+    "/images/destinations/devprayag/1683807587_1683807585993.jpg.webp",
+    "/images/destinations/devprayag/devprayag-the-sangam-of-alaknanda-and-bhagirathi-rivers.webp",
+    "/images/destinations/devprayag/devprayag.webp",
+    "/images/destinations/devprayag/Mountain Town Suspension Bridge.png",
+    "/images/destinations/devprayag/Riverside Terraces Above Turquoise Rapids.png",
+    "/images/destinations/devprayag/Sunny Riverside Terrace by Rocky Hills.png",
+    "/images/destinations/devprayag/Turquoise River Rapids and Cliffside Town.png"
+  ],
+  "dhanachuli": [
+    "/images/destinations/dhanachuli/1 (1).jpg",
+    "/images/destinations/dhanachuli/1 (2).jpg",
+    "/images/destinations/dhanachuli/1 (3).jpg",
+    "/images/destinations/dhanachuli/dhanachuli-apple-orchards.jpg",
+    "/images/destinations/dhanachuli/dhanachuli-heritage-haven.jpg",
+    "/images/destinations/dhanachuli/dhanachuli-prayer-flags.jpg"
+  ],
+  "dhanaulti": [
+    "/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg",
+    "/images/destinations/dhanaulti/Misty Forest Path of Nature and Care.jpg",
+    "/images/destinations/dhanaulti/Snowy Alpine Village Beneath Rugged Peaks.jpg",
+    "/images/destinations/dhanaulti/Snowy Mountain Village Road.jpg",
+    "/images/destinations/dhanaulti/Sunlit Mountain Forest Clearing.jpg"
+  ],
+  "dhari devi": [
+    "/images/destinations/dhari devi/dhari-devi-doli-images-1024x838.webp",
+    "/images/destinations/dhari devi/Floating Temple Pavilion Over Calm Green Water.png",
+    "/images/destinations/dhari devi/Lakeside Ceremonial Procession by the Temple.png",
+    "/images/destinations/dhari devi/nsplsh_8174bebe249b40b48c13a85ab6d37ea6~mv2.webp",
+    "/images/destinations/dhari devi/shutterstock2382983649-min.webp",
+    "/images/destinations/dhari devi/Temple Walkway with Draped Bell.png"
+  ],
+  "dhtayabugyal": [
+    "/images/destinations/dhtayabugyal/01M5VYFBF5CCREABTFQNNHXJG9.webp",
+    "/images/destinations/dhtayabugyal/2db70ae7a153fdddaee9b127fba08338.webp",
+    "/images/destinations/dhtayabugyal/dayara_bugyal_3_1.webp",
+    "/images/destinations/dhtayabugyal/Gemini_Generated_Image_t8s3hgt8s3hgt8s3.png"
+  ],
+  "gangotri": [
+    "/images/destinations/gangotri/Gangotri Temple in the Mountain Valley.png",
+    "/images/destinations/gangotri/Himalayan Temple Valley Pilgrimage.png",
+    "/images/destinations/gangotri/Riverside Mountain Town at Golden Hour.png"
+  ],
+  "gangotri national park": [
+    "/images/destinations/gangotri national park/Gemini_Generated_Image_d4j72id4j72id4j7.png",
+    "/images/destinations/gangotri national park/Gemini_Generated_Image_p9vyf9p9vyf9p9vy.png",
+    "/images/destinations/gangotri national park/Gemini_Generated_Image_wd4tsxwd4tsxwd4t.png"
+  ],
+  "guptakashi": [
+    "/images/destinations/guptakashi/Chaukhamba_peak,_Garhwal_Himalayas,_Uttarakhand.jpg",
+    "/images/destinations/guptakashi/guptkashi-uttarakhand-wide-view-of-temple.webp"
+  ],
+  "gwaldam": [
+    "/images/destinations/gwaldam/Gilded Gifting Partner Emblem (1).png",
+    "/images/destinations/gwaldam/Misty Hillside Village Panorama.png",
+    "/images/destinations/gwaldam/Misty Mountain Forest Retreat.png"
+  ],
+  "haridwar": [
+    "/images/destinations/haridwar/Aerial Riverside Festival at Dusk.jpg",
+    "/images/destinations/haridwar/haridwar-ganga-aarti-aerial.jpg",
+    "/images/destinations/haridwar/Riverside Ghat and Orange Bridge.jpg",
+    "/images/destinations/haridwar/Sunset Crowds Along the Sacred River.jpg",
+    "/images/destinations/haridwar/Twilight Temple Festival by the River.jpg"
+  ],
+  "harshil": [
+    "/images/destinations/harshil/1543513902_1543513900031.jpg.webp",
+    "/images/destinations/harshil/1602328040_1602328036685.jpg.webp",
+    "/images/destinations/harshil/Gemini_Generated_Image_p6p83wp6p83wp6p8.png",
+    "/images/destinations/harshil/HARSIL_TRIP_GARHWAL_3-1024x686.webp",
+    "/images/destinations/harshil/images.jpg"
+  ],
+  "hemkund saheb": [
+    "/images/destinations/hemkund saheb/Helicopter_service.jpg",
+    "/images/destinations/hemkund saheb/Hemkund_Lake.jpg",
+    "/images/destinations/hemkund saheb/Hemkunt-003.jpg",
+    "/images/destinations/hemkund saheb/Hemkunt-006.jpg",
+    "/images/destinations/hemkund saheb/Pilgrims_crossing_the_Hemkund_Glacier.jpg"
+  ],
+  "itinerary": [],
+  "jageshwar": [
+    "/images/destinations/jageshwar/Ancient Forest Temple Complex.png",
+    "/images/destinations/jageshwar/Dandeshwar+Temple+complex.webp",
+    "/images/destinations/jageshwar/Forest Temple and Rocky Mountain Stream.png",
+    "/images/destinations/jageshwar/Jageshwar-Dham-Uttarakhand.webp",
+    "/images/destinations/jageshwar/jageshwar1imp.webp",
+    "/images/destinations/jageshwar/Meditation Among Ancient Stone Temples.png"
+  ],
+  "jheel wildlife": [
+    "/images/destinations/jheel wildlife/Deer Herd in a Sunlit Meadow.png",
+    "/images/destinations/jheel wildlife/deer.webp",
+    "/images/destinations/jheel wildlife/Spotted Deer in a Sunlit Forest Clearing.png",
+    "/images/destinations/jheel wildlife/Spotted Deer in Lush Grassland.png"
+  ],
+  "jim corbett": [
+    "/images/destinations/jim corbett/1585732-2000x1382-desktop-hd-jim-corbett-national-park-background.webp",
+    "/images/destinations/jim corbett/1586882-2560x1440-desktop-hd-jim-corbett-national-park-background.webp",
+    "/images/destinations/jim corbett/1586926-1920x1080-desktop-1080p-jim-corbett-national-park-background-image.webp",
+    "/images/destinations/jim corbett/e6290b9b7b584417f0618d96dddb91d1.webp"
+  ],
+  "jim-corbett": [
+    "/images/destinations/jim-corbett/photo-1.jpg",
+    "/images/destinations/jim-corbett/photo-2.jpg",
+    "/images/destinations/jim-corbett/photo-3.jpg",
+    "/images/destinations/jim-corbett/photo-4.jpg",
+    "/images/destinations/jim-corbett/photo-5.jpg"
+  ],
+  "kaladhungi": [
+    "/images/destinations/kaladhungi/Colonial Cottage Amid Lush Gardens.png",
+    "/images/destinations/kaladhungi/Rural Bridge Entrance in India.png",
+    "/images/destinations/kaladhungi/Sunlit Forest Bridge Over Dry Streambed.png"
+  ],
+  "kalpeshwar": [
+    "/images/destinations/kalpeshwar/Gemini_Generated_Image_3mchwm3mchwm3mch-clean.png",
+    "/images/destinations/kalpeshwar/Gemini_Generated_Image_sjm7cqsjm7cqsjm7-clean.png",
+    "/images/destinations/kalpeshwar/Gemini_Generated_Image_u6ss0tu6ss0tu6ss.png"
+  ],
+  "kanatal": [
+    "/images/destinations/kanatal/Golden Hour Mountain Village and Sunset.jpg",
+    "/images/destinations/kanatal/Hillside Garden Estate at Sunset.jpg",
+    "/images/destinations/kanatal/Hillside Geodesic Dome Glamping Retreat.jpg",
+    "/images/destinations/kanatal/Turquoise Mountain Lake Vista.jpg"
+  ],
+  "karnprayag": [
+    "/images/destinations/karnprayag/Hillside Town Above the River.png",
+    "/images/destinations/karnprayag/Turquoise River Through Mountain Villages.png",
+    "/images/destinations/karnprayag/Turquoise River Valley Townscape.png"
+  ],
+  "kasar devi": [
+    "/images/destinations/kasar devi/-neGpO3JxTnHw-ThMAI2PWLmVB44xq9Tq3bWIVtqTG5LLP5AR1TAsBmcPZO-j9Y5GASuwMjOh3_UavHPGSuNBfEt_tFToeftaCRBFgg1k7r-OFq-Yf9rPTg9v_izTijYvKJwDk-_EruEoWNucK2VsrX4XnpWiFtyUN6IS4O8xVBtJd8Qid73dj8saNcJo842.jpg",
+    "/images/destinations/kasar devi/5rpwGuQVOygX2FfKnk96R-2yTQeXoRSR9-7SNnvtuczkenKmc6NeBXpNY1sM-mYYU-_NXfJvsyk0jo8tecAejIXMGgLHtpOkbbYgXuv2PaPB0gb4aFTmwbjAWFnm16PXxpdzAibAhMa9QtzE0xBxZcynyMx-CfEJg_X3FCXRXLR0msX5dfg_KoHbB-DpqP5M.jpg",
+    "/images/destinations/kasar devi/dWc4sXiP_SZ1Dta0aZerbTrwtzFhKRzhUg-42yjoMF2Zz2qC4GHV2IfQ7xttjUpRJ5K5hzfkCKOYn2NC4FEt4pfeyQdjcQ3Gms3wSUPoSZofOdEcnGG0q-cauMo92Jk0DuDnfxHkJTSbxLVhjFAKPmAUt2OvdLyJzGhYmMP10Jl5kIsoWWaZbIjQXVsmFG_C.jpg",
+    "/images/destinations/kasar devi/DxVkcFGd7F8m5c6a-UBjDfNZqs7PXQgi5sLh_PzJxAHqJALcj5wH3JcNByRUEt5GNDSvGvxLH7OvN9r41TkvMPRWlj_sgznuK8eW4rldRD8wuqscZAkJ9uYQSPxr-eMdWNibGtH_r4Hohx-ScN4AsV6dEzD0uTvr5hkBKQK4EkAakyeJYaoOMIhDHWC0CjKI.jpg",
+    "/images/destinations/kasar devi/MFTQwdEUUj9oVi_MMH6QLA6jOsn-8lZn0kzy1nBSoOm8A1QyA9dWQmlavvVVplkHUvM-Lq90qWvnndl0aMUV38jryk9NXjEILhMpJG5c_ODTtpZ4hS8X7xIJuCRKhemInjzyTOqzD8H7AgSRJBrnpCgQYxci7PpMezCQcUBiq2riq0GROlbhDn4gpAYOYxml.jpg"
+  ],
+  "kausani": [
+    "/images/destinations/kausani/1 (1).jpg",
+    "/images/destinations/kausani/1 (2).jpg",
+    "/images/destinations/kausani/1 (3).jpg",
+    "/images/destinations/kausani/1 (4).jpg",
+    "/images/destinations/kausani/3j3QHzg8lMg3CddzmvtNdqN3jk9hiYDFDy7g3_TnOfGBzNr0vsQ8r4x_hy3860aN8AGKWTz8VC19CD-UTWMIqPeAi8qNoGgDBjmQtCfTwpL3nSms1k1ReZLpf5O-uIMs3Fsjj0QWWLGDPNVf1QqXKQLZV-_2ENEz27HsKq4b8y5QC8pP_rspwATsL7LdWz24.jpg",
+    "/images/destinations/kausani/4XgWClS8Zg8P9MDUF0wg39UEK6HJ2mbqNCz5F7SbKduMrJxHSlT4NUuEql-IGDcZsgNSbRvBDXc3Kt703AXnI548l5p9tdq_nKFqk3LL8JiW6N2_7h6RKq4QMOWIUEX5qplZVjqjKM6Jl2vMnV0D422ZwUAlFr4Rv5SuOo04ZXjHoBQNkg2tb3rayENWCqoe.jpg",
+    "/images/destinations/kausani/Himalayan Village Beneath Snowy Peaks.jpg",
+    "/images/destinations/kausani/kausani-himalayan-peaks.jpg",
+    "/images/destinations/kausani/s-E_EPi17_eyGb0MdSz5uwhft77U84lyMM3fMxNRkusJgrNhKKy6CL7tlm_I4ve-afs4Nu5toGc2Zck7RRzD9V3Z9_AxoPWy6p30KTyD4Q--gCkjnsf4JdUcbzw3LEccNomZrSJLixV4iJJ2j1K0UCtt5nTYlHFQsnU4KeerohY.jpg"
+  ],
+  "kedarnath": [
+    "/images/destinations/kedarnath/3 (1).jpg",
+    "/images/destinations/kedarnath/3 (2).jpg",
+    "/images/destinations/kedarnath/3 (3).jpg",
+    "/images/destinations/kedarnath/kedarnath-temple-front.jpg",
+    "/images/destinations/kedarnath/photo-1.jpg",
+    "/images/destinations/kedarnath/photo-2.jpg",
+    "/images/destinations/kedarnath/photo-3.jpg",
+    "/images/destinations/kedarnath/photo-4.jpg",
+    "/images/destinations/kedarnath/photo-5.jpg",
+    "/images/destinations/kedarnath/photo-6.jpg"
+  ],
+  "kedarnath windlife sancuary": [
+    "/images/destinations/kedarnath windlife sancuary/Gemini_Generated_Image_45qv0345qv0345qv.png",
+    "/images/destinations/kedarnath windlife sancuary/Gemini_Generated_Image_ebnqjhebnqjhebnq.png",
+    "/images/destinations/kedarnath windlife sancuary/kws.webp"
+  ],
+  "khirsu": [
+    "/images/destinations/khirsu/Misty Mountain Village Panorama.png",
+    "/images/destinations/khirsu/Sunlit Mountain Hillside Retreat.png",
+    "/images/destinations/khirsu/Sunlit Mountain Village in Bloom.png"
+  ],
+  "lansdowne": [
+    "/images/destinations/lansdowne/1 (1).jpg",
+    "/images/destinations/lansdowne/photo-1.jpg",
+    "/images/destinations/lansdowne/photo-2.jpg",
+    "/images/destinations/lansdowne/photo-3.jpg",
+    "/images/destinations/lansdowne/photo-4.jpg",
+    "/images/destinations/lansdowne/photo-5.jpg"
+  ],
+  "LOHAGHAT": [
+    "/images/destinations/LOHAGHAT/26OHKezdyYcXLMgmbY1PflRF06YPB3cZzcpWNn3VdtHqAQkvm7DJy2gMo4aL7G5omB-kZ8B1f7k41pm3o-h0SCM8w2EUDiGmAqmR2y3xuRbP6fKcF3JCa07ZwXyPi-waJpV9AV1yX9HmUExP5EdSbm4K3_Ma3Qb6o8w9k2R_YpvLbGKvpowvpWFwOF8YshiM.jpg",
+    "/images/destinations/LOHAGHAT/HqwqTmZ7lkGulcYLWag_bYuJ4UH2ECHhcxl7Suiy4M2uFur19zRCBtneJQ_vUQS7D1p9DvGsitnS-QCogxMg2I3U6Td-GUEQBYe0WoIWASwRv3P4Kn4kYamYouOi8agkhXIcElZho4T8w01F8057aZgriWR5DnftM0eaqeTllAHYbsGyj13HCD3_7DrFj8pD.jpg",
+    "/images/destinations/LOHAGHAT/I8p5m2-BF46zne92fFgACKEoAJsImFJ3cGuPcnxzZTyzJX7eTUleEyry60nYiACBiFaPQsxvl5cOlwdqvRhmxd9RHB7zQW_mPEH4JdmNAvg9q0lPHGDGEE-jRxWq3yjsdvZbj3_AiSdiAvoWxZJScZ0cfwYNqu_jMFsX2j8HTz_vSMzWrqg1d_KAcPYgOBro.jpg",
+    "/images/destinations/LOHAGHAT/kNzJzmTsuNc1fbKavdleN6zI7aYMsn1GwB4JjcZH9yYNerOwH5CDgR2fkAbux6GDBlc2CpzhOHY9ga0FPRjave2hOyXoukPzdyx4LcE5A2LEcK0DdhUBK_QTHTtVQ2SknnalJITZxgcXdRqSe8K7le_V_Sde5bB6YBcf_BaH5JIF0ooxFzfTnjeAaoQKVdVO.jpg",
+    "/images/destinations/LOHAGHAT/_Y-8G7ceeNc7NeUC-SY8RPc_yOL-9PkDs9Pedm1pm01PhATT59gRZ5BdNTaF0IxyrXH1d-FLnUtkS9OiIxG95Z2WfNf_8t-0GSZEOq_XPJnQBvZPuNpC-fpwC511BcA1lVOZI30RcYi-PuDJuOZMrs73Zj26YKItd1Upr38Tk6fIrIL19LHhizvkau8_G91v.jpg"
+  ],
+  "madhyamaheshwar": [
+    "/images/destinations/madhyamaheshwar/Gemini_Generated_Image_26xz7q26xz7q26xz.png",
+    "/images/destinations/madhyamaheshwar/Gemini_Generated_Image_i8wp2vi8wp2vi8wp.png",
+    "/images/destinations/madhyamaheshwar/how-to-reach-madhyamaheshw-1746780980759.webp",
+    "/images/destinations/madhyamaheshwar/madhyamaheshwar-banner.webp",
+    "/images/destinations/madhyamaheshwar/madhyamaheshwar-banner3.webp"
+  ],
+  "mukhteshwar": [
+    "/images/destinations/mukhteshwar/Jagged Cliff View Over Lush Terraced Valley.jpg",
+    "/images/destinations/mukhteshwar/Mossy Forest Shrine Gateway.jpg",
+    "/images/destinations/mukhteshwar/Mukteshwar Temple Forest Entrance.jpg",
+    "/images/destinations/mukhteshwar/mukteshwar-shrine-gateway.jpg",
+    "/images/destinations/mukhteshwar/Snowy Mountain Temple in Winter Sun.jpg"
+  ],
+  "mukteshwar": [
+    "/images/destinations/mukteshwar/Mukteshwar Temple Forest Entrance.jpg",
+    "/images/destinations/mukteshwar/mukteshwar-shrine-gateway.jpg"
+  ],
+  "munsiyari": [
+    "/images/destinations/munsiyari/2 (1).jpg",
+    "/images/destinations/munsiyari/2 (2).jpg",
+    "/images/destinations/munsiyari/2 (3).jpg",
+    "/images/destinations/munsiyari/2 (4).jpg",
+    "/images/destinations/munsiyari/Hillside Town Beneath Blue Mountains.png",
+    "/images/destinations/munsiyari/Himalayan Valley Sports Field Panorama.png",
+    "/images/destinations/munsiyari/Mountain Resort Cottages and Snowy Peaks.png",
+    "/images/destinations/munsiyari/munsiyari-panchachuli-peaks.jpg",
+    "/images/destinations/munsiyari/photo-1.jpg",
+    "/images/destinations/munsiyari/photo-2.jpg",
+    "/images/destinations/munsiyari/photo-3.jpg",
+    "/images/destinations/munsiyari/photo-4.jpg",
+    "/images/destinations/munsiyari/photo-5.jpg"
+  ],
+  "munsyari": [
+    "/images/destinations/munsyari/2 (1).jpg",
+    "/images/destinations/munsyari/2 (2).jpg",
+    "/images/destinations/munsyari/2 (3).jpg",
+    "/images/destinations/munsyari/2 (4).jpg",
+    "/images/destinations/munsyari/munsiyari-panchachuli-peaks.jpg"
+  ],
+  "mussoorie": [
+    "/images/destinations/mussoorie/1 (1).jpg",
+    "/images/destinations/mussoorie/1 (2).jpg",
+    "/images/destinations/mussoorie/1 (3).jpg",
+    "/images/destinations/mussoorie/1 (4).jpg",
+    "/images/destinations/mussoorie/1 (5).jpg",
+    "/images/destinations/mussoorie/mussoorie-queen-of-hills.jpg",
+    "/images/destinations/mussoorie/photo-1.jpg",
+    "/images/destinations/mussoorie/photo-2.jpg",
+    "/images/destinations/mussoorie/photo-3.jpg",
+    "/images/destinations/mussoorie/photo-4.jpg",
+    "/images/destinations/mussoorie/photo-5.jpg"
+  ],
+  "mussorie": [
+    "/images/destinations/mussorie/1 (1).jpg",
+    "/images/destinations/mussorie/1 (2).jpg",
+    "/images/destinations/mussorie/1 (3).jpg",
+    "/images/destinations/mussorie/1 (4).jpg",
+    "/images/destinations/mussorie/1 (5).jpg",
+    "/images/destinations/mussorie/Golden Buddha Overlooking Snow-Capped Mountains.jpg",
+    "/images/destinations/mussorie/Himalayan Hill Town Panorama.jpg",
+    "/images/destinations/mussorie/mussoorie-queen-of-hills.jpg"
+  ],
+  "nainital": [
+    "/images/destinations/nainital/photo-1.jpg",
+    "/images/destinations/nainital/photo-2.jpg",
+    "/images/destinations/nainital/photo-3.jpg",
+    "/images/destinations/nainital/photo-4.jpg",
+    "/images/destinations/nainital/photo-5.jpg"
+  ],
+  "nanda devi national park": [
+    "/images/destinations/nanda devi national park/Gangotri-National-Park_1a11aef7930a4f8d0be991f45bfad2f3.webp",
+    "/images/destinations/nanda devi national park/Gemini_Generated_Image_bw4p35bw4p35bw4p.png",
+    "/images/destinations/nanda devi national park/Gemini_Generated_Image_qhfi5zqhfi5zqhfi.png",
+    "/images/destinations/nanda devi national park/Gemini_Generated_Image_uy4mdbuy4mdbuy4m.png",
+    "/images/destinations/nanda devi national park/m_Gangotri_national_park_1_l_583_881.webp",
+    "/images/destinations/nanda devi national park/Under BannerGangotri.webp"
+  ],
+  "nandprayag": [
+    "/images/destinations/nandprayag/Gemini_Generated_Image_4i9f314i9f314i9f.png",
+    "/images/destinations/nandprayag/Gemini_Generated_Image_g9hy83g9hy83g9hy.png",
+    "/images/destinations/nandprayag/Gemini_Generated_Image_sz2gazsz2gazsz2g.png"
+  ],
+  "nanduar wildlife santuary": [
+    "/images/destinations/nanduar wildlife santuary/0b8df97d186c58ee8b7846d4ad105a14.webp",
+    "/images/destinations/nanduar wildlife santuary/af9c0d06351d3283066aefe1d971226b.webp",
+    "/images/destinations/nanduar wildlife santuary/nandur-madhmeshwar-bird (1).webp",
+    "/images/destinations/nanduar wildlife santuary/nandur-madhmeshwar-bird.webp"
+  ],
+  "neelkanth": [
+    "/images/destinations/neelkanth/a67ec66c721d70fdcbc253d06bba1d8c.webp",
+    "/images/destinations/neelkanth/Colorful Hindu Temple Entrance Crowd.png",
+    "/images/destinations/neelkanth/Colorful Temple Tower Amidst Hillside Greenery.png",
+    "/images/destinations/neelkanth/neelkanth-mahadev-temple-rishikesh-images-261131352.webp",
+    "/images/destinations/neelkanth/Neelkanth-Mahadev-Temple-Rshikesh.webp"
+  ],
+  "New folder": [
+    "/images/destinations/New folder/Forest Lamp and Hidden Red-Roofed House.png",
+    "/images/destinations/New folder/Golden Foliage Hiding a Rustic Cabin.png",
+    "/images/destinations/New folder/Misty Mountain Cottage in Lush Greenery.png"
+  ],
+  "Niti valley": [
+    "/images/destinations/Niti valley/6vLCGMwIk0rwWXlMkDSPAUC5b4Yee2T82wkST1LW-UmYH9aJAvANMk_pJbuNGbwNwg3ZLcFE_1l08_WCGinbVP0ClIr2ebV08mS-eVCXQ_BB9H0ClmyfXPAsL6a1hC40A9Q1e5hWKLfLNKyMxeM-YytQJ1r-UJ6HoaxYjt2N64J75w1enlYu-Mh1mQiWto79.jpg",
+    "/images/destinations/Niti valley/cZtN1aMUdX12vBkBbQzDs7mqWdFLMImvPLFfrTJOaoNDlWhKXvIV8UcpIrsT6OVFKE56mQWhoGyesELpdwCYtSuh9TdSJ6d7yy8Te6fyr2I_qjZkzn1x5o1O1t8si9RJV39-ZwDbW3GL7ML4I9ZKnkFlviBsXMEtOc1CZWnY4HE.jpg",
+    "/images/destinations/Niti valley/qj2gDsTNAHThAeMtN-uWSIVEN0HdAP1WRwFa2kuY2DhLwAf200W1-iA79zk0haRBWUBpqb0Exn7iWazd6Ye7Zff4259jXV03VUdjqXGLOVzuo8GiQBqw62hkKYLKODAlmxarRQ8UqWEofRzelqi5H7laTkIaq8C4yKN4L00DGvA.jpg",
+    "/images/destinations/Niti valley/SrFe7UmPP__tv5ObwmOnwasFHiFHNlCeNehr0NahLT3Cq78vX0visGTQy4pxbXOJrpRoyTrW6Uk-DNIPe6muzNoRk5OArJvRJsaeMEHcz9WE1l3bmP_aNDN64V309PoAoaC62zL50iiDePiu4WT6pD5nNonfUcP5kCF2wo0zehlpWbyS7mNQimCpY1zE6ZoU.jpg",
+    "/images/destinations/Niti valley/zeIR32GG2m6aA1V7vn1Z9QLebOyy-SHteb6R2998I7_qT_ocqzhPiurxlNJmegMIwtf_oHqQCYHEYG4enWoVCSGpIIprzQY4z1nRnMyqgViFGlt15gG9kB6p3mFJ2xLeLPENjw6Ql3IFXCAPkBPNcKBTVopIurcvLSphbvHZuG7JFDkVYtYRcIyZPD3JhwVI.jpg"
+  ],
+  "om parvat": [
+    "/images/destinations/om parvat/Gemini_Generated_Image_1l9q0t1l9q0t1l9q.png",
+    "/images/destinations/om parvat/Gemini_Generated_Image_e2nfihe2nfihe2nf.png",
+    "/images/destinations/om parvat/Gemini_Generated_Image_h4m1vvh4m1vvh4m1.png"
+  ],
+  "OUTDOOR ACTIVITIES": [
+    "/images/destinations/OUTDOOR ACTIVITIES/ADVENTURE SPORTS.jpg",
+    "/images/destinations/OUTDOOR ACTIVITIES/CAMPING & NATURE.jpg",
+    "/images/destinations/OUTDOOR ACTIVITIES/SNOW ADVENTURE.jpg",
+    "/images/destinations/OUTDOOR ACTIVITIES/TREKKING.jpg",
+    "/images/destinations/OUTDOOR ACTIVITIES/WATER ADVENTURE.jpg"
+  ],
+  "patal bhunehswar": [
+    "/images/destinations/patal bhunehswar/1510244852_patal_bhuvaneshwar_banner3.jpg.webp",
+    "/images/destinations/patal bhunehswar/Basalt Cliffside Caves and Colonnade.png",
+    "/images/destinations/patal bhunehswar/Cave Shrine with Floral Offerings.png",
+    "/images/destinations/patal bhunehswar/patal-bhuvaneshwar-temple-5753724.webp",
+    "/images/destinations/patal bhunehswar/pictures-patal-bhuvaneshwar1.webp",
+    "/images/destinations/patal bhunehswar/Shrine Steps Into Darkness.png"
+  ],
+  "pawal garh": [
+    "/images/destinations/pawal garh/Pawalgarh Gate Forest Entrance.png",
+    "/images/destinations/pawal garh/Sunlit Forest Veranda Building.png",
+    "/images/destinations/pawal garh/Sunlit Stone Temple in the Forest.png"
+  ],
+  "peora": [
+    "/images/destinations/peora/Misty Hillside Home with Red Roses.png",
+    "/images/destinations/peora/Terraced Hills Through Pine Canopy.png",
+    "/images/destinations/peora/Terraced Hillside Mediterranean Villa.png"
+  ],
+  "PITHORAGARH": [
+    "/images/destinations/PITHORAGARH/1920px-Adi_Patal_Bhubaneshwar_Temple,_Pithoragarh,_Uttarakhand.jpg",
+    "/images/destinations/PITHORAGARH/1920px-Pithoragarh_skyline.jpg",
+    "/images/destinations/PITHORAGARH/Pithoragarh_Fort.jpg",
+    "/images/destinations/PITHORAGARH/Pithoragarh_Sunrise.jpg",
+    "/images/destinations/PITHORAGARH/Temporary_campus_of_SIT_pithoaragarh.jpg"
+  ],
+  "rajaji national park": [
+    "/images/destinations/rajaji national park/Gemini_Generated_Image_1ni9h31ni9h31ni9.png",
+    "/images/destinations/rajaji national park/Gemini_Generated_Image_haz9mthaz9mthaz9.png",
+    "/images/destinations/rajaji national park/Gemini_Generated_Image_p6nij5p6nij5p6ni.png"
+  ],
+  "ramgarh": [
+    "/images/destinations/ramgarh/Misty Mountain Garden Retreat.jpg",
+    "/images/destinations/ramgarh/ramgarh-fruit-orchards.jpg",
+    "/images/destinations/ramgarh/Sunlit Mountain Terrace Cottages.jpg"
+  ],
+  "ramnagar national": [
+    "/images/destinations/ramnagar national/Alert Bengal Tiger on a Forest Road.png",
+    "/images/destinations/ramnagar national/Bengal Tiger in a Dense Forest.png",
+    "/images/destinations/ramnagar national/Cinematic Forest Road with SUV and Man.png",
+    "/images/destinations/ramnagar national/Nagar Van Forest Gateway.png"
+  ],
+  "ranikhet": [
+    "/images/destinations/ranikhet/1 (1).jpg",
+    "/images/destinations/ranikhet/1 (2).jpg",
+    "/images/destinations/ranikhet/1 (3).jpg",
+    "/images/destinations/ranikhet/1 (4).jpg",
+    "/images/destinations/ranikhet/1 (5).jpg",
+    "/images/destinations/ranikhet/ranikhet-pine-meadows.jpg"
+  ],
+  "rishikesh": [
+    "/images/destinations/rishikesh/1 (1).jpg",
+    "/images/destinations/rishikesh/1 (2).jpg",
+    "/images/destinations/rishikesh/1 (3).jpg",
+    "/images/destinations/rishikesh/photo-1.jpg",
+    "/images/destinations/rishikesh/photo-2.jpg",
+    "/images/destinations/rishikesh/photo-3.jpg",
+    "/images/destinations/rishikesh/photo-4.jpg",
+    "/images/destinations/rishikesh/photo-5.jpg"
+  ],
+  "rudraprayag": [
+    "/images/destinations/rudraprayag/Clifftop Temple Over Turbulent Ocean.png",
+    "/images/destinations/rudraprayag/Hillside Town Along a Mountain River.png",
+    "/images/destinations/rudraprayag/Mountain River Valley with Cliffside Pavilion.png"
+  ],
+  "rushranath": [
+    "/images/destinations/rushranath/1551335374_4.jpg.webp",
+    "/images/destinations/rushranath/Gemini_Generated_Image_eypgjneypgjneypg.png",
+    "/images/destinations/rushranath/Gemini_Generated_Image_tce480tce480tce4.png",
+    "/images/destinations/rushranath/Gemini_Generated_Image_tkw3xytkw3xytkw3.png",
+    "/images/destinations/rushranath/rudranath-3959138.webp"
+  ],
+  "sonanadi wildlife": [
+    "/images/destinations/sonanadi wildlife/Gemini_Generated_Image_29rw1r29rw1r29rw.png",
+    "/images/destinations/sonanadi wildlife/sonanadi-wildlife-sanctuary (1).webp",
+    "/images/destinations/sonanadi wildlife/sonanadi-wildlife-sanctuary.webp"
+  ],
+  "tehri": [
+    "/images/destinations/tehri/photo-1.jpg",
+    "/images/destinations/tehri/photo-2.jpg",
+    "/images/destinations/tehri/photo-3.jpg",
+    "/images/destinations/tehri/photo-4.jpg",
+    "/images/destinations/tehri/photo-5.jpg"
+  ],
+  "tiryuginarayan": [
+    "/images/destinations/tiryuginarayan/Gemini_Generated_Image_7npc0j7npc0j7npc-clean.png",
+    "/images/destinations/tiryuginarayan/Gemini_Generated_Image_7zozm17zozm17zoz.png",
+    "/images/destinations/tiryuginarayan/Gemini_Generated_Image_k6sp5ak6sp5ak6sp (1)-clean.png"
+  ],
+  "tungnath": [
+    "/images/destinations/tungnath/6129685.webp",
+    "/images/destinations/tungnath/Golden Shrine Above the Clouds.png",
+    "/images/destinations/tungnath/Mountain Shrine Overlooking Snowy Peaks.png"
+  ],
+  "ukhimath": [
+    "/images/destinations/ukhimath/Gemini_Generated_Image_2j2xm92j2xm92j2x-clean.png",
+    "/images/destinations/ukhimath/Gemini_Generated_Image_ma78lsma78lsma78-clean.png",
+    "/images/destinations/ukhimath/Gemini_Generated_Image_u0rqmou0rqmou0rq-clean.png",
+    "/images/destinations/ukhimath/Ukhimath-The-Winter-Seat-of-Lord-Kedarnath-Ji.webp"
+  ],
+  "valley of flowers": [
+    "/images/destinations/valley of flowers/ewHyy2mR5mIrlinwGKYZXgOIYewCP-hRlvwuLWKtvIoOa3AeNNeeRdOgfyto7GkymriYUIil_lxE4eLWw7gSgrZBCvELengLej_3TK3-4Uzve1BNrCvoiqHgc-zHV9pZzMJ1NgsoXN_rk24W8OTmETCEn3YLneilVuLJnWjH8yc.jpg",
+    "/images/destinations/valley of flowers/GwiO6SugKCHZlagyaNiCBHspkG2l8oRLypyY4fXDKI1doSKSAHOljTQmfXeaOb_dE4ARdok8YG42UN45fs2zSC-6wDxXPcUloWNkeE9fMmqsQELV54acmvD8eY382gmVqZ8cWKnKG9mklXtktN0AllqiunYM-2A9y_qTdnwPsCtoA-4xbuiAXoV6.jpg",
+    "/images/destinations/valley of flowers/ifc3H2GQUJ6eJSFYZdCO6jpEQVYYGRTFLBk8JCWprdIu0ovQipZTJ7e0c03fXAIbt0bCy-P2GLKjY-v25gQvbF4U-ai2Ik7DCEZuCmHlgruk2ZkdntU3p1uFd92vlSzdVnYz4i39Qxn8PvWoQnyv4WBIuHzl18AKbuShv918Avo.jpg",
+    "/images/destinations/valley of flowers/k5WMGd1uN4ura0eKUTm1ePkas8Nc31qa3kKGI9XDTRfDZkN1RR-yCNoS3yAHcuTFkezHU6H146024nn-d8XB4otq6IMlIT5tU179NFXbIfSwm8vs90MzREf4PHvBVUUuKC9v8Wr4zfIt_WejWsW-OlW1unZvcfNXcig0Sj9pqEU.jpg",
+    "/images/destinations/valley of flowers/KjU33ZZ5pqCE7N88_A5tsifpbXwcrJj55oVYg0VWf36Gql6rrmfO_GaZaedeNC7sazcChHDKceYu2oM5nUOP_uyZEj72dUECh-yyoMz-Fu220MjbLSEPwD-BMxt7zQJ0M3jSQqvjSZzsdrqw2b5L0Zboq8LHWFrJgP4zbjvrlyE.jpg",
+    "/images/destinations/valley of flowers/sWRUfLnuCkdTo441AziJx6XWvHqPF86R-Zc1h_pk5V2fWWg23eStDZXP1PzHEARtyN0xLIYIbDnrZATTDXaESKUXvJ9ltB3W3nxkgdfFdmN363OfGsG1ZnEuj230855VcgR4wqaSzUjrSecxz9jtlx2_VJEizdW_7CpKBEj4r5U.jpg"
+  ],
+  "vishnuprayag": [
+    "/images/destinations/vishnuprayag/Gemini_Generated_Image_4gp27h4gp27h4gp2.png",
+    "/images/destinations/vishnuprayag/Gemini_Generated_Image_5v1ais5v1ais5v1a (1).png"
+  ],
+  "yamunotri": [
+    "/images/destinations/yamunotri/3 (1).jpg",
+    "/images/destinations/yamunotri/3 (1).webp",
+    "/images/destinations/yamunotri/3 (2).jpg",
+    "/images/destinations/yamunotri/3 (2).webp"
+  ]
+}

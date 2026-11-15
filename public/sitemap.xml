@@ -697,30 +697,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://uk-yatra.vercel.app/destinations/mana-valley</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/kalpeshwar-valley</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/gangotri-valley</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/yamunotri-valley</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://uk-yatra.vercel.app/destinations/tons-valley</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -986,30 +962,6 @@
   </url>
   <url>
     <loc>https://uk-yatra.vercel.app/destinations/loharkhet</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/khirsu-villages</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/kausani-villages</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/darma-valley-villages</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://uk-yatra.vercel.app/destinations/niti-valley-villages</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>

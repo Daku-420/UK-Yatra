@@ -123,7 +123,7 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
     nearby: [
       { name: 'Badrinath', distance: '218 km', desc: 'Sacred seat of Lord Vishnu along the Alaknanda river.', path: '/destinations/badrinath', image: '/images/destinations/badrinath/photo-1.jpg' },
       { name: 'Chopta', distance: '73 km', desc: 'Mini Switzerland of Uttarakhand and base for Tungnath.', path: '/destinations/chopta', image: '/images/destinations/chopta/photo-1.jpg' },
-      { name: 'Rishikesh', distance: '216 km', desc: 'Yoga capital and gateway to Himalayan pilgrim trails.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' }
+      { name: 'Rishikesh', distance: '216 km', desc: 'Yoga capital and gateway to Himalayan pilgrim trails.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/1 (1).jpg' }
     ],
     faqs: [
       { question: 'Is prior biometric registration mandatory for Kedarnath?', answer: 'Yes, biometric registration via the official Uttarakhand Tourism portal is mandatory for all pilgrims before boarding helicopters or beginning the trek.' },
@@ -185,7 +185,7 @@ export const DESTINATION_DETAILS_MAP: Record<string, Partial<DestinationExtraDat
     nearby: [
       { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat free from crowds.', path: '/destinations/dhanaulti', image: '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg' },
       { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient caves.', path: '/destinations/chakrata', image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg' },
-      { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' }
+      { name: 'Rishikesh', distance: '75 km', desc: 'Ganges rafting, spiritual aartis, and yoga ashrams.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/1 (1).jpg' }
     ],
     faqs: [
       { question: 'How far is Mussoorie from Delhi and Dehradun?', answer: 'Mussoorie is approximately 35 km (1.5 hours) from Dehradun and 280 km (6-7 hours drive via Delhi-Meerut Expressway) from New Delhi.' },
@@ -285,7 +285,7 @@ function getRegionalNearbyPlaces(id: string, name: string): NearbyPlace[] {
       { name: 'Chopta', distance: 'Mini Switzerland', desc: 'Lush alpine meadows and base camp for Tungnath and Chandrashila.', path: '/destinations/chopta', image: '/images/destinations/chopta/photo-1.jpg' },
       { name: 'Auli', distance: 'Ski Resort', desc: 'India’s premier ski slopes with 360-degree vistas of Nanda Devi.', path: '/destinations/auli', image: '/images/destinations/auli/Sunlit Snowy Mountain Ski Resort.jpg' },
       { name: 'Kedarnath', distance: 'Holy Jyotirlinga', desc: 'Sacred Shiva shrine surrounded by snow-clad Himalayan peaks.', path: '/destinations/kedarnath', image: '/images/destinations/kedarnath/photo-1.jpg' },
-      { name: 'Rishikesh', distance: 'Gateway City', desc: 'Yoga capital and foothills gateway to sacred Himalayan trails.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' }
+      { name: 'Rishikesh', distance: 'Gateway City', desc: 'Yoga capital and foothills gateway to sacred Himalayan trails.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/1 (1).jpg' }
     ];
     return candidates.filter(c => !normId.includes(c.name.toLowerCase().replace(/\s+/g, '-'))).slice(0, 3);
   }
@@ -293,7 +293,7 @@ function getRegionalNearbyPlaces(id: string, name: string): NearbyPlace[] {
   // 3. Garhwal Hills & Dehradun Valley (Default)
   const candidates: NearbyPlace[] = [
     { name: 'Mussoorie', distance: 'Scenic Ridge Route', desc: 'The Queen of Hills featuring historic British promenades and waterfalls.', path: '/destinations/mussoorie', image: '/images/destinations/mussoorie/photo-1.jpg' },
-    { name: 'Rishikesh', distance: 'Direct Highway', desc: 'World capital of yoga, sacred evening Ganga aartis, and river rapids.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/photo-1.jpg' },
+    { name: 'Rishikesh', distance: 'Direct Highway', desc: 'World capital of yoga, sacred evening Ganga aartis, and river rapids.', path: '/destinations/rishikesh', image: '/images/destinations/rishikesh/1 (1).jpg' },
     { name: 'Dhanaulti', distance: '32 km', desc: 'Peaceful alpine deodar retreat with Eco Park and mountain walks.', path: '/destinations/dhanaulti', image: '/images/destinations/dhanaulti/dhanaulti-nature-forest.jpg' },
     { name: 'Chakrata', distance: '78 km', desc: 'Secluded cantonment with Tiger Falls and ancient limestone caves.', path: '/destinations/chakrata', image: '/images/destinations/chakrata/Sunlit Mountain Resort Panorama.jpg' }
   ];

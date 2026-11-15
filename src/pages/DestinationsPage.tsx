@@ -41,9 +41,7 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
     'valley-of-flowers', 'chopta', 'dayara-bugyal', 'deoria-tal',
     'har-ki-dun', 'harsil-valley', 'binsar', 'khirsu', 'sari-village',
     'mandal-valley', 'mandakini-valley', 'bhilangana-valley',
-    'darma-valley', 'johar-valley', 'niti-valley', 'nelong-valley',
-    'mana-valley', 'kalpeshwar-valley', 'gangotri-valley',
-    'yamunotri-valley', 'tons-valley', 'pindar-valley',
+    'darma-valley', 'johar-valley', 'niti-valley', 'nelong-valley', 'tons-valley', 'pindar-valley',
     'ramganga-valley', 'dhanaulti', 'kanatal', 'chaiinsheel-valley',
     'gwaldam', 'munsiyari', 'chaukori'
   ],
@@ -65,9 +63,8 @@ export const CATEGORY_SLUGS_MAP: Record<string, string[]> = {
     'barsu', 'gangnani', 'kanakchauri', 'dhanpur',
     'peora', 'shaukiyathal', 'shitlakhet', 'satkhol',
     'dhanachuli', 'ramgarh', 'pangot', 'kanda',
-    'chaukori', 'munsiyari', 'khati', 'loharkhet',
-    'khirsu-villages', 'gwaldam', 'kausani-villages',
-    'patal-bhuvaneshwar', 'darma-valley-villages', 'niti-valley-villages'
+    'chaukori', 'munsiyari', 'khati', 'loharkhet', 'gwaldam',
+    'patal-bhuvaneshwar'
   ]
 };
 

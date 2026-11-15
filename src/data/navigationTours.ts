@@ -78,7 +78,7 @@ export const FEATURED_PACKAGES: FeaturedTour[] = [
     path: '/tours/nainital-bhimtal-sattal',
     duration: '3N/4D',
     badge: 'Family Fav',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop'
+    image: '/images/destinations/nainital/photo-1.jpg'
   }
 ];
 
