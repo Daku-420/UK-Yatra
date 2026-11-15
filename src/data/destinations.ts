@@ -1560,35 +1560,6 @@ export const DESTINATIONS: Destination[] = [
     }
   },
   {
-    id: 'nanakmatta',
-    name: 'Nanakmatta',
-    tagline: 'Venerated Sikh Pilgrimage Gurdwara Associated with Guru Nanak Dev Ji & Doodh Wala Kuan',
-    category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
-    ],
-    description: 'Nanakmatta is a major historic Sikh pilgrimage town situated on the banks of Deoha river in the Udham Singh Nagar district. Guru Nanak Dev Ji visited here during his third Udasi (spiritual travels) in 1514 and meditated beneath a peepal tree, holding theological dialogues with Siddhas and Yogis.',
-    highlights: ['Sacred Gurdwara Nanakmatta Sahib blessed by Guru Nanak Dev Ji', 'Miraculous Doodh Wala Kuan (Well of Milk) and Panja Sahib peepal tree', 'Expansive Nanakmatta Dam reservoir offering boating and migratory birdwatching', 'Grand celebrations during Guru Nanak Jayanti, Diwali, and Baisakhi'],
-    bestTime: 'October to April',
-    altitude: '298 m (978 ft)',
-    idealDuration: '1 - 2 Days',
-    startingPrice: 'Pricing on Request',
-    isPopular: true,
-    topAttractions: [
-      { name: 'Gurdwara Nanakmatta Sahib', desc: 'White marble gurdwara complex with sacred Sarovar lake and 24-hour Langar hall.' },
-      { name: 'Sacred Peepal Tree', desc: 'Holy tree that turned green again when blessed by Guru Nanak Dev Ji.' },
-      { name: 'Doodh Wala Kuan', desc: 'Historic stone well where milk miraculously turned into pure sweet water.' },
-      { name: 'Nanakmatta Sagar (Reservoir)', desc: 'Huge artificial lake created by the dam, popular for boating and winter birds.' }
-    ],
-    howToReach: {
-      byAir: 'Pantnagar Airport (55 km).',
-      byTrain: 'Khatima Railway Station (15 km) or Rudrapur City (50 km).',
-      byRoad: 'Situated on the Khatima-Sitarganj highway (NH-9), easily reachable from Delhi (285 km).'
-    }
-  },
-  {
     id: 'chitai-golu-devta',
     name: 'Chitai Golu Devta',
     tagline: 'The Legendary Temple of Justice Hung with Thousands of Sacred Brass Bells',

@@ -90,7 +90,6 @@ const PACKAGE_ALIASES: Record<string, string> = {
   'madhyamaheshwar': 'panch-kedar',
   'adi-kailash': 'pithoragarh-munsiyari',
   'om-parvat': 'pithoragarh-munsiyari',
-  'nanakmatta': 'nainital-bhimtal-sattal',
   'chitai-golu-devta': 'almora-binsar-jageshwar',
   'kasar-devi': 'almora-binsar-jageshwar',
   'katarmal-sun-temple': 'almora-ranikhet-kausani',

@@ -89,7 +89,6 @@ export const DESTINATION_MEGA_NAV: DestinationNavGroup[] = [
       { name: 'Madhyamaheshwar', slug: 'madhyamaheshwar', path: '/destinations/madhyamaheshwar' },
       { name: 'Adi Kailash', slug: 'adi-kailash', path: '/destinations/adi-kailash' },
       { name: 'Om Parvat', slug: 'om-parvat', path: '/destinations/om-parvat' },
-      { name: 'Nanakmatta', slug: 'nanakmatta', path: '/destinations/nanakmatta' },
       { name: 'Chitai Golu Devta', slug: 'chitai-golu-devta', path: '/destinations/chitai-golu-devta' },
       { name: 'Kasar Devi', slug: 'kasar-devi', path: '/destinations/kasar-devi' },
       { name: 'Katarmal Sun Temple', slug: 'katarmal-sun-temple', path: '/destinations/katarmal-sun-temple' }
